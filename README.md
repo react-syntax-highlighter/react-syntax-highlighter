@@ -10,6 +10,10 @@ Check out a small demo <a href="http://conorhastings.com/react-syntax-highlighte
 
 `npm install react-syntax-highlighter --save`
 
+### Why This One?
+
+There are other syntax highlighters out there so why use this one? The biggest reason is that all the others rely on triggering calls in componentDidMount and componentDidUpdate to highlight the code block and then insert it in the render function using `dangerouslySetInnerHTML`. This utilizes a syntax tree to dynamically build the virtual dom which allows for fine tuned patching of the DOM instead of completely overwriting it on any change, and because of this it is also using more idiomatic `React`.
+
 ### Use
 
 #### props
