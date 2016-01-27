@@ -12,7 +12,7 @@ Check out a small demo <a href="http://conorhastings.com/react-syntax-highlighte
 
 ### Why This One?
 
-There are other syntax highlighters out there so why use this one? The biggest reason is that all the others rely on triggering calls in componentDidMount and componentDidUpdate to highlight the code block and then insert it in the render function using `dangerouslySetInnerHTML`. This utilizes a syntax tree to dynamically build the virtual dom which allows for fine tuned patching of the DOM instead of completely overwriting it on any change, and because of this it is also using more idiomatic `React`.
+There are other syntax highlighters for `React` out there so why use this one? The biggest reason is that all the others rely on triggering calls in `componentDidMount` and `componentDidUpdate` to highlight the code block and then insert it in the render function using `dangerouslySetInnerHTML`. This utilizes a syntax tree to dynamically build the virtual dom which allows for fine tuned patching of the DOM instead of completely overwriting it on any change, and because of this it is also using more idiomatic `React` and allows the use of pure function components brought into `React` as of `0.14`
 
 ### Use
 
