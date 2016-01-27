@@ -26,7 +26,9 @@ function createElement(node, key) {
 	}
 }
 
-export default function SyntaxHighlighter({language, children}) {
+export default function SyntaxHighlighter(props) {
+	const {language, children} = props;
 	const codeTree = lowlight.highlight(language, children);
-	return <pre>{codeTree.value.map((node, i) => createElement(node, `code-segement${i}`))}</pre>;
+
+	return <pre {...props}>{codeTree.value.map((node, i) => createElement(node, `code-segement${i}`))}</pre>;
 }
