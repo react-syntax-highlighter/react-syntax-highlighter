@@ -15,6 +15,7 @@ Check out a small demo <a href="http://conorhastings.com/react-syntax-highlighte
 #### props
 `language` - the language to highlight code in.
 `children` - the code to highlight.
+`spread props` pass arbitrary props to pre tag wrapping code. 
 
 You will also need to include a highlight.js <a href="https://highlightjs.org/static/demo/">stylesheet</a> for the syntax highlighting. 
 
