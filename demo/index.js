@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import SyntaxHighlighter from '../dist';
-import 'highlight.js/styles/solarized-dark.css';
+import 'highlight.js/styles/docco.css';
 
 const Component = () => {
 	const h1Style = {
@@ -11,7 +11,7 @@ const Component = () => {
 	return (
 		<div>
 			<h1 style={h1Style}>React Syntax Highlighter</h1>
-			<div style={{backgroundColor: '#5c4752'}}>
+			<div style={{backgroundColor: 'gainsboro'}}>
 				<SyntaxHighlighter language='javascript'>
 					{`
 						const woah = fun => fun + 1;
