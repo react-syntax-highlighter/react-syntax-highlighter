@@ -1,4 +1,4 @@
-import lowlight from 'lowlight/';
+import lowlight from 'lowlight';
 import React from 'react';
 
 const createTextElement = (text, key) => <span key={key}>{text.value}</span>;
