@@ -1,0 +1,39 @@
+{
+  "name": "react-syntax-highlighter",
+  "version": "0.0.1",
+  "description": "sane syntax highlighting component for react",
+  "main": "dist/index.js",
+  "dependencies": {
+    "lowlight": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.4.5",
+    "babel-core": "^6.4.5",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13"
+  },
+  "peerDependencies": {
+    "react": "^0.14.6"
+  },
+  "scripts": {
+    "build": "babel src --out-dir dist",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/conorhastings/react-syntax-highlighter.git"
+  },
+  "keywords": [
+    "react",
+    "syntax",
+    "lowlight",
+    "highlighting",
+    "ast"
+  ],
+  "author": "Conor Hastings",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/conorhastings/react-syntax-highlighter/issues"
+  },
+  "homepage": "https://github.com/conorhastings/react-syntax-highlighter#readme"
+}
