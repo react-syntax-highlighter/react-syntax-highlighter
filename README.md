@@ -21,7 +21,7 @@ There are other syntax highlighters for `React` out there so why use this one? T
 `children` - the code to highlight.
 `spread props` pass arbitrary props to pre tag wrapping code. 
 
-You will also need to include a highlight.js <a href="https://highlightjs.org/static/demo/">stylesheet</a> for the syntax highlighting. 
+You will also need to include a highlight.js <a href="https://highlightjs.org/static/demo/">stylesheet</a> for the syntax highlighting. I'd reccomend using webpack with the `style-loader` so you can build the styles inline instead of needing to import it elsewhere. 
 
 ```js
 import SyntaxHighlighter from 'react-syntax-highlighter';
