@@ -1,90 +1,90 @@
 export default {
-    ".hljs-bullet": {
-        "color": "#7b9726"
-    },
-    ".hljs-type": {
-        "color": "#df5320"
-    },
-    ".hljs-template-variable": {
-        "color": "#f22c40"
-    },
-    ".hljs-tag": {
-        "color": "#f22c40"
-    },
-    ".hljs-number": {
-        "color": "#df5320"
-    },
-    ".hljs-emphasis": {
-        "fontStyle": "italic"
-    },
-    ".hljs-selector-id": {
-        "color": "#f22c40"
-    },
-    ".hljs-title": {
+    "hljs-title": {
         "color": "#407ee7"
     },
-    ".hljs-params": {
-        "color": "#df5320"
-    },
-    ".hljs-string": {
-        "color": "#7b9726"
-    },
-    ".hljs": {
+    "hljs": {
         "display": "block",
         "overflowX": "auto",
         "background": "#f1efee",
         "color": "#68615e",
         "padding": "0.5em"
     },
-    ".hljs-quote": {
-        "color": "#766e6b"
-    },
-    ".hljs-selector-tag": {
-        "color": "#6666ea"
-    },
-    ".hljs-name": {
+    "hljs-regexp": {
         "color": "#f22c40"
     },
-    ".hljs-link": {
-        "color": "#f22c40"
-    },
-    ".hljs-regexp": {
-        "color": "#f22c40"
-    },
-    ".hljs-built_in": {
+    "hljs-meta": {
         "color": "#df5320"
     },
-    ".hljs-variable": {
-        "color": "#f22c40"
-    },
-    ".hljs-comment": {
-        "color": "#766e6b"
-    },
-    ".hljs-symbol": {
+    "hljs-string": {
         "color": "#7b9726"
     },
-    ".hljs-literal": {
+    "hljs-emphasis": {
+        "fontStyle": "italic"
+    },
+    "hljs-builtin-name": {
         "color": "#df5320"
     },
-    ".hljs-attribute": {
-        "color": "#f22c40"
-    },
-    ".hljs-meta": {
+    "hljs-type": {
         "color": "#df5320"
     },
-    ".hljs-keyword": {
-        "color": "#6666ea"
-    },
-    ".hljs-builtin-name": {
-        "color": "#df5320"
-    },
-    ".hljs-section": {
+    "hljs-section": {
         "color": "#407ee7"
     },
-    ".hljs-selector-class": {
+    "hljs-name": {
         "color": "#f22c40"
     },
-    ".hljs-strong": {
+    "hljs-variable": {
+        "color": "#f22c40"
+    },
+    "hljs-selector-tag": {
+        "color": "#6666ea"
+    },
+    "hljs-bullet": {
+        "color": "#7b9726"
+    },
+    "hljs-params": {
+        "color": "#df5320"
+    },
+    "hljs-number": {
+        "color": "#df5320"
+    },
+    "hljs-selector-id": {
+        "color": "#f22c40"
+    },
+    "hljs-symbol": {
+        "color": "#7b9726"
+    },
+    "hljs-attribute": {
+        "color": "#f22c40"
+    },
+    "hljs-tag": {
+        "color": "#f22c40"
+    },
+    "hljs-keyword": {
+        "color": "#6666ea"
+    },
+    "hljs-literal": {
+        "color": "#df5320"
+    },
+    "hljs-comment": {
+        "color": "#766e6b"
+    },
+    "hljs-quote": {
+        "color": "#766e6b"
+    },
+    "hljs-selector-class": {
+        "color": "#f22c40"
+    },
+    "hljs-template-variable": {
+        "color": "#f22c40"
+    },
+    "hljs-built_in": {
+        "color": "#df5320"
+    },
+    "hljs-link": {
+        "color": "#f22c40"
+    },
+    "hljs-strong": {
         "fontWeight": "bold"
     }
 }

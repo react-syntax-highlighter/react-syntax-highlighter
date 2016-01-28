@@ -1,66 +1,66 @@
 export default {
-    ".hljs": {
+    "hljs": {
         "display": "block",
         "overflowX": "auto",
         "padding": "0.5em",
         "background": "white",
         "color": "black"
     },
-    ".hljs-string": {
+    "hljs-string": {
         "color": "#888"
     },
-    ".hljs-variable": {
+    "hljs-variable": {
         "color": "#888"
     },
-    ".hljs-template-variable": {
+    "hljs-template-variable": {
         "color": "#888"
     },
-    ".hljs-symbol": {
+    "hljs-symbol": {
         "color": "#888"
     },
-    ".hljs-bullet": {
+    "hljs-bullet": {
         "color": "#888"
     },
-    ".hljs-section": {
+    "hljs-section": {
         "fontWeight": "bold"
     },
-    ".hljs-addition": {
+    "hljs-addition": {
         "color": "#888"
     },
-    ".hljs-attribute": {
+    "hljs-attribute": {
         "color": "#888"
     },
-    ".hljs-link": {
+    "hljs-link": {
         "color": "#888"
     },
-    ".hljs-comment": {
+    "hljs-comment": {
         "color": "#ccc"
     },
-    ".hljs-quote": {
+    "hljs-quote": {
         "color": "#ccc"
     },
-    ".hljs-meta": {
+    "hljs-meta": {
         "color": "#ccc"
     },
-    ".hljs-deletion": {
+    "hljs-deletion": {
         "color": "#ccc"
     },
-    ".hljs-keyword": {
+    "hljs-keyword": {
         "fontWeight": "bold"
     },
-    ".hljs-selector-tag": {
+    "hljs-selector-tag": {
         "fontWeight": "bold"
     },
-    ".hljs-name": {
+    "hljs-name": {
         "fontWeight": "bold"
     },
-    ".hljs-type": {
+    "hljs-type": {
         "fontWeight": "bold"
     },
-    ".hljs-strong": {
+    "hljs-strong": {
         "fontWeight": "bold"
     },
-    ".hljs-emphasis": {
+    "hljs-emphasis": {
         "fontStyle": "italic"
     }
 }

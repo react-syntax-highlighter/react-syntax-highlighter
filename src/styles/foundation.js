@@ -1,96 +1,96 @@
 export default {
-    ".hljs-bullet": {
-        "color": "#997700"
-    },
-    ".hljs-type": {
-        "color": "#458"
-    },
-    ".hljs-deletion": {
-        "color": "#d14"
-    },
-    ".hljs-template-variable": {
-        "color": "#336699"
-    },
-    ".hljs-strong": {
-        "fontWeight": "bold"
-    },
-    ".hljs-number": {
-        "color": "#099"
-    },
-    ".hljs-emphasis": {
-        "fontStyle": "italic"
-    },
-    ".hljs-addition": {
-        "color": "#070"
-    },
-    ".hljs-title": {
+    "hljs-title": {
         "color": "#900"
     },
-    ".hljs-class .hljs-title": {
-        "color": "#458"
-    },
-    ".hljs-string": {
-        "color": "#d14"
-    },
-    ".hljs-code": {
-        "color": "#099"
-    },
-    ".hljs": {
+    "hljs": {
         "display": "block",
         "overflowX": "auto",
         "padding": "0.5em",
         "background": "#eee",
         "color": "black"
     },
-    ".hljs-quote": {
-        "color": "#998",
-        "fontStyle": "italic"
+    "hljs-string": {
+        "color": "#d14"
     },
-    ".hljs-selector-tag": {
-        "color": "#099"
+    "hljs-meta": {
+        "color": "#3344bb"
     },
-    ".hljs-link": {
-        "color": "#070"
-    },
-    ".hljs-regexp": {
+    "hljs-regexp": {
         "backgroundColor": "#fff0ff",
         "color": "#880088"
     },
-    ".hljs-variable": {
+    "hljs-emphasis": {
+        "fontStyle": "italic"
+    },
+    "hljs-strong": {
+        "fontWeight": "bold"
+    },
+    "hljs-type": {
+        "color": "#458"
+    },
+    "hljs-section": {
+        "color": "#900"
+    },
+    "hljs-deletion": {
+        "color": "#d14"
+    },
+    "hljs-addition": {
+        "color": "#070"
+    },
+    "hljs-class .hljs-title": {
+        "color": "#458"
+    },
+    "hljs-variable": {
         "color": "#336699"
     },
-    ".hljs-comment": {
+    "hljs-selector-tag": {
+        "color": "#099"
+    },
+    "hljs-bullet": {
+        "color": "#997700"
+    },
+    "hljs-code": {
+        "color": "#099"
+    },
+    "hljs-number": {
+        "color": "#099"
+    },
+    "hljs-symbol": {
+        "color": "#990073"
+    },
+    "hljs-attribute": {
+        "color": "#070"
+    },
+    "hljs-keyword": {
+        "color": "#099"
+    },
+    "hljs-literal": {
+        "color": "#099"
+    },
+    "hljs-quote": {
         "color": "#998",
         "fontStyle": "italic"
     },
-    ".hljs-symbol": {
-        "color": "#990073"
+    "hljs-comment": {
+        "color": "#998",
+        "fontStyle": "italic"
     },
-    ".hljs-literal": {
-        "color": "#099"
+    "hljs-template-variable": {
+        "color": "#336699"
     },
-    ".hljs-attribute": {
+    "hljs-link": {
         "color": "#070"
     },
-    ".hljs-meta": {
-        "color": "#3344bb"
-    },
-    ".hljs-keyword": {
-        "color": "#099"
-    },
-    ".hljs-section": {
-        "color": "#900"
-    },
-    ".hljs-tag": {
+    "hljs-tag": {
         "color": "#007700"
     },
-    ".hljs-name": {
+    "hljs-name": {
         "color": "#007700"
     },
-    ".hljs-selector-id": {
+    "hljs-selector-id": {
         "color": "#007700"
     },
-    ".hljs-selector-class": {
+    "hljs-selector-class": {
         "color": "#007700"
     }
 }
