@@ -1,4 +1,4 @@
-import lowlight from 'lowlight';
+import lowlight from 'lowlight/lib/core';
 import React from 'react';
 
 const createTextElement = (text, key) => <span key={key}>{text.value}</span>;
@@ -24,7 +24,6 @@ function createElement(node, style, key) {
 		const TagName = node.tagName;
 		const { properties } = node;
 		const childrenCreator = createChildren(style);
-		const className = properties.className ? createClassNameString(properties.className) : "";
 		const nodeStyle = createStyleObject(properties.className, style);
 		const children = childrenCreator(node.children);
 		return <TagName key={key} style={nodeStyle}>{children}</TagName>;
@@ -34,6 +33,8 @@ function createElement(node, style, key) {
 export default function SyntaxHighlighter(props) {
 	const {language, children, stylesheet = 'default'} = props;
 	const style = require(`./styles/${stylesheet}`).default;
+	const lang = require(`highlight.js/lib/languages/${language}`);
+	lowlight.registerLanguage(language, lang);
 	const codeTree = lowlight.highlight(language, children);
 
 	return <pre {...props}>{codeTree.value.map((node, i) => createElement(node, style, `code-segement${i}`))}</pre>;
