@@ -12,7 +12,7 @@ function createChildren() {
 		return children.map((child, i) => createElement(child, `code-segement-${childrenCount}-${i}`));
 	}
 }
-function createElement(node, key) {
+function createElement(node, style, key) {
 	if (node.type === "text") {
 		return createTextElement(node, key);
 	}
