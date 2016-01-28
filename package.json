@@ -17,7 +17,9 @@
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
     "style-loader": "^0.13.0",
-    "webpack": "^1.12.12"
+    "webpack": "^1.12.12",
+    "css": "^2.2.1",
+    "to-camel-case": "^1.0.0"
   },
   "peerDependencies": {
     "react": "^0.14.6"
@@ -25,6 +27,7 @@
   "scripts": {
     "dev": "./node_modules/.bin/webpack --watch --progress",
     "build": "babel src --out-dir dist",
+    "build-styles": "node ./lib/build-stylesheets.js",
     "prepublish": "npm run build"
   },
   "repository": {
