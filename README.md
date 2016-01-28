@@ -26,6 +26,6 @@ There are other syntax highlighters for `React` out there so why use this one? T
 import SyntaxHighlighter from 'react-syntax-highlighter';
 const Component = () => {
   const codeString = '(num) => num + 1';
-  return <SyntaxHighlighter language='javascript'>{codeString}</SyntaxHighlighter>;  
+  return <SyntaxHighlighter language='javascript' stylesheet='docco'>{codeString}</SyntaxHighlighter>;  
 }
 ```
