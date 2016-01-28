@@ -12,7 +12,7 @@ const Component = () => {
 		<div>
 			<h1 style={h1Style}>React Syntax Highlighter</h1>
 			<div style={{backgroundColor: 'gainsboro'}}>
-				<SyntaxHighlighter language='javascript'>
+				<SyntaxHighlighter language='javascript' stylesheet='docco'>
 					{`
 						const woah = fun => fun + 1;
 						const dude = woah(2) + 3;

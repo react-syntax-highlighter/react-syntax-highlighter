@@ -5,12 +5,9 @@ const createTextElement = (text, key) => <span key={key}>{text.value}</span>;
 
 const createStyleObject = (classNames, style) => {
 	return classNames.reduce((styleObject, className) => {
-		console.log(className, style[className]);
 		return {...styleObject, ...style[className]};
 	}, {});
 }
-
-const createClassNameString = classNames => classNames.join(" ");
 
 function createChildren(style) {
 	let childrenCount = 0;
@@ -29,15 +26,14 @@ function createElement(node, style, key) {
 		const childrenCreator = createChildren(style);
 		const className = properties.className ? createClassNameString(properties.className) : "";
 		const nodeStyle = createStyleObject(properties.className, style);
-		console.log(nodeStyle);
 		const children = childrenCreator(node.children);
-		return <TagName key={key} className={className}>{children}</TagName>;
+		return <TagName key={key} style={nodeStyle}>{children}</TagName>;
 	}
 }
 
 export default function SyntaxHighlighter(props) {
 	const {language, children, stylesheet = 'default'} = props;
-	const style = require(`./styles/${stylesheet}`);
+	const style = require(`./styles/${stylesheet}`).default;
 	const codeTree = lowlight.highlight(language, children);
 
 	return <pre {...props}>{codeTree.value.map((node, i) => createElement(node, style, `code-segement${i}`))}</pre>;
