@@ -18,6 +18,7 @@ There are other syntax highlighters for `React` out there so why use this one? T
 
 #### props
 * `language` - the language to highlight code in.
+* `stylesheet` - name of syntax stylesheet to use.
 * `children` - the code to highlight.
 * `spread props` pass arbitrary props to pre tag wrapping code. 
 
