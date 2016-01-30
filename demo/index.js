@@ -99,7 +99,7 @@ class Component extends React.Component {
 				<h1 style={h1Style}>React Syntax Highlighter</h1>
 				<h2 style={h2}>Change Style</h2>
 				{dropDown}
-				<div style={{backgroundColor: 'gainsboro'}}>
+				<div>
 					<SyntaxHighlighter language='javascript' stylesheet={this.state.selected}>
 						{`
 							const woah = fun => fun + 1;

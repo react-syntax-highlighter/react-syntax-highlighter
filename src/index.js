@@ -36,9 +36,9 @@ export default function SyntaxHighlighter(props) {
 	const lang = require(`highlight.js/lib/languages/${language}`);
 	lowlight.registerLanguage(language, lang);
 	const codeTree = lowlight.highlight(language, children);
-
+	const defaultPreStyle = style.hljs || {backgroundColor: '#fff'};
 	return (
-		<pre {...props}>
+		<pre style={defaultPreStyle} {...props}>
 			<code>
 				{codeTree.value.map((node, i) => createElement(node, style, `code-segement${i}`))}
 			</code>
