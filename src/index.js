@@ -13,7 +13,7 @@ function createChildren(style) {
 	let childrenCount = 0;
 	return children => {
 		childrenCount += 1;
-		return children.map((child, i) => createElement(child, style, `code-segement-${childrenCount}-${i}`));
+		return children.map((child, i) => createElement(child, style, `code-segment-${childrenCount}-${i}`));
 	}
 }
 function createElement(node, style, key) {
