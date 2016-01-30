@@ -37,5 +37,11 @@ export default function SyntaxHighlighter(props) {
 	lowlight.registerLanguage(language, lang);
 	const codeTree = lowlight.highlight(language, children);
 
-	return <pre {...props}>{codeTree.value.map((node, i) => createElement(node, style, `code-segement${i}`))}</pre>;
+	return (
+		<pre {...props}>
+			<code>
+				{codeTree.value.map((node, i) => createElement(node, style, `code-segement${i}`))}
+			</code>
+		</pre>
+	);
 }
