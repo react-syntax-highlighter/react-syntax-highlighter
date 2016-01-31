@@ -4,8 +4,6 @@ Syntax highlighting component for `React` using the seriously amazing <a href="h
 
 Check out a small demo <a href="http://conorhastings.com/react-syntax-highlighter/demo/">here</a> and see the component in action highlighting the returned syntax <a href="http://conorhastings.com/redux-test-recorder/demo/">here</a>
 
-### Work in progress - tests coming soon.
-
 ### Install
 
 `npm install react-syntax-highlighter --save`
