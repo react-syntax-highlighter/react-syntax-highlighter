@@ -1,8 +1,6 @@
 import lowlight from 'lowlight/lib/core';
 import React from 'react';
 
-const createTextElement = (text, key) => <span key={key}>{text.value}</span>;
-
 const Text = ({ children }) => <span>{children}</span>;
 
 const createStyleObject = (classNames, style) => {
