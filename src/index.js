@@ -3,6 +3,8 @@ import React from 'react';
 
 const createTextElement = (text, key) => <span key={key}>{text.value}</span>;
 
+const Text = ({ children }) => <span>{children}</span>;
+
 const createStyleObject = (classNames, style) => {
 	return classNames.reduce((styleObject, className) => {
 		return {...styleObject, ...style[className]};
@@ -18,7 +20,7 @@ function createChildren(style) {
 }
 function createElement(node, style, key) {
 	if (node.type === "text") {
-		return createTextElement(node, key);
+		return <Text key={key}>{ node.value }</Text>;
 	}
 	else if (node.tagName) {
 		const TagName = node.tagName;
