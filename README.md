@@ -17,6 +17,8 @@ One of the biggest pain points for me trying to find a syntax highlighter for my
 
 ### Use
 
+** Currently this modules requires that you build with webpack as it uses dynamic require statements **
+
 #### props
 * `language` - the language to highlight code in.
 * `stylesheet` - name of syntax stylesheet to use, see list of available styles  <a href="https://github.com/conorhastings/react-syntax-highlighter/blob/master/AVAILABLE_STYLES.MD">here</a>
