@@ -17,7 +17,7 @@ One of the biggest pain points for me trying to find a syntax highlighter for my
 
 ### Use
 
-** Currently this modules requires that you build with webpack as it uses dynamic require statements **
+*Currently this modules requires that you build with webpack as it uses dynamic require statements*
 
 #### props
 * `language` - the language to highlight code in.
