@@ -31,12 +31,15 @@
 * darkula
 * default
 * docco
+* dracula
 * far
 * foundation
 * github-gist
 * github
 * googlecode
 * grayscale
+* gruvbox-dark
+* gruvbox-light
 * hopscotch
 * hybrid
 * idea
@@ -51,6 +54,8 @@
 * paraiso-dark
 * paraiso-light
 * pojoaque
+* qtcreator_dark
+* qtcreator_light
 * railscasts
 * rainbow
 * school-book

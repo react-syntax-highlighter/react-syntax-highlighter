@@ -9,17 +9,17 @@ export default {
     "hljs": {
         "color": "#444"
     },
-    "hljs-regexp": {
-        "color": "#BC6060"
-    },
     "hljs-string": {
         "color": "#880000"
+    },
+    "hljs-regexp": {
+        "color": "#BC6060"
     },
     "hljs-template-tag": {
         "color": "#880000"
     },
     "hljs-meta": {
-        "color": "#2B6EA1"
+        "color": "#1f7199"
     },
     "hljs-emphasis": {
         "fontStyle": "italic"
@@ -41,34 +41,37 @@ export default {
         "fontWeight": "bold"
     },
     "hljs-addition": {
-        "color": "#1F811F"
+        "color": "#397300"
     },
     "hljs-name": {
         "fontWeight": "bold"
     },
-    "hljs-bullet": {
-        "color": "#1F811F"
+    "hljs-variable": {
+        "color": "#BC6060"
     },
     "hljs-selector-tag": {
         "fontWeight": "bold"
     },
-    "hljs-code": {
-        "color": "#1F811F"
+    "hljs-bullet": {
+        "color": "#397300"
     },
-    "hljs-variable": {
-        "color": "#BC6060"
+    "hljs-code": {
+        "color": "#397300"
     },
     "hljs-number": {
+        "color": "#880000"
+    },
+    "hljs-selector-id": {
         "color": "#880000"
     },
     "hljs-symbol": {
         "color": "#BC6060"
     },
-    "hljs-selector-id": {
-        "color": "#880000"
-    },
     "hljs-attribute": {
         "fontWeight": "bold"
+    },
+    "hljs-meta-string": {
+        "color": "#4d99bf"
     },
     "hljs-selector-pseudo": {
         "color": "#BC6060"
@@ -77,13 +80,13 @@ export default {
         "fontWeight": "bold"
     },
     "hljs-literal": {
-        "color": "#1F811F"
-    },
-    "hljs-quote": {
-        "color": "#880000"
+        "color": "#78A960"
     },
     "hljs-comment": {
         "color": "#888888"
+    },
+    "hljs-quote": {
+        "color": "#880000"
     },
     "hljs-selector-class": {
         "color": "#880000"
@@ -91,11 +94,11 @@ export default {
     "hljs-doctag": {
         "fontWeight": "bold"
     },
-    "hljs-built_in": {
-        "color": "#1F811F"
-    },
     "hljs-template-variable": {
         "color": "#BC6060"
+    },
+    "hljs-built_in": {
+        "color": "#397300"
     },
     "hljs-link": {
         "color": "#BC6060"

@@ -4,7 +4,7 @@
   "description": "sane syntax highlighting component for react",
   "main": "dist/index.js",
   "dependencies": {
-    "highlight.js": "^9.1.0",
+    "highlight.js": "^9.2.0",
     "lowlight": "^1.0.0"
   },
   "devDependencies": {
@@ -29,7 +29,7 @@
     "dev": "./node_modules/.bin/webpack --watch --progress",
     "build": "babel src --out-dir dist",
     "build-styles": "node ./lib/build-stylesheets.js",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build-styles && npm run build"
   },
   "repository": {
     "type": "git",
