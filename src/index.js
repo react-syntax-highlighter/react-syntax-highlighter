@@ -17,12 +17,12 @@ function createChildren(style) {
 	}
 }
 function createElement(node, style, key) {
-	if (node.type === "text") {
-		return <Text key={key}>{ node.value }</Text>;
+	const { properties, type, tagName, value } = node;
+	if (type === "text") {
+		return <Text key={key}>{ value }</Text>;
 	}
-	else if (node.tagName) {
-		const TagName = node.tagName;
-		const { properties } = node;
+	else if (tagName) {
+		const TagName = tagName;
 		const childrenCreator = createChildren(style);
 		const nodeStyle = createStyleObject(properties.className, style);
 		const children = childrenCreator(node.children);
