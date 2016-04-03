@@ -23,7 +23,7 @@
     "webpack": "^1.12.12"
   },
   "peerDependencies": {
-    "react": "^0.14.0"
+    "react": ">= 0.14.0"
   },
   "scripts": {
     "dev": "./node_modules/.bin/webpack --watch --progress",
