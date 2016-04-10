@@ -21,7 +21,7 @@ One of the biggest pain points for me trying to find a syntax highlighter for my
 
 #### props
 * `language` - the language to highlight code in.
-* `stylesheet` - name of syntax stylesheet to use, see list of available styles  <a href="https://github.com/conorhastings/react-syntax-highlighter/blob/master/AVAILABLE_STYLES.MD">here</a>
+* `style` - style object rquired from styles directory. <a href="https://github.com/conorhastings/react-syntax-highlighter/blob/master/AVAILABLE_STYLES.MD">here</a>. `import docco from react-syntax-highlighter/styles/docco`
 * `children` - the code to highlight.
 * `spread props` pass arbitrary props to pre tag wrapping code. 
 
@@ -29,6 +29,6 @@ One of the biggest pain points for me trying to find a syntax highlighter for my
 import SyntaxHighlighter from 'react-syntax-highlighter';
 const Component = () => {
   const codeString = '(num) => num + 1';
-  return <SyntaxHighlighter language='javascript' stylesheet='docco'>{codeString}</SyntaxHighlighter>;  
+  return <SyntaxHighlighter language='javascript' style={docco}>{codeString}</SyntaxHighlighter>;  
 }
 ```

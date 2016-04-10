@@ -34,7 +34,6 @@ function createElement(node, style, key) {
 export default function SyntaxHighlighter(props) {
 	const {language, children, style = defaultStyle} = props;
 	const codeTree = lowlight.highlight(language, children);
-	
 	const defaultPreStyle = style.hljs || {backgroundColor: '#fff'};
 	return (
 		<pre style={defaultPreStyle} {...props}>
