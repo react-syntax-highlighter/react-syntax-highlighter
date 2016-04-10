@@ -1,6 +1,6 @@
 import lowlight from 'lowlight';
 import React from 'react';
-import { defaultStyle } from './styles/index.js';
+import { defaultStyle } from './styles';
 
 const Text = ({ children }) => <span>{children}</span>;
 
