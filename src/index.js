@@ -1,5 +1,6 @@
-import lowlight from 'lowlight/lib/core';
+import lowlight from 'lowlight';
 import React from 'react';
+import defaultStyle from './styles/default';
 
 const Text = ({ children }) => <span>{children}</span>;
 
@@ -31,11 +32,9 @@ function createElement(node, style, key) {
 }
 
 export default function SyntaxHighlighter(props) {
-	const {language, children, stylesheet = 'default'} = props;
-	const style = require(`./styles/${stylesheet}`).default;
-	const lang = require(`highlight.js/lib/languages/${language}`);
-	lowlight.registerLanguage(language, lang);
+	const {language, children, style = defaultStyle} = props;
 	const codeTree = lowlight.highlight(language, children);
+	
 	const defaultPreStyle = style.hljs || {backgroundColor: '#fff'};
 	return (
 		<pre style={defaultPreStyle} {...props}>
