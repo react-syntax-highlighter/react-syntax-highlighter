@@ -33,7 +33,7 @@ const availableStyles = [
   'color-brewer',
   'dark',
   'darkula',
-  'default',
+  'defaultStyle',
   'docco',
   'far',
   'foundation',
