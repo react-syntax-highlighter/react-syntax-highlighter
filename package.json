@@ -4,8 +4,8 @@
   "description": "sane syntax highlighting component for react",
   "main": "dist/index.js",
   "dependencies": {
-    "highlight.js": "^9.2.0",
-    "lowlight": "^1.0.0"
+    "highlight.js": "^9.3.0",
+    "lowlight": "^1.1.0"
   },
   "devDependencies": {
     "babel-cli": "^6.4.5",

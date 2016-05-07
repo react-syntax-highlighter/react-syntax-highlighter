@@ -68,4 +68,5 @@ export { default as tomorrowNight } from './tomorrow-night';
 export { default as tomorrow } from './tomorrow';
 export { default as vs } from './vs';
 export { default as xcode } from './xcode';
+export { default as xt256 } from './xt256';
 export { default as zenburn } from './zenburn';

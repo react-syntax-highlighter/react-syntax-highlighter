@@ -69,4 +69,5 @@
 * tomorrow
 * vs
 * xcode
+* xt256
 * zenburn

@@ -68,6 +68,7 @@ const availableStyles = [
   'tomorrow',
   'vs',
   'xcode',
+  'xt256',
   'zenburn' 
 ];
 class Component extends React.Component {
