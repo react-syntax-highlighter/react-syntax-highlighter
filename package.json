@@ -1,6 +1,6 @@
 {
   "name": "react-syntax-highlighter",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "sane syntax highlighting component for react",
   "main": "dist/index.js",
   "dependencies": {
