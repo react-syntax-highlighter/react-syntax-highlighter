@@ -16,7 +16,10 @@ module.exports = {
         {
             test: /\.js?$/,
             loader: 'babel',
-            query: { presets: ['react', 'es2015'] },
+            query: { 
+              presets: ['react', 'es2015'], 
+              plugins: ['transform-es2015-modules-commonjs', 'transform-object-rest-spread'] 
+            },
             include: path.join(__dirname) + '/demo'
         },
         { test: /\.css$/, loader: 'style!css' }
