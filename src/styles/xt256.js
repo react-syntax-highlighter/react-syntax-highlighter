@@ -8,7 +8,7 @@ export default {
         "overflowX": "auto",
         "color": "#eaeaea",
         "background": "#000",
-        "padding": "0.5e"
+        "padding": "0.5"
     },
     "hljs-string": {
         "color": "#00ff00"

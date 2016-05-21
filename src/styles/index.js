@@ -53,6 +53,7 @@ export { default as obsidian } from './obsidian';
 export { default as paraisoDark } from './paraiso-dark';
 export { default as paraisoLight } from './paraiso-light';
 export { default as pojoaque } from './pojoaque';
+export { default as purebasic } from './purebasic';
 export { default as qtcreatorDark } from './qtcreator_dark';
 export { default as qtcreatorLight } from './qtcreator_light';
 export { default as railscasts } from './railscasts';

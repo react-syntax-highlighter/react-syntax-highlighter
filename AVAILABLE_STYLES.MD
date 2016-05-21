@@ -54,6 +54,7 @@
 * paraisoDark
 * paraisoLight
 * pojoaque
+* purebasic
 * qtcreatorDark
 * qtcreatorLight
 * railscasts
