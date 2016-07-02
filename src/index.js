@@ -32,11 +32,11 @@ function createElement(node, style, key) {
 }
 
 export default function SyntaxHighlighter(props) {
-	const {language, children, style = defaultStyle} = props;
+	const {language, children, style = defaultStyle, ...rest} = props;
 	const codeTree = lowlight.highlight(language, children);
 	const defaultPreStyle = style.hljs || {backgroundColor: '#fff'};
 	return (
-		<pre {...props} style={defaultPreStyle}>
+		<pre {...rest} style={defaultPreStyle}>
 			<code>
 				{codeTree.value.map((node, i) => createElement(node, style, `code-segement${i}`))}
 			</code>
