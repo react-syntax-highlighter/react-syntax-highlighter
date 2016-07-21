@@ -1,6 +1,12 @@
-import lowlight from 'lowlight';
 import React from 'react';
-import { defaultStyle } from './styles';
+let defaultStyle = {};
+let lowlight;
+if (!process.env.LIGHT_BUILD) {
+	defaultStyle = require('./styles').defaultStyle;
+	lowlight = require('lowlight');
+} else {
+	lowlight = require('lowlight/lib/core');
+}
 
 const Text = ({ children }) => <span>{children}</span>;
 
@@ -43,3 +49,4 @@ export default function SyntaxHighlighter(props) {
 		</pre>
 	);
 }
+ 
