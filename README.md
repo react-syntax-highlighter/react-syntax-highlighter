@@ -33,3 +33,25 @@ const Component = () => {
   return <SyntaxHighlighter language='javascript' style={docco}>{codeString}</SyntaxHighlighter>;  
 }
 ```
+### Light Build
+
+React Syntax Highlighter used in the way described above can have a fairly large footprint. For those that desire more control over what exactly they need, there is the option to use an envified light build via the env variable `REACT_SYNTAX_HIGHLIGHTER_LIGHT_BUILD`. If you choose to use this you will need to specifically import lowlight and register your desired language and specifically import that language from highlight js. Then using something like `envify` for browserify or `DefinePlugin` for webpack pass the env `REACT_SYNTAX_HIGHLIGHTER_LIGHT_BUILD` into your build. You'll also want to import the style of your choosing from the specified file directly instead of /dist/styles index. An example for using with webpack can be found below:
+
+```js
+import js from 'highlight.js/lib/languages/javascript';
+import lowlight from 'lowlight/lib/core';
+import docco from 'react-syntax-highlighter/dist/styles/docco'; 
+
+low.registerLanguage('javascript', js);
+```
+
+Then in your webpack config: 
+
+```js
+  plugins: [
+    new webpack.DefinePlugin({
+      "process.env.REACT_SYNTAX_HIGHLIGHTER_LIGHT_BUILD": true,
+      "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV)
+    })
+  ]
+```

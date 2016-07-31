@@ -1,11 +1,11 @@
 import React from 'react';
 let defaultStyle = {};
 let lowlight;
-if (!process.env.LIGHT_BUILD) {
+if (process.env.REACT_SYNTAX_HIGHLIGHTER_LIGHT_BUILD) {
+	lowlight = require('lowlight/lib/core');
+} else {
 	defaultStyle = require('./styles').defaultStyle;
 	lowlight = require('lowlight');
-} else {
-	lowlight = require('lowlight/lib/core');
 }
 
 const Text = ({ children }) => <span>{children}</span>;
