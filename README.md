@@ -23,6 +23,7 @@ One of the biggest pain points for me trying to find a syntax highlighter for my
 * `language` - the language to highlight code in.
 * `style` - style object rquired from styles directory. <a href="https://github.com/conorhastings/react-syntax-highlighter/blob/master/AVAILABLE_STYLES.MD">here</a>. `import { style } from 'react-syntax-highlighter/styles'` . Will use default if style is not included.
 * `children` - the code to highlight.
+* `customStyle` - prop that will be combined with the top level style on the pre tag, styles here will overwrite earlier styles. 
 * `spread props` pass arbitrary props to pre tag wrapping code. 
 
 ```js
