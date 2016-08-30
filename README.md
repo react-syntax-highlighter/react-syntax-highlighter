@@ -43,7 +43,7 @@ import js from 'highlight.js/lib/languages/javascript';
 import lowlight from 'lowlight/lib/core';
 import docco from 'react-syntax-highlighter/dist/styles/docco'; 
 
-low.registerLanguage('javascript', js);
+lowlight.registerLanguage('javascript', js);
 ```
 
 Then in your webpack config: 
