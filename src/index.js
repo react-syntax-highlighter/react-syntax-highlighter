@@ -45,7 +45,7 @@ function createElement({ node, style, useInlineStyles, key }) {
 			? 
 			{ style: createStyleObject(properties.className, style) }
 			:
-			{ className: createClassNameString(properties.className )}
+			{ className: createClassNameString(properties.className) }
 		);
 		const children = childrenCreator(node.children);
 		return <TagName key={key} {...props}>{children}</TagName>;
