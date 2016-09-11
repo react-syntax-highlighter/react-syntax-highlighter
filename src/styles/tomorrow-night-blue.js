@@ -1,84 +1,6 @@
 export default {
-    "hljs-comment": {
-        "color": "#7285b7"
-    },
-    "hljs-quote": {
-        "color": "#7285b7"
-    },
-    "hljs-variable": {
-        "color": "#ff9da4"
-    },
-    "hljs-template-variable": {
-        "color": "#ff9da4"
-    },
-    "hljs-tag": {
-        "color": "#ff9da4"
-    },
-    "hljs-name": {
-        "color": "#ff9da4"
-    },
-    "hljs-selector-id": {
-        "color": "#ff9da4"
-    },
-    "hljs-selector-class": {
-        "color": "#ff9da4"
-    },
-    "hljs-regexp": {
-        "color": "#ff9da4"
-    },
-    "hljs-deletion": {
-        "color": "#ff9da4"
-    },
-    "hljs-number": {
-        "color": "#ffc58f"
-    },
-    "hljs-built_in": {
-        "color": "#ffc58f"
-    },
-    "hljs-builtin-name": {
-        "color": "#ffc58f"
-    },
-    "hljs-literal": {
-        "color": "#ffc58f"
-    },
-    "hljs-type": {
-        "color": "#ffc58f"
-    },
-    "hljs-params": {
-        "color": "#ffc58f"
-    },
-    "hljs-meta": {
-        "color": "#ffc58f"
-    },
-    "hljs-link": {
-        "color": "#ffc58f"
-    },
-    "hljs-attribute": {
-        "color": "#ffeead"
-    },
-    "hljs-string": {
-        "color": "#d1f1a9"
-    },
-    "hljs-symbol": {
-        "color": "#d1f1a9"
-    },
-    "hljs-bullet": {
-        "color": "#d1f1a9"
-    },
-    "hljs-addition": {
-        "color": "#d1f1a9"
-    },
     "hljs-title": {
         "color": "#bbdaff"
-    },
-    "hljs-section": {
-        "color": "#bbdaff"
-    },
-    "hljs-keyword": {
-        "color": "#ebbbff"
-    },
-    "hljs-selector-tag": {
-        "color": "#ebbbff"
     },
     "hljs": {
         "display": "block",
@@ -87,8 +9,86 @@ export default {
         "color": "white",
         "padding": "0.5em"
     },
+    "hljs-regexp": {
+        "color": "#ff9da4"
+    },
+    "hljs-meta": {
+        "color": "#ffc58f"
+    },
+    "hljs-string": {
+        "color": "#d1f1a9"
+    },
     "hljs-emphasis": {
         "fontStyle": "italic"
+    },
+    "hljs-builtin-name": {
+        "color": "#ffc58f"
+    },
+    "hljs-type": {
+        "color": "#ffc58f"
+    },
+    "hljs-section": {
+        "color": "#bbdaff"
+    },
+    "hljs-deletion": {
+        "color": "#ff9da4"
+    },
+    "hljs-addition": {
+        "color": "#d1f1a9"
+    },
+    "hljs-name": {
+        "color": "#ff9da4"
+    },
+    "hljs-variable": {
+        "color": "#ff9da4"
+    },
+    "hljs-selector-tag": {
+        "color": "#ebbbff"
+    },
+    "hljs-bullet": {
+        "color": "#d1f1a9"
+    },
+    "hljs-params": {
+        "color": "#ffc58f"
+    },
+    "hljs-number": {
+        "color": "#ffc58f"
+    },
+    "hljs-selector-id": {
+        "color": "#ff9da4"
+    },
+    "hljs-symbol": {
+        "color": "#d1f1a9"
+    },
+    "hljs-attribute": {
+        "color": "#ffeead"
+    },
+    "hljs-tag": {
+        "color": "#ff9da4"
+    },
+    "hljs-keyword": {
+        "color": "#ebbbff"
+    },
+    "hljs-literal": {
+        "color": "#ffc58f"
+    },
+    "hljs-comment": {
+        "color": "#7285b7"
+    },
+    "hljs-quote": {
+        "color": "#7285b7"
+    },
+    "hljs-selector-class": {
+        "color": "#ff9da4"
+    },
+    "hljs-template-variable": {
+        "color": "#ff9da4"
+    },
+    "hljs-built_in": {
+        "color": "#ffc58f"
+    },
+    "hljs-link": {
+        "color": "#ffc58f"
     },
     "hljs-strong": {
         "fontWeight": "bold"

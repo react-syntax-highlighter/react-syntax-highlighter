@@ -1,59 +1,59 @@
 export default {
+    "hljs-title": {
+        "fontWeight": "bold"
+    },
     "hljs": {
-        "color": "#363c69"
-    },
-    "hljs-keyword": {
-        "fontWeight": "bold"
-    },
-    "hljs-selector-tag": {
-        "fontWeight": "bold"
-    },
-    "hljs-literal": {
-        "fontWeight": "bold"
-    },
-    "hljs-subst": {
         "color": "#363c69"
     },
     "hljs-string": {
         "color": "#2c009f"
     },
-    "hljs-title": {
-        "fontWeight": "bold"
+    "hljs-meta": {
+        "color": "#802022"
     },
-    "hljs-section": {
+    "hljs-template-tag": {
+        "color": "#2c009f"
+    },
+    "hljs-strong": {
         "fontWeight": "bold"
     },
     "hljs-type": {
         "fontWeight": "bold"
     },
-    "hljs-attribute": {
-        "color": "#2c009f"
+    "hljs-section": {
+        "fontWeight": "bold"
     },
-    "hljs-symbol": {
+    "hljs-deletion": {
+        "color": "#802022"
+    },
+    "hljs-subst": {
+        "color": "#363c69"
+    },
+    "hljs-addition": {
         "color": "#2c009f"
     },
     "hljs-bullet": {
         "color": "#2c009f"
     },
-    "hljs-built_in": {
-        "color": "#2c009f"
-    },
-    "hljs-addition": {
-        "color": "#2c009f"
-    },
     "hljs-variable": {
         "color": "#2c009f"
     },
-    "hljs-template-tag": {
-        "color": "#2c009f"
-    },
-    "hljs-template-variable": {
-        "color": "#2c009f"
-    },
-    "hljs-link": {
-        "color": "#2c009f"
+    "hljs-selector-tag": {
+        "fontWeight": "bold"
     },
     "hljs-name": {
+        "fontWeight": "bold"
+    },
+    "hljs-symbol": {
+        "color": "#2c009f"
+    },
+    "hljs-attribute": {
+        "color": "#2c009f"
+    },
+    "hljs-keyword": {
+        "fontWeight": "bold"
+    },
+    "hljs-literal": {
         "fontWeight": "bold"
     },
     "hljs-comment": {
@@ -62,17 +62,17 @@ export default {
     "hljs-quote": {
         "color": "#802022"
     },
-    "hljs-meta": {
-        "color": "#802022"
-    },
-    "hljs-deletion": {
-        "color": "#802022"
-    },
     "hljs-doctag": {
         "fontWeight": "bold"
     },
-    "hljs-strong": {
-        "fontWeight": "bold"
+    "hljs-built_in": {
+        "color": "#2c009f"
+    },
+    "hljs-template-variable": {
+        "color": "#2c009f"
+    },
+    "hljs-link": {
+        "color": "#2c009f"
     },
     "hljs-emphasis": {
         "fontStyle": "italic"
