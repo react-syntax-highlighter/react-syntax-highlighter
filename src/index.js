@@ -53,7 +53,15 @@ function createElement({ node, style, useInlineStyles, key }) {
 }
 
 export default function SyntaxHighlighter(props) {
-	const {language, children, style = defaultStyle, customStyle = {}, useInlineStyles = true, ...rest} = props;
+	const {
+		language, 
+		children, 
+		style = defaultStyle, 
+		customStyle = {}, 
+		codeTagProps = {},
+		useInlineStyles = true, 
+		...rest
+	} = props;
 	const codeTree = lowlight.highlight(language, children);
 	const defaultPreStyle = style.hljs || {backgroundColor: '#fff'};
 	const preProps = (
@@ -66,7 +74,7 @@ export default function SyntaxHighlighter(props) {
 
 	return (
 		<pre {...preProps}>
-			<code>
+			<code {...codeTagProps}>
 				{codeTree.value.map((node, i) => createElement({
 					node, 
 					style,
