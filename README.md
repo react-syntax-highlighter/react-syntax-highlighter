@@ -58,3 +58,5 @@ Then in your webpack config:
     })
   ]
 ```
+
+Alternatively you can `import SyntaxHighlighter from "react-syntax-highlight/dist/light"` to require the light build directly.
