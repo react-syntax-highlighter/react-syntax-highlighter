@@ -1,8 +1,6 @@
-let defaultStyle = {};
-let lowlight;
-
 import highlight from './highlight';
+import lowlight from 'lowlight/lib/core';
 
-lowlight = require('lowlight/lib/core');
+const defaultStyle = {};
 
 export default highlight(lowlight, defaultStyle);
