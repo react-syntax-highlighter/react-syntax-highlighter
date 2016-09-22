@@ -1,7 +1,5 @@
 import React from 'react';
 
-const Text = ({ children }) => <span>{children}</span>;
-
 function createStyleObject(classNames, style) {
   return classNames.reduce((styleObject, className) => {
     return {...styleObject, ...style[className]};
@@ -28,7 +26,7 @@ function createChildren(style, useInlineStyles) {
 function createElement({ node, style, useInlineStyles, key }) {
   const { properties, type, tagName, value } = node;
   if (type === "text") {
-    return <Text key={key}>{ value }</Text>;
+    return value;
   } else if (tagName) {
     const TagName = tagName;
     const childrenCreator = createChildren(style, useInlineStyles);
