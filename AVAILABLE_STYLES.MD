@@ -24,9 +24,12 @@
 * atelierSeasideLight
 * atelierSulphurpoolDark
 * atelierSulphurpoolLight
+* atomOneDark
+* atomOneLight
 * brownPaper
 * codepenEmbed
 * colorBrewer
+* darcula
 * dark
 * darkula
 * defaultStyle
@@ -51,6 +54,7 @@
 * monokaiSublime
 * monokai
 * obsidian
+* ocean
 * paraisoDark
 * paraisoLight
 * pojoaque

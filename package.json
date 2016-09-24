@@ -4,7 +4,7 @@
   "description": "sane syntax highlighting component for react",
   "main": "dist/index.js",
   "dependencies": {
-    "highlight.js": "~9.4.0",
+    "highlight.js": "~9.7.0",
     "lowlight": "^1.2.0"
   },
   "devDependencies": {
