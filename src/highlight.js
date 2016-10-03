@@ -61,7 +61,7 @@ export default function (lowlight, defaultStyle) {
       useInlineStyles = true,
       showLineNumbers = false,
       startingLineNumber = 1,
-      lineNumbersStyle,
+      lineNumberStyle,
       ...rest
     } = props;
     const codeTree = lowlight.highlight(language, children);
@@ -77,7 +77,7 @@ export default function (lowlight, defaultStyle) {
       showLineNumbers 
       ? 
       <LineNumbers 
-        style={lineNumbersStyle} 
+        style={lineNumberStyle} 
         startingLineNumber={startingLineNumber}
         codeString={children}
       />
