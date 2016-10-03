@@ -74,10 +74,10 @@ export default function (lowlight, defaultStyle) {
       Object.assign({}, rest, { className: 'hljs'})
     );
     const lineNumbers = (
-      showLineNumbers 
-      ? 
-      <LineNumbers 
-        style={lineNumberStyle} 
+      showLineNumbers
+      ?
+      <LineNumbers
+        style={lineNumberStyle}
         startingLineNumber={startingLineNumber}
         codeString={children}
       />
