@@ -42,6 +42,14 @@ function createElement({ node, style, useInlineStyles, key }) {
   }
 }
 
+function getLineNumberString(lines, startingLineNumber) {
+  return lines.reduce((lineCountString, _, i) => lineCountString + `${i + startingLineNumber}\n`, '');
+}
+
+function LineNumbers({ codeString, style = {float: 'left', paddingRight: '10px'}, startingLineNumber }) {
+  return <code style={style}>{getLineNumberString(codeString.split('\n'), startingLineNumber)}</code>
+}
+
 export default function (lowlight, defaultStyle) {
  return function SyntaxHighlighter(props) {
     const {
@@ -51,6 +59,9 @@ export default function (lowlight, defaultStyle) {
       customStyle = {},
       codeTagProps = {},
       useInlineStyles = true,
+      showLineNumbers = false,
+      startingLineNumber = 1,
+      lineNumberStyle,
       ...rest
     } = props;
     const codeTree = lowlight.highlight(language, children);
@@ -62,9 +73,20 @@ export default function (lowlight, defaultStyle) {
       :
       Object.assign({}, rest, { className: 'hljs'})
     );
-
+    const lineNumbers = (
+      showLineNumbers 
+      ? 
+      <LineNumbers 
+        style={lineNumberStyle} 
+        startingLineNumber={startingLineNumber}
+        codeString={children}
+      />
+      :
+      null
+    );
     return (
       <pre {...preProps}>
+        {lineNumbers}
         <code {...codeTagProps}>
           {codeTree.value.map((node, i) => createElement({
             node,

@@ -8,7 +8,7 @@ module.exports = {
         demo: "./demo/index.js"
     },
   output: {
-    path: path.join(__dirname) + '/demo',
+    path: path.join(__dirname, 'demo'),
     filename: "[name].js"
   },
   module: {
@@ -20,7 +20,7 @@ module.exports = {
               presets: ['react', 'es2015'], 
               plugins: ['transform-es2015-modules-commonjs', 'transform-object-rest-spread'] 
             },
-            include: path.join(__dirname) + '/demo'
+            include: path.join(__dirname, 'demo')
         },
         { test: /\.css$/, loader: 'style!css' }
       ]
