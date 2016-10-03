@@ -2,33 +2,53 @@ exports[`test SyntaxHighlighter component renders correctly 1`] = `
 <pre
   style={
     Object {
-      "backgroundColor": "#fff"
+      "color": "#444"
     }
   }>
   <code>
     <span
-      style={Object {}}>
+      style={
+        Object {
+          "fontWeight": "bold"
+        }
+      }>
       const
     </span>
      woah = fun => fun + 
     <span
-      style={Object {}}>
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
       1
     </span>
     ;
     
     <span
-      style={Object {}}>
+      style={
+        Object {
+          "fontWeight": "bold"
+        }
+      }>
       const
     </span>
      dude = woah(
     <span
-      style={Object {}}>
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
       2
     </span>
     ) + 
     <span
-      style={Object {}}>
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
       3
     </span>
     ;
@@ -36,12 +56,21 @@ exports[`test SyntaxHighlighter component renders correctly 1`] = `
     <span
       style={Object {}}>
       <span
-        style={Object {}}>
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
         function
       </span>
        
       <span
-        style={Object {}}>
+        style={
+          Object {
+            "color": "#880000",
+            "fontWeight": "bold"
+          }
+        }>
         thisIsAFunction
       </span>
       (
@@ -52,44 +81,76 @@ exports[`test SyntaxHighlighter component renders correctly 1`] = `
     {
       
     <span
-      style={Object {}}>
+      style={
+        Object {
+          "fontWeight": "bold"
+        }
+      }>
       return
     </span>
      [
     <span
-      style={Object {}}>
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
       1
     </span>
     ,
     <span
-      style={Object {}}>
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
       2
     </span>
     ,
     <span
-      style={Object {}}>
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
       3
     </span>
     ].map(n => n + 
     <span
-      style={Object {}}>
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
       1
     </span>
     ).filter(n !== 
     <span
-      style={Object {}}>
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
       3
     </span>
     );
     }
     
     <span
-      style={Object {}}>
+      style={
+        Object {
+          "color": "#397300"
+        }
+      }>
       console
     </span>
     .log(
     <span
-      style={Object {}}>
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
       \'making up fake code is really hard\'
     </span>
     );
@@ -98,12 +159,21 @@ exports[`test SyntaxHighlighter component renders correctly 1`] = `
     <span
       style={Object {}}>
       <span
-        style={Object {}}>
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
         function
       </span>
        
       <span
-        style={Object {}}>
+        style={
+          Object {
+            "color": "#880000",
+            "fontWeight": "bold"
+          }
+        }>
         itIs
       </span>
       (
@@ -114,12 +184,20 @@ exports[`test SyntaxHighlighter component renders correctly 1`] = `
     {
       
     <span
-      style={Object {}}>
+      style={
+        Object {
+          "fontWeight": "bold"
+        }
+      }>
       return
     </span>
      
     <span
-      style={Object {}}>
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
       \'no seriously really it is\'
     </span>
     ;

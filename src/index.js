@@ -6,7 +6,7 @@ import highlight from './highlight';
 if (process.env.REACT_SYNTAX_HIGHLIGHTER_LIGHT_BUILD) {
 	lowlight = require('lowlight/lib/core');
 } else {
-	defaultStyle = require('./styles/default-style');
+	defaultStyle = require('./styles/default-style').default;
 	lowlight = require('lowlight');
 }
 
