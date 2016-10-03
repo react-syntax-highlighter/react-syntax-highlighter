@@ -47,7 +47,7 @@ function getLineNumberString(lines, startingLineNumber) {
 }
 
 function LineNumbers({ codeString, style = {float: 'left', paddingRight: '10px'}, startingLineNumber }) {
-  return <code style={style}>{getLineNumberString(codeString.split('\n'), startingLineNumber)}</code>
+  return <code style={style}>{getLineNumberString(codeString.replace(/\n$/, '').split('\n'), startingLineNumber)}</code>
 }
 
 export default function (lowlight, defaultStyle) {
