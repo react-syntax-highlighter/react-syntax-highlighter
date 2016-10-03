@@ -16,18 +16,56 @@ exports[`test SyntaxHighlighter component renders correctly 1`] = `
         "paddingRight": "10px"
       }
     }>
-    1
-    2
-    3
-    4
-    5
-    6
-    7
-    8
-    9
-    10
-    11
-    
+    <span
+      className="line">
+      1
+      
+    </span>
+    <span
+      className="line">
+      2
+      
+    </span>
+    <span
+      className="line">
+      3
+      
+    </span>
+    <span
+      className="line">
+      4
+      
+    </span>
+    <span
+      className="line">
+      5
+      
+    </span>
+    <span
+      className="line">
+      6
+      
+    </span>
+    <span
+      className="line">
+      7
+      
+    </span>
+    <span
+      className="line">
+      8
+      
+    </span>
+    <span
+      className="line">
+      9
+      
+    </span>
+    <span
+      className="line">
+      10
+      
+    </span>
   </code>
   <code>
     <span
