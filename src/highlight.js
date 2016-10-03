@@ -43,7 +43,7 @@ function createElement({ node, style, useInlineStyles, key }) {
 }
 
 function getLineNumberString(lines, startingLineNumber) {
-  return lines.reduce((lineCountString, _, i) => lineCountString + `${i + startingLineNumber}\n`, '');
+  return lines.map((_line, i) => { return <span key={"line-" + i}>{`${i + startingLineNumber}\n`}</span> })
 }
 
 function LineNumbers({ codeString, style = {float: 'left', paddingRight: '10px'}, startingLineNumber }) {
