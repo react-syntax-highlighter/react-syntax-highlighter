@@ -64,7 +64,7 @@ export default function (lowlight, defaultStyle) {
       lineNumberStyle,
       ...rest
     } = props;
-    const codeTree = lowlight.highlight(language, children);
+    const codeTree = language ? lowlight.highlight(language, children) : lowlight.highlightAuto(children);
     const defaultPreStyle = style.hljs || {backgroundColor: '#fff'};
     const preProps = (
       useInlineStyles

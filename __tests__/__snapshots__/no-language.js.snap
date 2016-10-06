@@ -1,0 +1,174 @@
+exports[`test SyntaxHighlighter component renders correctly 1`] = `
+<pre
+  style={
+    Object {
+      "color": "#444"
+    }
+  }>
+  <code>
+    const woah = 
+    <span
+      style={Object {}}>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        fun
+      </span>
+       =
+      <span
+        style={
+          Object {
+            "color": "#880000",
+            "fontWeight": "bold"
+          }
+        }>
+        >
+      </span>
+    </span>
+     
+    <span
+      style={Object {}}>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        fun
+      </span>
+       
+      <span
+        style={
+          Object {
+            "color": "#880000",
+            "fontWeight": "bold"
+          }
+        }>
+        +
+      </span>
+    </span>
+     
+    <span
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
+      1
+    </span>
+    ;
+    const dude = woah(
+    <span
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
+      2
+    </span>
+    ) + 
+    <span
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
+      3
+    </span>
+    ;
+    function thisIsAFunction() {
+      
+    <span
+      style={
+        Object {
+          "fontWeight": "bold"
+        }
+      }>
+      return
+    </span>
+     [
+    <span
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
+      1
+    </span>
+    ,
+    <span
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
+      2
+    </span>
+    ,
+    <span
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
+      3
+    </span>
+    ].map(n => n + 
+    <span
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
+      1
+    </span>
+    ).filter(n !== 
+    <span
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
+      3
+    </span>
+    );
+    }
+    console.log(
+    <span
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
+      \'making up fake code is really hard\'
+    </span>
+    );
+    
+    function itIs() {
+      
+    <span
+      style={
+        Object {
+          "fontWeight": "bold"
+        }
+      }>
+      return
+    </span>
+     
+    <span
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
+      \'no seriously really it is\'
+    </span>
+    ;
+    }
+    
+  </code>
+</pre>
+`;
