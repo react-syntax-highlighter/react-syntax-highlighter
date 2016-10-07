@@ -43,7 +43,7 @@ function createElement({ node, style, useInlineStyles, key }) {
 }
 
 function getLineNumbers(lines, startingLineNumber) {
-  return lines.map((_, i) => { return <span className="line" key={`line-${i}`}>{`${i + startingLineNumber}\n`}</span> })
+  return lines.map((_, i) => { return <span className="react-syntax-highlighter-line-number" key={`line-${i}`}>{`${i + startingLineNumber}\n`}</span> })
 }
 
 function LineNumbers({ codeString, style = {float: 'left', paddingRight: '10px'}, startingLineNumber }) {
