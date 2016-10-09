@@ -2,7 +2,11 @@ exports[`test SyntaxHighlighter component renders correctly 1`] = `
 <pre
   style={
     Object {
-      "color": "#444"
+      "background": "#F0F0F0",
+      "color": "#444",
+      "display": "block",
+      "overflowX": "auto",
+      "padding": "0.5em"
     }
   }>
   <code>

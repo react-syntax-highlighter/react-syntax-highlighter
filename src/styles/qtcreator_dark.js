@@ -1,54 +1,72 @@
 export default {
-    "hljs-selector-attr": {
-        "color": "#ff55ff"
-    },
-    "hljs-title": {
-        "color": "#aaaaaa"
-    },
     "hljs": {
+        "display": "block",
+        "overflowX": "auto",
+        "padding": "0.5em",
+        "background": "#000000",
         "color": "#aaaaaa"
-    },
-    "hljs-regexp": {
-        "color": "#ff55ff"
-    },
-    "hljs-string": {
-        "color": "#ff55ff"
-    },
-    "hljs-template-tag": {
-        "color": "#ff55ff"
-    },
-    "hljs-emphasis": {
-        "fontStyle": "italic"
-    },
-    "hljs-builtin-name": {
-        "color": "#ff55ff"
-    },
-    "hljs-strong": {
-        "color": "#a8a8a2"
-    },
-    "hljs-type": {
-        "color": "#ff55ff"
-    },
-    "hljs-section": {
-        "color": "#ffff55"
     },
     "hljs-subst": {
         "color": "#aaaaaa"
     },
-    "hljs-addition": {
-        "color": "#ff55ff"
+    "hljs-tag": {
+        "color": "#aaaaaa"
+    },
+    "hljs-title": {
+        "color": "#aaaaaa"
+    },
+    "hljs-strong": {
+        "color": "#a8a8a2"
+    },
+    "hljs-emphasis": {
+        "color": "#a8a8a2",
+        "fontStyle": "italic"
     },
     "hljs-bullet": {
         "color": "#ff55ff"
     },
-    "hljs-name": {
+    "hljs-quote": {
+        "color": "#ff55ff"
+    },
+    "hljs-number": {
+        "color": "#ff55ff"
+    },
+    "hljs-regexp": {
+        "color": "#ff55ff"
+    },
+    "hljs-literal": {
+        "color": "#ff55ff"
+    },
+    "hljs-code\n.hljs-selector-class": {
+        "color": "#aaaaff"
+    },
+    "hljs-stronge": {
+        "fontStyle": "italic"
+    },
+    "hljs-type": {
+        "fontStyle": "italic",
+        "color": "#ff55ff"
+    },
+    "hljs-keyword": {
         "color": "#ffff55"
     },
     "hljs-selector-tag": {
         "color": "#ffff55"
     },
-    "hljs-class .hljs-title": {
-        "color": "#8888ff"
+    "hljs-function": {
+        "color": "#ffff55"
+    },
+    "hljs-section": {
+        "color": "#ffff55"
+    },
+    "hljs-symbol": {
+        "color": "#ffff55"
+    },
+    "hljs-name": {
+        "color": "#ffff55"
+    },
+    "hljs-attribute": {
+        "color": "#ff5555"
     },
     "hljs-variable": {
         "color": "#8888ff"
@@ -56,46 +74,34 @@ export default {
     "hljs-params": {
         "color": "#8888ff"
     },
-    "hljs-code\n.hljs-selector-class": {
-        "color": "#aaaaff"
+    "hljs-class .hljs-title": {
+        "color": "#8888ff"
     },
-    "hljs-number": {
+    "hljs-string": {
         "color": "#ff55ff"
-    },
-    "hljs-symbol": {
-        "color": "#ffff55"
     },
     "hljs-selector-id": {
         "color": "#ff55ff"
     },
-    "hljs-attribute": {
-        "color": "#ff5555"
+    "hljs-selector-attr": {
+        "color": "#ff55ff"
     },
     "hljs-selector-pseudo": {
         "color": "#ff55ff"
     },
-    "hljs-tag": {
-        "color": "#aaaaaa"
-    },
-    "hljs-keyword": {
-        "color": "#ffff55"
-    },
-    "hljs-literal": {
-        "color": "#ff55ff"
-    },
-    "hljs-stronge": {
-        "fontStyle": "italic"
-    },
-    "hljs-quote": {
-        "color": "#ff55ff"
-    },
-    "hljs-function": {
-        "color": "#ffff55"
-    },
     "hljs-built_in": {
         "color": "#ff55ff"
     },
+    "hljs-builtin-name": {
+        "color": "#ff55ff"
+    },
+    "hljs-template-tag": {
+        "color": "#ff55ff"
+    },
     "hljs-template-variable": {
+        "color": "#ff55ff"
+    },
+    "hljs-addition": {
         "color": "#ff55ff"
     },
     "hljs-link": {

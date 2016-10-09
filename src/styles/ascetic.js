@@ -22,6 +22,7 @@ export default {
         "color": "#888"
     },
     "hljs-section": {
+        "color": "#888",
         "fontWeight": "bold"
     },
     "hljs-addition": {
