@@ -43,11 +43,19 @@ function createElement({ node, style, useInlineStyles, key }) {
 }
 
 function getLineNumbers(lines, startingLineNumber) {
-  return lines.map((_, i) => { return <span className="react-syntax-highlighter-line-number" key={`line-${i}`}>{`${i + startingLineNumber}\n`}</span> })
+  return lines.map((_, i) => (
+    <span className="react-syntax-highlighter-line-number" key={`line-${i}`}>
+      {`${i + startingLineNumber}\n`}
+    </span> 
+  ))
 }
 
 function LineNumbers({ codeString, style = {float: 'left', paddingRight: '10px'}, startingLineNumber }) {
-  return <code style={style}>{getLineNumbers(codeString.replace(/\n$/, '').split('\n'), startingLineNumber)}</code>
+  return (
+    <code style={style}>
+      {getLineNumbers(codeString.replace(/\n$/, '').split('\n'), startingLineNumber)}
+    </code>
+  );
 }
 
 export default function (lowlight, defaultStyle) {
