@@ -17,52 +17,52 @@ exports[`test SyntaxHighlighter component renders correctly 1`] = `
       }
     }>
     <span
-      className="line">
+      className="react-syntax-highlighter-line-number">
       1
       
     </span>
     <span
-      className="line">
+      className="react-syntax-highlighter-line-number">
       2
       
     </span>
     <span
-      className="line">
+      className="react-syntax-highlighter-line-number">
       3
       
     </span>
     <span
-      className="line">
+      className="react-syntax-highlighter-line-number">
       4
       
     </span>
     <span
-      className="line">
+      className="react-syntax-highlighter-line-number">
       5
       
     </span>
     <span
-      className="line">
+      className="react-syntax-highlighter-line-number">
       6
       
     </span>
     <span
-      className="line">
+      className="react-syntax-highlighter-line-number">
       7
       
     </span>
     <span
-      className="line">
+      className="react-syntax-highlighter-line-number">
       8
       
     </span>
     <span
-      className="line">
+      className="react-syntax-highlighter-line-number">
       9
       
     </span>
     <span
-      className="line">
+      className="react-syntax-highlighter-line-number">
       10
       
     </span>
