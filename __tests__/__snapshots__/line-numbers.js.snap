@@ -16,18 +16,56 @@ exports[`test SyntaxHighlighter component renders correctly 1`] = `
         "paddingRight": "10px"
       }
     }>
-    1
-    2
-    3
-    4
-    5
-    6
-    7
-    8
-    9
-    10
-    11
-    
+    <span
+      className="react-syntax-highlighter-line-number">
+      1
+      
+    </span>
+    <span
+      className="react-syntax-highlighter-line-number">
+      2
+      
+    </span>
+    <span
+      className="react-syntax-highlighter-line-number">
+      3
+      
+    </span>
+    <span
+      className="react-syntax-highlighter-line-number">
+      4
+      
+    </span>
+    <span
+      className="react-syntax-highlighter-line-number">
+      5
+      
+    </span>
+    <span
+      className="react-syntax-highlighter-line-number">
+      6
+      
+    </span>
+    <span
+      className="react-syntax-highlighter-line-number">
+      7
+      
+    </span>
+    <span
+      className="react-syntax-highlighter-line-number">
+      8
+      
+    </span>
+    <span
+      className="react-syntax-highlighter-line-number">
+      9
+      
+    </span>
+    <span
+      className="react-syntax-highlighter-line-number">
+      10
+      
+    </span>
   </code>
   <code>
     <span

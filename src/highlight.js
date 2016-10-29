@@ -42,12 +42,20 @@ function createElement({ node, style, useInlineStyles, key }) {
   }
 }
 
-function getLineNumberString(lines, startingLineNumber) {
-  return lines.reduce((lineCountString, _, i) => lineCountString + `${i + startingLineNumber}\n`, '');
+function getLineNumbers(lines, startingLineNumber) {
+  return lines.map((_, i) => (
+    <span className="react-syntax-highlighter-line-number" key={`line-${i}`}>
+      {`${i + startingLineNumber}\n`}
+    </span> 
+  ))
 }
 
 function LineNumbers({ codeString, style = {float: 'left', paddingRight: '10px'}, startingLineNumber }) {
-  return <code style={style}>{getLineNumberString(codeString.split('\n'), startingLineNumber)}</code>
+  return (
+    <code style={style}>
+      {getLineNumbers(codeString.replace(/\n$/, '').split('\n'), startingLineNumber)}
+    </code>
+  );
 }
 
 export default function (lowlight, defaultStyle) {
@@ -74,10 +82,10 @@ export default function (lowlight, defaultStyle) {
       Object.assign({}, rest, { className: 'hljs'})
     );
     const lineNumbers = (
-      showLineNumbers 
-      ? 
-      <LineNumbers 
-        style={lineNumberStyle} 
+      showLineNumbers
+      ?
+      <LineNumbers
+        style={lineNumberStyle}
         startingLineNumber={startingLineNumber}
         codeString={children}
       />
