@@ -10,51 +10,24 @@ exports[`test SyntaxHighlighter component renders correctly 1`] = `
     }
   }>
   <code>
-    const woah = 
+    <span
+      style={
+        Object {
+          "fontWeight": "bold"
+        }
+      }>
+      const
+    </span>
+     woah = 
     <span
       style={Object {}}>
       <span
-        style={
-          Object {
-            "fontWeight": "bold"
-          }
-        }>
+        style={Object {}}>
         fun
       </span>
-       =
-      <span
-        style={
-          Object {
-            "color": "#880000",
-            "fontWeight": "bold"
-          }
-        }>
-        >
-      </span>
+       =>
     </span>
-     
-    <span
-      style={Object {}}>
-      <span
-        style={
-          Object {
-            "fontWeight": "bold"
-          }
-        }>
-        fun
-      </span>
-       
-      <span
-        style={
-          Object {
-            "color": "#880000",
-            "fontWeight": "bold"
-          }
-        }>
-        +
-      </span>
-    </span>
-     
+     fun + 
     <span
       style={
         Object {
@@ -64,7 +37,16 @@ exports[`test SyntaxHighlighter component renders correctly 1`] = `
       1
     </span>
     ;
-    const dude = woah(
+    
+    <span
+      style={
+        Object {
+          "fontWeight": "bold"
+        }
+      }>
+      const
+    </span>
+     dude = woah(
     <span
       style={
         Object {
@@ -83,7 +65,33 @@ exports[`test SyntaxHighlighter component renders correctly 1`] = `
       3
     </span>
     ;
-    function thisIsAFunction() {
+    
+    <span
+      style={Object {}}>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        function
+      </span>
+       
+      <span
+        style={
+          Object {
+            "color": "#880000",
+            "fontWeight": "bold"
+          }
+        }>
+        thisIsAFunction
+      </span>
+      (
+      <span
+        style={Object {}} />
+      ) 
+    </span>
+    {
       
     <span
       style={
@@ -120,7 +128,16 @@ exports[`test SyntaxHighlighter component renders correctly 1`] = `
       }>
       3
     </span>
-    ].map(n => n + 
+    ].map(
+    <span
+      style={Object {}}>
+      <span
+        style={Object {}}>
+        n
+      </span>
+       =>
+    </span>
+     n + 
     <span
       style={
         Object {
@@ -140,7 +157,16 @@ exports[`test SyntaxHighlighter component renders correctly 1`] = `
     </span>
     );
     }
-    console.log(
+    
+    <span
+      style={
+        Object {
+          "color": "#397300"
+        }
+      }>
+      console
+    </span>
+    .log(
     <span
       style={
         Object {
@@ -151,7 +177,33 @@ exports[`test SyntaxHighlighter component renders correctly 1`] = `
     </span>
     );
     
-    function itIs() {
+    
+    <span
+      style={Object {}}>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        function
+      </span>
+       
+      <span
+        style={
+          Object {
+            "color": "#880000",
+            "fontWeight": "bold"
+          }
+        }>
+        itIs
+      </span>
+      (
+      <span
+        style={Object {}} />
+      ) 
+    </span>
+    {
       
     <span
       style={

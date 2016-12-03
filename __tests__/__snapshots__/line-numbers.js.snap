@@ -76,7 +76,16 @@ exports[`test SyntaxHighlighter component renders correctly 1`] = `
       }>
       const
     </span>
-     woah = fun => fun + 
+     woah = 
+    <span
+      style={Object {}}>
+      <span
+        style={Object {}}>
+        fun
+      </span>
+       =>
+    </span>
+     fun + 
     <span
       style={
         Object {
@@ -177,7 +186,16 @@ exports[`test SyntaxHighlighter component renders correctly 1`] = `
       }>
       3
     </span>
-    ].map(n => n + 
+    ].map(
+    <span
+      style={Object {}}>
+      <span
+        style={Object {}}>
+        n
+      </span>
+       =>
+    </span>
+     n + 
     <span
       style={
         Object {
