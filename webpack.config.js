@@ -17,8 +17,8 @@ module.exports = {
             test: /\.js?$/,
             loader: 'babel',
             query: { 
-              presets: ['react', 'stage-0', 'es2015'], 
-              plugins: ['transform-runtime'] 
+              presets: ['react', 'es2015'],
+              plugins: ['transform-object-rest-spread', 'transform-runtime']
             },
             include: path.join(__dirname, 'demo')
         },
