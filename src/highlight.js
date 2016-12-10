@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 function createStyleObject(classNames, style) {
   return classNames.reduce((styleObject, className) => {
     return {...styleObject, ...style[className]};
@@ -42,18 +43,34 @@ function createElement({ node, style, useInlineStyles, key }) {
   }
 }
 
-function getLineNumbers(lines, startingLineNumber) {
-  return lines.map((_, i) => (
-    <span className="react-syntax-highlighter-line-number" key={`line-${i}`}>
-      {`${i + startingLineNumber}\n`}
-    </span> 
-  ))
+function getLineNumbers({ lines, startingLineNumber, style }) {
+  return lines.map((_, i) => {
+    const number = i + startingLineNumber;
+    return (
+      <span 
+        key={`line-${i}`}
+        className='react-syntax-highlighter-line-number' 
+        style={typeof style === 'function' ? style(number) : style}
+      >
+        {`${number}\n`}
+      </span> 
+    );
+  });
 }
 
-function LineNumbers({ codeString, style = {float: 'left', paddingRight: '10px'}, startingLineNumber }) {
+function LineNumbers({ 
+  codeString, 
+  containerStyle = {float: 'left', paddingRight: '10px'}, 
+  numberStyle = {},
+  startingLineNumber 
+}) {
   return (
-    <code style={style}>
-      {getLineNumbers(codeString.replace(/\n$/, '').split('\n'), startingLineNumber)}
+    <code style={containerStyle}>
+      {getLineNumbers({
+        lines: codeString.replace(/\n$/, '').split('\n'), 
+        style: numberStyle,
+        startingLineNumber
+      })}
     </code>
   );
 }
@@ -69,6 +86,7 @@ export default function (lowlight, defaultStyle) {
       useInlineStyles = true,
       showLineNumbers = false,
       startingLineNumber = 1,
+      lineNumberContainerStyle,
       lineNumberStyle,
       ...rest
     } = props;
@@ -81,11 +99,13 @@ export default function (lowlight, defaultStyle) {
       :
       Object.assign({}, rest, { className: 'hljs'})
     );
+
     const lineNumbers = (
       showLineNumbers
       ?
       <LineNumbers
-        style={lineNumberStyle}
+        containerStyle={lineNumberContainerStyle}
+        numberStyle={lineNumberStyle}
         startingLineNumber={startingLineNumber}
         codeString={children}
       />
