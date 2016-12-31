@@ -76,54 +76,82 @@ function LineNumbers({
 }
 
 export default function (lowlight, defaultStyle) {
- return function SyntaxHighlighter(props) {
-    const {
-      language,
-      children,
-      style = defaultStyle,
-      customStyle = {},
-      codeTagProps = {},
-      useInlineStyles = true,
-      showLineNumbers = false,
-      startingLineNumber = 1,
-      lineNumberContainerStyle,
-      lineNumberStyle,
-      ...rest
-    } = props;
-    const codeTree = language ? lowlight.highlight(language, children) : lowlight.highlightAuto(children);
-    const defaultPreStyle = style.hljs || {backgroundColor: '#fff'};
-    const preProps = (
-      useInlineStyles
-      ?
-      Object.assign({}, rest, { style: Object.assign({}, defaultPreStyle, customStyle) })
-      :
-      Object.assign({}, rest, { className: 'hljs'})
-    );
+  return class SyntaxHighlighter extends React.Component {
+    componentDidMount() {
+      this.props.componentDidMount && this.props.call(this);
+    }
 
-    const lineNumbers = (
-      showLineNumbers
-      ?
-      <LineNumbers
-        containerStyle={lineNumberContainerStyle}
-        numberStyle={lineNumberStyle}
-        startingLineNumber={startingLineNumber}
-        codeString={children}
-      />
-      :
-      null
-    );
-    return (
-      <pre {...preProps}>
-        {lineNumbers}
-        <code {...codeTagProps}>
-          {codeTree.value.map((node, i) => createElement({
-            node,
-            style,
-            useInlineStyles,
-            key: `code-segement${i}`
-          }))}
-        </code>
-      </pre>
-    );
+    componentWillReceiveProps() {
+      this.props.componentWillReceiveProps && this.props.componentWillReceiveProps.call(this, ...arguments);
+    }
+
+    shouldComponentUpdate() {
+      return (
+        this.props.shouldComponentUpdate 
+        ? 
+        this.props.shouldComponentUpdate.call(this, ...arguments)
+        :
+        true
+      );
+    }
+
+    componentWillUpdate() {
+      this.props.componentWillUpdate && this.props.componentWillUpdate.call(this, ...arguments);
+    }
+
+    componentDidUpdate() {
+      this.props.componentDidUpdate && this.props.componentDidUpdate.call(this, ...arguments);
+    }
+
+    render() {
+      const {
+        language,
+        children,
+        style = defaultStyle,
+        customStyle = {},
+        codeTagProps = {},
+        useInlineStyles = true,
+        showLineNumbers = false,
+        startingLineNumber = 1,
+        lineNumberContainerStyle,
+        lineNumberStyle,
+        ...rest
+      } = this.props;
+      const codeTree = language ? lowlight.highlight(language, children) : lowlight.highlightAuto(children);
+      const defaultPreStyle = style.hljs || {backgroundColor: '#fff'};
+      const preProps = (
+        useInlineStyles
+        ?
+        Object.assign({}, rest, { style: Object.assign({}, defaultPreStyle, customStyle) })
+        :
+        Object.assign({}, rest, { className: 'hljs'})
+      );
+
+      const lineNumbers = (
+        showLineNumbers
+        ?
+        <LineNumbers
+          containerStyle={lineNumberContainerStyle}
+          numberStyle={lineNumberStyle}
+          startingLineNumber={startingLineNumber}
+          codeString={children}
+        />
+        :
+        null
+      );
+      return (
+        <pre {...preProps}>
+          {lineNumbers}
+          <code {...codeTagProps}>
+            {codeTree.value.map((node, i) => createElement({
+              node,
+              style,
+              useInlineStyles,
+              key: `code-segement${i}`
+            }))}
+          </code>
+        </pre>
+      );
+    }
   }
 }
