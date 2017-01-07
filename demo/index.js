@@ -115,15 +115,15 @@ function itIs() {
         <h1 style={h1Style}>React Syntax Highlighter</h1>
         <h2 style={h2}>Change Style</h2>
         {dropDown}
-        <div style={{paddingTop: 20}}>
+        <div style={{paddingTop: 20, display: 'flex'}}>
           <textarea 
-            style={{float: 'left', marginTop: 11}} 
+            style={{flex: 1, marginTop: 11}}
             rows={40} 
             cols={100} 
             value={this.state.code}
             onChange={(e) => this.setState({code: e.target.value})}
           />
-          <div style={{float: 'right', width: '50%'}}>
+          <div style={{flex: 1, width: '50%'}}>
             <SyntaxHighlighter language='javascript' style={this.state.style}>
               {this.state.code}
             </SyntaxHighlighter>
