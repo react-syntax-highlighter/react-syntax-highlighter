@@ -1,5 +1,9 @@
 import React from 'react';
 
+const newLineRegex = /\n/g;
+function getNewLines(str) {
+  return str.match(newLineRegex);
+}
 
 function createStyleObject(classNames, style) {
   return classNames.reduce((styleObject, className) => {
@@ -91,6 +95,7 @@ export default function (lowlight, defaultStyle) {
       ...rest
     } = props;
     const codeTree = language ? lowlight.highlight(language, children) : lowlight.highlightAuto(children);
+    console.log(codeTree, "codeTree");
     const defaultPreStyle = style.hljs || {backgroundColor: '#fff'};
     const preProps = (
       useInlineStyles
@@ -100,6 +105,62 @@ export default function (lowlight, defaultStyle) {
       Object.assign({}, rest, { className: 'hljs'})
     );
 
+    const { newTree } = codeTree.value.reduce(({ newTree, lastLineBreakIndex }, node, index) => {
+      let shouldSlice = false;
+      let newLines;
+      newLines = node.type === "text" && getNewLines(node.value);
+      if (newLines) {
+        node.value.split('\n').forEach((text, i) => {
+          if (i === 0) {
+            const children = codeTree.value.slice(
+              lastLineBreakIndex + 1, 
+              index
+            ).concat({ type: 'text', value: `${text}\n`});
+            console.log(children, "children we are");
+            const newElements = {
+              type: 'element',
+              tagName: 'span',
+              properties: { className: [] },
+              children
+            }; 
+            newTree.push(newElements);
+          } else if (i === node.value.split('\n').length - 1 &&  codeTree.value[index + 1]) {
+            console.log(codeTree.value[index + 1], index, codeTree.value.length, text);
+            codeTree.value[index + 1].children[0].value = `${text}${codeTree.value[index + 1].children[0].value}`;
+          }
+          else {
+            newTree.push({
+              type: 'text',
+              value: `${text}\n`
+            });
+          }
+        });
+        lastLineBreakIndex = index;
+      } else if(node.children) {
+        for (let i = 0; i < node.children.length; i++) {
+          newLines = node.children[i].type === 'text' && getNewLines(node.children[i].value);
+          if (newLines) {
+            console.log("HI!");
+            break;
+          }
+        }
+      }
+      if (newLines && lastLineBreakIndex !== index) {
+        console.log("zam");
+        newTree.push({
+          type: 'element',
+          tagName: 'span',
+          properties: { className: [] },
+          children: codeTree.value.slice(
+            lastLineBreakIndex + 1, 
+            index + 1
+          )
+        });
+        lastLineBreakIndex = index;
+      }
+      return { newTree, lastLineBreakIndex };
+    }, { newTree: [], lastLineBreakIndex: -1 });
+    console.log(newTree);
     const lineNumbers = (
       showLineNumbers
       ?
@@ -116,7 +177,7 @@ export default function (lowlight, defaultStyle) {
       <pre {...preProps}>
         {lineNumbers}
         <code {...codeTagProps}>
-          {codeTree.value.map((node, i) => createElement({
+          {newTree.map((node, i) => createElement({
             node,
             style,
             useInlineStyles,

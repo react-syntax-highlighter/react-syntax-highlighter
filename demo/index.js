@@ -136,4 +136,3 @@ function itIs() {
 
 
 render(<Component />, document.getElementById('app'));
-
