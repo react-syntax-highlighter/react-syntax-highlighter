@@ -5,10 +5,10 @@ function getNewLines(str) {
   return str.match(newLineRegex);
 }
 
-function createStyleObject(classNames, style) {
+function createStyleObject(classNames, elementStyle = {}, stylesheet) {
   return classNames.reduce((styleObject, className) => {
-    return {...styleObject, ...style[className]};
-  }, {});
+    return {...styleObject, ...stylesheet[className]};
+  }, elementStyle);
 }
 
 function createClassNameString(classNames) {
@@ -38,7 +38,7 @@ function createElement({ node, style, useInlineStyles, key }) {
     const props = (
       useInlineStyles
       ?
-      { style: createStyleObject(properties.className, style) }
+      { style: createStyleObject(properties.className, properties.style, style) }
       :
       { className: createClassNameString(properties.className) }
     );
@@ -79,7 +79,7 @@ function LineNumbers({
   );
 }
 
-function wrapLinesInSpan(codeTree) {
+function wrapLinesInSpan(codeTree, lineStyle) {
   const { newTree } = codeTree.value.reduce(({ newTree, lastLineBreakIndex }, node, index) => {
     let newLines;
     newLines = node.type === "text" && getNewLines(node.value);
@@ -114,7 +114,16 @@ function wrapLinesInSpan(codeTree) {
     }
     return { newTree, lastLineBreakIndex };
   }, { newTree: [], lastLineBreakIndex: -1 });
-  return newTree;
+  return newTree.map((line, i) => {
+    line.properties.style = (
+      typeof lineStyle === 'function'
+      ?
+      lineStyle(i + 1)
+      :
+      lineStyle
+    );
+    return line;
+  });
 }
 
 export default function (lowlight, defaultStyle) {
@@ -131,6 +140,7 @@ export default function (lowlight, defaultStyle) {
       lineNumberContainerStyle,
       lineNumberStyle,
       wrapLines = false,
+      lineStyle = {},
       ...rest
     } = props;
     const codeTree = language ? lowlight.highlight(language, children) : lowlight.highlightAuto(children);
@@ -143,7 +153,7 @@ export default function (lowlight, defaultStyle) {
       Object.assign({}, rest, { className: 'hljs'})
     );
 
-    const tree = wrapLines ? wrapLinesInSpan(codeTree) : codeTree.value;
+    const tree = wrapLines ? wrapLinesInSpan(codeTree, lineStyle) : codeTree.value;
     const lineNumbers = (
       showLineNumbers
       ?
