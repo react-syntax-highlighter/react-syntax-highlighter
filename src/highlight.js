@@ -79,6 +79,44 @@ function LineNumbers({
   );
 }
 
+function wrapLinesInSpan(codeTree) {
+  const { newTree } = codeTree.value.reduce(({ newTree, lastLineBreakIndex }, node, index) => {
+    let newLines;
+    newLines = node.type === "text" && getNewLines(node.value);
+    if (newLines) {
+      const splitValue = node.value.split('\n');
+      splitValue.forEach((text, i) => {
+        const newChild = { type: 'text', value: `${text}\n`};
+        if (i === 0) {
+          const children = codeTree.value.slice(
+            lastLineBreakIndex + 1, 
+            index
+          ).concat(newChild);
+          newTree.push({
+            type: 'element',
+            tagName: 'span',
+            properties: { className: [] },
+            children
+          }); 
+        } else if (i === splitValue.length - 1 &&  codeTree.value[index + 1]) {
+          codeTree.value[index + 1].children[0].value = `${text}${codeTree.value[index + 1].children[0].value}`;
+        }
+        else {
+          newTree.push({
+            type: 'element',
+            tagName: 'span',
+            properties: { className: [] },
+            children: [newChild]
+          });
+        }
+      });
+      lastLineBreakIndex = index;
+    }
+    return { newTree, lastLineBreakIndex };
+  }, { newTree: [], lastLineBreakIndex: -1 });
+  return newTree;
+}
+
 export default function (lowlight, defaultStyle) {
  return function SyntaxHighlighter(props) {
     const {
@@ -92,6 +130,7 @@ export default function (lowlight, defaultStyle) {
       startingLineNumber = 1,
       lineNumberContainerStyle,
       lineNumberStyle,
+      wrapLines = false,
       ...rest
     } = props;
     const codeTree = language ? lowlight.highlight(language, children) : lowlight.highlightAuto(children);
@@ -104,59 +143,7 @@ export default function (lowlight, defaultStyle) {
       Object.assign({}, rest, { className: 'hljs'})
     );
 
-    const { newTree } = codeTree.value.reduce(({ newTree, lastLineBreakIndex }, node, index) => {
-      let shouldSlice = false;
-      let newLines;
-      newLines = node.type === "text" && getNewLines(node.value);
-      if (newLines) {
-        node.value.split('\n').forEach((text, i) => {
-          if (i === 0) {
-            const children = codeTree.value.slice(
-              lastLineBreakIndex + 1, 
-              index
-            ).concat({ type: 'text', value: `${text}\n`});
-            const newElements = {
-              type: 'element',
-              tagName: 'span',
-              properties: { className: [] },
-              children
-            }; 
-            newTree.push(newElements);
-          } else if (i === node.value.split('\n').length - 1 &&  codeTree.value[index + 1]) {
-            codeTree.value[index + 1].children[0].value = `${text}${codeTree.value[index + 1].children[0].value}`;
-          }
-          else {
-            newTree.push({
-              type: 'element',
-              tagName: 'span',
-              properties: { className: [] },
-              children: [{ type: 'text', value: `${text}\n`}]
-            });
-          }
-        });
-        lastLineBreakIndex = index;
-      } else if(node.children) {
-        for (let i = 0; i < node.children.length; i++) {
-          newLines = node.children[i].type === 'text' && getNewLines(node.children[i].value);
-          if (newLines) {
-            break;
-          }
-        }
-      }
-      if (newLines && lastLineBreakIndex !== index) {
-        newTree.push({
-          type: 'element',
-          tagName: 'span',
-          properties: { className: [] },
-          children: codeTree.value.slice(
-            lastLineBreakIndex + 1, 
-            index + 1
-          )
-        });
-        lastLineBreakIndex = index;
-      }
-      return { newTree, lastLineBreakIndex };
-    }, { newTree: [], lastLineBreakIndex: -1 });
+    const tree = wrapLines ? wrapLinesInSpan(codeTree) : codeTree.value;
     const lineNumbers = (
       showLineNumbers
       ?
@@ -173,7 +160,7 @@ export default function (lowlight, defaultStyle) {
       <pre {...preProps}>
         {lineNumbers}
         <code {...codeTagProps}>
-          {newTree.map((node, i) => createElement({
+          {tree.map((node, i) => createElement({
             node,
             style,
             useInlineStyles,
