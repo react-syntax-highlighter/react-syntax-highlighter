@@ -95,7 +95,6 @@ export default function (lowlight, defaultStyle) {
       ...rest
     } = props;
     const codeTree = language ? lowlight.highlight(language, children) : lowlight.highlightAuto(children);
-    console.log(codeTree, "codeTree");
     const defaultPreStyle = style.hljs || {backgroundColor: '#fff'};
     const preProps = (
       useInlineStyles
@@ -116,7 +115,6 @@ export default function (lowlight, defaultStyle) {
               lastLineBreakIndex + 1, 
               index
             ).concat({ type: 'text', value: `${text}\n`});
-            console.log(children, "children we are");
             const newElements = {
               type: 'element',
               tagName: 'span',
@@ -125,13 +123,14 @@ export default function (lowlight, defaultStyle) {
             }; 
             newTree.push(newElements);
           } else if (i === node.value.split('\n').length - 1 &&  codeTree.value[index + 1]) {
-            console.log(codeTree.value[index + 1], index, codeTree.value.length, text);
             codeTree.value[index + 1].children[0].value = `${text}${codeTree.value[index + 1].children[0].value}`;
           }
           else {
             newTree.push({
-              type: 'text',
-              value: `${text}\n`
+              type: 'element',
+              tagName: 'span',
+              properties: { className: [] },
+              children: [{ type: 'text', value: `${text}\n`}]
             });
           }
         });
@@ -140,13 +139,11 @@ export default function (lowlight, defaultStyle) {
         for (let i = 0; i < node.children.length; i++) {
           newLines = node.children[i].type === 'text' && getNewLines(node.children[i].value);
           if (newLines) {
-            console.log("HI!");
             break;
           }
         }
       }
       if (newLines && lastLineBreakIndex !== index) {
-        console.log("zam");
         newTree.push({
           type: 'element',
           tagName: 'span',
@@ -160,7 +157,6 @@ export default function (lowlight, defaultStyle) {
       }
       return { newTree, lastLineBreakIndex };
     }, { newTree: [], lastLineBreakIndex: -1 });
-    console.log(newTree);
     const lineNumbers = (
       showLineNumbers
       ?
