@@ -80,7 +80,7 @@ function LineNumbers({
 }
 
 function wrapLinesInSpan(codeTree, lineStyle) {
-  const { newTree } = codeTree.value.reduce(({ newTree, lastLineBreakIndex }, node, index) => {
+  const { newTree, lastLineBreakIndex } = codeTree.value.reduce(({ newTree, lastLineBreakIndex }, node, index) => {
     let newLines;
     newLines = node.type === "text" && getNewLines(node.value);
     if (newLines) {
@@ -114,6 +114,14 @@ function wrapLinesInSpan(codeTree, lineStyle) {
     }
     return { newTree, lastLineBreakIndex };
   }, { newTree: [], lastLineBreakIndex: -1 });
+  if (lastLineBreakIndex !== codeTree.value.length - 1) {
+    newTree.push({
+      type: 'element',
+      tagName: 'span',
+      properties: { className: [] },
+      children: codeTree.value.slice(lastLineBreakIndex + 1, codeTree.value.length)
+    });
+  }
   return newTree.map((line, i) => {
     line.properties.style = (
       typeof lineStyle === 'function'
