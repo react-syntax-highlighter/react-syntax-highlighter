@@ -79,11 +79,20 @@ function LineNumbers({
   );
 }
 
-function createLineElement(children) {
+function createLineElement({ children, lineNumber, lineStyle }) {
   return {
     type: 'element',
     tagName: 'span',
-    properties: { className: [] },
+    properties: { 
+      className: [],
+      style: (
+        typeof lineStyle === 'function'
+        ?
+        lineStyle(lineNumber)
+        :
+        lineStyle
+      )
+    },
     children
   }
 }
@@ -96,18 +105,19 @@ function wrapLinesInSpan(codeTree, lineStyle) {
     if (newLines) {
       const splitValue = node.value.split('\n');
       splitValue.forEach((text, i) => {
+        const lineNumber = newTree.length + 1;
         const newChild = { type: 'text', value: `${text}\n`};
         if (i === 0) {
           const children = codeTree.value.slice(
             lastLineBreakIndex + 1, 
             index
           ).concat(newChild);
-          newTree.push(createLineElement(children)); 
+          newTree.push(createLineElement({ children, lineNumber, lineStyle })); 
         } else if (i === splitValue.length - 1 &&  codeTree.value[index + 1]) {
           codeTree.value[index + 1].children[0].value = `${text}${codeTree.value[index + 1].children[0].value}`;
         }
         else {
-          newTree.push(createLineElement([newChild]));
+          newTree.push(createLineElement({ children: [newChild], lineNumber, lineStyle })); 
         }
       });
       lastLineBreakIndex = index;
@@ -116,18 +126,9 @@ function wrapLinesInSpan(codeTree, lineStyle) {
   }, { newTree: [], lastLineBreakIndex: -1 });
   if (lastLineBreakIndex !== codeTree.value.length - 1) {
     const children = codeTree.value.slice(lastLineBreakIndex + 1, codeTree.value.length);
-    newTree.push(createLineElement(children));
+    newTree.push(createLineElement({ children, lineNumber: newTree.length + 1, lineStyle })); 
   }
-  return newTree.map((line, i) => {
-    line.properties.style = (
-      typeof lineStyle === 'function'
-      ?
-      lineStyle(i + 1)
-      :
-      lineStyle
-    );
-    return line;
-  });
+  return newTree;
 }
 
 export default function (lowlight, defaultStyle) {
