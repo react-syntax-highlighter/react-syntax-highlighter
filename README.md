@@ -32,6 +32,8 @@ I do realize that javascript styles are not for everyone, so you can optionally 
 * `startingLineNumber` - if `showLineNumbers` is enabled the line numbering will start from here.
 * `lineNumberContainerStyle` - the line numbers container default to appearing to the left with 10px of right padding. You can use this to override those styles.
 * `lineNumberStyle` - inline style to be passed to the span wrapping each number. Can be either an object or a function that recieves current line number as argument and returns style object.
+* `wrapLines` - a boolean value that determines whether or not each line of code should be wrapped in a parent element. defaults to false, when false one can not take action on an element on the line level.
+* `lineStyle` - inline style to be passed to the span wrapping each line if wrapLines is true. Can be either an object or a function that recieves current line number as argument and returns style object.
 * `spread props` pass arbitrary props to pre tag wrapping code. 
 
 ```js

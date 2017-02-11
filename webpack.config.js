@@ -5,12 +5,12 @@ module.exports = {
   context: path.join(__dirname),
   devtool: 'source-map',
   entry: {
-        demo: "./demo/index.js",
-        diff: "./demo/diff.js"
+        demo: './demo/index.js',
+        diff: './demo/diff.js'
     },
   output: {
     path: path.join(__dirname, 'demo'),
-    filename: "[name]-build.js"
+    filename: '[name]-build.js'
   },
   module: {
       loaders: [
