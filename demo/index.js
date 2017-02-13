@@ -74,21 +74,53 @@ const availableStyles = [
 class Component extends React.Component {
   constructor() {
     super();
-    const initialCodeString = `const woah = fun => fun + 1;
-const dude = woah(2) + 3;
-function thisIsAFunction() {
-  return [1,2,3].map(n => n + 1).filter(n !== 3);
+    const initialCodeString = `function createStyleObject(classNames, style) {
+  return classNames.reduce((styleObject, className) => {
+    return {...styleObject, ...style[className]};
+  }, {});
 }
-console.log('making up fake code is really hard');
 
-function itIs() {
-  return 'no seriously really it is';
+function createClassNameString(classNames) {
+  return classNames.join(' ');
+}
+
+function createChildren(style, useInlineStyles) {
+  let childrenCount = 0;
+  return children => {
+    childrenCount += 1;
+    return children.map((child, i) => createElement({
+      node: child,
+      style,
+      useInlineStyles,
+      key:\`code-segment-$\{childrenCount}-$\{i}\`
+    }));
+  }
+}
+
+function createElement({ node, style, useInlineStyles, key }) {
+  const { properties, type, tagName, value } = node;
+  if (type === "text") {
+    return value;
+  } else if (tagName) {
+    const TagName = tagName;
+    const childrenCreator = createChildren(style, useInlineStyles);
+    const props = (
+      useInlineStyles
+      ?
+      { style: createStyleObject(properties.className, style) }
+      :
+      { className: createClassNameString(properties.className) }
+    );
+    const children = childrenCreator(node.children);
+    return <TagName key={key} {...props}>{children}</TagName>;
+  }
 }
   `;
     this.state = {
-      selected: 'docco',
-      style: require('../dist/styles/docco').default,
-      code: initialCodeString
+      selected: 'tomorrow-night-eighties',
+      style: require('../dist/styles/tomorrow-night-eighties').default,
+      code: initialCodeString,
+      showLineNumbers: false
     }
   }
   render() {
@@ -101,20 +133,25 @@ function itIs() {
       color: 'aliceblue'
     }
 
-    const dropDown = (
-      <select 
-        value={this.state.selected} 
-        onChange={(e) => this.setState({style: require(`../dist/styles/${e.target.value}`).default, selected: e.target.value})}
-      >
-        {availableStyles.map(s => <option key={s} value={s}>{s}</option>)}
-      </select>
-    );
-
     return (
       <div>
         <h1 style={h1Style}>React Syntax Highlighter</h1>
         <h2 style={h2}>Change Style</h2>
-        {dropDown}
+        <select 
+          value={this.state.selected} 
+          onChange={(e) => this.setState({style: require(`../dist/styles/${e.target.value}`).default, selected: e.target.value})}
+        >
+          {availableStyles.map(s => <option key={s} value={s}>{s}</option>)}
+        </select>
+        <div style={{paddingTop: '10px', fontSize: 16, color: 'aliceblue'}}>
+          <label htmlFor="showLineNumbers">Show Line Numbers:</label>
+          <input 
+            type="checkbox" 
+            checked={this.state.showLineNumbers} 
+            onChange={() => this.setState({ showLineNumbers: !this.state.showLineNumbers })}
+            id="showLineNumbers"
+          />
+        </div>
         <div style={{paddingTop: 20, display: 'flex'}}>
           <textarea 
             style={{flex: 1, marginTop: 11}}
@@ -124,7 +161,7 @@ function itIs() {
             onChange={(e) => this.setState({code: e.target.value})}
           />
           <div style={{flex: 1, width: '50%'}}>
-            <SyntaxHighlighter language='javascript' style={this.state.style}>
+            <SyntaxHighlighter style={this.state.style} showLineNumbers={this.state.showLineNumbers}>
               {this.state.code}
             </SyntaxHighlighter>
           </div>
