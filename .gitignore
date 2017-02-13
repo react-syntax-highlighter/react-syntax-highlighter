@@ -3,4 +3,8 @@ dist
 .DS_Store
 demo/demo.js
 demo/demo.js.map
+demo/demo-build.js
+demo/demo-build.js.map
+demo/diff-build.js
+demo/diff-build.js.map
 npm-debug.log
