@@ -28,12 +28,11 @@ function createChildren(style, useInlineStyles) {
   }
 }
 
-function createElement({ node, style, useInlineStyles, key }) {
-  const { properties, type, tagName, value } = node;
+export function createElement({ node, style, useInlineStyles, key }) {
+  const { properties, type, tagName: TagName, value } = node;
   if (type === 'text') {
     return value;
-  } else if (tagName) {
-    const TagName = tagName;
+  } else if (TagName) {
     const childrenCreator = createChildren(style, useInlineStyles);
     const props = (
       useInlineStyles
@@ -131,25 +130,45 @@ function wrapLinesInSpan(codeTree, lineStyle) {
   return newTree;
 }
 
+function defaultRenderer({ rows, style, useInlineStyles }) {
+  return (
+    rows.map((node, i) => createElement({
+      node,
+      style,
+      useInlineStyles,
+      key: `code-segement${i}`
+    }))
+  );
+}
+
 export default function (lowlight, defaultStyle) {
- return function SyntaxHighlighter(props) {
-    const {
-      language,
-      children,
-      style = defaultStyle,
-      customStyle = {},
-      codeTagProps = {},
-      useInlineStyles = true,
-      showLineNumbers = false,
-      startingLineNumber = 1,
-      lineNumberContainerStyle,
-      lineNumberStyle,
-      wrapLines = false,
-      lineStyle = {},
-      ...rest
-    } = props;
-    const codeTree = language ? lowlight.highlight(language, children) : lowlight.highlightAuto(children);
-    const defaultPreStyle = style.hljs || {backgroundColor: '#fff'};
+ return function SyntaxHighlighter({
+  language,
+  children,
+  style = defaultStyle,
+  customStyle = {},
+  codeTagProps = {},
+  useInlineStyles = true,
+  showLineNumbers = false,
+  startingLineNumber = 1,
+  lineNumberContainerStyle,
+  lineNumberStyle,
+  wrapLines = false,
+  lineStyle = {},
+  renderer,
+  ...rest
+ }) {
+    /* custom renderers rely on individual row elements so we need to turn wrapLines on 
+     * if renderer is provided
+    */
+    wrapLines = renderer ? true : wrapLines;
+    renderer = renderer || defaultRenderer;
+    const codeTree = (
+      language ? 
+      lowlight.highlight(language, children) : 
+      lowlight.highlightAuto(children)
+    );
+    const defaultPreStyle = style.hljs || { backgroundColor: '#fff' };
     const preProps = (
       useInlineStyles
       ?
@@ -175,12 +194,7 @@ export default function (lowlight, defaultStyle) {
       <pre {...preProps}>
         {lineNumbers}
         <code {...codeTagProps}>
-          {tree.map((node, i) => createElement({
-            node,
-            style,
-            useInlineStyles,
-            key: `code-segement${i}`
-          }))}
+          {renderer({ rows: tree, style, useInlineStyles })}
         </code>
       </pre>
     );
