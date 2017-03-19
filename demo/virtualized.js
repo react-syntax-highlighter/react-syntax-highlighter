@@ -304,12 +304,14 @@ function createElement({ node, style, useInlineStyles, key }) {
     }
 
     return (
-      <div>
+      <div style={{ height: "100vh" }}>
         <h1 style={h1Style}>React Syntax Highlighter Virtualized</h1>
           <SyntaxHighlighter 
+            customStyle={{ height: "100vh" }}
             style={this.state.style} 
             showLineNumbers={this.state.showLineNumbers}
             renderer={renderer({ height: this.state.height, width: this.state.width })}
+            codeTagProps={{ style: { height: "100vh" }}}
           >
             {this.state.code}
           </SyntaxHighlighter>
