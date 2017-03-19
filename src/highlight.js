@@ -15,29 +15,35 @@ function createClassNameString(classNames) {
   return classNames.join(' ');
 }
 
-function createChildren(style, useInlineStyles) {
+function createChildren(stylesheet, useInlineStyles) {
   let childrenCount = 0;
   return children => {
     childrenCount += 1;
     return children.map((child, i) => createElement({
       node: child,
-      style,
+      stylesheet,
       useInlineStyles,
       key:`code-segment-${childrenCount}-${i}`
     }));
   }
 }
 
-export function createElement({ node, style, useInlineStyles, key }) {
+export function createElement({ node, stylesheet, style = {}, useInlineStyles, key }) {
   const { properties, type, tagName: TagName, value } = node;
   if (type === 'text') {
     return value;
   } else if (TagName) {
-    const childrenCreator = createChildren(style, useInlineStyles);
+    const childrenCreator = createChildren(stylesheet, useInlineStyles);
     const props = (
       useInlineStyles
       ?
-      { style: createStyleObject(properties.className, properties.style, style) }
+      { 
+        style: createStyleObject(
+          properties.className, 
+          Object.assign({}, properties.style, style), 
+          stylesheet
+        ) 
+      }
       :
       { className: createClassNameString(properties.className) }
     );
@@ -130,11 +136,11 @@ function wrapLinesInSpan(codeTree, lineStyle) {
   return newTree;
 }
 
-function defaultRenderer({ rows, style, useInlineStyles }) {
+function defaultRenderer({ rows, stylesheet, useInlineStyles }) {
   return (
     rows.map((node, i) => createElement({
       node,
-      style,
+      stylesheet,
       useInlineStyles,
       key: `code-segement${i}`
     }))
@@ -194,9 +200,10 @@ export default function (lowlight, defaultStyle) {
       <pre {...preProps}>
         {lineNumbers}
         <code {...codeTagProps}>
-          {renderer({ rows: tree, style, useInlineStyles })}
+          {renderer({ rows: tree, stylesheet: style, useInlineStyles })}
         </code>
       </pre>
     );
   }
 }
+
