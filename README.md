@@ -34,6 +34,7 @@ I do realize that javascript styles are not for everyone, so you can optionally 
 * `lineNumberStyle` - inline style to be passed to the span wrapping each number. Can be either an object or a function that recieves current line number as argument and returns style object.
 * `wrapLines` - a boolean value that determines whether or not each line of code should be wrapped in a parent element. defaults to false, when false one can not take action on an element on the line level. You can see an example of what this enables <a href="http://conor.rodeo/react-syntax-highlighter/demo/diff.html">here</a>
 * `lineStyle` - inline style to be passed to the span wrapping each line if wrapLines is true. Can be either an object or a function that recieves current line number as argument and returns style object.
+* `renderer` - an optional custom renderer for rendering lines of code. See <a href="https://github.com/conorhastings/react-syntax-highlighter-virtualized-renderer">here</a> for an example.
 * `spread props` pass arbitrary props to pre tag wrapping code. 
 
 ```js
