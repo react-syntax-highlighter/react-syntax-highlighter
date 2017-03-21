@@ -15,30 +15,35 @@ function createClassNameString(classNames) {
   return classNames.join(' ');
 }
 
-function createChildren(style, useInlineStyles) {
+function createChildren(stylesheet, useInlineStyles) {
   let childrenCount = 0;
   return children => {
     childrenCount += 1;
     return children.map((child, i) => createElement({
       node: child,
-      style,
+      stylesheet,
       useInlineStyles,
       key:`code-segment-${childrenCount}-${i}`
     }));
   }
 }
 
-function createElement({ node, style, useInlineStyles, key }) {
-  const { properties, type, tagName, value } = node;
+export function createElement({ node, stylesheet, style = {}, useInlineStyles, key }) {
+  const { properties, type, tagName: TagName, value } = node;
   if (type === 'text') {
     return value;
-  } else if (tagName) {
-    const TagName = tagName;
-    const childrenCreator = createChildren(style, useInlineStyles);
+  } else if (TagName) {
+    const childrenCreator = createChildren(stylesheet, useInlineStyles);
     const props = (
       useInlineStyles
       ?
-      { style: createStyleObject(properties.className, properties.style, style) }
+      { 
+        style: createStyleObject(
+          properties.className, 
+          Object.assign({}, properties.style, style), 
+          stylesheet
+        ) 
+      }
       :
       { className: createClassNameString(properties.className) }
     );
@@ -131,25 +136,45 @@ function wrapLinesInSpan(codeTree, lineStyle) {
   return newTree;
 }
 
+function defaultRenderer({ rows, stylesheet, useInlineStyles }) {
+  return (
+    rows.map((node, i) => createElement({
+      node,
+      stylesheet,
+      useInlineStyles,
+      key: `code-segement${i}`
+    }))
+  );
+}
+
 export default function (lowlight, defaultStyle) {
- return function SyntaxHighlighter(props) {
-    const {
-      language,
-      children,
-      style = defaultStyle,
-      customStyle = {},
-      codeTagProps = {},
-      useInlineStyles = true,
-      showLineNumbers = false,
-      startingLineNumber = 1,
-      lineNumberContainerStyle,
-      lineNumberStyle,
-      wrapLines = false,
-      lineStyle = {},
-      ...rest
-    } = props;
-    const codeTree = language ? lowlight.highlight(language, children) : lowlight.highlightAuto(children);
-    const defaultPreStyle = style.hljs || {backgroundColor: '#fff'};
+ return function SyntaxHighlighter({
+  language,
+  children,
+  style = defaultStyle,
+  customStyle = {},
+  codeTagProps = {},
+  useInlineStyles = true,
+  showLineNumbers = false,
+  startingLineNumber = 1,
+  lineNumberContainerStyle,
+  lineNumberStyle,
+  wrapLines = false,
+  lineStyle = {},
+  renderer,
+  ...rest
+ }) {
+    /* custom renderers rely on individual row elements so we need to turn wrapLines on 
+     * if renderer is provided
+    */
+    wrapLines = renderer ? true : wrapLines;
+    renderer = renderer || defaultRenderer;
+    const codeTree = (
+      language ? 
+      lowlight.highlight(language, children) : 
+      lowlight.highlightAuto(children)
+    );
+    const defaultPreStyle = style.hljs || { backgroundColor: '#fff' };
     const preProps = (
       useInlineStyles
       ?
@@ -175,14 +200,10 @@ export default function (lowlight, defaultStyle) {
       <pre {...preProps}>
         {lineNumbers}
         <code {...codeTagProps}>
-          {tree.map((node, i) => createElement({
-            node,
-            style,
-            useInlineStyles,
-            key: `code-segement${i}`
-          }))}
+          {renderer({ rows: tree, stylesheet: style, useInlineStyles })}
         </code>
       </pre>
     );
   }
 }
+

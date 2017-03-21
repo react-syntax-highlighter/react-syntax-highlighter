@@ -6,7 +6,8 @@ module.exports = {
   devtool: 'source-map',
   entry: {
         demo: './demo/index.js',
-        diff: './demo/diff.js'
+        diff: './demo/diff.js',
+        virtualized: './demo/virtualized.js'
     },
   output: {
     path: path.join(__dirname, 'demo'),
