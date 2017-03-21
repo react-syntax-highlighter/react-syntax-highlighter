@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import SyntaxHighlighter from '../dist';
-import renderer from "../dist/virtualized";
+import renderer from 'react-syntax-highlighter-virtualized-renderer';
 
 const availableStyles = [
   'agate',
