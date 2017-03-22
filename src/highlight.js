@@ -1,5 +1,5 @@
 import React from 'react';
-import createElement from "./create-element";
+import createElement from './create-element';
 
 const newLineRegex = /\n/g;
 function getNewLines(str) {
@@ -60,10 +60,11 @@ function createLineElement({ children, lineNumber, lineStyle }) {
 
 function wrapLinesInSpan(codeTree, lineStyle) {
   const { newTree, lastLineBreakIndex } = codeTree.value.reduce(({ newTree, lastLineBreakIndex }, node, index) => {
-    let newLines;
-    newLines = node.type === "text" && getNewLines(node.value);
+    const isTextNode = node.type === 'text' || node.children[0].type === 'text'; 
+    const value = isTextNode && (node.value || node.children[0].value);
+    const newLines = isTextNode && getNewLines(value);
     if (newLines) {
-      const splitValue = node.value.split('\n');
+      const splitValue = value.split('\n');
       splitValue.forEach((text, i) => {
         const lineNumber = newTree.length + 1;
         const newChild = { type: 'text', value: `${text}\n`};
@@ -73,8 +74,11 @@ function wrapLinesInSpan(codeTree, lineStyle) {
             index
           ).concat(newChild);
           newTree.push(createLineElement({ children, lineNumber, lineStyle })); 
-        } else if (i === splitValue.length - 1 &&  codeTree.value[index + 1]) {
+        } else if (i === splitValue.length - 1 && codeTree.value[index + 1] && codeTree.value[index + 1].children) {
           codeTree.value[index + 1].children[0].value = `${text}${codeTree.value[index + 1].children[0].value}`;
+        }
+        else if (i === splitValue.length - 1 &&  codeTree.value[index + 1]) {
+          codeTree.value[index + 1].value = `${text}${codeTree.value[index + 1].value}`;
         }
         else {
           newTree.push(createLineElement({ children: [newChild], lineNumber, lineStyle })); 
