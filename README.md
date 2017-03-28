@@ -4,7 +4,7 @@
 
 Syntax highlighting component for `React` using the seriously super amazing <a href="https://github.com/wooorm/lowlight">lowlight</a> by <a href="https://github.com/wooorm">wooorm</a>
 
-Check out a small demo <a href="http://conorhastings.com/react-syntax-highlighter/demo/">here</a> and see the component in action highlighting the generated test code <a href="http://conorhastings.com/redux-test-recorder/demo/">here</a>
+Check out a small demo <a href="http://conor.rodeo/react-syntax-highlighter/demo/">here</a> and see the component in action highlighting the generated test code <a href="http://conor.rodeo/redux-test-recorder/demo/">here</a>
 
 ### Install
 
@@ -23,7 +23,10 @@ I do realize that javascript styles are not for everyone, so you can optionally 
 
 #### props
 * `language` - the language to highlight code in.
-* `style` - style object rquired from styles directory. <a href="https://github.com/conorhastings/react-syntax-highlighter/blob/master/AVAILABLE_STYLES.MD">here</a>. `import { style } from 'react-syntax-highlighter/styles'` . Will use default if style is not included.
+* `style` - style object rquired from styles directory. <a href="https://github.com/
+
+
+/react-syntax-highlighter/blob/master/AVAILABLE_STYLES.MD">here</a>. `import { style } from 'react-syntax-highlighter/styles'` . Will use default if style is not included.
 * `children` - the code to highlight.
 * `customStyle` - prop that will be combined with the top level style on the pre tag, styles here will overwrite earlier styles. 
 * `codeTagProps` - props that will be spread into the `<code`> tag that is the direct parent of the highlighted code elements. Useful for styling/assigning classNames.
