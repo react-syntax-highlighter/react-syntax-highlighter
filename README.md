@@ -23,10 +23,7 @@ I do realize that javascript styles are not for everyone, so you can optionally 
 
 #### props
 * `language` - the language to highlight code in.
-* `style` - style object rquired from styles directory. <a href="https://github.com/
-
-
-/react-syntax-highlighter/blob/master/AVAILABLE_STYLES.MD">here</a>. `import { style } from 'react-syntax-highlighter/styles'` . Will use default if style is not included.
+* `style` - style object required from styles directory [here](./AVAILABLE_STYLES.MD). `import { style } from 'react-syntax-highlighter/styles'` . Will use default if style is not included.
 * `children` - the code to highlight.
 * `customStyle` - prop that will be combined with the top level style on the pre tag, styles here will overwrite earlier styles. 
 * `codeTagProps` - props that will be spread into the `<code`> tag that is the direct parent of the highlighted code elements. Useful for styling/assigning classNames.
