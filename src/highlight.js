@@ -74,8 +74,25 @@ function wrapLinesInSpan(codeTree, lineStyle) {
             index
           ).concat(newChild);
           newTree.push(createLineElement({ children, lineNumber, lineStyle })); 
-        } else if (i === splitValue.length - 1 && codeTree.value[index + 1] && codeTree.value[index + 1].children) {
+        } else if (
+          i === splitValue.length - 1 && 
+          codeTree.value[index + 1] && 
+          codeTree.value[index + 1].children &&
+          codeTree.value[index + 1].children[0] &&
+          codeTree.value[index + 1].children[0].value
+        ) {
           codeTree.value[index + 1].children[0].value = `${text}${codeTree.value[index + 1].children[0].value}`;
+        } else if (
+          i === splitValue.length - 1 && 
+          codeTree.value[index + 1] && 
+          codeTree.value[index + 1].children &&
+          codeTree.value[index + 1].children && 
+          codeTree.value[index + 1].children &&
+          codeTree.value[index + 1].children[0] &&
+          codeTree.value[index + 1].children[0].children && 
+          codeTree.value[index + 1].children[0].children.length
+        ) {
+          codeTree.value[index + 1].children[0].children[0].value = `${text}${ codeTree.value[index + 1].children[0].children[0].value}`;
         }
         else if (i === splitValue.length - 1 &&  codeTree.value[index + 1]) {
           codeTree.value[index + 1].value = `${text}${codeTree.value[index + 1].value}`;
