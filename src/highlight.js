@@ -57,6 +57,23 @@ function createLineElement({ children, lineNumber, lineStyle }) {
   }
 }
 
+function findStringChild(node) {
+  const nodeHasChildren = !!(node && node.children);
+  const nodeHasFirstChild = !!(nodeHasChildren &&node.children[0]);
+  const firstChildIsText = !!(nodeHasFirstChild && node.children[0].value);
+  if (
+    node && 
+    nodeHasChildren &&
+    nodeHasFirstChild &&
+    firstChildIsText
+  ) {
+    return node.children[0];
+  } else if (nodeHasFirstChild) {
+    return findStringChild(node.children[0]);
+  } else if (node) {
+    return node;
+  }
+}
 
 function wrapLinesInSpan(codeTree, lineStyle) {
   const { newTree, lastLineBreakIndex } = codeTree.value.reduce(({ newTree, lastLineBreakIndex }, node, index) => {
@@ -74,13 +91,14 @@ function wrapLinesInSpan(codeTree, lineStyle) {
             index
           ).concat(newChild);
           newTree.push(createLineElement({ children, lineNumber, lineStyle })); 
-        } else if (i === splitValue.length - 1 && codeTree.value[index + 1] && codeTree.value[index + 1].children) {
-          codeTree.value[index + 1].children[0].value = `${text}${codeTree.value[index + 1].children[0].value}`;
-        }
-        else if (i === splitValue.length - 1 &&  codeTree.value[index + 1]) {
-          codeTree.value[index + 1].value = `${text}${codeTree.value[index + 1].value}`;
-        }
-        else {
+        } else if (i === splitValue.length - 1) {
+          const stringChild = findStringChild(codeTree.value[index + 1]);
+          if (stringChild) {
+            stringChild.value = `${text}${stringChild.value}`;
+          } else {
+            newTree.push(createLineElement({ children: [newChild], lineNumber, lineStyle })); 
+          }
+        } else {
           newTree.push(createLineElement({ children: [newChild], lineNumber, lineStyle })); 
         }
       });
