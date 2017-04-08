@@ -136,15 +136,16 @@ export default function (lowlight, defaultStyle) {
   startingLineNumber = 1,
   lineNumberContainerStyle,
   lineNumberStyle,
-  wrapLines = false,
+  wrapLines,
   lineStyle = {},
   renderer,
   ...rest
  }) {
-    /* custom renderers rely on individual row elements so we need to turn wrapLines on 
-     * if renderer is provided
+    /* 
+     * some custom renderers rely on individual row elements so we need to turn wrapLines on 
+     * if renderer is provided and wrapLines is undefined
     */
-    wrapLines = renderer ? true : wrapLines;
+    wrapLines = renderer && wrapLines === undefined ? true : wrapLines;
     renderer = renderer || defaultRenderer;
     const codeTree = (
       language ? 
