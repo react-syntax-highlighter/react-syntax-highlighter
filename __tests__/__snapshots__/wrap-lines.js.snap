@@ -142,7 +142,7 @@ exports[`test SyntaxHighlighter allows lineStyle as function 1`] = `
             "fontWeight": "bold"
           }
         }>
-        return
+          return
       </span>
       <span
         style={Object {}}>
@@ -316,7 +316,7 @@ exports[`test SyntaxHighlighter allows lineStyle as function 1`] = `
             "fontWeight": "bold"
           }
         }>
-        return
+          return
       </span>
       <span
         style={Object {}}>
@@ -499,7 +499,7 @@ exports[`test SyntaxHighlighter allows lineStyle as object 1`] = `
             "fontWeight": "bold"
           }
         }>
-        return
+          return
       </span>
       <span
         style={Object {}}>
@@ -673,7 +673,7 @@ exports[`test SyntaxHighlighter allows lineStyle as object 1`] = `
             "fontWeight": "bold"
           }
         }>
-        return
+          return
       </span>
       <span
         style={Object {}}>
@@ -840,7 +840,7 @@ exports[`test SyntaxHighlighter component renders correctly 1`] = `
             "fontWeight": "bold"
           }
         }>
-        return
+          return
       </span>
       <span
         style={Object {}}>
@@ -994,7 +994,7 @@ exports[`test SyntaxHighlighter component renders correctly 1`] = `
             "fontWeight": "bold"
           }
         }>
-        return
+          return
       </span>
       <span
         style={Object {}}>
