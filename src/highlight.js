@@ -92,7 +92,11 @@ function wrapLinesInSpan(codeTree, lineStyle) {
           ).concat(newChild);
           newTree.push(createLineElement({ children, lineNumber, lineStyle })); 
         } else if (i === splitValue.length - 1) {
-          const stringChild = tree[index + 1];
+          const stringChild = (
+            tree[index + 1] && 
+            tree[index + 1].children && 
+            tree[index + 1].children[0]
+          );
           if (stringChild) {
             stringChild.value = `${text}${stringChild.value}`;
           } else {
@@ -106,8 +110,8 @@ function wrapLinesInSpan(codeTree, lineStyle) {
     }
     return { newTree, lastLineBreakIndex };
   }, { newTree: [], lastLineBreakIndex: -1 });
-  if (lastLineBreakIndex !== codeTree.value.length - 1) {
-    const children = codeTree.value.slice(lastLineBreakIndex + 1, codeTree.value.length);
+  if (lastLineBreakIndex !== tree.length - 1) {
+    const children = tree.slice(lastLineBreakIndex + 1, tree.length);
     if (children && children.length) {
       newTree.push(createLineElement({ children, lineNumber: newTree.length + 1, lineStyle })); 
     }
