@@ -7,4 +7,6 @@ demo/demo-build.js
 demo/demo-build.js.map
 demo/diff-build.js
 demo/diff-build.js.map
+demo/virtualized-build.js
+demo/virtualized-build.js.map
 npm-debug.log
