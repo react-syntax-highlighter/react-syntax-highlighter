@@ -1,17 +1,17 @@
 import React from 'react';
 
-function createStyleObject(classNames, elementStyle = {}, stylesheet) {
+export function createStyleObject(classNames, elementStyle = {}, stylesheet) {
   return classNames.reduce((styleObject, className) => {
     return {...styleObject, ...stylesheet[className]};
   }, elementStyle);
 }
 
-function createClassNameString(classNames) {
+export function createClassNameString(classNames) {
   return classNames.join(' ');
 }
 
 
-function createChildren(stylesheet, useInlineStyles) {
+export function createChildren(stylesheet, useInlineStyles) {
   let childrenCount = 0;
   return children => {
     childrenCount += 1;
