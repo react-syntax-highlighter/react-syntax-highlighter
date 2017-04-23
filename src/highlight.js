@@ -145,6 +145,8 @@ export default function (lowlight, defaultStyle) {
   wrapLines,
   lineStyle = {},
   renderer,
+  PreTag='pre',
+  CodeTag='code',
   ...rest
  }) {
     /* 
@@ -181,12 +183,12 @@ export default function (lowlight, defaultStyle) {
       null
     );
     return (
-      <pre {...preProps}>
+      <PreTag {...preProps}>
         {lineNumbers}
-        <code {...codeTagProps}>
+        <CodeTag {...codeTagProps}>
           {renderer({ rows: tree, stylesheet: style, useInlineStyles })}
-        </code>
-      </pre>
+        </CodeTag>
+      </PreTag>
     );
   }
 }
