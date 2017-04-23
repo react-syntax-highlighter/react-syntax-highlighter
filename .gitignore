@@ -10,3 +10,4 @@ demo/diff-build.js.map
 demo/virtualized-build.js
 demo/virtualized-build.js.map
 npm-debug.log
+coverage
