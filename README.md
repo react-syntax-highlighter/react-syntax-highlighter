@@ -55,7 +55,7 @@ React Syntax Highlighter used in the way described above can have a fairly large
 
 ```js
 import SyntaxHighlighter, { registerLanguage } from "react-syntax-highlighter/dist/light"
-import js from 'highlight.js/lib/languages/javascript';
+import js from 'react-syntax-highlighter/dist/languages/javascript';
 import docco from 'react-syntax-highlighter/dist/styles/docco'; 
 
 registerLanguage('javascript', js);
