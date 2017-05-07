@@ -63,7 +63,6 @@ function flattenCodeTree(tree, className = [], newTree = []) {
     if (node.type === 'text') {
       newTree.push(createLineElement({ 
         children: [node],
-        lineStyle: {},
         className
       }));
     }
@@ -160,6 +159,9 @@ export default function (lowlight, defaultStyle) {
       lowlight.highlight(language, children) : 
       lowlight.highlightAuto(children)
     );
+    if (codeTree.language === null) {
+      codeTree.value = [{ type: 'text',  value: children }];
+    }
     const defaultPreStyle = style.hljs || { backgroundColor: '#fff' };
     const preProps = (
       useInlineStyles
