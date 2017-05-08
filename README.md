@@ -6,7 +6,9 @@
 
 Syntax highlighting component for `React` using the seriously super amazing <a href="https://github.com/wooorm/lowlight">lowlight</a> by <a href="https://github.com/wooorm">wooorm</a>
 
-Check out a small demo <a href="http://conor.rodeo/react-syntax-highlighter/demo/">here</a> and see the component in action highlighting the generated test code <a href="http://conor.rodeo/redux-test-recorder/demo/">here</a>
+Check out a small demo <a href="http://conor.rodeo/react-syntax-highlighter/demo/">here</a> and see the component in action highlighting the generated test code <a href="http://conor.rodeo/redux-test-recorder/demo/">here</a>. 
+
+For React Native you can use <a href='https://github.com/conorhastings/react-native-syntax-highlighter'>react-native-syntax-highlighter</a>
 
 ### Install
 
@@ -68,3 +70,7 @@ registerLanguage('javascript', js);
 - [CodeDoc](https://github.com/B1naryStudio/CodeDoc) - Electron based application build with React for creating project documentations
 - [React Component Demo](https://github.com/conorhastings/react-component-demo) - A React Component To make live editable demos of other React Components.
 - [Redux Test Recorder](https://github.com/conorhastings/redux-test-recorder) - a redux middleware to automatically generate tests for reducers through ui interaction. Syntax highlighter used by react plugin.
+
+### License
+
+MIT
