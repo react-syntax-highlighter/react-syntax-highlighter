@@ -1,5 +1,5 @@
-## Available `language` props 
-* 1c
+## Available `language` imports 
+* oneC (1c)
 * abnf
 * accesslog
 * actionscript
@@ -23,7 +23,7 @@
 * capnproto
 * ceylon
 * clean
-* clojureRepl
+* clojureRepl (clojure-repl)
 * clojure
 * cmake
 * coffeescript
@@ -50,7 +50,7 @@
 * elixir
 * elm
 * erb
-* erlangRepl
+* erlangRepl (erlang-repl)
 * erlang
 * excel
 * fix
@@ -156,7 +156,7 @@
 * typescript
 * vala
 * vbnet
-* vbscriptHtml
+* vbscriptHtml (vbscript-html)
 * vbscript
 * verilog
 * vhdl
