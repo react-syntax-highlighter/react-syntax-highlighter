@@ -90,8 +90,9 @@ function wrapLinesInSpan(codeTree, lineStyle) {
             lastLineBreakIndex + 1, 
             index
           )
-          newTree.push(createLineElement({ children, lineNumber, lineStyle })); 
-          newTree.push(createLineElement({ children:[newChild], lineNumber, lineStyle, className})); 
+          const newChildElement = createLineElement({ children:[newChild], lineNumber, lineStyle, className});
+          children.push(newChildElement);
+          newTree.push(createLineElement({ children, lineNumber, lineStyle }));  
       } else if (i === splitValue.length - 1) {
           const stringChild = (
             tree[index + 1] && 
