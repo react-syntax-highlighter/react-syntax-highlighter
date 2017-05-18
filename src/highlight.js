@@ -103,10 +103,10 @@ function wrapLinesInSpan(codeTree, lineStyle) {
             const newElem = createLineElement({ children: [lastLineInPreviousSpan], lineNumber, lineStyle, className});
             tree.splice(index + 1, 0, newElem);
           } else {
-            newTree.push(createLineElement({ children: [newChild], lineNumber, lineStyle })); 
+            newTree.push(createLineElement({ children: [newChild], lineNumber, lineStyle, className})); 
           }
         } else {
-          newTree.push(createLineElement({ children: [newChild], lineNumber, lineStyle })); 
+          newTree.push(createLineElement({ children: [newChild], lineNumber, lineStyle, className})); 
         }
       });
       lastLineBreakIndex = index;
