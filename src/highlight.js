@@ -81,6 +81,7 @@ function wrapLinesInSpan(codeTree, lineStyle) {
     const newLines = getNewLines(value);
     if (newLines) {
       const splitValue = value.split('\n');
+      const className = node.properties.className;
       splitValue.forEach((text, i) => {
         const lineNumber = newTree.length + 1;
         const newChild = { type: 'text', value: `${text}\n`};
@@ -88,21 +89,25 @@ function wrapLinesInSpan(codeTree, lineStyle) {
           const children = tree.slice(
             lastLineBreakIndex + 1, 
             index
-          ).concat(newChild);
-          newTree.push(createLineElement({ children, lineNumber, lineStyle })); 
-        } else if (i === splitValue.length - 1) {
+          )
+          const newChildElement = createLineElement({ children:[newChild], lineNumber, lineStyle, className});
+          children.push(newChildElement);
+          newTree.push(createLineElement({ children, lineNumber, lineStyle }));  
+      } else if (i === splitValue.length - 1) {
           const stringChild = (
             tree[index + 1] && 
             tree[index + 1].children && 
             tree[index + 1].children[0]
           );
           if (stringChild) {
-            stringChild.value = `${text}${stringChild.value}`;
+            const lastLineInPreviousSpan = { type: 'text', value: `${text}`};
+            const newElem = createLineElement({ children: [lastLineInPreviousSpan], lineNumber, lineStyle, className});
+            tree.splice(index + 1, 0, newElem);
           } else {
-            newTree.push(createLineElement({ children: [newChild], lineNumber, lineStyle })); 
+            newTree.push(createLineElement({ children: [newChild], lineNumber, lineStyle, className})); 
           }
         } else {
-          newTree.push(createLineElement({ children: [newChild], lineNumber, lineStyle })); 
+          newTree.push(createLineElement({ children: [newChild], lineNumber, lineStyle, className})); 
         }
       });
       lastLineBreakIndex = index;
