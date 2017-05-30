@@ -76,12 +76,15 @@ function flattenCodeTree(tree, className = [], newTree = []) {
 
 function wrapLinesInSpan(codeTree, lineStyle) {
   const tree = flattenCodeTree(codeTree.value);
-  const { newTree, lastLineBreakIndex } = tree.reduce(({ newTree, lastLineBreakIndex }, node, index) => {
+  const newTree = [];
+  let lastLineBreakIndex = -1;
+  let index = 0;
+  while (index < tree.length) {
+    const node = tree[index];
     const value = node.children[0].value;
     const newLines = getNewLines(value);
     if (newLines) {
       const splitValue = value.split('\n');
-      const className = node.properties.className;
       splitValue.forEach((text, i) => {
         const lineNumber = newTree.length + 1;
         const newChild = { type: 'text', value: `${text}\n`};
@@ -89,11 +92,9 @@ function wrapLinesInSpan(codeTree, lineStyle) {
           const children = tree.slice(
             lastLineBreakIndex + 1, 
             index
-          )
-          const newChildElement = createLineElement({ children:[newChild], lineNumber, lineStyle, className});
-          children.push(newChildElement);
-          newTree.push(createLineElement({ children, lineNumber, lineStyle }));  
-      } else if (i === splitValue.length - 1) {
+          ).concat(createLineElement({ children: [newChild], className: node.properties.className }));
+          newTree.push(createLineElement({ children, lineNumber, lineStyle })); 
+        } else if (i === splitValue.length - 1) {
           const stringChild = (
             tree[index + 1] && 
             tree[index + 1].children && 
@@ -101,19 +102,19 @@ function wrapLinesInSpan(codeTree, lineStyle) {
           );
           if (stringChild) {
             const lastLineInPreviousSpan = { type: 'text', value: `${text}`};
-            const newElem = createLineElement({ children: [lastLineInPreviousSpan], lineNumber, lineStyle, className});
+            const newElem = createLineElement({ children: [lastLineInPreviousSpan], className: node.properties.className });
             tree.splice(index + 1, 0, newElem);
           } else {
-            newTree.push(createLineElement({ children: [newChild], lineNumber, lineStyle, className})); 
+            newTree.push(createLineElement({ children: [newChild], lineNumber, lineStyle })); 
           }
         } else {
-          newTree.push(createLineElement({ children: [newChild], lineNumber, lineStyle, className})); 
+          newTree.push(createLineElement({ children: [newChild], lineNumber, lineStyle })); 
         }
       });
       lastLineBreakIndex = index;
     }
-    return { newTree, lastLineBreakIndex };
-  }, { newTree: [], lastLineBreakIndex: -1 });
+    index++;
+  }
   if (lastLineBreakIndex !== tree.length - 1) {
     const children = tree.slice(lastLineBreakIndex + 1, tree.length);
     if (children && children.length) {
