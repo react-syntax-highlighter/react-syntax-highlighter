@@ -53,7 +53,7 @@ const Component = () => {
 ```
 ### Light Build
 
-React Syntax Highlighter used in the way described above can have a fairly large footprint. For those that desire more control over what exactly they need, there is an option to import a light build. If you choose to use this you will need to specifically import desired languages and register them using the registerLanguage export from the light build.
+React Syntax Highlighter used in the way described above can have a fairly large footprint. For those that desire more control over what exactly they need, there is an option to import a light build. If you choose to use this you will need to specifically import desired languages and register them using the registerLanguage export from the light build
 
 ```js
 import SyntaxHighlighter, { registerLanguage } from "react-syntax-highlighter/dist/light"
