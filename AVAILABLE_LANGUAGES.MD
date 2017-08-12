@@ -73,20 +73,25 @@
 * hsp
 * htmlbars
 * http
+* hy
 * inform7
 * ini
 * irpf90
 * java
 * javascript
+* jbossCli (jboss-cli)
 * json
+* juliaRepl (julia-repl)
 * julia
 * kotlin
 * lasso
 * ldif
+* leaf
 * less
 * lisp
 * livecodeserver
 * livescript
+* llvm
 * lsl
 * lua
 * makefile
@@ -101,6 +106,7 @@
 * mojolicious
 * monkey
 * moonscript
+* n1ql
 * nginx
 * nimrod
 * nix
@@ -127,6 +133,7 @@
 * r
 * rib
 * roboconf
+* routeros
 * rsl
 * ruby
 * ruleslanguage
@@ -135,6 +142,7 @@
 * scheme
 * scilab
 * scss
+* shell
 * smali
 * smalltalk
 * sml

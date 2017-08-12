@@ -63,6 +63,7 @@
 * qtcreatorLight
 * railscasts
 * rainbow
+* routeros
 * schoolBook
 * solarizedDark
 * solarizedLight
@@ -73,6 +74,7 @@
 * tomorrowNight
 * tomorrow
 * vs
+* vs2015
 * xcode
 * xt256
 * zenburn

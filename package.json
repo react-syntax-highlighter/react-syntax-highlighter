@@ -5,8 +5,8 @@
   "main": "dist/index.js",
   "dependencies": {
     "babel-runtime": "^6.18.0",
-    "highlight.js": "~9.8.0",
-    "lowlight": "^1.5.0"
+    "highlight.js": "~9.12.0",
+    "lowlight": "~1.9.1"
   },
   "jest": {
     "coverageDirectory": "./coverage/",
