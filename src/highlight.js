@@ -161,7 +161,7 @@ export default function (lowlight, defaultStyle) {
     wrapLines = renderer && wrapLines === undefined ? true : wrapLines;
     renderer = renderer || defaultRenderer;
     const codeTree = (
-      language ? 
+      language && !!lowlight.getLanguage(language) ? 
       lowlight.highlight(language, children) : 
       lowlight.highlightAuto(children)
     );
