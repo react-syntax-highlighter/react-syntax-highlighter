@@ -30,7 +30,7 @@ I do realize that javascript styles are not for everyone, so you can optionally 
 * `style` - style object required from styles directory [here](./AVAILABLE_STYLES.MD). `import { style } from 'react-syntax-highlighter/styles'` . Will use default if style is not included.
 * `children` - the code to highlight.
 * `customStyle` - prop that will be combined with the top level style on the pre tag, styles here will overwrite earlier styles. 
-* `codeTagProps` - props that will be spread into the `<code`> tag that is the direct parent of the highlighted code elements. Useful for styling/assigning classNames.
+* `codeTagProps` - props that will be spread into the `<code>` tag that is the direct parent of the highlighted code elements. Useful for styling/assigning classNames.
 * `useInlineStyles` - if this prop is passed in as false, react syntax highlighter will not add style objects to elements, and will instead append classNames. You can then style the code block by using one of the CSS files provided by highlight.js.
 * `showLineNumbers` - if this is enabled line numbers will be shown next to the code block.
 * `startingLineNumber` - if `showLineNumbers` is enabled the line numbering will start from here.
