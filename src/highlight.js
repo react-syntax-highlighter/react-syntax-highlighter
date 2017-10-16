@@ -152,6 +152,7 @@ export default function (lowlight, defaultStyle) {
   renderer,
   PreTag='pre',
   CodeTag='code',
+  code = Array.isArray(children) ? children[0] : children,
   ...rest
  }) {
     /* 
@@ -162,11 +163,11 @@ export default function (lowlight, defaultStyle) {
     renderer = renderer || defaultRenderer;
     const codeTree = (
       language && !!lowlight.getLanguage(language) ? 
-      lowlight.highlight(language, children) : 
-      lowlight.highlightAuto(children)
+      lowlight.highlight(language, code) : 
+      lowlight.highlightAuto(code)
     );
     if (codeTree.language === null) {
-      codeTree.value = [{ type: 'text',  value: children }];
+      codeTree.value = [{ type: 'text',  value: code }];
     }
     const defaultPreStyle = style.hljs || { backgroundColor: '#fff' };
     const preProps = (
@@ -185,7 +186,7 @@ export default function (lowlight, defaultStyle) {
         containerStyle={lineNumberContainerStyle}
         numberStyle={lineNumberStyle}
         startingLineNumber={startingLineNumber}
-        codeString={children}
+        codeString={code}
       />
       :
       null
