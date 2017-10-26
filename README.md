@@ -26,7 +26,7 @@ I do realize that javascript styles are not for everyone, so you can optionally 
 ### Use
 
 #### props
-* `language` - the language to highlight code in.
+* `language` - the language to highlight code in. (pass text to just render plain monospaced text)
 * `style` - style object required from styles directory [here](./AVAILABLE_STYLES.MD). `import { style } from 'react-syntax-highlighter/styles'` . Will use default if style is not included.
 * `children` - the code to highlight.
 * `customStyle` - prop that will be combined with the top level style on the pre tag, styles here will overwrite earlier styles. 
