@@ -166,7 +166,7 @@ export default function (lowlight, defaultStyle) {
       lowlight.highlight(language, code) : 
       lowlight.highlightAuto(code)
     );
-    if (codeTree.language === null) {
+    if (codeTree.language === null || language === 'text') {
       codeTree.value = [{ type: 'text',  value: code }];
     }
     const defaultPreStyle = style.hljs || { backgroundColor: '#fff' };
