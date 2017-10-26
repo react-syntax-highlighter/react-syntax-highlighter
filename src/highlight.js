@@ -159,15 +159,18 @@ export default function (lowlight, defaultStyle) {
      * some custom renderers rely on individual row elements so we need to turn wrapLines on 
      * if renderer is provided and wrapLines is undefined
     */
+    const defaultCodeValue = [{ type: 'text',  value: code }];
     wrapLines = renderer && wrapLines === undefined ? true : wrapLines;
     renderer = renderer || defaultRenderer;
     const codeTree = (
       language && !!lowlight.getLanguage(language) ? 
-      lowlight.highlight(language, code) : 
-      lowlight.highlightAuto(code)
+      lowlight.highlight(language, code) :
+      language !== 'text' ? 
+      lowlight.highlightAuto(code) : 
+      { value: defaultCodeValue }
     );
-    if (codeTree.language === null || language === 'text') {
-      codeTree.value = [{ type: 'text',  value: code }];
+    if (codeTree.language === null) {
+      codeTree.value = defaultCodeValue;
     }
     const defaultPreStyle = style.hljs || { backgroundColor: '#fff' };
     const preProps = (
