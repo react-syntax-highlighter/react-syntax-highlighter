@@ -1,5 +1,5 @@
 export default {
-    "ode[class*=\"language-\"]": {
+    "code[class*=\"language-\"]": {
         "color": "white",
         "background": "none",
         "textShadow": "0 -.1em .2em black",
@@ -18,7 +18,7 @@ export default {
         "msHyphens": "none",
         "hyphens": "none"
     },
-    "re[class*=\"language-\"]": {
+    "pre[class*=\"language-\"]": {
         "color": "white",
         "background": "hsl(30, 20%, 25%)",
         "textShadow": "0 -.1em .2em black",
@@ -43,7 +43,7 @@ export default {
         "borderRadius": ".5em",
         "boxShadow": "1px 1px .5em black inset"
     },
-    "not(pre) > code[class*=\"language-\"]": {
+    ":not(pre) > code[class*=\"language-\"]": {
         "background": "hsl(30, 20%, 25%)",
         "padding": ".15em .2em .05em",
         "borderRadius": ".3em",
@@ -51,102 +51,102 @@ export default {
         "boxShadow": "1px 1px .3em -.1em black inset",
         "whiteSpace": "normal"
     },
-    "token.comment": {
+    "comment": {
         "color": "hsl(30, 20%, 50%)"
     },
-    "token.prolog": {
+    "prolog": {
         "color": "hsl(30, 20%, 50%)"
     },
-    "token.doctype": {
+    "doctype": {
         "color": "hsl(30, 20%, 50%)"
     },
-    "token.cdata": {
+    "cdata": {
         "color": "hsl(30, 20%, 50%)"
     },
-    "token.punctuation": {
+    "punctuation": {
         "opacity": ".7"
     },
-    "namespace": {
+    ".namespace": {
         "opacity": ".7"
     },
-    "token.property": {
+    "property": {
         "color": "hsl(350, 40%, 70%)"
     },
-    "token.tag": {
+    "tag": {
         "color": "hsl(350, 40%, 70%)"
     },
-    "token.boolean": {
+    "boolean": {
         "color": "hsl(350, 40%, 70%)"
     },
-    "token.number": {
+    "number": {
         "color": "hsl(350, 40%, 70%)"
     },
-    "token.constant": {
+    "constant": {
         "color": "hsl(350, 40%, 70%)"
     },
-    "token.symbol": {
+    "symbol": {
         "color": "hsl(350, 40%, 70%)"
     },
-    "token.selector": {
+    "selector": {
         "color": "hsl(75, 70%, 60%)"
     },
-    "token.attr-name": {
+    "attr-name": {
         "color": "hsl(75, 70%, 60%)"
     },
-    "token.string": {
+    "string": {
         "color": "hsl(75, 70%, 60%)"
     },
-    "token.char": {
+    "char": {
         "color": "hsl(75, 70%, 60%)"
     },
-    "token.builtin": {
+    "builtin": {
         "color": "hsl(75, 70%, 60%)"
     },
-    "token.inserted": {
+    "inserted": {
         "color": "hsl(75, 70%, 60%)"
     },
-    "token.operator": {
+    "operator": {
         "color": "hsl(40, 90%, 60%)"
     },
-    "token.entity": {
+    "entity": {
         "color": "hsl(40, 90%, 60%)",
         "cursor": "help"
     },
-    "token.url": {
+    "url": {
         "color": "hsl(40, 90%, 60%)"
     },
-    "language-css .token.string": {
+    ".language-css .token.string": {
         "color": "hsl(40, 90%, 60%)"
     },
-    "style .token.string": {
+    ".style .token.string": {
         "color": "hsl(40, 90%, 60%)"
     },
-    "token.variable": {
+    "variable": {
         "color": "hsl(40, 90%, 60%)"
     },
-    "token.atrule": {
+    "atrule": {
         "color": "hsl(350, 40%, 70%)"
     },
-    "token.attr-value": {
+    "attr-value": {
         "color": "hsl(350, 40%, 70%)"
     },
-    "token.keyword": {
+    "keyword": {
         "color": "hsl(350, 40%, 70%)"
     },
-    "token.regex": {
+    "regex": {
         "color": "#e90"
     },
-    "token.important": {
+    "important": {
         "color": "#e90",
         "fontWeight": "bold"
     },
-    "token.bold": {
+    "bold": {
         "fontWeight": "bold"
     },
-    "token.italic": {
+    "italic": {
         "fontStyle": "italic"
     },
-    "token.deleted": {
+    "deleted": {
         "color": "red"
     }
 }

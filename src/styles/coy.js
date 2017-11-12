@@ -1,5 +1,5 @@
 export default {
-    "ode[class*=\"language-\"]": {
+    "code[class*=\"language-\"]": {
         "color": "black",
         "background": "none",
         "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
@@ -17,7 +17,7 @@ export default {
         "msHyphens": "none",
         "hyphens": "none"
     },
-    "re[class*=\"language-\"]": {
+    "pre[class*=\"language-\"]": {
         "color": "black",
         "background": "none",
         "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
@@ -44,7 +44,7 @@ export default {
         "boxSizing": "border-box",
         "marginBottom": "1em"
     },
-    "re[class*=\"language-\"]>code": {
+    "pre[class*=\"language-\"]>code": {
         "position": "relative",
         "borderLeft": "10px solid #358ccb",
         "boxShadow": "-1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf",
@@ -54,14 +54,14 @@ export default {
         "backgroundOrigin": "content-box",
         "backgroundAttachment": "local"
     },
-    "ode[class*=\"language\"]": {
+    "code[class*=\"language\"]": {
         "maxHeight": "inherit",
         "height": "100%",
         "padding": "0 1em",
         "display": "block",
         "overflow": "auto"
     },
-    "not(pre) > code[class*=\"language-\"]": {
+    ":not(pre) > code[class*=\"language-\"]": {
         "backgroundColor": "#fdfdfd",
         "webkitBoxSizing": "border-box",
         "mozBoxSizing": "border-box",
@@ -75,7 +75,7 @@ export default {
         "display": "inline",
         "whiteSpace": "normal"
     },
-    "re[class*=\"language-\"]:before": {
+    "pre[class*=\"language-\"]:before": {
         "content": "''",
         "zIndex": "-2",
         "display": "block",
@@ -92,7 +92,7 @@ export default {
         "oTransform": "rotate(-2deg)",
         "transform": "rotate(-2deg)"
     },
-    "re[class*=\"language-\"]:after": {
+    "pre[class*=\"language-\"]:after": {
         "content": "''",
         "zIndex": "-2",
         "display": "block",
@@ -110,7 +110,7 @@ export default {
         "transform": "rotate(2deg)",
         "right": "0.75em"
     },
-    "not(pre) > code[class*=\"language-\"]:after": {
+    ":not(pre) > code[class*=\"language-\"]:after": {
         "right": "0.75em",
         "left": "auto",
         "webkitTransform": "rotate(2deg)",
@@ -119,150 +119,150 @@ export default {
         "oTransform": "rotate(2deg)",
         "transform": "rotate(2deg)"
     },
-    "token.comment": {
+    "comment": {
         "color": "#7D8B99"
     },
-    "token.block-comment": {
+    "block-comment": {
         "color": "#7D8B99"
     },
-    "token.prolog": {
+    "prolog": {
         "color": "#7D8B99"
     },
-    "token.doctype": {
+    "doctype": {
         "color": "#7D8B99"
     },
-    "token.cdata": {
+    "cdata": {
         "color": "#7D8B99"
     },
-    "token.punctuation": {
+    "punctuation": {
         "color": "#5F6364"
     },
-    "token.property": {
+    "property": {
         "color": "#c92c2c"
     },
-    "token.tag": {
+    "tag": {
         "color": "#c92c2c"
     },
-    "token.boolean": {
+    "boolean": {
         "color": "#c92c2c"
     },
-    "token.number": {
+    "number": {
         "color": "#c92c2c"
     },
-    "token.function-name": {
+    "function-name": {
         "color": "#c92c2c"
     },
-    "token.constant": {
+    "constant": {
         "color": "#c92c2c"
     },
-    "token.symbol": {
+    "symbol": {
         "color": "#c92c2c"
     },
-    "token.deleted": {
+    "deleted": {
         "color": "#c92c2c"
     },
-    "token.selector": {
+    "selector": {
         "color": "#2f9c0a"
     },
-    "token.attr-name": {
+    "attr-name": {
         "color": "#2f9c0a"
     },
-    "token.string": {
+    "string": {
         "color": "#2f9c0a"
     },
-    "token.char": {
+    "char": {
         "color": "#2f9c0a"
     },
-    "token.function": {
+    "function": {
         "color": "#2f9c0a"
     },
-    "token.builtin": {
+    "builtin": {
         "color": "#2f9c0a"
     },
-    "token.inserted": {
+    "inserted": {
         "color": "#2f9c0a"
     },
-    "token.operator": {
+    "operator": {
         "color": "#a67f59",
         "background": "rgba(255, 255, 255, 0.5)"
     },
-    "token.entity": {
+    "entity": {
         "color": "#a67f59",
         "background": "rgba(255, 255, 255, 0.5)",
         "cursor": "help"
     },
-    "token.url": {
+    "url": {
         "color": "#a67f59",
         "background": "rgba(255, 255, 255, 0.5)"
     },
-    "token.variable": {
+    "variable": {
         "color": "#a67f59",
         "background": "rgba(255, 255, 255, 0.5)"
     },
-    "token.atrule": {
+    "atrule": {
         "color": "#1990b8"
     },
-    "token.attr-value": {
+    "attr-value": {
         "color": "#1990b8"
     },
-    "token.keyword": {
+    "keyword": {
         "color": "#1990b8"
     },
-    "token.class-name": {
+    "class-name": {
         "color": "#1990b8"
     },
-    "token.regex": {
+    "regex": {
         "color": "#e90"
     },
-    "token.important": {
+    "important": {
         "color": "#e90",
         "fontWeight": "normal"
     },
-    "language-css .token.string": {
+    ".language-css .token.string": {
         "color": "#a67f59",
         "background": "rgba(255, 255, 255, 0.5)"
     },
-    "style .token.string": {
+    ".style .token.string": {
         "color": "#a67f59",
         "background": "rgba(255, 255, 255, 0.5)"
     },
-    "token.bold": {
+    "bold": {
         "fontWeight": "bold"
     },
-    "token.italic": {
+    "italic": {
         "fontStyle": "italic"
     },
-    "namespace": {
+    ".namespace": {
         "opacity": ".7"
     },
-    "token.tab:not(:empty):before": {
+    "tab:not(:empty):before": {
         "color": "#e0d7d1"
     },
-    "token.cr:before": {
+    "cr:before": {
         "color": "#e0d7d1"
     },
-    "token.lf:before": {
+    "lf:before": {
         "color": "#e0d7d1"
     },
-    "re[class*=\"language-\"].line-numbers": {
+    "pre[class*=\"language-\"].line-numbers": {
         "paddingLeft": "0"
     },
-    "re[class*=\"language-\"].line-numbers code": {
+    "pre[class*=\"language-\"].line-numbers code": {
         "paddingLeft": "3.8em"
     },
-    "re[class*=\"language-\"].line-numbers .line-numbers-rows": {
+    "pre[class*=\"language-\"].line-numbers .line-numbers-rows": {
         "left": "0"
     },
-    "re[class*=\"language-\"][data-line]": {
+    "pre[class*=\"language-\"][data-line]": {
         "paddingTop": "0",
         "paddingBottom": "0",
         "paddingLeft": "0"
     },
-    "re[data-line] code": {
+    "pre[data-line] code": {
         "position": "relative",
         "paddingLeft": "4em"
     },
-    "re .line-highlight": {
+    "pre .line-highlight": {
         "marginTop": "0"
     }
 }

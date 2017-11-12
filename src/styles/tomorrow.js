@@ -1,5 +1,5 @@
 export default {
-    "ode[class*=\"language-\"]": {
+    "code[class*=\"language-\"]": {
         "color": "#ccc",
         "background": "none",
         "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
@@ -17,7 +17,7 @@ export default {
         "msHyphens": "none",
         "hyphens": "none"
     },
-    "re[class*=\"language-\"]": {
+    "pre[class*=\"language-\"]": {
         "color": "#ccc",
         "background": "#2d2d2d",
         "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
@@ -38,114 +38,114 @@ export default {
         "margin": ".5em 0",
         "overflow": "auto"
     },
-    "not(pre) > code[class*=\"language-\"]": {
+    ":not(pre) > code[class*=\"language-\"]": {
         "background": "#2d2d2d",
         "padding": ".1em",
         "borderRadius": ".3em",
         "whiteSpace": "normal"
     },
-    "token.comment": {
+    "comment": {
         "color": "#999"
     },
-    "token.block-comment": {
+    "block-comment": {
         "color": "#999"
     },
-    "token.prolog": {
+    "prolog": {
         "color": "#999"
     },
-    "token.doctype": {
+    "doctype": {
         "color": "#999"
     },
-    "token.cdata": {
+    "cdata": {
         "color": "#999"
     },
-    "token.punctuation": {
+    "punctuation": {
         "color": "#ccc"
     },
-    "token.tag": {
+    "tag": {
         "color": "#e2777a"
     },
-    "token.attr-name": {
+    "attr-name": {
         "color": "#e2777a"
     },
-    "token.namespace": {
+    "namespace": {
         "color": "#e2777a"
     },
-    "token.deleted": {
+    "deleted": {
         "color": "#e2777a"
     },
-    "token.function-name": {
+    "function-name": {
         "color": "#6196cc"
     },
-    "token.boolean": {
+    "boolean": {
         "color": "#f08d49"
     },
-    "token.number": {
+    "number": {
         "color": "#f08d49"
     },
-    "token.function": {
+    "function": {
         "color": "#f08d49"
     },
-    "token.property": {
+    "property": {
         "color": "#f8c555"
     },
-    "token.class-name": {
+    "class-name": {
         "color": "#f8c555"
     },
-    "token.constant": {
+    "constant": {
         "color": "#f8c555"
     },
-    "token.symbol": {
+    "symbol": {
         "color": "#f8c555"
     },
-    "token.selector": {
+    "selector": {
         "color": "#cc99cd"
     },
-    "token.important": {
+    "important": {
         "color": "#cc99cd",
         "fontWeight": "bold"
     },
-    "token.atrule": {
+    "atrule": {
         "color": "#cc99cd"
     },
-    "token.keyword": {
+    "keyword": {
         "color": "#cc99cd"
     },
-    "token.builtin": {
+    "builtin": {
         "color": "#cc99cd"
     },
-    "token.string": {
+    "string": {
         "color": "#7ec699"
     },
-    "token.char": {
+    "char": {
         "color": "#7ec699"
     },
-    "token.attr-value": {
+    "attr-value": {
         "color": "#7ec699"
     },
-    "token.regex": {
+    "regex": {
         "color": "#7ec699"
     },
-    "token.variable": {
+    "variable": {
         "color": "#7ec699"
     },
-    "token.operator": {
+    "operator": {
         "color": "#67cdcc"
     },
-    "token.entity": {
+    "entity": {
         "color": "#67cdcc",
         "cursor": "help"
     },
-    "token.url": {
+    "url": {
         "color": "#67cdcc"
     },
-    "token.bold": {
+    "bold": {
         "fontWeight": "bold"
     },
-    "token.italic": {
+    "italic": {
         "fontStyle": "italic"
     },
-    "token.inserted": {
+    "inserted": {
         "color": "green"
     }
 }

@@ -1,5 +1,5 @@
 export default {
-    "ode[class*=\"language-\"]": {
+    "code[class*=\"language-\"]": {
         "color": "white",
         "background": "none",
         "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
@@ -18,7 +18,7 @@ export default {
         "msHyphens": "none",
         "hyphens": "none"
     },
-    "re[class*=\"language-\"]": {
+    "pre[class*=\"language-\"]": {
         "color": "white",
         "background": "hsl(0, 0%, 8%)",
         "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
@@ -43,7 +43,7 @@ export default {
         "overflow": "auto",
         "padding": "1em"
     },
-    "not(pre) > code[class*=\"language-\"]": {
+    ":not(pre) > code[class*=\"language-\"]": {
         "background": "hsl(0, 0%, 8%)",
         "borderRadius": ".3em",
         "border": ".13em solid hsl(0, 0%, 33%)",
@@ -51,154 +51,154 @@ export default {
         "padding": ".15em .2em .05em",
         "whiteSpace": "normal"
     },
-    "re[class*=\"language-\"]::-moz-selection": {
+    "pre[class*=\"language-\"]::-moz-selection": {
         "background": "hsla(0, 0%, 93%, 0.15)",
         "textShadow": "none"
     },
-    "re[class*=\"language-\"]::selection": {
+    "pre[class*=\"language-\"]::selection": {
         "background": "hsla(0, 0%, 93%, 0.15)",
         "textShadow": "none"
     },
-    "re[class*=\"language-\"] ::-moz-selection": {
+    "pre[class*=\"language-\"] ::-moz-selection": {
         "textShadow": "none",
         "background": "hsla(0, 0%, 93%, 0.15)"
     },
-    "ode[class*=\"language-\"]::-moz-selection": {
+    "code[class*=\"language-\"]::-moz-selection": {
         "textShadow": "none",
         "background": "hsla(0, 0%, 93%, 0.15)"
     },
-    "ode[class*=\"language-\"] ::-moz-selection": {
+    "code[class*=\"language-\"] ::-moz-selection": {
         "textShadow": "none",
         "background": "hsla(0, 0%, 93%, 0.15)"
     },
-    "re[class*=\"language-\"] ::selection": {
+    "pre[class*=\"language-\"] ::selection": {
         "textShadow": "none",
         "background": "hsla(0, 0%, 93%, 0.15)"
     },
-    "ode[class*=\"language-\"]::selection": {
+    "code[class*=\"language-\"]::selection": {
         "textShadow": "none",
         "background": "hsla(0, 0%, 93%, 0.15)"
     },
-    "ode[class*=\"language-\"] ::selection": {
+    "code[class*=\"language-\"] ::selection": {
         "textShadow": "none",
         "background": "hsla(0, 0%, 93%, 0.15)"
     },
-    "token.comment": {
+    "comment": {
         "color": "hsl(0, 0%, 47%)"
     },
-    "token.prolog": {
+    "prolog": {
         "color": "hsl(0, 0%, 47%)"
     },
-    "token.doctype": {
+    "doctype": {
         "color": "hsl(0, 0%, 47%)"
     },
-    "token.cdata": {
+    "cdata": {
         "color": "hsl(0, 0%, 47%)"
     },
-    "token.punctuation": {
+    "punctuation": {
         "opacity": ".7"
     },
-    "namespace": {
+    ".namespace": {
         "opacity": ".7"
     },
-    "token.tag": {
+    "tag": {
         "color": "hsl(14, 58%, 55%)"
     },
-    "token.boolean": {
+    "boolean": {
         "color": "hsl(14, 58%, 55%)"
     },
-    "token.number": {
+    "number": {
         "color": "hsl(14, 58%, 55%)"
     },
-    "token.deleted": {
+    "deleted": {
         "color": "hsl(14, 58%, 55%)"
     },
-    "token.keyword": {
+    "keyword": {
         "color": "hsl(53, 89%, 79%)"
     },
-    "token.property": {
+    "property": {
         "color": "hsl(53, 89%, 79%)"
     },
-    "token.selector": {
+    "selector": {
         "color": "hsl(53, 89%, 79%)"
     },
-    "token.constant": {
+    "constant": {
         "color": "hsl(53, 89%, 79%)"
     },
-    "token.symbol": {
+    "symbol": {
         "color": "hsl(53, 89%, 79%)"
     },
-    "token.builtin": {
+    "builtin": {
         "color": "hsl(53, 89%, 79%)"
     },
-    "token.attr-name": {
+    "attr-name": {
         "color": "hsl(76, 21%, 52%)"
     },
-    "token.attr-value": {
+    "attr-value": {
         "color": "hsl(76, 21%, 52%)"
     },
-    "token.string": {
+    "string": {
         "color": "hsl(76, 21%, 52%)"
     },
-    "token.char": {
+    "char": {
         "color": "hsl(76, 21%, 52%)"
     },
-    "token.operator": {
+    "operator": {
         "color": "hsl(76, 21%, 52%)"
     },
-    "token.entity": {
+    "entity": {
         "color": "hsl(76, 21%, 52%)",
         "cursor": "help"
     },
-    "token.url": {
+    "url": {
         "color": "hsl(76, 21%, 52%)"
     },
-    "language-css .token.string": {
+    ".language-css .token.string": {
         "color": "hsl(76, 21%, 52%)"
     },
-    "style .token.string": {
+    ".style .token.string": {
         "color": "hsl(76, 21%, 52%)"
     },
-    "token.variable": {
+    "variable": {
         "color": "hsl(76, 21%, 52%)"
     },
-    "token.inserted": {
+    "inserted": {
         "color": "hsl(76, 21%, 52%)"
     },
-    "token.atrule": {
+    "atrule": {
         "color": "hsl(218, 22%, 55%)"
     },
-    "token.regex": {
+    "regex": {
         "color": "hsl(42, 75%, 65%)"
     },
-    "token.important": {
+    "important": {
         "color": "hsl(42, 75%, 65%)",
         "fontWeight": "bold"
     },
-    "token.bold": {
+    "bold": {
         "fontWeight": "bold"
     },
-    "token.italic": {
+    "italic": {
         "fontStyle": "italic"
     },
-    "re[data-line]": {
+    "pre[data-line]": {
         "padding": "1em 0 1em 3em",
         "position": "relative"
     },
-    "language-markup .token.tag": {
+    ".language-markup .token.tag": {
         "color": "hsl(33, 33%, 52%)"
     },
-    "language-markup .token.attr-name": {
+    ".language-markup .token.attr-name": {
         "color": "hsl(33, 33%, 52%)"
     },
-    "language-markup .token.punctuation": {
+    ".language-markup .token.punctuation": {
         "color": "hsl(33, 33%, 52%)"
     },
-    "token": {
+    "": {
         "position": "relative",
         "zIndex": "1"
     },
-    "line-highlight": {
+    ".line-highlight": {
         "background": "linear-gradient(to right, hsla(0, 0%, 33%, .1) 70%, hsla(0, 0%, 33%, 0))",
         "borderBottom": "1px dashed hsl(0, 0%, 33%)",
         "borderTop": "1px dashed hsl(0, 0%, 33%)",
@@ -212,7 +212,7 @@ export default {
         "whiteSpace": "pre",
         "zIndex": "0"
     },
-    "line-highlight:before": {
+    ".line-highlight:before": {
         "backgroundColor": "hsl(215, 15%, 59%)",
         "borderRadius": "999px",
         "boxShadow": "0 1px white",
@@ -228,7 +228,7 @@ export default {
         "top": ".4em",
         "verticalAlign": ".3em"
     },
-    "line-highlight[data-end]:after": {
+    ".line-highlight[data-end]:after": {
         "backgroundColor": "hsl(215, 15%, 59%)",
         "borderRadius": "999px",
         "boxShadow": "0 1px white",
