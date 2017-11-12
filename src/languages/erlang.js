@@ -1,2 +1,2 @@
-import erlang from "highlight.js/lib/languages/erlang";
-export default erlang;
+import Prism from 'prismjs';
+export default Prism.languages.erlang;

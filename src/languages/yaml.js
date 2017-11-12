@@ -1,2 +1,2 @@
-import yaml from "highlight.js/lib/languages/yaml";
-export default yaml;
+import Prism from 'prismjs';
+export default Prism.languages.yaml;

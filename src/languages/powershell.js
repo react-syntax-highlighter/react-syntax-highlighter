@@ -1,2 +1,2 @@
-import powershell from "highlight.js/lib/languages/powershell";
-export default powershell;
+import Prism from 'prismjs';
+export default Prism.languages.powershell;

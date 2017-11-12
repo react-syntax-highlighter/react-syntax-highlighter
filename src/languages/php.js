@@ -1,2 +1,2 @@
-import php from "highlight.js/lib/languages/php";
-export default php;
+import Prism from 'prismjs';
+export default Prism.languages.php;

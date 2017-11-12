@@ -1,2 +1,2 @@
-import brainfuck from "highlight.js/lib/languages/brainfuck";
-export default brainfuck;
+import Prism from 'prismjs';
+export default Prism.languages.brainfuck;

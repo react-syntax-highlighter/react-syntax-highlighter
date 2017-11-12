@@ -1,2 +1,2 @@
-import vbnet from "highlight.js/lib/languages/vbnet";
-export default vbnet;
+import Prism from 'prismjs';
+export default Prism.languages.vbnet;

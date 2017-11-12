@@ -1,2 +1,2 @@
-import twig from "highlight.js/lib/languages/twig";
-export default twig;
+import Prism from 'prismjs';
+export default Prism.languages.twig;

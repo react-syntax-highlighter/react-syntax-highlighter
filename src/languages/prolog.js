@@ -1,2 +1,2 @@
-import prolog from "highlight.js/lib/languages/prolog";
-export default prolog;
+import Prism from 'prismjs';
+export default Prism.languages.prolog;

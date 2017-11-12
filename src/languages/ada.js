@@ -1,2 +1,2 @@
-import ada from "highlight.js/lib/languages/ada";
-export default ada;
+import Prism from 'prismjs';
+export default Prism.languages.ada;

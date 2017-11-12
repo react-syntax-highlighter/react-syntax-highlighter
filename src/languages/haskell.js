@@ -1,2 +1,2 @@
-import haskell from "highlight.js/lib/languages/haskell";
-export default haskell;
+import Prism from 'prismjs';
+export default Prism.languages.haskell;

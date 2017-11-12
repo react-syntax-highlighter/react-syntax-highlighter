@@ -1,2 +1,2 @@
-import glsl from "highlight.js/lib/languages/glsl";
-export default glsl;
+import Prism from 'prismjs';
+export default Prism.languages.glsl;

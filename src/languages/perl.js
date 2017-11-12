@@ -1,2 +1,2 @@
-import perl from "highlight.js/lib/languages/perl";
-export default perl;
+import Prism from 'prismjs';
+export default Prism.languages.perl;

@@ -1,2 +1,2 @@
-import smalltalk from "highlight.js/lib/languages/smalltalk";
-export default smalltalk;
+import Prism from 'prismjs';
+export default Prism.languages.smalltalk;

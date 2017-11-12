@@ -1,2 +1,2 @@
-import nix from "highlight.js/lib/languages/nix";
-export default nix;
+import Prism from 'prismjs';
+export default Prism.languages.nix;

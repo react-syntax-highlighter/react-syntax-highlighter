@@ -1,2 +1,2 @@
-import arduino from "highlight.js/lib/languages/arduino";
-export default arduino;
+import Prism from 'prismjs';
+export default Prism.languages.arduino;

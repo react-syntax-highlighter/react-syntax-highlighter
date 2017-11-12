@@ -1,2 +1,2 @@
-import elixir from "highlight.js/lib/languages/elixir";
-export default elixir;
+import Prism from 'prismjs';
+export default Prism.languages.elixir;

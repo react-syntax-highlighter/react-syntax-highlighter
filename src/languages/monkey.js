@@ -1,2 +1,2 @@
-import monkey from "highlight.js/lib/languages/monkey";
-export default monkey;
+import Prism from 'prismjs';
+export default Prism.languages.monkey;

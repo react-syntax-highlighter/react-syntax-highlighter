@@ -1,2 +1,2 @@
-import coffeescript from "highlight.js/lib/languages/coffeescript";
-export default coffeescript;
+import Prism from 'prismjs';
+export default Prism.languages.coffeescript;
