@@ -1,5 +1,5 @@
 export default {
-    "ode[class*=\"language-\"]": {
+    "code[class*=\"language-\"]": {
         "color": "black",
         "background": "none",
         "textShadow": "0 1px white",
@@ -18,7 +18,7 @@ export default {
         "msHyphens": "none",
         "hyphens": "none"
     },
-    "re[class*=\"language-\"]": {
+    "pre[class*=\"language-\"]": {
         "color": "black",
         "background": "#f5f2f0",
         "textShadow": "0 1px white",
@@ -40,148 +40,148 @@ export default {
         "margin": ".5em 0",
         "overflow": "auto"
     },
-    "re[class*=\"language-\"]::-moz-selection": {
+    "pre[class*=\"language-\"]::-moz-selection": {
         "textShadow": "none",
         "background": "#b3d4fc"
     },
-    "re[class*=\"language-\"] ::-moz-selection": {
+    "pre[class*=\"language-\"] ::-moz-selection": {
         "textShadow": "none",
         "background": "#b3d4fc"
     },
-    "ode[class*=\"language-\"]::-moz-selection": {
+    "code[class*=\"language-\"]::-moz-selection": {
         "textShadow": "none",
         "background": "#b3d4fc"
     },
-    "ode[class*=\"language-\"] ::-moz-selection": {
+    "code[class*=\"language-\"] ::-moz-selection": {
         "textShadow": "none",
         "background": "#b3d4fc"
     },
-    "re[class*=\"language-\"]::selection": {
+    "pre[class*=\"language-\"]::selection": {
         "textShadow": "none",
         "background": "#b3d4fc"
     },
-    "re[class*=\"language-\"] ::selection": {
+    "pre[class*=\"language-\"] ::selection": {
         "textShadow": "none",
         "background": "#b3d4fc"
     },
-    "ode[class*=\"language-\"]::selection": {
+    "code[class*=\"language-\"]::selection": {
         "textShadow": "none",
         "background": "#b3d4fc"
     },
-    "ode[class*=\"language-\"] ::selection": {
+    "code[class*=\"language-\"] ::selection": {
         "textShadow": "none",
         "background": "#b3d4fc"
     },
-    "not(pre) > code[class*=\"language-\"]": {
+    ":not(pre) > code[class*=\"language-\"]": {
         "background": "#f5f2f0",
         "padding": ".1em",
         "borderRadius": ".3em",
         "whiteSpace": "normal"
     },
-    "token.comment": {
+    "comment": {
         "color": "slategray"
     },
-    "token.prolog": {
+    "prolog": {
         "color": "slategray"
     },
-    "token.doctype": {
+    "doctype": {
         "color": "slategray"
     },
-    "token.cdata": {
+    "cdata": {
         "color": "slategray"
     },
-    "token.punctuation": {
+    "punctuation": {
         "color": "#999"
     },
-    "namespace": {
+    ".namespace": {
         "opacity": ".7"
     },
-    "token.property": {
+    "property": {
         "color": "#905"
     },
-    "token.tag": {
+    "tag": {
         "color": "#905"
     },
-    "token.boolean": {
+    "boolean": {
         "color": "#905"
     },
-    "token.number": {
+    "number": {
         "color": "#905"
     },
-    "token.constant": {
+    "constant": {
         "color": "#905"
     },
-    "token.symbol": {
+    "symbol": {
         "color": "#905"
     },
-    "token.deleted": {
+    "deleted": {
         "color": "#905"
     },
-    "token.selector": {
+    "selector": {
         "color": "#690"
     },
-    "token.attr-name": {
+    "attr-name": {
         "color": "#690"
     },
-    "token.string": {
+    "string": {
         "color": "#690"
     },
-    "token.char": {
+    "char": {
         "color": "#690"
     },
-    "token.builtin": {
+    "builtin": {
         "color": "#690"
     },
-    "token.inserted": {
+    "inserted": {
         "color": "#690"
     },
-    "token.operator": {
+    "operator": {
         "color": "#a67f59",
         "background": "hsla(0, 0%, 100%, .5)"
     },
-    "token.entity": {
+    "entity": {
         "color": "#a67f59",
         "background": "hsla(0, 0%, 100%, .5)",
         "cursor": "help"
     },
-    "token.url": {
+    "url": {
         "color": "#a67f59",
         "background": "hsla(0, 0%, 100%, .5)"
     },
-    "language-css .token.string": {
+    ".language-css .token.string": {
         "color": "#a67f59",
         "background": "hsla(0, 0%, 100%, .5)"
     },
-    "style .token.string": {
+    ".style .token.string": {
         "color": "#a67f59",
         "background": "hsla(0, 0%, 100%, .5)"
     },
-    "token.atrule": {
+    "atrule": {
         "color": "#07a"
     },
-    "token.attr-value": {
+    "attr-value": {
         "color": "#07a"
     },
-    "token.keyword": {
+    "keyword": {
         "color": "#07a"
     },
-    "token.function": {
+    "function": {
         "color": "#DD4A68"
     },
-    "token.regex": {
+    "regex": {
         "color": "#e90"
     },
-    "token.important": {
+    "important": {
         "color": "#e90",
         "fontWeight": "bold"
     },
-    "token.variable": {
+    "variable": {
         "color": "#e90"
     },
-    "token.bold": {
+    "bold": {
         "fontWeight": "bold"
     },
-    "token.italic": {
+    "italic": {
         "fontStyle": "italic"
     }
 }

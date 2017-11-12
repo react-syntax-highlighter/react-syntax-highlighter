@@ -1,5 +1,5 @@
 export default {
-    "ode[class*=\"language-\"]": {
+    "code[class*=\"language-\"]": {
         "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
         "textAlign": "left",
         "whiteSpace": "pre",
@@ -18,7 +18,7 @@ export default {
         "color": "white",
         "boxShadow": "-.3em 0 0 .3em black, .3em 0 0 .3em black"
     },
-    "re[class*=\"language-\"]": {
+    "pre[class*=\"language-\"]": {
         "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
         "textAlign": "left",
         "whiteSpace": "pre",
@@ -39,105 +39,105 @@ export default {
         "background": "url('data:image/svg+xml;charset=utf-8,<svg%20version%3D\"1.1\"%20xmlns%3D\"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg\"%20width%3D\"100\"%20height%3D\"100\"%20fill%3D\"rgba(0%2C0%2C0%2C.2)\">%0D%0A<polygon%20points%3D\"0%2C50%2050%2C0%200%2C0\"%20%2F>%0D%0A<polygon%20points%3D\"0%2C100%2050%2C100%20100%2C50%20100%2C0\"%20%2F>%0D%0A<%2Fsvg>')",
         "backgroundSize": "1em 1em"
     },
-    "not(pre) > code[class*=\"language-\"]": {
+    ":not(pre) > code[class*=\"language-\"]": {
         "padding": ".2em",
         "borderRadius": ".3em",
         "boxShadow": "none",
         "whiteSpace": "normal"
     },
-    "token.comment": {
+    "comment": {
         "color": "#aaa"
     },
-    "token.prolog": {
+    "prolog": {
         "color": "#aaa"
     },
-    "token.doctype": {
+    "doctype": {
         "color": "#aaa"
     },
-    "token.cdata": {
+    "cdata": {
         "color": "#aaa"
     },
-    "token.punctuation": {
+    "punctuation": {
         "color": "#999"
     },
-    "namespace": {
+    ".namespace": {
         "opacity": ".7"
     },
-    "token.property": {
+    "property": {
         "color": "#0cf"
     },
-    "token.tag": {
+    "tag": {
         "color": "#0cf"
     },
-    "token.boolean": {
+    "boolean": {
         "color": "#0cf"
     },
-    "token.number": {
+    "number": {
         "color": "#0cf"
     },
-    "token.constant": {
+    "constant": {
         "color": "#0cf"
     },
-    "token.symbol": {
+    "symbol": {
         "color": "#0cf"
     },
-    "token.selector": {
+    "selector": {
         "color": "yellow"
     },
-    "token.attr-name": {
+    "attr-name": {
         "color": "yellow"
     },
-    "token.string": {
+    "string": {
         "color": "yellow"
     },
-    "token.char": {
+    "char": {
         "color": "yellow"
     },
-    "token.builtin": {
+    "builtin": {
         "color": "yellow"
     },
-    "token.operator": {
+    "operator": {
         "color": "yellowgreen"
     },
-    "token.entity": {
+    "entity": {
         "color": "yellowgreen",
         "cursor": "help"
     },
-    "token.url": {
+    "url": {
         "color": "yellowgreen"
     },
-    "language-css .token.string": {
+    ".language-css .token.string": {
         "color": "yellowgreen"
     },
-    "toke.variable": {
+    ".toke.variable": {
         "color": "yellowgreen"
     },
-    "token.inserted": {
+    "inserted": {
         "color": "yellowgreen"
     },
-    "token.atrule": {
+    "atrule": {
         "color": "deeppink"
     },
-    "token.attr-value": {
+    "attr-value": {
         "color": "deeppink"
     },
-    "token.keyword": {
+    "keyword": {
         "color": "deeppink"
     },
-    "token.regex": {
+    "regex": {
         "color": "orange"
     },
-    "token.important": {
+    "important": {
         "color": "orange",
         "fontWeight": "bold"
     },
-    "token.bold": {
+    "bold": {
         "fontWeight": "bold"
     },
-    "token.italic": {
+    "italic": {
         "fontStyle": "italic"
     },
-    "token.deleted": {
+    "deleted": {
         "color": "red"
     }
 }

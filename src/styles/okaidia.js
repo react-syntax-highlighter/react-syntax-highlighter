@@ -1,5 +1,5 @@
 export default {
-    "ode[class*=\"language-\"]": {
+    "code[class*=\"language-\"]": {
         "color": "#f8f8f2",
         "background": "none",
         "textShadow": "0 1px rgba(0, 0, 0, 0.3)",
@@ -18,7 +18,7 @@ export default {
         "msHyphens": "none",
         "hyphens": "none"
     },
-    "re[class*=\"language-\"]": {
+    "pre[class*=\"language-\"]": {
         "color": "#f8f8f2",
         "background": "#272822",
         "textShadow": "0 1px rgba(0, 0, 0, 0.3)",
@@ -41,111 +41,111 @@ export default {
         "overflow": "auto",
         "borderRadius": "0.3em"
     },
-    "not(pre) > code[class*=\"language-\"]": {
+    ":not(pre) > code[class*=\"language-\"]": {
         "background": "#272822",
         "padding": ".1em",
         "borderRadius": ".3em",
         "whiteSpace": "normal"
     },
-    "token.comment": {
+    "comment": {
         "color": "slategray"
     },
-    "token.prolog": {
+    "prolog": {
         "color": "slategray"
     },
-    "token.doctype": {
+    "doctype": {
         "color": "slategray"
     },
-    "token.cdata": {
+    "cdata": {
         "color": "slategray"
     },
-    "token.punctuation": {
+    "punctuation": {
         "color": "#f8f8f2"
     },
-    "namespace": {
+    ".namespace": {
         "opacity": ".7"
     },
-    "token.property": {
+    "property": {
         "color": "#f92672"
     },
-    "token.tag": {
+    "tag": {
         "color": "#f92672"
     },
-    "token.constant": {
+    "constant": {
         "color": "#f92672"
     },
-    "token.symbol": {
+    "symbol": {
         "color": "#f92672"
     },
-    "token.deleted": {
+    "deleted": {
         "color": "#f92672"
     },
-    "token.boolean": {
+    "boolean": {
         "color": "#ae81ff"
     },
-    "token.number": {
+    "number": {
         "color": "#ae81ff"
     },
-    "token.selector": {
+    "selector": {
         "color": "#a6e22e"
     },
-    "token.attr-name": {
+    "attr-name": {
         "color": "#a6e22e"
     },
-    "token.string": {
+    "string": {
         "color": "#a6e22e"
     },
-    "token.char": {
+    "char": {
         "color": "#a6e22e"
     },
-    "token.builtin": {
+    "builtin": {
         "color": "#a6e22e"
     },
-    "token.inserted": {
+    "inserted": {
         "color": "#a6e22e"
     },
-    "token.operator": {
+    "operator": {
         "color": "#f8f8f2"
     },
-    "token.entity": {
+    "entity": {
         "color": "#f8f8f2",
         "cursor": "help"
     },
-    "token.url": {
+    "url": {
         "color": "#f8f8f2"
     },
-    "language-css .token.string": {
+    ".language-css .token.string": {
         "color": "#f8f8f2"
     },
-    "style .token.string": {
+    ".style .token.string": {
         "color": "#f8f8f2"
     },
-    "token.variable": {
+    "variable": {
         "color": "#f8f8f2"
     },
-    "token.atrule": {
+    "atrule": {
         "color": "#e6db74"
     },
-    "token.attr-value": {
+    "attr-value": {
         "color": "#e6db74"
     },
-    "token.function": {
+    "function": {
         "color": "#e6db74"
     },
-    "token.keyword": {
+    "keyword": {
         "color": "#66d9ef"
     },
-    "token.regex": {
+    "regex": {
         "color": "#fd971f"
     },
-    "token.important": {
+    "important": {
         "color": "#fd971f",
         "fontWeight": "bold"
     },
-    "token.bold": {
+    "bold": {
         "fontWeight": "bold"
     },
-    "token.italic": {
+    "italic": {
         "fontStyle": "italic"
     }
 }
