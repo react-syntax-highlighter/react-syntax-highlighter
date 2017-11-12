@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "dependencies": {
     "babel-runtime": "^6.18.0",
+    "prism-themes": "https://github.com/PrismJS/prism-themes.git#afb4116547cd854074ad705b8171768403ca11f3",
     "prismjs": "^1.8.4",
     "refractor": "^2.0.0"
   },
