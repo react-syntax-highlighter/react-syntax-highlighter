@@ -170,14 +170,7 @@ export default function (refractor, defaultStyle) {
     if (codeTree.language === null) {
       codeTree.value = defaultCodeValue;
     }
-
-    const defaultPreStyle = { 
-      backgroundColor: (
-        style["pre[class*=\"language-\"]"] ? 
-        style["pre[class*=\"language-\"]"].background : 
-        "#fff"
-      )
-    };
+    const defaultPreStyle = style.hljs || { backgroundColor: '#fff' };
     const preProps = (
       useInlineStyles
       ?
