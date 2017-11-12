@@ -135,7 +135,7 @@ function defaultRenderer({ rows, stylesheet, useInlineStyles }) {
   );
 }
 
-export default function (lowlight, defaultStyle) {
+export default function (refractor, defaultStyle) {
  return function SyntaxHighlighter({
   language,
   children,
@@ -163,10 +163,8 @@ export default function (lowlight, defaultStyle) {
     wrapLines = renderer && wrapLines === undefined ? true : wrapLines;
     renderer = renderer || defaultRenderer;
     const codeTree = (
-      language && !!lowlight.getLanguage(language) ? 
-      lowlight.highlight(language, code) :
-      language !== 'text' ? 
-      lowlight.highlightAuto(code) : 
+      language && language !== 'text' ? 
+      { value: refractor.highlight(code, language) } :
       { value: defaultCodeValue }
     );
     if (codeTree.language === null) {
@@ -180,7 +178,6 @@ export default function (lowlight, defaultStyle) {
       :
       Object.assign({}, rest, { className: 'hljs'})
     );
-
     const tree = wrapLines ? wrapLinesInSpan(codeTree, lineStyle) : codeTree.value;
     const lineNumbers = (
       showLineNumbers

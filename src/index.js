@@ -1,6 +1,6 @@
 import highlight from './highlight';
-import defaultStyle from './styles/default-style';
-import lowlight from 'lowlight';
+import defaultStyle from './styles/prism';
+import refractor from 'refractor';
 
-export default highlight(lowlight, defaultStyle);
+export default highlight(refractor, defaultStyle);
 export { default as createElement } from "./create-element";
