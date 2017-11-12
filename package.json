@@ -2,7 +2,7 @@
   "name": "react-syntax-highlighter",
   "version": "5.8.2",
   "description": "sane syntax highlighting component for react",
-  "main": "dist/index.js",
+  "main": "src/index.js",
   "dependencies": {
     "babel-runtime": "^6.18.0",
     "prismjs": "^1.8.4",
