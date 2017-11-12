@@ -1,27 +1,5 @@
 export default {
     "ode[class*=\"language-\"]": {
-        "color": "white",
-        "background": "none",
-        "textShadow": "0 -.1em .2em black",
-        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
-        "textAlign": "left",
-        "whiteSpace": "pre",
-        "wordSpacing": "normal",
-        "wordBreak": "normal",
-        "wordWrap": "normal",
-        "lineHeight": "1.5",
-        "mozTabSize": "4",
-        "oTabSize": "4",
-        "tabSize": "4",
-        "webkitHyphens": "none",
-        "mozHyphens": "none",
-        "msHyphens": "none",
-        "hyphens": "none"
-    },
-    "re[class*=\"language-\"]": {
-        "color": "white",
-        "background": "hsl(30, 20%, 25%)",
-        "textShadow": "0 -.1em .2em black",
         "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
         "textAlign": "left",
         "whiteSpace": "pre",
@@ -36,108 +14,121 @@ export default {
         "mozHyphens": "none",
         "msHyphens": "none",
         "hyphens": "none",
-        "padding": "1em",
+        "background": "black",
+        "color": "white",
+        "boxShadow": "-.3em 0 0 .3em black, .3em 0 0 .3em black"
+    },
+    "re[class*=\"language-\"]": {
+        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+        "textAlign": "left",
+        "whiteSpace": "pre",
+        "wordSpacing": "normal",
+        "wordBreak": "normal",
+        "wordWrap": "normal",
+        "lineHeight": "1.5",
+        "mozTabSize": "4",
+        "oTabSize": "4",
+        "tabSize": "4",
+        "webkitHyphens": "none",
+        "mozHyphens": "none",
+        "msHyphens": "none",
+        "hyphens": "none",
+        "padding": ".4em .8em",
         "margin": ".5em 0",
         "overflow": "auto",
-        "border": ".3em solid hsl(30, 20%, 40%)",
-        "borderRadius": ".5em",
-        "boxShadow": "1px 1px .5em black inset"
+        "background": "url('data:image/svg+xml;charset=utf-8,<svg%20version%3D\"1.1\"%20xmlns%3D\"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg\"%20width%3D\"100\"%20height%3D\"100\"%20fill%3D\"rgba(0%2C0%2C0%2C.2)\">%0D%0A<polygon%20points%3D\"0%2C50%2050%2C0%200%2C0\"%20%2F>%0D%0A<polygon%20points%3D\"0%2C100%2050%2C100%20100%2C50%20100%2C0\"%20%2F>%0D%0A<%2Fsvg>')",
+        "backgroundSize": "1em 1em"
     },
     "not(pre) > code[class*=\"language-\"]": {
-        "background": "hsl(30, 20%, 25%)",
-        "padding": ".15em .2em .05em",
+        "padding": ".2em",
         "borderRadius": ".3em",
-        "border": ".13em solid hsl(30, 20%, 40%)",
-        "boxShadow": "1px 1px .3em -.1em black inset",
+        "boxShadow": "none",
         "whiteSpace": "normal"
     },
     "token.comment": {
-        "color": "hsl(30, 20%, 50%)"
+        "color": "#aaa"
     },
     "token.prolog": {
-        "color": "hsl(30, 20%, 50%)"
+        "color": "#aaa"
     },
     "token.doctype": {
-        "color": "hsl(30, 20%, 50%)"
+        "color": "#aaa"
     },
     "token.cdata": {
-        "color": "hsl(30, 20%, 50%)"
+        "color": "#aaa"
     },
     "token.punctuation": {
-        "opacity": ".7"
+        "color": "#999"
     },
     "namespace": {
         "opacity": ".7"
     },
     "token.property": {
-        "color": "hsl(350, 40%, 70%)"
+        "color": "#0cf"
     },
     "token.tag": {
-        "color": "hsl(350, 40%, 70%)"
+        "color": "#0cf"
     },
     "token.boolean": {
-        "color": "hsl(350, 40%, 70%)"
+        "color": "#0cf"
     },
     "token.number": {
-        "color": "hsl(350, 40%, 70%)"
+        "color": "#0cf"
     },
     "token.constant": {
-        "color": "hsl(350, 40%, 70%)"
+        "color": "#0cf"
     },
     "token.symbol": {
-        "color": "hsl(350, 40%, 70%)"
+        "color": "#0cf"
     },
     "token.selector": {
-        "color": "hsl(75, 70%, 60%)"
+        "color": "yellow"
     },
     "token.attr-name": {
-        "color": "hsl(75, 70%, 60%)"
+        "color": "yellow"
     },
     "token.string": {
-        "color": "hsl(75, 70%, 60%)"
+        "color": "yellow"
     },
     "token.char": {
-        "color": "hsl(75, 70%, 60%)"
+        "color": "yellow"
     },
     "token.builtin": {
-        "color": "hsl(75, 70%, 60%)"
-    },
-    "token.inserted": {
-        "color": "hsl(75, 70%, 60%)"
+        "color": "yellow"
     },
     "token.operator": {
-        "color": "hsl(40, 90%, 60%)"
+        "color": "yellowgreen"
     },
     "token.entity": {
-        "color": "hsl(40, 90%, 60%)",
+        "color": "yellowgreen",
         "cursor": "help"
     },
     "token.url": {
-        "color": "hsl(40, 90%, 60%)"
+        "color": "yellowgreen"
     },
     "language-css .token.string": {
-        "color": "hsl(40, 90%, 60%)"
+        "color": "yellowgreen"
     },
-    "style .token.string": {
-        "color": "hsl(40, 90%, 60%)"
+    "toke.variable": {
+        "color": "yellowgreen"
     },
-    "token.variable": {
-        "color": "hsl(40, 90%, 60%)"
+    "token.inserted": {
+        "color": "yellowgreen"
     },
     "token.atrule": {
-        "color": "hsl(350, 40%, 70%)"
+        "color": "deeppink"
     },
     "token.attr-value": {
-        "color": "hsl(350, 40%, 70%)"
+        "color": "deeppink"
     },
     "token.keyword": {
-        "color": "hsl(350, 40%, 70%)"
+        "color": "deeppink"
     },
     "token.regex": {
-        "color": "#e90"
+        "color": "orange"
     },
     "token.important": {
-        "color": "#e90",
+        "color": "orange",
         "fontWeight": "bold"
     },
     "token.bold": {

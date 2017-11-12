@@ -1,7 +1,8 @@
 export default {
     "ode[class*=\"language-\"]": {
-        "color": "#ccc",
+        "color": "#f8f8f2",
         "background": "none",
+        "textShadow": "0 1px rgba(0, 0, 0, 0.3)",
         "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
         "textAlign": "left",
         "whiteSpace": "pre",
@@ -18,8 +19,9 @@ export default {
         "hyphens": "none"
     },
     "re[class*=\"language-\"]": {
-        "color": "#ccc",
-        "background": "#2d2d2d",
+        "color": "#f8f8f2",
+        "background": "#272822",
+        "textShadow": "0 1px rgba(0, 0, 0, 0.3)",
         "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
         "textAlign": "left",
         "whiteSpace": "pre",
@@ -36,116 +38,114 @@ export default {
         "hyphens": "none",
         "padding": "1em",
         "margin": ".5em 0",
-        "overflow": "auto"
+        "overflow": "auto",
+        "borderRadius": "0.3em"
     },
     "not(pre) > code[class*=\"language-\"]": {
-        "background": "#2d2d2d",
+        "background": "#272822",
         "padding": ".1em",
         "borderRadius": ".3em",
         "whiteSpace": "normal"
     },
     "token.comment": {
-        "color": "#999"
-    },
-    "token.block-comment": {
-        "color": "#999"
+        "color": "slategray"
     },
     "token.prolog": {
-        "color": "#999"
+        "color": "slategray"
     },
     "token.doctype": {
-        "color": "#999"
+        "color": "slategray"
     },
     "token.cdata": {
-        "color": "#999"
+        "color": "slategray"
     },
     "token.punctuation": {
-        "color": "#ccc"
+        "color": "#f8f8f2"
     },
-    "token.tag": {
-        "color": "#e2777a"
-    },
-    "token.attr-name": {
-        "color": "#e2777a"
-    },
-    "token.namespace": {
-        "color": "#e2777a"
-    },
-    "token.deleted": {
-        "color": "#e2777a"
-    },
-    "token.function-name": {
-        "color": "#6196cc"
-    },
-    "token.boolean": {
-        "color": "#f08d49"
-    },
-    "token.number": {
-        "color": "#f08d49"
-    },
-    "token.function": {
-        "color": "#f08d49"
+    "namespace": {
+        "opacity": ".7"
     },
     "token.property": {
-        "color": "#f8c555"
+        "color": "#f92672"
     },
-    "token.class-name": {
-        "color": "#f8c555"
+    "token.tag": {
+        "color": "#f92672"
     },
     "token.constant": {
-        "color": "#f8c555"
+        "color": "#f92672"
     },
     "token.symbol": {
-        "color": "#f8c555"
+        "color": "#f92672"
+    },
+    "token.deleted": {
+        "color": "#f92672"
+    },
+    "token.boolean": {
+        "color": "#ae81ff"
+    },
+    "token.number": {
+        "color": "#ae81ff"
     },
     "token.selector": {
-        "color": "#cc99cd"
+        "color": "#a6e22e"
     },
-    "token.important": {
-        "color": "#cc99cd",
-        "fontWeight": "bold"
-    },
-    "token.atrule": {
-        "color": "#cc99cd"
-    },
-    "token.keyword": {
-        "color": "#cc99cd"
-    },
-    "token.builtin": {
-        "color": "#cc99cd"
+    "token.attr-name": {
+        "color": "#a6e22e"
     },
     "token.string": {
-        "color": "#7ec699"
+        "color": "#a6e22e"
     },
     "token.char": {
-        "color": "#7ec699"
+        "color": "#a6e22e"
     },
-    "token.attr-value": {
-        "color": "#7ec699"
+    "token.builtin": {
+        "color": "#a6e22e"
     },
-    "token.regex": {
-        "color": "#7ec699"
-    },
-    "token.variable": {
-        "color": "#7ec699"
+    "token.inserted": {
+        "color": "#a6e22e"
     },
     "token.operator": {
-        "color": "#67cdcc"
+        "color": "#f8f8f2"
     },
     "token.entity": {
-        "color": "#67cdcc",
+        "color": "#f8f8f2",
         "cursor": "help"
     },
     "token.url": {
-        "color": "#67cdcc"
+        "color": "#f8f8f2"
+    },
+    "language-css .token.string": {
+        "color": "#f8f8f2"
+    },
+    "style .token.string": {
+        "color": "#f8f8f2"
+    },
+    "token.variable": {
+        "color": "#f8f8f2"
+    },
+    "token.atrule": {
+        "color": "#e6db74"
+    },
+    "token.attr-value": {
+        "color": "#e6db74"
+    },
+    "token.function": {
+        "color": "#e6db74"
+    },
+    "token.keyword": {
+        "color": "#66d9ef"
+    },
+    "token.regex": {
+        "color": "#fd971f"
+    },
+    "token.important": {
+        "color": "#fd971f",
+        "fontWeight": "bold"
     },
     "token.bold": {
         "fontWeight": "bold"
     },
     "token.italic": {
         "fontStyle": "italic"
-    },
-    "token.inserted": {
-        "color": "green"
     }
 }
