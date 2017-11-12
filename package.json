@@ -1,8 +1,8 @@
 {
-  "name": "react-syntax-highlighter",
-  "version": "5.8.2",
-  "description": "sane syntax highlighting component for react",
-  "main": "src/index.js",
+  "name": "react-syntax-highlighter-prismjs",
+  "version": "5.9.0",
+  "description": "sane syntax highlighting component for react with prismjs",
+  "main": "dist/index.js",
   "dependencies": {
     "babel-runtime": "^6.18.0",
     "prism-themes": "https://github.com/PrismJS/prism-themes.git#afb4116547cd854074ad705b8171768403ca11f3",
@@ -48,7 +48,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/conorhastings/react-syntax-highlighter.git"
+    "url": "git+https://github.com/maxmcd/react-syntax-highlighter.git"
   },
   "keywords": [
     "react",
@@ -60,7 +60,7 @@
   "author": "Conor Hastings",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/conorhastings/react-syntax-highlighter/issues"
+    "url": "https://github.com/maxmcd/react-syntax-highlighter/issues"
   },
-  "homepage": "https://github.com/conorhastings/react-syntax-highlighter#readme"
+  "homepage": "https://github.com/maxmcd/react-syntax-highlighter#readme"
 }
