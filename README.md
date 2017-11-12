@@ -1,10 +1,11 @@
 ## React Syntax Highlighter
 
-[![CircleCI](https://circleci.com/gh/conorhastings/react-syntax-highlighter.svg?style=svg)](https://circleci.com/gh/conorhastings/react-syntax-highlighter)
-[![codecov](https://codecov.io/gh/conorhastings/react-syntax-highlighter/branch/master/graph/badge.svg)](https://codecov.io/gh/conorhastings/react-syntax-highlighter)
+[![CircleCI](https://circleci.com/gh/maxmcd/react-syntax-highlighter.svg?style=svg)](https://circleci.com/gh/maxmcd/react-syntax-highlighter)
+[![codecov](https://codecov.io/gh/maxmcd/react-syntax-highlighter/branch/master/graph/badge.svg)](https://codecov.io/gh/maxmcd/react-syntax-highlighter)
 
+**(Note: this is a fork of `conorhastings/react-syntax-highlighter` that replaces `lowlight` with `refractor`)**
 
-Syntax highlighting component for `React` using the seriously super amazing <a href="https://github.com/wooorm/lowlight">lowlight</a> by <a href="https://github.com/wooorm">wooorm</a>
+Syntax highlighting component for `React` using the seriously super amazing <a href="https://github.com/wooorm/refractor">refractor</a> by <a href="https://github.com/wooorm">wooorm</a>
 
 Check out a small demo <a href="http://conor.rodeo/react-syntax-highlighter/demo/">here</a> and see the component in action highlighting the generated test code <a href="http://conor.rodeo/redux-test-recorder/demo/">here</a>. 
 
