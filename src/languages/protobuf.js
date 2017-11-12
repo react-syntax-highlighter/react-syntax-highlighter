@@ -1,2 +1,2 @@
-import protobuf from "highlight.js/lib/languages/protobuf";
-export default protobuf;
+import Prism from 'prismjs';
+export default Prism.languages.protobuf;

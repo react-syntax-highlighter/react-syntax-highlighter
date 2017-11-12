@@ -1,2 +1,2 @@
-import ruby from "highlight.js/lib/languages/ruby";
-export default ruby;
+import Prism from 'prismjs';
+export default Prism.languages.ruby;

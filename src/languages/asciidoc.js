@@ -1,2 +1,2 @@
-import asciidoc from "highlight.js/lib/languages/asciidoc";
-export default asciidoc;
+import Prism from 'prismjs';
+export default Prism.languages.asciidoc;

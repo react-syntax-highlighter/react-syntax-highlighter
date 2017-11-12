@@ -1,2 +1,2 @@
-import kotlin from "highlight.js/lib/languages/kotlin";
-export default kotlin;
+import Prism from 'prismjs';
+export default Prism.languages.kotlin;

@@ -1,2 +1,2 @@
-import mizar from "highlight.js/lib/languages/mizar";
-export default mizar;
+import Prism from 'prismjs';
+export default Prism.languages.mizar;

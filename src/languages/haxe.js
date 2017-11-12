@@ -1,2 +1,2 @@
-import haxe from "highlight.js/lib/languages/haxe";
-export default haxe;
+import Prism from 'prismjs';
+export default Prism.languages.haxe;

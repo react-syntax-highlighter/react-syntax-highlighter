@@ -1,2 +1,2 @@
-import actionscript from "highlight.js/lib/languages/actionscript";
-export default actionscript;
+import Prism from 'prismjs';
+export default Prism.languages.actionscript;

@@ -1,2 +1,2 @@
-import ocaml from "highlight.js/lib/languages/ocaml";
-export default ocaml;
+import Prism from 'prismjs';
+export default Prism.languages.ocaml;

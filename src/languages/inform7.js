@@ -1,2 +1,2 @@
-import inform7 from "highlight.js/lib/languages/inform7";
-export default inform7;
+import Prism from 'prismjs';
+export default Prism.languages.inform7;

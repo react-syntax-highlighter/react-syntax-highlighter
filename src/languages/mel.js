@@ -1,2 +1,2 @@
-import mel from "highlight.js/lib/languages/mel";
-export default mel;
+import Prism from 'prismjs';
+export default Prism.languages.mel;

@@ -1,2 +1,2 @@
-import javascript from "highlight.js/lib/languages/javascript";
-export default javascript;
+import Prism from 'prismjs';
+export default Prism.languages.javascript;

@@ -1,2 +1,2 @@
-import less from "highlight.js/lib/languages/less";
-export default less;
+import Prism from 'prismjs';
+export default Prism.languages.less;

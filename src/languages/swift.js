@@ -1,2 +1,2 @@
-import swift from "highlight.js/lib/languages/swift";
-export default swift;
+import Prism from 'prismjs';
+export default Prism.languages.swift;

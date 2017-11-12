@@ -1,2 +1,2 @@
-import css from "highlight.js/lib/languages/css";
-export default css;
+import Prism from 'prismjs';
+export default Prism.languages.css;

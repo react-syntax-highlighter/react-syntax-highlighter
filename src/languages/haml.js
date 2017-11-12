@@ -1,2 +1,2 @@
-import haml from "highlight.js/lib/languages/haml";
-export default haml;
+import Prism from 'prismjs';
+export default Prism.languages.haml;

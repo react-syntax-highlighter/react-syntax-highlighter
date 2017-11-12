@@ -1,2 +1,2 @@
-import puppet from "highlight.js/lib/languages/puppet";
-export default puppet;
+import Prism from 'prismjs';
+export default Prism.languages.puppet;

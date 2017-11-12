@@ -1,2 +1,2 @@
-import vim from "highlight.js/lib/languages/vim";
-export default vim;
+import Prism from 'prismjs';
+export default Prism.languages.vim;

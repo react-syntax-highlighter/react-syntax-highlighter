@@ -1,2 +1,2 @@
-import livescript from "highlight.js/lib/languages/livescript";
-export default livescript;
+import Prism from 'prismjs';
+export default Prism.languages.livescript;

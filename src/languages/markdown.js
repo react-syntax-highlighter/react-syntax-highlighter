@@ -1,2 +1,2 @@
-import markdown from "highlight.js/lib/languages/markdown";
-export default markdown;
+import Prism from 'prismjs';
+export default Prism.languages.markdown;

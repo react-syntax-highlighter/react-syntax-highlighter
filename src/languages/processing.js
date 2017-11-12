@@ -1,2 +1,2 @@
-import processing from "highlight.js/lib/languages/processing";
-export default processing;
+import Prism from 'prismjs';
+export default Prism.languages.processing;

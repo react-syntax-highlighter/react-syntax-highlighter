@@ -1,2 +1,2 @@
-import lua from "highlight.js/lib/languages/lua";
-export default lua;
+import Prism from 'prismjs';
+export default Prism.languages.lua;

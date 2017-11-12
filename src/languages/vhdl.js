@@ -1,2 +1,2 @@
-import vhdl from "highlight.js/lib/languages/vhdl";
-export default vhdl;
+import Prism from 'prismjs';
+export default Prism.languages.vhdl;

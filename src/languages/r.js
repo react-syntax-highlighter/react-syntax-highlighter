@@ -1,2 +1,2 @@
-import r from "highlight.js/lib/languages/r";
-export default r;
+import Prism from 'prismjs';
+export default Prism.languages.r;

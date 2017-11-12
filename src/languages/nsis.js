@@ -1,2 +1,2 @@
-import nsis from "highlight.js/lib/languages/nsis";
-export default nsis;
+import Prism from 'prismjs';
+export default Prism.languages.nsis;

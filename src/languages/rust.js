@@ -1,2 +1,2 @@
-import rust from "highlight.js/lib/languages/rust";
-export default rust;
+import Prism from 'prismjs';
+export default Prism.languages.rust;

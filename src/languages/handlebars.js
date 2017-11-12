@@ -1,2 +1,2 @@
-import handlebars from "highlight.js/lib/languages/handlebars";
-export default handlebars;
+import Prism from 'prismjs';
+export default Prism.languages.handlebars;

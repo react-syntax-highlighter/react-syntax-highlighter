@@ -1,2 +1,2 @@
-import fortran from "highlight.js/lib/languages/fortran";
-export default fortran;
+import Prism from 'prismjs';
+export default Prism.languages.fortran;

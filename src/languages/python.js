@@ -1,2 +1,2 @@
-import python from "highlight.js/lib/languages/python";
-export default python;
+import Prism from 'prismjs';
+export default Prism.languages.python;

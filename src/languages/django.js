@@ -1,2 +1,2 @@
-import django from "highlight.js/lib/languages/django";
-export default django;
+import Prism from 'prismjs';
+export default Prism.languages.django;

@@ -1,2 +1,2 @@
-import autoit from "highlight.js/lib/languages/autoit";
-export default autoit;
+import Prism from 'prismjs';
+export default Prism.languages.autoit;

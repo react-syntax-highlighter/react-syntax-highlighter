@@ -1,2 +1,2 @@
-import crystal from "highlight.js/lib/languages/crystal";
-export default crystal;
+import Prism from 'prismjs';
+export default Prism.languages.crystal;

@@ -1,2 +1,2 @@
-import go from "highlight.js/lib/languages/go";
-export default go;
+import Prism from 'prismjs';
+export default Prism.languages.go;

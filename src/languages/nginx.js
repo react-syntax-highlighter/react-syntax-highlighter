@@ -1,2 +1,2 @@
-import nginx from "highlight.js/lib/languages/nginx";
-export default nginx;
+import Prism from 'prismjs';
+export default Prism.languages.nginx;
