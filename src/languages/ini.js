@@ -1,2 +1,2 @@
-import ini from "highlight.js/lib/languages/ini";
-export default ini;
+import Prism from 'prismjs';
+export default Prism.languages.ini;

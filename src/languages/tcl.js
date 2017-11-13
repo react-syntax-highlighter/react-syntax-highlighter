@@ -1,2 +1,2 @@
-import tcl from "highlight.js/lib/languages/tcl";
-export default tcl;
+import Prism from 'prismjs';
+export default Prism.languages.tcl;

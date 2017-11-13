@@ -1,2 +1,2 @@
-import scala from "highlight.js/lib/languages/scala";
-export default scala;
+import Prism from 'prismjs';
+export default Prism.languages.scala;

@@ -1,106 +1,205 @@
 export default {
+    "code[class*=\"language-\"]": {
+        "color": "#a9b7c6",
+        "fontFamily": "Consolas, Monaco, 'Andale Mono', monospace",
+        "direction": "ltr",
+        "textAlign": "left",
+        "whiteSpace": "pre",
+        "wordSpacing": "normal",
+        "wordBreak": "normal",
+        "lineHeight": "1.5",
+        "mozTabSize": "4",
+        "oTabSize": "4",
+        "tabSize": "4",
+        "webkitHyphens": "none",
+        "mozHyphens": "none",
+        "msHyphens": "none",
+        "hyphens": "none"
+    },
+    "pre[class*=\"language-\"]": {
+        "color": "#a9b7c6",
+        "fontFamily": "Consolas, Monaco, 'Andale Mono', monospace",
+        "direction": "ltr",
+        "textAlign": "left",
+        "whiteSpace": "pre",
+        "wordSpacing": "normal",
+        "wordBreak": "normal",
+        "lineHeight": "1.5",
+        "mozTabSize": "4",
+        "oTabSize": "4",
+        "tabSize": "4",
+        "webkitHyphens": "none",
+        "mozHyphens": "none",
+        "msHyphens": "none",
+        "hyphens": "none",
+        "padding": "1em",
+        "margin": ".5em 0",
+        "overflow": "auto",
+        "background": "#2b2b2b"
+    },
     "hljs": {
-        "display": "block",
-        "overflowX": "auto",
-        "padding": "0.5em",
+        "color": "#a9b7c6",
+        "backgroundColor": "#2b2b2b"
+    },
+    "pre[class*=\"language-\"]::-moz-selection": {
+        "color": "inherit",
+        "background": "rgba(33,66,131,.85)"
+    },
+    "pre[class*=\"language-\"] ::-moz-selection": {
+        "color": "inherit",
+        "background": "rgba(33,66,131,.85)"
+    },
+    "code[class*=\"language-\"]::-moz-selection": {
+        "color": "inherit",
+        "background": "rgba(33,66,131,.85)"
+    },
+    "code[class*=\"language-\"] ::-moz-selection": {
+        "color": "inherit",
+        "background": "rgba(33,66,131,.85)"
+    },
+    "pre[class*=\"language-\"]::selection": {
+        "color": "inherit",
+        "background": "rgba(33,66,131,.85)"
+    },
+    "pre[class*=\"language-\"] ::selection": {
+        "color": "inherit",
+        "background": "rgba(33,66,131,.85)"
+    },
+    "code[class*=\"language-\"]::selection": {
+        "color": "inherit",
+        "background": "rgba(33,66,131,.85)"
+    },
+    "code[class*=\"language-\"] ::selection": {
+        "color": "inherit",
+        "background": "rgba(33,66,131,.85)"
+    },
+    ":not(pre) > code[class*=\"language-\"]": {
         "background": "#2b2b2b",
-        "color": "#bababa"
+        "padding": ".1em",
+        "borderRadius": ".3em"
     },
-    "hljs-strong": {
-        "color": "#a8a8a2"
+    "comment": {
+        "color": "#808080"
     },
-    "hljs-emphasis": {
-        "color": "#a8a8a2",
-        "fontStyle": "italic"
+    "prolog": {
+        "color": "#808080"
     },
-    "hljs-bullet": {
-        "color": "#6896ba"
+    "cdata": {
+        "color": "#808080"
     },
-    "hljs-quote": {
-        "color": "#6896ba"
+    "delimiter": {
+        "color": "#cc7832"
     },
-    "hljs-link": {
-        "color": "#6896ba"
+    "boolean": {
+        "color": "#cc7832"
     },
-    "hljs-number": {
-        "color": "#6896ba"
+    "keyword": {
+        "color": "#cc7832"
     },
-    "hljs-regexp": {
-        "color": "#6896ba"
+    "selector": {
+        "color": "#cc7832"
     },
-    "hljs-literal": {
-        "color": "#6896ba"
+    "important": {
+        "color": "#cc7832"
     },
-    "hljs-code": {
-        "color": "#a6e22e"
+    "atrule": {
+        "color": "#cc7832"
     },
-    "hljs-selector-class": {
-        "color": "#a6e22e"
+    "operator": {
+        "color": "#a9b7c6"
     },
-    "hljs-keyword": {
-        "color": "#cb7832"
+    "punctuation": {
+        "color": "#a9b7c6"
     },
-    "hljs-selector-tag": {
-        "color": "#cb7832"
+    "attr-name": {
+        "color": "#a9b7c6"
     },
-    "hljs-section": {
-        "color": "#cb7832"
+    "tag": {
+        "color": "#e8bf6a"
     },
-    "hljs-attribute": {
-        "color": "#cb7832"
+    "tag .punctuation": {
+        "color": "#e8bf6a"
     },
-    "hljs-name": {
-        "color": "#cb7832"
+    "doctype": {
+        "color": "#e8bf6a"
     },
-    "hljs-variable": {
-        "color": "#cb7832"
+    "builtin": {
+        "color": "#e8bf6a"
     },
-    "hljs-params": {
-        "color": "#b9b9b9"
+    "entity": {
+        "color": "#6897bb"
     },
-    "hljs-string": {
+    "number": {
+        "color": "#6897bb"
+    },
+    "symbol": {
+        "color": "#6897bb"
+    },
+    "property": {
+        "color": "#9876aa"
+    },
+    "constant": {
+        "color": "#9876aa"
+    },
+    "variable": {
+        "color": "#9876aa"
+    },
+    "string": {
         "color": "#6a8759"
     },
-    "hljs-subst": {
-        "color": "#e0c46c"
+    "char": {
+        "color": "#6a8759"
     },
-    "hljs-type": {
-        "color": "#e0c46c"
+    "attr-value": {
+        "color": "#a5c261"
     },
-    "hljs-built_in": {
-        "color": "#e0c46c"
+    "attr-value .punctuation": {
+        "color": "#a5c261"
     },
-    "hljs-builtin-name": {
-        "color": "#e0c46c"
+    "attr-value .punctuation:first-child": {
+        "color": "#a9b7c6"
     },
-    "hljs-symbol": {
-        "color": "#e0c46c"
+    "url": {
+        "color": "#287bde",
+        "textDecoration": "underline"
     },
-    "hljs-selector-id": {
-        "color": "#e0c46c"
+    "function": {
+        "color": "#ffc66d"
     },
-    "hljs-selector-attr": {
-        "color": "#e0c46c"
+    "regex": {
+        "background": "#364135"
     },
-    "hljs-selector-pseudo": {
-        "color": "#e0c46c"
+    "bold": {
+        "fontWeight": "bold"
     },
-    "hljs-template-tag": {
-        "color": "#e0c46c"
+    "italic": {
+        "fontStyle": "italic"
     },
-    "hljs-template-variable": {
-        "color": "#e0c46c"
+    "inserted": {
+        "background": "#294436"
     },
-    "hljs-addition": {
-        "color": "#e0c46c"
+    "deleted": {
+        "background": "#484a4a"
     },
-    "hljs-comment": {
-        "color": "#7f7f7f"
+    "code.language-css .token.property": {
+        "color": "#a9b7c6"
     },
-    "hljs-deletion": {
-        "color": "#7f7f7f"
+    "code.language-css .token.property + .token.punctuation": {
+        "color": "#a9b7c6"
     },
-    "hljs-meta": {
-        "color": "#7f7f7f"
+    "code.language-css .token.id": {
+        "color": "#ffc66d"
+    },
+    "code.language-css .token.selector > .token.class": {
+        "color": "#ffc66d"
+    },
+    "code.language-css .token.selector > .token.attribute": {
+        "color": "#ffc66d"
+    },
+    "code.language-css .token.selector > .token.pseudo-class": {
+        "color": "#ffc66d"
+    },
+    "code.language-css .token.selector > .token.pseudo-element": {
+        "color": "#ffc66d"
     }
 }

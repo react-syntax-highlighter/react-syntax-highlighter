@@ -1,96 +1,155 @@
 export default {
-    "hljs-comment": {
-        "color": "#8e908c"
+    "code[class*=\"language-\"]": {
+        "color": "#ccc",
+        "background": "none",
+        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+        "textAlign": "left",
+        "whiteSpace": "pre",
+        "wordSpacing": "normal",
+        "wordBreak": "normal",
+        "wordWrap": "normal",
+        "lineHeight": "1.5",
+        "mozTabSize": "4",
+        "oTabSize": "4",
+        "tabSize": "4",
+        "webkitHyphens": "none",
+        "mozHyphens": "none",
+        "msHyphens": "none",
+        "hyphens": "none"
     },
-    "hljs-quote": {
-        "color": "#8e908c"
-    },
-    "hljs-variable": {
-        "color": "#c82829"
-    },
-    "hljs-template-variable": {
-        "color": "#c82829"
-    },
-    "hljs-tag": {
-        "color": "#c82829"
-    },
-    "hljs-name": {
-        "color": "#c82829"
-    },
-    "hljs-selector-id": {
-        "color": "#c82829"
-    },
-    "hljs-selector-class": {
-        "color": "#c82829"
-    },
-    "hljs-regexp": {
-        "color": "#c82829"
-    },
-    "hljs-deletion": {
-        "color": "#c82829"
-    },
-    "hljs-number": {
-        "color": "#f5871f"
-    },
-    "hljs-built_in": {
-        "color": "#f5871f"
-    },
-    "hljs-builtin-name": {
-        "color": "#f5871f"
-    },
-    "hljs-literal": {
-        "color": "#f5871f"
-    },
-    "hljs-type": {
-        "color": "#f5871f"
-    },
-    "hljs-params": {
-        "color": "#f5871f"
-    },
-    "hljs-meta": {
-        "color": "#f5871f"
-    },
-    "hljs-link": {
-        "color": "#f5871f"
-    },
-    "hljs-attribute": {
-        "color": "#eab700"
-    },
-    "hljs-string": {
-        "color": "#718c00"
-    },
-    "hljs-symbol": {
-        "color": "#718c00"
-    },
-    "hljs-bullet": {
-        "color": "#718c00"
-    },
-    "hljs-addition": {
-        "color": "#718c00"
-    },
-    "hljs-title": {
-        "color": "#4271ae"
-    },
-    "hljs-section": {
-        "color": "#4271ae"
-    },
-    "hljs-keyword": {
-        "color": "#8959a8"
-    },
-    "hljs-selector-tag": {
-        "color": "#8959a8"
+    "pre[class*=\"language-\"]": {
+        "color": "#ccc",
+        "background": "#2d2d2d",
+        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+        "textAlign": "left",
+        "whiteSpace": "pre",
+        "wordSpacing": "normal",
+        "wordBreak": "normal",
+        "wordWrap": "normal",
+        "lineHeight": "1.5",
+        "mozTabSize": "4",
+        "oTabSize": "4",
+        "tabSize": "4",
+        "webkitHyphens": "none",
+        "mozHyphens": "none",
+        "msHyphens": "none",
+        "hyphens": "none",
+        "padding": "1em",
+        "margin": ".5em 0",
+        "overflow": "auto"
     },
     "hljs": {
-        "display": "block",
-        "overflowX": "auto",
-        "background": "white",
-        "color": "#4d4d4c",
-        "padding": "0.5em"
+        "color": "#ccc",
+        "backgroundColor": "#2d2d2d"
     },
-    "hljs-emphasis": {
+    ":not(pre) > code[class*=\"language-\"]": {
+        "background": "#2d2d2d",
+        "padding": ".1em",
+        "borderRadius": ".3em",
+        "whiteSpace": "normal"
+    },
+    "comment": {
+        "color": "#999"
+    },
+    "block-comment": {
+        "color": "#999"
+    },
+    "prolog": {
+        "color": "#999"
+    },
+    "doctype": {
+        "color": "#999"
+    },
+    "cdata": {
+        "color": "#999"
+    },
+    "punctuation": {
+        "color": "#ccc"
+    },
+    "tag": {
+        "color": "#e2777a"
+    },
+    "attr-name": {
+        "color": "#e2777a"
+    },
+    "namespace": {
+        "color": "#e2777a"
+    },
+    "deleted": {
+        "color": "#e2777a"
+    },
+    "function-name": {
+        "color": "#6196cc"
+    },
+    "boolean": {
+        "color": "#f08d49"
+    },
+    "number": {
+        "color": "#f08d49"
+    },
+    "function": {
+        "color": "#f08d49"
+    },
+    "property": {
+        "color": "#f8c555"
+    },
+    "class-name": {
+        "color": "#f8c555"
+    },
+    "constant": {
+        "color": "#f8c555"
+    },
+    "symbol": {
+        "color": "#f8c555"
+    },
+    "selector": {
+        "color": "#cc99cd"
+    },
+    "important": {
+        "color": "#cc99cd",
+        "fontWeight": "bold"
+    },
+    "atrule": {
+        "color": "#cc99cd"
+    },
+    "keyword": {
+        "color": "#cc99cd"
+    },
+    "builtin": {
+        "color": "#cc99cd"
+    },
+    "string": {
+        "color": "#7ec699"
+    },
+    "char": {
+        "color": "#7ec699"
+    },
+    "attr-value": {
+        "color": "#7ec699"
+    },
+    "regex": {
+        "color": "#7ec699"
+    },
+    "variable": {
+        "color": "#7ec699"
+    },
+    "operator": {
+        "color": "#67cdcc"
+    },
+    "entity": {
+        "color": "#67cdcc",
+        "cursor": "help"
+    },
+    "url": {
+        "color": "#67cdcc"
+    },
+    "bold": {
+        "fontWeight": "bold"
+    },
+    "italic": {
         "fontStyle": "italic"
     },
-    "hljs-strong": {
-        "fontWeight": "bold"
+    "inserted": {
+        "color": "green"
     }
 }

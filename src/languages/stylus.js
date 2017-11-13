@@ -1,2 +1,2 @@
-import stylus from "highlight.js/lib/languages/stylus";
-export default stylus;
+import Prism from 'prismjs';
+export default Prism.languages.stylus;

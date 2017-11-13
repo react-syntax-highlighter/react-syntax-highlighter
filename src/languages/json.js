@@ -1,2 +1,2 @@
-import json from "highlight.js/lib/languages/json";
-export default json;
+import Prism from 'prismjs';
+export default Prism.languages.json;

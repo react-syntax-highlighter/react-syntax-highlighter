@@ -1,2 +1,2 @@
-import dart from "highlight.js/lib/languages/dart";
-export default dart;
+import Prism from 'prismjs';
+export default Prism.languages.dart;

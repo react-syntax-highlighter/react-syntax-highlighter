@@ -1,2 +1,2 @@
-import autohotkey from "highlight.js/lib/languages/autohotkey";
-export default autohotkey;
+import Prism from 'prismjs';
+export default Prism.languages.autohotkey;

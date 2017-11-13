@@ -1,2 +1,2 @@
-import applescript from "highlight.js/lib/languages/applescript";
-export default applescript;
+import Prism from 'prismjs';
+export default Prism.languages.applescript;

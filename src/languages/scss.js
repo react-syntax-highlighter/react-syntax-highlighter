@@ -1,2 +1,2 @@
-import scss from "highlight.js/lib/languages/scss";
-export default scss;
+import Prism from 'prismjs';
+export default Prism.languages.scss;

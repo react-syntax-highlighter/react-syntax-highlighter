@@ -1,2 +1,2 @@
-import typescript from "highlight.js/lib/languages/typescript";
-export default typescript;
+import Prism from 'prismjs';
+export default Prism.languages.typescript;

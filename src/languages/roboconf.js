@@ -1,2 +1,2 @@
-import roboconf from "highlight.js/lib/languages/roboconf";
-export default roboconf;
+import Prism from 'prismjs';
+export default Prism.languages.roboconf;

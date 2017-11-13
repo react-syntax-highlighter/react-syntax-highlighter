@@ -1,2 +1,2 @@
-import groovy from "highlight.js/lib/languages/groovy";
-export default groovy;
+import Prism from 'prismjs';
+export default Prism.languages.groovy;

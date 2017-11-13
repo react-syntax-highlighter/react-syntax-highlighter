@@ -1,2 +1,2 @@
-import scheme from "highlight.js/lib/languages/scheme";
-export default scheme;
+import Prism from 'prismjs';
+export default Prism.languages.scheme;

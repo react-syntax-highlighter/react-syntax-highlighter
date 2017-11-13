@@ -1,2 +1,2 @@
-import objectivec from "highlight.js/lib/languages/objectivec";
-export default objectivec;
+import Prism from 'prismjs';
+export default Prism.languages.objectivec;

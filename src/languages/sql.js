@@ -1,2 +1,2 @@
-import sql from "highlight.js/lib/languages/sql";
-export default sql;
+import Prism from 'prismjs';
+export default Prism.languages.sql;

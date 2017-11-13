@@ -1,2 +1,2 @@
-import q from "highlight.js/lib/languages/q";
-export default q;
+import Prism from 'prismjs';
+export default Prism.languages.q;

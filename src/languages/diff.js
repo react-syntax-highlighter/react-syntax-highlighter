@@ -1,2 +1,2 @@
-import diff from "highlight.js/lib/languages/diff";
-export default diff;
+import Prism from 'prismjs';
+export default Prism.languages.diff;

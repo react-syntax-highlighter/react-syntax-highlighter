@@ -1,2 +1,2 @@
-import fsharp from "highlight.js/lib/languages/fsharp";
-export default fsharp;
+import Prism from 'prismjs';
+export default Prism.languages.fsharp;

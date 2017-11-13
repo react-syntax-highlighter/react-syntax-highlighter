@@ -1,2 +1,2 @@
-import http from "highlight.js/lib/languages/http";
-export default http;
+import Prism from 'prismjs';
+export default Prism.languages.http;
