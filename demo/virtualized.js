@@ -286,7 +286,7 @@ function createElement({ node, style, useInlineStyles, key }) {
   `;
     this.state = {
       selected: 'tomorrow-night-eighties',
-      style: require('../dist/styles/tomorrow-night-eighties').default,
+      style: require('../dist/styles/lowlight/tomorrow-night-eighties').default,
       code: initialCodeString,
       showLineNumbers: false,
       width: window.innerWidth,

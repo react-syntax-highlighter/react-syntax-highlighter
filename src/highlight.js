@@ -135,13 +135,13 @@ function defaultRenderer({ rows, stylesheet, useInlineStyles }) {
   );
 }
 
-export default function (refractor, defaultStyle) {
+export default function (astGenerator, defaultStyle) {
  return function SyntaxHighlighter({
   language,
   children,
   style = defaultStyle,
   customStyle = {},
-  codeTagProps = {},
+  codeTagProps = { style: style["code[class*=\"language-\"]"] },
   useInlineStyles = true,
   showLineNumbers = false,
   startingLineNumber = 1,
@@ -162,15 +162,35 @@ export default function (refractor, defaultStyle) {
     const defaultCodeValue = [{ type: 'text',  value: code }];
     wrapLines = renderer && wrapLines === undefined ? true : wrapLines;
     renderer = renderer || defaultRenderer;
-    const codeTree = (
-      language && language !== 'text' ? 
-      { value: refractor.highlight(code, language) } :
-      { value: defaultCodeValue }
-    );
+    let codeTree;
+    if (astGenerator.getLanguage) {
+      codeTree = (
+        language && !!astGenerator.getLanguage(language) 
+        ?  
+        astGenerator.highlight(language, code) 
+        :
+        language !== 'text'
+        ? 
+        astGenerator.highlightAuto ? astGenerator.highlightAuto(code) : { value: defaultCodeValue, language: "text" }  
+        : 
+        { value: defaultCodeValue, language: "text" }
+      ); 
+    }
+    else {
+      codeTree = (
+        language && language !== 'text' ? 
+        { value: astGenerator.highlight(code, language) } :
+        { value: defaultCodeValue }
+      );
+    }
     if (codeTree.language === null) {
       codeTree.value = defaultCodeValue;
     }
-    const defaultPreStyle = style.hljs || { backgroundColor: '#fff' };
+    const defaultPreStyle = (
+      style.hljs || 
+      style["pre[class*=\"language-\"]"] || 
+      { backgroundColor: '#fff' }
+    );
     const preProps = (
       useInlineStyles
       ?

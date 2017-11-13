@@ -2,9 +2,11 @@
   "name": "react-syntax-highlighter-prismjs",
   "version": "5.9.0",
   "description": "sane syntax highlighting component for react with prismjs",
-  "main": "dist/index.js",
+  "main": "dist/",
   "dependencies": {
     "babel-runtime": "^6.18.0",
+    "highlight.js": "~9.12.0",
+    "lowlight": "~1.9.1",
     "prism-themes": "https://github.com/PrismJS/prism-themes.git#afb4116547cd854074ad705b8171768403ca11f3",
     "prismjs": "^1.8.4",
     "refractor": "^2.0.0"
@@ -40,9 +42,11 @@
     "dev": "./node_modules/.bin/webpack --watch --progress",
     "build": "babel src --out-dir dist",
     "watch": "babel src --watch --out-dir dist",
-    "build-styles": "node ./lib/build-stylesheets.js",
-    "build-languages": "node ./lib/build-languages.js",
-    "prepublish": "npm run build-styles && npm run build-languages && npm run build",
+    "build-styles-hljs": "node ./lib/build-stylesheets-highlightjs.js",
+    "build-languages-hljs": "node ./lib/build-languages-highlightjs.js",
+    "build-styles-prism": "node ./lib/build-stylesheets-refractor.js",
+    "build-languages-prism": "node ./lib/build-languages-refractor.js",
+    "prepublish": "npm run build-styles-hljs && npm run build-languages-hljs && npm run build-styles-prism && npm run build-languages-prism && npm run build",
     "test": "jest",
     "test-ci": "jest && codecov"
   },
