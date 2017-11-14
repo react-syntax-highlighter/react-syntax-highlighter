@@ -37,10 +37,6 @@ export default {
         "overflow": "auto",
         "background": "#2b2b2b"
     },
-    "hljs": {
-        "color": "#a9b7c6",
-        "backgroundColor": "#2b2b2b"
-    },
     "pre[class*=\"language-\"]::-moz-selection": {
         "color": "inherit",
         "background": "rgba(33,66,131,.85)"

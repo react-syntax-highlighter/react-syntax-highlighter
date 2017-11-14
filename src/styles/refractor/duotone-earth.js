@@ -40,10 +40,6 @@ export default {
         "margin": ".5em 0",
         "overflow": "auto"
     },
-    "hljs": {
-        "color": "#88786d",
-        "backgroundColor": "#322d29"
-    },
     "pre[class*=\"language-\"]::-moz-selection": {
         "textShadow": "none",
         "background": "#6f5849"

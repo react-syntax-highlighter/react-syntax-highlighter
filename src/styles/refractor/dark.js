@@ -43,10 +43,6 @@ export default {
         "borderRadius": ".5em",
         "boxShadow": "1px 1px .5em black inset"
     },
-    "hljs": {
-        "color": "white",
-        "backgroundColor": "hsl(30, 20%, 25%)"
-    },
     ":not(pre) > code[class*=\"language-\"]": {
         "background": "hsl(30, 20%, 25%)",
         "padding": ".15em .2em .05em",

@@ -44,10 +44,6 @@ export default {
         "boxSizing": "border-box",
         "marginBottom": "1em"
     },
-    "hljs": {
-        "color": "black",
-        "backgroundColor": "none"
-    },
     "pre[class*=\"language-\"]>code": {
         "position": "relative",
         "borderLeft": "10px solid #358ccb",

@@ -41,10 +41,6 @@ export default {
         "overflow": "auto",
         "borderRadius": "0.3em"
     },
-    "hljs": {
-        "color": "#f8f8f2",
-        "backgroundColor": "#272822"
-    },
     ":not(pre) > code[class*=\"language-\"]": {
         "background": "#272822",
         "padding": ".1em",

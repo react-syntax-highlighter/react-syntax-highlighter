@@ -40,10 +40,6 @@ export default {
         "borderRadius": "0.3em",
         "background": "#1d1f21"
     },
-    "hljs": {
-        "color": "#c5c8c6",
-        "backgroundColor": "#1d1f21"
-    },
     ":not(pre) > code[class*=\"language-\"]": {
         "background": "#1d1f21",
         "padding": ".1em",

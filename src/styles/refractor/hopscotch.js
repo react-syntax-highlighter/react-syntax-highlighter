@@ -42,10 +42,6 @@ export default {
         "margin": ".5em 0",
         "overflow": "auto"
     },
-    "hljs": {
-        "color": "#b9b5b8",
-        "backgroundColor": "#322931"
-    },
     ":not(pre) > code[class*=\"language-\"]": {
         "padding": ".1em",
         "borderRadius": ".3em"

@@ -40,9 +40,6 @@ export default {
         "border": "1px solid #dddddd",
         "backgroundColor": "white"
     },
-    "hljs": {
-        "color": "#393A34"
-    },
     "pre[class*=\"language-\"]::-moz-selection": {
         "background": "#b3d4fc"
     },

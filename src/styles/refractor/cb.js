@@ -45,10 +45,6 @@ export default {
         "webkitBorderRadius": "8px",
         "borderRadius": "8px"
     },
-    "hljs": {
-        "color": "#fff",
-        "backgroundColor": "#222"
-    },
     "pre[class*=\"language-\"] code": {
         "float": "left",
         "padding": "0 15px 0 0"

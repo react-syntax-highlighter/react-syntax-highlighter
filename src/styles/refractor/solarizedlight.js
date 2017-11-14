@@ -38,9 +38,6 @@ export default {
         "borderRadius": "0.3em",
         "backgroundColor": "#fdf6e3"
     },
-    "hljs": {
-        "color": "#657b83"
-    },
     "pre[class*=\"language-\"]::-moz-selection": {
         "background": "#073642"
     },

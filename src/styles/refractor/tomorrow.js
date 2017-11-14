@@ -38,10 +38,6 @@ export default {
         "margin": ".5em 0",
         "overflow": "auto"
     },
-    "hljs": {
-        "color": "#ccc",
-        "backgroundColor": "#2d2d2d"
-    },
     ":not(pre) > code[class*=\"language-\"]": {
         "background": "#2d2d2d",
         "padding": ".1em",
