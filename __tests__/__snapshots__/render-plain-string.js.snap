@@ -5,7 +5,8 @@ exports[`test SyntaxHighlighter renders childre unadultered when no language dis
       "backgroundColor": "#fff"
     }
   }>
-  <code>
+  <code
+    style={undefined}>
     Contacts* contacts = [[Contacts alloc]init];
   </code>
 </pre>

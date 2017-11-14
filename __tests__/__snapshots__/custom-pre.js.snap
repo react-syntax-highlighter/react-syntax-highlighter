@@ -9,7 +9,8 @@ exports[`test SyntaxHighlighter component renders custom react component where p
       "padding": "0.5em"
     }
   }>
-  <code>
+  <code
+    style={undefined}>
     <span
       style={
         Object {
@@ -240,7 +241,8 @@ exports[`test SyntaxHighlighter renders div where pre tag is by default 1`] = `
       "padding": "0.5em"
     }
   }>
-  <code>
+  <code
+    style={undefined}>
     <span
       style={
         Object {

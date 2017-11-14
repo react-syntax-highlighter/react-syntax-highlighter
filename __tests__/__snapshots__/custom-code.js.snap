@@ -9,7 +9,8 @@ exports[`test SyntaxHighlighter component renders custom react component where c
       "padding": "0.5em"
     }
   }>
-  <section>
+  <section
+    style={undefined}>
     <span
       style={
         Object {
@@ -240,7 +241,8 @@ exports[`test SyntaxHighlighter renders div where code tag is by default 1`] = `
       "padding": "0.5em"
     }
   }>
-  <div>
+  <div
+    style={undefined}>
     <span
       style={
         Object {

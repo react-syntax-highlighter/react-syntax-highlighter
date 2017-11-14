@@ -1,7 +1,8 @@
 exports[`test SyntaxHighlighter component renders correctly without inline styles when useInlineStyles=false 1`] = `
 <pre
   className="hljs">
-  <code>
+  <code
+    style={undefined}>
     <span
       className="hljs-keyword">
       const
