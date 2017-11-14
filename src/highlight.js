@@ -140,9 +140,9 @@ function defaultRenderer({ rows, stylesheet, useInlineStyles }) {
 function getCodeTree({ astGenerator, language, code }) {
   const defaultCodeValue = [{ type: 'text',  value: code }];
   if (astGenerator.getLanguage) {
-    const hasLanguage = language && astGenerator.getLanguage(language);
-    if (language === "text" || !hasLanguage) {
-      return { value: defaultCodeValue, language: "text" };
+    const hasLanguage = laguage && astGenerator.getLanguage(language);
+    if (language === 'text' || !hasLanguage) {
+      return { value: defaultCodeValue, language: 'text' };
     }
     else if (hasLanguage) {
       return astGenerator.highlight(language, code);
@@ -164,7 +164,7 @@ export default function (astGenerator, defaultStyle) {
   children,
   style = defaultStyle,
   customStyle = {},
-  codeTagProps = { style: style["code[class*=\"language-\"]"] },
+  codeTagProps = { style: style['code[class*=\"language-\"]'] },
   useInlineStyles = true,
   showLineNumbers = false,
   startingLineNumber = 1,
@@ -190,7 +190,7 @@ export default function (astGenerator, defaultStyle) {
     }
     const defaultPreStyle = (
       style.hljs || 
-      style["pre[class*=\"language-\"]"] || 
+      style['pre[class*=\"language-\"]'] || 
       { backgroundColor: '#fff' }
     );
     const preProps = (
