@@ -135,6 +135,29 @@ function defaultRenderer({ rows, stylesheet, useInlineStyles }) {
   );
 }
 
+
+
+function getCodeTree({ astGenerator, language, code }) {
+  const defaultCodeValue = [{ type: 'text',  value: code }];
+  if (astGenerator.getLanguage) {
+    const hasLanguage = language && astGenerator.getLanguage(language);
+    if (language === "text" || !hasLanguage) {
+      return { value: defaultCodeValue, language: "text" };
+    }
+    else if (hasLanguage) {
+      return astGenerator.highlight(language, code);
+    } 
+    else {
+      return astGenerator.highlightAuto(code);
+    }
+  }
+  return (
+    language && language !== 'text' ? 
+    { value: astGenerator.highlight(code, language) } :
+    { value: defaultCodeValue }
+  );
+}
+
 export default function (astGenerator, defaultStyle) {
  return function SyntaxHighlighter({
   language,
@@ -159,30 +182,9 @@ export default function (astGenerator, defaultStyle) {
      * some custom renderers rely on individual row elements so we need to turn wrapLines on 
      * if renderer is provided and wrapLines is undefined
     */
-    const defaultCodeValue = [{ type: 'text',  value: code }];
     wrapLines = renderer && wrapLines === undefined ? true : wrapLines;
     renderer = renderer || defaultRenderer;
-    let codeTree;
-    if (astGenerator.getLanguage) {
-      codeTree = (
-        language && !!astGenerator.getLanguage(language) 
-        ?  
-        astGenerator.highlight(language, code) 
-        :
-        language !== 'text'
-        ? 
-        astGenerator.highlightAuto ? astGenerator.highlightAuto(code) : { value: defaultCodeValue, language: "text" }  
-        : 
-        { value: defaultCodeValue, language: "text" }
-      ); 
-    }
-    else {
-      codeTree = (
-        language && language !== 'text' ? 
-        { value: astGenerator.highlight(code, language) } :
-        { value: defaultCodeValue }
-      );
-    }
+    const codeTree = getCodeTree({ astGenerator, language, code });
     if (codeTree.language === null) {
       codeTree.value = defaultCodeValue;
     }
