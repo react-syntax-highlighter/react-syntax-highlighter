@@ -137,17 +137,17 @@ function defaultRenderer({ rows, stylesheet, useInlineStyles }) {
 
 
 
-function getCodeTree({ astGenerator, language, code }) {
-  const defaultCodeValue = [{ type: 'text',  value: code }];
+function getCodeTree({ astGenerator, language, code, defaultCodeValue }) {
   if (astGenerator.getLanguage) {
     const hasLanguage = language && astGenerator.getLanguage(language);
-    if (language === 'text' || !hasLanguage) {
+    if (language === 'text') {
       return { value: defaultCodeValue, language: 'text' };
     }
     else if (hasLanguage) {
       return astGenerator.highlight(language, code);
     } 
     else {
+      console.log("here")
       return astGenerator.highlightAuto(code);
     }
   }
@@ -184,7 +184,8 @@ export default function (astGenerator, defaultStyle) {
     */
     wrapLines = renderer && wrapLines === undefined ? true : wrapLines;
     renderer = renderer || defaultRenderer;
-    const codeTree = getCodeTree({ astGenerator, language, code });
+    const defaultCodeValue = [{ type: 'text',  value: code }];
+    const codeTree = getCodeTree({ astGenerator, language, code, defaultCodeValue });
     if (codeTree.language === null) {
       codeTree.value = defaultCodeValue;
     }
