@@ -147,7 +147,6 @@ function getCodeTree({ astGenerator, language, code, defaultCodeValue }) {
       return astGenerator.highlight(language, code);
     } 
     else {
-      console.log("here")
       return astGenerator.highlightAuto(code);
     }
   }

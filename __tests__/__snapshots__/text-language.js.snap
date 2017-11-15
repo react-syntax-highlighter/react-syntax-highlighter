@@ -1,0 +1,27 @@
+exports[`test SyntaxHighlighter component renders monospace text when text is passed as language 1`] = `
+<pre
+  style={
+    Object {
+      "background": "#F0F0F0",
+      "color": "#444",
+      "display": "block",
+      "overflowX": "auto",
+      "padding": "0.5em"
+    }
+  }>
+  <code
+    style={undefined}>
+    const woah = fun => fun + 1;
+    const dude = woah(2) + 3;
+    function thisIsAFunction() {
+      return [1,2,3].map(n => n + 1).filter(n !== 3);
+    }
+    console.log(\'making up fake code is really hard\');
+    
+    function itIs() {
+      return \'no seriously really it is\';
+    }
+    
+  </code>
+</pre>
+`;

@@ -1,0 +1,570 @@
+exports[`test SyntaxHighlighter component renders correctly with refractor instead of lowlight 1`] = `
+<pre
+  style={
+    Object {
+      "background": "#f5f2f0",
+      "color": "black",
+      "fontFamily": "Consolas, Monaco, \'Andale Mono\', \'Ubuntu Mono\', monospace",
+      "hyphens": "none",
+      "lineHeight": "1.5",
+      "margin": ".5em 0",
+      "mozHyphens": "none",
+      "mozTabSize": "4",
+      "msHyphens": "none",
+      "oTabSize": "4",
+      "overflow": "auto",
+      "padding": "1em",
+      "tabSize": "4",
+      "textAlign": "left",
+      "textShadow": "0 1px white",
+      "webkitHyphens": "none",
+      "whiteSpace": "pre",
+      "wordBreak": "normal",
+      "wordSpacing": "normal",
+      "wordWrap": "normal"
+    }
+  }>
+  <code
+    style={
+      Object {
+        "background": "none",
+        "color": "black",
+        "fontFamily": "Consolas, Monaco, \'Andale Mono\', \'Ubuntu Mono\', monospace",
+        "hyphens": "none",
+        "lineHeight": "1.5",
+        "mozHyphens": "none",
+        "mozTabSize": "4",
+        "msHyphens": "none",
+        "oTabSize": "4",
+        "tabSize": "4",
+        "textAlign": "left",
+        "textShadow": "0 1px white",
+        "webkitHyphens": "none",
+        "whiteSpace": "pre",
+        "wordBreak": "normal",
+        "wordSpacing": "normal",
+        "wordWrap": "normal"
+      }
+    }>
+    <span
+      style={
+        Object {
+          "color": "#07a"
+        }
+      }>
+      const
+    </span>
+     
+    <span
+      style={
+        Object {
+          "color": "#DD4A68"
+        }
+      }>
+      woah
+    </span>
+     
+    <span
+      style={
+        Object {
+          "background": "hsla(0, 0%, 100%, .5)",
+          "color": "#a67f59"
+        }
+      }>
+      =
+    </span>
+     fun 
+    <span
+      style={
+        Object {
+          "background": "hsla(0, 0%, 100%, .5)",
+          "color": "#a67f59"
+        }
+      }>
+      =>
+    </span>
+     fun 
+    <span
+      style={
+        Object {
+          "background": "hsla(0, 0%, 100%, .5)",
+          "color": "#a67f59"
+        }
+      }>
+      +
+    </span>
+     
+    <span
+      style={
+        Object {
+          "color": "#905"
+        }
+      }>
+      1
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      ;
+    </span>
+    
+    
+    <span
+      style={
+        Object {
+          "color": "#07a"
+        }
+      }>
+      const
+    </span>
+     dude 
+    <span
+      style={
+        Object {
+          "background": "hsla(0, 0%, 100%, .5)",
+          "color": "#a67f59"
+        }
+      }>
+      =
+    </span>
+     
+    <span
+      style={
+        Object {
+          "color": "#DD4A68"
+        }
+      }>
+      woah
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      (
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#905"
+        }
+      }>
+      2
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      )
+    </span>
+     
+    <span
+      style={
+        Object {
+          "background": "hsla(0, 0%, 100%, .5)",
+          "color": "#a67f59"
+        }
+      }>
+      +
+    </span>
+     
+    <span
+      style={
+        Object {
+          "color": "#905"
+        }
+      }>
+      3
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      ;
+    </span>
+    
+    
+    <span
+      style={
+        Object {
+          "color": "#07a"
+        }
+      }>
+      function
+    </span>
+     
+    <span
+      style={
+        Object {
+          "color": "#DD4A68"
+        }
+      }>
+      thisIsAFunction
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      (
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      )
+    </span>
+     
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      {
+    </span>
+    
+      
+    <span
+      style={
+        Object {
+          "color": "#07a"
+        }
+      }>
+      return
+    </span>
+     
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      [
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#905"
+        }
+      }>
+      1
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      ,
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#905"
+        }
+      }>
+      2
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      ,
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#905"
+        }
+      }>
+      3
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      ]
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      .
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#DD4A68"
+        }
+      }>
+      map
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      (
+    </span>
+    n 
+    <span
+      style={
+        Object {
+          "background": "hsla(0, 0%, 100%, .5)",
+          "color": "#a67f59"
+        }
+      }>
+      =>
+    </span>
+     n 
+    <span
+      style={
+        Object {
+          "background": "hsla(0, 0%, 100%, .5)",
+          "color": "#a67f59"
+        }
+      }>
+      +
+    </span>
+     
+    <span
+      style={
+        Object {
+          "color": "#905"
+        }
+      }>
+      1
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      )
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      .
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#DD4A68"
+        }
+      }>
+      filter
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      (
+    </span>
+    n 
+    <span
+      style={
+        Object {
+          "background": "hsla(0, 0%, 100%, .5)",
+          "color": "#a67f59"
+        }
+      }>
+      !==
+    </span>
+     
+    <span
+      style={
+        Object {
+          "color": "#905"
+        }
+      }>
+      3
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      )
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      ;
+    </span>
+    
+    
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      }
+    </span>
+    
+    console
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      .
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#DD4A68"
+        }
+      }>
+      log
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      (
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#690"
+        }
+      }>
+      \'making up fake code is really hard\'
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      )
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      ;
+    </span>
+    
+    
+    
+    <span
+      style={
+        Object {
+          "color": "#07a"
+        }
+      }>
+      function
+    </span>
+     
+    <span
+      style={
+        Object {
+          "color": "#DD4A68"
+        }
+      }>
+      itIs
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      (
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      )
+    </span>
+     
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      {
+    </span>
+    
+      
+    <span
+      style={
+        Object {
+          "color": "#07a"
+        }
+      }>
+      return
+    </span>
+     
+    <span
+      style={
+        Object {
+          "color": "#690"
+        }
+      }>
+      \'no seriously really it is\'
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      ;
+    </span>
+    
+    
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      }
+    </span>
+    
+    
+  </code>
+</pre>
+`;
