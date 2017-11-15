@@ -140,7 +140,7 @@ function defaultRenderer({ rows, stylesheet, useInlineStyles }) {
 function getCodeTree({ astGenerator, language, code }) {
   const defaultCodeValue = [{ type: 'text',  value: code }];
   if (astGenerator.getLanguage) {
-    const hasLanguage = laguage && astGenerator.getLanguage(language);
+    const hasLanguage = language && astGenerator.getLanguage(language);
     if (language === 'text' || !hasLanguage) {
       return { value: defaultCodeValue, language: 'text' };
     }
