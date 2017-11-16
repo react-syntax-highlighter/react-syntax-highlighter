@@ -1,11 +1,10 @@
 ## React Syntax Highlighter
 
-[![CircleCI](https://circleci.com/gh/maxmcd/react-syntax-highlighter.svg?style=svg)](https://circleci.com/gh/maxmcd/react-syntax-highlighter)
-[![codecov](https://codecov.io/gh/maxmcd/react-syntax-highlighter/branch/master/graph/badge.svg)](https://codecov.io/gh/maxmcd/react-syntax-highlighter)
+[![CircleCI](https://circleci.com/gh/conorhastings/react-syntax-highlighter.svg?style=svg)](https://circleci.com/gh/conorhastings/react-syntax-highlighter)
+[![codecov](https://codecov.io/gh/conorhastings/react-syntax-highlighter/branch/master/graph/badge.svg)](https://codecov.io/gh/conorhastings/react-syntax-highlighter)
 
-**(Note: this is a fork of `conorhastings/react-syntax-highlighter` that replaces `lowlight` with `refractor`)**
 
-Syntax highlighting component for `React` using the seriously super amazing <a href="https://github.com/wooorm/refractor">refractor</a> by <a href="https://github.com/wooorm">wooorm</a>
+Syntax highlighting component for `React` using the seriously super amazing <a href="https://github.com/wooorm/lowlight">lowlight</a> and <a href="https://github.com/wooorm/lowlight">refractor</a> by <a href="https://github.com/wooorm">wooorm</a>
 
 Check out a small demo <a href="http://conor.rodeo/react-syntax-highlighter/demo/">here</a> and see the component in action highlighting the generated test code <a href="http://conor.rodeo/redux-test-recorder/demo/">here</a>. 
 
@@ -28,7 +27,7 @@ I do realize that javascript styles are not for everyone, so you can optionally 
 
 #### props
 * `language` - the language to highlight code in. (pass text to just render plain monospaced text)
-* `style` - style object required from styles directory [here](./AVAILABLE_STYLES.MD). `import { style } from 'react-syntax-highlighter/styles'` . Will use default if style is not included.
+* `style` - style object required from styles/hljs or styles/prism directory depending on whether or not you are importing from `react-syntax-highlighter` or `react-syntax-highlighter/prism`  directory [here for hljs](./AVAILABLE_STYLES_HLJS.MD). and [here for prism](./AVAILABLE_STYLES_PRISM.MD). `import { style } from 'react-syntax-highlighter/styles/{hljs|prism}'` . Will use default if style is not included.
 * `children` - the code to highlight.
 * `customStyle` - prop that will be combined with the top level style on the pre tag, styles here will overwrite earlier styles. 
 * `codeTagProps` - props that will be spread into the `<code>` tag that is the direct parent of the highlighted code elements. Useful for styling/assigning classNames.
@@ -46,7 +45,7 @@ I do realize that javascript styles are not for everyone, so you can optionally 
 
 ```js
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { docco } from 'react-syntax-highlighter/dist/styles';
+import { docco } from 'react-syntax-highlighter/styles/hljs';
 const Component = () => {
   const codeString = '(num) => num + 1';
   return <SyntaxHighlighter language='javascript' style={docco}>{codeString}</SyntaxHighlighter>;  
@@ -57,12 +56,26 @@ const Component = () => {
 React Syntax Highlighter used in the way described above can have a fairly large footprint. For those that desire more control over what exactly they need, there is an option to import a light build. If you choose to use this you will need to specifically import desired languages and register them using the registerLanguage export from the light build
 
 ```js
-import SyntaxHighlighter, { registerLanguage } from "react-syntax-highlighter/dist/light"
-import js from 'react-syntax-highlighter/dist/languages/javascript';
-import docco from 'react-syntax-highlighter/dist/styles/docco'; 
+import SyntaxHighlighter, { registerLanguage } from "react-syntax-highlighter/light"
+import js from 'react-syntax-highlighter/languages/hljs/javascript';
+import docco from 'react-syntax-highlighter/styles/docco'; 
 
 registerLanguage('javascript', js);
 ```
+
+### Prism
+
+Using <a href="https://github.com/wooorm/lowlight">refractor</a> we can use an ast built on languages from Prism.js instead of highlight.js. This is beneficial especially when highlighting jsx, a problem long unsolved by this module. The semantics of use are basically the same although a light mode is not yet supported (though is coming in the future). You can see a demo(with jsx) using Prism(refractor) <a href="http://conor.rodeo/react-syntax-highlighter/demo/prism.html">here</a>.
+
+```js
+import SyntaxHighlighter from 'react-syntax-highlighter/prism';
+import { dark } from 'react-syntax-highlighter/styles/prism';
+const Component = () => {
+  const codeString = '(num) => num + 1';
+  return <SyntaxHighlighter language='javascript' style={dark}>{codeString}</SyntaxHighlighter>;  
+}
+```
+
 ### Built with React Syntax Highlighter
 
 - [DBGlass](https://github.com/web-pal/DBGlass) - PostgreSQL client built with Electron.
