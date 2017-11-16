@@ -1,5 +1,5 @@
 {
-  "name": "react-syntax-highlighter-prismjs",
+  "name": "react-syntax-highlighter",
   "version": "6.0.0",
   "description": "sane syntax highlighting component for react with prismjs",
   "main": "dist/",
