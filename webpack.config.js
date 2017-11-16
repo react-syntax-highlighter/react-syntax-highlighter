@@ -29,11 +29,12 @@ module.exports = {
     }
   },
   entry: {
-    demo: './demo/index.js',
-    diff: './demo/diff.js',
-    virtualized: './demo/virtualized.js',
-    prismAsyncLight: './demo/prism-async-light.js'
-  },
+        demo: './demo/index.js',
+        diff: './demo/diff.js',
+        virtualized: './demo/virtualized.js',
+        prismAsyncLight: './demo/prism-async-light.js',
+        prism: './demo/prism.js'
+    },
   output: {
     path: path.join(__dirname, 'demo'),
     filename: '[name]-build.js'

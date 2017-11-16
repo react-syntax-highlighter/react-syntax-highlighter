@@ -13,6 +13,10 @@ export default () => (
         <a href="http://localhost:9001/demo">Default</a>
       </li>
       <li>
+        <a href="http://localhost:9001/demo/prism.html">Demo With Prism</a>
+      </li>
+
+      <li>
         <a href="http://localhost:9001/demo/diff.html">Diff</a>
       </li>
       <li>
