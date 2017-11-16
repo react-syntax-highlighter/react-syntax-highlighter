@@ -9,7 +9,8 @@ exports[`test SyntaxHighlighter component renders correctly 1`] = `
       "padding": "0.5em"
     }
   }>
-  <code>
+  <code
+    style={undefined}>
     <span
       style={
         Object {

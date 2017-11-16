@@ -9,7 +9,8 @@ exports[`test SyntaxHighlighter component renders correctly by falling back to h
       "padding": "0.5em"
     }
   }>
-  <code>
+  <code
+    style={undefined}>
     <span
       style={
         Object {
@@ -173,7 +174,7 @@ exports[`test SyntaxHighlighter component renders correctly by falling back to h
           "color": "#880000"
         }
       }>
-      'making up fake code is really hard'
+      \'making up fake code is really hard\'
     </span>
     );
     
@@ -220,7 +221,7 @@ exports[`test SyntaxHighlighter component renders correctly by falling back to h
           "color": "#880000"
         }
       }>
-      'no seriously really it is'
+      \'no seriously really it is\'
     </span>
     ;
     }

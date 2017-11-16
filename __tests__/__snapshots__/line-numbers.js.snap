@@ -117,7 +117,8 @@ exports[`test SyntaxHighlighter allows lineNumberStyle as function 1`] = `
       
     </span>
   </code>
-  <code>
+  <code
+    style={undefined}>
     <span
       style={
         Object {
@@ -456,7 +457,8 @@ exports[`test SyntaxHighlighter allows lineNumberStyle as object 1`] = `
       
     </span>
   </code>
-  <code>
+  <code
+    style={undefined}>
     <span
       style={
         Object {
@@ -755,7 +757,8 @@ exports[`test SyntaxHighlighter component renders correctly 1`] = `
       
     </span>
   </code>
-  <code>
+  <code
+    style={undefined}>
     <span
       style={
         Object {

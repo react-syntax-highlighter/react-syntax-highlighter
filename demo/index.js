@@ -118,7 +118,7 @@ function createElement({ node, style, useInlineStyles, key }) {
   `;
     this.state = {
       selected: 'tomorrow-night-eighties',
-      style: require('../dist/styles/tomorrow-night-eighties').default,
+      style: require('../dist/styles/hljs/tomorrow-night-eighties').default,
       code: initialCodeString,
       showLineNumbers: false
     }
@@ -139,7 +139,7 @@ function createElement({ node, style, useInlineStyles, key }) {
         <h2 style={h2}>Change Style</h2>
         <select 
           value={this.state.selected} 
-          onChange={(e) => this.setState({style: require(`../dist/styles/${e.target.value}`).default, selected: e.target.value})}
+          onChange={(e) => this.setState({style: require(`../dist/styles/hljs/${e.target.value}`).default, selected: e.target.value})}
         >
           {availableStyles.map(s => <option key={s} value={s}>{s}</option>)}
         </select>

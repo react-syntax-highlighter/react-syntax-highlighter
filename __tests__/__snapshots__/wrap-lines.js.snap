@@ -9,7 +9,8 @@ exports[`test SyntaxHighlighter allows lineStyle as function 1`] = `
       "padding": "0.5em"
     }
   }>
-  <code>
+  <code
+    style={undefined}>
     <span
       style={
         Object {
@@ -411,7 +412,8 @@ exports[`test SyntaxHighlighter allows lineStyle as object 1`] = `
       "padding": "0.5em"
     }
   }>
-  <code>
+  <code
+    style={undefined}>
     <span
       style={
         Object {
@@ -813,7 +815,8 @@ exports[`test SyntaxHighlighter component renders correctly 1`] = `
       "padding": "0.5em"
     }
   }>
-  <code>
+  <code
+    style={undefined}>
     <span
       style={Object {}}>
       <span
@@ -1171,7 +1174,8 @@ exports[`test SyntaxHighlighter renders java code correctly with wrapLines 1`] =
       "padding": "0.5em"
     }
   }>
-  <code>
+  <code
+    style={undefined}>
     <span
       style={
         Object {

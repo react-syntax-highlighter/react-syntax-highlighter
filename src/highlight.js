@@ -135,13 +135,35 @@ function defaultRenderer({ rows, stylesheet, useInlineStyles }) {
   );
 }
 
-export default function (lowlight, defaultStyle) {
+
+
+function getCodeTree({ astGenerator, language, code, defaultCodeValue }) {
+  if (astGenerator.getLanguage) {
+    const hasLanguage = language && astGenerator.getLanguage(language);
+    if (language === 'text') {
+      return { value: defaultCodeValue, language: 'text' };
+    }
+    else if (hasLanguage) {
+      return astGenerator.highlight(language, code);
+    } 
+    else {
+      return astGenerator.highlightAuto(code);
+    }
+  }
+  return (
+    language && language !== 'text' ? 
+    { value: astGenerator.highlight(code, language) } :
+    { value: defaultCodeValue }
+  );
+}
+
+export default function (astGenerator, defaultStyle) {
  return function SyntaxHighlighter({
   language,
   children,
   style = defaultStyle,
   customStyle = {},
-  codeTagProps = {},
+  codeTagProps = { style: style['code[class*=\"language-\"]'] },
   useInlineStyles = true,
   showLineNumbers = false,
   startingLineNumber = 1,
@@ -159,20 +181,18 @@ export default function (lowlight, defaultStyle) {
      * some custom renderers rely on individual row elements so we need to turn wrapLines on 
      * if renderer is provided and wrapLines is undefined
     */
-    const defaultCodeValue = [{ type: 'text',  value: code }];
     wrapLines = renderer && wrapLines === undefined ? true : wrapLines;
     renderer = renderer || defaultRenderer;
-    const codeTree = (
-      language && !!lowlight.getLanguage(language) ? 
-      lowlight.highlight(language, code) :
-      language !== 'text' ? 
-      lowlight.highlightAuto(code) : 
-      { value: defaultCodeValue }
-    );
+    const defaultCodeValue = [{ type: 'text',  value: code }];
+    const codeTree = getCodeTree({ astGenerator, language, code, defaultCodeValue });
     if (codeTree.language === null) {
       codeTree.value = defaultCodeValue;
     }
-    const defaultPreStyle = style.hljs || { backgroundColor: '#fff' };
+    const defaultPreStyle = (
+      style.hljs || 
+      style['pre[class*=\"language-\"]'] || 
+      { backgroundColor: '#fff' }
+    );
     const preProps = (
       useInlineStyles
       ?
@@ -180,7 +200,6 @@ export default function (lowlight, defaultStyle) {
       :
       Object.assign({}, rest, { className: 'hljs'})
     );
-
     const tree = wrapLines ? wrapLinesInSpan(codeTree, lineStyle) : codeTree.value;
     const lineNumbers = (
       showLineNumbers
