@@ -24,12 +24,13 @@ function getLineNumbers({ lines, startingLineNumber, style }) {
 
 function LineNumbers({ 
   codeString, 
+  codeStyle,
   containerStyle = {float: 'left', paddingRight: '10px'}, 
   numberStyle = {},
   startingLineNumber 
 }) {
   return (
-    <code style={containerStyle}>
+    <code style={Object.assign({}, codeStyle, containerStyle)}>
       {getLineNumbers({
         lines: codeString.replace(/\n$/, '').split('\n'), 
         style: numberStyle,
@@ -206,6 +207,7 @@ export default function (astGenerator, defaultStyle) {
       ?
       <LineNumbers
         containerStyle={lineNumberContainerStyle}
+        codeStyle={codeTagProps.style || {}}
         numberStyle={lineNumberStyle}
         startingLineNumber={startingLineNumber}
         codeString={code}
