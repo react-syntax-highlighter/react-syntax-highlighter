@@ -1,6 +1,6 @@
 {
   "name": "react-syntax-highlighter",
-  "version": "6.0.3",
+  "version": "6.0.4",
   "description": "sane syntax highlighting component for react with prismjs",
   "main": "index.js",
   "dependencies": {
