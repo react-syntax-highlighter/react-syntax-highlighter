@@ -11,11 +11,11 @@ export default {
         "lineHeight": "1.4",
         "background": "none",
         "border": "0",
-        "mozTabSize": "4",
-        "oTabSize": "4",
+        "MozTabSize": "4",
+        "OTabSize": "4",
         "tabSize": "4",
-        "webkitHyphens": "none",
-        "mozHyphens": "none",
+        "WebkitHyphens": "none",
+        "MozHyphens": "none",
         "msHyphens": "none",
         "hyphens": "none"
     },
@@ -31,18 +31,18 @@ export default {
         "lineHeight": "1.4",
         "background": "#222",
         "border": "0",
-        "mozTabSize": "4",
-        "oTabSize": "4",
+        "MozTabSize": "4",
+        "OTabSize": "4",
         "tabSize": "4",
-        "webkitHyphens": "none",
-        "mozHyphens": "none",
+        "WebkitHyphens": "none",
+        "MozHyphens": "none",
         "msHyphens": "none",
         "hyphens": "none",
         "padding": "15px",
         "margin": "1em 0",
         "overflow": "auto",
-        "mozBorderRadius": "8px",
-        "webkitBorderRadius": "8px",
+        "MozBorderRadius": "8px",
+        "WebkitBorderRadius": "8px",
         "borderRadius": "8px"
     },
     "pre[class*=\"language-\"] code": {
@@ -53,8 +53,8 @@ export default {
         "background": "#222",
         "padding": "5px 10px",
         "lineHeight": "1",
-        "mozBorderRadius": "3px",
-        "webkitBorderRadius": "3px",
+        "MozBorderRadius": "3px",
+        "WebkitBorderRadius": "3px",
         "borderRadius": "3px"
     },
     "comment": {
@@ -79,7 +79,7 @@ export default {
         "color": "#fff"
     },
     "namespace": {
-        "opacity": ".7"
+        "Opacity": ".7"
     },
     "tag": {
         "color": "#ffd893"
@@ -161,8 +161,8 @@ export default {
         "color": "#fff",
         "font": "bold 65%/1.5 sans-serif",
         "textAlign": "center",
-        "mozBorderRadius": "8px",
-        "webkitBorderRadius": "8px",
+        "MozBorderRadius": "8px",
+        "WebkitBorderRadius": "8px",
         "borderRadius": "8px",
         "textShadow": "none"
     },
@@ -177,8 +177,8 @@ export default {
         "color": "#fff",
         "font": "bold 65%/1.5 sans-serif",
         "textAlign": "center",
-        "mozBorderRadius": "8px",
-        "webkitBorderRadius": "8px",
+        "MozBorderRadius": "8px",
+        "WebkitBorderRadius": "8px",
         "borderRadius": "8px",
         "textShadow": "none",
         "bottom": ".4em"

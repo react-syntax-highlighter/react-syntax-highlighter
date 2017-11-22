@@ -8,11 +8,11 @@ export default {
         "whiteSpace": "pre",
         "wordSpacing": "normal",
         "wordBreak": "normal",
-        "mozTabSize": "4",
-        "oTabSize": "4",
+        "MozTabSize": "4",
+        "OTabSize": "4",
         "tabSize": "4",
-        "webkitHyphens": "none",
-        "mozHyphens": "none",
+        "WebkitHyphens": "none",
+        "MozHyphens": "none",
         "msHyphens": "none",
         "hyphens": "none",
         "background": "#faf8f5",
@@ -27,11 +27,11 @@ export default {
         "whiteSpace": "pre",
         "wordSpacing": "normal",
         "wordBreak": "normal",
-        "mozTabSize": "4",
-        "oTabSize": "4",
+        "MozTabSize": "4",
+        "OTabSize": "4",
         "tabSize": "4",
-        "webkitHyphens": "none",
-        "mozHyphens": "none",
+        "WebkitHyphens": "none",
+        "MozHyphens": "none",
         "msHyphens": "none",
         "hyphens": "none",
         "background": "#faf8f5",
@@ -92,7 +92,7 @@ export default {
         "color": "#b6ad9a"
     },
     "namespace": {
-        "opacity": ".7"
+        "Opacity": ".7"
     },
     "tag": {
         "color": "#063289"
@@ -200,8 +200,8 @@ export default {
         "fontWeight": "bold"
     },
     "pre > code.highlight": {
-        "outline": ".4em solid #896724",
-        "outlineOffset": ".4em"
+        "Outline": ".4em solid #896724",
+        "OutlineOffset": ".4em"
     },
     ".line-numbers .line-numbers-rows": {
         "borderRightColor": "#ece8de"

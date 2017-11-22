@@ -10,11 +10,11 @@ export default {
         "wordBreak": "normal",
         "wordWrap": "normal",
         "lineHeight": "1.5",
-        "mozTabSize": "4",
-        "oTabSize": "4",
+        "MozTabSize": "4",
+        "OTabSize": "4",
         "tabSize": "4",
-        "webkitHyphens": "none",
-        "mozHyphens": "none",
+        "WebkitHyphens": "none",
+        "MozHyphens": "none",
         "msHyphens": "none",
         "hyphens": "none"
     },
@@ -29,11 +29,11 @@ export default {
         "wordBreak": "normal",
         "wordWrap": "normal",
         "lineHeight": "1.5",
-        "mozTabSize": "4",
-        "oTabSize": "4",
+        "MozTabSize": "4",
+        "OTabSize": "4",
         "tabSize": "4",
-        "webkitHyphens": "none",
-        "mozHyphens": "none",
+        "WebkitHyphens": "none",
+        "MozHyphens": "none",
         "msHyphens": "none",
         "hyphens": "none",
         "borderRadius": ".5em",
@@ -96,10 +96,10 @@ export default {
         "color": "hsl(0, 0%, 47%)"
     },
     "punctuation": {
-        "opacity": ".7"
+        "Opacity": ".7"
     },
     ".namespace": {
-        "opacity": ".7"
+        "Opacity": ".7"
     },
     "tag": {
         "color": "hsl(14, 58%, 55%)"

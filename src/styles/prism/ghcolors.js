@@ -9,11 +9,11 @@ export default {
         "wordBreak": "normal",
         "fontSize": "0.95em",
         "lineHeight": "1.2em",
-        "mozTabSize": "4",
-        "oTabSize": "4",
+        "MozTabSize": "4",
+        "OTabSize": "4",
         "tabSize": "4",
-        "webkitHyphens": "none",
-        "mozHyphens": "none",
+        "WebkitHyphens": "none",
+        "MozHyphens": "none",
         "msHyphens": "none",
         "hyphens": "none"
     },
@@ -27,11 +27,11 @@ export default {
         "wordBreak": "normal",
         "fontSize": "0.95em",
         "lineHeight": "1.2em",
-        "mozTabSize": "4",
-        "oTabSize": "4",
+        "MozTabSize": "4",
+        "OTabSize": "4",
         "tabSize": "4",
-        "webkitHyphens": "none",
-        "mozHyphens": "none",
+        "WebkitHyphens": "none",
+        "MozHyphens": "none",
         "msHyphens": "none",
         "hyphens": "none",
         "padding": "1em",
@@ -88,7 +88,7 @@ export default {
         "fontStyle": "italic"
     },
     "namespace": {
-        "opacity": ".7"
+        "Opacity": ".7"
     },
     "string": {
         "color": "#e3116c"
