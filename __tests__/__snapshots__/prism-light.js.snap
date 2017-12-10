@@ -1,0 +1,767 @@
+exports[`test SyntaxHighlighter renders jsx highlighted text 1`] = `
+<pre
+  style={
+    Object {
+      "MozHyphens": "none",
+      "MozTabSize": "4",
+      "OTabSize": "4",
+      "WebkitHyphens": "none",
+      "background": "#f5f2f0",
+      "color": "black",
+      "fontFamily": "Consolas, Monaco, \'Andale Mono\', \'Ubuntu Mono\', monospace",
+      "hyphens": "none",
+      "lineHeight": "1.5",
+      "margin": ".5em 0",
+      "msHyphens": "none",
+      "overflow": "auto",
+      "padding": "1em",
+      "tabSize": "4",
+      "textAlign": "left",
+      "textShadow": "0 1px white",
+      "whiteSpace": "pre",
+      "wordBreak": "normal",
+      "wordSpacing": "normal",
+      "wordWrap": "normal"
+    }
+  }>
+  <code
+    style={
+      Object {
+        "MozHyphens": "none",
+        "MozTabSize": "4",
+        "OTabSize": "4",
+        "WebkitHyphens": "none",
+        "background": "none",
+        "color": "black",
+        "fontFamily": "Consolas, Monaco, \'Andale Mono\', \'Ubuntu Mono\', monospace",
+        "hyphens": "none",
+        "lineHeight": "1.5",
+        "msHyphens": "none",
+        "tabSize": "4",
+        "textAlign": "left",
+        "textShadow": "0 1px white",
+        "whiteSpace": "pre",
+        "wordBreak": "normal",
+        "wordSpacing": "normal",
+        "wordWrap": "normal"
+      }
+    }>
+    <span
+      style={
+        Object {
+          "color": "#07a"
+        }
+      }>
+      import
+    </span>
+     React 
+    <span
+      style={
+        Object {
+          "color": "#07a"
+        }
+      }>
+      from
+    </span>
+     
+    <span
+      style={
+        Object {
+          "color": "#690"
+        }
+      }>
+      \"react\"
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      ;
+    </span>
+    
+    
+    <span
+      style={
+        Object {
+          "color": "#07a"
+        }
+      }>
+      import
+    </span>
+     uniquePropHOC 
+    <span
+      style={
+        Object {
+          "color": "#07a"
+        }
+      }>
+      from
+    </span>
+     
+    <span
+      style={
+        Object {
+          "color": "#690"
+        }
+      }>
+      \"./lib/unique-prop-hoc\"
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      ;
+    </span>
+    
+    
+    
+    <span
+      style={
+        Object {
+          "color": "#07a"
+        }
+      }>
+      class
+    </span>
+     
+    <span
+      style={Object {}}>
+      Expire
+    </span>
+     
+    <span
+      style={
+        Object {
+          "color": "#07a"
+        }
+      }>
+      extends
+    </span>
+     
+    <span
+      style={Object {}}>
+      React
+      <span
+        style={
+          Object {
+            "color": "#999"
+          }
+        }>
+        .
+      </span>
+      Component
+    </span>
+     
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      {
+    </span>
+    
+        
+    <span
+      style={
+        Object {
+          "color": "#DD4A68"
+        }
+      }>
+      constructor
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      (
+    </span>
+    props
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      )
+    </span>
+     
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      {
+    </span>
+    
+            
+    <span
+      style={
+        Object {
+          "color": "#07a"
+        }
+      }>
+      super
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      (
+    </span>
+    props
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      )
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      ;
+    </span>
+    
+            
+    <span
+      style={
+        Object {
+          "color": "#07a"
+        }
+      }>
+      this
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      .
+    </span>
+    state 
+    <span
+      style={
+        Object {
+          "background": "hsla(0, 0%, 100%, .5)",
+          "color": "#a67f59"
+        }
+      }>
+      =
+    </span>
+     
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      {
+    </span>
+     component
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      :
+    </span>
+     props
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      .
+    </span>
+    children 
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      }
+    </span>
+    
+        
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      }
+    </span>
+    
+        
+    <span
+      style={
+        Object {
+          "color": "#DD4A68"
+        }
+      }>
+      componentDidMount
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      (
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      )
+    </span>
+     
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      {
+    </span>
+    
+            
+    <span
+      style={
+        Object {
+          "color": "#DD4A68"
+        }
+      }>
+      setTimeout
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      (
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      (
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      )
+    </span>
+     
+    <span
+      style={
+        Object {
+          "background": "hsla(0, 0%, 100%, .5)",
+          "color": "#a67f59"
+        }
+      }>
+      =>
+    </span>
+     
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      {
+    </span>
+    
+                
+    <span
+      style={
+        Object {
+          "color": "#07a"
+        }
+      }>
+      this
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      .
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#DD4A68"
+        }
+      }>
+      setState
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      (
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      {
+    </span>
+    
+                    component
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      :
+    </span>
+     
+    <span
+      style={
+        Object {
+          "color": "#07a"
+        }
+      }>
+      null
+    </span>
+    
+                
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      }
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      )
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      ;
+    </span>
+    
+            
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      }
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      ,
+    </span>
+     
+    <span
+      style={
+        Object {
+          "color": "#07a"
+        }
+      }>
+      this
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      .
+    </span>
+    props
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      .
+    </span>
+    time 
+    <span
+      style={
+        Object {
+          "background": "hsla(0, 0%, 100%, .5)",
+          "color": "#a67f59"
+        }
+      }>
+      ||
+    </span>
+     
+    <span
+      style={
+        Object {
+          "color": "#07a"
+        }
+      }>
+      this
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      .
+    </span>
+    props
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      .
+    </span>
+    seconds 
+    <span
+      style={
+        Object {
+          "background": "hsla(0, 0%, 100%, .5)",
+          "color": "#a67f59"
+        }
+      }>
+      *
+    </span>
+     
+    <span
+      style={
+        Object {
+          "color": "#905"
+        }
+      }>
+      1000
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      )
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      ;
+    </span>
+    
+        
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      }
+    </span>
+    
+        
+    <span
+      style={
+        Object {
+          "color": "#DD4A68"
+        }
+      }>
+      render
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      (
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      )
+    </span>
+     
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      {
+    </span>
+    
+            
+    <span
+      style={
+        Object {
+          "color": "#07a"
+        }
+      }>
+      return
+    </span>
+     
+    <span
+      style={
+        Object {
+          "color": "#07a"
+        }
+      }>
+      this
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      .
+    </span>
+    state
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      .
+    </span>
+    component
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      ;
+    </span>
+    
+        
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      }
+    </span>
+    
+    
+    <span
+      style={
+        Object {
+          "color": "#999"
+        }
+      }>
+      }
+    </span>
+  </code>
+</pre>
+`;
+
+exports[`test SyntaxHighlighter should just render text if syntax is not registered 1`] = `
+<pre
+  style={
+    Object {
+      "MozHyphens": "none",
+      "MozTabSize": "4",
+      "OTabSize": "4",
+      "WebkitHyphens": "none",
+      "background": "#f5f2f0",
+      "color": "black",
+      "fontFamily": "Consolas, Monaco, \'Andale Mono\', \'Ubuntu Mono\', monospace",
+      "hyphens": "none",
+      "lineHeight": "1.5",
+      "margin": ".5em 0",
+      "msHyphens": "none",
+      "overflow": "auto",
+      "padding": "1em",
+      "tabSize": "4",
+      "textAlign": "left",
+      "textShadow": "0 1px white",
+      "whiteSpace": "pre",
+      "wordBreak": "normal",
+      "wordSpacing": "normal",
+      "wordWrap": "normal"
+    }
+  }>
+  <code
+    style={
+      Object {
+        "MozHyphens": "none",
+        "MozTabSize": "4",
+        "OTabSize": "4",
+        "WebkitHyphens": "none",
+        "background": "none",
+        "color": "black",
+        "fontFamily": "Consolas, Monaco, \'Andale Mono\', \'Ubuntu Mono\', monospace",
+        "hyphens": "none",
+        "lineHeight": "1.5",
+        "msHyphens": "none",
+        "tabSize": "4",
+        "textAlign": "left",
+        "textShadow": "0 1px white",
+        "whiteSpace": "pre",
+        "wordBreak": "normal",
+        "wordSpacing": "normal",
+        "wordWrap": "normal"
+      }
+    }>
+    print(\'hello\')
+  </code>
+</pre>
+`;
