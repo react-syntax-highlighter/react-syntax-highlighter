@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.elixir;
+import elixir from "refractor/lang/elixir.js";;
+export default elixir;

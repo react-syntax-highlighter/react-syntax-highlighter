@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.wiki;
+import wiki from "refractor/lang/wiki.js";;
+export default wiki;

@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.groovy;
+import groovy from "refractor/lang/groovy.js";;
+export default groovy;

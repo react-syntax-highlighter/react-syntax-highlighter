@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.vim;
+import vim from "refractor/lang/vim.js";;
+export default vim;

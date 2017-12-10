@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.latex;
+import latex from "refractor/lang/latex.js";;
+export default latex;

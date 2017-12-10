@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.autoit;
+import autoit from "refractor/lang/autoit.js";;
+export default autoit;

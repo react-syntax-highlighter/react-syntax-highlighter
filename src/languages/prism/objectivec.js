@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.objectivec;
+import objectivec from "refractor/lang/objectivec.js";;
+export default objectivec;

@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.erlang;
+import erlang from "refractor/lang/erlang.js";;
+export default erlang;

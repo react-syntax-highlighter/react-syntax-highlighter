@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.textile;
+import textile from "refractor/lang/textile.js";;
+export default textile;

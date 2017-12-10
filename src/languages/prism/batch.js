@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.batch;
+import batch from "refractor/lang/batch.js";;
+export default batch;

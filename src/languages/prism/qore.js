@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.qore;
+import qore from "refractor/lang/qore.js";;
+export default qore;

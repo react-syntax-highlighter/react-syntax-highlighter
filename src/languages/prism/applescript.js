@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.applescript;
+import applescript from "refractor/lang/applescript.js";;
+export default applescript;

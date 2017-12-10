@@ -151,11 +151,16 @@ function getCodeTree({ astGenerator, language, code, defaultCodeValue }) {
       return astGenerator.highlightAuto(code);
     }
   }
-  return (
-    language && language !== 'text' ? 
-    { value: astGenerator.highlight(code, language) } :
-    { value: defaultCodeValue }
-  );
+  try {
+    return (
+      language && language !== 'text' ? 
+      { value: astGenerator.highlight(code, language) } :
+      { value: defaultCodeValue }
+    );
+  }
+  catch (e) {
+    return { value: defaultCodeValue };
+  }
 }
 
 export default function (astGenerator, defaultStyle) {

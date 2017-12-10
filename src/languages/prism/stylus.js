@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.stylus;
+import stylus from "refractor/lang/stylus.js";;
+export default stylus;

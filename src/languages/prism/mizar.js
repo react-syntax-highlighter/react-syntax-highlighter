@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.mizar;
+import mizar from "refractor/lang/mizar.js";;
+export default mizar;

@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.swift;
+import swift from "refractor/lang/swift.js";;
+export default swift;

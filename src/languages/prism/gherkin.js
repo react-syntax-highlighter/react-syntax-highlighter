@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.gherkin;
+import gherkin from "refractor/lang/gherkin.js";;
+export default gherkin;

@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.makefile;
+import makefile from "refractor/lang/makefile.js";;
+export default makefile;

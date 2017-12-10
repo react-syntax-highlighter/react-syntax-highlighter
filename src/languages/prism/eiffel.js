@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.eiffel;
+import eiffel from "refractor/lang/eiffel.js";;
+export default eiffel;

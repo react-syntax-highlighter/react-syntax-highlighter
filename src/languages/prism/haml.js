@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.haml;
+import haml from "refractor/lang/haml.js";;
+export default haml;

@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.docker;
+import docker from "refractor/lang/docker.js";;
+export default docker;

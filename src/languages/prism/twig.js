@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.twig;
+import twig from "refractor/lang/twig.js";;
+export default twig;

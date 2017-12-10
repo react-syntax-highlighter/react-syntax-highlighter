@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.glsl;
+import glsl from "refractor/lang/glsl.js";;
+export default glsl;

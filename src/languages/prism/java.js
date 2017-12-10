@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.java;
+import java from "refractor/lang/java.js";;
+export default java;

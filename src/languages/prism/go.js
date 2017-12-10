@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.go;
+import go from "refractor/lang/go.js";;
+export default go;

@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.protobuf;
+import protobuf from "refractor/lang/protobuf.js";;
+export default protobuf;

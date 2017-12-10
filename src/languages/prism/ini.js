@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.ini;
+import ini from "refractor/lang/ini.js";;
+export default ini;

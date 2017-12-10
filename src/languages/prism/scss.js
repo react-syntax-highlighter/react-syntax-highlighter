@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.scss;
+import scss from "refractor/lang/scss.js";;
+export default scss;

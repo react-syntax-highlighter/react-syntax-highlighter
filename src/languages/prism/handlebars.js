@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.handlebars;
+import handlebars from "refractor/lang/handlebars.js";;
+export default handlebars;

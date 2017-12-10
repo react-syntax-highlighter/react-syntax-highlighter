@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.prolog;
+import prolog from "refractor/lang/prolog.js";;
+export default prolog;

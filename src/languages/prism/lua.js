@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.lua;
+import lua from "refractor/lang/lua.js";;
+export default lua;

@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.crystal;
+import crystal from "refractor/lang/crystal.js";;
+export default crystal;

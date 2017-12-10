@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.nim;
+import nim from "refractor/lang/nim.js";;
+export default nim;

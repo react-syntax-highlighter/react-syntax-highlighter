@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.pascal;
+import pascal from "refractor/lang/pascal.js";;
+export default pascal;

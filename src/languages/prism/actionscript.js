@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.actionscript;
+import actionscript from "refractor/lang/actionscript.js";;
+export default actionscript;

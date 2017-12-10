@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.nginx;
+import nginx from "refractor/lang/nginx.js";;
+export default nginx;

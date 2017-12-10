@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.ocaml;
+import ocaml from "refractor/lang/ocaml.js";;
+export default ocaml;

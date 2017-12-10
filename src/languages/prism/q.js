@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.q;
+import q from "refractor/lang/q.js";;
+export default q;

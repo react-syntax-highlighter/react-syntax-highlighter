@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.verilog;
+import verilog from "refractor/lang/verilog.js";;
+export default verilog;

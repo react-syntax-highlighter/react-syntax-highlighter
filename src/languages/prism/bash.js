@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.bash;
+import bash from "refractor/lang/bash.js";;
+export default bash;

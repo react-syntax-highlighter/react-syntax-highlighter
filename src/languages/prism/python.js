@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.python;
+import python from "refractor/lang/python.js";;
+export default python;

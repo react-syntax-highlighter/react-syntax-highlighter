@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.apacheconf;
+import apacheconf from "refractor/lang/apacheconf.js";;
+export default apacheconf;

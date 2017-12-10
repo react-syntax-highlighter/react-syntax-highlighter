@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.apl;
+import apl from "refractor/lang/apl.js";;
+export default apl;

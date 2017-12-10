@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.php;
+import php from "refractor/lang/php.js";;
+export default php;

@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.typescript;
+import typescript from "refractor/lang/typescript.js";;
+export default typescript;

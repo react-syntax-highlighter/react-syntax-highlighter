@@ -19,7 +19,6 @@
 * c
 * clike
 * coffeescript
-* core
 * cpp
 * crystal
 * csharp
