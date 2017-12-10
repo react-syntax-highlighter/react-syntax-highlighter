@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.cpp;
+import cpp from "refractor/lang/cpp.js";;
+export default cpp;

@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.markup;
+import markup from "refractor/lang/markup.js";;
+export default markup;

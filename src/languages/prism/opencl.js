@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.opencl;
+import opencl from "refractor/lang/opencl.js";;
+export default opencl;

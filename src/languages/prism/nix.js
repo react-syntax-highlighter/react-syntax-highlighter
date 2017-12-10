@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.nix;
+import nix from "refractor/lang/nix.js";;
+export default nix;

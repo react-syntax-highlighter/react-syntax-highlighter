@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.ada;
+import ada from "refractor/lang/ada.js";;
+export default ada;

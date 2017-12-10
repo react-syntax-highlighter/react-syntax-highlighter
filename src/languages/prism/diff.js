@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.diff;
+import diff from "refractor/lang/diff.js";;
+export default diff;

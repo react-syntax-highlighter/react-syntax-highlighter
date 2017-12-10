@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.matlab;
+import matlab from "refractor/lang/matlab.js";;
+export default matlab;

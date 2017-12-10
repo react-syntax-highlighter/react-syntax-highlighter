@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.bison;
+import bison from "refractor/lang/bison.js";;
+export default bison;

@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.pug;
+import pug from "refractor/lang/pug.js";;
+export default pug;

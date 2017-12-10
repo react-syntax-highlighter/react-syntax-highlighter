@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.brainfuck;
+import brainfuck from "refractor/lang/brainfuck.js";;
+export default brainfuck;

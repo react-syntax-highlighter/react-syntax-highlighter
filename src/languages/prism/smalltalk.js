@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.smalltalk;
+import smalltalk from "refractor/lang/smalltalk.js";;
+export default smalltalk;

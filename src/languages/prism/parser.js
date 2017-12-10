@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.parser;
+import parser from "refractor/lang/parser.js";;
+export default parser;

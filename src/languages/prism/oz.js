@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.oz;
+import oz from "refractor/lang/oz.js";;
+export default oz;

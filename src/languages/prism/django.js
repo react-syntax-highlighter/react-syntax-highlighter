@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.django;
+import django from "refractor/lang/django.js";;
+export default django;

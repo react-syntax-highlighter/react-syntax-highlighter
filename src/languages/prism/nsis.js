@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.nsis;
+import nsis from "refractor/lang/nsis.js";;
+export default nsis;

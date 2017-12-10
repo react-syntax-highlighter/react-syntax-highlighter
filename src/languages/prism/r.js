@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.r;
+import r from "refractor/lang/r.js";;
+export default r;

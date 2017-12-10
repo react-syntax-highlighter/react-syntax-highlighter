@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.mel;
+import mel from "refractor/lang/mel.js";;
+export default mel;

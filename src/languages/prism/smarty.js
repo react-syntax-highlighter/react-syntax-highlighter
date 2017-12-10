@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.smarty;
+import smarty from "refractor/lang/smarty.js";;
+export default smarty;

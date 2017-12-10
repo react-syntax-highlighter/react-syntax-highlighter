@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.scala;
+import scala from "refractor/lang/scala.js";;
+export default scala;

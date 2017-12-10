@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.renpy;
+import renpy from "refractor/lang/renpy.js";;
+export default renpy;

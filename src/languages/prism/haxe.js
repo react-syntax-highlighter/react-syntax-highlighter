@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.haxe;
+import haxe from "refractor/lang/haxe.js";;
+export default haxe;

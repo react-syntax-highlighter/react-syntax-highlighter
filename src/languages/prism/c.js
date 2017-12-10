@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.c;
+import c from "refractor/lang/c.js";;
+export default c;

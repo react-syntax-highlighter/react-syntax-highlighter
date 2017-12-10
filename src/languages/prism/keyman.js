@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.keyman;
+import keyman from "refractor/lang/keyman.js";;
+export default keyman;

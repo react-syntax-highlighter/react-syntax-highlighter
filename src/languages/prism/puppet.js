@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.puppet;
+import puppet from "refractor/lang/puppet.js";;
+export default puppet;

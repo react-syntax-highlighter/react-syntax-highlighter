@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.lolcode;
+import lolcode from "refractor/lang/lolcode.js";;
+export default lolcode;

@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.cssExtras;
+import css-extras from "refractor/lang/css-extras.js";;
+export default css-extras;

@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.sas;
+import sas from "refractor/lang/sas.js";;
+export default sas;

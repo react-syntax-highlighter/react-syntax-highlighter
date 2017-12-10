@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.clike;
+import clike from "refractor/lang/clike.js";;
+export default clike;

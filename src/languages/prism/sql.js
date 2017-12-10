@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.sql;
+import sql from "refractor/lang/sql.js";;
+export default sql;

@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.vhdl;
+import vhdl from "refractor/lang/vhdl.js";;
+export default vhdl;

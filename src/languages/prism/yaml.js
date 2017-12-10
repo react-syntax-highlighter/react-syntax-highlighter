@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.yaml;
+import yaml from "refractor/lang/yaml.js";;
+export default yaml;

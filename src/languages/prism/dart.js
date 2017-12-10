@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.dart;
+import dart from "refractor/lang/dart.js";;
+export default dart;

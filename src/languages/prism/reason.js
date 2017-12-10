@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.reason;
+import reason from "refractor/lang/reason.js";;
+export default reason;

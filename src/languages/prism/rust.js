@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.rust;
+import rust from "refractor/lang/rust.js";;
+export default rust;

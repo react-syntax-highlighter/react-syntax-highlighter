@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.vbnet;
+import vbnet from "refractor/lang/vbnet.js";;
+export default vbnet;

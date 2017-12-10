@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.bro;
+import bro from "refractor/lang/bro.js";;
+export default bro;

@@ -18,7 +18,6 @@ export { default as bro } from './bro';
 export { default as c } from './c';
 export { default as clike } from './clike';
 export { default as coffeescript } from './coffeescript';
-export { default as core } from './core';
 export { default as cpp } from './cpp';
 export { default as crystal } from './crystal';
 export { default as csharp } from './csharp';

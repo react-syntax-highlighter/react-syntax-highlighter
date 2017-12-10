@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.haskell;
+import haskell from "refractor/lang/haskell.js";;
+export default haskell;

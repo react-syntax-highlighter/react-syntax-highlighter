@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.fortran;
+import fortran from "refractor/lang/fortran.js";;
+export default fortran;

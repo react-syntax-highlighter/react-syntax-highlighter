@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.jsx;
+import jsx from "refractor/lang/jsx.js";;
+export default jsx;

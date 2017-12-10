@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.asciidoc;
+import asciidoc from "refractor/lang/asciidoc.js";;
+export default asciidoc;

@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.fsharp;
+import fsharp from "refractor/lang/fsharp.js";;
+export default fsharp;

@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.arduino;
+import arduino from "refractor/lang/arduino.js";;
+export default arduino;

@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.autohotkey;
+import autohotkey from "refractor/lang/autohotkey.js";;
+export default autohotkey;

@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.icon;
+import icon from "refractor/lang/icon.js";;
+export default icon;

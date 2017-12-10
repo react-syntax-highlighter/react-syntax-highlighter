@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.julia;
+import julia from "refractor/lang/julia.js";;
+export default julia;

@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.tcl;
+import tcl from "refractor/lang/tcl.js";;
+export default tcl;

@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.coffeescript;
+import coffeescript from "refractor/lang/coffeescript.js";;
+export default coffeescript;

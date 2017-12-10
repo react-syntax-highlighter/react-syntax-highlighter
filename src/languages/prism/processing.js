@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.processing;
+import processing from "refractor/lang/processing.js";;
+export default processing;

@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.monkey;
+import monkey from "refractor/lang/monkey.js";;
+export default monkey;

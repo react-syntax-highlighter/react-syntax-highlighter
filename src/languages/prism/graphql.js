@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.graphql;
+import graphql from "refractor/lang/graphql.js";;
+export default graphql;

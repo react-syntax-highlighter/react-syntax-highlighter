@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.aspnet;
+import aspnet from "refractor/lang/aspnet.js";;
+export default aspnet;

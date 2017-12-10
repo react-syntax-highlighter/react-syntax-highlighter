@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.livescript;
+import livescript from "refractor/lang/livescript.js";;
+export default livescript;

@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.phpExtras;
+import php-extras from "refractor/lang/php-extras.js";;
+export default php-extras;

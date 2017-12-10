@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.roboconf;
+import roboconf from "refractor/lang/roboconf.js";;
+export default roboconf;

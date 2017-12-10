@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.jolie;
+import jolie from "refractor/lang/jolie.js";;
+export default jolie;

@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.xojo;
+import xojo from "refractor/lang/xojo.js";;
+export default xojo;

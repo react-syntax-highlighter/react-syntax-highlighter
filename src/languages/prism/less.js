@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.less;
+import less from "refractor/lang/less.js";;
+export default less;

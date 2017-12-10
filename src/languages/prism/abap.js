@@ -1,2 +1,2 @@
-import Prism from 'prismjs';
-export default Prism.languages.abap;
+import abap from "refractor/lang/abap.js";;
+export default abap;
