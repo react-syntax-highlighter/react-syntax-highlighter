@@ -1,2 +1,2 @@
-import php-extras from "refractor/lang/php-extras.js";;
-export default php-extras;
+import phpExtras from "refractor/lang/php-extras.js";;
+export default phpExtras;
