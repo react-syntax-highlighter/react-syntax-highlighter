@@ -68,9 +68,85 @@
 ### Added
 - render plain string if no language present
 
+## [5.5.1] - 2017-05-05
+### Added
+- add license file
+
+### Changed
+- update readme
+
+## [5.50] - 2017-04-23
+### Added
+- added test for useInlineStyles=false
+
+### Changed
+- export previously unexported functions from createElemeent
+
+## [5.4.1] - 2017-04-23
+### Added
+- add code coverage
+
+## [5.4.0] - 2017-04-23
+### Added
+- add code coverage
 
 
+## [5.2.0] - 2017-04-08
+### Added
+- flatten tree before using wrapLines function
+- allow using a custom renderer without wrapLines
 
+## [5.1.3] - 2017-04-02
+### Added
+- flatten tree before using wrapLines function
+- allow using a custom renderer without wrapLines
+
+### Changed
+- update broken links in demo
+- handle some edge cases in wrapLines function
+- generalize function for finding text child 
+
+
+## [5.1.2] - 2017-03-21
+
+### Changed
+- update version of react-syntax-highlighter-virtualized-renderer for demo
+- handle some edge cases in wrapLines function
+
+## [5.1.1] - 2017-03-21
+### Added
+- add api to allow for use of custom renderer (virtualized, native, etc...)
+
+## [5.1.0] - 2017-03-21
+### Added
+- add api to allow for use of custom renderer (virtualized, native, etc...)
+
+## [5.0.0] - 2017-02-12
+### Added
+- allow wrapping of individual element in <span> tag
+
+## [4.0.1] - 2016-12-09
+### Added
+- allow styling individual numbers
+
+## [3.0.2] - 2016-12-04
+
+### Added
+- add support for IE and older android browsers (by @
+yahiousun)
+
+## [3.0.1] - 2016-12-03
+
+### Changed
+- update dependencies
+
+## [3.0.0] - 2016-10-29
+
+### Added
+- wrap individual line numbers in span
+
+### Changed
+- removed envified light build in favor of only using seperate entry point
 
 
 
