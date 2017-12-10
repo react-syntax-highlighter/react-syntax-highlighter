@@ -132,8 +132,7 @@
 ## [3.0.2] - 2016-12-04
 
 ### Added
-- add support for IE and older android browsers (by @
-yahiousun)
+- add support for IE and older android browsers (by @yahiousun)
 
 ## [3.0.1] - 2016-12-03
 
@@ -148,7 +147,183 @@ yahiousun)
 ### Changed
 - removed envified light build in favor of only using seperate entry point
 
+## [2.11.0] - 2016-10-27
 
+### Added
+- export lowlight registerLanguage in light build
+
+## [2.10.0] - 2016-10-09
+
+### Added
+- add section to readme showcasing projects built with react syntax highlighter
+
+### Changed 
+- fix style assignment function to not end up with unexpected styles
+
+
+## [2.9.0] - 2016-10-06
+
+### Added
+- call highlightAuto if no language provided
+
+### Changed 
+- unify quote style in code
+
+## [2.8.0] - 2016-10-02
+
+### Added
+- add support for line numbers
+
+
+## [2.7.1] - 2016-10-02
+
+### Changed
+- fix require of default style
+
+## [2.7.0] - 2016-09-24
+
+### Added
+- add jest snapshot testing
+- add more available styles
+
+## [2.6.1] - 2016-09-22
+
+### Changed
+- add new info on light build to readme
+- don't wrap text in spans
+
+## [2.6.0] - 2016-09-16
+
+### Added
+- add a seperate entry point for light build (by @bmathews)
+
+## [2.5.0] - 2016-09-15
+
+### Added
+- add codeTagProps to props to allow passing arbitrary orios to code tag
+
+## [2.4.0] - 2016-09-11
+
+### Added
+- allow optionally applying css classNames instead of inline styles
+
+### Changed
+- fix light build example
+
+## [2.3.0] - 2016-08-27
+
+### Added
+- add customStyle prop
+
+### Changed
+- update available styles
+
+
+## [2.2.0] - 2016-08-27
+
+### Added
+- allow light build via env variable
+
+## [2.1.1] - 2016-07-02
+
+### Changed
+- fix warning by not passing invalid non dom props to pre tag
+
+## [2.1.0] - 2016-05-20
+
+### Changed
+- update depedndencies 
+
+## [2.0.4] - 2016-05-18
+
+### Changed
+- strict dependency on highlight
+
+## [2.0.3] - 2016-05-07
+
+### Changed
+- update dependency and add new styles
+
+## [2.0.2] - 2016-04-19
+
+### Changed
+- fix bad import in readme
+
+## [2.0.1] - 2016-04-19
+
+### Changed
+- fix missing quotes around import location in readme example
+
+## [2.0.0] - 2016-04-17
+
+### Added
+- have user pass in style object instead of string of style name
+
+## [1.3.0] - 2016-04-03
+
+### Changed
+- make peerDependency of react more liberal
+
+## [1.2.0] - 2016-03-27
+
+### Changed
+- code style changes
+- add new highlight.js styles
+
+## [1.1.2] - 2016-01-31
+
+### Changed
+- remove unused createTextElement function 
+
+## [1.1.1] - 2016-01-31
+
+### Changed
+- use a Text component instead of createTextElement function 
+- explain js styles in readme
+
+## [1.1.0] - 2016-01-30
+
+### Added 
+- use default top level style from highightjs' 
+
+### Changed
+- fix spelling of segment in code (by @winkler1)
+
+## [1.0.2] - 2016-01-29
+
+### Changed
+- update package to allow any version of react 14
+
+## [1.0.1] - 2016-01-29
+
+### Added
+- wrap children in code element as well as pre element
+
+## [1.0.0] - 2016-01-28
+
+### Added
+- add script to build javascript styles
+- write readme 
+
+### Changed
+- allow changing style in demo
+
+## [0.0.2] - 2016-01-28
+
+### Added
+- add script to build javascript styles
+- write readme 
+
+### Changed
+- update lowlight version
+- use pre not span
+- pass along optional props to pre tag
+
+## [0.0.1] - 2016-01-28
+
+### Added
+- initial version
+- syntax highlighting using virtual dom created by lowlight
 
 
 
