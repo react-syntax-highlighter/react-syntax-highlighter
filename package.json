@@ -7,7 +7,6 @@
     "babel-runtime": "^6.18.0",
     "highlight.js": "~9.12.0",
     "lowlight": "~1.9.1",
-    "prism-themes": "https://github.com/PrismJS/prism-themes.git#afb4116547cd854074ad705b8171768403ca11f3",
     "prismjs": "^1.8.4",
     "refractor": "^2.0.0"
   },
@@ -27,6 +26,7 @@
     "css": "^2.2.1",
     "css-loader": "^0.23.1",
     "jest": "^15.1.1",
+    "prism-themes": "https://github.com/PrismJS/prism-themes.git#afb4116547cd854074ad705b8171768403ca11f3",
     "react": "^15.2.0",
     "react-dom": "^15.2.0",
     "react-syntax-highlighter-virtualized-renderer": "^1.0.3",
