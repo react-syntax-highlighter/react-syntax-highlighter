@@ -78,12 +78,11 @@ registerLanguage('javascript', js);
 ```
 
 You can require `react-syntax-highlighter/prism-light` to use the prism light build instead of the standard light build. 
-
+```jsx
 import SyntaxHighlighter, { registerLanguage } from "react-syntax-highlighter/prism-light";
 import jsx from 'react-syntax-highlighter/languages/prism/jsx';
 import prism from 'react-syntax-highlighter/prism/prism'; 
 
-```
 registerLanguage('jsx', jsx);
 ```
 
