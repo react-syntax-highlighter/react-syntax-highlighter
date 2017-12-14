@@ -83,6 +83,7 @@ import SyntaxHighlighter, { registerLanguage } from "react-syntax-highlighter/pr
 import jsx from 'react-syntax-highlighter/languages/prism/jsx';
 import prism from 'react-syntax-highlighter/prism/prism'; 
 
+```
 registerLanguage('jsx', jsx);
 ```
 
