@@ -81,7 +81,7 @@ You can require `react-syntax-highlighter/prism-light` to use the prism light bu
 ```jsx
 import SyntaxHighlighter, { registerLanguage } from "react-syntax-highlighter/prism-light";
 import jsx from 'react-syntax-highlighter/languages/prism/jsx';
-import prism from 'react-syntax-highlighter/prism/prism'; 
+import prism from 'react-syntax-highlighter/styles/prism/prism'; 
 
 registerLanguage('jsx', jsx);
 ```
