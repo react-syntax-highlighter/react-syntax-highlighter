@@ -1,5 +1,9 @@
 # Changelog
 
+## [6.1.1] - 2017-12-09
+### Changed
+- move prism-themes to dev dependencies
+
 ## [6.1.0] - 2017-12-09
 ### Added
 - added light version support for prism(refractor) based highlighting
