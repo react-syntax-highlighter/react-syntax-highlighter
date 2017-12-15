@@ -1,6 +1,6 @@
 {
   "name": "react-syntax-highlighter",
-  "version": "6.1.0",
+  "version": "6.1.1",
   "description": "sane syntax highlighting component for react with prismjs",
   "main": "index.js",
   "dependencies": {
@@ -26,7 +26,7 @@
     "css": "^2.2.1",
     "css-loader": "^0.23.1",
     "jest": "^15.1.1",
-    "prism-themes": "https://github.com/PrismJS/prism-themes.git#afb4116547cd854074ad705b8171768403ca11f3",    
+    "prism-themes": "https://github.com/PrismJS/prism-themes.git#afb4116547cd854074ad705b8171768403ca11f3",
     "react": "^15.2.0",
     "react-dom": "^15.2.0",
     "react-syntax-highlighter-virtualized-renderer": "^1.0.3",
