@@ -1,5 +1,9 @@
 # Changelog
 
+## [6.1.2] 2018-01-17
+### Changed
+- add .babelrc to .npmignore for parcel support
+
 ## [6.1.1] - 2017-12-09
 ### Changed
 - move prism-themes to dev dependencies
