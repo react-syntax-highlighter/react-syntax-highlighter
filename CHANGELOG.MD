@@ -1,5 +1,11 @@
 # Changelog
 
+## [7.0.0] 2018-01-25
+### Added
+- add lineProps prop which takes either an object or a function that returns an object that is then passed onto each line created when wrapLines=true
+### Changed
+- removed lineStyle prop the behavior of this prop can be replicated with lineProps passing a style object inside the props object. this is a breaking change
+
 ## [6.1.2] 2018-01-17
 ### Changed
 - add .babelrc to .npmignore for parcel support
@@ -332,7 +338,3 @@
 ### Added
 - initial version
 - syntax highlighting using virtual dom created by lowlight
-
-
-
-
