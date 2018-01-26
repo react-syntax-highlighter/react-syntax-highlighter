@@ -23,16 +23,28 @@ test('SyntaxHighlighter component renders correctly', () => {
   expect(tree).toMatchSnapshot();
 });
 
-test('SyntaxHighlighter allows lineStyle as object', () => {
+test('SyntaxHighlighter allows lineProps as an object', () => {
   const tree = renderer.create(
-    <SyntaxHighlighter language='javascript' wrapLines={true} lineStyle={{color: "red"}}>{code}</SyntaxHighlighter>
+    <SyntaxHighlighter 
+      language='javascript' 
+      wrapLines={true} 
+      lineProps={ { style: { color: 'red' }} }
+    >
+      {code}
+    </SyntaxHighlighter>
   ).toJSON();
   expect(tree).toMatchSnapshot();
 });
 
-test('SyntaxHighlighter allows lineStyle as function', () => {
+test('SyntaxHighlighter allows lineProps as function', () => {
   const tree = renderer.create(
-    <SyntaxHighlighter language='javascript' wrapLines={true} lineStyle={() => ({color: "red"})}>{code}</SyntaxHighlighter>
+    <SyntaxHighlighter 
+      language='javascript' 
+      wrapLines={true} 
+      lineProps={() => ({ style: { color: 'red' }} )}
+    >
+      {code}
+    </SyntaxHighlighter>
   ).toJSON();
   expect(tree).toMatchSnapshot();
 });
@@ -42,7 +54,7 @@ test("SyntaxHighlighter renders java code correctly with wrapLines", () => {
     <SyntaxHighlighter
           language='java'
           wrapLines={true}
-          lineStyle={(lineNumber) => {
+          lineProps={(lineNumber) => {
              const style = { display: '', backgroundColor: '' };
              if (lineNumber < 5) {
                   style.display = 'block';
@@ -54,7 +66,7 @@ test("SyntaxHighlighter renders java code correctly with wrapLines", () => {
                  style.display = 'block';
                  style.backgroundColor = '#BA2D0B';
              }
-             return style;
+             return { style };
           }}
     >
          {javaCode}
