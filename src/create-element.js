@@ -34,14 +34,15 @@ export default function createElement({ node, stylesheet, style = {}, useInlineS
       useInlineStyles
       ?
       { 
+        ...properties,
         style: createStyleObject(
           properties.className, 
           Object.assign({}, properties.style, style), 
           stylesheet
-        ) 
+        ),
       }
       :
-      { className: createClassNameString(properties.className) }
+      { ...properties, className: createClassNameString(properties.className) }
     );
     const children = childrenCreator(node.children);
     return <TagName key={key} {...props}>{children}</TagName>;
