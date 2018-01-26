@@ -47,6 +47,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
       }
     }>
     <span
+      className={undefined}
       style={
         Object {
           "color": "#07a"
@@ -56,6 +57,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
     </span>
      
     <span
+      className={undefined}
       style={
         Object {
           "color": "#DD4A68"
@@ -65,6 +67,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
     </span>
      
     <span
+      className={undefined}
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -75,6 +78,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
     </span>
      fun 
     <span
+      className={undefined}
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -85,6 +89,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
     </span>
      fun 
     <span
+      className={undefined}
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -95,6 +100,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
     </span>
      
     <span
+      className={undefined}
       style={
         Object {
           "color": "#905"
@@ -103,6 +109,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
       1
     </span>
     <span
+      className={undefined}
       style={
         Object {
           "color": "#999"
@@ -113,6 +120,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
     
     
     <span
+      className={undefined}
       style={
         Object {
           "color": "#07a"
@@ -122,6 +130,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
     </span>
      dude 
     <span
+      className={undefined}
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -132,6 +141,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
     </span>
      
     <span
+      className={undefined}
       style={
         Object {
           "color": "#DD4A68"
@@ -140,6 +150,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
       woah
     </span>
     <span
+      className={undefined}
       style={
         Object {
           "color": "#999"
@@ -148,6 +159,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
       (
     </span>
     <span
+      className={undefined}
       style={
         Object {
           "color": "#905"
@@ -156,6 +168,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
       2
     </span>
     <span
+      className={undefined}
       style={
         Object {
           "color": "#999"
@@ -165,6 +178,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
     </span>
      
     <span
+      className={undefined}
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -175,6 +189,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
     </span>
      
     <span
+      className={undefined}
       style={
         Object {
           "color": "#905"
@@ -183,6 +198,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
       3
     </span>
     <span
+      className={undefined}
       style={
         Object {
           "color": "#999"
@@ -193,6 +209,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
     
     
     <span
+      className={undefined}
       style={
         Object {
           "color": "#07a"
@@ -202,6 +219,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
     </span>
      
     <span
+      className={undefined}
       style={
         Object {
           "color": "#DD4A68"
@@ -210,6 +228,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
       thisIsAFunction
     </span>
     <span
+      className={undefined}
       style={
         Object {
           "color": "#999"
@@ -218,6 +237,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
       (
     </span>
     <span
+      className={undefined}
       style={
         Object {
           "color": "#999"
@@ -227,6 +247,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
     </span>
      
     <span
+      className={undefined}
       style={
         Object {
           "color": "#999"
@@ -237,6 +258,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
     
       
     <span
+      className={undefined}
       style={
         Object {
           "color": "#07a"
@@ -246,6 +268,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
     </span>
      
     <span
+      className={undefined}
       style={
         Object {
           "color": "#999"
@@ -254,6 +277,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
       [
     </span>
     <span
+      className={undefined}
       style={
         Object {
           "color": "#905"
@@ -262,6 +286,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
       1
     </span>
     <span
+      className={undefined}
       style={
         Object {
           "color": "#999"
@@ -270,6 +295,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
       ,
     </span>
     <span
+      className={undefined}
       style={
         Object {
           "color": "#905"
@@ -278,6 +304,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
       2
     </span>
     <span
+      className={undefined}
       style={
         Object {
           "color": "#999"
@@ -286,6 +313,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
       ,
     </span>
     <span
+      className={undefined}
       style={
         Object {
           "color": "#905"
@@ -294,6 +322,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
       3
     </span>
     <span
+      className={undefined}
       style={
         Object {
           "color": "#999"
@@ -302,6 +331,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
       ]
     </span>
     <span
+      className={undefined}
       style={
         Object {
           "color": "#999"
@@ -310,6 +340,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
       .
     </span>
     <span
+      className={undefined}
       style={
         Object {
           "color": "#DD4A68"
@@ -318,6 +349,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
       map
     </span>
     <span
+      className={undefined}
       style={
         Object {
           "color": "#999"
@@ -327,6 +359,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
     </span>
     n 
     <span
+      className={undefined}
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -337,6 +370,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
     </span>
      n 
     <span
+      className={undefined}
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -347,6 +381,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
     </span>
      
     <span
+      className={undefined}
       style={
         Object {
           "color": "#905"
@@ -355,6 +390,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
       1
     </span>
     <span
+      className={undefined}
       style={
         Object {
           "color": "#999"
@@ -363,6 +399,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
       )
     </span>
     <span
+      className={undefined}
       style={
         Object {
           "color": "#999"
@@ -371,6 +408,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
       .
     </span>
     <span
+      className={undefined}
       style={
         Object {
           "color": "#DD4A68"
@@ -379,6 +417,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
       filter
     </span>
     <span
+      className={undefined}
       style={
         Object {
           "color": "#999"
@@ -388,6 +427,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
     </span>
     n 
     <span
+      className={undefined}
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -398,6 +438,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
     </span>
      
     <span
+      className={undefined}
       style={
         Object {
           "color": "#905"
@@ -406,6 +447,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
       3
     </span>
     <span
+      className={undefined}
       style={
         Object {
           "color": "#999"
@@ -414,6 +456,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
       )
     </span>
     <span
+      className={undefined}
       style={
         Object {
           "color": "#999"
@@ -424,6 +467,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
     
     
     <span
+      className={undefined}
       style={
         Object {
           "color": "#999"
@@ -434,6 +478,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
     
     console
     <span
+      className={undefined}
       style={
         Object {
           "color": "#999"
@@ -442,6 +487,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
       .
     </span>
     <span
+      className={undefined}
       style={
         Object {
           "color": "#DD4A68"
@@ -450,6 +496,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
       log
     </span>
     <span
+      className={undefined}
       style={
         Object {
           "color": "#999"
@@ -458,6 +505,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
       (
     </span>
     <span
+      className={undefined}
       style={
         Object {
           "color": "#690"
@@ -466,6 +514,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
       \'making up fake code is really hard\'
     </span>
     <span
+      className={undefined}
       style={
         Object {
           "color": "#999"
@@ -474,6 +523,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
       )
     </span>
     <span
+      className={undefined}
       style={
         Object {
           "color": "#999"
@@ -485,6 +535,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
     
     
     <span
+      className={undefined}
       style={
         Object {
           "color": "#07a"
@@ -494,6 +545,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
     </span>
      
     <span
+      className={undefined}
       style={
         Object {
           "color": "#DD4A68"
@@ -502,6 +554,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
       itIs
     </span>
     <span
+      className={undefined}
       style={
         Object {
           "color": "#999"
@@ -510,6 +563,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
       (
     </span>
     <span
+      className={undefined}
       style={
         Object {
           "color": "#999"
@@ -519,6 +573,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
     </span>
      
     <span
+      className={undefined}
       style={
         Object {
           "color": "#999"
@@ -529,6 +584,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
     
       
     <span
+      className={undefined}
       style={
         Object {
           "color": "#07a"
@@ -538,6 +594,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
     </span>
      
     <span
+      className={undefined}
       style={
         Object {
           "color": "#690"
@@ -546,6 +603,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
       \'no seriously really it is\'
     </span>
     <span
+      className={undefined}
       style={
         Object {
           "color": "#999"
@@ -556,6 +614,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
     
     
     <span
+      className={undefined}
       style={
         Object {
           "color": "#999"

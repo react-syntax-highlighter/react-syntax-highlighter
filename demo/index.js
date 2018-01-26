@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import SyntaxHighlighter from '../dist';
+import SyntaxHighlighter from '..';
 
 const availableStyles = [
   'agate',
@@ -161,7 +161,17 @@ function createElement({ node, style, useInlineStyles, key }) {
             onChange={(e) => this.setState({code: e.target.value})}
           />
           <div style={{flex: 1, width: '50%'}}>
-            <SyntaxHighlighter style={this.state.style} showLineNumbers={this.state.showLineNumbers}>
+            <SyntaxHighlighter 
+              style={this.state.style} 
+              showLineNumbers={this.state.showLineNumbers}
+              wrapLines={true}
+              lineProps={(lineNumber) => ({
+                style: { display: "block", cursor: "pointer" },
+                onClick() {
+                  alert(`Line Number Clicked: ${lineNumber}`);
+                }
+              })}
+            >
               {this.state.code}
             </SyntaxHighlighter>
           </div>

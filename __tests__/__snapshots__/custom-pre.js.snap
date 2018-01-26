@@ -12,6 +12,7 @@ exports[`test SyntaxHighlighter component renders custom react component where p
   <code
     style={undefined}>
     <span
+      className={undefined}
       style={
         Object {
           "fontWeight": "bold"
@@ -21,8 +22,10 @@ exports[`test SyntaxHighlighter component renders custom react component where p
     </span>
      woah = 
     <span
+      className={undefined}
       style={Object {}}>
       <span
+        className={undefined}
         style={Object {}}>
         fun
       </span>
@@ -30,6 +33,7 @@ exports[`test SyntaxHighlighter component renders custom react component where p
     </span>
      fun + 
     <span
+      className={undefined}
       style={
         Object {
           "color": "#880000"
@@ -40,6 +44,7 @@ exports[`test SyntaxHighlighter component renders custom react component where p
     ;
     
     <span
+      className={undefined}
       style={
         Object {
           "fontWeight": "bold"
@@ -49,6 +54,7 @@ exports[`test SyntaxHighlighter component renders custom react component where p
     </span>
      dude = woah(
     <span
+      className={undefined}
       style={
         Object {
           "color": "#880000"
@@ -58,6 +64,7 @@ exports[`test SyntaxHighlighter component renders custom react component where p
     </span>
     ) + 
     <span
+      className={undefined}
       style={
         Object {
           "color": "#880000"
@@ -68,8 +75,10 @@ exports[`test SyntaxHighlighter component renders custom react component where p
     ;
     
     <span
+      className={undefined}
       style={Object {}}>
       <span
+        className={undefined}
         style={
           Object {
             "fontWeight": "bold"
@@ -79,6 +88,7 @@ exports[`test SyntaxHighlighter component renders custom react component where p
       </span>
        
       <span
+        className={undefined}
         style={
           Object {
             "color": "#880000",
@@ -89,12 +99,14 @@ exports[`test SyntaxHighlighter component renders custom react component where p
       </span>
       (
       <span
+        className={undefined}
         style={Object {}} />
       ) 
     </span>
     {
       
     <span
+      className={undefined}
       style={
         Object {
           "fontWeight": "bold"
@@ -104,6 +116,7 @@ exports[`test SyntaxHighlighter component renders custom react component where p
     </span>
      [
     <span
+      className={undefined}
       style={
         Object {
           "color": "#880000"
@@ -113,6 +126,7 @@ exports[`test SyntaxHighlighter component renders custom react component where p
     </span>
     ,
     <span
+      className={undefined}
       style={
         Object {
           "color": "#880000"
@@ -122,6 +136,7 @@ exports[`test SyntaxHighlighter component renders custom react component where p
     </span>
     ,
     <span
+      className={undefined}
       style={
         Object {
           "color": "#880000"
@@ -131,8 +146,10 @@ exports[`test SyntaxHighlighter component renders custom react component where p
     </span>
     ].map(
     <span
+      className={undefined}
       style={Object {}}>
       <span
+        className={undefined}
         style={Object {}}>
         n
       </span>
@@ -140,6 +157,7 @@ exports[`test SyntaxHighlighter component renders custom react component where p
     </span>
      n + 
     <span
+      className={undefined}
       style={
         Object {
           "color": "#880000"
@@ -149,6 +167,7 @@ exports[`test SyntaxHighlighter component renders custom react component where p
     </span>
     ).filter(n !== 
     <span
+      className={undefined}
       style={
         Object {
           "color": "#880000"
@@ -160,6 +179,7 @@ exports[`test SyntaxHighlighter component renders custom react component where p
     }
     
     <span
+      className={undefined}
       style={
         Object {
           "color": "#397300"
@@ -169,6 +189,7 @@ exports[`test SyntaxHighlighter component renders custom react component where p
     </span>
     .log(
     <span
+      className={undefined}
       style={
         Object {
           "color": "#880000"
@@ -180,8 +201,10 @@ exports[`test SyntaxHighlighter component renders custom react component where p
     
     
     <span
+      className={undefined}
       style={Object {}}>
       <span
+        className={undefined}
         style={
           Object {
             "fontWeight": "bold"
@@ -191,6 +214,7 @@ exports[`test SyntaxHighlighter component renders custom react component where p
       </span>
        
       <span
+        className={undefined}
         style={
           Object {
             "color": "#880000",
@@ -201,12 +225,14 @@ exports[`test SyntaxHighlighter component renders custom react component where p
       </span>
       (
       <span
+        className={undefined}
         style={Object {}} />
       ) 
     </span>
     {
       
     <span
+      className={undefined}
       style={
         Object {
           "fontWeight": "bold"
@@ -216,6 +242,7 @@ exports[`test SyntaxHighlighter component renders custom react component where p
     </span>
      
     <span
+      className={undefined}
       style={
         Object {
           "color": "#880000"
@@ -244,6 +271,7 @@ exports[`test SyntaxHighlighter renders div where pre tag is by default 1`] = `
   <code
     style={undefined}>
     <span
+      className={undefined}
       style={
         Object {
           "fontWeight": "bold"
@@ -253,8 +281,10 @@ exports[`test SyntaxHighlighter renders div where pre tag is by default 1`] = `
     </span>
      woah = 
     <span
+      className={undefined}
       style={Object {}}>
       <span
+        className={undefined}
         style={Object {}}>
         fun
       </span>
@@ -262,6 +292,7 @@ exports[`test SyntaxHighlighter renders div where pre tag is by default 1`] = `
     </span>
      fun + 
     <span
+      className={undefined}
       style={
         Object {
           "color": "#880000"
@@ -272,6 +303,7 @@ exports[`test SyntaxHighlighter renders div where pre tag is by default 1`] = `
     ;
     
     <span
+      className={undefined}
       style={
         Object {
           "fontWeight": "bold"
@@ -281,6 +313,7 @@ exports[`test SyntaxHighlighter renders div where pre tag is by default 1`] = `
     </span>
      dude = woah(
     <span
+      className={undefined}
       style={
         Object {
           "color": "#880000"
@@ -290,6 +323,7 @@ exports[`test SyntaxHighlighter renders div where pre tag is by default 1`] = `
     </span>
     ) + 
     <span
+      className={undefined}
       style={
         Object {
           "color": "#880000"
@@ -300,8 +334,10 @@ exports[`test SyntaxHighlighter renders div where pre tag is by default 1`] = `
     ;
     
     <span
+      className={undefined}
       style={Object {}}>
       <span
+        className={undefined}
         style={
           Object {
             "fontWeight": "bold"
@@ -311,6 +347,7 @@ exports[`test SyntaxHighlighter renders div where pre tag is by default 1`] = `
       </span>
        
       <span
+        className={undefined}
         style={
           Object {
             "color": "#880000",
@@ -321,12 +358,14 @@ exports[`test SyntaxHighlighter renders div where pre tag is by default 1`] = `
       </span>
       (
       <span
+        className={undefined}
         style={Object {}} />
       ) 
     </span>
     {
       
     <span
+      className={undefined}
       style={
         Object {
           "fontWeight": "bold"
@@ -336,6 +375,7 @@ exports[`test SyntaxHighlighter renders div where pre tag is by default 1`] = `
     </span>
      [
     <span
+      className={undefined}
       style={
         Object {
           "color": "#880000"
@@ -345,6 +385,7 @@ exports[`test SyntaxHighlighter renders div where pre tag is by default 1`] = `
     </span>
     ,
     <span
+      className={undefined}
       style={
         Object {
           "color": "#880000"
@@ -354,6 +395,7 @@ exports[`test SyntaxHighlighter renders div where pre tag is by default 1`] = `
     </span>
     ,
     <span
+      className={undefined}
       style={
         Object {
           "color": "#880000"
@@ -363,8 +405,10 @@ exports[`test SyntaxHighlighter renders div where pre tag is by default 1`] = `
     </span>
     ].map(
     <span
+      className={undefined}
       style={Object {}}>
       <span
+        className={undefined}
         style={Object {}}>
         n
       </span>
@@ -372,6 +416,7 @@ exports[`test SyntaxHighlighter renders div where pre tag is by default 1`] = `
     </span>
      n + 
     <span
+      className={undefined}
       style={
         Object {
           "color": "#880000"
@@ -381,6 +426,7 @@ exports[`test SyntaxHighlighter renders div where pre tag is by default 1`] = `
     </span>
     ).filter(n !== 
     <span
+      className={undefined}
       style={
         Object {
           "color": "#880000"
@@ -392,6 +438,7 @@ exports[`test SyntaxHighlighter renders div where pre tag is by default 1`] = `
     }
     
     <span
+      className={undefined}
       style={
         Object {
           "color": "#397300"
@@ -401,6 +448,7 @@ exports[`test SyntaxHighlighter renders div where pre tag is by default 1`] = `
     </span>
     .log(
     <span
+      className={undefined}
       style={
         Object {
           "color": "#880000"
@@ -412,8 +460,10 @@ exports[`test SyntaxHighlighter renders div where pre tag is by default 1`] = `
     
     
     <span
+      className={undefined}
       style={Object {}}>
       <span
+        className={undefined}
         style={
           Object {
             "fontWeight": "bold"
@@ -423,6 +473,7 @@ exports[`test SyntaxHighlighter renders div where pre tag is by default 1`] = `
       </span>
        
       <span
+        className={undefined}
         style={
           Object {
             "color": "#880000",
@@ -433,12 +484,14 @@ exports[`test SyntaxHighlighter renders div where pre tag is by default 1`] = `
       </span>
       (
       <span
+        className={undefined}
         style={Object {}} />
       ) 
     </span>
     {
       
     <span
+      className={undefined}
       style={
         Object {
           "fontWeight": "bold"
@@ -448,6 +501,7 @@ exports[`test SyntaxHighlighter renders div where pre tag is by default 1`] = `
     </span>
      
     <span
+      className={undefined}
       style={
         Object {
           "color": "#880000"
