@@ -85,6 +85,7 @@ exports[`test SyntaxHighlighter component passes along code style to LineNumbers
       }
     }>
     <span
+      className={undefined}
       style={
         Object {
           "fontWeight": "bold"
@@ -94,8 +95,10 @@ exports[`test SyntaxHighlighter component passes along code style to LineNumbers
     </span>
      woah = 
     <span
+      className={undefined}
       style={Object {}}>
       <span
+        className={undefined}
         style={Object {}}>
         fun
       </span>
@@ -103,6 +106,7 @@ exports[`test SyntaxHighlighter component passes along code style to LineNumbers
     </span>
      fun + 
     <span
+      className={undefined}
       style={
         Object {
           "color": "#880000"
@@ -113,6 +117,7 @@ exports[`test SyntaxHighlighter component passes along code style to LineNumbers
     ;
     
     <span
+      className={undefined}
       style={
         Object {
           "fontWeight": "bold"
@@ -122,6 +127,7 @@ exports[`test SyntaxHighlighter component passes along code style to LineNumbers
     </span>
      dude = woah(
     <span
+      className={undefined}
       style={
         Object {
           "color": "#880000"
@@ -131,6 +137,7 @@ exports[`test SyntaxHighlighter component passes along code style to LineNumbers
     </span>
     ) + 
     <span
+      className={undefined}
       style={
         Object {
           "color": "#880000"
@@ -141,8 +148,10 @@ exports[`test SyntaxHighlighter component passes along code style to LineNumbers
     ;
     
     <span
+      className={undefined}
       style={Object {}}>
       <span
+        className={undefined}
         style={
           Object {
             "fontWeight": "bold"
@@ -152,6 +161,7 @@ exports[`test SyntaxHighlighter component passes along code style to LineNumbers
       </span>
        
       <span
+        className={undefined}
         style={
           Object {
             "color": "#880000",
@@ -162,12 +172,14 @@ exports[`test SyntaxHighlighter component passes along code style to LineNumbers
       </span>
       (
       <span
+        className={undefined}
         style={Object {}} />
       ) 
     </span>
     {
       
     <span
+      className={undefined}
       style={
         Object {
           "fontWeight": "bold"
@@ -177,6 +189,7 @@ exports[`test SyntaxHighlighter component passes along code style to LineNumbers
     </span>
      [
     <span
+      className={undefined}
       style={
         Object {
           "color": "#880000"
@@ -186,6 +199,7 @@ exports[`test SyntaxHighlighter component passes along code style to LineNumbers
     </span>
     ,
     <span
+      className={undefined}
       style={
         Object {
           "color": "#880000"
@@ -195,6 +209,7 @@ exports[`test SyntaxHighlighter component passes along code style to LineNumbers
     </span>
     ,
     <span
+      className={undefined}
       style={
         Object {
           "color": "#880000"
@@ -204,8 +219,10 @@ exports[`test SyntaxHighlighter component passes along code style to LineNumbers
     </span>
     ].map(
     <span
+      className={undefined}
       style={Object {}}>
       <span
+        className={undefined}
         style={Object {}}>
         n
       </span>
@@ -213,6 +230,7 @@ exports[`test SyntaxHighlighter component passes along code style to LineNumbers
     </span>
      n + 
     <span
+      className={undefined}
       style={
         Object {
           "color": "#880000"
@@ -222,6 +240,7 @@ exports[`test SyntaxHighlighter component passes along code style to LineNumbers
     </span>
     ).filter(n !== 
     <span
+      className={undefined}
       style={
         Object {
           "color": "#880000"
@@ -233,6 +252,7 @@ exports[`test SyntaxHighlighter component passes along code style to LineNumbers
     }
     
     <span
+      className={undefined}
       style={
         Object {
           "color": "#397300"
@@ -242,6 +262,7 @@ exports[`test SyntaxHighlighter component passes along code style to LineNumbers
     </span>
     .log(
     <span
+      className={undefined}
       style={
         Object {
           "color": "#880000"
@@ -253,8 +274,10 @@ exports[`test SyntaxHighlighter component passes along code style to LineNumbers
     
     
     <span
+      className={undefined}
       style={Object {}}>
       <span
+        className={undefined}
         style={
           Object {
             "fontWeight": "bold"
@@ -264,6 +287,7 @@ exports[`test SyntaxHighlighter component passes along code style to LineNumbers
       </span>
        
       <span
+        className={undefined}
         style={
           Object {
             "color": "#880000",
@@ -274,12 +298,14 @@ exports[`test SyntaxHighlighter component passes along code style to LineNumbers
       </span>
       (
       <span
+        className={undefined}
         style={Object {}} />
       ) 
     </span>
     {
       
     <span
+      className={undefined}
       style={
         Object {
           "fontWeight": "bold"
@@ -289,6 +315,7 @@ exports[`test SyntaxHighlighter component passes along code style to LineNumbers
     </span>
      
     <span
+      className={undefined}
       style={
         Object {
           "color": "#880000"

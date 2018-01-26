@@ -35,6 +35,7 @@ export default function createElement({ node, stylesheet, style = {}, useInlineS
       ?
       { 
         ...properties,
+        ...{ className: undefined },
         style: createStyleObject(
           properties.className, 
           Object.assign({}, properties.style, style), 
