@@ -96,6 +96,7 @@ registerLanguage('jsx', jsx);
 - [React Component Demo](https://github.com/conorhastings/react-component-demo) - A React Component To make live editable demos of other React Components.
 - [Redux Test Recorder](https://github.com/conorhastings/redux-test-recorder) - a redux middleware to automatically generate tests for reducers through ui interaction. Syntax highlighter used by react plugin.
 - [GitPoint](https://github.com/gitpoint/git-point) - GitHub for iOS. Built with React Native. (built using react-native-syntax-highlighter)
+- [vscodethemes](https://vscodethemes.com/) - A website for viewing vscode themes online using react-syntax-highlighter
 
 ### License
 
