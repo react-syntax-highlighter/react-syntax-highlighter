@@ -1,5 +1,14 @@
 # Changelog
 
+## [7.0.2] 2018-01-25
+### Added
+- handle fs errors in language and stylesheet build scripts
+- fix link to refractor in README
+
+## [7.0.1] 2018-01-25
+### Changed
+- removed claims of sanity from README
+
 ## [7.0.0] 2018-01-25
 ### Added
 - add lineProps prop which takes either an object or a function that returns an object that is then passed onto each line created when wrapLines=true
