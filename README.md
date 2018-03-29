@@ -54,7 +54,7 @@ const Component = () => {
 
 ### Prism
 
-Using <a href="https://github.com/wooorm/lowlight">refractor</a> we can use an ast built on languages from Prism.js instead of highlight.js. This is beneficial especially when highlighting jsx, a problem long unsolved by this module. The semantics of use are basically the same although a light mode is not yet supported (though is coming in the future). You can see a demo(with jsx) using Prism(refractor) <a href="http://conor.rodeo/react-syntax-highlighter/demo/prism.html">here</a>.
+Using <a href="https://github.com/wooorm/refractor">refractor</a> we can use an ast built on languages from Prism.js instead of highlight.js. This is beneficial especially when highlighting jsx, a problem long unsolved by this module. The semantics of use are basically the same although a light mode is not yet supported (though is coming in the future). You can see a demo(with jsx) using Prism(refractor) <a href="http://conor.rodeo/react-syntax-highlighter/demo/prism.html">here</a>.
 
 ```js
 import SyntaxHighlighter from 'react-syntax-highlighter/prism';
