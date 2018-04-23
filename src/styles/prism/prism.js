@@ -136,24 +136,24 @@ export default {
         "color": "#690"
     },
     "operator": {
-        "color": "#a67f59",
+        "color": "#9a6e3a",
         "background": "hsla(0, 0%, 100%, .5)"
     },
     "entity": {
-        "color": "#a67f59",
+        "color": "#9a6e3a",
         "background": "hsla(0, 0%, 100%, .5)",
         "cursor": "help"
     },
     "url": {
-        "color": "#a67f59",
+        "color": "#9a6e3a",
         "background": "hsla(0, 0%, 100%, .5)"
     },
     ".language-css .token.string": {
-        "color": "#a67f59",
+        "color": "#9a6e3a",
         "background": "hsla(0, 0%, 100%, .5)"
     },
     ".style .token.string": {
-        "color": "#a67f59",
+        "color": "#9a6e3a",
         "background": "hsla(0, 0%, 100%, .5)"
     },
     "atrule": {
@@ -166,6 +166,9 @@ export default {
         "color": "#07a"
     },
     "function": {
+        "color": "#DD4A68"
+    },
+    "class-name": {
         "color": "#DD4A68"
     },
     "regex": {

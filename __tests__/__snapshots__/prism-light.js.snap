@@ -139,7 +139,11 @@ exports[`test SyntaxHighlighter renders jsx highlighted text 1`] = `
      
     <span
       className={undefined}
-      style={Object {}}>
+      style={
+        Object {
+          "color": "#DD4A68"
+        }
+      }>
       Expire
     </span>
      
@@ -155,7 +159,11 @@ exports[`test SyntaxHighlighter renders jsx highlighted text 1`] = `
      
     <span
       className={undefined}
-      style={Object {}}>
+      style={
+        Object {
+          "color": "#DD4A68"
+        }
+      }>
       React
       <span
         className={undefined}
@@ -283,7 +291,7 @@ exports[`test SyntaxHighlighter renders jsx highlighted text 1`] = `
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
-          "color": "#a67f59"
+          "color": "#9a6e3a"
         }
       }>
       =
@@ -422,7 +430,7 @@ exports[`test SyntaxHighlighter renders jsx highlighted text 1`] = `
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
-          "color": "#a67f59"
+          "color": "#9a6e3a"
         }
       }>
       =>
@@ -589,7 +597,7 @@ exports[`test SyntaxHighlighter renders jsx highlighted text 1`] = `
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
-          "color": "#a67f59"
+          "color": "#9a6e3a"
         }
       }>
       ||
@@ -629,7 +637,7 @@ exports[`test SyntaxHighlighter renders jsx highlighted text 1`] = `
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
-          "color": "#a67f59"
+          "color": "#9a6e3a"
         }
       }>
       *

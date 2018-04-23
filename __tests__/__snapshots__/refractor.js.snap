@@ -71,7 +71,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
-          "color": "#a67f59"
+          "color": "#9a6e3a"
         }
       }>
       =
@@ -82,7 +82,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
-          "color": "#a67f59"
+          "color": "#9a6e3a"
         }
       }>
       =>
@@ -93,7 +93,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
-          "color": "#a67f59"
+          "color": "#9a6e3a"
         }
       }>
       +
@@ -134,7 +134,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
-          "color": "#a67f59"
+          "color": "#9a6e3a"
         }
       }>
       =
@@ -182,7 +182,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
-          "color": "#a67f59"
+          "color": "#9a6e3a"
         }
       }>
       +
@@ -363,7 +363,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
-          "color": "#a67f59"
+          "color": "#9a6e3a"
         }
       }>
       =>
@@ -374,7 +374,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
-          "color": "#a67f59"
+          "color": "#9a6e3a"
         }
       }>
       +
@@ -431,7 +431,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
-          "color": "#a67f59"
+          "color": "#9a6e3a"
         }
       }>
       !==

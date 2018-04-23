@@ -56,7 +56,7 @@ export default {
     },
     "code[class*=\"language\"]": {
         "maxHeight": "inherit",
-        "height": "100%",
+        "height": "inherit",
         "padding": "0 1em",
         "display": "block",
         "overflow": "auto"
