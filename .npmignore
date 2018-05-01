@@ -3,3 +3,8 @@ demo
 npm-debug.log
 .DS_Store
 .babelrc
+__tests__
+coverage
+src
+circle.yml
+webpack.config.js
