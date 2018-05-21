@@ -98,6 +98,7 @@ registerLanguage('jsx', jsx);
 - [GitPoint](https://github.com/gitpoint/git-point) - GitHub for iOS. Built with React Native. (built using react-native-syntax-highlighter)
 - [vscodethemes](https://vscodethemes.com/) - A website for viewing vscode themes online using react-syntax-highlighter
 - [Yoga Layout Playground](https://yogalayout.com/playground) - generate code for yoga layout in multiple languages
+- [Kibana](https://github.com/elastic/kibana) - browser-based analytics and search dashboard for Elasticsearch.
 ### License
 
 MIT
