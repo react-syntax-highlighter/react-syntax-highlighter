@@ -22,10 +22,18 @@ exports[`test SyntaxHighlighter component renders custom react component where c
     </span>
      woah = 
     <span
-      className={undefined}
+      className={
+        Array [
+          "hljs-function"
+        ]
+      }
       style={Object {}}>
       <span
-        className={undefined}
+        className={
+          Array [
+            "hljs-params"
+          ]
+        }
         style={Object {}}>
         fun
       </span>
@@ -75,7 +83,11 @@ exports[`test SyntaxHighlighter component renders custom react component where c
     ;
     
     <span
-      className={undefined}
+      className={
+        Array [
+          "hljs-function"
+        ]
+      }
       style={Object {}}>
       <span
         className={undefined}
@@ -99,7 +111,11 @@ exports[`test SyntaxHighlighter component renders custom react component where c
       </span>
       (
       <span
-        className={undefined}
+        className={
+          Array [
+            "hljs-params"
+          ]
+        }
         style={Object {}} />
       ) 
     </span>
@@ -146,10 +162,18 @@ exports[`test SyntaxHighlighter component renders custom react component where c
     </span>
     ].map(
     <span
-      className={undefined}
+      className={
+        Array [
+          "hljs-function"
+        ]
+      }
       style={Object {}}>
       <span
-        className={undefined}
+        className={
+          Array [
+            "hljs-params"
+          ]
+        }
         style={Object {}}>
         n
       </span>
@@ -201,7 +225,11 @@ exports[`test SyntaxHighlighter component renders custom react component where c
     
     
     <span
-      className={undefined}
+      className={
+        Array [
+          "hljs-function"
+        ]
+      }
       style={Object {}}>
       <span
         className={undefined}
@@ -225,7 +253,11 @@ exports[`test SyntaxHighlighter component renders custom react component where c
       </span>
       (
       <span
-        className={undefined}
+        className={
+          Array [
+            "hljs-params"
+          ]
+        }
         style={Object {}} />
       ) 
     </span>
@@ -281,10 +313,18 @@ exports[`test SyntaxHighlighter renders div where code tag is by default 1`] = `
     </span>
      woah = 
     <span
-      className={undefined}
+      className={
+        Array [
+          "hljs-function"
+        ]
+      }
       style={Object {}}>
       <span
-        className={undefined}
+        className={
+          Array [
+            "hljs-params"
+          ]
+        }
         style={Object {}}>
         fun
       </span>
@@ -334,7 +374,11 @@ exports[`test SyntaxHighlighter renders div where code tag is by default 1`] = `
     ;
     
     <span
-      className={undefined}
+      className={
+        Array [
+          "hljs-function"
+        ]
+      }
       style={Object {}}>
       <span
         className={undefined}
@@ -358,7 +402,11 @@ exports[`test SyntaxHighlighter renders div where code tag is by default 1`] = `
       </span>
       (
       <span
-        className={undefined}
+        className={
+          Array [
+            "hljs-params"
+          ]
+        }
         style={Object {}} />
       ) 
     </span>
@@ -405,10 +453,18 @@ exports[`test SyntaxHighlighter renders div where code tag is by default 1`] = `
     </span>
     ].map(
     <span
-      className={undefined}
+      className={
+        Array [
+          "hljs-function"
+        ]
+      }
       style={Object {}}>
       <span
-        className={undefined}
+        className={
+          Array [
+            "hljs-params"
+          ]
+        }
         style={Object {}}>
         n
       </span>
@@ -460,7 +516,11 @@ exports[`test SyntaxHighlighter renders div where code tag is by default 1`] = `
     
     
     <span
-      className={undefined}
+      className={
+        Array [
+          "hljs-function"
+        ]
+      }
       style={Object {}}>
       <span
         className={undefined}
@@ -484,7 +544,11 @@ exports[`test SyntaxHighlighter renders div where code tag is by default 1`] = `
       </span>
       (
       <span
-        className={undefined}
+        className={
+          Array [
+            "hljs-params"
+          ]
+        }
         style={Object {}} />
       ) 
     </span>
