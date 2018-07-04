@@ -30,12 +30,24 @@ export default function createElement({ node, stylesheet, style = {}, useInlineS
     return value;
   } else if (TagName) {
     const childrenCreator = createChildren(stylesheet, useInlineStyles);
+    const nonStylesheetClassNames = (
+      useInlineStyles &&
+      properties.className &&
+      properties.className.filter(className => !stylesheet[className])
+    );
+    const className = (
+      nonStylesheetClassNames && nonStylesheetClassNames.length
+      ?
+      nonStylesheetClassNames
+      :
+      undefined
+    )
     const props = (
       useInlineStyles
       ?
       { 
         ...properties,
-        ...{ className: undefined },
+        ...{ className },
         style: createStyleObject(
           properties.className, 
           Object.assign({}, properties.style, style), 

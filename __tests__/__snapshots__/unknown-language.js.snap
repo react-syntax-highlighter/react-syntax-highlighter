@@ -22,10 +22,18 @@ exports[`test SyntaxHighlighter component renders correctly by falling back to h
     </span>
      woah = 
     <span
-      className={undefined}
+      className={
+        Array [
+          "hljs-function"
+        ]
+      }
       style={Object {}}>
       <span
-        className={undefined}
+        className={
+          Array [
+            "hljs-params"
+          ]
+        }
         style={Object {}}>
         fun
       </span>
@@ -75,7 +83,11 @@ exports[`test SyntaxHighlighter component renders correctly by falling back to h
     ;
     
     <span
-      className={undefined}
+      className={
+        Array [
+          "hljs-function"
+        ]
+      }
       style={Object {}}>
       <span
         className={undefined}
@@ -99,7 +111,11 @@ exports[`test SyntaxHighlighter component renders correctly by falling back to h
       </span>
       (
       <span
-        className={undefined}
+        className={
+          Array [
+            "hljs-params"
+          ]
+        }
         style={Object {}} />
       ) 
     </span>
@@ -146,10 +162,18 @@ exports[`test SyntaxHighlighter component renders correctly by falling back to h
     </span>
     ].map(
     <span
-      className={undefined}
+      className={
+        Array [
+          "hljs-function"
+        ]
+      }
       style={Object {}}>
       <span
-        className={undefined}
+        className={
+          Array [
+            "hljs-params"
+          ]
+        }
         style={Object {}}>
         n
       </span>
@@ -201,7 +225,11 @@ exports[`test SyntaxHighlighter component renders correctly by falling back to h
     
     
     <span
-      className={undefined}
+      className={
+        Array [
+          "hljs-function"
+        ]
+      }
       style={Object {}}>
       <span
         className={undefined}
@@ -225,7 +253,11 @@ exports[`test SyntaxHighlighter component renders correctly by falling back to h
       </span>
       (
       <span
-        className={undefined}
+        className={
+          Array [
+            "hljs-params"
+          ]
+        }
         style={Object {}} />
       ) 
     </span>

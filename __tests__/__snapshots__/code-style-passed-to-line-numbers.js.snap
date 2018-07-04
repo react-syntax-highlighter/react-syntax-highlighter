@@ -95,10 +95,18 @@ exports[`test SyntaxHighlighter component passes along code style to LineNumbers
     </span>
      woah = 
     <span
-      className={undefined}
+      className={
+        Array [
+          "hljs-function"
+        ]
+      }
       style={Object {}}>
       <span
-        className={undefined}
+        className={
+          Array [
+            "hljs-params"
+          ]
+        }
         style={Object {}}>
         fun
       </span>
@@ -148,7 +156,11 @@ exports[`test SyntaxHighlighter component passes along code style to LineNumbers
     ;
     
     <span
-      className={undefined}
+      className={
+        Array [
+          "hljs-function"
+        ]
+      }
       style={Object {}}>
       <span
         className={undefined}
@@ -172,7 +184,11 @@ exports[`test SyntaxHighlighter component passes along code style to LineNumbers
       </span>
       (
       <span
-        className={undefined}
+        className={
+          Array [
+            "hljs-params"
+          ]
+        }
         style={Object {}} />
       ) 
     </span>
@@ -219,10 +235,18 @@ exports[`test SyntaxHighlighter component passes along code style to LineNumbers
     </span>
     ].map(
     <span
-      className={undefined}
+      className={
+        Array [
+          "hljs-function"
+        ]
+      }
       style={Object {}}>
       <span
-        className={undefined}
+        className={
+          Array [
+            "hljs-params"
+          ]
+        }
         style={Object {}}>
         n
       </span>
@@ -274,7 +298,11 @@ exports[`test SyntaxHighlighter component passes along code style to LineNumbers
     
     
     <span
-      className={undefined}
+      className={
+        Array [
+          "hljs-function"
+        ]
+      }
       style={Object {}}>
       <span
         className={undefined}
@@ -298,7 +326,11 @@ exports[`test SyntaxHighlighter component passes along code style to LineNumbers
       </span>
       (
       <span
-        className={undefined}
+        className={
+          Array [
+            "hljs-params"
+          ]
+        }
         style={Object {}} />
       ) 
     </span>
