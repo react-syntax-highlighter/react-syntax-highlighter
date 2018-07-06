@@ -1688,6 +1688,7 @@ exports[`test SyntaxHighlighter renders java code correctly with wrapLines 1`] =
       style={
         Object {
           "backgroundColor": "#EDE4AF",
+          "color": "#888888",
           "display": "block"
         }
       }>
@@ -2145,6 +2146,7 @@ exports[`test SyntaxHighlighter renders java code correctly with wrapLines 1`] =
       style={
         Object {
           "backgroundColor": "",
+          "color": "#888888",
           "display": ""
         }
       }>
