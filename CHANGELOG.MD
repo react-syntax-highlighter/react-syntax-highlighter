@@ -1,5 +1,23 @@
 # Changelog
 
+
+## [8.0.1] 2018-07-05
+### Added
+- properly propagate className argument to createLineElement when wrapLines=true
+
+## [8.0.0] 2018-07-03
+### Changed
+- pass along classNames that are not part of stylesheet (this allows passing in className in lineProps)
+
+## [7.0.4] 2018-05-02
+### Changed
+- update refractor version
+
+## [7.0.3] 2018-05-02
+### Changed
+- updated .npmignore to make it include less unneccsary files.
+- update example in readme to show proper path for require styles
+
 ## [7.0.2] 2018-01-25
 ### Added
 - handle fs errors in language and stylesheet build scripts
