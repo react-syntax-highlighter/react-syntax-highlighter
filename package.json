@@ -41,7 +41,7 @@
   "scripts": {
     "dev": "./node_modules/.bin/webpack --watch --progress",
     "build": "babel src --out-dir .",
-    "watch": "babel src --watch --out-dir dist",
+    "watch": "babel src --watch --out-dir .",
     "build-styles-hljs": "node ./lib/build-stylesheets-highlightjs.js",
     "build-languages-hljs": "node ./lib/build-languages-highlightjs.js",
     "build-styles-prism": "node ./lib/build-stylesheets-refractor.js",

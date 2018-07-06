@@ -111,10 +111,10 @@ function wrapLinesInSpan(codeTree, lineProps) {
             const newElem = createLineElement({ children: [lastLineInPreviousSpan], className: node.properties.className });
             tree.splice(index + 1, 0, newElem);
           } else {
-            newTree.push(createLineElement({ children: [newChild], lineNumber, lineProps })); 
+            newTree.push(createLineElement({ children: [newChild], lineNumber, lineProps, className: node.properties.className }));
           }
         } else {
-          newTree.push(createLineElement({ children: [newChild], lineNumber, lineProps })); 
+          newTree.push(createLineElement({ children: [newChild], lineNumber, lineProps, className: node.properties.className }));
         }
       });
       lastLineBreakIndex = index;

@@ -6,7 +6,9 @@
 * apl
 * applescript
 * arduino
+* arff
 * asciidoc
+* asm6502
 * aspnet
 * autohotkey
 * autoit
@@ -18,10 +20,12 @@
 * bro
 * c
 * clike
+* clojure
 * coffeescript
 * cpp
 * crystal
 * csharp
+* csp
 * cssExtras (css-extras)
 * css
 * d
@@ -31,9 +35,13 @@
 * docker
 * eiffel
 * elixir
+* elm
+* erb
 * erlang
+* flow
 * fortran
 * fsharp
+* gedcom
 * gherkin
 * git
 * glsl
@@ -44,10 +52,14 @@
 * handlebars
 * haskell
 * haxe
+* hpkp
+* hsts
 * http
+* ichigojam
 * icon
 * inform7
 * ini
+* io
 * j
 * java
 * javascript
@@ -59,11 +71,14 @@
 * kotlin
 * latex
 * less
+* liquid
+* lisp
 * livescript
 * lolcode
 * lua
 * makefile
 * markdown
+* markupTemplating (markup-templating)
 * markup
 * matlab
 * mel
@@ -85,6 +100,7 @@
 * perl
 * phpExtras (php-extras)
 * php
+* plsql
 * powershell
 * processing
 * prolog
@@ -111,17 +127,23 @@
 * scss
 * smalltalk
 * smarty
+* soy
 * sql
 * stylus
 * swift
 * tcl
 * textile
+* tsx
 * twig
 * typescript
 * vbnet
+* velocity
 * verilog
 * vhdl
 * vim
+* visualBasic (visual-basic)
+* wasm
 * wiki
+* xeora
 * xojo
 * yaml
