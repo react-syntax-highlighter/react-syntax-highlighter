@@ -2,8 +2,7 @@
 
 [![CircleCI](https://circleci.com/gh/conorhastings/react-syntax-highlighter.svg?style=svg)](https://circleci.com/gh/conorhastings/react-syntax-highlighter)
 [![codecov](https://codecov.io/gh/conorhastings/react-syntax-highlighter/branch/master/graph/badge.svg)](https://codecov.io/gh/conorhastings/react-syntax-highlighter)
-[![downloads-badge](https://www.npmjs.com/package/react-syntax-highlighter)]
-(https://img.shields.io/npm/dw/mdx-deck.svg?style=flat-square)
+[![npm](https://img.shields.io/npm/dw/mdx-deck.svg?style=flat-square)]](https://www.npmjs.com/package/react-syntax-highlighter)
 
 Syntax highlighting component for `React` using the seriously super amazing <a href="https://github.com/wooorm/lowlight">lowlight</a> and <a href="https://github.com/wooorm/refractor">refractor</a> by <a href="https://github.com/wooorm">wooorm</a>
 
