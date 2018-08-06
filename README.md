@@ -88,6 +88,7 @@ registerLanguage('jsx', jsx);
 
 ### Built with React Syntax Highlighter
 
+- [mdx-deck](https://github.com/jxnblk/mdx-deck) - MDX-based presentation decks
 - [DBGlass](https://github.com/web-pal/DBGlass) - PostgreSQL client built with Electron.
 - [Spectacle Editor](https://github.com/FormidableLabs/spectacle-editor) - An Electron based app for creating, editing, saving, and publishing Spectacle presentations. With integrated Plotly support.
 - [Superset](https://github.com/airbnb/superset) - Superset is a data exploration platform designed to be visual, intuitive, and interactive.
@@ -98,6 +99,9 @@ registerLanguage('jsx', jsx);
 - [GitPoint](https://github.com/gitpoint/git-point) - GitHub for iOS. Built with React Native. (built using react-native-syntax-highlighter)
 - [Yoga Layout Playground](https://yogalayout.com/playground) - generate code for yoga layout in multiple languages
 - [Kibana](https://github.com/elastic/kibana) - browser-based analytics and search dashboard for Elasticsearch.
+
+If your project uses react-syntax-highlighter please send a pr to add!
+
 ### License
 
 MIT
