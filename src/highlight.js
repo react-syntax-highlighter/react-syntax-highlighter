@@ -186,8 +186,48 @@ export default function (astGenerator, defaultStyle) {
   PreTag='pre',
   CodeTag='code',
   code = Array.isArray(children) ? children[0] : children,
+  astGenerator = astGenerator,
   ...rest
  }) {
+
+  const lineNumbers = (
+    showLineNumbers
+    ?
+    <LineNumbers
+      containerStyle={lineNumberContainerStyle}
+      codeStyle={codeTagProps.style || {}}
+      numberStyle={lineNumberStyle}
+      startingLineNumber={startingLineNumber}
+      codeString={code}
+    />
+    :
+    null
+  );
+
+  const defaultPreStyle = (
+    style.hljs || 
+    style['pre[class*=\"language-\"]'] || 
+    { backgroundColor: '#fff' }
+  );
+  const preProps = (
+    useInlineStyles
+    ?
+    Object.assign({}, rest, { style: Object.assign({}, defaultPreStyle, customStyle) })
+    :
+    Object.assign({}, rest, { className: 'hljs'})
+  );
+
+  if(!astGenerator) {
+    return (
+      <PreTag {...preProps}>
+      {lineNumbers}
+      <CodeTag {...codeTagProps}>
+        {code}
+      </CodeTag>
+      </PreTag>
+    )
+  }
+
     /* 
      * some custom renderers rely on individual row elements so we need to turn wrapLines on 
      * if renderer is provided and wrapLines is undefined
@@ -199,32 +239,9 @@ export default function (astGenerator, defaultStyle) {
     if (codeTree.language === null) {
       codeTree.value = defaultCodeValue;
     }
-    const defaultPreStyle = (
-      style.hljs || 
-      style['pre[class*=\"language-\"]'] || 
-      { backgroundColor: '#fff' }
-    );
-    const preProps = (
-      useInlineStyles
-      ?
-      Object.assign({}, rest, { style: Object.assign({}, defaultPreStyle, customStyle) })
-      :
-      Object.assign({}, rest, { className: 'hljs'})
-    );
+    
     const tree = wrapLines ? wrapLinesInSpan(codeTree, lineProps) : codeTree.value;
-    const lineNumbers = (
-      showLineNumbers
-      ?
-      <LineNumbers
-        containerStyle={lineNumberContainerStyle}
-        codeStyle={codeTagProps.style || {}}
-        numberStyle={lineNumberStyle}
-        startingLineNumber={startingLineNumber}
-        codeString={code}
-      />
-      :
-      null
-    );
+    
     return (
       <PreTag {...preProps}>
         {lineNumbers}
