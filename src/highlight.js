@@ -168,7 +168,7 @@ function getCodeTree({ astGenerator, language, code, defaultCodeValue }) {
   }
 }
 
-export default function (astGenerator, defaultStyle) {
+export default function (defaultAstGenerator, defaultStyle) {
  return function SyntaxHighlighter({
   language,
   children,
@@ -186,9 +186,10 @@ export default function (astGenerator, defaultStyle) {
   PreTag='pre',
   CodeTag='code',
   code = Array.isArray(children) ? children[0] : children,
-  astGenerator = astGenerator,
+  astGenerator,
   ...rest
  }) {
+  astGenerator = astGenerator || defaultAstGenerator;
 
   const lineNumbers = (
     showLineNumbers
