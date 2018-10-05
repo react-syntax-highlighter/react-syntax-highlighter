@@ -69,7 +69,7 @@ const availableStyles = [
   'vs',
   'xcode',
   'xt256',
-  'zenburn' 
+  'zenburn'
 ];
 class Component extends React.Component {
   constructor() {
@@ -118,7 +118,7 @@ function createElement({ node, style, useInlineStyles, key }) {
   `;
     this.state = {
       selected: 'tomorrow-night-eighties',
-      style: require('../dist/styles/hljs/tomorrow-night-eighties').default,
+      style: require('../styles/hljs/tomorrow-night-eighties').default,
       code: initialCodeString,
       showLineNumbers: false
     }
@@ -137,32 +137,32 @@ function createElement({ node, style, useInlineStyles, key }) {
       <div>
         <h1 style={h1Style}>React Syntax Highlighter</h1>
         <h2 style={h2}>Change Style</h2>
-        <select 
-          value={this.state.selected} 
-          onChange={(e) => this.setState({style: require(`../dist/styles/hljs/${e.target.value}`).default, selected: e.target.value})}
+        <select
+          value={this.state.selected}
+          onChange={(e) => this.setState({style: require(`../styles/hljs/${e.target.value}`).default, selected: e.target.value})}
         >
           {availableStyles.map(s => <option key={s} value={s}>{s}</option>)}
         </select>
         <div style={{paddingTop: '10px', fontSize: 16, color: 'aliceblue'}}>
           <label htmlFor="showLineNumbers">Show Line Numbers:</label>
-          <input 
-            type="checkbox" 
-            checked={this.state.showLineNumbers} 
+          <input
+            type="checkbox"
+            checked={this.state.showLineNumbers}
             onChange={() => this.setState({ showLineNumbers: !this.state.showLineNumbers })}
             id="showLineNumbers"
           />
         </div>
         <div style={{paddingTop: 20, display: 'flex'}}>
-          <textarea 
+          <textarea
             style={{flex: 1, marginTop: 11}}
-            rows={40} 
-            cols={100} 
+            rows={40}
+            cols={100}
             value={this.state.code}
             onChange={(e) => this.setState({code: e.target.value})}
           />
           <div style={{flex: 1, width: '50%'}}>
-            <SyntaxHighlighter 
-              style={this.state.style} 
+            <SyntaxHighlighter
+              style={this.state.style}
               showLineNumbers={this.state.showLineNumbers}
               wrapLines={true}
               lineProps={(lineNumber) => ({

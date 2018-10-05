@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import SyntaxHighlighter from '../dist';
+import SyntaxHighlighter from '../';
 import renderer from 'react-syntax-highlighter-virtualized-renderer';
 
 const availableStyles = [
@@ -70,7 +70,7 @@ const availableStyles = [
   'vs',
   'xcode',
   'xt256',
-  'zenburn' 
+  'zenburn'
 ];
 class Component extends React.Component {
   constructor() {
@@ -286,7 +286,7 @@ function createElement({ node, style, useInlineStyles, key }) {
   `;
     this.state = {
       selected: 'tomorrow-night-eighties',
-      style: require('../dist/styles/hljs/tomorrow-night-eighties').default,
+      style: require('../styles/hljs/tomorrow-night-eighties').default,
       code: initialCodeString,
       showLineNumbers: false,
       width: window.innerWidth,
@@ -306,9 +306,9 @@ function createElement({ node, style, useInlineStyles, key }) {
     return (
       <div style={{ height: "100vh" }}>
         <h1 style={h1Style}>React Syntax Highlighter Virtualized</h1>
-          <SyntaxHighlighter 
+          <SyntaxHighlighter
             customStyle={{ height: "100vh" }}
-            style={this.state.style} 
+            style={this.state.style}
             showLineNumbers={this.state.showLineNumbers}
             renderer={renderer({ height: this.state.height, width: this.state.width })}
             codeTagProps={{ style: { height: "100vh" }}}

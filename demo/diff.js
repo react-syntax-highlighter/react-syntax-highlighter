@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
-import SyntaxHighlighter from '../dist';
-import docco from '../dist/styles/hljs/docco';
+import SyntaxHighlighter from '../';
+import docco from '../styles/hljs/docco';
 
 const CODE = `const woah = fun => fun + 1;
 const dude = woah(2) + 3;
@@ -29,8 +29,8 @@ function DiffHighlight() {
       <h1 style={h1Style}>React SyntaxHighlighter</h1>
       <div style={{paddingTop: 20, display: 'flex'}}>
         <div style={{flex: 1, width: '100%', flexDirection: 'column'}}>
-          <SyntaxHighlighter 
-            style={docco} 
+          <SyntaxHighlighter
+            style={docco}
             wrapLines={true}
             showLineNumbers={true}
             lineStyle={lineNumber => {
@@ -47,15 +47,15 @@ function DiffHighlight() {
             {CODE}
           </SyntaxHighlighter>
           <h1 style={h1Style}>The code to make this happen</h1>
-          <SyntaxHighlighter 
-            style={docco} 
+          <SyntaxHighlighter
+            style={docco}
             wrapLines={true}
           >
             {
               `import React from 'react';
 import { render } from 'react-dom';
-import SyntaxHighlighter from '../dist';
-import docco from '../dist/styles/docco';
+import SyntaxHighlighter from '../';
+import docco from '../styles/docco';
 
 const CODE = \`const woah = fun => fun + 1;
 const dude = woah(2) + 3;
@@ -83,8 +83,8 @@ function DiffHighlight() {
       <h1 style={h1Style}>React SyntaxHighlighter</h1>
       <div style={{paddingTop: 20, display: 'flex'}}>
         <div style={{flex: 1, width: '100%', flexDirection: 'column'}}>
-          <SyntaxHighlighter 
-            style={docco} 
+          <SyntaxHighlighter
+            style={docco}
             wrapLines={true}
             lineStyle={lineNumber => {
               let style = { display: 'block' };
