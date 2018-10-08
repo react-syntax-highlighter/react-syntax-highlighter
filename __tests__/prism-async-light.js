@@ -1,7 +1,16 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import SyntaxHighlighter from "../src/prism-async.js";
+import SyntaxHighlighter from "../src/prism-async-light.js";
+import jsx from '../src/languages/prism/jsx';
 import prism from "../src/styles/prism/prism";
+
+jest.mock('refractor/core', () => ({
+    default: {
+        register: jest.fn(() => jest.fn(() => () => null)),
+    }
+}));
+
+SyntaxHighlighter.registerLanguage('jsx', jsx);
 
 test('SyntaxHighlighter renders jsx highlighted text', () => {
   const tree = renderer.create(
@@ -45,6 +54,7 @@ test('SyntaxHighlighter should just render text if syntax is not registered', ()
 });
 
 test('When the code split is loaded - SyntaxHighlighter renders jsx highlighted text', async () => {
+    
     await SyntaxHighlighter.preload();
       
     const tree = renderer.create(
