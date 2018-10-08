@@ -3,6 +3,6 @@ import createAsyncLoadingHighlighter from './async-syntax-highlighter';
 export default createAsyncLoadingHighlighter({
   supportsLanguageRegistering: true,
   loader: () => import(
-    /* webpackChunkName:"react-syntax-highlighter/refractor-import" */ 
-    'refractor').then(({ default: refractor }) => refractor),
+    /* webpackChunkName:"react-syntax-highlighter/lowlight-import" */ 
+    'lowlight/lib/core').then(({ default: lowlight }) => lowlight),
 });
