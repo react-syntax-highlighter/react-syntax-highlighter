@@ -86,6 +86,21 @@ import prism from 'react-syntax-highlighter/styles/prism/prism';
 registerLanguage('jsx', jsx);
 ```
 
+### Async Build
+
+For optimal bundle size for rendering ASAP, there's a async version of prism light. 
+This versions requires you to use a bundler that supports the dynamic import syntax, like webpack.
+This will defer loading of refractor (17kb gzipped), while refractor loads the code will show with line numbers
+but without highlighting.
+
+```js
+import SyntaxHighlighter, { registerLanguage } from "react-syntax-highlighter/prism-async";
+import js from 'react-syntax-highlighter/languages/hljs/javascript';
+import docco from 'react-syntax-highlighter/styles/hljs/docco'; 
+
+registerLanguage('javascript', js);
+```
+
 ### Built with React Syntax Highlighter
 
 - [mdx-deck](https://github.com/jxnblk/mdx-deck) - MDX-based presentation decks
