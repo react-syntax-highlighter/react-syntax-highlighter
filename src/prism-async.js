@@ -16,7 +16,7 @@ export default class ReactHighlightAsync extends React.PureComponent {
   static highlightInstance = (highlight(null, {}));
   static refractorPromise = null;
   
-  static _loadRefractor() {
+  static loadRefractor() {
     ReactHighlightAsync.refractorPromise = import(/* webpackChunkName:"react-syntax-highlighter/refractor-import" */ 'refractor/core').then(({ default: refractor }) => {
       languages.forEach((language) => refractor.register(language));
       ReactHighlightAsync.refractor = refractor;
@@ -27,7 +27,7 @@ export default class ReactHighlightAsync extends React.PureComponent {
 
   componentDidMount() {
     if (!ReactHighlightAsync.refractorPromise) {
-      ReactHighlightAsync._loadRefractor();
+      ReactHighlightAsync.loadRefractor();
     }
 
     if(!ReactHighlightAsync.refractor) {
