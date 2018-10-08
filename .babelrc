@@ -1,4 +1,20 @@
 {
 	"presets": ["es2015", "react"],
-	"plugins": ["transform-object-rest-spread", "transform-runtime", "babel-plugin-syntax-dynamic-import", "babel-plugin-transform-class-properties"]
+	"plugins": [
+		"transform-object-rest-spread",
+		"transform-runtime",
+		"babel-plugin-syntax-dynamic-import",
+		"babel-plugin-transform-class-properties"
+	],
+	"env": {
+    "test": {
+      "plugins": [
+				"transform-object-rest-spread", 
+				"transform-runtime",
+				"babel-plugin-transform-class-properties",
+        "babel-plugin-transform-dynamic-import"
+      ]
+    }
+  }
 }
+
