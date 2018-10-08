@@ -25,7 +25,7 @@ export default class ReactHighlightAsync extends React.PureComponent {
     return ReactHighlightAsync.refractorPromise;
   }
 
-  componentWillMount() {
+  componentDidMount() {
     if (!ReactHighlightAsync.refractorPromise) {
       ReactHighlightAsync._loadRefractor();
     }
@@ -35,8 +35,8 @@ export default class ReactHighlightAsync extends React.PureComponent {
         this.forceUpdate();
       });
     }
-    
   }
+
   render() {
     return (<ReactHighlightAsync.highlightInstance {...this.props} astGenerator={ReactHighlightAsync.refractor} />);
   }
