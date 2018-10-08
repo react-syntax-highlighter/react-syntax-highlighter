@@ -2,8 +2,9 @@ import React from 'react';
 import highlight from './highlight';
 
 export default (options) => {
-  const supportsLanguageRegistering = !!options.supportsLanguageRegistering
   const loader = options.loader;
+  const isLanguageRegistered = options.isLanguageRegistered;
+  const registerLanguage = options.registerLanguage;
 
   class ReactAsyncHighlighter extends React.PureComponent {
     static astGenerator = null;
@@ -14,16 +15,32 @@ export default (options) => {
     static preload() {
       return ReactAsyncHighlighter.loadAstGenerator();
     }
+    
+    static isRegistered = (language) => {
+      if(!registerLanguage) {
+        return true;
+      }
 
-    static registerLanguage = (_, language) => {
-      if (!supportsLanguageRegistering) {
+      if (!ReactAsyncHighlighter.astGenerator) {
+        // Ast generator not available yet, but language will be registered once it is.
+        return ReactAsyncHighlighter.languages.includes(item => item.name === language);
+      }
+
+      return isLanguageRegistered(ReactAsyncHighlighter.astGenerator, language);
+    }
+
+    static registerLanguage = (name, language) => {
+      if (!registerLanguage) {
         return;
       }
       
       if(ReactAsyncHighlighter.astGenerator) {
-        return ReactAsyncHighlighter.astGenerator.register(language);
+        return registerLanguage(ReactAsyncHighlighter.astGenerator, name, language);
       } else {
-        ReactAsyncHighlighter.languages.push(language);
+        ReactAsyncHighlighter.languages.push({
+          name,
+          language
+        });
       }
     };
     
@@ -32,8 +49,8 @@ export default (options) => {
       ReactAsyncHighlighter.astGeneratorPromise = loader().then(astGenerator => {
         ReactAsyncHighlighter.astGenerator = astGenerator;
 
-        if (supportsLanguageRegistering && ReactAsyncHighlighter.languages.length) {
-          ReactAsyncHighlighter.languages.forEach((language) => astGenerator.register(language));
+        if (registerLanguage && ReactAsyncHighlighter.languages.length) {
+          ReactAsyncHighlighter.languages.forEach(({ name, language }) => registerLanguage(astGenerator, name, language));
         }
       });
       
