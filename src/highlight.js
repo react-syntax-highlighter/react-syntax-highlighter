@@ -221,10 +221,10 @@ export default function (defaultAstGenerator, defaultStyle) {
   if(!astGenerator) {
     return (
       <PreTag {...preProps}>
-      {lineNumbers}
-      <CodeTag {...codeTagProps}>
-        {code}
-      </CodeTag>
+        {lineNumbers}
+        <CodeTag {...codeTagProps}>
+          {code}
+        </CodeTag>
       </PreTag>
     )
   }
