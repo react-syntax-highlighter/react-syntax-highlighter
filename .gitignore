@@ -13,3 +13,6 @@ highlight.js
 prism-light.js
 demo
 prism-async.js
+async-syntax-highlighter.js
+light-async.js
+prism-async-light.js

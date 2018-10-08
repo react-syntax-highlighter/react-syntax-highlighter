@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import SyntaxHighlighter from "../src/prism-async.js";
+import SyntaxHighlighter from "../src/light-async.js";
 import prism from "../src/styles/prism/prism";
 
 test('SyntaxHighlighter renders jsx highlighted text', () => {
