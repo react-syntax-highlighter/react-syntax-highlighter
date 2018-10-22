@@ -45,8 +45,6 @@ test('SyntaxHighlighter should just render text if syntax is not registered', ()
 });
 
 test('When the code split is loaded - SyntaxHighlighter renders jsx highlighted text', async () => {
-    await SyntaxHighlighter.preload();
-      
     const tree = renderer.create(
      <SyntaxHighlighter language="jsx" style={prism}> 
          {

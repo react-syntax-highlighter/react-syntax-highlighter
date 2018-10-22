@@ -8,7 +8,7 @@ exports[`test SyntaxHighlighter renders jsx highlighted text 1`] = `
       "WebkitHyphens": "none",
       "background": "#f5f2f0",
       "color": "black",
-      "fontFamily": "Consolas, Monaco, \'Andale Mono\', \'Ubuntu Mono\', monospace",
+      "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
       "hyphens": "none",
       "lineHeight": "1.5",
       "margin": ".5em 0",
@@ -33,7 +33,7 @@ exports[`test SyntaxHighlighter renders jsx highlighted text 1`] = `
         "WebkitHyphens": "none",
         "background": "none",
         "color": "black",
-        "fontFamily": "Consolas, Monaco, \'Andale Mono\', \'Ubuntu Mono\', monospace",
+        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
         "hyphens": "none",
         "lineHeight": "1.5",
         "msHyphens": "none",
@@ -46,8 +46,8 @@ exports[`test SyntaxHighlighter renders jsx highlighted text 1`] = `
         "wordWrap": "normal"
       }
     }>
-    import React from \"react\";
-    import uniquePropHOC from \"./lib/unique-prop-hoc\";
+    import React from "react";
+    import uniquePropHOC from "./lib/unique-prop-hoc";
     
     class Expire extends React.Component {
         constructor(props) {
@@ -79,7 +79,7 @@ exports[`test SyntaxHighlighter should just render text if syntax is not registe
       "WebkitHyphens": "none",
       "background": "#f5f2f0",
       "color": "black",
-      "fontFamily": "Consolas, Monaco, \'Andale Mono\', \'Ubuntu Mono\', monospace",
+      "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
       "hyphens": "none",
       "lineHeight": "1.5",
       "margin": ".5em 0",
@@ -104,7 +104,7 @@ exports[`test SyntaxHighlighter should just render text if syntax is not registe
         "WebkitHyphens": "none",
         "background": "none",
         "color": "black",
-        "fontFamily": "Consolas, Monaco, \'Andale Mono\', \'Ubuntu Mono\', monospace",
+        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
         "hyphens": "none",
         "lineHeight": "1.5",
         "msHyphens": "none",
@@ -117,7 +117,7 @@ exports[`test SyntaxHighlighter should just render text if syntax is not registe
         "wordWrap": "normal"
       }
     }>
-    print(\'hello\')
+    print('hello')
   </code>
 </pre>
 `;
