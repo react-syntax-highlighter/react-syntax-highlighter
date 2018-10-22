@@ -12,7 +12,7 @@ export default (options) => {
     static languages = [];
 
     static preload() {
-      ReactAsyncHighlighter.loadAstGenerator();
+      return ReactAsyncHighlighter.loadAstGenerator();
     }
 
     static registerLanguage = (_, language) => {
