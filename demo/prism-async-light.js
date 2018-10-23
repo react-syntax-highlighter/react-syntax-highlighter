@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { PrismAsyncLight as SyntaxHighlighter} from '../src';
+import SyntaxHighlighter from '../src/prism-async-light';
 import clike from '../languages/prism/clike';
 import markup from '../languages/prism/markup';
 import markupTemplating from '../languages/prism/markup-templating';
