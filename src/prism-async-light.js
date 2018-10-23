@@ -1,4 +1,5 @@
 import createAsyncLoadingHighlighter from './async-syntax-highlighter';
+import languageLoaders from './async-languages/prism';
 
 export default createAsyncLoadingHighlighter({
   loader: () => import(
@@ -8,8 +9,9 @@ export default createAsyncLoadingHighlighter({
       return module.default || module;
     }),
   isLanguageRegistered: (instance, language) => {
-    return !!instance.getLanguage(language);
+    return instance.registered(language);
   },
+  languageLoaders,
   registerLanguage: (instance, name, language) => {
     return instance.register(language);
   }

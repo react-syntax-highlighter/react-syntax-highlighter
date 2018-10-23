@@ -2,7 +2,8 @@
   "name": "react-syntax-highlighter",
   "version": "9.0.1",
   "description": "syntax highlighting component for react with prismjs or highlightjs ast using inline styles",
-  "main": "index.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "dependencies": {
     "babel-runtime": "^6.18.0",
     "highlight.js": "~9.12.0",
@@ -48,7 +49,9 @@
   },
   "scripts": {
     "dev": "webpack-dev-server --hot --inline",
-    "build": "babel src --out-dir .",
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "BABEL_ENV=cjs babel src --out-dir ./dist/cjs",
+    "build:esm": "BABEL_ENV=esm babel src --out-dir ./dist/esm",
     "watch": "babel src --watch --out-dir .",
     "build-styles-hljs": "node ./lib/build-stylesheets-highlightjs.js",
     "build-languages-hljs": "node ./lib/build-languages-highlightjs.js",

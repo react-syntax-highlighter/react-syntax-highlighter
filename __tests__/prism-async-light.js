@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import SyntaxHighlighter from "../src/prism-async-light.js";
+import { PrismAsyncLight as SyntaxHighlighter } from "../src/prism-async-light.js";
 import jsx from '../src/languages/prism/jsx';
 import prism from "../src/styles/prism/prism";
 

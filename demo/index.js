@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import SyntaxHighlighter from '..';
+import SyntaxHighlighter from '../src/index';
 import ExamplesLinks from './examples-links';
 
 const availableStyles = [

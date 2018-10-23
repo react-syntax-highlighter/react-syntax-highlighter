@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import SyntaxHighlighter from "../src/index.js";
+import SyntaxHighlighter from "../src";
 
 const code = `const woah = fun => fun + 1;
 const dude = woah(2) + 3;
