@@ -1,3 +1,206 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
+<pre
+  style={
+    Object {
+      "MozHyphens": "none",
+      "MozTabSize": "4",
+      "OTabSize": "4",
+      "WebkitHyphens": "none",
+      "background": "#f5f2f0",
+      "color": "black",
+      "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+      "hyphens": "none",
+      "lineHeight": "1.5",
+      "margin": ".5em 0",
+      "msHyphens": "none",
+      "overflow": "auto",
+      "padding": "1em",
+      "tabSize": "4",
+      "textAlign": "left",
+      "textShadow": "0 1px white",
+      "whiteSpace": "pre",
+      "wordBreak": "normal",
+      "wordSpacing": "normal",
+      "wordWrap": "normal",
+    }
+  }
+>
+  <code
+    style={
+      Object {
+        "MozHyphens": "none",
+        "MozTabSize": "4",
+        "OTabSize": "4",
+        "WebkitHyphens": "none",
+        "background": "none",
+        "color": "black",
+        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+        "hyphens": "none",
+        "lineHeight": "1.5",
+        "msHyphens": "none",
+        "tabSize": "4",
+        "textAlign": "left",
+        "textShadow": "0 1px white",
+        "whiteSpace": "pre",
+        "wordBreak": "normal",
+        "wordSpacing": "normal",
+        "wordWrap": "normal",
+      }
+    }
+  >
+    import React from "react";
+import uniquePropHOC from "./lib/unique-prop-hoc";
+
+class Expire extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { component: props.children }
+    }
+    componentDidMount() {
+        setTimeout(() =&gt; {
+            this.setState({
+                component: null
+            });
+        }, this.props.time || this.props.seconds * 1000);
+    }
+    render() {
+        return this.state.component;
+    }
+}
+  </code>
+</pre>
+`;
+
+exports[`SyntaxHighlighter should just render text if syntax is not registered 1`] = `
+<pre
+  style={
+    Object {
+      "MozHyphens": "none",
+      "MozTabSize": "4",
+      "OTabSize": "4",
+      "WebkitHyphens": "none",
+      "background": "#f5f2f0",
+      "color": "black",
+      "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+      "hyphens": "none",
+      "lineHeight": "1.5",
+      "margin": ".5em 0",
+      "msHyphens": "none",
+      "overflow": "auto",
+      "padding": "1em",
+      "tabSize": "4",
+      "textAlign": "left",
+      "textShadow": "0 1px white",
+      "whiteSpace": "pre",
+      "wordBreak": "normal",
+      "wordSpacing": "normal",
+      "wordWrap": "normal",
+    }
+  }
+>
+  <code
+    style={
+      Object {
+        "MozHyphens": "none",
+        "MozTabSize": "4",
+        "OTabSize": "4",
+        "WebkitHyphens": "none",
+        "background": "none",
+        "color": "black",
+        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+        "hyphens": "none",
+        "lineHeight": "1.5",
+        "msHyphens": "none",
+        "tabSize": "4",
+        "textAlign": "left",
+        "textShadow": "0 1px white",
+        "whiteSpace": "pre",
+        "wordBreak": "normal",
+        "wordSpacing": "normal",
+        "wordWrap": "normal",
+      }
+    }
+  >
+    print('hello')
+  </code>
+</pre>
+`;
+
+exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlighted text 1`] = `
+<pre
+  style={
+    Object {
+      "MozHyphens": "none",
+      "MozTabSize": "4",
+      "OTabSize": "4",
+      "WebkitHyphens": "none",
+      "background": "#f5f2f0",
+      "color": "black",
+      "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+      "hyphens": "none",
+      "lineHeight": "1.5",
+      "margin": ".5em 0",
+      "msHyphens": "none",
+      "overflow": "auto",
+      "padding": "1em",
+      "tabSize": "4",
+      "textAlign": "left",
+      "textShadow": "0 1px white",
+      "whiteSpace": "pre",
+      "wordBreak": "normal",
+      "wordSpacing": "normal",
+      "wordWrap": "normal",
+    }
+  }
+>
+  <code
+    style={
+      Object {
+        "MozHyphens": "none",
+        "MozTabSize": "4",
+        "OTabSize": "4",
+        "WebkitHyphens": "none",
+        "background": "none",
+        "color": "black",
+        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+        "hyphens": "none",
+        "lineHeight": "1.5",
+        "msHyphens": "none",
+        "tabSize": "4",
+        "textAlign": "left",
+        "textShadow": "0 1px white",
+        "whiteSpace": "pre",
+        "wordBreak": "normal",
+        "wordSpacing": "normal",
+        "wordWrap": "normal",
+      }
+    }
+  >
+    import React from "react";
+  import uniquePropHOC from "./lib/unique-prop-hoc";
+  
+  class Expire extends React.Component {
+      constructor(props) {
+          super(props);
+          this.state = { component: props.children }
+      }
+      componentDidMount() {
+          setTimeout(() =&gt; {
+              this.setState({
+                  component: null
+              });
+          }, this.props.time || this.props.seconds * 1000);
+      }
+      render() {
+          return this.state.component;
+      }
+  }
+  </code>
+</pre>
+`;
+
 exports[`test SyntaxHighlighter renders jsx highlighted text 1`] = `
 <pre
   style={
@@ -8,7 +211,7 @@ exports[`test SyntaxHighlighter renders jsx highlighted text 1`] = `
       "WebkitHyphens": "none",
       "background": "#f5f2f0",
       "color": "black",
-      "fontFamily": "Consolas, Monaco, \'Andale Mono\', \'Ubuntu Mono\', monospace",
+      "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
       "hyphens": "none",
       "lineHeight": "1.5",
       "margin": ".5em 0",
@@ -33,7 +236,7 @@ exports[`test SyntaxHighlighter renders jsx highlighted text 1`] = `
         "WebkitHyphens": "none",
         "background": "none",
         "color": "black",
-        "fontFamily": "Consolas, Monaco, \'Andale Mono\', \'Ubuntu Mono\', monospace",
+        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
         "hyphens": "none",
         "lineHeight": "1.5",
         "msHyphens": "none",
@@ -46,8 +249,8 @@ exports[`test SyntaxHighlighter renders jsx highlighted text 1`] = `
         "wordWrap": "normal"
       }
     }>
-    import React from \"react\";
-    import uniquePropHOC from \"./lib/unique-prop-hoc\";
+    import React from "react";
+    import uniquePropHOC from "./lib/unique-prop-hoc";
     
     class Expire extends React.Component {
         constructor(props) {
@@ -79,7 +282,7 @@ exports[`test SyntaxHighlighter should just render text if syntax is not registe
       "WebkitHyphens": "none",
       "background": "#f5f2f0",
       "color": "black",
-      "fontFamily": "Consolas, Monaco, \'Andale Mono\', \'Ubuntu Mono\', monospace",
+      "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
       "hyphens": "none",
       "lineHeight": "1.5",
       "margin": ".5em 0",
@@ -104,7 +307,7 @@ exports[`test SyntaxHighlighter should just render text if syntax is not registe
         "WebkitHyphens": "none",
         "background": "none",
         "color": "black",
-        "fontFamily": "Consolas, Monaco, \'Andale Mono\', \'Ubuntu Mono\', monospace",
+        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
         "hyphens": "none",
         "lineHeight": "1.5",
         "msHyphens": "none",
@@ -117,7 +320,7 @@ exports[`test SyntaxHighlighter should just render text if syntax is not registe
         "wordWrap": "normal"
       }
     }>
-    print(\'hello\')
+    print('hello')
   </code>
 </pre>
 `;
@@ -132,7 +335,7 @@ exports[`test When the code split is loaded - SyntaxHighlighter renders jsx high
       "WebkitHyphens": "none",
       "background": "#f5f2f0",
       "color": "black",
-      "fontFamily": "Consolas, Monaco, \'Andale Mono\', \'Ubuntu Mono\', monospace",
+      "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
       "hyphens": "none",
       "lineHeight": "1.5",
       "margin": ".5em 0",
@@ -157,7 +360,7 @@ exports[`test When the code split is loaded - SyntaxHighlighter renders jsx high
         "WebkitHyphens": "none",
         "background": "none",
         "color": "black",
-        "fontFamily": "Consolas, Monaco, \'Andale Mono\', \'Ubuntu Mono\', monospace",
+        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
         "hyphens": "none",
         "lineHeight": "1.5",
         "msHyphens": "none",
@@ -170,8 +373,8 @@ exports[`test When the code split is loaded - SyntaxHighlighter renders jsx high
         "wordWrap": "normal"
       }
     }>
-    import React from \"react\";
-      import uniquePropHOC from \"./lib/unique-prop-hoc\";
+    import React from "react";
+      import uniquePropHOC from "./lib/unique-prop-hoc";
       
       class Expire extends React.Component {
           constructor(props) {
