@@ -1,3 +1,933 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SyntaxHighlighter component renders correctly with refractor instead of lowlight 1`] = `
+<pre
+  style={
+    Object {
+      "MozHyphens": "none",
+      "MozTabSize": "4",
+      "OTabSize": "4",
+      "WebkitHyphens": "none",
+      "background": "#f5f2f0",
+      "color": "black",
+      "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+      "hyphens": "none",
+      "lineHeight": "1.5",
+      "margin": ".5em 0",
+      "msHyphens": "none",
+      "overflow": "auto",
+      "padding": "1em",
+      "tabSize": "4",
+      "textAlign": "left",
+      "textShadow": "0 1px white",
+      "whiteSpace": "pre",
+      "wordBreak": "normal",
+      "wordSpacing": "normal",
+      "wordWrap": "normal",
+    }
+  }
+>
+  <code
+    style={
+      Object {
+        "MozHyphens": "none",
+        "MozTabSize": "4",
+        "OTabSize": "4",
+        "WebkitHyphens": "none",
+        "background": "none",
+        "color": "black",
+        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+        "hyphens": "none",
+        "lineHeight": "1.5",
+        "msHyphens": "none",
+        "tabSize": "4",
+        "textAlign": "left",
+        "textShadow": "0 1px white",
+        "whiteSpace": "pre",
+        "wordBreak": "normal",
+        "wordSpacing": "normal",
+        "wordWrap": "normal",
+      }
+    }
+  >
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      const
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+          "function-variable",
+        ]
+      }
+      style={
+        Object {
+          "color": "#DD4A68",
+        }
+      }
+    >
+      woah
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "background": "hsla(0, 0%, 100%, .5)",
+          "color": "#9a6e3a",
+        }
+      }
+    >
+      =
+    </span>
+     fun 
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "background": "hsla(0, 0%, 100%, .5)",
+          "color": "#9a6e3a",
+        }
+      }
+    >
+      =&gt;
+    </span>
+     fun 
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "background": "hsla(0, 0%, 100%, .5)",
+          "color": "#9a6e3a",
+        }
+      }
+    >
+      +
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#905",
+        }
+      }
+    >
+      1
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      ;
+    </span>
+    
+
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      const
+    </span>
+     dude 
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "background": "hsla(0, 0%, 100%, .5)",
+          "color": "#9a6e3a",
+        }
+      }
+    >
+      =
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#DD4A68",
+        }
+      }
+    >
+      woah
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      (
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#905",
+        }
+      }
+    >
+      2
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      )
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "background": "hsla(0, 0%, 100%, .5)",
+          "color": "#9a6e3a",
+        }
+      }
+    >
+      +
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#905",
+        }
+      }
+    >
+      3
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      ;
+    </span>
+    
+
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      function
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#DD4A68",
+        }
+      }
+    >
+      thisIsAFunction
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      (
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      )
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      {
+    </span>
+    
+  
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      return
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      [
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#905",
+        }
+      }
+    >
+      1
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      ,
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#905",
+        }
+      }
+    >
+      2
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      ,
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#905",
+        }
+      }
+    >
+      3
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      ]
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      .
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#DD4A68",
+        }
+      }
+    >
+      map
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      (
+    </span>
+    n 
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "background": "hsla(0, 0%, 100%, .5)",
+          "color": "#9a6e3a",
+        }
+      }
+    >
+      =&gt;
+    </span>
+     n 
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "background": "hsla(0, 0%, 100%, .5)",
+          "color": "#9a6e3a",
+        }
+      }
+    >
+      +
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#905",
+        }
+      }
+    >
+      1
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      )
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      .
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#DD4A68",
+        }
+      }
+    >
+      filter
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      (
+    </span>
+    n 
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "background": "hsla(0, 0%, 100%, .5)",
+          "color": "#9a6e3a",
+        }
+      }
+    >
+      !==
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#905",
+        }
+      }
+    >
+      3
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      )
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      ;
+    </span>
+    
+
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      }
+    </span>
+    
+console
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      .
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#DD4A68",
+        }
+      }
+    >
+      log
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      (
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#690",
+        }
+      }
+    >
+      'making up fake code is really hard'
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      )
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      ;
+    </span>
+    
+
+
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      function
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#DD4A68",
+        }
+      }
+    >
+      itIs
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      (
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      )
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      {
+    </span>
+    
+  
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      return
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#690",
+        }
+      }
+    >
+      'no seriously really it is'
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      ;
+    </span>
+    
+
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      }
+    </span>
+    
+
+  </code>
+</pre>
+`;
+
 exports[`test SyntaxHighlighter component renders correctly with refractor instead of lowlight 1`] = `
 <pre
   style={
@@ -8,7 +938,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
       "WebkitHyphens": "none",
       "background": "#f5f2f0",
       "color": "black",
-      "fontFamily": "Consolas, Monaco, \'Andale Mono\', \'Ubuntu Mono\', monospace",
+      "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
       "hyphens": "none",
       "lineHeight": "1.5",
       "margin": ".5em 0",
@@ -33,7 +963,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
         "WebkitHyphens": "none",
         "background": "none",
         "color": "black",
-        "fontFamily": "Consolas, Monaco, \'Andale Mono\', \'Ubuntu Mono\', monospace",
+        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
         "hyphens": "none",
         "lineHeight": "1.5",
         "msHyphens": "none",
@@ -704,7 +1634,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
           "color": "#690"
         }
       }>
-      \'making up fake code is really hard\'
+      'making up fake code is really hard'
     </span>
     <span
       className={
@@ -829,7 +1759,7 @@ exports[`test SyntaxHighlighter component renders correctly with refractor inste
           "color": "#690"
         }
       }>
-      \'no seriously really it is\'
+      'no seriously really it is'
     </span>
     <span
       className={
