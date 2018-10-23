@@ -71,7 +71,7 @@ function createElement({ node, style, useInlineStyles, key }) {
       style: require('../styles/prism/atom-dark').default,
       code: initialCodeString,
       showLineNumbers: false,
-      language: 'text'
+      language: 'javascript'
     }
   }
 
@@ -95,14 +95,14 @@ function createElement({ node, style, useInlineStyles, key }) {
           onChange={(e) => this.setState({style: require(`../styles/prism/${e.target.value}`).default, selected: e.target.value})}
         >
           {availableStyles.map(s => <option key={s} value={s}>{s}</option>)}
-        </select> */}
+        </select> 
         <h2 style={h2}>Change Language</h2>
         <select
           value={this.state.language}
           onChange={(e) => this.setState({language: e.target.value})}
         >
           {availableLanguages.map(s => <option key={s} value={s}>{s}</option>)}
-        </select>
+        </select>*/}
         <div style={{paddingTop: '10px', fontSize: 16, color: 'aliceblue'}}>
           <label htmlFor="showLineNumbers">Show Line Numbers:</label>
           <input
