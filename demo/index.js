@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import SyntaxHighlighter from '..';
+import ExamplesLinks from './examples-links';
 
 const availableStyles = [
   'agate',
@@ -136,6 +137,7 @@ function createElement({ node, style, useInlineStyles, key }) {
     return (
       <div>
         <h1 style={h1Style}>React Syntax Highlighter</h1>
+        <ExamplesLinks />
         <h2 style={h2}>Change Style</h2>
         <select
           value={this.state.selected}

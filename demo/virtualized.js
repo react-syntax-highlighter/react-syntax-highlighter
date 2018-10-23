@@ -1,7 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
-import SyntaxHighlighter from '../';
+import SyntaxHighlighter from '../src/index';
 import renderer from 'react-syntax-highlighter-virtualized-renderer';
+import ExamplesLinks from './examples-links';
 
 const availableStyles = [
   'agate',
@@ -306,6 +307,7 @@ function createElement({ node, style, useInlineStyles, key }) {
     return (
       <div style={{ height: "100vh" }}>
         <h1 style={h1Style}>React Syntax Highlighter Virtualized</h1>
+          <ExamplesLinks />
           <SyntaxHighlighter
             customStyle={{ height: "100vh" }}
             style={this.state.style}

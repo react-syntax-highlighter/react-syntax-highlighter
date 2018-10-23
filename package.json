@@ -17,7 +17,7 @@
   "devDependencies": {
     "babel-cli": "^6.9.0",
     "babel-core": "^6.9.0",
-    "babel-loader": "^6.2.4",
+    "babel-loader": "^7.1.5",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-dynamic-import": "^2.0.0",
@@ -36,13 +36,15 @@
     "react-test-renderer": "^15.3.2",
     "style-loader": "^0.13.0",
     "to-camel-case": "^1.0.0",
-    "webpack": "^1.12.12"
+    "webpack": "^4.22.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
   },
   "peerDependencies": {
     "react": ">= 0.14.0"
   },
   "scripts": {
-    "dev": "./node_modules/.bin/webpack --watch --progress",
+    "dev": "webpack-dev-server --hot --inline",
     "build": "babel src --out-dir .",
     "watch": "babel src --watch --out-dir .",
     "build-styles-hljs": "node ./lib/build-stylesheets-highlightjs.js",
