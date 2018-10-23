@@ -5,6 +5,7 @@ export default (options) => {
   const loader = options.loader;
   const isLanguageRegistered = options.isLanguageRegistered;
   const registerLanguage = options.registerLanguage;
+  const languageLoaders = options.languageLoaders;
 
   class ReactAsyncHighlighter extends React.PureComponent {
     static astGenerator = null;
@@ -56,7 +57,13 @@ export default (options) => {
       
       return ReactAsyncHighlighter.astGeneratorPromise;
     }
-  
+    
+    componentDidUpdate() {
+      if(!ReactAsyncHighlighter.isRegistered(this.props.language) && languageLoaders) {
+        this.loadLanguage();
+      }
+    }
+
     componentDidMount() {
       if (!ReactAsyncHighlighter.astGeneratorPromise) {
         ReactAsyncHighlighter.loadAstGenerator();
@@ -64,6 +71,20 @@ export default (options) => {
   
       if(!ReactAsyncHighlighter.astGenerator) {
         ReactAsyncHighlighter.astGeneratorPromise.then(() => {
+          this.forceUpdate();
+        });
+      }
+
+      if(!ReactAsyncHighlighter.isRegistered(this.props.language) && languageLoaders) {
+        this.loadLanguage();
+      }
+    }
+
+    loadLanguage() {
+      const languageLoader = languageLoaders[this.props.language];
+      
+      if (typeof languageLoader === 'function') {
+        languageLoader(ReactAsyncHighlighter.registerLanguage).then(() => {
           this.forceUpdate();
         });
       }

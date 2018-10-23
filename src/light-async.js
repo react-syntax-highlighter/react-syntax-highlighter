@@ -1,4 +1,5 @@
 import createAsyncLoadingHighlighter from './async-syntax-highlighter';
+import languageLoaders from './async-languages/hljs';
 
 export default createAsyncLoadingHighlighter({
   loader: () => import(
@@ -10,6 +11,7 @@ export default createAsyncLoadingHighlighter({
   isLanguageRegistered: (instance, language) => {
     return !!instance.getLanguage(language);
   },
+  languageLoaders,
   registerLanguage: (instance, name, language) => {
     return instance.registerLanguage(name, language);
   }

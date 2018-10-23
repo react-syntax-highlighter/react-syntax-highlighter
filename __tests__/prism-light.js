@@ -1,10 +1,10 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import SyntaxHighlighter,  { registerLanguage } from "../src/prism-light.js";
+import { PrismLight as SyntaxHighlighter } from "../src/prism-light.js";
 import jsx from '../src/languages/prism/jsx';
 import prism from "../src/styles/prism/prism";
 
-registerLanguage('jsx', jsx);
+SyntaxHighlighter.registerLanguage('jsx', jsx);
 
 test('SyntaxHighlighter renders jsx highlighted text', () => {
   const tree = renderer.create(
