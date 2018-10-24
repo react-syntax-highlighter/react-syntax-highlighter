@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import SyntaxHighlighter from '../src/prism';
 import * as styles from "../styles/prism";
+import ExamplesLinks from "./examples-links";
 
 const availableStyles = Object.keys(styles);
 
@@ -49,6 +50,7 @@ export default uniquePropHOC(["time", "seconds"])(Expire);`;
     return (
       <div>
         <h1 style={h1Style}>React Syntax Highlighter</h1>
+        <ExamplesLinks />
         <h2 style={h2}>Change Style</h2>
         <select 
           value={this.state.selected} 
