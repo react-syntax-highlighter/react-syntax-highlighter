@@ -1,7 +1,10 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { PrismAsyncLight as SyntaxHighlighter } from "../src";
+
+// Tree-shaking doesn't work in testing and loads all the languages
+import SyntaxHighlighter from "../src/prism-async-light";
 import prism from "../src/styles/prism/prism";
+import languageLoaders from "../src/async-languages/prism";
 
 test('SyntaxHighlighter renders jsx highlighted text', () => {
   const tree = renderer.create(
@@ -35,7 +38,7 @@ class Expire extends React.Component {
 
 test('SyntaxHighlighter should just render text if syntax is not registered', () => {
   const tree = renderer.create(
-   <SyntaxHighlighter language="python" style={prism}> 
+   <SyntaxHighlighter language="nonexistinglanguage" style={prism}> 
        {
        		"print('hello')"
        }
@@ -44,34 +47,56 @@ test('SyntaxHighlighter should just render text if syntax is not registered', ()
   expect(tree).toMatchSnapshot();
 });
 
-test('When the code split is loaded - SyntaxHighlighter renders jsx highlighted text', async () => {
+test('When the code split is loaded - SyntaxHighlighter renders python highlighted text after async loading python', async () => {
     await SyntaxHighlighter.preload();
       
     const tree = renderer.create(
-     <SyntaxHighlighter language="jsx" style={prism}> 
+     <SyntaxHighlighter language="python" style={prism}> 
          {
-             `import React from "react";
-  import uniquePropHOC from "./lib/unique-prop-hoc";
-  
-  class Expire extends React.Component {
-      constructor(props) {
-          super(props);
-          this.state = { component: props.children }
-      }
-      componentDidMount() {
-          setTimeout(() => {
-              this.setState({
-                  component: null
-              });
-          }, this.props.time || this.props.seconds * 1000);
-      }
-      render() {
-          return this.state.component;
-      }
-  }`
+             `
+             # Import the modules
+import sys
+import random
+
+ans = True
+
+while ans:
+    question = raw_input("Ask the magic 8 ball a question: (press enter to quit) ")
+    
+    answers = random.randint(1,8)
+    
+    if question == "":
+        sys.exit()
+    
+    elif answers == 1:
+        print "It is certain"
+    
+    elif answers == 2:
+        print "Outlook good"
+    
+    elif answers == 3:
+        print "You may rely on it"
+    
+    elif answers == 4:
+        print "Ask again later"
+    
+    elif answers == 5:
+        print "Concentrate and ask again"
+    
+    elif answers == 6:
+        print "Reply hazy, try again"
+    
+    elif answers == 7:
+        print "My reply is no"
+    
+    elif answers == 8:
+        print "My sources say no"
+             `
          }
       </SyntaxHighlighter>
-    ).toJSON();
+    );
+
+    await languageLoaders.python(jest.fn());
     
-    expect(tree).toMatchSnapshot();
+    expect(tree.toJSON()).toMatchSnapshot();
 });
