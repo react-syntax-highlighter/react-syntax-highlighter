@@ -1,77 +1,26 @@
 import React from 'react';
 import { render } from 'react-dom';
-import SyntaxHighlighter from '..';
+import SyntaxHighlighter from '../src/prism-async-light';
+import clike from '../languages/prism/clike';
+import markup from '../languages/prism/markup';
+import markupTemplating from '../languages/prism/markup-templating';
 import ExamplesLinks from './examples-links';
 
+SyntaxHighlighter.registerLanguage('markup', markup);
+SyntaxHighlighter.registerLanguage('markup-templating', markupTemplating);
+SyntaxHighlighter.registerLanguage('clike', clike);
+
 const availableStyles = [
-  'agate',
-  'androidstudio',
-  'arduino-light',
-  'arta',
-  'ascetic',
-  'atelier-cave-dark',
-  'atelier-cave-light',
-  'atelier-dune-dark',
-  'atelier-dune-light',
-  'atelier-estuary-dark',
-  'atelier-estuary-light',
-  'atelier-forest-dark',
-  'atelier-forest-light',
-  'atelier-heath-dark',
-  'atelier-heath-light',
-  'atelier-lakeside-dark',
-  'atelier-lakeside-light',
-  'atelier-plateau-dark',
-  'atelier-plateau-light',
-  'atelier-savanna-dark',
-  'atelier-savanna-light',
-  'atelier-seaside-dark',
-  'atelier-seaside-light',
-  'atelier-sulphurpool-dark',
-  'atelier-sulphurpool-light',
-  'brown-paper',
-  'codepen-embed',
-  'color-brewer',
-  'dark',
-  'darkula',
-  'defaultStyle',
-  'docco',
-  'far',
-  'foundation',
-  'github-gist',
-  'github',
-  'googlecode',
-  'grayscale',
-  'hopscotch',
-  'hybrid',
-  'idea',
-  'ir-black',
-  'kimbie.dark',
-  'kimbie.light',
-  'magula',
-  'mono-blue',
-  'monokai-sublime',
-  'monokai',
-  'obsidian',
-  'paraiso-dark',
-  'paraiso-light',
-  'pojoaque',
-  'railscasts',
-  'rainbow',
-  'school-book',
-  'solarized-dark',
-  'solarized-light',
-  'sunburst',
-  'tomorrow-night-blue',
-  'tomorrow-night-bright',
-  'tomorrow-night-eighties',
-  'tomorrow-night',
-  'tomorrow',
-  'vs',
-  'xcode',
-  'xt256',
-  'zenburn'
+  // TODO: Generate list
 ];
+
+const availableLanguages = [
+  'text',
+  'javascript',
+  'java',
+  'yaml'
+]
+
 class Component extends React.Component {
   constructor() {
     super();
@@ -118,12 +67,14 @@ function createElement({ node, style, useInlineStyles, key }) {
 }
   `;
     this.state = {
-      selected: 'tomorrow-night-eighties',
-      style: require('../styles/hljs/tomorrow-night-eighties').default,
+      selected: 'atom-dark',
+      style: require('../styles/prism/atom-dark').default,
       code: initialCodeString,
-      showLineNumbers: false
+      showLineNumbers: false,
+      language: 'javascript'
     }
   }
+
   render() {
     const h1Style = {
       fontSize: 42,
@@ -136,15 +87,22 @@ function createElement({ node, style, useInlineStyles, key }) {
 
     return (
       <div>
-        <h1 style={h1Style}>React Syntax Highlighter</h1>
+        <h1 style={h1Style}>React Syntax Highlighter Prism Async Light</h1>
         <ExamplesLinks />
-        <h2 style={h2}>Change Style</h2>
+        {/* <h2 style={h2}>Change Style</h2>
         <select
           value={this.state.selected}
-          onChange={(e) => this.setState({style: require(`../styles/hljs/${e.target.value}`).default, selected: e.target.value})}
+          onChange={(e) => this.setState({style: require(`../styles/prism/${e.target.value}`).default, selected: e.target.value})}
         >
           {availableStyles.map(s => <option key={s} value={s}>{s}</option>)}
-        </select>
+        </select> 
+        <h2 style={h2}>Change Language</h2>
+        <select
+          value={this.state.language}
+          onChange={(e) => this.setState({language: e.target.value})}
+        >
+          {availableLanguages.map(s => <option key={s} value={s}>{s}</option>)}
+        </select>*/}
         <div style={{paddingTop: '10px', fontSize: 16, color: 'aliceblue'}}>
           <label htmlFor="showLineNumbers">Show Line Numbers:</label>
           <input
@@ -173,6 +131,7 @@ function createElement({ node, style, useInlineStyles, key }) {
                   alert(`Line Number Clicked: ${lineNumber}`);
                 }
               })}
+              language={this.state.language}
             >
               {this.state.code}
             </SyntaxHighlighter>

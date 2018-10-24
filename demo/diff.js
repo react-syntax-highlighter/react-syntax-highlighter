@@ -1,7 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
-import SyntaxHighlighter from '../';
+import SyntaxHighlighter from '../src/index';
 import docco from '../styles/hljs/docco';
+import ExamplesLinks from './examples-links';
 
 const CODE = `const woah = fun => fun + 1;
 const dude = woah(2) + 3;
@@ -27,6 +28,7 @@ function DiffHighlight() {
   return (
     <div>
       <h1 style={h1Style}>React SyntaxHighlighter</h1>
+      <ExamplesLinks />
       <div style={{paddingTop: 20, display: 'flex'}}>
         <div style={{flex: 1, width: '100%', flexDirection: 'column'}}>
           <SyntaxHighlighter
