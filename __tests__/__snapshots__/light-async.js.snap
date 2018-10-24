@@ -123,7 +123,18 @@ exports[`SyntaxHighlighter should just render text if syntax is not registered 1
       }
     }
   >
-    print('hello')
+    print(
+    <span
+      className={
+        Array [
+          "hljs-string",
+        ]
+      }
+      style={Object {}}
+    >
+      'hello'
+    </span>
+    )
   </code>
 </pre>
 `;
@@ -178,23 +189,306 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
       }
     }
   >
-    import React from "react";
-  import uniquePropHOC from "./lib/unique-prop-hoc";
+    <span
+      className={
+        Array [
+          "hljs-keyword",
+        ]
+      }
+      style={Object {}}
+    >
+      import
+    </span>
+     React 
+    <span
+      className={
+        Array [
+          "hljs-keyword",
+        ]
+      }
+      style={Object {}}
+    >
+      from
+    </span>
+     
+    <span
+      className={
+        Array [
+          "hljs-string",
+        ]
+      }
+      style={Object {}}
+    >
+      "react"
+    </span>
+    ;
   
-  class Expire extends React.Component {
-      constructor(props) {
-          super(props);
-          this.state = { component: props.children }
+    <span
+      className={
+        Array [
+          "hljs-keyword",
+        ]
+      }
+      style={Object {}}
+    >
+      import
+    </span>
+     uniquePropHOC 
+    <span
+      className={
+        Array [
+          "hljs-keyword",
+        ]
+      }
+      style={Object {}}
+    >
+      from
+    </span>
+     
+    <span
+      className={
+        Array [
+          "hljs-string",
+        ]
+      }
+      style={Object {}}
+    >
+      "./lib/unique-prop-hoc"
+    </span>
+    ;
+  
+  
+    <span
+      className={
+        Array [
+          "hljs-class",
+        ]
+      }
+      style={Object {}}
+    >
+      <span
+        className={
+          Array [
+            "hljs-keyword",
+          ]
+        }
+        style={Object {}}
+      >
+        class
+      </span>
+       
+      <span
+        className={
+          Array [
+            "hljs-title",
+          ]
+        }
+        style={Object {}}
+      >
+        Expire
+      </span>
+       
+      <span
+        className={
+          Array [
+            "hljs-keyword",
+          ]
+        }
+        style={Object {}}
+      >
+        extends
+      </span>
+       
+      <span
+        className={
+          Array [
+            "hljs-title",
+          ]
+        }
+        style={Object {}}
+      >
+        React
+      </span>
+      .
+      <span
+        className={
+          Array [
+            "hljs-title",
+          ]
+        }
+        style={Object {}}
+      >
+        Component
+      </span>
+       
+    </span>
+    {
+      
+    <span
+      className={
+        Array [
+          "hljs-keyword",
+        ]
+      }
+      style={Object {}}
+    >
+      constructor
+    </span>
+    (props) {
+          
+    <span
+      className={
+        Array [
+          "hljs-keyword",
+        ]
+      }
+      style={Object {}}
+    >
+      super
+    </span>
+    (props);
+          
+    <span
+      className={
+        Array [
+          "hljs-keyword",
+        ]
+      }
+      style={Object {}}
+    >
+      this
+    </span>
+    .state = { 
+    <span
+      className={
+        Array [
+          "hljs-attr",
+        ]
+      }
+      style={Object {}}
+    >
+      component
+    </span>
+    : props.children }
       }
       componentDidMount() {
-          setTimeout(() =&gt; {
-              this.setState({
-                  component: null
+          setTimeout(
+    <span
+      className={
+        Array [
+          "hljs-function",
+        ]
+      }
+      style={Object {}}
+    >
+      <span
+        className={
+          Array [
+            "hljs-params",
+          ]
+        }
+        style={Object {}}
+      >
+        ()
+      </span>
+       =&gt;
+    </span>
+     {
+              
+    <span
+      className={
+        Array [
+          "hljs-keyword",
+        ]
+      }
+      style={Object {}}
+    >
+      this
+    </span>
+    .setState({
+                  
+    <span
+      className={
+        Array [
+          "hljs-attr",
+        ]
+      }
+      style={Object {}}
+    >
+      component
+    </span>
+    : 
+    <span
+      className={
+        Array [
+          "hljs-literal",
+        ]
+      }
+      style={Object {}}
+    >
+      null
+    </span>
+    
               });
-          }, this.props.time || this.props.seconds * 1000);
+          }, 
+    <span
+      className={
+        Array [
+          "hljs-keyword",
+        ]
+      }
+      style={Object {}}
+    >
+      this
+    </span>
+    .props.time || 
+    <span
+      className={
+        Array [
+          "hljs-keyword",
+        ]
+      }
+      style={Object {}}
+    >
+      this
+    </span>
+    .props.seconds * 
+    <span
+      className={
+        Array [
+          "hljs-number",
+        ]
+      }
+      style={Object {}}
+    >
+      1000
+    </span>
+    );
       }
       render() {
-          return this.state.component;
+          
+    <span
+      className={
+        Array [
+          "hljs-keyword",
+        ]
+      }
+      style={Object {}}
+    >
+      return
+    </span>
+     
+    <span
+      className={
+        Array [
+          "hljs-keyword",
+        ]
+      }
+      style={Object {}}
+    >
+      this
+    </span>
+    .state.component;
       }
   }
   </code>

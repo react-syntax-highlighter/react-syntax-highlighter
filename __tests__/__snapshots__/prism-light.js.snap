@@ -1225,7 +1225,62 @@ exports[`SyntaxHighlighter should just render text if syntax is not registered 1
       }
     }
   >
-    print('hello')
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      print
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      (
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#690",
+        }
+      }
+    >
+      'hello'
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      )
+    </span>
   </code>
 </pre>
 `;

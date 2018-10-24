@@ -12,16 +12,18 @@ module.exports = {
         '@babel/transform-runtime',
         'transform-dynamic-import',
       ],
-      presets: [['@babel/env', { modules: 'commonjs' }]],
+      presets: [['@babel/env']],
     },
     esm: {
       plugins: [
         '@babel/transform-runtime',
       ],
-      presets: [['@babel/env', { modules: false }]],
+      presets: [['@babel/env', {
+        modules: false
+      }]],
     },
     test: {
-      presets: ['@babel/env', { modules: 'commonjs' }],
+      presets: [['@babel/env', { targets: { node: true } } ]],
       // There is no @babel/ scoped transform for this plugin
       plugins: ['transform-dynamic-import'],
     },

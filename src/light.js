@@ -1,5 +1,7 @@
 import highlight from './highlight';
 import lowlight from 'lowlight/lib/core';
 
-export const registerLanguage = lowlight.registerLanguage;
-export default highlight(lowlight, {});
+const SyntaxHighlighter = highlight(lowlight, {});
+SyntaxHighlighter.registerLanguage = lowlight.registerLanguage;
+
+export default SyntaxHighlighter;

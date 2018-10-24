@@ -123,7 +123,62 @@ exports[`SyntaxHighlighter should just render text if syntax is not registered 1
       }
     }
   >
-    print('hello')
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      print
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      (
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#690",
+        }
+      }
+    >
+      'hello'
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      )
+    </span>
   </code>
 </pre>
 `;
@@ -178,25 +233,1127 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
       }
     }
   >
-    import React from "react";
-  import uniquePropHOC from "./lib/unique-prop-hoc";
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      import
+    </span>
+     React 
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      from
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#690",
+        }
+      }
+    >
+      "react"
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      ;
+    </span>
+    
   
-  class Expire extends React.Component {
-      constructor(props) {
-          super(props);
-          this.state = { component: props.children }
+    <span
+      className={
+        Array [
+          "token",
+        ]
       }
-      componentDidMount() {
-          setTimeout(() =&gt; {
-              this.setState({
-                  component: null
-              });
-          }, this.props.time || this.props.seconds * 1000);
+      style={
+        Object {
+          "color": "#07a",
+        }
       }
-      render() {
-          return this.state.component;
+    >
+      import
+    </span>
+     uniquePropHOC 
+    <span
+      className={
+        Array [
+          "token",
+        ]
       }
-  }
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      from
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#690",
+        }
+      }
+    >
+      "./lib/unique-prop-hoc"
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      ;
+    </span>
+    
+  
+  
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      class
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#DD4A68",
+        }
+      }
+    >
+      Expire
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      extends
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#DD4A68",
+        }
+      }
+    >
+      React
+      <span
+        className={
+          Array [
+            "token",
+          ]
+        }
+        style={
+          Object {
+            "color": "#999",
+          }
+        }
+      >
+        .
+      </span>
+      Component
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      {
+    </span>
+    
+      
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#DD4A68",
+        }
+      }
+    >
+      constructor
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      (
+    </span>
+    props
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      )
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      {
+    </span>
+    
+          
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      super
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      (
+    </span>
+    props
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      )
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      ;
+    </span>
+    
+          
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      this
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      .
+    </span>
+    state 
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "background": "hsla(0, 0%, 100%, .5)",
+          "color": "#9a6e3a",
+        }
+      }
+    >
+      =
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      {
+    </span>
+     component
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      :
+    </span>
+     props
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      .
+    </span>
+    children 
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      }
+    </span>
+    
+      
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      }
+    </span>
+    
+      
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#DD4A68",
+        }
+      }
+    >
+      componentDidMount
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      (
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      )
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      {
+    </span>
+    
+          
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#DD4A68",
+        }
+      }
+    >
+      setTimeout
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      (
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      (
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      )
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "background": "hsla(0, 0%, 100%, .5)",
+          "color": "#9a6e3a",
+        }
+      }
+    >
+      =&gt;
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      {
+    </span>
+    
+              
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      this
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      .
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#DD4A68",
+        }
+      }
+    >
+      setState
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      (
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      {
+    </span>
+    
+                  component
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      :
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      null
+    </span>
+    
+              
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      }
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      )
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      ;
+    </span>
+    
+          
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      }
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      ,
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      this
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      .
+    </span>
+    props
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      .
+    </span>
+    time 
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "background": "hsla(0, 0%, 100%, .5)",
+          "color": "#9a6e3a",
+        }
+      }
+    >
+      ||
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      this
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      .
+    </span>
+    props
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      .
+    </span>
+    seconds 
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "background": "hsla(0, 0%, 100%, .5)",
+          "color": "#9a6e3a",
+        }
+      }
+    >
+      *
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#905",
+        }
+      }
+    >
+      1000
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      )
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      ;
+    </span>
+    
+      
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      }
+    </span>
+    
+      
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#DD4A68",
+        }
+      }
+    >
+      render
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      (
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      )
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      {
+    </span>
+    
+          
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      return
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      this
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      .
+    </span>
+    state
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      .
+    </span>
+    component
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      ;
+    </span>
+    
+      
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      }
+    </span>
+    
+  
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      }
+    </span>
   </code>
 </pre>
 `;
