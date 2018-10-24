@@ -123,67 +123,12 @@ exports[`SyntaxHighlighter should just render text if syntax is not registered 1
       }
     }
   >
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#07a",
-        }
-      }
-    >
-      print
-    </span>
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#999",
-        }
-      }
-    >
-      (
-    </span>
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#690",
-        }
-      }
-    >
-      'hello'
-    </span>
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#999",
-        }
-      }
-    >
-      )
-    </span>
+    print('hello')
   </code>
 </pre>
 `;
 
-exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlighted text 1`] = `
+exports[`When the code split is loaded - SyntaxHighlighter renders python highlighted text after async loading python 1`] = `
 <pre
   style={
     Object {
@@ -233,6 +178,24 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
       }
     }
   >
+    
+             
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "slategray",
+        }
+      }
+    >
+      # Import the modules
+    </span>
+    
+
     <span
       className={
         Array [
@@ -247,52 +210,8 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       import
     </span>
-     React 
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#07a",
-        }
-      }
-    >
-      from
-    </span>
-     
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#690",
-        }
-      }
-    >
-      "react"
-    </span>
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#999",
-        }
-      }
-    >
-      ;
-    </span>
-    
-  
+     sys
+
     <span
       className={
         Array [
@@ -307,292 +226,9 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       import
     </span>
-     uniquePropHOC 
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#07a",
-        }
-      }
-    >
-      from
-    </span>
-     
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#690",
-        }
-      }
-    >
-      "./lib/unique-prop-hoc"
-    </span>
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#999",
-        }
-      }
-    >
-      ;
-    </span>
-    
-  
-  
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#07a",
-        }
-      }
-    >
-      class
-    </span>
-     
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#DD4A68",
-        }
-      }
-    >
-      Expire
-    </span>
-     
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#07a",
-        }
-      }
-    >
-      extends
-    </span>
-     
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#DD4A68",
-        }
-      }
-    >
-      React
-      <span
-        className={
-          Array [
-            "token",
-          ]
-        }
-        style={
-          Object {
-            "color": "#999",
-          }
-        }
-      >
-        .
-      </span>
-      Component
-    </span>
-     
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#999",
-        }
-      }
-    >
-      {
-    </span>
-    
-      
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#DD4A68",
-        }
-      }
-    >
-      constructor
-    </span>
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#999",
-        }
-      }
-    >
-      (
-    </span>
-    props
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#999",
-        }
-      }
-    >
-      )
-    </span>
-     
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#999",
-        }
-      }
-    >
-      {
-    </span>
-    
-          
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#07a",
-        }
-      }
-    >
-      super
-    </span>
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#999",
-        }
-      }
-    >
-      (
-    </span>
-    props
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#999",
-        }
-      }
-    >
-      )
-    </span>
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#999",
-        }
-      }
-    >
-      ;
-    </span>
-    
-          
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#07a",
-        }
-      }
-    >
-      this
-    </span>
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#999",
-        }
-      }
-    >
-      .
-    </span>
-    state 
+     random
+
+ans 
     <span
       className={
         Array [
@@ -617,13 +253,30 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
       }
       style={
         Object {
-          "color": "#999",
+          "color": "#905",
         }
       }
     >
-      {
+      True
     </span>
-     component
+    
+
+
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      while
+    </span>
+     ans
     <span
       className={
         Array [
@@ -638,170 +291,8 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       :
     </span>
-     props
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#999",
-        }
-      }
-    >
-      .
-    </span>
-    children 
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#999",
-        }
-      }
-    >
-      }
-    </span>
     
-      
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#999",
-        }
-      }
-    >
-      }
-    </span>
-    
-      
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#DD4A68",
-        }
-      }
-    >
-      componentDidMount
-    </span>
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#999",
-        }
-      }
-    >
-      (
-    </span>
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#999",
-        }
-      }
-    >
-      )
-    </span>
-     
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#999",
-        }
-      }
-    >
-      {
-    </span>
-    
-          
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#DD4A68",
-        }
-      }
-    >
-      setTimeout
-    </span>
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#999",
-        }
-      }
-    >
-      (
-    </span>
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#999",
-        }
-      }
-    >
-      (
-    </span>
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#999",
-        }
-      }
-    >
-      )
-    </span>
-     
+    question 
     <span
       className={
         Array [
@@ -815,7 +306,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
         }
       }
     >
-      =&gt;
+      =
     </span>
      
     <span
@@ -826,55 +317,11 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
       }
       style={
         Object {
-          "color": "#999",
+          "color": "#690",
         }
       }
     >
-      {
-    </span>
-    
-              
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#07a",
-        }
-      }
-    >
-      this
-    </span>
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#999",
-        }
-      }
-    >
-      .
-    </span>
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#DD4A68",
-        }
-      }
-    >
-      setState
+      raw_input
     </span>
     <span
       className={
@@ -898,58 +345,11 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
       }
       style={
         Object {
-          "color": "#999",
+          "color": "#690",
         }
       }
     >
-      {
-    </span>
-    
-                  component
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#999",
-        }
-      }
-    >
-      :
-    </span>
-     
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#07a",
-        }
-      }
-    >
-      null
-    </span>
-    
-              
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#999",
-        }
-      }
-    >
-      }
+      "Ask the magic 8 ball a question: (press enter to quit) "
     </span>
     <span
       className={
@@ -965,22 +365,25 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       )
     </span>
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#999",
-        }
-      }
-    >
-      ;
-    </span>
     
-          
+    
+    answers 
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "background": "hsla(0, 0%, 100%, .5)",
+          "color": "#9a6e3a",
+        }
+      }
+    >
+      =
+    </span>
+     random
     <span
       className={
         Array [
@@ -993,7 +396,36 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
         }
       }
     >
+      .
+    </span>
+    randint
+    <span
+      className={
+        Array [
+          "token",
+        ]
       }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      (
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#905",
+        }
+      }
+    >
+      1
     </span>
     <span
       className={
@@ -1009,127 +441,6 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       ,
     </span>
-     
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#07a",
-        }
-      }
-    >
-      this
-    </span>
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#999",
-        }
-      }
-    >
-      .
-    </span>
-    props
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#999",
-        }
-      }
-    >
-      .
-    </span>
-    time 
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "background": "hsla(0, 0%, 100%, .5)",
-          "color": "#9a6e3a",
-        }
-      }
-    >
-      ||
-    </span>
-     
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#07a",
-        }
-      }
-    >
-      this
-    </span>
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#999",
-        }
-      }
-    >
-      .
-    </span>
-    props
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#999",
-        }
-      }
-    >
-      .
-    </span>
-    seconds 
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "background": "hsla(0, 0%, 100%, .5)",
-          "color": "#9a6e3a",
-        }
-      }
-    >
-      *
-    </span>
-     
     <span
       className={
         Array [
@@ -1142,7 +453,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
         }
       }
     >
-      1000
+      8
     </span>
     <span
       className={
@@ -1158,6 +469,54 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       )
     </span>
+    
+    
+    
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      if
+    </span>
+     question 
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "background": "hsla(0, 0%, 100%, .5)",
+          "color": "#9a6e3a",
+        }
+      }
+    >
+      ==
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#690",
+        }
+      }
+    >
+      ""
+    </span>
     <span
       className={
         Array [
@@ -1170,10 +529,10 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
         }
       }
     >
-      ;
+      :
     </span>
     
-      
+        sys
     <span
       className={
         Array [
@@ -1186,24 +545,9 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
         }
       }
     >
-      }
+      .
     </span>
-    
-      
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#DD4A68",
-        }
-      }
-    >
-      render
-    </span>
+    exit
     <span
       className={
         Array [
@@ -1232,23 +576,9 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       )
     </span>
-     
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#999",
-        }
-      }
-    >
-      {
-    </span>
     
-          
+    
+    
     <span
       className={
         Array [
@@ -1261,9 +591,55 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
         }
       }
     >
-      return
+      elif
+    </span>
+     answers 
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "background": "hsla(0, 0%, 100%, .5)",
+          "color": "#9a6e3a",
+        }
+      }
+    >
+      ==
     </span>
      
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#905",
+        }
+      }
+    >
+      1
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      :
+    </span>
+    
+        
     <span
       className={
         Array [
@@ -1276,8 +652,9 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
         }
       }
     >
-      this
+      print
     </span>
+     
     <span
       className={
         Array [
@@ -1286,44 +663,60 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
       }
       style={
         Object {
-          "color": "#999",
+          "color": "#690",
         }
       }
     >
-      .
-    </span>
-    state
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#999",
-        }
-      }
-    >
-      .
-    </span>
-    component
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#999",
-        }
-      }
-    >
-      ;
+      "It is certain"
     </span>
     
-      
+    
+    
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      elif
+    </span>
+     answers 
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "background": "hsla(0, 0%, 100%, .5)",
+          "color": "#9a6e3a",
+        }
+      }
+    >
+      ==
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#905",
+        }
+      }
+    >
+      2
+    </span>
     <span
       className={
         Array [
@@ -1336,10 +729,87 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
         }
       }
     >
-      }
+      :
     </span>
     
-  
+        
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      print
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#690",
+        }
+      }
+    >
+      "Outlook good"
+    </span>
+    
+    
+    
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      elif
+    </span>
+     answers 
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "background": "hsla(0, 0%, 100%, .5)",
+          "color": "#9a6e3a",
+        }
+      }
+    >
+      ==
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#905",
+        }
+      }
+    >
+      3
+    </span>
     <span
       className={
         Array [
@@ -1352,8 +822,506 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
         }
       }
     >
-      }
+      :
     </span>
+    
+        
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      print
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#690",
+        }
+      }
+    >
+      "You may rely on it"
+    </span>
+    
+    
+    
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      elif
+    </span>
+     answers 
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "background": "hsla(0, 0%, 100%, .5)",
+          "color": "#9a6e3a",
+        }
+      }
+    >
+      ==
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#905",
+        }
+      }
+    >
+      4
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      :
+    </span>
+    
+        
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      print
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#690",
+        }
+      }
+    >
+      "Ask again later"
+    </span>
+    
+    
+    
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      elif
+    </span>
+     answers 
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "background": "hsla(0, 0%, 100%, .5)",
+          "color": "#9a6e3a",
+        }
+      }
+    >
+      ==
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#905",
+        }
+      }
+    >
+      5
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      :
+    </span>
+    
+        
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      print
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#690",
+        }
+      }
+    >
+      "Concentrate and ask again"
+    </span>
+    
+    
+    
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      elif
+    </span>
+     answers 
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "background": "hsla(0, 0%, 100%, .5)",
+          "color": "#9a6e3a",
+        }
+      }
+    >
+      ==
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#905",
+        }
+      }
+    >
+      6
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      :
+    </span>
+    
+        
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      print
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#690",
+        }
+      }
+    >
+      "Reply hazy, try again"
+    </span>
+    
+    
+    
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      elif
+    </span>
+     answers 
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "background": "hsla(0, 0%, 100%, .5)",
+          "color": "#9a6e3a",
+        }
+      }
+    >
+      ==
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#905",
+        }
+      }
+    >
+      7
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      :
+    </span>
+    
+        
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      print
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#690",
+        }
+      }
+    >
+      "My reply is no"
+    </span>
+    
+    
+    
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      elif
+    </span>
+     answers 
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "background": "hsla(0, 0%, 100%, .5)",
+          "color": "#9a6e3a",
+        }
+      }
+    >
+      ==
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#905",
+        }
+      }
+    >
+      8
+    </span>
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#999",
+        }
+      }
+    >
+      :
+    </span>
+    
+        
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      print
+    </span>
+     
+    <span
+      className={
+        Array [
+          "token",
+        ]
+      }
+      style={
+        Object {
+          "color": "#690",
+        }
+      }
+    >
+      "My sources say no"
+    </span>
+    
+             
   </code>
 </pre>
 `;

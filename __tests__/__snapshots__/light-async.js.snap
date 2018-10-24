@@ -1,6 +1,679 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
+exports[`SyntaxHighlighter async load language if not registered 1`] = `
+<pre
+  style={
+    Object {
+      "MozHyphens": "none",
+      "MozTabSize": "4",
+      "OTabSize": "4",
+      "WebkitHyphens": "none",
+      "background": "#f5f2f0",
+      "color": "black",
+      "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+      "hyphens": "none",
+      "lineHeight": "1.5",
+      "margin": ".5em 0",
+      "msHyphens": "none",
+      "overflow": "auto",
+      "padding": "1em",
+      "tabSize": "4",
+      "textAlign": "left",
+      "textShadow": "0 1px white",
+      "whiteSpace": "pre",
+      "wordBreak": "normal",
+      "wordSpacing": "normal",
+      "wordWrap": "normal",
+    }
+  }
+>
+  <code
+    style={
+      Object {
+        "MozHyphens": "none",
+        "MozTabSize": "4",
+        "OTabSize": "4",
+        "WebkitHyphens": "none",
+        "background": "none",
+        "color": "black",
+        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+        "hyphens": "none",
+        "lineHeight": "1.5",
+        "msHyphens": "none",
+        "tabSize": "4",
+        "textAlign": "left",
+        "textShadow": "0 1px white",
+        "whiteSpace": "pre",
+        "wordBreak": "normal",
+        "wordSpacing": "normal",
+        "wordWrap": "normal",
+      }
+    }
+  >
+    print(
+    <span
+      className={
+        Array [
+          "hljs-string",
+        ]
+      }
+      style={Object {}}
+    >
+      'hello'
+    </span>
+    )
+  </code>
+</pre>
+`;
+
+exports[`SyntaxHighlighter renders fortran highlighted text 1`] = `
+<pre
+  style={
+    Object {
+      "MozHyphens": "none",
+      "MozTabSize": "4",
+      "OTabSize": "4",
+      "WebkitHyphens": "none",
+      "background": "#f5f2f0",
+      "color": "black",
+      "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+      "hyphens": "none",
+      "lineHeight": "1.5",
+      "margin": ".5em 0",
+      "msHyphens": "none",
+      "overflow": "auto",
+      "padding": "1em",
+      "tabSize": "4",
+      "textAlign": "left",
+      "textShadow": "0 1px white",
+      "whiteSpace": "pre",
+      "wordBreak": "normal",
+      "wordSpacing": "normal",
+      "wordWrap": "normal",
+    }
+  }
+>
+  <code
+    style={
+      Object {
+        "MozHyphens": "none",
+        "MozTabSize": "4",
+        "OTabSize": "4",
+        "WebkitHyphens": "none",
+        "background": "none",
+        "color": "black",
+        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+        "hyphens": "none",
+        "lineHeight": "1.5",
+        "msHyphens": "none",
+        "tabSize": "4",
+        "textAlign": "left",
+        "textShadow": "0 1px white",
+        "whiteSpace": "pre",
+        "wordBreak": "normal",
+        "wordSpacing": "normal",
+        "wordWrap": "normal",
+      }
+    }
+  >
+    
+            C AREA OF A TRIANGLE WITH A STANDARD SQUARE ROOT 
+    <span
+      className={
+        Array [
+          "hljs-function",
+        ]
+      }
+      style={Object {}}
+    >
+      <span
+        className={
+          Array [
+            "hljs-keyword",
+          ]
+        }
+        style={Object {}}
+      >
+        FUNCTION
+      </span>
+    </span>
+    
+            C INPUT - TAPE READER 
+    <span
+      className={
+        Array [
+          "hljs-keyword",
+        ]
+      }
+      style={Object {}}
+    >
+      UNIT
+    </span>
+     
+    <span
+      className={
+        Array [
+          "hljs-number",
+        ]
+      }
+      style={Object {}}
+    >
+      5
+    </span>
+    , 
+    <span
+      className={
+        Array [
+          "hljs-keyword",
+        ]
+      }
+      style={Object {}}
+    >
+      INTEGER
+    </span>
+     INPUT
+            C OUTPUT - LINE PRINTER 
+    <span
+      className={
+        Array [
+          "hljs-keyword",
+        ]
+      }
+      style={Object {}}
+    >
+      UNIT
+    </span>
+     
+    <span
+      className={
+        Array [
+          "hljs-number",
+        ]
+      }
+      style={Object {}}
+    >
+      6
+    </span>
+    , 
+    <span
+      className={
+        Array [
+          "hljs-keyword",
+        ]
+      }
+      style={Object {}}
+    >
+      REAL
+    </span>
+     OUTPUT
+            C INPUT ERROR DISPLAY ERROR OUTPUT CODE 
+    <span
+      className={
+        Array [
+          "hljs-number",
+        ]
+      }
+      style={Object {}}
+    >
+      1
+    </span>
+     
+    <span
+      className={
+        Array [
+          "hljs-keyword",
+        ]
+      }
+      style={Object {}}
+    >
+      IN
+    </span>
+     JOB CONTROL LISTING
+                READ INPUT TAPE 
+    <span
+      className={
+        Array [
+          "hljs-number",
+        ]
+      }
+      style={Object {}}
+    >
+      5
+    </span>
+    , 
+    <span
+      className={
+        Array [
+          "hljs-number",
+        ]
+      }
+      style={Object {}}
+    >
+      501
+    </span>
+    , IA, IB, IC
+            
+    <span
+      className={
+        Array [
+          "hljs-number",
+        ]
+      }
+      style={Object {}}
+    >
+      501
+    </span>
+     
+    <span
+      className={
+        Array [
+          "hljs-keyword",
+        ]
+      }
+      style={Object {}}
+    >
+      FORMAT
+    </span>
+     (I5)
+            C IA, IB, AND IC MAY NOT BE NEGATIVE OR ZERO
+            C FURTHERMORE, THE 
+    <span
+      className={
+        Array [
+          "hljs-built_in",
+        ]
+      }
+      style={Object {}}
+    >
+      SUM
+    </span>
+     OF TWO SIDES OF A TRIANGLE
+            C MUST BE GREATER THAN THE THIRD SIDE, SO WE CHECK FOR THAT, TOO
+                
+    <span
+      className={
+        Array [
+          "hljs-keyword",
+        ]
+      }
+      style={Object {}}
+    >
+      IF
+    </span>
+     (IA) 
+    <span
+      className={
+        Array [
+          "hljs-number",
+        ]
+      }
+      style={Object {}}
+    >
+      777
+    </span>
+    , 
+    <span
+      className={
+        Array [
+          "hljs-number",
+        ]
+      }
+      style={Object {}}
+    >
+      777
+    </span>
+    , 
+    <span
+      className={
+        Array [
+          "hljs-number",
+        ]
+      }
+      style={Object {}}
+    >
+      701
+    </span>
+    
+            
+    <span
+      className={
+        Array [
+          "hljs-number",
+        ]
+      }
+      style={Object {}}
+    >
+      701
+    </span>
+     
+    <span
+      className={
+        Array [
+          "hljs-keyword",
+        ]
+      }
+      style={Object {}}
+    >
+      IF
+    </span>
+     (IB) 
+    <span
+      className={
+        Array [
+          "hljs-number",
+        ]
+      }
+      style={Object {}}
+    >
+      777
+    </span>
+    , 
+    <span
+      className={
+        Array [
+          "hljs-number",
+        ]
+      }
+      style={Object {}}
+    >
+      777
+    </span>
+    , 
+    <span
+      className={
+        Array [
+          "hljs-number",
+        ]
+      }
+      style={Object {}}
+    >
+      702
+    </span>
+    
+            
+    <span
+      className={
+        Array [
+          "hljs-number",
+        ]
+      }
+      style={Object {}}
+    >
+      702
+    </span>
+     
+    <span
+      className={
+        Array [
+          "hljs-keyword",
+        ]
+      }
+      style={Object {}}
+    >
+      IF
+    </span>
+     (IC) 
+    <span
+      className={
+        Array [
+          "hljs-number",
+        ]
+      }
+      style={Object {}}
+    >
+      777
+    </span>
+    , 
+    <span
+      className={
+        Array [
+          "hljs-number",
+        ]
+      }
+      style={Object {}}
+    >
+      777
+    </span>
+    , 
+    <span
+      className={
+        Array [
+          "hljs-number",
+        ]
+      }
+      style={Object {}}
+    >
+      703
+    </span>
+    
+            
+    <span
+      className={
+        Array [
+          "hljs-number",
+        ]
+      }
+      style={Object {}}
+    >
+      703
+    </span>
+     
+    <span
+      className={
+        Array [
+          "hljs-keyword",
+        ]
+      }
+      style={Object {}}
+    >
+      IF
+    </span>
+     (IA+IB-IC) 
+    <span
+      className={
+        Array [
+          "hljs-number",
+        ]
+      }
+      style={Object {}}
+    >
+      777
+    </span>
+    , 
+    <span
+      className={
+        Array [
+          "hljs-number",
+        ]
+      }
+      style={Object {}}
+    >
+      777
+    </span>
+    , 
+    <span
+      className={
+        Array [
+          "hljs-number",
+        ]
+      }
+      style={Object {}}
+    >
+      704
+    </span>
+    
+            
+    <span
+      className={
+        Array [
+          "hljs-number",
+        ]
+      }
+      style={Object {}}
+    >
+      704
+    </span>
+     
+    <span
+      className={
+        Array [
+          "hljs-keyword",
+        ]
+      }
+      style={Object {}}
+    >
+      IF
+    </span>
+     (IA+IC-IB) 
+    <span
+      className={
+        Array [
+          "hljs-number",
+        ]
+      }
+      style={Object {}}
+    >
+      777
+    </span>
+    , 
+    <span
+      className={
+        Array [
+          "hljs-number",
+        ]
+      }
+      style={Object {}}
+    >
+      777
+    </span>
+    , 
+    <span
+      className={
+        Array [
+          "hljs-number",
+        ]
+      }
+      style={Object {}}
+    >
+      705
+    </span>
+    
+            
+    <span
+      className={
+        Array [
+          "hljs-number",
+        ]
+      }
+      style={Object {}}
+    >
+      705
+    </span>
+     
+    <span
+      className={
+        Array [
+          "hljs-keyword",
+        ]
+      }
+      style={Object {}}
+    >
+      IF
+    </span>
+     (IB+IC-IA) 
+    <span
+      className={
+        Array [
+          "hljs-number",
+        ]
+      }
+      style={Object {}}
+    >
+      777
+    </span>
+    , 
+    <span
+      className={
+        Array [
+          "hljs-number",
+        ]
+      }
+      style={Object {}}
+    >
+      777
+    </span>
+    , 
+    <span
+      className={
+        Array [
+          "hljs-number",
+        ]
+      }
+      style={Object {}}
+    >
+      799
+    </span>
+    
+            
+    <span
+      className={
+        Array [
+          "hljs-number",
+        ]
+      }
+      style={Object {}}
+    >
+      777
+    </span>
+     
+    <span
+      className={
+        Array [
+          "hljs-keyword",
+        ]
+      }
+      style={Object {}}
+    >
+      STOP
+    </span>
+     
+    <span
+      className={
+        Array [
+          "hljs-number",
+        ]
+      }
+      style={Object {}}
+    >
+      1
+    </span>
+    
+            C USING HERON
+    <span
+      className={
+        Array [
+          "hljs-string",
+        ]
+      }
+      style={Object {}}
+    >
+      'S FORMULA WE CALCULATE THE
+            C AREA OF THE TRIANGLE
+            799 S = FLOATF (IA + IB + IC) / 2.0
+                AREA = SQRTF( S * (S - FLOATF(IA)) * (S - FLOATF(IB)) *
+                +     (S - FLOATF(IC)))
+                WRITE OUTPUT TAPE 6, 601, IA, IB, IC, AREA
+            601 FORMAT (4H A= ,I5,5H  B= ,I5,5H  C= ,I5,8H  AREA= ,F10.2,
+                +        13H SQUARE UNITS)
+                STOP
+                END
+                   
+    </span>
+  </code>
+</pre>
+`;
+
+exports[`SyntaxHighlighter renders javascript highlighted text 1`] = `
 <pre
   style={
     Object {
@@ -73,7 +746,7 @@ class Expire extends React.Component {
 </pre>
 `;
 
-exports[`SyntaxHighlighter should just render text if syntax is not registered 1`] = `
+exports[`SyntaxHighlighter renders text while language loads 1`] = `
 <pre
   style={
     Object {
@@ -123,18 +796,34 @@ exports[`SyntaxHighlighter should just render text if syntax is not registered 1
       }
     }
   >
-    print(
-    <span
-      className={
-        Array [
-          "hljs-string",
-        ]
-      }
-      style={Object {}}
-    >
-      'hello'
-    </span>
-    )
+    
+            C AREA OF A TRIANGLE WITH A STANDARD SQUARE ROOT FUNCTION
+            C INPUT - TAPE READER UNIT 5, INTEGER INPUT
+            C OUTPUT - LINE PRINTER UNIT 6, REAL OUTPUT
+            C INPUT ERROR DISPLAY ERROR OUTPUT CODE 1 IN JOB CONTROL LISTING
+                READ INPUT TAPE 5, 501, IA, IB, IC
+            501 FORMAT (3I5)
+            C IA, IB, AND IC MAY NOT BE NEGATIVE OR ZERO
+            C FURTHERMORE, THE SUM OF TWO SIDES OF A TRIANGLE
+            C MUST BE GREATER THAN THE THIRD SIDE, SO WE CHECK FOR THAT, TOO
+                IF (IA) 777, 777, 701
+            701 IF (IB) 777, 777, 702
+            702 IF (IC) 777, 777, 703
+            703 IF (IA+IB-IC) 777, 777, 704
+            704 IF (IA+IC-IB) 777, 777, 705
+            705 IF (IB+IC-IA) 777, 777, 799
+            777 STOP 1
+            C USING HERON'S FORMULA WE CALCULATE THE
+            C AREA OF THE TRIANGLE
+            799 S = FLOATF (IA + IB + IC) / 2.0
+                AREA = SQRTF( S * (S - FLOATF(IA)) * (S - FLOATF(IB)) *
+                +     (S - FLOATF(IC)))
+                WRITE OUTPUT TAPE 6, 601, IA, IB, IC, AREA
+            601 FORMAT (4H A= ,I5,5H  B= ,I5,5H  C= ,I5,8H  AREA= ,F10.2,
+                +        13H SQUARE UNITS)
+                STOP
+                END
+                   
   </code>
 </pre>
 `;
