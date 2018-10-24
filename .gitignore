@@ -3,16 +3,6 @@ dist
 .DS_Store
 npm-debug.log
 coverage
-index.js
-prism.js
 styles
 languages
-light.js
-create-element.js
-highlight.js
-prism-light.js
 demo
-prism-async.js
-async-syntax-highlighter.js
-light-async.js
-prism-async-light.js
