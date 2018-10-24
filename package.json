@@ -56,7 +56,8 @@
     "build-languages-prism": "node ./lib/build-languages-refractor.js",
     "prepublish": "npm run build-styles-hljs && npm run build-languages-hljs && npm run build-styles-prism && npm run build-languages-prism && npm run build",
     "test": "jest",
-    "test-ci": "jest && codecov"
+    "test-ci": "jest && codecov",
+    "publish-coverage": "codecov"
   },
   "repository": {
     "type": "git",

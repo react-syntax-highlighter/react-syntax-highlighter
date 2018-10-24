@@ -3,4 +3,5 @@ machine:
     version: 6.2.2
 test: 
   override:
-    - npm run test-ci
+    - npm run test
+    - npm run publish-coverage
