@@ -1,5 +1,30 @@
 # Changelog
 
+##  [10.0.0]
+### Changed
+- registerLanguage is now a static method of the default export of highlighters that require registering of languages.
+- prism-async-light & light-async now ship with their own language loaders
+- Added a esm & cjs output, importing should now be done through import. OR the import should point into the dist directory.
+```
+import SyntaxHighlighter from "react-syntax-highlighter/prism";
+
+// Becomes:
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+
+// OR (less ideally)
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter/dist/cjs/prism";
+// OR
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter/dist/esm/prism";
+```
+
+## [9.0.1]
+### Changed
+- fixed code-splitting in webpack 3.
+
+## [9.0.0]
+### Added
+- Async loaded versions of prism & highlight
+
 
 ## [8.0.1] 2018-07-05
 ### Added
