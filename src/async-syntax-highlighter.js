@@ -16,6 +16,15 @@ export default (options) => {
     static preload() {
       return ReactAsyncHighlighter.loadAstGenerator();
     }
+
+    static async loadLanguage(language) {
+      const languageLoader = languageLoaders[language];
+      if (typeof languageLoader === 'function') {
+        return languageLoader(ReactAsyncHighlighter.registerLanguage);
+      } else {
+        throw `Language ${language} not supported`
+      }
+    }
     
     static isRegistered = (language) => {
       if(!registerLanguage) {
@@ -67,25 +76,24 @@ export default (options) => {
       if (!ReactAsyncHighlighter.astGeneratorPromise) {
         ReactAsyncHighlighter.loadAstGenerator();
       }
-  
+      
       if(!ReactAsyncHighlighter.astGenerator) {
         ReactAsyncHighlighter.astGeneratorPromise.then(() => {
           this.forceUpdate();
         });
       }
-
       if(!ReactAsyncHighlighter.isRegistered(this.props.language) && languageLoaders) {
         this.loadLanguage();
       }
     }
 
-    loadLanguage() {
-      const languageLoader = languageLoaders[this.props.language];
-      
-      if (typeof languageLoader === 'function') {
-        languageLoader(ReactAsyncHighlighter.registerLanguage).then(() => {
+    async loadLanguage() {
+      try {
+        ReactAsyncHighlighter.loadLanguage(this.props.language).then(() => {
           this.forceUpdate();
         });
+      } catch (error) {
+        console.log(error);
       }
     }
   
