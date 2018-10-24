@@ -3,8 +3,6 @@ import renderer from 'react-test-renderer';
 import { PrismAsyncLight as SyntaxHighlighter } from "../src";
 import prism from "../src/styles/prism/prism";
 
-
-
 test('SyntaxHighlighter renders jsx highlighted text', () => {
   const tree = renderer.create(
    <SyntaxHighlighter language="jsx" style={prism}> 
@@ -47,7 +45,6 @@ test('SyntaxHighlighter should just render text if syntax is not registered', ()
 });
 
 test('When the code split is loaded - SyntaxHighlighter renders jsx highlighted text', async () => {
-    
     await SyntaxHighlighter.preload();
       
     const tree = renderer.create(
