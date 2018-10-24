@@ -24,7 +24,7 @@ export default (options) => {
 
       if (!ReactAsyncHighlighter.astGenerator) {
         // Ast generator not available yet, but language will be registered once it is.
-        return ReactAsyncHighlighter.languages.includes(item => item.name === language);
+        return ReactAsyncHighlighter.languages.findIndex(item => item.name === language) > -1;
       }
 
       return isLanguageRegistered(ReactAsyncHighlighter.astGenerator, language);
@@ -44,7 +44,6 @@ export default (options) => {
         });
       }
     };
-    
 
     static loadAstGenerator() {
       ReactAsyncHighlighter.astGeneratorPromise = loader().then(astGenerator => {
