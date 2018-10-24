@@ -88,17 +88,19 @@ registerLanguage('jsx', jsx);
 
 ### Async Build
 
-For optimal bundle size for rendering ASAP, there's a async version of prism light. 
+For optimal bundle size for rendering ASAP, there's a async version of prism light & light. 
 This versions requires you to use a bundler that supports the dynamic import syntax, like webpack.
-This will defer loading of refractor (17kb gzipped), while refractor loads the code will show with line numbers
+This will defer loading of refractor (17kb gzipped) & the languages, while code splits are loaded the code will show with line numbers
 but without highlighting.
 
+Prism version:
 ```js
-import SyntaxHighlighter, { registerLanguage } from "react-syntax-highlighter/prism-async";
-import js from 'react-syntax-highlighter/languages/hljs/javascript';
-import docco from 'react-syntax-highlighter/styles/hljs/docco'; 
+import { PrismAsyncLight as SyntaxHighlighter } from "react-syntax-highlighter";
+```
 
-registerLanguage('javascript', js);
+Highlight version
+```js
+import { LightAsync as SyntaxHighlighter } from "react-syntax-highlighter";
 ```
 
 ### Built with React Syntax Highlighter
