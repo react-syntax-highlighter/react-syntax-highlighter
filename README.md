@@ -57,7 +57,7 @@ const Component = () => {
 Using <a href="https://github.com/wooorm/refractor">refractor</a> we can use an ast built on languages from Prism.js instead of highlight.js. This is beneficial especially when highlighting jsx, a problem long unsolved by this module. The semantics of use are basically the same although a light mode is not yet supported (though is coming in the future). You can see a demo(with jsx) using Prism(refractor) <a href="http://conor.rodeo/react-syntax-highlighter/demo/prism.html">here</a>.
 
 ```js
-import SyntaxHighlighter from 'react-syntax-highlighter/prism';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { dark } from 'react-syntax-highlighter/styles/prism';
 const Component = () => {
   const codeString = '(num) => num + 1';
@@ -70,20 +70,20 @@ const Component = () => {
 React Syntax Highlighter used in the way described above can have a fairly large footprint. For those that desire more control over what exactly they need, there is an option to import a light build. If you choose to use this you will need to specifically import desired languages and register them using the registerLanguage export from the light build. There is also no default style provided. 
 
 ```js
-import SyntaxHighlighter, { registerLanguage } from "react-syntax-highlighter/light";
+import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
 import js from 'react-syntax-highlighter/languages/hljs/javascript';
 import docco from 'react-syntax-highlighter/styles/hljs/docco'; 
 
-registerLanguage('javascript', js);
+Light.registerLanguage('javascript', js);
 ```
 
 You can require `react-syntax-highlighter/prism-light` to use the prism light build instead of the standard light build. 
 ```jsx
-import SyntaxHighlighter, { registerLanguage } from "react-syntax-highlighter/prism-light";
+import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter/prism-light";
 import jsx from 'react-syntax-highlighter/languages/prism/jsx';
 import prism from 'react-syntax-highlighter/styles/prism/prism'; 
 
-registerLanguage('jsx', jsx);
+SyntaxHighlighter.registerLanguage('jsx', jsx);
 ```
 
 ### Async Build
