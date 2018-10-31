@@ -39,7 +39,7 @@ class Expire extends React.Component {
 });
 
 
-test('SyntaxHighlighter async load language if not registered', async () => {
+test('SyntaxHighlighter render as text if language doesnt exist', () => {
   const tree = renderer.create(
    <SyntaxHighlighter language="nonexistinglanguage" style={prism}> 
        {
@@ -47,7 +47,6 @@ test('SyntaxHighlighter async load language if not registered', async () => {
        }
     </SyntaxHighlighter>
   )
-  await languageLoaders.python(jest.fn());
   expect(tree.toJSON()).toMatchSnapshot();
 });
 
@@ -82,7 +81,6 @@ test('When the code split is loaded - SyntaxHighlighter renders jsx highlighted 
 
     await languageLoaders.javascript(jest.fn());
     expect(tree.toJSON()).toMatchSnapshot();
-    
 });
 
 test('SyntaxHighlighter renders fortran highlighted text', async () => {

@@ -7,4 +7,5 @@ export default createAsyncLoadingHighlighter({
       // Webpack 3 returns module.exports as default as module, but webpack 4 returns module.exports as module.default
       return module.default || module;
     }),
+    noAsyncLoadingLanguages: true
 });

@@ -66,6 +66,61 @@ exports[`SyntaxHighlighter async load language if not registered 1`] = `
 </pre>
 `;
 
+exports[`SyntaxHighlighter render as text if language doesnt exist 1`] = `
+<pre
+  style={
+    Object {
+      "MozHyphens": "none",
+      "MozTabSize": "4",
+      "OTabSize": "4",
+      "WebkitHyphens": "none",
+      "background": "#f5f2f0",
+      "color": "black",
+      "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+      "hyphens": "none",
+      "lineHeight": "1.5",
+      "margin": ".5em 0",
+      "msHyphens": "none",
+      "overflow": "auto",
+      "padding": "1em",
+      "tabSize": "4",
+      "textAlign": "left",
+      "textShadow": "0 1px white",
+      "whiteSpace": "pre",
+      "wordBreak": "normal",
+      "wordSpacing": "normal",
+      "wordWrap": "normal",
+    }
+  }
+>
+  <code
+    style={
+      Object {
+        "MozHyphens": "none",
+        "MozTabSize": "4",
+        "OTabSize": "4",
+        "WebkitHyphens": "none",
+        "background": "none",
+        "color": "black",
+        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+        "hyphens": "none",
+        "lineHeight": "1.5",
+        "msHyphens": "none",
+        "tabSize": "4",
+        "textAlign": "left",
+        "textShadow": "0 1px white",
+        "whiteSpace": "pre",
+        "wordBreak": "normal",
+        "wordSpacing": "normal",
+        "wordWrap": "normal",
+      }
+    }
+  >
+    print('hello')
+  </code>
+</pre>
+`;
+
 exports[`SyntaxHighlighter renders fortran highlighted text 1`] = `
 <pre
   style={
