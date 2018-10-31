@@ -4,17 +4,25 @@ import AsyncSyntaxHighlighter from "../src/async-syntax-highlighter";
 
 test('AsyncSyntaxHighlighter registerLanguage when registerLanguage is undefined', () => {
   const SyntaxHighlighter = AsyncSyntaxHighlighter({});
-
-  SyntaxHighlighter.registerLanguage("test", {});
-  expect(SyntaxHighlighter.languages).toEqual([]);
+  
+  expect(() => {
+    SyntaxHighlighter.registerLanguage("test", {});
+  }).toThrowError();
+  
+  expect(SyntaxHighlighter.languages.size).toEqual(0);
 });
 
 test('AsyncSyntaxHighlighter registerLanguage when registerLanguage is defined but astGenerator isn\'t', () => {
   const registerLanguage = jest.fn();
   const SyntaxHighlighter = AsyncSyntaxHighlighter({ registerLanguage });
-
-  SyntaxHighlighter.registerLanguage("test", {});
-  expect(SyntaxHighlighter.languages).toEqual([ { name: "test", language: {} }]);
+  
+  const language = {
+    123: 456
+  };
+  
+  SyntaxHighlighter.registerLanguage("test", language);
+  expect(SyntaxHighlighter.languages.get('test')).toEqual(language);
+  expect(SyntaxHighlighter.languages.size).toEqual(1);
 });
 
 test('AsyncSyntaxHighlighter registerLanguage when registerLanguage & astGenerator is defined', () => {
@@ -31,7 +39,9 @@ test('AsyncSyntaxHighlighter registerLanguage when registerLanguage & astGenerat
 test('AsyncSyntaxHighlighter isRegistered when registerLanguage is not defined', () => {
   const SyntaxHighlighter = AsyncSyntaxHighlighter({ });
 
-  expect(SyntaxHighlighter.isRegistered("test")).toEqual(true);
+  expect(() => {
+    SyntaxHighlighter.isRegistered("test", {});
+  }).toThrowError();
 });
 
 test('AsyncSyntaxHighlighter isRegistered when astGenerator is not defined it checks the languages array', () => {
@@ -39,7 +49,7 @@ test('AsyncSyntaxHighlighter isRegistered when astGenerator is not defined it ch
   
   const SyntaxHighlighter = AsyncSyntaxHighlighter({ registerLanguage });
   SyntaxHighlighter.astGenerator = null;
-  SyntaxHighlighter.languages.push({ name: 'test' })
+  SyntaxHighlighter.languages.set('test', {});
   expect(SyntaxHighlighter.isRegistered('test')).toEqual(true);
 });
 
@@ -48,7 +58,7 @@ test('AsyncSyntaxHighlighter isRegistered when astGenerator is defined it should
   
   const SyntaxHighlighter = AsyncSyntaxHighlighter({ registerLanguage });
   SyntaxHighlighter.astGenerator = null;
-  SyntaxHighlighter.languages.push({ name: 'test' })
+  SyntaxHighlighter.languages.set('test', {})
   expect(SyntaxHighlighter.isRegistered('test')).toEqual(true);
 });
 
@@ -82,7 +92,7 @@ test('AsyncSyntaxHighlighter loadAstGenerator when astGenerator resolves and it 
   const SyntaxHighlighter = AsyncSyntaxHighlighter({ loader, registerLanguage });
   const testLanguage = { name: "cpp", language: { } };
 
-  SyntaxHighlighter.languages.push(testLanguage);
+  SyntaxHighlighter.languages.set(testLanguage.name, testLanguage.language)
 
   await SyntaxHighlighter.loadAstGenerator();
   expect(registerLanguage).toBeCalledWith(astGenerator, testLanguage.name, testLanguage.language)

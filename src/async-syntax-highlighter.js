@@ -2,16 +2,19 @@ import React from 'react';
 import highlight from './highlight';
 
 export default (options) => {
-  const loader = options.loader;
-  const isLanguageRegistered = options.isLanguageRegistered;
-  const registerLanguage = options.registerLanguage;
-  const languageLoaders = options.languageLoaders;
+  const { 
+    loader, 
+    isLanguageRegistered, 
+    registerLanguage, 
+    languageLoaders, 
+    noAsyncLoadingLanguages 
+  } = options;
 
   class ReactAsyncHighlighter extends React.PureComponent {
     static astGenerator = null;
     static highlightInstance = (highlight(null, {}));
     static astGeneratorPromise = null;
-    static languages = [];
+    static languages = new Map();
 
     static preload() {
       return ReactAsyncHighlighter.loadAstGenerator();
@@ -19,21 +22,30 @@ export default (options) => {
 
     static async loadLanguage(language) {
       const languageLoader = languageLoaders[language];
+      
       if (typeof languageLoader === 'function') {
         return languageLoader(ReactAsyncHighlighter.registerLanguage);
       } else {
-        throw `Language ${language} not supported`
+        throw new Error(`Language ${language} not supported`);
       }
     }
     
+    static isSupportedLanguage(language) {
+      return ReactAsyncHighlighter.isRegistered(language) || typeof languageLoaders[language] === 'function';
+    }
+
     static isRegistered = (language) => {
-      if(!registerLanguage) {
+      if(noAsyncLoadingLanguages) {
         return true;
+      }
+
+      if(!registerLanguage) {
+        throw new Error('Current syntax highlighter doesn\'t support registration of languages');
       }
 
       if (!ReactAsyncHighlighter.astGenerator) {
         // Ast generator not available yet, but language will be registered once it is.
-        return ReactAsyncHighlighter.languages.findIndex(item => item.name === language) > -1;
+        return ReactAsyncHighlighter.languages.has(language);
       }
 
       return isLanguageRegistered(ReactAsyncHighlighter.astGenerator, language);
@@ -41,16 +53,13 @@ export default (options) => {
 
     static registerLanguage = (name, language) => {
       if (!registerLanguage) {
-        return;
+        throw new Error('Current syntax highlighter doesn\'t support registration of languages');
       }
       
       if(ReactAsyncHighlighter.astGenerator) {
         return registerLanguage(ReactAsyncHighlighter.astGenerator, name, language);
       } else {
-        ReactAsyncHighlighter.languages.push({
-          name,
-          language
-        });
+        ReactAsyncHighlighter.languages.set(name, language);
       }
     };
 
@@ -58,8 +67,8 @@ export default (options) => {
       ReactAsyncHighlighter.astGeneratorPromise = loader().then(astGenerator => {
         ReactAsyncHighlighter.astGenerator = astGenerator;
 
-        if (registerLanguage && ReactAsyncHighlighter.languages.length) {
-          ReactAsyncHighlighter.languages.forEach(({ name, language }) => registerLanguage(astGenerator, name, language));
+        if (registerLanguage) {
+          ReactAsyncHighlighter.languages.forEach(( language, name ) => registerLanguage(astGenerator, name, language));
         }
       });
       
@@ -82,23 +91,35 @@ export default (options) => {
           this.forceUpdate();
         });
       }
+
       if(!ReactAsyncHighlighter.isRegistered(this.props.language) && languageLoaders) {
         this.loadLanguage();
       }
     }
 
-    async loadLanguage() {
-      try {
-        ReactAsyncHighlighter.loadLanguage(this.props.language).then(() => {
-          this.forceUpdate();
-        });
-      } catch (error) {
-        console.log(error);
+    loadLanguage() {
+      const { language } = this.props; 
+      
+      if (language === 'text') {
+        return;
       }
+
+      ReactAsyncHighlighter.loadLanguage(language).then(() => {
+        this.forceUpdate();
+      });
+    }
+
+    normalizeLanguage(language) {
+      return ReactAsyncHighlighter.isSupportedLanguage(language) ? language : 'text';
     }
   
     render() {
-      return (<ReactAsyncHighlighter.highlightInstance {...this.props} astGenerator={ReactAsyncHighlighter.astGenerator} />);
+      return (
+        <ReactAsyncHighlighter.highlightInstance 
+          {...this.props}
+          language={this.normalizeLanguage(this.props.language)}
+          astGenerator={ReactAsyncHighlighter.astGenerator} 
+        />);
     }
   };
 
