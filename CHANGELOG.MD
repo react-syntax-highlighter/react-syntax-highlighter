@@ -16,6 +16,17 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter/dist/cjs/pr
 // OR
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter/dist/esm/prism";
 ```
+- styles have moved into the dist directory update your imports from
+
+```
+import style from 'react-syntax-highlighter/styles/prism'
+```
+
+To
+
+```
+import style from 'react-syntax-highlighter/dist/styles/prism'
+```
 
 ## [9.0.1]
 ### Changed
