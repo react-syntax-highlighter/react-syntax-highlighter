@@ -27,7 +27,7 @@ I do realize that javascript styles are not for everyone, so you can optionally 
 
 #### props
 * `language` - the language to highlight code in. Available options [here for hljs](./AVAILABLE_LANGUAGES_HLJS.MD) and [here for prism](./AVAILABLE_LANGUAGES_PRISM.MD). (pass text to just render plain monospaced text)
-* `style` - style object required from styles/hljs or styles/prism directory depending on whether or not you are importing from `react-syntax-highlighter` or `react-syntax-highlighter/prism`  directory [here for hljs](./AVAILABLE_STYLES_HLJS.MD). and [here for prism](./AVAILABLE_STYLES_PRISM.MD). `import { style } from 'react-syntax-highlighter/styles/{hljs|prism}'` . Will use default if style is not included.
+* `style` - style object required from styles/hljs or styles/prism directory depending on whether or not you are importing from `react-syntax-highlighter` or `react-syntax-highlighter/prism`  directory [here for hljs](./AVAILABLE_STYLES_HLJS.MD). and [here for prism](./AVAILABLE_STYLES_PRISM.MD). `import { style } from 'react-syntax-highlighter/dist/styles/{hljs|prism}'` . Will use default if style is not included.
 * `children` - the code to highlight.
 * `customStyle` - prop that will be combined with the top level style on the pre tag, styles here will overwrite earlier styles. 
 * `codeTagProps` - props that will be spread into the `<code>` tag that is the direct parent of the highlighted code elements. Useful for styling/assigning classNames.
@@ -45,7 +45,7 @@ I do realize that javascript styles are not for everyone, so you can optionally 
 
 ```js
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { docco } from 'react-syntax-highlighter/styles/hljs';
+import { docco } from 'react-syntax-highlighter/dist/styles/hljs';
 const Component = () => {
   const codeString = '(num) => num + 1';
   return <SyntaxHighlighter language='javascript' style={docco}>{codeString}</SyntaxHighlighter>;  
@@ -58,7 +58,7 @@ Using <a href="https://github.com/wooorm/refractor">refractor</a> we can use an 
 
 ```js
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { dark } from 'react-syntax-highlighter/styles/prism';
+import { dark } from 'react-syntax-highlighter/dist/styles/prism';
 const Component = () => {
   const codeString = '(num) => num + 1';
   return <SyntaxHighlighter language='javascript' style={dark}>{codeString}</SyntaxHighlighter>;  
@@ -72,7 +72,7 @@ React Syntax Highlighter used in the way described above can have a fairly large
 ```js
 import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
 import js from 'react-syntax-highlighter/languages/hljs/javascript';
-import docco from 'react-syntax-highlighter/styles/hljs/docco'; 
+import docco from 'react-syntax-highlighter/dist/styles/hljs/docco'; 
 
 Light.registerLanguage('javascript', js);
 ```
@@ -81,7 +81,7 @@ You can require `react-syntax-highlighter/prism-light` to use the prism light bu
 ```jsx
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter/prism-light";
 import jsx from 'react-syntax-highlighter/languages/prism/jsx';
-import prism from 'react-syntax-highlighter/styles/prism/prism'; 
+import prism from 'react-syntax-highlighter/dist/styles/prism/prism'; 
 
 SyntaxHighlighter.registerLanguage('jsx', jsx);
 ```
