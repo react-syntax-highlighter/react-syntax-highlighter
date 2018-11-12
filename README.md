@@ -71,10 +71,10 @@ React Syntax Highlighter used in the way described above can have a fairly large
 
 ```js
 import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
-import js from 'react-syntax-highlighter/languages/hljs/javascript';
+import js from 'react-syntax-highlighter/dist/languages/hljs/javascript';
 import docco from 'react-syntax-highlighter/dist/styles/hljs/docco'; 
 
-Light.registerLanguage('javascript', js);
+SyntaxHighlighter.registerLanguage('javascript', js);
 ```
 
 You can require `react-syntax-highlighter/prism-light` to use the prism light build instead of the standard light build. 
