@@ -15,6 +15,7 @@ export default (options) => {
     static highlightInstance = (highlight(null, {}));
     static astGeneratorPromise = null;
     static languages = new Map();
+    static supportedLanguages = Object.keys(languageLoaders);
 
     static preload() {
       return ReactAsyncHighlighter.loadAstGenerator();
