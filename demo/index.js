@@ -122,7 +122,7 @@ function createElement({ node, style, useInlineStyles, key }) {
       style: require('../styles/hljs/tomorrow-night-eighties').default,
       code: initialCodeString,
       showLineNumbers: false
-    }
+    };
   }
   render() {
     const h1Style = {
@@ -132,7 +132,7 @@ function createElement({ node, style, useInlineStyles, key }) {
     const h2 = {
       fontSize: 24,
       color: 'aliceblue'
-    }
+    };
 
     return (
       <div>
@@ -141,34 +141,45 @@ function createElement({ node, style, useInlineStyles, key }) {
         <h2 style={h2}>Change Style</h2>
         <select
           value={this.state.selected}
-          onChange={(e) => this.setState({style: require(`../styles/hljs/${e.target.value}`).default, selected: e.target.value})}
+          onChange={e =>
+            this.setState({
+              style: require(`../styles/hljs/${e.target.value}`).default,
+              selected: e.target.value
+            })
+          }
         >
-          {availableStyles.map(s => <option key={s} value={s}>{s}</option>)}
+          {availableStyles.map(s => (
+            <option key={s} value={s}>
+              {s}
+            </option>
+          ))}
         </select>
-        <div style={{paddingTop: '10px', fontSize: 16, color: 'aliceblue'}}>
+        <div style={{ paddingTop: '10px', fontSize: 16, color: 'aliceblue' }}>
           <label htmlFor="showLineNumbers">Show Line Numbers:</label>
           <input
             type="checkbox"
             checked={this.state.showLineNumbers}
-            onChange={() => this.setState({ showLineNumbers: !this.state.showLineNumbers })}
+            onChange={() =>
+              this.setState({ showLineNumbers: !this.state.showLineNumbers })
+            }
             id="showLineNumbers"
           />
         </div>
-        <div style={{paddingTop: 20, display: 'flex'}}>
+        <div style={{ paddingTop: 20, display: 'flex' }}>
           <textarea
-            style={{flex: 1, marginTop: 11}}
+            style={{ flex: 1, marginTop: 11 }}
             rows={40}
             cols={100}
             value={this.state.code}
-            onChange={(e) => this.setState({code: e.target.value})}
+            onChange={e => this.setState({ code: e.target.value })}
           />
-          <div style={{flex: 1, width: '50%'}}>
+          <div style={{ flex: 1, width: '50%' }}>
             <SyntaxHighlighter
               style={this.state.style}
               showLineNumbers={this.state.showLineNumbers}
               wrapLines={true}
-              lineProps={(lineNumber) => ({
-                style: { display: "block", cursor: "pointer" },
+              lineProps={lineNumber => ({
+                style: { display: 'block', cursor: 'pointer' },
                 onClick() {
                   alert(`Line Number Clicked: ${lineNumber}`);
                 }
@@ -182,6 +193,5 @@ function createElement({ node, style, useInlineStyles, key }) {
     );
   }
 }
-
 
 render(<Component />, document.getElementById('app'));
