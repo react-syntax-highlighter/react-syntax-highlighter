@@ -1,16 +1,16 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { PrismLight as SyntaxHighlighter } from "../src";
+import { PrismLight as SyntaxHighlighter } from '../src';
 import jsx from '../src/languages/prism/jsx';
-import prism from "../src/styles/prism/prism";
+import prism from '../src/styles/prism/prism';
 
 SyntaxHighlighter.registerLanguage('jsx', jsx);
 
 test('SyntaxHighlighter renders jsx highlighted text', () => {
-  const tree = renderer.create(
-   <SyntaxHighlighter language="jsx" style={prism}> 
-       {
-       	`import React from "react";
+  const tree = renderer
+    .create(
+      <SyntaxHighlighter language="jsx" style={prism}>
+        {`import React from "react";
 import uniquePropHOC from "./lib/unique-prop-hoc";
 
 class Expire extends React.Component {
@@ -28,21 +28,20 @@ class Expire extends React.Component {
     render() {
         return this.state.component;
     }
-}`
-       }
-    </SyntaxHighlighter>
-  ).toJSON();
+}`}
+      </SyntaxHighlighter>
+    )
+    .toJSON();
   expect(tree).toMatchSnapshot();
 });
 
-
 test('SyntaxHighlighter should just render text if syntax is not registered', () => {
-  const tree = renderer.create(
-   <SyntaxHighlighter language="python" style={prism}> 
-       {
-       		"print('hello')"
-       }
-    </SyntaxHighlighter>
-  ).toJSON();
+  const tree = renderer
+    .create(
+      <SyntaxHighlighter language="python" style={prism}>
+        {"print('hello')"}
+      </SyntaxHighlighter>
+    )
+    .toJSON();
   expect(tree).toMatchSnapshot();
 });

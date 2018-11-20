@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import SyntaxHighlighter from "../src";
+import SyntaxHighlighter from '../src';
 
 const code = `const woah = fun => fun + 1;
 const dude = woah(2) + 3;
@@ -14,15 +14,16 @@ function itIs() {
 }
 `;
 
-
 test('SyntaxHighlighter component passes along code style to LineNumbers', () => {
-  const tree = renderer.create(
-    <SyntaxHighlighter 
-      codeTagProps={{ style: { color: "blue" }}}
-      showLineNumbers={true}
-    >
+  const tree = renderer
+    .create(
+      <SyntaxHighlighter
+        codeTagProps={{ style: { color: 'blue' } }}
+        showLineNumbers={true}
+      >
         {code}
-    </SyntaxHighlighter>
-  ).toJSON();
+      </SyntaxHighlighter>
+    )
+    .toJSON();
   expect(tree).toMatchSnapshot();
 });

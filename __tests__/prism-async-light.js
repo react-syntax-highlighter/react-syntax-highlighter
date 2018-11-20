@@ -2,15 +2,15 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 
 // Tree-shaking doesn't work in testing and loads all the languages
-import SyntaxHighlighter from "../src/prism-async-light";
-import prism from "../src/styles/prism/prism";
-import languageLoaders from "../src/async-languages/prism";
+import SyntaxHighlighter from '../src/prism-async-light';
+import prism from '../src/styles/prism/prism';
+import languageLoaders from '../src/async-languages/prism';
 
 test('SyntaxHighlighter renders jsx highlighted text', () => {
-  const tree = renderer.create(
-   <SyntaxHighlighter language="jsx" style={prism}> 
-       {
-       	`import React from "react";
+  const tree = renderer
+    .create(
+      <SyntaxHighlighter language="jsx" style={prism}>
+        {`import React from "react";
 import uniquePropHOC from "./lib/unique-prop-hoc";
 
 class Expire extends React.Component {
@@ -28,32 +28,30 @@ class Expire extends React.Component {
     render() {
         return this.state.component;
     }
-}`
-       }
-    </SyntaxHighlighter>
-  ).toJSON();
+}`}
+      </SyntaxHighlighter>
+    )
+    .toJSON();
   expect(tree).toMatchSnapshot();
 });
 
-
 test('SyntaxHighlighter should just render text if syntax is not registered', () => {
-  const tree = renderer.create(
-   <SyntaxHighlighter language="nonexistinglanguage" style={prism}> 
-       {
-       		"print('hello')"
-       }
-    </SyntaxHighlighter>
-  ).toJSON();
+  const tree = renderer
+    .create(
+      <SyntaxHighlighter language="nonexistinglanguage" style={prism}>
+        {"print('hello')"}
+      </SyntaxHighlighter>
+    )
+    .toJSON();
   expect(tree).toMatchSnapshot();
 });
 
 test('When the code split is loaded - SyntaxHighlighter renders python highlighted text after async loading python', async () => {
-    await SyntaxHighlighter.preload();
-      
-    const tree = renderer.create(
-     <SyntaxHighlighter language="python" style={prism}> 
-         {
-             `
+  await SyntaxHighlighter.preload();
+
+  const tree = renderer.create(
+    <SyntaxHighlighter language="python" style={prism}>
+      {`
              # Import the modules
 import sys
 import random
@@ -91,12 +89,11 @@ while ans:
     
     elif answers == 8:
         print "My sources say no"
-             `
-         }
-      </SyntaxHighlighter>
-    );
+             `}
+    </SyntaxHighlighter>
+  );
 
-    await languageLoaders.python(jest.fn());
-    
-    expect(tree.toJSON()).toMatchSnapshot();
+  await languageLoaders.python(jest.fn());
+
+  expect(tree.toJSON()).toMatchSnapshot();
 });

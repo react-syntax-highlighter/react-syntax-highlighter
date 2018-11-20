@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import SyntaxHighlighter from "../src";
+import SyntaxHighlighter from '../src';
 
 const code = `const woah = fun => fun + 1;
 const dude = woah(2) + 3;
@@ -15,9 +15,9 @@ function itIs() {
 `;
 
 test('SyntaxHighlighter renders div where code tag is by default', () => {
-  const tree = renderer.create(
-    <SyntaxHighlighter CodeTag='div'>{code}</SyntaxHighlighter>
-  ).toJSON();
+  const tree = renderer
+    .create(<SyntaxHighlighter CodeTag="div">{code}</SyntaxHighlighter>)
+    .toJSON();
   expect(tree).toMatchSnapshot();
 });
 
@@ -26,8 +26,8 @@ function Code({ children, ...rest }) {
 }
 
 test('SyntaxHighlighter component renders custom react component where code tag is by default', () => {
-  const tree = renderer.create(
-    <SyntaxHighlighter CodeTag={Code}>{code}</SyntaxHighlighter>
-  ).toJSON();
+  const tree = renderer
+    .create(<SyntaxHighlighter CodeTag={Code}>{code}</SyntaxHighlighter>)
+    .toJSON();
   expect(tree).toMatchSnapshot();
 });
