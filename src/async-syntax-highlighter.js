@@ -7,7 +7,7 @@ export default (options) => {
     isLanguageRegistered, 
     registerLanguage, 
     languageLoaders, 
-    noAsyncLoadingLanguages 
+    noAsyncLoadingLanguages,
   } = options;
 
   class ReactAsyncHighlighter extends React.PureComponent {
@@ -15,7 +15,7 @@ export default (options) => {
     static highlightInstance = (highlight(null, {}));
     static astGeneratorPromise = null;
     static languages = new Map();
-    static supportedLanguages = Object.keys(languageLoaders);
+    static supportedLanguages = options.supportedLanguages || Object.keys(languageLoaders || {});
 
     static preload() {
       return ReactAsyncHighlighter.loadAstGenerator();
