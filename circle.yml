@@ -1,7 +1,0 @@
-machine:
-  node:
-    version: 6.2.2
-test: 
-  override:
-    - npm run test
-    - npm run publish-coverage
