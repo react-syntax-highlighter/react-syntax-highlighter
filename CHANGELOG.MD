@@ -1,5 +1,9 @@
 # Changelog
 
+##  [10.1.0]
+### Changed
+- All highlighters except for the old "-light" vareities, now have a supportedLanguges field which can be used to determine the supported languages
+
 ##  [10.0.0]
 ### Changed
 - registerLanguage is now a static method of the default export of highlighters that require registering of languages.
