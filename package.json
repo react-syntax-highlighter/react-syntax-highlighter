@@ -33,7 +33,10 @@
     "codecov": "^2.1.0",
     "css": "^2.2.1",
     "css-loader": "^0.23.1",
+    "husky": "^1.1.4",
     "jest": "^23.6.0",
+    "lint-staged": "^8.0.5",
+    "prettier": "^1.15.2",
     "prism-themes": "https://github.com/PrismJS/prism-themes.git#afb4116547cd854074ad705b8171768403ca11f3",
     "react": "^15.2.0",
     "react-dom": "^15.2.0",
@@ -61,7 +64,8 @@
     "prepublish": "npm run build-styles-hljs && npm run build-languages-hljs && npm run build-styles-prism && npm run build-languages-prism && npm run build",
     "test": "jest",
     "test-ci": "jest && codecov",
-    "publish-coverage": "codecov"
+    "publish-coverage": "codecov",
+    "format": "prettier --write --no-editorconfig src/**/*.js lib/**/*.js  __tests__/**/*.js"
   },
   "repository": {
     "type": "git",
@@ -79,5 +83,16 @@
   "bugs": {
     "url": "https://github.com/conorhastings/react-syntax-highlighter/issues"
   },
-  "homepage": "https://github.com/conorhastings/react-syntax-highlighter#readme"
+  "homepage": "https://github.com/conorhastings/react-syntax-highlighter#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
 }

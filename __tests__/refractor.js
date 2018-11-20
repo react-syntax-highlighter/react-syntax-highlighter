@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import SyntaxHighlighter from "../src/prism.js";
+import SyntaxHighlighter from '../src/prism.js';
 
 const code = `const woah = fun => fun + 1;
 const dude = woah(2) + 3;
@@ -15,8 +15,8 @@ function itIs() {
 `;
 
 test('SyntaxHighlighter component renders correctly with refractor instead of lowlight', () => {
-  const tree = renderer.create(
-    <SyntaxHighlighter language='javascript'>{code}</SyntaxHighlighter>
-  ).toJSON();
+  const tree = renderer
+    .create(<SyntaxHighlighter language="javascript">{code}</SyntaxHighlighter>)
+    .toJSON();
   expect(tree).toMatchSnapshot();
 });

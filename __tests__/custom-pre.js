@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import SyntaxHighlighter from "../src";
+import SyntaxHighlighter from '../src';
 
 const code = `const woah = fun => fun + 1;
 const dude = woah(2) + 3;
@@ -15,9 +15,9 @@ function itIs() {
 `;
 
 test('SyntaxHighlighter renders div where pre tag is by default', () => {
-  const tree = renderer.create(
-    <SyntaxHighlighter PreTag='div'>{code}</SyntaxHighlighter>
-  ).toJSON();
+  const tree = renderer
+    .create(<SyntaxHighlighter PreTag="div">{code}</SyntaxHighlighter>)
+    .toJSON();
   expect(tree).toMatchSnapshot();
 });
 
@@ -26,8 +26,8 @@ function Pre({ children, ...rest }) {
 }
 
 test('SyntaxHighlighter component renders custom react component where pre tag is by default', () => {
-  const tree = renderer.create(
-    <SyntaxHighlighter PreTag={Pre}>{code}</SyntaxHighlighter>
-  ).toJSON();
+  const tree = renderer
+    .create(<SyntaxHighlighter PreTag={Pre}>{code}</SyntaxHighlighter>)
+    .toJSON();
   expect(tree).toMatchSnapshot();
 });
