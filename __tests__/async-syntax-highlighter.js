@@ -75,12 +75,12 @@ test('AsyncSyntaxHighlighter loadAstGenerator should return the promise of the l
 
 test('AsyncSyntaxHighlighter loadAstGenerator when astGenerator resolves', async () => {
   const astGenerator = "test";
-  const loader = jest.fn().mockResolvedValue(astGenerator)
+  const loader = jest.fn().mockResolvedValue(astGenerator);
   
   
   const SyntaxHighlighter = AsyncSyntaxHighlighter({ loader });
   await SyntaxHighlighter.loadAstGenerator();
-  expect(SyntaxHighlighter.astGenerator).toEqual(astGenerator)
+  expect(SyntaxHighlighter.astGenerator).toEqual(astGenerator);
 });
 
 test('AsyncSyntaxHighlighter loadAstGenerator when astGenerator resolves and it has languages in the language array', async () => {
@@ -95,5 +95,32 @@ test('AsyncSyntaxHighlighter loadAstGenerator when astGenerator resolves and it 
   SyntaxHighlighter.languages.set(testLanguage.name, testLanguage.language)
 
   await SyntaxHighlighter.loadAstGenerator();
-  expect(registerLanguage).toBeCalledWith(astGenerator, testLanguage.name, testLanguage.language)
+  expect(registerLanguage).toBeCalledWith(astGenerator, testLanguage.name, testLanguage.language);
+});
+
+test('AsyncSyntaxHighlighter when a supportedLanguages array is passed in it should be set to the supported languages static field', () => {
+  const supportedLanguages = [ "test" ];
+  const registerLanguage = jest.fn();
+  const languageLoaders = {
+    "foo": () => "bar"
+  };
+  const astGenerator = "test";
+  const loader = jest.fn().mockResolvedValue(astGenerator)
+  
+  const SyntaxHighlighter = AsyncSyntaxHighlighter({ loader, registerLanguage, languageLoaders, supportedLanguages });
+  
+  expect(SyntaxHighlighter.supportedLanguages).toEqual(supportedLanguages);
+});
+
+test('AsyncSyntaxHighlighter when language loaders are passed in, it should set the keys to the supported languages static field', () => {
+  const registerLanguage = jest.fn();
+  const languageLoaders = {
+    "foo": () => "bar"
+  };
+  const astGenerator = "test";
+  const loader = jest.fn().mockResolvedValue(astGenerator)
+  
+  const SyntaxHighlighter = AsyncSyntaxHighlighter({ loader, registerLanguage, languageLoaders });
+  
+  expect(SyntaxHighlighter.supportedLanguages).toEqual([ "foo" ]);
 });

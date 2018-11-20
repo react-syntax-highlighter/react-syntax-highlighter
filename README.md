@@ -103,6 +103,12 @@ Highlight version
 import { LightAsync as SyntaxHighlighter } from "react-syntax-highlighter";
 ```
 
+#### Supported languages
+Access via the `supportedLanguages` static field.
+```js
+SyntaxHighlighter.supportedLanguages
+```
+
 ### Built with React Syntax Highlighter
 
 - [mdx-deck](https://github.com/jxnblk/mdx-deck) - MDX-based presentation decks
