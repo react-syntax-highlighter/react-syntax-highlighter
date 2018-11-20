@@ -65,7 +65,7 @@
     "test": "jest",
     "test-ci": "jest && codecov",
     "publish-coverage": "codecov",
-    "format": "prettier --write --no-editorconfig src/**/*.js lib/**/*.js  __tests__/**/*.js"
+    "format": "prettier --write --no-editorconfig \"**/*.js\""
   },
   "repository": {
     "type": "git",

@@ -292,7 +292,7 @@ function createElement({ node, style, useInlineStyles, key }) {
       showLineNumbers: false,
       width: window.innerWidth,
       height: window.innerHeight
-    }
+    };
   }
   render() {
     const h1Style = {
@@ -302,25 +302,27 @@ function createElement({ node, style, useInlineStyles, key }) {
     const h2 = {
       fontSize: 24,
       color: 'aliceblue'
-    }
+    };
 
     return (
-      <div style={{ height: "100vh" }}>
+      <div style={{ height: '100vh' }}>
         <h1 style={h1Style}>React Syntax Highlighter Virtualized</h1>
-          <ExamplesLinks />
-          <SyntaxHighlighter
-            customStyle={{ height: "100vh" }}
-            style={this.state.style}
-            showLineNumbers={this.state.showLineNumbers}
-            renderer={renderer({ height: this.state.height, width: this.state.width })}
-            codeTagProps={{ style: { height: "100vh" }}}
-          >
-            {this.state.code}
-          </SyntaxHighlighter>
+        <ExamplesLinks />
+        <SyntaxHighlighter
+          customStyle={{ height: '100vh' }}
+          style={this.state.style}
+          showLineNumbers={this.state.showLineNumbers}
+          renderer={renderer({
+            height: this.state.height,
+            width: this.state.width
+          })}
+          codeTagProps={{ style: { height: '100vh' } }}
+        >
+          {this.state.code}
+        </SyntaxHighlighter>
       </div>
     );
   }
 }
-
 
 render(<Component />, document.getElementById('app'));

@@ -15,7 +15,6 @@ function itIs() {
   return 'no seriously really it is';
 }`;
 
-
 const ADDED = [1, 2];
 const REMOVED = [6];
 
@@ -29,8 +28,8 @@ function DiffHighlight() {
     <div>
       <h1 style={h1Style}>React SyntaxHighlighter</h1>
       <ExamplesLinks />
-      <div style={{paddingTop: 20, display: 'flex'}}>
-        <div style={{flex: 1, width: '100%', flexDirection: 'column'}}>
+      <div style={{ paddingTop: 20, display: 'flex' }}>
+        <div style={{ flex: 1, width: '100%', flexDirection: 'column' }}>
           <SyntaxHighlighter
             style={docco}
             wrapLines={true}
@@ -39,8 +38,7 @@ function DiffHighlight() {
               let style = { display: 'block' };
               if (ADDED.includes(lineNumber)) {
                 style.backgroundColor = '#dbffdb';
-              }
-              else if (REMOVED.includes(lineNumber)) {
+              } else if (REMOVED.includes(lineNumber)) {
                 style.backgroundColor = '#ffecec';
               }
               return style;
@@ -49,12 +47,8 @@ function DiffHighlight() {
             {CODE}
           </SyntaxHighlighter>
           <h1 style={h1Style}>The code to make this happen</h1>
-          <SyntaxHighlighter
-            style={docco}
-            wrapLines={true}
-          >
-            {
-              `import React from 'react';
+          <SyntaxHighlighter style={docco} wrapLines={true}>
+            {`import React from 'react';
 import { render } from 'react-dom';
 import SyntaxHighlighter from '../';
 import docco from '../styles/docco';
@@ -108,10 +102,8 @@ function DiffHighlight() {
 }
 
 render(<DiffHighlight />, document.getElementById('app'));
-`
-            }
+`}
           </SyntaxHighlighter>
-
         </div>
       </div>
     </div>
