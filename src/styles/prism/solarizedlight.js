@@ -144,6 +144,9 @@ export default {
     "function": {
         "color": "#b58900"
     },
+    "class-name": {
+        "color": "#b58900"
+    },
     "regex": {
         "color": "#cb4b16"
     },

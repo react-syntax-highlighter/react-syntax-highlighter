@@ -132,6 +132,9 @@ export default {
     "function": {
         "color": "#e6db74"
     },
+    "class-name": {
+        "color": "#e6db74"
+    },
     "keyword": {
         "color": "#66d9ef"
     },

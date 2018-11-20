@@ -244,13 +244,13 @@ export default {
     "lf:before": {
         "color": "#e0d7d1"
     },
-    "pre[class*=\"language-\"].line-numbers": {
+    "pre[class*=\"language-\"].line-numbers.line-numbers": {
         "paddingLeft": "0"
     },
-    "pre[class*=\"language-\"].line-numbers code": {
+    "pre[class*=\"language-\"].line-numbers.line-numbers code": {
         "paddingLeft": "3.8em"
     },
-    "pre[class*=\"language-\"].line-numbers .line-numbers-rows": {
+    "pre[class*=\"language-\"].line-numbers.line-numbers .line-numbers-rows": {
         "left": "0"
     },
     "pre[class*=\"language-\"][data-line]": {

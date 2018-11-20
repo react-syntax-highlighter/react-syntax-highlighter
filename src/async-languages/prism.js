@@ -132,9 +132,11 @@ export default {
   sql: createLanguageAsyncLoader("sql", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_sql" */ "refractor/lang/sql.js")),
   stylus: createLanguageAsyncLoader("stylus", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_stylus" */ "refractor/lang/stylus.js")),
   swift: createLanguageAsyncLoader("swift", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_swift" */ "refractor/lang/swift.js")),
+  tap: createLanguageAsyncLoader("tap", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_tap" */ "refractor/lang/tap.js")),
   tcl: createLanguageAsyncLoader("tcl", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_tcl" */ "refractor/lang/tcl.js")),
   textile: createLanguageAsyncLoader("textile", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_textile" */ "refractor/lang/textile.js")),
   tsx: createLanguageAsyncLoader("tsx", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_tsx" */ "refractor/lang/tsx.js")),
+  tt2: createLanguageAsyncLoader("tt2", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_tt2" */ "refractor/lang/tt2.js")),
   twig: createLanguageAsyncLoader("twig", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_twig" */ "refractor/lang/twig.js")),
   typescript: createLanguageAsyncLoader("typescript", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_typescript" */ "refractor/lang/typescript.js")),
   vbnet: createLanguageAsyncLoader("vbnet", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_vbnet" */ "refractor/lang/vbnet.js")),
@@ -147,5 +149,6 @@ export default {
   wiki: createLanguageAsyncLoader("wiki", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_wiki" */ "refractor/lang/wiki.js")),
   xeora: createLanguageAsyncLoader("xeora", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_xeora" */ "refractor/lang/xeora.js")),
   xojo: createLanguageAsyncLoader("xojo", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_xojo" */ "refractor/lang/xojo.js")),
+  xquery: createLanguageAsyncLoader("xquery", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_xquery" */ "refractor/lang/xquery.js")),
   yaml: createLanguageAsyncLoader("yaml", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_yaml" */ "refractor/lang/yaml.js")),
 }

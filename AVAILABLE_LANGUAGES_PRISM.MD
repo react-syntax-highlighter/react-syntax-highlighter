@@ -131,9 +131,11 @@
 * sql
 * stylus
 * swift
+* tap
 * tcl
 * textile
 * tsx
+* tt2
 * twig
 * typescript
 * vbnet
@@ -146,4 +148,5 @@
 * wiki
 * xeora
 * xojo
+* xquery
 * yaml
