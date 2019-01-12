@@ -48,6 +48,7 @@ export default [
     plugins: [
       nodeResolve({ extensions }),
       babel(babelOptions)
+      // size-snapshot plugin doesn't support rollup v1 somewhere yet. But guys are working on it now!
       // sizeSnapshot(),
     ]
   },
