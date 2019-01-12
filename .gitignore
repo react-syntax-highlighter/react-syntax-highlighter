@@ -1,5 +1,5 @@
 node_modules
-dist
+build
 .DS_Store
 npm-debug.log
 coverage

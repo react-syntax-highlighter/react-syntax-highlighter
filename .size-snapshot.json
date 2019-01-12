@@ -1,0 +1,17 @@
+{
+  "build/dist/react-syntax-highlighter.cjs.js": {
+    "bundled": 74957,
+    "minified": 56335,
+    "gzipped": 9162
+  },
+  "build/dist/react-syntax-highlighter.umd.js": {
+    "bundled": 1584087,
+    "minified": 962802,
+    "gzipped": 338229
+  },
+  "build/dist/react-syntax-highlighter.umd.min.js": {
+    "bundled": 1537189,
+    "minified": 945133,
+    "gzipped": 332997
+  }
+}
