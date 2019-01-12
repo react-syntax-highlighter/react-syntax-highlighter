@@ -61,7 +61,7 @@
   },
   "scripts": {
     "dev": "webpack-dev-server --hot --inline",
-    "build": "npm run build:cjs && npm run build:rollup && copy-build-files",
+    "build": "npm run build:cjs && npm run build:rollup && npm run copy-build-files",
     "build:cjs": "BABEL_ENV=cjs babel src --out-dir ./build",
     "build:rollup": "rollup -c",
     "watch": "babel src --watch --out-dir .",
