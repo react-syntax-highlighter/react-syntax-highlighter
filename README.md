@@ -122,6 +122,13 @@ SyntaxHighlighter.supportedLanguages
 - [GitPoint](https://github.com/gitpoint/git-point) - GitHub for iOS. Built with React Native. (built using react-native-syntax-highlighter)
 - [Yoga Layout Playground](https://yogalayout.com/playground) - generate code for yoga layout in multiple languages
 - [Kibana](https://github.com/elastic/kibana) - browser-based analytics and search dashboard for Elasticsearch.
+- [Golangci Web](https://github.com/golangci/golangci-web)
+- [Storybook Official Addons](https://github.com/storybooks/storybook)
+- [Microsoft Fast DNA](https://github.com/Microsoft/fast-dna/)
+- [Alibaba Ice](https://github.com/alibaba/ice)
+- [Uber BaseUI Docs](https://github.com/uber-web/baseui)
+- [React Select Docs](https://github.com/JedWatson/react-select)
+
 
 If your project uses react-syntax-highlighter please send a pr to add!
 
