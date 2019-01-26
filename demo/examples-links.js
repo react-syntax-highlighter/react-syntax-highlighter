@@ -10,22 +10,20 @@ export default () => (
     <h1 style={h1Style}>Other examples: </h1>
     <ul>
       <li>
-        <a href="http://localhost:9001/demo">Default</a>
+        <a href="./index.html">Default</a>
       </li>
       <li>
-        <a href="http://localhost:9001/demo/prism.html">Demo With Prism</a>
+        <a href="./prism.html">Demo With Prism</a>
       </li>
 
       <li>
-        <a href="http://localhost:9001/demo/diff.html">Diff</a>
+        <a href="./diff.html">Diff</a>
       </li>
       <li>
-        <a href="http://localhost:9001/demo/virtualized.html">Virtualized</a>
+        <a href="./virtualized.html">Virtualized</a>
       </li>
       <li>
-        <a href="http://localhost:9001/demo/prism-async-light.html">
-          Prism async light
-        </a>
+        <a href="./prism-async-light.html">Prism async light</a>
       </li>
     </ul>
   </div>
