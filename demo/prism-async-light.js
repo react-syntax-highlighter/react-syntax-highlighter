@@ -1,9 +1,9 @@
 import React from 'react';
 import { render } from 'react-dom';
-import SyntaxHighlighter from '../src/prism-async-light';
-import clike from '../languages/prism/clike';
-import markup from '../languages/prism/markup';
-import markupTemplating from '../languages/prism/markup-templating';
+import { PrismAsyncLight as SyntaxHighlighter } from '../';
+import clike from '../src/languages/prism/clike';
+import markup from '../src/languages/prism/markup';
+import markupTemplating from '../src/languages/prism/markup-templating';
 import ExamplesLinks from './examples-links';
 
 SyntaxHighlighter.registerLanguage('markup', markup);
@@ -63,7 +63,7 @@ function createElement({ node, style, useInlineStyles, key }) {
   `;
     this.state = {
       selected: 'atom-dark',
-      style: require('../styles/prism/atom-dark').default,
+      style: require('../src/styles/prism/atom-dark').default,
       code: initialCodeString,
       showLineNumbers: false,
       language: 'javascript'
@@ -90,14 +90,18 @@ function createElement({ node, style, useInlineStyles, key }) {
           onChange={(e) => this.setState({style: require(`../styles/prism/${e.target.value}`).default, selected: e.target.value})}
         >
           {availableStyles.map(s => <option key={s} value={s}>{s}</option>)}
-        </select> 
+        </select>  */}
         <h2 style={h2}>Change Language</h2>
         <select
           value={this.state.language}
-          onChange={(e) => this.setState({language: e.target.value})}
+          onChange={e => this.setState({ language: e.target.value })}
         >
-          {availableLanguages.map(s => <option key={s} value={s}>{s}</option>)}
-        </select>*/}
+          {availableLanguages.map(s => (
+            <option key={s} value={s}>
+              {s}
+            </option>
+          ))}
+        </select>
         <div style={{ paddingTop: '10px', fontSize: 16, color: 'aliceblue' }}>
           <label htmlFor="showLineNumbers">Show Line Numbers:</label>
           <input
