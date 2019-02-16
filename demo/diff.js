@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import SyntaxHighlighter from '../src/index';
-import docco from '../styles/hljs/docco';
+import docco from '../src/styles/hljs/docco';
 import ExamplesLinks from './examples-links';
 
 const CODE = `const woah = fun => fun + 1;

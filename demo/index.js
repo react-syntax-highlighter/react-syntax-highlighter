@@ -119,7 +119,7 @@ function createElement({ node, style, useInlineStyles, key }) {
   `;
     this.state = {
       selected: 'tomorrow-night-eighties',
-      style: require('../styles/hljs/tomorrow-night-eighties').default,
+      style: require('../src/styles/hljs/tomorrow-night-eighties').default,
       code: initialCodeString,
       showLineNumbers: false
     };
@@ -143,7 +143,7 @@ function createElement({ node, style, useInlineStyles, key }) {
           value={this.state.selected}
           onChange={e =>
             this.setState({
-              style: require(`../styles/hljs/${e.target.value}`).default,
+              style: require(`../src/styles/hljs/${e.target.value}`).default,
               selected: e.target.value
             })
           }

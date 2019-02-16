@@ -1,9 +1,9 @@
 import React from 'react';
 import { render } from 'react-dom';
 import SyntaxHighlighter from '../src/prism-async-light';
-import clike from '../languages/prism/clike';
-import markup from '../languages/prism/markup';
-import markupTemplating from '../languages/prism/markup-templating';
+import clike from '../src/languages/prism/clike';
+import markup from '../src/languages/prism/markup';
+import markupTemplating from '../src/languages/prism/markup-templating';
 import ExamplesLinks from './examples-links';
 
 SyntaxHighlighter.registerLanguage('markup', markup);
@@ -63,7 +63,7 @@ function createElement({ node, style, useInlineStyles, key }) {
   `;
     this.state = {
       selected: 'atom-dark',
-      style: require('../styles/prism/atom-dark').default,
+      style: require('../src/styles/prism/atom-dark').default,
       code: initialCodeString,
       showLineNumbers: false,
       language: 'javascript'
