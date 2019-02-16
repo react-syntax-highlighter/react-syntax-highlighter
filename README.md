@@ -45,7 +45,7 @@ I do realize that javascript styles are not for everyone, so you can optionally 
 
 ```js
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { docco } from 'react-syntax-highlighter/dist/styles/hljs';
+import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 const Component = () => {
   const codeString = '(num) => num + 1';
   return <SyntaxHighlighter language='javascript' style={docco}>{codeString}</SyntaxHighlighter>;  
@@ -58,7 +58,7 @@ Using <a href="https://github.com/wooorm/refractor">refractor</a> we can use an 
 
 ```js
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { dark } from 'react-syntax-highlighter/dist/styles/prism';
+import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 const Component = () => {
   const codeString = '(num) => num + 1';
   return <SyntaxHighlighter language='javascript' style={dark}>{codeString}</SyntaxHighlighter>;  
@@ -71,8 +71,8 @@ React Syntax Highlighter used in the way described above can have a fairly large
 
 ```js
 import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
-import js from 'react-syntax-highlighter/dist/languages/hljs/javascript';
-import docco from 'react-syntax-highlighter/dist/styles/hljs/docco'; 
+import js from 'react-syntax-highlighter/dist/esm/languages/hljs/javascript';
+import docco from 'react-syntax-highlighter/dist/esm/styles/hljs/docco'; 
 
 SyntaxHighlighter.registerLanguage('javascript', js);
 ```
@@ -80,8 +80,8 @@ SyntaxHighlighter.registerLanguage('javascript', js);
 You can require `react-syntax-highlighter/prism-light` to use the prism light build instead of the standard light build. 
 ```jsx
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter/prism-light";
-import jsx from 'react-syntax-highlighter/dist/languages/prism/jsx';
-import prism from 'react-syntax-highlighter/dist/styles/prism/prism'; 
+import jsx from 'react-syntax-highlighter/dist/esm//languages/prism/jsx';
+import prism from 'react-syntax-highlighter/dist/esm/styles/prism/prism'; 
 
 SyntaxHighlighter.registerLanguage('jsx', jsx);
 ```
