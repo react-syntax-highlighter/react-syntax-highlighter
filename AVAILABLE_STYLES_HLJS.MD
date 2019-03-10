@@ -1,5 +1,8 @@
 ## Available `stylesheet` props 
+* a11yDark
+* a11yLight
 * agate
+* anOldHope
 * androidstudio
 * arduinoLight
 * arta
@@ -24,6 +27,7 @@
 * atelierSeasideLight
 * atelierSulphurpoolDark
 * atelierSulphurpoolLight
+* atomOneDarkReasonable
 * atomOneDark
 * atomOneLight
 * brownPaper
@@ -39,6 +43,7 @@
 * foundation
 * githubGist
 * github
+* gml
 * googlecode
 * grayscale
 * gruvboxDark
@@ -47,12 +52,16 @@
 * hybrid
 * idea
 * irBlack
+* isblEditorDark
+* isblEditorLight
 * kimbieDark
 * kimbieLight
+* lightfair
 * magula
 * monoBlue
 * monokaiSublime
 * monokai
+* nord
 * obsidian
 * ocean
 * paraisoDark
@@ -65,6 +74,7 @@
 * rainbow
 * routeros
 * schoolBook
+* shadesOfPurple
 * solarizedDark
 * solarizedLight
 * sunburst
