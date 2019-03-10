@@ -7,8 +7,8 @@
   "sideEffects": false,
   "dependencies": {
     "@babel/runtime": "^7.3.1",
-    "highlight.js": "~9.12.0",
-    "lowlight": "~1.9.1",
+    "highlight.js": "~9.13.0",
+    "lowlight": "~1.11.0",
     "prismjs": "^1.8.4",
     "refractor": "^2.4.1"
   },

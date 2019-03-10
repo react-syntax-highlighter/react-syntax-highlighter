@@ -6,11 +6,20 @@ export default {
         "background": "#fff",
         "color": "black"
     },
+    "xml .hljs-meta": {
+        "color": "#c0c0c0"
+    },
     "hljs-comment": {
-        "color": "#006a00"
+        "color": "#007400"
     },
     "hljs-quote": {
-        "color": "#006a00"
+        "color": "#007400"
+    },
+    "hljs-tag": {
+        "color": "#aa0d91"
+    },
+    "hljs-attribute": {
+        "color": "#aa0d91"
     },
     "hljs-keyword": {
         "color": "#aa0d91"
@@ -22,27 +31,30 @@ export default {
         "color": "#aa0d91"
     },
     "hljs-name": {
-        "color": "#008"
+        "color": "#aa0d91"
     },
     "hljs-variable": {
-        "color": "#660"
+        "color": "#3F6E74"
     },
     "hljs-template-variable": {
-        "color": "#660"
+        "color": "#3F6E74"
+    },
+    "hljs-code": {
+        "color": "#c41a16"
     },
     "hljs-string": {
         "color": "#c41a16"
     },
+    "hljs-meta-string": {
+        "color": "#c41a16"
+    },
     "hljs-regexp": {
-        "color": "#080"
+        "color": "#0E0EFF"
     },
     "hljs-link": {
-        "color": "#080"
+        "color": "#0E0EFF"
     },
     "hljs-title": {
-        "color": "#1c00cf"
-    },
-    "hljs-tag": {
         "color": "#1c00cf"
     },
     "hljs-symbol": {
@@ -54,19 +66,16 @@ export default {
     "hljs-number": {
         "color": "#1c00cf"
     },
-    "hljs-meta": {
-        "color": "#1c00cf"
-    },
     "hljs-section": {
-        "color": "#5c2699"
+        "color": "#643820"
+    },
+    "hljs-meta": {
+        "color": "#643820"
     },
     "hljs-class .hljs-title": {
         "color": "#5c2699"
     },
     "hljs-type": {
-        "color": "#5c2699"
-    },
-    "hljs-attr": {
         "color": "#5c2699"
     },
     "hljs-built_in": {
@@ -78,8 +87,8 @@ export default {
     "hljs-params": {
         "color": "#5c2699"
     },
-    "hljs-attribute": {
-        "color": "#000"
+    "hljs-attr": {
+        "color": "#836C28"
     },
     "hljs-subst": {
         "color": "#000"
