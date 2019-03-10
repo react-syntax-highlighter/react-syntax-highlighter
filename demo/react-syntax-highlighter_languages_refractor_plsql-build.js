@@ -1,7 +1,7 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [102, 130],
   {
-    524: function(E, T, I) {
+    542: function(E, T, I) {
       'use strict';
       function A(E) {
         E.languages.sql = {
@@ -25,9 +25,9 @@
       }
       (E.exports = A), (A.displayName = 'sql'), (A.aliases = []);
     },
-    670: function(E, T, I) {
+    685: function(E, T, I) {
       'use strict';
-      var A = I(524);
+      var A = I(542);
       function R(E) {
         E.register(A),
           (E.languages.plsql = E.languages.extend('sql', {

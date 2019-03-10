@@ -1,7 +1,7 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [124, 65],
   {
-    521: function(e, a, t) {
+    539: function(e, a, t) {
       'use strict';
       function n(e) {
         (e.languages.java = e.languages.extend('clike', {
@@ -32,9 +32,9 @@
       }
       (e.exports = n), (n.displayName = 'java'), (n.aliases = []);
     },
-    691: function(e, a, t) {
+    706: function(e, a, t) {
       'use strict';
-      var n = t(521);
+      var n = t(539);
       function s(e) {
         e.register(n),
           (e.languages.scala = e.languages.extend('java', {

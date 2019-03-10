@@ -1,7 +1,7 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [59],
   {
-    631: function(E, N, R) {
+    646: function(E, N, R) {
       'use strict';
       function T(E) {
         E.languages.ichigojam = {

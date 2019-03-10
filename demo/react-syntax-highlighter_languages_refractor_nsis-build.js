@@ -1,7 +1,7 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [91],
   {
-    660: function(e, t, n) {
+    675: function(e, t, n) {
       'use strict';
       function r(e) {
         e.languages.nsis = {

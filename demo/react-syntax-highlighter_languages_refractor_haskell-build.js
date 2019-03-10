@@ -1,7 +1,7 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [54],
   {
-    626: function(e, i, a) {
+    641: function(e, i, a) {
       'use strict';
       function t(e) {
         e.languages.haskell = {

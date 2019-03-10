@@ -35,11 +35,11 @@ function DiffHighlight() {
             wrapLines={true}
             showLineNumbers={true}
             lineProps={lineNumber => {
-              let props = { style: { display: 'block' }};
+              let props = { style: { display: 'block' } };
               if (ADDED.includes(lineNumber)) {
-                style.backgroundColor = '#dbffdb';
+                props.style.backgroundColor = '#dbffdb';
               } else if (REMOVED.includes(lineNumber)) {
-                style.backgroundColor = '#ffecec';
+                props.style.backgroundColor = '#ffecec';
               }
               return props;
             }}

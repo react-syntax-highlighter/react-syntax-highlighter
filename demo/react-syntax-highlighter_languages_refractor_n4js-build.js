@@ -1,7 +1,7 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [86],
   {
-    655: function(e, n, t) {
+    670: function(e, n, t) {
       'use strict';
       function a(e) {
         (e.languages.n4js = e.languages.extend('javascript', {

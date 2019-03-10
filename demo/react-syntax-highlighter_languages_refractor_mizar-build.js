@@ -1,7 +1,7 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [84],
   {
-    653: function(e, t, i) {
+    668: function(e, t, i) {
       'use strict';
       function s(e) {
         e.languages.mizar = {

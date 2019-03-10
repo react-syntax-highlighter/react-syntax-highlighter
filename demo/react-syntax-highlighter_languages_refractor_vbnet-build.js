@@ -1,7 +1,7 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [140, 18],
   {
-    520: function(E, T, R) {
+    538: function(E, T, R) {
       'use strict';
       function N(E) {
         E.languages.basic = {
@@ -19,9 +19,9 @@
       }
       (E.exports = N), (N.displayName = 'basic'), (N.aliases = []);
     },
-    705: function(E, T, R) {
+    720: function(E, T, R) {
       'use strict';
-      var N = R(520);
+      var N = R(538);
       function I(E) {
         E.register(N),
           (E.languages.vbnet = E.languages.extend('basic', {

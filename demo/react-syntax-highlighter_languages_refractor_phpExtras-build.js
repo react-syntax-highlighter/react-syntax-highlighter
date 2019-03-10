@@ -1,7 +1,7 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [101, 100],
   {
-    523: function(e, n, t) {
+    541: function(e, n, t) {
       'use strict';
       function i(e) {
         !(function(e) {
@@ -94,9 +94,9 @@
       }
       (e.exports = i), (i.displayName = 'php'), (i.aliases = []);
     },
-    669: function(e, n, t) {
+    684: function(e, n, t) {
       'use strict';
-      var i = t(523);
+      var i = t(541);
       function a(e) {
         e.register(i),
           e.languages.insertBefore('php', 'variable', {

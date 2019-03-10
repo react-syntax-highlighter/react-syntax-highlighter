@@ -1,7 +1,7 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [88],
   {
-    657: function(e, _, i) {
+    672: function(e, _, i) {
       'use strict';
       function s(e) {
         (e.languages.nginx = e.languages.extend('clike', {

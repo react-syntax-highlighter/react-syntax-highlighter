@@ -1,7 +1,7 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [146],
   {
-    711: function(e, t, a) {
+    726: function(e, t, a) {
       'use strict';
       function o(e) {
         e.languages.wasm = {
