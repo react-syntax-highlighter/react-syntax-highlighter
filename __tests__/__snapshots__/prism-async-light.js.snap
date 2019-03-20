@@ -181,11 +181,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
     
              
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "slategray",
@@ -197,11 +193,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
     
 
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -213,11 +205,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
      sys
 
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -230,11 +218,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
 
 ans 
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -246,11 +230,7 @@ ans
     </span>
      
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#905",
@@ -263,11 +243,7 @@ ans
 
 
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -278,11 +254,7 @@ ans
     </span>
      ans
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -294,11 +266,7 @@ ans
     
     question 
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -310,11 +278,7 @@ ans
     </span>
      
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#690",
@@ -324,11 +288,7 @@ ans
       raw_input
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -338,11 +298,7 @@ ans
       (
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#690",
@@ -352,11 +308,7 @@ ans
       "Ask the magic 8 ball a question: (press enter to quit) "
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -369,11 +321,7 @@ ans
     
     answers 
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -385,11 +333,7 @@ ans
     </span>
      random
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -400,11 +344,7 @@ ans
     </span>
     randint
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -414,11 +354,7 @@ ans
       (
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#905",
@@ -428,11 +364,7 @@ ans
       1
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -442,11 +374,7 @@ ans
       ,
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#905",
@@ -456,11 +384,7 @@ ans
       8
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -473,11 +397,7 @@ ans
     
     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -488,11 +408,7 @@ ans
     </span>
      question 
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -504,11 +420,7 @@ ans
     </span>
      
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#690",
@@ -518,11 +430,7 @@ ans
       ""
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -534,11 +442,7 @@ ans
     
         sys
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -549,11 +453,7 @@ ans
     </span>
     exit
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -563,11 +463,7 @@ ans
       (
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -580,11 +476,7 @@ ans
     
     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -595,11 +487,7 @@ ans
     </span>
      answers 
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -611,11 +499,7 @@ ans
     </span>
      
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#905",
@@ -625,11 +509,7 @@ ans
       1
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -641,11 +521,7 @@ ans
     
         
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -656,11 +532,7 @@ ans
     </span>
      
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#690",
@@ -673,11 +545,7 @@ ans
     
     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -688,11 +556,7 @@ ans
     </span>
      answers 
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -704,11 +568,7 @@ ans
     </span>
      
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#905",
@@ -718,11 +578,7 @@ ans
       2
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -734,11 +590,7 @@ ans
     
         
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -749,11 +601,7 @@ ans
     </span>
      
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#690",
@@ -766,11 +614,7 @@ ans
     
     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -781,11 +625,7 @@ ans
     </span>
      answers 
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -797,11 +637,7 @@ ans
     </span>
      
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#905",
@@ -811,11 +647,7 @@ ans
       3
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -827,11 +659,7 @@ ans
     
         
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -842,11 +670,7 @@ ans
     </span>
      
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#690",
@@ -859,11 +683,7 @@ ans
     
     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -874,11 +694,7 @@ ans
     </span>
      answers 
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -890,11 +706,7 @@ ans
     </span>
      
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#905",
@@ -904,11 +716,7 @@ ans
       4
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -920,11 +728,7 @@ ans
     
         
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -935,11 +739,7 @@ ans
     </span>
      
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#690",
@@ -952,11 +752,7 @@ ans
     
     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -967,11 +763,7 @@ ans
     </span>
      answers 
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -983,11 +775,7 @@ ans
     </span>
      
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#905",
@@ -997,11 +785,7 @@ ans
       5
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -1013,11 +797,7 @@ ans
     
         
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -1028,11 +808,7 @@ ans
     </span>
      
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#690",
@@ -1045,11 +821,7 @@ ans
     
     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -1060,11 +832,7 @@ ans
     </span>
      answers 
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -1076,11 +844,7 @@ ans
     </span>
      
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#905",
@@ -1090,11 +854,7 @@ ans
       6
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -1106,11 +866,7 @@ ans
     
         
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -1121,11 +877,7 @@ ans
     </span>
      
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#690",
@@ -1138,11 +890,7 @@ ans
     
     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -1153,11 +901,7 @@ ans
     </span>
      answers 
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -1169,11 +913,7 @@ ans
     </span>
      
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#905",
@@ -1183,11 +923,7 @@ ans
       7
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -1199,11 +935,7 @@ ans
     
         
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -1214,11 +946,7 @@ ans
     </span>
      
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#690",
@@ -1231,11 +959,7 @@ ans
     
     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -1246,11 +970,7 @@ ans
     </span>
      answers 
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -1262,11 +982,7 @@ ans
     </span>
      
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#905",
@@ -1276,11 +992,7 @@ ans
       8
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -1292,11 +1004,7 @@ ans
     
         
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -1307,11 +1015,7 @@ ans
     </span>
      
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#690",

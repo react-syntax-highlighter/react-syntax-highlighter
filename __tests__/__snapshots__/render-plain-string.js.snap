@@ -11,20 +11,12 @@ exports[`SyntaxHighlighter renders childre unadultered when no language disocver
   <code>
     Contacts* contacts = 
     <span
-      className={
-        Array [
-          "hljs-comment",
-        ]
-      }
+      className="hljs-comment"
       style={Object {}}
     >
       [
       <span
-        className={
-          Array [
-            "hljs-comment",
-          ]
-        }
+        className="hljs-comment"
         style={Object {}}
       >
         [Contacts alloc]
