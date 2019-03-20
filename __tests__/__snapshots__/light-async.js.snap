@@ -108,19 +108,11 @@ exports[`SyntaxHighlighter renders fortran highlighted text 1`] = `
     
             C AREA OF A TRIANGLE WITH A STANDARD SQUARE ROOT 
     <span
-      className={
-        Array [
-          "hljs-function",
-        ]
-      }
+      className="hljs-function"
       style={Object {}}
     >
       <span
-        className={
-          Array [
-            "hljs-keyword",
-          ]
-        }
+        className="hljs-keyword"
         style={Object {}}
       >
         FUNCTION
@@ -129,33 +121,21 @@ exports[`SyntaxHighlighter renders fortran highlighted text 1`] = `
     
             C INPUT - TAPE READER 
     <span
-      className={
-        Array [
-          "hljs-keyword",
-        ]
-      }
+      className="hljs-keyword"
       style={Object {}}
     >
       UNIT
     </span>
      
     <span
-      className={
-        Array [
-          "hljs-number",
-        ]
-      }
+      className="hljs-number"
       style={Object {}}
     >
       5
     </span>
     , 
     <span
-      className={
-        Array [
-          "hljs-keyword",
-        ]
-      }
+      className="hljs-keyword"
       style={Object {}}
     >
       INTEGER
@@ -163,33 +143,21 @@ exports[`SyntaxHighlighter renders fortran highlighted text 1`] = `
      INPUT
             C OUTPUT - LINE PRINTER 
     <span
-      className={
-        Array [
-          "hljs-keyword",
-        ]
-      }
+      className="hljs-keyword"
       style={Object {}}
     >
       UNIT
     </span>
      
     <span
-      className={
-        Array [
-          "hljs-number",
-        ]
-      }
+      className="hljs-number"
       style={Object {}}
     >
       6
     </span>
     , 
     <span
-      className={
-        Array [
-          "hljs-keyword",
-        ]
-      }
+      className="hljs-keyword"
       style={Object {}}
     >
       REAL
@@ -197,22 +165,14 @@ exports[`SyntaxHighlighter renders fortran highlighted text 1`] = `
      OUTPUT
             C INPUT ERROR DISPLAY ERROR OUTPUT CODE 
     <span
-      className={
-        Array [
-          "hljs-number",
-        ]
-      }
+      className="hljs-number"
       style={Object {}}
     >
       1
     </span>
      
     <span
-      className={
-        Array [
-          "hljs-keyword",
-        ]
-      }
+      className="hljs-keyword"
       style={Object {}}
     >
       IN
@@ -220,22 +180,14 @@ exports[`SyntaxHighlighter renders fortran highlighted text 1`] = `
      JOB CONTROL LISTING
                 READ INPUT TAPE 
     <span
-      className={
-        Array [
-          "hljs-number",
-        ]
-      }
+      className="hljs-number"
       style={Object {}}
     >
       5
     </span>
     , 
     <span
-      className={
-        Array [
-          "hljs-number",
-        ]
-      }
+      className="hljs-number"
       style={Object {}}
     >
       501
@@ -243,22 +195,14 @@ exports[`SyntaxHighlighter renders fortran highlighted text 1`] = `
     , IA, IB, IC
             
     <span
-      className={
-        Array [
-          "hljs-number",
-        ]
-      }
+      className="hljs-number"
       style={Object {}}
     >
       501
     </span>
      
     <span
-      className={
-        Array [
-          "hljs-keyword",
-        ]
-      }
+      className="hljs-keyword"
       style={Object {}}
     >
       FORMAT
@@ -267,11 +211,7 @@ exports[`SyntaxHighlighter renders fortran highlighted text 1`] = `
             C IA, IB, AND IC MAY NOT BE NEGATIVE OR ZERO
             C FURTHERMORE, THE 
     <span
-      className={
-        Array [
-          "hljs-built_in",
-        ]
-      }
+      className="hljs-built_in"
       style={Object {}}
     >
       SUM
@@ -280,44 +220,28 @@ exports[`SyntaxHighlighter renders fortran highlighted text 1`] = `
             C MUST BE GREATER THAN THE THIRD SIDE, SO WE CHECK FOR THAT, TOO
                 
     <span
-      className={
-        Array [
-          "hljs-keyword",
-        ]
-      }
+      className="hljs-keyword"
       style={Object {}}
     >
       IF
     </span>
      (IA) 
     <span
-      className={
-        Array [
-          "hljs-number",
-        ]
-      }
+      className="hljs-number"
       style={Object {}}
     >
       777
     </span>
     , 
     <span
-      className={
-        Array [
-          "hljs-number",
-        ]
-      }
+      className="hljs-number"
       style={Object {}}
     >
       777
     </span>
     , 
     <span
-      className={
-        Array [
-          "hljs-number",
-        ]
-      }
+      className="hljs-number"
       style={Object {}}
     >
       701
@@ -325,55 +249,35 @@ exports[`SyntaxHighlighter renders fortran highlighted text 1`] = `
     
             
     <span
-      className={
-        Array [
-          "hljs-number",
-        ]
-      }
+      className="hljs-number"
       style={Object {}}
     >
       701
     </span>
      
     <span
-      className={
-        Array [
-          "hljs-keyword",
-        ]
-      }
+      className="hljs-keyword"
       style={Object {}}
     >
       IF
     </span>
      (IB) 
     <span
-      className={
-        Array [
-          "hljs-number",
-        ]
-      }
+      className="hljs-number"
       style={Object {}}
     >
       777
     </span>
     , 
     <span
-      className={
-        Array [
-          "hljs-number",
-        ]
-      }
+      className="hljs-number"
       style={Object {}}
     >
       777
     </span>
     , 
     <span
-      className={
-        Array [
-          "hljs-number",
-        ]
-      }
+      className="hljs-number"
       style={Object {}}
     >
       702
@@ -381,55 +285,35 @@ exports[`SyntaxHighlighter renders fortran highlighted text 1`] = `
     
             
     <span
-      className={
-        Array [
-          "hljs-number",
-        ]
-      }
+      className="hljs-number"
       style={Object {}}
     >
       702
     </span>
      
     <span
-      className={
-        Array [
-          "hljs-keyword",
-        ]
-      }
+      className="hljs-keyword"
       style={Object {}}
     >
       IF
     </span>
      (IC) 
     <span
-      className={
-        Array [
-          "hljs-number",
-        ]
-      }
+      className="hljs-number"
       style={Object {}}
     >
       777
     </span>
     , 
     <span
-      className={
-        Array [
-          "hljs-number",
-        ]
-      }
+      className="hljs-number"
       style={Object {}}
     >
       777
     </span>
     , 
     <span
-      className={
-        Array [
-          "hljs-number",
-        ]
-      }
+      className="hljs-number"
       style={Object {}}
     >
       703
@@ -437,55 +321,35 @@ exports[`SyntaxHighlighter renders fortran highlighted text 1`] = `
     
             
     <span
-      className={
-        Array [
-          "hljs-number",
-        ]
-      }
+      className="hljs-number"
       style={Object {}}
     >
       703
     </span>
      
     <span
-      className={
-        Array [
-          "hljs-keyword",
-        ]
-      }
+      className="hljs-keyword"
       style={Object {}}
     >
       IF
     </span>
      (IA+IB-IC) 
     <span
-      className={
-        Array [
-          "hljs-number",
-        ]
-      }
+      className="hljs-number"
       style={Object {}}
     >
       777
     </span>
     , 
     <span
-      className={
-        Array [
-          "hljs-number",
-        ]
-      }
+      className="hljs-number"
       style={Object {}}
     >
       777
     </span>
     , 
     <span
-      className={
-        Array [
-          "hljs-number",
-        ]
-      }
+      className="hljs-number"
       style={Object {}}
     >
       704
@@ -493,55 +357,35 @@ exports[`SyntaxHighlighter renders fortran highlighted text 1`] = `
     
             
     <span
-      className={
-        Array [
-          "hljs-number",
-        ]
-      }
+      className="hljs-number"
       style={Object {}}
     >
       704
     </span>
      
     <span
-      className={
-        Array [
-          "hljs-keyword",
-        ]
-      }
+      className="hljs-keyword"
       style={Object {}}
     >
       IF
     </span>
      (IA+IC-IB) 
     <span
-      className={
-        Array [
-          "hljs-number",
-        ]
-      }
+      className="hljs-number"
       style={Object {}}
     >
       777
     </span>
     , 
     <span
-      className={
-        Array [
-          "hljs-number",
-        ]
-      }
+      className="hljs-number"
       style={Object {}}
     >
       777
     </span>
     , 
     <span
-      className={
-        Array [
-          "hljs-number",
-        ]
-      }
+      className="hljs-number"
       style={Object {}}
     >
       705
@@ -549,55 +393,35 @@ exports[`SyntaxHighlighter renders fortran highlighted text 1`] = `
     
             
     <span
-      className={
-        Array [
-          "hljs-number",
-        ]
-      }
+      className="hljs-number"
       style={Object {}}
     >
       705
     </span>
      
     <span
-      className={
-        Array [
-          "hljs-keyword",
-        ]
-      }
+      className="hljs-keyword"
       style={Object {}}
     >
       IF
     </span>
      (IB+IC-IA) 
     <span
-      className={
-        Array [
-          "hljs-number",
-        ]
-      }
+      className="hljs-number"
       style={Object {}}
     >
       777
     </span>
     , 
     <span
-      className={
-        Array [
-          "hljs-number",
-        ]
-      }
+      className="hljs-number"
       style={Object {}}
     >
       777
     </span>
     , 
     <span
-      className={
-        Array [
-          "hljs-number",
-        ]
-      }
+      className="hljs-number"
       style={Object {}}
     >
       799
@@ -605,33 +429,21 @@ exports[`SyntaxHighlighter renders fortran highlighted text 1`] = `
     
             
     <span
-      className={
-        Array [
-          "hljs-number",
-        ]
-      }
+      className="hljs-number"
       style={Object {}}
     >
       777
     </span>
      
     <span
-      className={
-        Array [
-          "hljs-keyword",
-        ]
-      }
+      className="hljs-keyword"
       style={Object {}}
     >
       STOP
     </span>
      
     <span
-      className={
-        Array [
-          "hljs-number",
-        ]
-      }
+      className="hljs-number"
       style={Object {}}
     >
       1
@@ -639,11 +451,7 @@ exports[`SyntaxHighlighter renders fortran highlighted text 1`] = `
     
             C USING HERON
     <span
-      className={
-        Array [
-          "hljs-string",
-        ]
-      }
+      className="hljs-string"
       style={Object {}}
     >
       'S FORMULA WE CALCULATE THE
@@ -868,33 +676,21 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     }
   >
     <span
-      className={
-        Array [
-          "hljs-keyword",
-        ]
-      }
+      className="hljs-keyword"
       style={Object {}}
     >
       import
     </span>
      React 
     <span
-      className={
-        Array [
-          "hljs-keyword",
-        ]
-      }
+      className="hljs-keyword"
       style={Object {}}
     >
       from
     </span>
      
     <span
-      className={
-        Array [
-          "hljs-string",
-        ]
-      }
+      className="hljs-string"
       style={Object {}}
     >
       "react"
@@ -902,33 +698,21 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     ;
   
     <span
-      className={
-        Array [
-          "hljs-keyword",
-        ]
-      }
+      className="hljs-keyword"
       style={Object {}}
     >
       import
     </span>
      uniquePropHOC 
     <span
-      className={
-        Array [
-          "hljs-keyword",
-        ]
-      }
+      className="hljs-keyword"
       style={Object {}}
     >
       from
     </span>
      
     <span
-      className={
-        Array [
-          "hljs-string",
-        ]
-      }
+      className="hljs-string"
       style={Object {}}
     >
       "./lib/unique-prop-hoc"
@@ -937,63 +721,39 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
   
   
     <span
-      className={
-        Array [
-          "hljs-class",
-        ]
-      }
+      className="hljs-class"
       style={Object {}}
     >
       <span
-        className={
-          Array [
-            "hljs-keyword",
-          ]
-        }
+        className="hljs-keyword"
         style={Object {}}
       >
         class
       </span>
        
       <span
-        className={
-          Array [
-            "hljs-title",
-          ]
-        }
+        className="hljs-title"
         style={Object {}}
       >
         Expire
       </span>
        
       <span
-        className={
-          Array [
-            "hljs-keyword",
-          ]
-        }
+        className="hljs-keyword"
         style={Object {}}
       >
         extends
       </span>
        
       <span
-        className={
-          Array [
-            "hljs-title",
-          ]
-        }
+        className="hljs-title"
         style={Object {}}
       >
         React
       </span>
       .
       <span
-        className={
-          Array [
-            "hljs-title",
-          ]
-        }
+        className="hljs-title"
         style={Object {}}
       >
         Component
@@ -1003,11 +763,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     {
       
     <span
-      className={
-        Array [
-          "hljs-keyword",
-        ]
-      }
+      className="hljs-keyword"
       style={Object {}}
     >
       constructor
@@ -1015,11 +771,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     (props) {
           
     <span
-      className={
-        Array [
-          "hljs-keyword",
-        ]
-      }
+      className="hljs-keyword"
       style={Object {}}
     >
       super
@@ -1027,22 +779,14 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     (props);
           
     <span
-      className={
-        Array [
-          "hljs-keyword",
-        ]
-      }
+      className="hljs-keyword"
       style={Object {}}
     >
       this
     </span>
     .state = { 
     <span
-      className={
-        Array [
-          "hljs-attr",
-        ]
-      }
+      className="hljs-attr"
       style={Object {}}
     >
       component
@@ -1052,19 +796,11 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
       componentDidMount() {
           setTimeout(
     <span
-      className={
-        Array [
-          "hljs-function",
-        ]
-      }
+      className="hljs-function"
       style={Object {}}
     >
       <span
-        className={
-          Array [
-            "hljs-params",
-          ]
-        }
+        className="hljs-params"
         style={Object {}}
       >
         ()
@@ -1074,11 +810,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
      {
               
     <span
-      className={
-        Array [
-          "hljs-keyword",
-        ]
-      }
+      className="hljs-keyword"
       style={Object {}}
     >
       this
@@ -1086,22 +818,14 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     .setState({
                   
     <span
-      className={
-        Array [
-          "hljs-attr",
-        ]
-      }
+      className="hljs-attr"
       style={Object {}}
     >
       component
     </span>
     : 
     <span
-      className={
-        Array [
-          "hljs-literal",
-        ]
-      }
+      className="hljs-literal"
       style={Object {}}
     >
       null
@@ -1110,33 +834,21 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
               });
           }, 
     <span
-      className={
-        Array [
-          "hljs-keyword",
-        ]
-      }
+      className="hljs-keyword"
       style={Object {}}
     >
       this
     </span>
     .props.time || 
     <span
-      className={
-        Array [
-          "hljs-keyword",
-        ]
-      }
+      className="hljs-keyword"
       style={Object {}}
     >
       this
     </span>
     .props.seconds * 
     <span
-      className={
-        Array [
-          "hljs-number",
-        ]
-      }
+      className="hljs-number"
       style={Object {}}
     >
       1000
@@ -1146,22 +858,14 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
       render() {
           
     <span
-      className={
-        Array [
-          "hljs-keyword",
-        ]
-      }
+      className="hljs-keyword"
       style={Object {}}
     >
       return
     </span>
      
     <span
-      className={
-        Array [
-          "hljs-keyword",
-        ]
-      }
+      className="hljs-keyword"
       style={Object {}}
     >
       this

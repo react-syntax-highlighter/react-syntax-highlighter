@@ -110,19 +110,11 @@ exports[`SyntaxHighlighter component passes along code style to LineNumbers 1`] 
     </span>
      woah = 
     <span
-      className={
-        Array [
-          "hljs-function",
-        ]
-      }
+      className="hljs-function"
       style={Object {}}
     >
       <span
-        className={
-          Array [
-            "hljs-params",
-          ]
-        }
+        className="hljs-params"
         style={Object {}}
       >
         fun
@@ -173,11 +165,7 @@ exports[`SyntaxHighlighter component passes along code style to LineNumbers 1`] 
     ;
 
     <span
-      className={
-        Array [
-          "hljs-function",
-        ]
-      }
+      className="hljs-function"
       style={Object {}}
     >
       <span
@@ -202,11 +190,7 @@ exports[`SyntaxHighlighter component passes along code style to LineNumbers 1`] 
       </span>
       (
       <span
-        className={
-          Array [
-            "hljs-params",
-          ]
-        }
+        className="hljs-params"
         style={Object {}}
       />
       ) 
@@ -254,19 +238,11 @@ exports[`SyntaxHighlighter component passes along code style to LineNumbers 1`] 
     </span>
     ].map(
     <span
-      className={
-        Array [
-          "hljs-function",
-        ]
-      }
+      className="hljs-function"
       style={Object {}}
     >
       <span
-        className={
-          Array [
-            "hljs-params",
-          ]
-        }
+        className="hljs-params"
         style={Object {}}
       >
         n
@@ -319,11 +295,7 @@ exports[`SyntaxHighlighter component passes along code style to LineNumbers 1`] 
 
 
     <span
-      className={
-        Array [
-          "hljs-function",
-        ]
-      }
+      className="hljs-function"
       style={Object {}}
     >
       <span
@@ -348,11 +320,7 @@ exports[`SyntaxHighlighter component passes along code style to LineNumbers 1`] 
       </span>
       (
       <span
-        className={
-          Array [
-            "hljs-params",
-          ]
-        }
+        className="hljs-params"
         style={Object {}}
       />
       ) 

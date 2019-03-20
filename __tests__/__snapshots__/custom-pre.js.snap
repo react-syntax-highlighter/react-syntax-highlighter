@@ -24,19 +24,11 @@ exports[`SyntaxHighlighter component renders custom react component where pre ta
     </span>
      woah = 
     <span
-      className={
-        Array [
-          "hljs-function",
-        ]
-      }
+      className="hljs-function"
       style={Object {}}
     >
       <span
-        className={
-          Array [
-            "hljs-params",
-          ]
-        }
+        className="hljs-params"
         style={Object {}}
       >
         fun
@@ -87,11 +79,7 @@ exports[`SyntaxHighlighter component renders custom react component where pre ta
     ;
 
     <span
-      className={
-        Array [
-          "hljs-function",
-        ]
-      }
+      className="hljs-function"
       style={Object {}}
     >
       <span
@@ -116,11 +104,7 @@ exports[`SyntaxHighlighter component renders custom react component where pre ta
       </span>
       (
       <span
-        className={
-          Array [
-            "hljs-params",
-          ]
-        }
+        className="hljs-params"
         style={Object {}}
       />
       ) 
@@ -168,19 +152,11 @@ exports[`SyntaxHighlighter component renders custom react component where pre ta
     </span>
     ].map(
     <span
-      className={
-        Array [
-          "hljs-function",
-        ]
-      }
+      className="hljs-function"
       style={Object {}}
     >
       <span
-        className={
-          Array [
-            "hljs-params",
-          ]
-        }
+        className="hljs-params"
         style={Object {}}
       >
         n
@@ -233,11 +209,7 @@ exports[`SyntaxHighlighter component renders custom react component where pre ta
 
 
     <span
-      className={
-        Array [
-          "hljs-function",
-        ]
-      }
+      className="hljs-function"
       style={Object {}}
     >
       <span
@@ -262,11 +234,7 @@ exports[`SyntaxHighlighter component renders custom react component where pre ta
       </span>
       (
       <span
-        className={
-          Array [
-            "hljs-params",
-          ]
-        }
+        className="hljs-params"
         style={Object {}}
       />
       ) 
@@ -323,19 +291,11 @@ exports[`SyntaxHighlighter renders div where pre tag is by default 1`] = `
     </span>
      woah = 
     <span
-      className={
-        Array [
-          "hljs-function",
-        ]
-      }
+      className="hljs-function"
       style={Object {}}
     >
       <span
-        className={
-          Array [
-            "hljs-params",
-          ]
-        }
+        className="hljs-params"
         style={Object {}}
       >
         fun
@@ -386,11 +346,7 @@ exports[`SyntaxHighlighter renders div where pre tag is by default 1`] = `
     ;
 
     <span
-      className={
-        Array [
-          "hljs-function",
-        ]
-      }
+      className="hljs-function"
       style={Object {}}
     >
       <span
@@ -415,11 +371,7 @@ exports[`SyntaxHighlighter renders div where pre tag is by default 1`] = `
       </span>
       (
       <span
-        className={
-          Array [
-            "hljs-params",
-          ]
-        }
+        className="hljs-params"
         style={Object {}}
       />
       ) 
@@ -467,19 +419,11 @@ exports[`SyntaxHighlighter renders div where pre tag is by default 1`] = `
     </span>
     ].map(
     <span
-      className={
-        Array [
-          "hljs-function",
-        ]
-      }
+      className="hljs-function"
       style={Object {}}
     >
       <span
-        className={
-          Array [
-            "hljs-params",
-          ]
-        }
+        className="hljs-params"
         style={Object {}}
       >
         n
@@ -532,11 +476,7 @@ exports[`SyntaxHighlighter renders div where pre tag is by default 1`] = `
 
 
     <span
-      className={
-        Array [
-          "hljs-function",
-        ]
-      }
+      className="hljs-function"
       style={Object {}}
     >
       <span
@@ -561,11 +501,7 @@ exports[`SyntaxHighlighter renders div where pre tag is by default 1`] = `
       </span>
       (
       <span
-        className={
-          Array [
-            "hljs-params",
-          ]
-        }
+        className="hljs-params"
         style={Object {}}
       />
       ) 
