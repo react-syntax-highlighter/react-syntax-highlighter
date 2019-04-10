@@ -112,7 +112,7 @@ SyntaxHighlighter.supportedLanguages
 ### Built with React Syntax Highlighter
 
 - [mdx-deck](https://github.com/jxnblk/mdx-deck) - MDX-based presentation decks
-- [DBGlass](https://github.com/web-pal/DBGlass) - PostgreSQL client built with Electron.
+- [codecrumbs](https://github.com/Bogdan-Lyashenko/codecrumbs) - Learn, design or document codebase by putting breadcrumbs in source code. Live updates, multi-language support, and easy sharing.
 - [Spectacle Editor](https://github.com/FormidableLabs/spectacle-editor) - An Electron based app for creating, editing, saving, and publishing Spectacle presentations. With integrated Plotly support.
 - [Superset](https://github.com/airbnb/superset) - Superset is a data exploration platform designed to be visual, intuitive, and interactive.
 - [Daydream](https://github.com/segmentio/daydream) - A chrome extension to record your actions into a [nightmare](https://github.com/segmentio/nightmare) script 
