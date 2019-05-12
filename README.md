@@ -128,6 +128,7 @@ SyntaxHighlighter.supportedLanguages
 - [Alibaba Ice](https://github.com/alibaba/ice)
 - [Uber BaseUI Docs](https://github.com/uber-web/baseui)
 - [React Select Docs](https://github.com/JedWatson/react-select)
+- [Auto-layout](https://github.com/0123cf/auto-layout) - use flex laout
 
 
 If your project uses react-syntax-highlighter please send a pr to add!
