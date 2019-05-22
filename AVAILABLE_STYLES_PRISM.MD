@@ -21,4 +21,5 @@
 * hopscotch
 * pojoaque
 * vs
+* vs-dark
 * xonokai
