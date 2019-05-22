@@ -4,8 +4,10 @@
 * accesslog
 * actionscript
 * ada
+* angelscript
 * apache
 * applescript
+* arcade
 * arduino
 * armasm
 * asciidoc
@@ -62,6 +64,7 @@
 * gcode
 * gherkin
 * glsl
+* gml
 * go
 * golo
 * gradle
@@ -77,6 +80,7 @@
 * inform7
 * ini
 * irpf90
+* isbl
 * java
 * javascript
 * jbossCli (jboss-cli)
@@ -118,12 +122,15 @@
 * parser3
 * perl
 * pf
+* pgsql
 * php
+* plaintext
 * pony
 * powershell
 * processing
 * profile
 * prolog
+* properties
 * protobuf
 * puppet
 * purebasic
@@ -131,6 +138,7 @@
 * q
 * qml
 * r
+* reasonml
 * rib
 * roboconf
 * routeros
@@ -138,6 +146,7 @@
 * ruby
 * ruleslanguage
 * rust
+* sas
 * scala
 * scheme
 * scilab
