@@ -15,11 +15,17 @@ export default {
   ada: createLanguageAsyncLoader('ada', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_ada" */ 'highlight.js/lib/languages/ada')
   ),
+  angelscript: createLanguageAsyncLoader('angelscript', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_angelscript" */ 'highlight.js/lib/languages/angelscript')
+  ),
   apache: createLanguageAsyncLoader('apache', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_apache" */ 'highlight.js/lib/languages/apache')
   ),
   applescript: createLanguageAsyncLoader('applescript', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_applescript" */ 'highlight.js/lib/languages/applescript')
+  ),
+  arcade: createLanguageAsyncLoader('arcade', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_arcade" */ 'highlight.js/lib/languages/arcade')
   ),
   arduino: createLanguageAsyncLoader('arduino', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_arduino" */ 'highlight.js/lib/languages/arduino')
@@ -189,6 +195,9 @@ export default {
   glsl: createLanguageAsyncLoader('glsl', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_glsl" */ 'highlight.js/lib/languages/glsl')
   ),
+  gml: createLanguageAsyncLoader('gml', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_gml" */ 'highlight.js/lib/languages/gml')
+  ),
   go: createLanguageAsyncLoader('go', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_go" */ 'highlight.js/lib/languages/go')
   ),
@@ -233,6 +242,9 @@ export default {
   ),
   irpf90: createLanguageAsyncLoader('irpf90', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_irpf90" */ 'highlight.js/lib/languages/irpf90')
+  ),
+  isbl: createLanguageAsyncLoader('isbl', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_isbl" */ 'highlight.js/lib/languages/isbl')
   ),
   java: createLanguageAsyncLoader('java', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_java" */ 'highlight.js/lib/languages/java')
@@ -357,8 +369,14 @@ export default {
   pf: createLanguageAsyncLoader('pf', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_pf" */ 'highlight.js/lib/languages/pf')
   ),
+  pgsql: createLanguageAsyncLoader('pgsql', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_pgsql" */ 'highlight.js/lib/languages/pgsql')
+  ),
   php: createLanguageAsyncLoader('php', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_php" */ 'highlight.js/lib/languages/php')
+  ),
+  plaintext: createLanguageAsyncLoader('plaintext', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_plaintext" */ 'highlight.js/lib/languages/plaintext')
   ),
   pony: createLanguageAsyncLoader('pony', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_pony" */ 'highlight.js/lib/languages/pony')
@@ -374,6 +392,9 @@ export default {
   ),
   prolog: createLanguageAsyncLoader('prolog', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_prolog" */ 'highlight.js/lib/languages/prolog')
+  ),
+  properties: createLanguageAsyncLoader('properties', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_properties" */ 'highlight.js/lib/languages/properties')
   ),
   protobuf: createLanguageAsyncLoader('protobuf', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_protobuf" */ 'highlight.js/lib/languages/protobuf')
@@ -396,6 +417,9 @@ export default {
   r: createLanguageAsyncLoader('r', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_r" */ 'highlight.js/lib/languages/r')
   ),
+  reasonml: createLanguageAsyncLoader('reasonml', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_reasonml" */ 'highlight.js/lib/languages/reasonml')
+  ),
   rib: createLanguageAsyncLoader('rib', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_rib" */ 'highlight.js/lib/languages/rib')
   ),
@@ -416,6 +440,9 @@ export default {
   ),
   rust: createLanguageAsyncLoader('rust', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_rust" */ 'highlight.js/lib/languages/rust')
+  ),
+  sas: createLanguageAsyncLoader('sas', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_sas" */ 'highlight.js/lib/languages/sas')
   ),
   scala: createLanguageAsyncLoader('scala', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_scala" */ 'highlight.js/lib/languages/scala')
