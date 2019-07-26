@@ -87,10 +87,10 @@ import docco from 'react-syntax-highlighter/dist/esm/styles/hljs/docco';
 SyntaxHighlighter.registerLanguage('javascript', js);
 ```
 
-You can require `react-syntax-highlighter/prism-light` to use the prism light build instead of the standard light build.
+You can require `PrismLight` from `react-syntax-highlighter` to use the prism light build instead of the standard light build.
 
 ```jsx
-import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter/prism-light';
+import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import jsx from 'react-syntax-highlighter/dist/esm/languages/prism/jsx';
 import prism from 'react-syntax-highlighter/dist/esm/styles/prism/prism';
 
