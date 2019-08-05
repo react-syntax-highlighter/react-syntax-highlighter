@@ -144,6 +144,7 @@ SyntaxHighlighter.supportedLanguages;
 - [Uber BaseUI Docs](https://github.com/uber-web/baseui)
 - [React Select Docs](https://github.com/JedWatson/react-select)
 - [Auto-layout](https://github.com/0123cf/auto-layout) - use flex laout
+- [npmview](https://github.com/pd4d10/npmview) - A web application to view npm package files
 
 If your project uses react-syntax-highlighter please send a pr to add!
 
