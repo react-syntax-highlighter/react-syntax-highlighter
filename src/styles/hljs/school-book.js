@@ -5,12 +5,10 @@ export default {
         "padding": "15px 0.5em 0.5em 30px",
         "fontSize": "11px",
         "lineHeight": "16px",
-        "color": "#3e5915"
-    },
-    "re": {
         "background": "#f6f6ae url(./school-book.png)",
         "borderTop": "solid 2px #d2e8b9",
-        "borderBottom": "solid 1px #d2e8b9"
+        "borderBottom": "solid 1px #d2e8b9",
+        "color": "#3e5915"
     },
     "hljs-keyword": {
         "color": "#005599",

@@ -38,7 +38,7 @@ class Expire extends React.Component {
 
 test('SyntaxHighlighter render as text if language doesnt exist', () => {
   const tree = renderer.create(
-    <SyntaxHighlighter language="nonexistinglanguage" style={prism}>
+    <SyntaxHighlighter language="ruby" style={prism}>
       {"print('hello')"}
     </SyntaxHighlighter>
   );

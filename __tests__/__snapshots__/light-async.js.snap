@@ -50,7 +50,14 @@ exports[`SyntaxHighlighter render as text if language doesnt exist 1`] = `
       }
     }
   >
-    print('hello')
+    print(
+    <span
+      className="hljs-string"
+      style={Object {}}
+    >
+      'hello'
+    </span>
+    )
   </code>
 </pre>
 `;
