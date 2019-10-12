@@ -82,15 +82,14 @@ function DiffHighlight() {
           <SyntaxHighlighter
             style={docco}
             wrapLines={true}
-            lineStyle={lineNumber => {
+            lineProps={lineNumber => {
               let style = { display: 'block' };
               if (ADDED.includes(lineNumber)) {
                 style.backgroundColor = '#dbffdb';
-              }
-              else if (REMOVED.includes(lineNumber)) {
+              } else if (REMOVED.includes(lineNumber)) {
                 style.backgroundColor = '#ffecec';
               }
-              return style;
+              return { style };
             }}
           >
             {CODE}
