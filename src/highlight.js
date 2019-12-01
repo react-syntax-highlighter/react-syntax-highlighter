@@ -6,14 +6,16 @@ function getNewLines(str) {
   return str.match(newLineRegex);
 }
 
-function getLineNumbers({ lines, startingLineNumber, style }) {
+function getLineNumbers({ lines, startingLineNumber, numberProps = {} }) {
   return lines.map((_, i) => {
     const number = i + startingLineNumber;
+    const properties =
+      typeof numberProps === 'function' ? numberProps(number) : numberProps;
     return (
       <span
         key={`line-${i}`}
         className="react-syntax-highlighter-line-number"
-        style={typeof style === 'function' ? style(number) : style}
+        {...properties}
       >
         {`${number}\n`}
       </span>
@@ -24,15 +26,23 @@ function getLineNumbers({ lines, startingLineNumber, style }) {
 function LineNumbers({
   codeString,
   codeStyle,
-  containerStyle = { float: 'left', paddingRight: '10px' },
-  numberStyle = {},
+  containerProps = {},
+  numberProps,
   startingLineNumber
 }) {
+  containerProps.style = containerProps.style || {
+    float: 'left',
+    paddingRight: '10px'
+  };
   return (
-    <code style={Object.assign({}, codeStyle, containerStyle)}>
+    <code
+      // order ensures `containerProps.style` is merged with `codeStyle`
+      {...containerProps}
+      style={Object.assign({}, codeStyle, containerProps.style)}
+    >
       {getLineNumbers({
         lines: codeString.replace(/\n$/, '').split('\n'),
-        style: numberStyle,
+        numberProps,
         startingLineNumber
       })}
     </code>
@@ -191,8 +201,8 @@ export default function(defaultAstGenerator, defaultStyle) {
     useInlineStyles = true,
     showLineNumbers = false,
     startingLineNumber = 1,
-    lineNumberContainerStyle,
-    lineNumberStyle,
+    lineNumberContainerProps,
+    lineNumberProps,
     wrapLines,
     lineProps = {},
     renderer,
@@ -206,9 +216,9 @@ export default function(defaultAstGenerator, defaultStyle) {
 
     const lineNumbers = showLineNumbers ? (
       <LineNumbers
-        containerStyle={lineNumberContainerStyle}
+        containerProps={lineNumberContainerProps}
         codeStyle={codeTagProps.style || {}}
-        numberStyle={lineNumberStyle}
+        numberProps={lineNumberProps}
         startingLineNumber={startingLineNumber}
         codeString={code}
       />

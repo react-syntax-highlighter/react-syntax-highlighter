@@ -31,7 +31,7 @@ test('SyntaxHighlighter allows lineNumberStyle as object', () => {
       <SyntaxHighlighter
         language="javascript"
         showLineNumbers={true}
-        lineNumberStyle={{ color: 'red' }}
+        lineNumberProps={{ style: { color: 'red' } }}
       >
         {code}
       </SyntaxHighlighter>
@@ -46,7 +46,7 @@ test('SyntaxHighlighter allows lineNumberStyle as function', () => {
       <SyntaxHighlighter
         language="javascript"
         showLineNumbers={true}
-        lineNumberStyle={() => ({ color: 'red' })}
+        lineNumberProps={() => ({ style: { color: 'red' } })}
       >
         {code}
       </SyntaxHighlighter>

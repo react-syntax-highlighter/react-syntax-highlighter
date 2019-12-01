@@ -1,7 +1,9 @@
 ## React Syntax Highlighter
 
 [![Actions Status](https://github.com/conorhastings/react-syntax-highlighter/workflows/Node%20CI/badge.svg)](https://github.com/conorhastings/react-syntax-highlighter/actions)
+
 [![codecov](https://codecov.io/gh/conorhastings/react-syntax-highlighter/branch/master/graph/badge.svg)](https://codecov.io/gh/conorhastings/react-syntax-highlighter)
+
 [![npm](https://img.shields.io/npm/dm/react-syntax-highlighter.svg?style=flat-square)](https://www.npmjs.com/package/react-syntax-highlighter)
 
 Syntax highlighting component for `React` using the seriously super amazing <a href="https://github.com/wooorm/lowlight">lowlight</a> and <a href="https://github.com/wooorm/refractor">refractor</a> by <a href="https://github.com/wooorm">wooorm</a>
@@ -36,8 +38,8 @@ I do realize that javascript styles are not for everyone, so you can optionally 
 - `useInlineStyles` - if this prop is passed in as false, react syntax highlighter will not add style objects to elements, and will instead append classNames. You can then style the code block by using one of the CSS files provided by highlight.js.
 - `showLineNumbers` - if this is enabled line numbers will be shown next to the code block.
 - `startingLineNumber` - if `showLineNumbers` is enabled the line numbering will start from here.
-- `lineNumberContainerStyle` - the line numbers container default to appearing to the left with 10px of right padding. You can use this to override those styles.
-- `lineNumberStyle` - inline style to be passed to the span wrapping each number. Can be either an object or a function that receives current line number as argument and returns style object.
+- `lineNumberContainerProps` - props to be passed to `<code>` tag wrapping line numbers. Default style is to float left with 10px of right padding.
+- `lineNumberProps` - props to be passed to the `<span>` wrapping each number. Can be either an object or a function that receives current line number as argument and returns props object. This can be used e.g. for custom click events like shown <a href="https://conorhastings.github.io/react-syntax-highlighter/demo/index.html">here</a> (turn show line numbers on).
 - `wrapLines` - a boolean value that determines whether or not each line of code should be wrapped in a parent element. defaults to false, when false one can not take action on an element on the line level. You can see an example of what this enables <a href="https://conorhastings.github.io/react-syntax-highlighter/demo/diff.html">here</a>
 - `lineProps` - props to be passed to the span wrapping each line if wrapLines is true. Can be either an object or a function that receives current line number as argument and returns props object.
 - `renderer` - an optional custom renderer for rendering lines of code. See <a href="https://github.com/conorhastings/react-syntax-highlighter-virtualized-renderer">here</a> for an example.

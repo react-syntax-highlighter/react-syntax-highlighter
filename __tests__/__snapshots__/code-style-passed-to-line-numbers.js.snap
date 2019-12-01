@@ -23,70 +23,60 @@ exports[`SyntaxHighlighter component passes along code style to LineNumbers 1`] 
   >
     <span
       className="react-syntax-highlighter-line-number"
-      style={Object {}}
     >
       1
 
     </span>
     <span
       className="react-syntax-highlighter-line-number"
-      style={Object {}}
     >
       2
 
     </span>
     <span
       className="react-syntax-highlighter-line-number"
-      style={Object {}}
     >
       3
 
     </span>
     <span
       className="react-syntax-highlighter-line-number"
-      style={Object {}}
     >
       4
 
     </span>
     <span
       className="react-syntax-highlighter-line-number"
-      style={Object {}}
     >
       5
 
     </span>
     <span
       className="react-syntax-highlighter-line-number"
-      style={Object {}}
     >
       6
 
     </span>
     <span
       className="react-syntax-highlighter-line-number"
-      style={Object {}}
     >
       7
 
     </span>
     <span
       className="react-syntax-highlighter-line-number"
-      style={Object {}}
     >
       8
 
     </span>
     <span
       className="react-syntax-highlighter-line-number"
-      style={Object {}}
     >
       9
 
     </span>
     <span
       className="react-syntax-highlighter-line-number"
-      style={Object {}}
     >
       10
 
