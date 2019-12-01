@@ -1,5 +1,11 @@
 # Changelog
 
+##  [12.0.0]
+### Added
+- add lineNumberProps and lineNumberContainerProps objects which take either a prop object or a function that returns a prop object that is then passed onto each span wrapping a line number or code wrapping all the line numbers respectively
+### Changed
+- removed lineNumberStyle and lineNumberContainerStyle props. The behavior of these props can be replicated with lineNumberProps or lineNumberContainerProps passing a style object inside the props object. This is a breaking change
+
 ##  [10.1.0]
 ### Changed
 - All highlighters except for the old "-light" vareities, now have a supportedLanguges field which can be used to determine the supported languages

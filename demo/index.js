@@ -177,6 +177,12 @@ function createElement({ node, style, useInlineStyles, key }) {
             <SyntaxHighlighter
               style={this.state.style}
               showLineNumbers={this.state.showLineNumbers}
+              lineNumberProps={lineNumber => ({
+                style: { display: 'block', cursor: 'pointer' },
+                onClick() {
+                  alert(`Line Number Clicked: ${lineNumber}`);
+                }
+              })}
               wrapLines={true}
               lineProps={lineNumber => ({
                 style: { display: 'block', cursor: 'pointer' },
