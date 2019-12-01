@@ -54,13 +54,13 @@ test('SyntaxHighlighter component renders correctly', () => {
   expect(tree).toMatchSnapshot();
 });
 
-test('SyntaxHighlighter allows lineNumberStyle as object', () => {
+test('SyntaxHighlighter allows lineNumberProps as object', () => {
   const tree = renderer
     .create(
       <SyntaxHighlighter
         language="javascript"
-        showLineNumbers
-        lineNumberStyle={{ color: 'red' }}
+        showLineNumbers={true}
+        lineNumberProps={{ style: { color: 'red' } }}
       >
         {code}
       </SyntaxHighlighter>
@@ -69,13 +69,13 @@ test('SyntaxHighlighter allows lineNumberStyle as object', () => {
   expect(tree).toMatchSnapshot();
 });
 
-test('SyntaxHighlighter allows lineNumberStyle as function', () => {
+test('SyntaxHighlighter allows lineNumberProps as function', () => {
   const tree = renderer
     .create(
       <SyntaxHighlighter
         language="javascript"
         showLineNumbers
-        lineNumberStyle={() => ({ color: 'red' })}
+        lineNumberProps={() => ({ style: { color: 'red' } })}
       >
         {code}
       </SyntaxHighlighter>
@@ -84,14 +84,14 @@ test('SyntaxHighlighter allows lineNumberStyle as function', () => {
   expect(tree).toMatchSnapshot();
 });
 
-test('SyntaxHighlighter allows lineNumberStyle as function for inline line numbers', () => {
+test('SyntaxHighlighter allows lineNumberProps as function for inline line numbers', () => {
   const tree = renderer
     .create(
       <SyntaxHighlighter
         language="javascript"
         showLineNumbers
         showInlineLineNumbers
-        lineNumberStyle={() => ({ color: 'red' })}
+        lineNumberProps={() => ({ style: { color: 'red' } })}
       >
         {code}
       </SyntaxHighlighter>

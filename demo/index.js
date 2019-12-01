@@ -58,7 +58,7 @@ function createElement({ node, style, useInlineStyles, key }) {
       selectedStyle: availableStyles[0],
       style: require(`../src/styles/hljs/${availableStyles[0]}`).default,
       code: initialCodeString,
-      showLineNumbers: false,
+      showLineNumbers: true,
       wrapLongLines: false
     };
   }
@@ -157,11 +157,14 @@ function createElement({ node, style, useInlineStyles, key }) {
               style={this.state.style}
               showLineNumbers={this.state.showLineNumbers}
               wrapLongLines={this.state.wrapLongLines}
+              lineNumberProps={lineNumber => ({
+                style: { color: 'red' }
+              })}
               wrapLines={true}
               lineProps={lineNumber => ({
                 style: { display: 'block', cursor: 'pointer' },
                 onClick() {
-                  alert(`Line Number Clicked: ${lineNumber}`);
+                  alert(`Line Clicked: ${lineNumber}`);
                 }
               })}
             >
