@@ -191,6 +191,7 @@ export default function(defaultAstGenerator, defaultStyle) {
     useInlineStyles = true,
     showLineNumbers = false,
     startingLineNumber = 1,
+    showResponsiveLineNumbers = false,
     lineNumberContainerStyle,
     lineNumberStyle,
     wrapLines,
@@ -204,15 +205,51 @@ export default function(defaultAstGenerator, defaultStyle) {
   }) {
     astGenerator = astGenerator || defaultAstGenerator;
 
-    const lineNumbers = showLineNumbers ? (
-      <LineNumbers
-        containerStyle={lineNumberContainerStyle}
-        codeStyle={codeTagProps.style || {}}
-        numberStyle={lineNumberStyle}
-        startingLineNumber={startingLineNumber}
-        codeString={code}
-      />
-    ) : null;
+    const lineNumbers =
+      showLineNumbers && !showResponsiveLineNumbers ? (
+        <LineNumbers
+          containerStyle={lineNumberContainerStyle}
+          codeStyle={codeTagProps.style || {}}
+          numberStyle={lineNumberStyle}
+          startingLineNumber={startingLineNumber}
+          codeString={code}
+        />
+      ) : showResponsiveLineNumbers ? (
+        <style>{`
+        .code-line {
+          counter-increment: line;
+          position: relative;
+          display: block;
+          margin-left: 1.5rem;
+        }
+      
+        .code-line:before {
+          content: counter(line);
+          position: absolute;
+          margin-left: -1.5rem;
+        }
+      `}</style>
+      ) : null;
+
+    if (showResponsiveLineNumbers) {
+      wrapLines = true;
+
+      codeTagProps.style = {
+        ...codeTagProps.style,
+        counterReset: 'line'
+      };
+
+      const lineClassName = `code-line ${lineProps.className || ''}`;
+      if (typeof lineProps === 'function') {
+        const origLinePropsFn = lineProps.bind({});
+        lineProps = num => ({
+          ...origLinePropsFn(num),
+          className: lineClassName
+        });
+      } else {
+        lineProps.className = lineClassName;
+      }
+    }
 
     const defaultPreStyle = style.hljs ||
       style['pre[class*="language-"]'] || { backgroundColor: '#fff' };
