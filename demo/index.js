@@ -121,7 +121,8 @@ function createElement({ node, style, useInlineStyles, key }) {
       selected: 'tomorrow-night-eighties',
       style: require('../src/styles/hljs/tomorrow-night-eighties').default,
       code: initialCodeString,
-      showLineNumbers: false
+      showLineNumbers: false,
+      showResponsiveLineNumbers: false
     };
   }
   render() {
@@ -165,6 +166,22 @@ function createElement({ node, style, useInlineStyles, key }) {
             id="showLineNumbers"
           />
         </div>
+        <div style={{ paddingTop: '10px', fontSize: 16, color: 'aliceblue' }}>
+          <label htmlFor="showResponsiveLineNumbers">
+            Show Responsive Line Numbers:
+          </label>
+          <input
+            type="checkbox"
+            checked={this.state.showResponsiveLineNumbers}
+            onChange={() => {
+              this.setState({
+                showResponsiveLineNumbers: !this.state.showResponsiveLineNumbers
+              });
+              console.log(this.state.showResponsiveLineNumbers);
+            }}
+            id="showResponsiveLineNumbers"
+          />
+        </div>
         <div style={{ paddingTop: 20, display: 'flex' }}>
           <textarea
             style={{ flex: 1, marginTop: 11 }}
@@ -177,6 +194,7 @@ function createElement({ node, style, useInlineStyles, key }) {
             <SyntaxHighlighter
               style={this.state.style}
               showLineNumbers={this.state.showLineNumbers}
+              showResponsiveLineNumbers={this.state.showResponsiveLineNumbers}
               wrapLines={true}
               lineProps={lineNumber => ({
                 style: { display: 'block', cursor: 'pointer' },
