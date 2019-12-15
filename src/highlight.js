@@ -236,7 +236,7 @@ export default function(defaultAstGenerator, defaultStyle) {
 
       codeTagProps.style = {
         ...codeTagProps.style,
-        counterReset: 'line'
+        counterReset: `line ${startingLineNumber - 1}`
       };
 
       const lineClassName = `code-line ${lineProps.className || ''}`;
