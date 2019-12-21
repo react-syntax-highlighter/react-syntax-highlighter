@@ -146,6 +146,7 @@ SyntaxHighlighter.supportedLanguages;
 - [Auto-layout](https://github.com/0123cf/auto-layout) - use flex laout
 - [npmview](https://github.com/pd4d10/npmview) - A web application to view npm package files
 - [Static Forms](https://www.staticforms.xyz) - Free HTML forms for your static websites.
+- [codeprinter](https://github.com/jaredpetersen/codeprinter) - Print out code easily
 
 If your project uses react-syntax-highlighter please send a pr to add!
 
