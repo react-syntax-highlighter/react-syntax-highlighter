@@ -146,7 +146,7 @@ SyntaxHighlighter.supportedLanguages;
 - [Auto-layout](https://github.com/0123cf/auto-layout) - use flex layout
 - [npmview](https://github.com/pd4d10/npmview) - A web application to view npm package files
 - [Static Forms](https://www.staticforms.xyz) - Free HTML forms for your static websites.
-- [StoryTab](https://github.com/mkosir/story-tab) - CLI tool for generating component code as documentation in Storybook tab
+- [React DocTab](https://github.com/mkosir/react-doc-tab) - CLI tool for generating React component code as documentation tabs
 
 If your project uses react-syntax-highlighter please send a pr to add!
 
