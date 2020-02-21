@@ -6,39 +6,6 @@ function getNewLines(str) {
   return str.match(newLineRegex);
 }
 
-function getLineNumbers({ lines, startingLineNumber, style }) {
-  return lines.map((_, i) => {
-    const number = i + startingLineNumber;
-    return (
-      <span
-        key={`line-${i}`}
-        className="react-syntax-highlighter-line-number"
-        style={typeof style === 'function' ? style(number) : style}
-      >
-        {`${number}\n`}
-      </span>
-    );
-  });
-}
-
-function LineNumbers({
-  codeString,
-  codeStyle,
-  containerStyle = { float: 'left', paddingRight: '10px' },
-  numberStyle = {},
-  startingLineNumber
-}) {
-  return (
-    <code style={Object.assign({}, codeStyle, containerStyle)}>
-      {getLineNumbers({
-        lines: codeString.replace(/\n$/, '').split('\n'),
-        style: numberStyle,
-        startingLineNumber
-      })}
-    </code>
-  );
-}
-
 function createLineElement({
   children,
   lineNumber,
@@ -244,16 +211,6 @@ export default function(defaultAstGenerator, defaultStyle) {
   }) {
     astGenerator = astGenerator || defaultAstGenerator;
 
-    const lineNumbers = showLineNumbers ? (
-      <LineNumbers
-        containerStyle={lineNumberContainerStyle}
-        codeStyle={codeTagProps.style || {}}
-        numberStyle={lineNumberStyle}
-        startingLineNumber={startingLineNumber}
-        codeString={code}
-      />
-    ) : null;
-
     const defaultPreStyle = style.hljs ||
       style['pre[class*="language-"]'] || { backgroundColor: '#fff' };
     const preProps = useInlineStyles
@@ -265,7 +222,6 @@ export default function(defaultAstGenerator, defaultStyle) {
     if (!astGenerator) {
       return (
         <PreTag {...preProps}>
-          {lineNumbers}
           <CodeTag {...codeTagProps}>{code}</CodeTag>
         </PreTag>
       );
@@ -300,7 +256,6 @@ export default function(defaultAstGenerator, defaultStyle) {
 
     return (
       <PreTag {...preProps}>
-        {lineNumbers}
         <CodeTag {...codeTagProps}>
           {renderer({ rows: tree, stylesheet: style, useInlineStyles })}
         </CodeTag>
