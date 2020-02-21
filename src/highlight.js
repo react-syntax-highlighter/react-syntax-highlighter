@@ -94,7 +94,8 @@ function wrapLinesInSpan(
     if (newLines) {
       const splitValue = value.split('\n');
       splitValue.forEach((text, i) => {
-        const lineNumber = newTree.length + 1;
+        const lineNumber =
+          showLineNumbers && newTree.length + startingLineNumber;
         const newChild = { type: 'text', value: `${text}\n` };
         if (i === 0) {
           const children = tree.slice(lastLineBreakIndex + 1, index).concat(
@@ -147,7 +148,7 @@ function wrapLinesInSpan(
       newTree.push(
         createLineElement({
           children,
-          lineNumber: newTree.length + 1,
+          lineNumber: newTree.length + startingLineNumber,
           lineProps
         })
       );
