@@ -42,6 +42,7 @@ function LineNumbers({
 function createLineElement({
   children,
   lineNumber,
+  lineNumberStyle,
   lineProps,
   className = []
 }) {
@@ -104,7 +105,14 @@ function wrapLinesInSpan(
               className: node.properties.className
             })
           );
-          newTree.push(createLineElement({ children, lineNumber, lineProps }));
+          newTree.push(
+            createLineElement({
+              children,
+              lineNumber,
+              lineNumberStyle,
+              lineProps
+            })
+          );
         } else if (i === splitValue.length - 1) {
           const stringChild =
             tree[index + 1] &&
@@ -122,6 +130,7 @@ function wrapLinesInSpan(
               createLineElement({
                 children: [newChild],
                 lineNumber,
+                lineNumberStyle,
                 lineProps,
                 className: node.properties.className
               })
@@ -132,6 +141,7 @@ function wrapLinesInSpan(
             createLineElement({
               children: [newChild],
               lineNumber,
+              lineNumberStyle,
               lineProps,
               className: node.properties.className
             })
@@ -149,6 +159,7 @@ function wrapLinesInSpan(
         createLineElement({
           children,
           lineNumber: newTree.length + startingLineNumber,
+          lineNumberStyle,
           lineProps
         })
       );
@@ -199,7 +210,7 @@ export default function(defaultAstGenerator, defaultStyle) {
     showLineNumbers = false,
     startingLineNumber = 1,
     lineNumberContainerStyle,
-    lineNumberStyle,
+    lineNumberStyle = {},
     wrapLines,
     lineProps = {},
     renderer,
