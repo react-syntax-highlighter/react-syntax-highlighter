@@ -76,7 +76,13 @@ function flattenCodeTree(tree, className = [], newTree = []) {
   return newTree;
 }
 
-function wrapLinesInSpan(codeTree, lineProps) {
+function wrapLinesInSpan(
+  codeTree,
+  lineProps,
+  showLineNumbers,
+  startingLineNumber,
+  lineNumberStyle
+) {
   const tree = flattenCodeTree(codeTree.value);
   const newTree = [];
   let lastLineBreakIndex = -1;
@@ -249,7 +255,13 @@ export default function(defaultAstGenerator, defaultStyle) {
     }
 
     const tree = wrapLines
-      ? wrapLinesInSpan(codeTree, lineProps)
+      ? wrapLinesInSpan(
+          codeTree,
+          lineProps,
+          showLineNumbers,
+          startingLineNumber,
+          lineNumberStyle
+        )
       : codeTree.value;
 
     return (
