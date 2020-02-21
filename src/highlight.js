@@ -28,7 +28,7 @@ function createLineElement({
         className: ['react-syntax-highlighter-line-number'],
         style:
           typeof lineNumberStyle === 'function'
-            ? numberStyle(lineNumberStyle)
+            ? lineNumberStyle(lineNumber)
             : lineNumberStyle
       },
       children: [
