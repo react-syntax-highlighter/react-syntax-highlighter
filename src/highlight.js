@@ -51,6 +51,28 @@ function createLineElement({
   properties.className = properties.className
     ? className.concat(properties.className)
     : className;
+
+  if (lineNumber) {
+    children.unshift({
+      type: 'element',
+      tagName: 'span',
+      properties: {
+        key: `line-number--${lineNumber}`,
+        className: ['react-syntax-highlighter-line-number'],
+        style:
+          typeof lineNumberStyle === 'function'
+            ? numberStyle(lineNumberStyle)
+            : lineNumberStyle
+      },
+      children: [
+        {
+          type: 'text',
+          value: lineNumber
+        }
+      ]
+    });
+  }
+
   return {
     type: 'element',
     tagName: 'span',
