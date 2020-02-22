@@ -37,7 +37,11 @@ function createLineElement({
       tagName: 'span',
       properties: {
         key: `line-number--${lineNumber}`,
-        className: ['react-syntax-highlighter-line-number'],
+        className: [
+          'comment',
+          'linenumber',
+          'react-syntax-highlighter-line-number'
+        ],
         style: {
           ...defaultLineNumberStyle,
           ...customLineNumberStyle
