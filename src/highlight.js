@@ -6,6 +6,39 @@ function getNewLines(str) {
   return str.match(newLineRegex);
 }
 
+function getAllLineNumbers({ lines, startingLineNumber, style }) {
+  return lines.map((_, i) => {
+    const number = i + startingLineNumber;
+    return (
+      <span
+        key={`line-${i}`}
+        className="react-syntax-highlighter-line-number"
+        style={typeof style === 'function' ? style(number) : style}
+      >
+        {`${number}\n`}
+      </span>
+    );
+  });
+}
+
+function AllLineNumbers({
+  codeString,
+  codeStyle,
+  containerStyle = { float: 'left', paddingRight: '10px' },
+  numberStyle = {},
+  startingLineNumber
+}) {
+  return (
+    <code style={Object.assign({}, codeStyle, containerStyle)}>
+      {getAllLineNumbers({
+        lines: codeString.replace(/\n$/, '').split('\n'),
+        style: numberStyle,
+        startingLineNumber
+      })}
+    </code>
+  );
+}
+
 function getEmWidthOfNumber(num) {
   const len = num.toString().length;
   return `${len}em`;
@@ -239,6 +272,16 @@ export default function(defaultAstGenerator, defaultStyle) {
   }) {
     astGenerator = astGenerator || defaultAstGenerator;
 
+    const allLineNumbers = showLineNumbers ? (
+      <AllLineNumbers
+        containerStyle={lineNumberContainerStyle}
+        codeStyle={codeTagProps.style || {}}
+        numberStyle={lineNumberStyle}
+        startingLineNumber={startingLineNumber}
+        codeString={code}
+      />
+    ) : null;
+
     const defaultPreStyle = style.hljs ||
       style['pre[class*="language-"]'] || { backgroundColor: '#fff' };
     const preProps = useInlineStyles
@@ -250,6 +293,7 @@ export default function(defaultAstGenerator, defaultStyle) {
     if (!astGenerator) {
       return (
         <PreTag {...preProps}>
+          {allLineNumbers}
           <CodeTag {...codeTagProps}>{code}</CodeTag>
         </PreTag>
       );
