@@ -6,10 +6,16 @@ function getNewLines(str) {
   return str.match(newLineRegex);
 }
 
+function getEmWidthOfNumber(num) {
+  const len = num.toString().length;
+  return `${len}em`;
+}
+
 function createLineElement({
   children,
   lineNumber,
   lineNumberStyle,
+  largestLineNumber,
   lineProps,
   className = []
 }) {
@@ -28,6 +34,7 @@ function createLineElement({
     // minimally necessary styling for line numbers
     const defaultLineNumberStyle = {
       display: 'inline-block',
+      minWidth: getEmWidthOfNumber(largestLineNumber),
       paddingRight: '1em',
       textAlign: 'right',
       userSelect: 'none'
@@ -87,6 +94,7 @@ function wrapLinesInSpan(
   lineProps,
   showLineNumbers,
   startingLineNumber,
+  largestLineNumber,
   lineNumberStyle
 ) {
   const tree = flattenCodeTree(codeTree.value);
@@ -115,6 +123,7 @@ function wrapLinesInSpan(
               children,
               lineNumber,
               lineNumberStyle,
+              largestLineNumber,
               lineProps
             })
           );
@@ -136,6 +145,7 @@ function wrapLinesInSpan(
                 children: [newChild],
                 lineNumber,
                 lineNumberStyle,
+                largestLineNumber,
                 lineProps,
                 className: node.properties.className
               })
@@ -147,6 +157,7 @@ function wrapLinesInSpan(
               children: [newChild],
               lineNumber,
               lineNumberStyle,
+              largestLineNumber,
               lineProps,
               className: node.properties.className
             })
@@ -165,6 +176,7 @@ function wrapLinesInSpan(
           children,
           lineNumber: newTree.length + startingLineNumber,
           lineNumberStyle,
+          largestLineNumber,
           lineProps
         })
       );
@@ -260,12 +272,16 @@ export default function(defaultAstGenerator, defaultStyle) {
       codeTree.value = defaultCodeValue;
     }
 
+    // determine largest line number so that we can force minWidth on all linenumber elements
+    const largestLineNumber = codeTree.value.length + startingLineNumber;
+
     const tree = wrapLines
       ? wrapLinesInSpan(
           codeTree,
           lineProps,
           showLineNumbers,
           startingLineNumber,
+          largestLineNumber,
           lineNumberStyle
         )
       : codeTree.value;
