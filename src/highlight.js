@@ -275,16 +275,17 @@ export default function(defaultAstGenerator, defaultStyle) {
     // determine largest line number so that we can force minWidth on all linenumber elements
     const largestLineNumber = codeTree.value.length + startingLineNumber;
 
-    const tree = wrapLines
-      ? wrapLinesInSpan(
-          codeTree,
-          lineProps,
-          showLineNumbers,
-          startingLineNumber,
-          largestLineNumber,
-          lineNumberStyle
-        )
-      : codeTree.value;
+    const tree =
+      wrapLines || showLineNumbers
+        ? wrapLinesInSpan(
+            codeTree,
+            lineProps,
+            showLineNumbers,
+            startingLineNumber,
+            largestLineNumber,
+            lineNumberStyle
+          )
+        : codeTree.value;
 
     return (
       <PreTag {...preProps}>
