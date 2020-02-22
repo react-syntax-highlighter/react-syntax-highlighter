@@ -20,16 +20,28 @@ function createLineElement({
     : className;
 
   if (lineNumber) {
+    const customLineNumberStyle =
+      typeof lineNumberStyle === 'function'
+        ? lineNumberStyle(lineNumber)
+        : lineNumberStyle;
+
+    // minimally necessary styling for line numbers
+    const defaultLineNumberStyle = {
+      display: 'inline-block',
+      paddingRight: '1em',
+      textAlign: 'right',
+      userSelect: 'none'
+    };
     children.unshift({
       type: 'element',
       tagName: 'span',
       properties: {
         key: `line-number--${lineNumber}`,
         className: ['react-syntax-highlighter-line-number'],
-        style:
-          typeof lineNumberStyle === 'function'
-            ? lineNumberStyle(lineNumber)
-            : lineNumberStyle
+        style: {
+          ...defaultLineNumberStyle,
+          ...customLineNumberStyle
+        }
       },
       children: [
         {
