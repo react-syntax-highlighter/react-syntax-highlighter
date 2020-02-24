@@ -49,6 +49,7 @@ function createLineElement({
   lineNumber,
   lineNumberStyle,
   largestLineNumber,
+  showInlineLineNumbers,
   lineProps,
   className = []
 }) {
@@ -58,7 +59,7 @@ function createLineElement({
     ? className.concat(properties.className)
     : className;
 
-  if (lineNumber) {
+  if (lineNumber && showInlineLineNumbers) {
     const customLineNumberStyle =
       typeof lineNumberStyle === 'function'
         ? lineNumberStyle(lineNumber)
@@ -126,6 +127,7 @@ function wrapLinesInSpan(
   codeTree,
   lineProps,
   showLineNumbers,
+  showInlineLineNumbers,
   startingLineNumber,
   largestLineNumber,
   lineNumberStyle
@@ -157,6 +159,7 @@ function wrapLinesInSpan(
               lineNumber,
               lineNumberStyle,
               largestLineNumber,
+              showInlineLineNumbers,
               lineProps
             })
           );
@@ -179,6 +182,7 @@ function wrapLinesInSpan(
                 lineNumber,
                 lineNumberStyle,
                 largestLineNumber,
+                showInlineLineNumbers,
                 lineProps,
                 className: node.properties.className
               })
@@ -191,6 +195,7 @@ function wrapLinesInSpan(
               lineNumber,
               lineNumberStyle,
               largestLineNumber,
+              showInlineLineNumbers,
               lineProps,
               className: node.properties.className
             })
@@ -210,6 +215,7 @@ function wrapLinesInSpan(
           lineNumber: newTree.length + startingLineNumber,
           lineNumberStyle,
           largestLineNumber,
+          showInlineLineNumbers,
           lineProps
         })
       );
@@ -258,6 +264,7 @@ export default function(defaultAstGenerator, defaultStyle) {
     codeTagProps = { style: style['code[class*="language-"]'] },
     useInlineStyles = true,
     showLineNumbers = false,
+    showInlineLineNumbers = false,
     startingLineNumber = 1,
     lineNumberContainerStyle,
     lineNumberStyle = {},
@@ -324,6 +331,7 @@ export default function(defaultAstGenerator, defaultStyle) {
           codeTree,
           lineProps,
           showLineNumbers,
+          showInlineLineNumbers,
           startingLineNumber,
           largestLineNumber,
           lineNumberStyle
@@ -333,7 +341,7 @@ export default function(defaultAstGenerator, defaultStyle) {
     return (
       <PreTag {...preProps}>
         <CodeTag {...codeTagProps}>
-          {!wrapLines && allLineNumbers}
+          {!showInlineLineNumbers && allLineNumbers}
           {renderer({ rows: tree, stylesheet: style, useInlineStyles })}
         </CodeTag>
       </PreTag>
