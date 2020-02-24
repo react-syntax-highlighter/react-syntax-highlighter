@@ -44,6 +44,50 @@ function getEmWidthOfNumber(num) {
   return `${len}em`;
 }
 
+function getInlineLineNumber(lineNumber, inlineLineNumberStyle) {
+  return {
+    type: 'element',
+    tagName: 'span',
+    properties: {
+      key: `line-number--${lineNumber}`,
+      className: [
+        'comment',
+        'linenumber',
+        'react-syntax-highlighter-line-number'
+      ],
+      style: inlineLineNumberStyle
+    },
+    children: [
+      {
+        type: 'text',
+        value: lineNumber
+      }
+    ]
+  };
+}
+
+function assembleLineNumberStyles(lineNumberStyle, largestLineNumber) {
+  // minimally necessary styling for line numbers
+  const defaultLineNumberStyle = {
+    display: 'inline-block',
+    minWidth: getEmWidthOfNumber(largestLineNumber),
+    paddingRight: '1em',
+    textAlign: 'right',
+    userSelect: 'none'
+  };
+  // prep custom styling
+  const customLineNumberStyle =
+    typeof lineNumberStyle === 'function'
+      ? lineNumberStyle(lineNumber)
+      : lineNumberStyle;
+  // combine
+  const assembledStyle = {
+    ...defaultLineNumberStyle,
+    ...customLineNumberStyle
+  };
+  return assembledStyle;
+}
+
 function createLineElement({
   children,
   lineNumber,
@@ -60,41 +104,11 @@ function createLineElement({
     : className;
 
   if (lineNumber && showInlineLineNumbers) {
-    const customLineNumberStyle =
-      typeof lineNumberStyle === 'function'
-        ? lineNumberStyle(lineNumber)
-        : lineNumberStyle;
-
-    // minimally necessary styling for line numbers
-    const defaultLineNumberStyle = {
-      display: 'inline-block',
-      minWidth: getEmWidthOfNumber(largestLineNumber),
-      paddingRight: '1em',
-      textAlign: 'right',
-      userSelect: 'none'
-    };
-    children.unshift({
-      type: 'element',
-      tagName: 'span',
-      properties: {
-        key: `line-number--${lineNumber}`,
-        className: [
-          'comment',
-          'linenumber',
-          'react-syntax-highlighter-line-number'
-        ],
-        style: {
-          ...defaultLineNumberStyle,
-          ...customLineNumberStyle
-        }
-      },
-      children: [
-        {
-          type: 'text',
-          value: lineNumber
-        }
-      ]
-    });
+    const inlineLineNumberStyle = assembleLineNumberStyles(
+      lineNumberStyle,
+      largestLineNumber
+    );
+    children.unshift(getInlineLineNumber(lineNumber, inlineLineNumberStyle));
   }
 
   return {
