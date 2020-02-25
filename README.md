@@ -35,6 +35,7 @@ I do realize that javascript styles are not for everyone, so you can optionally 
 - `codeTagProps` - props that will be spread into the `<code>` tag that is the direct parent of the highlighted code elements. Useful for styling/assigning classNames.
 - `useInlineStyles` - if this prop is passed in as false, react syntax highlighter will not add style objects to elements, and will instead append classNames. You can then style the code block by using one of the CSS files provided by highlight.js.
 - `showLineNumbers` - if this is enabled line numbers will be shown next to the code block.
+- `showInlineLineNumbers` - if this is enabled line numbers will be rendered into each line, which allows line numbers to display properly when using renderers such as <a href="https://github.com/conorhastings/react-syntax-highlighter-virtualized-renderer">react-syntax-highlighter-virtualized-renderer</a>.
 - `startingLineNumber` - if `showLineNumbers` is enabled the line numbering will start from here.
 - `lineNumberContainerStyle` - the line numbers container default to appearing to the left with 10px of right padding. You can use this to override those styles.
 - `lineNumberStyle` - inline style to be passed to the span wrapping each number. Can be either an object or a function that receives current line number as argument and returns style object.
