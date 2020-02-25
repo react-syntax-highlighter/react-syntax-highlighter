@@ -50,7 +50,11 @@ exports[`SyntaxHighlighter render as text if language doesnt exist 1`] = `
       }
     }
   >
-    print('hello')
+    <span
+      style={Object {}}
+    >
+      print('hello')
+    </span>
   </code>
 </pre>
 `;
@@ -105,34 +109,66 @@ exports[`SyntaxHighlighter renders fortran highlighted text 1`] = `
       }
     }
   >
-    
-            C AREA OF A TRIANGLE WITH A STANDARD SQUARE ROOT FUNCTION
-            C INPUT - TAPE READER UNIT 5, INTEGER INPUT
-            C OUTPUT - LINE PRINTER UNIT 6, REAL OUTPUT
-            C INPUT ERROR DISPLAY ERROR OUTPUT CODE 1 IN JOB CONTROL LISTING
-                READ INPUT TAPE 5, 501, IA, IB, IC
-            501 FORMAT (3I5)
-            C IA, IB, AND IC MAY NOT BE NEGATIVE OR ZERO
-            C FURTHERMORE, THE SUM OF TWO SIDES OF A TRIANGLE
-            C MUST BE GREATER THAN THE THIRD SIDE, SO WE CHECK FOR THAT, TOO
-                IF (IA) 777, 777, 701
-            701 IF (IB) 777, 777, 702
-            702 IF (IC) 777, 777, 703
-            703 IF (IA+IB-IC) 777, 777, 704
-            704 IF (IA+IC-IB) 777, 777, 705
-            705 IF (IB+IC-IA) 777, 777, 799
-            777 STOP 1
-            C USING HERON'S FORMULA WE CALCULATE THE
-            C AREA OF THE TRIANGLE
-            799 S = FLOATF (IA + IB + IC) / 2.0
-                AREA = SQRTF( S * (S - FLOATF(IA)) * (S - FLOATF(IB)) *
-                +     (S - FLOATF(IC)))
-                WRITE OUTPUT TAPE 6, 601, IA, IB, IC, AREA
-            601 FORMAT (4H A= ,I5,5H  B= ,I5,5H  C= ,I5,8H  AREA= ,F10.2,
-                +        13H SQUARE UNITS)
-                STOP
-                END
-                   
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
+                C AREA OF A TRIANGLE WITH A STANDARD SQUARE ROOT FUNCTION
+
+                C INPUT - TAPE READER UNIT 5, INTEGER INPUT
+
+                C OUTPUT - LINE PRINTER UNIT 6, REAL OUTPUT
+
+                C INPUT ERROR DISPLAY ERROR OUTPUT CODE 1 IN JOB CONTROL LISTING
+
+                    READ INPUT TAPE 5, 501, IA, IB, IC
+
+                501 FORMAT (3I5)
+
+                C IA, IB, AND IC MAY NOT BE NEGATIVE OR ZERO
+
+                C FURTHERMORE, THE SUM OF TWO SIDES OF A TRIANGLE
+
+                C MUST BE GREATER THAN THE THIRD SIDE, SO WE CHECK FOR THAT, TOO
+
+                    IF (IA) 777, 777, 701
+
+                701 IF (IB) 777, 777, 702
+
+                702 IF (IC) 777, 777, 703
+
+                703 IF (IA+IB-IC) 777, 777, 704
+
+                704 IF (IA+IC-IB) 777, 777, 705
+
+                705 IF (IB+IC-IA) 777, 777, 799
+
+                777 STOP 1
+
+                C USING HERON'S FORMULA WE CALCULATE THE
+
+                C AREA OF THE TRIANGLE
+
+                799 S = FLOATF (IA + IB + IC) / 2.0
+
+                    AREA = SQRTF( S * (S - FLOATF(IA)) * (S - FLOATF(IB)) *
+
+                    +     (S - FLOATF(IC)))
+
+                    WRITE OUTPUT TAPE 6, 601, IA, IB, IC, AREA
+
+                601 FORMAT (4H A= ,I5,5H  B= ,I5,5H  C= ,I5,8H  AREA= ,F10.2,
+
+                    +        13H SQUARE UNITS)
+
+                    STOP
+
+                    END
+
+                       
+
   </code>
 </pre>
 `;
@@ -187,25 +223,48 @@ exports[`SyntaxHighlighter renders javascript highlighted text 1`] = `
       }
     }
   >
-    import React from "react";
-import uniquePropHOC from "./lib/unique-prop-hoc";
+    <span
+      style={Object {}}
+    >
+      import React from "react";
 
-class Expire extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { component: props.children }
+    </span>
+    import uniquePropHOC from "./lib/unique-prop-hoc";
+
+    
+
+    class Expire extends React.Component {
+
+        constructor(props) {
+
+            super(props);
+
+            this.state = { component: props.children }
+
+        }
+
+        componentDidMount() {
+
+            setTimeout(() =&gt; {
+
+                this.setState({
+
+                    component: null
+
+                });
+
+            }, this.props.time || this.props.seconds * 1000);
+
+        }
+
+        render() {
+
+            return this.state.component;
+
+        }
+
     }
-    componentDidMount() {
-        setTimeout(() =&gt; {
-            this.setState({
-                component: null
-            });
-        }, this.props.time || this.props.seconds * 1000);
-    }
-    render() {
-        return this.state.component;
-    }
-}
+
   </code>
 </pre>
 `;
@@ -260,34 +319,66 @@ exports[`SyntaxHighlighter renders text while language loads 1`] = `
       }
     }
   >
-    
-            C AREA OF A TRIANGLE WITH A STANDARD SQUARE ROOT FUNCTION
-            C INPUT - TAPE READER UNIT 5, INTEGER INPUT
-            C OUTPUT - LINE PRINTER UNIT 6, REAL OUTPUT
-            C INPUT ERROR DISPLAY ERROR OUTPUT CODE 1 IN JOB CONTROL LISTING
-                READ INPUT TAPE 5, 501, IA, IB, IC
-            501 FORMAT (3I5)
-            C IA, IB, AND IC MAY NOT BE NEGATIVE OR ZERO
-            C FURTHERMORE, THE SUM OF TWO SIDES OF A TRIANGLE
-            C MUST BE GREATER THAN THE THIRD SIDE, SO WE CHECK FOR THAT, TOO
-                IF (IA) 777, 777, 701
-            701 IF (IB) 777, 777, 702
-            702 IF (IC) 777, 777, 703
-            703 IF (IA+IB-IC) 777, 777, 704
-            704 IF (IA+IC-IB) 777, 777, 705
-            705 IF (IB+IC-IA) 777, 777, 799
-            777 STOP 1
-            C USING HERON'S FORMULA WE CALCULATE THE
-            C AREA OF THE TRIANGLE
-            799 S = FLOATF (IA + IB + IC) / 2.0
-                AREA = SQRTF( S * (S - FLOATF(IA)) * (S - FLOATF(IB)) *
-                +     (S - FLOATF(IC)))
-                WRITE OUTPUT TAPE 6, 601, IA, IB, IC, AREA
-            601 FORMAT (4H A= ,I5,5H  B= ,I5,5H  C= ,I5,8H  AREA= ,F10.2,
-                +        13H SQUARE UNITS)
-                STOP
-                END
-                   
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
+                C AREA OF A TRIANGLE WITH A STANDARD SQUARE ROOT FUNCTION
+
+                C INPUT - TAPE READER UNIT 5, INTEGER INPUT
+
+                C OUTPUT - LINE PRINTER UNIT 6, REAL OUTPUT
+
+                C INPUT ERROR DISPLAY ERROR OUTPUT CODE 1 IN JOB CONTROL LISTING
+
+                    READ INPUT TAPE 5, 501, IA, IB, IC
+
+                501 FORMAT (3I5)
+
+                C IA, IB, AND IC MAY NOT BE NEGATIVE OR ZERO
+
+                C FURTHERMORE, THE SUM OF TWO SIDES OF A TRIANGLE
+
+                C MUST BE GREATER THAN THE THIRD SIDE, SO WE CHECK FOR THAT, TOO
+
+                    IF (IA) 777, 777, 701
+
+                701 IF (IB) 777, 777, 702
+
+                702 IF (IC) 777, 777, 703
+
+                703 IF (IA+IB-IC) 777, 777, 704
+
+                704 IF (IA+IC-IB) 777, 777, 705
+
+                705 IF (IB+IC-IA) 777, 777, 799
+
+                777 STOP 1
+
+                C USING HERON'S FORMULA WE CALCULATE THE
+
+                C AREA OF THE TRIANGLE
+
+                799 S = FLOATF (IA + IB + IC) / 2.0
+
+                    AREA = SQRTF( S * (S - FLOATF(IA)) * (S - FLOATF(IB)) *
+
+                    +     (S - FLOATF(IC)))
+
+                    WRITE OUTPUT TAPE 6, 601, IA, IB, IC, AREA
+
+                601 FORMAT (4H A= ,I5,5H  B= ,I5,5H  C= ,I5,8H  AREA= ,F10.2,
+
+                    +        13H SQUARE UNITS)
+
+                    STOP
+
+                    END
+
+                       
+
   </code>
 </pre>
 `;
@@ -348,198 +439,357 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       import
     </span>
-     React 
+    <span
+      style={Object {}}
+    >
+       React 
+    </span>
     <span
       className="hljs-keyword"
       style={Object {}}
     >
       from
     </span>
-     
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="hljs-string"
       style={Object {}}
     >
       "react"
     </span>
-    ;
-  
+    <span
+      style={Object {}}
+    >
+      ;
+
+    </span>
+    <span
+      style={Object {}}
+    >
+        
+    </span>
     <span
       className="hljs-keyword"
       style={Object {}}
     >
       import
     </span>
-     uniquePropHOC 
+    <span
+      style={Object {}}
+    >
+       uniquePropHOC 
+    </span>
     <span
       className="hljs-keyword"
       style={Object {}}
     >
       from
     </span>
-     
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="hljs-string"
       style={Object {}}
     >
       "./lib/unique-prop-hoc"
     </span>
-    ;
-  
-  
+    <span
+      style={Object {}}
+    >
+      ;
+
+    </span>
+      
+
+    <span
+      style={Object {}}
+    >
+        
+    </span>
+    <span
+      className="hljs-class hljs-keyword"
+      style={Object {}}
+    >
+      class
+    </span>
     <span
       className="hljs-class"
       style={Object {}}
     >
-      <span
-        className="hljs-keyword"
-        style={Object {}}
-      >
-        class
-      </span>
-       
-      <span
-        className="hljs-title"
-        style={Object {}}
-      >
-        Expire
-      </span>
-       
-      <span
-        className="hljs-keyword"
-        style={Object {}}
-      >
-        extends
-      </span>
-       
-      <span
-        className="hljs-title"
-        style={Object {}}
-      >
-        React
-      </span>
-      .
-      <span
-        className="hljs-title"
-        style={Object {}}
-      >
-        Component
-      </span>
        
     </span>
-    {
-      
+    <span
+      className="hljs-class hljs-title"
+      style={Object {}}
+    >
+      Expire
+    </span>
+    <span
+      className="hljs-class"
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="hljs-class hljs-keyword"
+      style={Object {}}
+    >
+      extends
+    </span>
+    <span
+      className="hljs-class"
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="hljs-class hljs-title"
+      style={Object {}}
+    >
+      React
+    </span>
+    <span
+      className="hljs-class"
+      style={Object {}}
+    >
+      .
+    </span>
+    <span
+      className="hljs-class hljs-title"
+      style={Object {}}
+    >
+      Component
+    </span>
+    <span
+      className="hljs-class"
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      style={Object {}}
+    >
+      {
+
+    </span>
+    <span
+      style={Object {}}
+    >
+            
+    </span>
     <span
       className="hljs-keyword"
       style={Object {}}
     >
       constructor
     </span>
-    (props) {
-          
+    <span
+      style={Object {}}
+    >
+      (props) {
+
+    </span>
+    <span
+      style={Object {}}
+    >
+                
+    </span>
     <span
       className="hljs-keyword"
       style={Object {}}
     >
       super
     </span>
-    (props);
-          
+    <span
+      style={Object {}}
+    >
+      (props);
+
+    </span>
+    <span
+      style={Object {}}
+    >
+                
+    </span>
     <span
       className="hljs-keyword"
       style={Object {}}
     >
       this
     </span>
-    .state = { 
+    <span
+      style={Object {}}
+    >
+      .state = { 
+    </span>
     <span
       className="hljs-attr"
       style={Object {}}
     >
       component
     </span>
-    : props.children }
-      }
-      componentDidMount() {
-          setTimeout(
+    <span
+      style={Object {}}
+    >
+      : props.children }
+
+    </span>
+          }
+
+          componentDidMount() {
+
+    <span
+      style={Object {}}
+    >
+                setTimeout(
+    </span>
+    <span
+      className="hljs-function hljs-params"
+      style={Object {}}
+    >
+      ()
+    </span>
     <span
       className="hljs-function"
       style={Object {}}
     >
-      <span
-        className="hljs-params"
-        style={Object {}}
-      >
-        ()
-      </span>
        =&gt;
     </span>
-     {
-              
+    <span
+      style={Object {}}
+    >
+       {
+
+    </span>
+    <span
+      style={Object {}}
+    >
+                    
+    </span>
     <span
       className="hljs-keyword"
       style={Object {}}
     >
       this
     </span>
-    .setState({
-                  
+    <span
+      style={Object {}}
+    >
+      .setState({
+
+    </span>
+    <span
+      style={Object {}}
+    >
+                        
+    </span>
     <span
       className="hljs-attr"
       style={Object {}}
     >
       component
     </span>
-    : 
+    <span
+      style={Object {}}
+    >
+      : 
+    </span>
     <span
       className="hljs-literal"
       style={Object {}}
     >
       null
     </span>
-    
-              });
-          }, 
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
+                  });
+
+    <span
+      style={Object {}}
+    >
+                }, 
+    </span>
     <span
       className="hljs-keyword"
       style={Object {}}
     >
       this
     </span>
-    .props.time || 
+    <span
+      style={Object {}}
+    >
+      .props.time || 
+    </span>
     <span
       className="hljs-keyword"
       style={Object {}}
     >
       this
     </span>
-    .props.seconds * 
+    <span
+      style={Object {}}
+    >
+      .props.seconds * 
+    </span>
     <span
       className="hljs-number"
       style={Object {}}
     >
       1000
     </span>
-    );
-      }
-      render() {
-          
+    <span
+      style={Object {}}
+    >
+      );
+
+    </span>
+          }
+
+          render() {
+
+    <span
+      style={Object {}}
+    >
+                
+    </span>
     <span
       className="hljs-keyword"
       style={Object {}}
     >
       return
     </span>
-     
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="hljs-keyword"
       style={Object {}}
     >
       this
     </span>
-    .state.component;
+    <span
+      style={Object {}}
+    >
+      .state.component;
+
+    </span>
+          }
+
       }
-  }
+
   </code>
 </pre>
 `;

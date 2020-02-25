@@ -9,21 +9,34 @@ exports[`SyntaxHighlighter renders childre unadultered when no language disocver
   }
 >
   <code>
-    Contacts* contacts = 
+    <span
+      style={Object {}}
+    >
+      Contacts* contacts = 
+    </span>
     <span
       className="hljs-comment"
       style={Object {}}
     >
       [
-      <span
-        className="hljs-comment"
-        style={Object {}}
-      >
-        [Contacts alloc]
-      </span>
+    </span>
+    <span
+      className="hljs-comment hljs-comment"
+      style={Object {}}
+    >
+      [Contacts alloc]
+    </span>
+    <span
+      className="hljs-comment"
+      style={Object {}}
+    >
       init]
     </span>
-    ;
+    <span
+      style={Object {}}
+    >
+      ;
+    </span>
   </code>
 </pre>
 `;

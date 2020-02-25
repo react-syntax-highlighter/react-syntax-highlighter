@@ -10,164 +10,285 @@ exports[`SyntaxHighlighter component renders correctly without inline styles whe
     >
       const
     </span>
-     woah = 
+    <span
+      className=""
+    >
+       woah = 
+    </span>
+    <span
+      className="hljs-function hljs-params"
+    >
+      fun
+    </span>
     <span
       className="hljs-function"
     >
-      <span
-        className="hljs-params"
-      >
-        fun
-      </span>
        =&gt;
     </span>
-     fun + 
+    <span
+      className=""
+    >
+       fun + 
+    </span>
     <span
       className="hljs-number"
     >
       1
     </span>
-    ;
+    <span
+      className=""
+    >
+      ;
 
+    </span>
+    <span
+      className=""
+    >
+      
+    </span>
     <span
       className="hljs-keyword"
     >
       const
     </span>
-     dude = woah(
+    <span
+      className=""
+    >
+       dude = woah(
+    </span>
     <span
       className="hljs-number"
     >
       2
     </span>
-    ) + 
+    <span
+      className=""
+    >
+      ) + 
+    </span>
     <span
       className="hljs-number"
     >
       3
     </span>
-    ;
+    <span
+      className=""
+    >
+      ;
 
+    </span>
+    <span
+      className=""
+    >
+      
+    </span>
+    <span
+      className="hljs-function hljs-keyword"
+    >
+      function
+    </span>
     <span
       className="hljs-function"
     >
-      <span
-        className="hljs-keyword"
-      >
-        function
-      </span>
        
-      <span
-        className="hljs-title"
-      >
-        thisIsAFunction
-      </span>
+    </span>
+    <span
+      className="hljs-function hljs-title"
+    >
+      thisIsAFunction
+    </span>
+    <span
+      className="hljs-function"
+    >
       (
-      <span
-        className="hljs-params"
-      />
+    </span>
+    <span
+      className="hljs-function"
+    >
       ) 
     </span>
-    {
-  
+    <span
+      className=""
+    >
+      {
+
+    </span>
+    <span
+      className=""
+    >
+        
+    </span>
     <span
       className="hljs-keyword"
     >
       return
     </span>
-     [
+    <span
+      className=""
+    >
+       [
+    </span>
     <span
       className="hljs-number"
     >
       1
     </span>
-    ,
+    <span
+      className=""
+    >
+      ,
+    </span>
     <span
       className="hljs-number"
     >
       2
     </span>
-    ,
+    <span
+      className=""
+    >
+      ,
+    </span>
     <span
       className="hljs-number"
     >
       3
     </span>
-    ].map(
+    <span
+      className=""
+    >
+      ].map(
+    </span>
+    <span
+      className="hljs-function hljs-params"
+    >
+      n
+    </span>
     <span
       className="hljs-function"
     >
-      <span
-        className="hljs-params"
-      >
-        n
-      </span>
        =&gt;
     </span>
-     n + 
+    <span
+      className=""
+    >
+       n + 
+    </span>
     <span
       className="hljs-number"
     >
       1
     </span>
-    ).filter(n !== 
+    <span
+      className=""
+    >
+      ).filter(n !== 
+    </span>
     <span
       className="hljs-number"
     >
       3
     </span>
-    );
-}
+    <span
+      className=""
+    >
+      );
 
+    </span>
+    }
+
+    <span
+      className=""
+    >
+      
+    </span>
     <span
       className="hljs-built_in"
     >
       console
     </span>
-    .log(
+    <span
+      className=""
+    >
+      .log(
+    </span>
     <span
       className="hljs-string"
     >
       'making up fake code is really hard'
     </span>
-    );
+    <span
+      className=""
+    >
+      );
 
+    </span>
+    
 
+    <span
+      className=""
+    >
+      
+    </span>
+    <span
+      className="hljs-function hljs-keyword"
+    >
+      function
+    </span>
     <span
       className="hljs-function"
     >
-      <span
-        className="hljs-keyword"
-      >
-        function
-      </span>
        
-      <span
-        className="hljs-title"
-      >
-        itIs
-      </span>
+    </span>
+    <span
+      className="hljs-function hljs-title"
+    >
+      itIs
+    </span>
+    <span
+      className="hljs-function"
+    >
       (
-      <span
-        className="hljs-params"
-      />
+    </span>
+    <span
+      className="hljs-function"
+    >
       ) 
     </span>
-    {
-  
+    <span
+      className=""
+    >
+      {
+
+    </span>
+    <span
+      className=""
+    >
+        
+    </span>
     <span
       className="hljs-keyword"
     >
       return
     </span>
-     
+    <span
+      className=""
+    >
+       
+    </span>
     <span
       className="hljs-string"
     >
       'no seriously really it is'
     </span>
-    ;
-}
+    <span
+      className=""
+    >
+      ;
+
+    </span>
+    }
+
+    
 
   </code>
 </pre>
