@@ -2177,20 +2177,6 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
       }
     >
       <span
-        className="comment linenumber react-syntax-highlighter-line-number"
-        style={
-          Object {
-            "display": "inline-block",
-            "minWidth": "2em",
-            "paddingRight": "1em",
-            "textAlign": "right",
-            "userSelect": "none",
-          }
-        }
-      >
-        25
-      </span>
-      <span
         style={Object {}}
       >
             
