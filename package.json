@@ -61,7 +61,7 @@
     "build-languages-hljs": "node ./lib/build-languages-highlightjs.js",
     "build-styles-prism": "node ./lib/build-stylesheets-refractor.js",
     "build-languages-prism": "node ./lib/build-languages-refractor.js",
-    "prepublish": "npm run build-styles-hljs && npm run build-languages-hljs && npm run build-styles-prism && npm run build-languages-prism && npm run build",
+    "prepare": "npm run build-styles-hljs && npm run build-languages-hljs && npm run build-styles-prism && npm run build-languages-prism && npm run build",
     "test": "jest",
     "test-ci": "jest && codecov",
     "publish-coverage": "codecov",
