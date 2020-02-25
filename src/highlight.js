@@ -137,8 +137,9 @@ function flattenCodeTree(tree, className = [], newTree = []) {
   return newTree;
 }
 
-function wrapLinesInSpan(
+function processLines(
   codeTree,
+  wrapLines,
   lineProps,
   showLineNumbers,
   showInlineLineNumbers,
@@ -150,16 +151,49 @@ function wrapLinesInSpan(
   const newTree = [];
   let lastLineBreakIndex = -1;
   let index = 0;
+
+  function createWrappedLine(children, lineNumber, className = []) {
+    return createLineElement({
+      children,
+      lineNumber,
+      lineNumberStyle,
+      largestLineNumber,
+      showInlineLineNumbers,
+      lineProps,
+      className
+    });
+  }
+
+  function createUnwrappedLine(children, lineNumber) {
+    if (lineNumber && showInlineLineNumbers) {
+      const inlineLineNumberStyle = assembleLineNumberStyles(
+        lineNumberStyle,
+        largestLineNumber
+      );
+      children.unshift(getInlineLineNumber(lineNumber, inlineLineNumberStyle));
+    }
+    return children;
+  }
+
+  function createLine(children, lineNumber, className = []) {
+    return wrapLines
+      ? createWrappedLine(children, lineNumber, className)
+      : createUnwrappedLine(children, lineNumber);
+  }
+
   while (index < tree.length) {
     const node = tree[index];
     const value = node.children[0].value;
     const newLines = getNewLines(value);
+
     if (newLines) {
       const splitValue = value.split('\n');
       splitValue.forEach((text, i) => {
         const lineNumber =
           showLineNumbers && newTree.length + startingLineNumber;
         const newChild = { type: 'text', value: `${text}\n` };
+
+        // if it's the first line
         if (i === 0) {
           const children = tree.slice(lastLineBreakIndex + 1, index).concat(
             createLineElement({
@@ -167,16 +201,11 @@ function wrapLinesInSpan(
               className: node.properties.className
             })
           );
-          newTree.push(
-            createLineElement({
-              children,
-              lineNumber,
-              lineNumberStyle,
-              largestLineNumber,
-              showInlineLineNumbers,
-              lineProps
-            })
-          );
+
+          const line = createLine(children, lineNumber);
+          newTree.push(line);
+
+          // if it's neither the first nor the last line
         } else if (i === splitValue.length - 1) {
           const stringChild =
             tree[index + 1] &&
@@ -190,52 +219,41 @@ function wrapLinesInSpan(
             });
             tree.splice(index + 1, 0, newElem);
           } else {
-            newTree.push(
-              createLineElement({
-                children: [newChild],
-                lineNumber,
-                lineNumberStyle,
-                largestLineNumber,
-                showInlineLineNumbers,
-                lineProps,
-                className: node.properties.className
-              })
-            );
-          }
-        } else {
-          newTree.push(
-            createLineElement({
-              children: [newChild],
+            const children = [newChild];
+            const line = createLine(
+              children,
               lineNumber,
-              lineNumberStyle,
-              largestLineNumber,
-              showInlineLineNumbers,
-              lineProps,
-              className: node.properties.className
-            })
+              node.properties.className
+            );
+            newTree.push(line);
+          }
+
+          // if it's the last line
+        } else {
+          const children = [newChild];
+          const line = createLine(
+            children,
+            lineNumber,
+            node.properties.className
           );
+          newTree.push(line);
         }
       });
       lastLineBreakIndex = index;
     }
     index++;
   }
+
   if (lastLineBreakIndex !== tree.length - 1) {
     const children = tree.slice(lastLineBreakIndex + 1, tree.length);
     if (children && children.length) {
-      newTree.push(
-        createLineElement({
-          children,
-          lineNumber: newTree.length + startingLineNumber,
-          lineNumberStyle,
-          largestLineNumber,
-          showInlineLineNumbers,
-          lineProps
-        })
-      );
+      const lineNumber = newTree.length + startingLineNumber;
+      const line = createLine(children, lineNumber);
+      newTree.push(line);
     }
   }
-  return newTree;
+
+  return wrapLines ? newTree : newTree.flat();
 }
 
 function defaultRenderer({ rows, stylesheet, useInlineStyles }) {
@@ -340,23 +358,22 @@ export default function(defaultAstGenerator, defaultStyle) {
     // determine largest line number so that we can force minWidth on all linenumber elements
     const largestLineNumber = codeTree.value.length + startingLineNumber;
 
-    const tree = wrapLines
-      ? wrapLinesInSpan(
-          codeTree,
-          lineProps,
-          showLineNumbers,
-          showInlineLineNumbers,
-          startingLineNumber,
-          largestLineNumber,
-          lineNumberStyle
-        )
-      : codeTree.value;
+    const rows = processLines(
+      codeTree,
+      wrapLines,
+      lineProps,
+      showLineNumbers,
+      showInlineLineNumbers,
+      startingLineNumber,
+      largestLineNumber,
+      lineNumberStyle
+    );
 
     return (
       <PreTag {...preProps}>
         <CodeTag {...codeTagProps}>
           {!showInlineLineNumbers && allLineNumbers}
-          {renderer({ rows: tree, stylesheet: style, useInlineStyles })}
+          {renderer({ rows, stylesheet: style, useInlineStyles })}
         </CodeTag>
       </PreTag>
     );
