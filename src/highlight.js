@@ -253,9 +253,7 @@ function processLines(
     }
   }
 
-  if (!wrapLines) return [].concat(...newTree);
-
-  return newTree;
+  return wrapLines ? newTree : [].concat(...newTree);
 }
 
 function defaultRenderer({ rows, stylesheet, useInlineStyles }) {
