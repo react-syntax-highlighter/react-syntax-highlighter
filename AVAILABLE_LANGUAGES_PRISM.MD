@@ -1,5 +1,6 @@
 ## Available `language` imports 
 * abap
+* abnf
 * actionscript
 * ada
 * apacheconf
@@ -16,11 +17,14 @@
 * basic
 * batch
 * bison
+* bnf
 * brainfuck
 * bro
 * c
+* cil
 * clike
 * clojure
+* cmake
 * coffeescript
 * cpp
 * crystal
@@ -32,8 +36,11 @@
 * dart
 * diff
 * django
+* dnsZoneFile (dns-zone-file)
 * docker
+* ebnf
 * eiffel
+* ejs
 * elixir
 * elm
 * erb
@@ -41,10 +48,12 @@
 * flow
 * fortran
 * fsharp
+* gcode
 * gedcom
 * gherkin
 * git
 * glsl
+* gml
 * go
 * graphql
 * groovy
@@ -52,6 +61,7 @@
 * handlebars
 * haskell
 * haxe
+* hcl
 * hpkp
 * hsts
 * http
@@ -62,15 +72,25 @@
 * io
 * j
 * java
+* javadoc
+* javadoclike
 * javascript
+* javastacktrace
 * jolie
+* jq
+* jsExtras (js-extras)
+* jsTemplates (js-templates)
+* jsdoc
 * json
+* json5
+* jsonp
 * jsx
 * julia
 * keyman
 * kotlin
 * latex
 * less
+* lilypond
 * liquid
 * lisp
 * livescript
@@ -84,7 +104,9 @@
 * mel
 * mizar
 * monkey
+* n1ql
 * n4js
+* nand2tetrisHdl (nand2tetris-hdl)
 * nasm
 * nginx
 * nim
@@ -97,9 +119,12 @@
 * parigp
 * parser
 * pascal
+* pascaligo
+* pcaxis
 * perl
 * phpExtras (php-extras)
 * php
+* phpdoc
 * plsql
 * powershell
 * processing
@@ -114,6 +139,7 @@
 * qore
 * r
 * reason
+* regex
 * renpy
 * rest
 * rip
@@ -125,19 +151,26 @@
 * scala
 * scheme
 * scss
+* shellSession (shell-session)
 * smalltalk
 * smarty
 * soy
+* splunkSpl (splunk-spl)
 * sql
 * stylus
 * swift
+* t4Cs (t4-cs)
+* t4Templating (t4-templating)
+* t4Vb (t4-vb)
 * tap
 * tcl
 * textile
+* toml
 * tsx
 * tt2
 * twig
 * typescript
+* vala
 * vbnet
 * velocity
 * verilog
