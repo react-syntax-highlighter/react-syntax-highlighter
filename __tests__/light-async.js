@@ -1,3 +1,4 @@
+import React from 'react';
 import renderer from 'react-test-renderer';
 import languageLoaders from '../src/async-languages/prism';
 
