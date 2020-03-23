@@ -33,7 +33,7 @@
     "css": "^2.2.1",
     "css-loader": "^0.23.1",
     "husky": "^1.1.4",
-    "jest": "^24.1.0",
+    "jest": "^25.1.0",
     "lint-staged": "^8.0.5",
     "prettier": "^1.15.2",
     "prism-themes": "https://github.com/PrismJS/prism-themes.git#afb4116547cd854074ad705b8171768403ca11f3",
