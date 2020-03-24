@@ -1,0 +1,29 @@
+environment:
+  matrix:
+  - nodejs_version: "8"
+  - nodejs_version: "7"
+  - nodejs_version: "6"
+  - nodejs_version: "5"
+  - nodejs_version: "4"
+
+max_jobs: 4
+
+clone_depth: 50
+
+init:
+  - git config --global core.autocrlf true
+
+install:
+  - ps: Install-Product node $env:nodejs_version
+  - npm install
+
+test_script:
+  - cmd: SET PATH=C:\MinGW\bin;%PATH%
+  - npm run test
+
+after_test:
+  - node .\bin\codecov -f .nyc_output\*.json
+
+build: off
+
+deploy: off

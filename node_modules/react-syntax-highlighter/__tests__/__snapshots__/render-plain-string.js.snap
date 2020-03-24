@@ -1,0 +1,12 @@
+exports[`test SyntaxHighlighter renders childre unadultered when no language disocvered in highlight auto 1`] = `
+<pre
+  style={
+    Object {
+      "backgroundColor": "#fff"
+    }
+  }>
+  <code>
+    Contacts* contacts = [[Contacts alloc]init];
+  </code>
+</pre>
+`;

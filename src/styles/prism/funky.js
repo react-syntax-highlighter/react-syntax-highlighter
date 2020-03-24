@@ -1,6 +1,7 @@
 export default {
     "code[class*=\"language-\"]": {
         "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+        "fontSize": "1em",
         "textAlign": "left",
         "whiteSpace": "pre",
         "wordSpacing": "normal",
@@ -20,6 +21,7 @@ export default {
     },
     "pre[class*=\"language-\"]": {
         "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+        "fontSize": "1em",
         "textAlign": "left",
         "whiteSpace": "pre",
         "wordSpacing": "normal",
@@ -60,7 +62,7 @@ export default {
     "punctuation": {
         "color": "#999"
     },
-    ".namespace": {
+    "namespace": {
         "Opacity": ".7"
     },
     "property": {
@@ -109,7 +111,7 @@ export default {
     ".language-css .token.string": {
         "color": "yellowgreen"
     },
-    ".toke.variable": {
+    "variable": {
         "color": "yellowgreen"
     },
     "inserted": {
@@ -139,5 +141,21 @@ export default {
     },
     "deleted": {
         "color": "red"
+    },
+    "pre.diff-highlight.diff-highlight > code .token.deleted:not(.prefix)": {
+        "backgroundColor": "rgba(255, 0, 0, .3)",
+        "display": "inline"
+    },
+    "pre > code.diff-highlight.diff-highlight .token.deleted:not(.prefix)": {
+        "backgroundColor": "rgba(255, 0, 0, .3)",
+        "display": "inline"
+    },
+    "pre.diff-highlight.diff-highlight > code .token.inserted:not(.prefix)": {
+        "backgroundColor": "rgba(0, 255, 128, .3)",
+        "display": "inline"
+    },
+    "pre > code.diff-highlight.diff-highlight .token.inserted:not(.prefix)": {
+        "backgroundColor": "rgba(0, 255, 128, .3)",
+        "display": "inline"
     }
 }

@@ -3,6 +3,9 @@ export default {
   abap: createLanguageAsyncLoader('abap', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_abap" */ 'refractor/lang/abap.js')
   ),
+  abnf: createLanguageAsyncLoader('abnf', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_abnf" */ 'refractor/lang/abnf.js')
+  ),
   actionscript: createLanguageAsyncLoader('actionscript', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_actionscript" */ 'refractor/lang/actionscript.js')
   ),
@@ -51,6 +54,9 @@ export default {
   bison: createLanguageAsyncLoader('bison', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_bison" */ 'refractor/lang/bison.js')
   ),
+  bnf: createLanguageAsyncLoader('bnf', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_bnf" */ 'refractor/lang/bnf.js')
+  ),
   brainfuck: createLanguageAsyncLoader('brainfuck', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_brainfuck" */ 'refractor/lang/brainfuck.js')
   ),
@@ -60,11 +66,17 @@ export default {
   c: createLanguageAsyncLoader('c', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_c" */ 'refractor/lang/c.js')
   ),
+  cil: createLanguageAsyncLoader('cil', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_cil" */ 'refractor/lang/cil.js')
+  ),
   clike: createLanguageAsyncLoader('clike', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_clike" */ 'refractor/lang/clike.js')
   ),
   clojure: createLanguageAsyncLoader('clojure', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_clojure" */ 'refractor/lang/clojure.js')
+  ),
+  cmake: createLanguageAsyncLoader('cmake', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_cmake" */ 'refractor/lang/cmake.js')
   ),
   coffeescript: createLanguageAsyncLoader('coffeescript', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_coffeescript" */ 'refractor/lang/coffeescript.js')
@@ -99,11 +111,20 @@ export default {
   django: createLanguageAsyncLoader('django', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_django" */ 'refractor/lang/django.js')
   ),
+  dnsZoneFile: createLanguageAsyncLoader('dnsZoneFile', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_dnsZoneFile" */ 'refractor/lang/dns-zone-file.js')
+  ),
   docker: createLanguageAsyncLoader('docker', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_docker" */ 'refractor/lang/docker.js')
   ),
+  ebnf: createLanguageAsyncLoader('ebnf', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_ebnf" */ 'refractor/lang/ebnf.js')
+  ),
   eiffel: createLanguageAsyncLoader('eiffel', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_eiffel" */ 'refractor/lang/eiffel.js')
+  ),
+  ejs: createLanguageAsyncLoader('ejs', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_ejs" */ 'refractor/lang/ejs.js')
   ),
   elixir: createLanguageAsyncLoader('elixir', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_elixir" */ 'refractor/lang/elixir.js')
@@ -126,6 +147,9 @@ export default {
   fsharp: createLanguageAsyncLoader('fsharp', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_fsharp" */ 'refractor/lang/fsharp.js')
   ),
+  gcode: createLanguageAsyncLoader('gcode', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_gcode" */ 'refractor/lang/gcode.js')
+  ),
   gedcom: createLanguageAsyncLoader('gedcom', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_gedcom" */ 'refractor/lang/gedcom.js')
   ),
@@ -137,6 +161,9 @@ export default {
   ),
   glsl: createLanguageAsyncLoader('glsl', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_glsl" */ 'refractor/lang/glsl.js')
+  ),
+  gml: createLanguageAsyncLoader('gml', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_gml" */ 'refractor/lang/gml.js')
   ),
   go: createLanguageAsyncLoader('go', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_go" */ 'refractor/lang/go.js')
@@ -158,6 +185,9 @@ export default {
   ),
   haxe: createLanguageAsyncLoader('haxe', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_haxe" */ 'refractor/lang/haxe.js')
+  ),
+  hcl: createLanguageAsyncLoader('hcl', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_hcl" */ 'refractor/lang/hcl.js')
   ),
   hpkp: createLanguageAsyncLoader('hpkp', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_hpkp" */ 'refractor/lang/hpkp.js')
@@ -189,14 +219,41 @@ export default {
   java: createLanguageAsyncLoader('java', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_java" */ 'refractor/lang/java.js')
   ),
+  javadoc: createLanguageAsyncLoader('javadoc', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_javadoc" */ 'refractor/lang/javadoc.js')
+  ),
+  javadoclike: createLanguageAsyncLoader('javadoclike', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_javadoclike" */ 'refractor/lang/javadoclike.js')
+  ),
   javascript: createLanguageAsyncLoader('javascript', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_javascript" */ 'refractor/lang/javascript.js')
+  ),
+  javastacktrace: createLanguageAsyncLoader('javastacktrace', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_javastacktrace" */ 'refractor/lang/javastacktrace.js')
   ),
   jolie: createLanguageAsyncLoader('jolie', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_jolie" */ 'refractor/lang/jolie.js')
   ),
+  jq: createLanguageAsyncLoader('jq', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_jq" */ 'refractor/lang/jq.js')
+  ),
+  jsExtras: createLanguageAsyncLoader('jsExtras', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_jsExtras" */ 'refractor/lang/js-extras.js')
+  ),
+  jsTemplates: createLanguageAsyncLoader('jsTemplates', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_jsTemplates" */ 'refractor/lang/js-templates.js')
+  ),
+  jsdoc: createLanguageAsyncLoader('jsdoc', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_jsdoc" */ 'refractor/lang/jsdoc.js')
+  ),
   json: createLanguageAsyncLoader('json', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_json" */ 'refractor/lang/json.js')
+  ),
+  json5: createLanguageAsyncLoader('json5', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_json5" */ 'refractor/lang/json5.js')
+  ),
+  jsonp: createLanguageAsyncLoader('jsonp', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_jsonp" */ 'refractor/lang/jsonp.js')
   ),
   jsx: createLanguageAsyncLoader('jsx', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_jsx" */ 'refractor/lang/jsx.js')
@@ -215,6 +272,9 @@ export default {
   ),
   less: createLanguageAsyncLoader('less', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_less" */ 'refractor/lang/less.js')
+  ),
+  lilypond: createLanguageAsyncLoader('lilypond', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_lilypond" */ 'refractor/lang/lilypond.js')
   ),
   liquid: createLanguageAsyncLoader('liquid', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_liquid" */ 'refractor/lang/liquid.js')
@@ -255,8 +315,14 @@ export default {
   monkey: createLanguageAsyncLoader('monkey', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_monkey" */ 'refractor/lang/monkey.js')
   ),
+  n1ql: createLanguageAsyncLoader('n1ql', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_n1ql" */ 'refractor/lang/n1ql.js')
+  ),
   n4js: createLanguageAsyncLoader('n4js', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_n4js" */ 'refractor/lang/n4js.js')
+  ),
+  nand2tetrisHdl: createLanguageAsyncLoader('nand2tetrisHdl', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_nand2tetrisHdl" */ 'refractor/lang/nand2tetris-hdl.js')
   ),
   nasm: createLanguageAsyncLoader('nasm', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_nasm" */ 'refractor/lang/nasm.js')
@@ -294,6 +360,12 @@ export default {
   pascal: createLanguageAsyncLoader('pascal', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_pascal" */ 'refractor/lang/pascal.js')
   ),
+  pascaligo: createLanguageAsyncLoader('pascaligo', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_pascaligo" */ 'refractor/lang/pascaligo.js')
+  ),
+  pcaxis: createLanguageAsyncLoader('pcaxis', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_pcaxis" */ 'refractor/lang/pcaxis.js')
+  ),
   perl: createLanguageAsyncLoader('perl', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_perl" */ 'refractor/lang/perl.js')
   ),
@@ -302,6 +374,9 @@ export default {
   ),
   php: createLanguageAsyncLoader('php', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_php" */ 'refractor/lang/php.js')
+  ),
+  phpdoc: createLanguageAsyncLoader('phpdoc', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_phpdoc" */ 'refractor/lang/phpdoc.js')
   ),
   plsql: createLanguageAsyncLoader('plsql', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_plsql" */ 'refractor/lang/plsql.js')
@@ -345,6 +420,9 @@ export default {
   reason: createLanguageAsyncLoader('reason', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_reason" */ 'refractor/lang/reason.js')
   ),
+  regex: createLanguageAsyncLoader('regex', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_regex" */ 'refractor/lang/regex.js')
+  ),
   renpy: createLanguageAsyncLoader('renpy', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_renpy" */ 'refractor/lang/renpy.js')
   ),
@@ -378,6 +456,9 @@ export default {
   scss: createLanguageAsyncLoader('scss', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_scss" */ 'refractor/lang/scss.js')
   ),
+  shellSession: createLanguageAsyncLoader('shellSession', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_shellSession" */ 'refractor/lang/shell-session.js')
+  ),
   smalltalk: createLanguageAsyncLoader('smalltalk', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_smalltalk" */ 'refractor/lang/smalltalk.js')
   ),
@@ -386,6 +467,9 @@ export default {
   ),
   soy: createLanguageAsyncLoader('soy', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_soy" */ 'refractor/lang/soy.js')
+  ),
+  splunkSpl: createLanguageAsyncLoader('splunkSpl', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_splunkSpl" */ 'refractor/lang/splunk-spl.js')
   ),
   sql: createLanguageAsyncLoader('sql', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_sql" */ 'refractor/lang/sql.js')
@@ -396,6 +480,15 @@ export default {
   swift: createLanguageAsyncLoader('swift', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_swift" */ 'refractor/lang/swift.js')
   ),
+  t4Cs: createLanguageAsyncLoader('t4Cs', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_t4Cs" */ 'refractor/lang/t4-cs.js')
+  ),
+  t4Templating: createLanguageAsyncLoader('t4Templating', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_t4Templating" */ 'refractor/lang/t4-templating.js')
+  ),
+  t4Vb: createLanguageAsyncLoader('t4Vb', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_t4Vb" */ 'refractor/lang/t4-vb.js')
+  ),
   tap: createLanguageAsyncLoader('tap', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_tap" */ 'refractor/lang/tap.js')
   ),
@@ -404,6 +497,9 @@ export default {
   ),
   textile: createLanguageAsyncLoader('textile', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_textile" */ 'refractor/lang/textile.js')
+  ),
+  toml: createLanguageAsyncLoader('toml', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_toml" */ 'refractor/lang/toml.js')
   ),
   tsx: createLanguageAsyncLoader('tsx', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_tsx" */ 'refractor/lang/tsx.js')
@@ -416,6 +512,9 @@ export default {
   ),
   typescript: createLanguageAsyncLoader('typescript', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_typescript" */ 'refractor/lang/typescript.js')
+  ),
+  vala: createLanguageAsyncLoader('vala', () =>
+    import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_vala" */ 'refractor/lang/vala.js')
   ),
   vbnet: createLanguageAsyncLoader('vbnet', () =>
     import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_vbnet" */ 'refractor/lang/vbnet.js')
