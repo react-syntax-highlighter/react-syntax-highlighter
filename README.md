@@ -149,6 +149,7 @@ SyntaxHighlighter.supportedLanguages;
 - [Static Forms](https://www.staticforms.xyz) - Free HTML forms for your static websites.
 - [Neumorphism](https://www.neumorphism.io) - CSS code generator for Soft UI/Neumorphism shadows
 - [React DemoTab](https://github.com/mkosir/react-demo-tab) - A React component to easily create demos of other components
+- [codeprinter](https://github.com/jaredpetersen/codeprinter) - Print out code easily
 
 If your project uses react-syntax-highlighter please send a pr to add!
 
