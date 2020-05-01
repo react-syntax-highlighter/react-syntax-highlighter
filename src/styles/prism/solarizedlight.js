@@ -2,6 +2,7 @@ export default {
     "code[class*=\"language-\"]": {
         "color": "#657b83",
         "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+        "fontSize": "1em",
         "textAlign": "left",
         "whiteSpace": "pre",
         "wordSpacing": "normal",
@@ -19,6 +20,7 @@ export default {
     "pre[class*=\"language-\"]": {
         "color": "#657b83",
         "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+        "fontSize": "1em",
         "textAlign": "left",
         "whiteSpace": "pre",
         "wordSpacing": "normal",
@@ -82,7 +84,7 @@ export default {
     "punctuation": {
         "color": "#586e75"
     },
-    ".namespace": {
+    "namespace": {
         "Opacity": ".7"
     },
     "property": {

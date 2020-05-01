@@ -11,6 +11,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       "background": "#f5f2f0",
       "color": "black",
       "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+      "fontSize": "1em",
       "hyphens": "none",
       "lineHeight": "1.5",
       "margin": ".5em 0",
@@ -37,6 +38,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
         "background": "none",
         "color": "black",
         "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+        "fontSize": "1em",
         "hyphens": "none",
         "lineHeight": "1.5",
         "msHyphens": "none",
@@ -84,6 +86,7 @@ exports[`SyntaxHighlighter should just render text if syntax is not registered 1
       "background": "#f5f2f0",
       "color": "black",
       "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+      "fontSize": "1em",
       "hyphens": "none",
       "lineHeight": "1.5",
       "margin": ".5em 0",
@@ -110,6 +113,7 @@ exports[`SyntaxHighlighter should just render text if syntax is not registered 1
         "background": "none",
         "color": "black",
         "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+        "fontSize": "1em",
         "hyphens": "none",
         "lineHeight": "1.5",
         "msHyphens": "none",
@@ -178,6 +182,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
       "background": "#f5f2f0",
       "color": "black",
       "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+      "fontSize": "1em",
       "hyphens": "none",
       "lineHeight": "1.5",
       "margin": ".5em 0",
@@ -204,6 +209,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
         "background": "none",
         "color": "black",
         "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+        "fontSize": "1em",
         "hyphens": "none",
         "lineHeight": "1.5",
         "msHyphens": "none",
@@ -218,7 +224,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     }
   >
     <span
-      className="token"
+      className="token module"
       style={
         Object {
           "color": "#07a",
@@ -227,9 +233,24 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       import
     </span>
-     React 
     <span
-      className="token"
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="token maybe-class-name"
+      style={Object {}}
+    >
+      React
+    </span>
+    <span
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="token module"
       style={
         Object {
           "color": "#07a",
@@ -238,7 +259,11 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       from
     </span>
-     
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="token"
       style={
@@ -259,10 +284,19 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       ;
     </span>
-    
-  
     <span
-      className="token"
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+        
+    </span>
+    <span
+      className="token module"
       style={
         Object {
           "color": "#07a",
@@ -271,9 +305,13 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       import
     </span>
-     uniquePropHOC 
     <span
-      className="token"
+      style={Object {}}
+    >
+       uniquePropHOC 
+    </span>
+    <span
+      className="token module"
       style={
         Object {
           "color": "#07a",
@@ -282,7 +320,11 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       from
     </span>
-     
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="token"
       style={
@@ -303,9 +345,19 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       ;
     </span>
-    
-  
-  
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
+      
+
+    <span
+      style={Object {}}
+    >
+        
+    </span>
     <span
       className="token"
       style={
@@ -316,7 +368,11 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       class
     </span>
-     
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="token"
       style={
@@ -327,7 +383,11 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       Expire
     </span>
-     
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="token"
       style={
@@ -338,7 +398,11 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       extends
     </span>
-     
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="token"
       style={
@@ -348,19 +412,32 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
       }
     >
       React
-      <span
-        className="token"
-        style={
-          Object {
-            "color": "#999",
-          }
+    </span>
+    <span
+      className="token token"
+      style={
+        Object {
+          "color": "#999",
         }
-      >
-        .
-      </span>
+      }
+    >
+      .
+    </span>
+    <span
+      className="token"
+      style={
+        Object {
+          "color": "#DD4A68",
+        }
+      }
+    >
       Component
     </span>
-     
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="token"
       style={
@@ -371,8 +448,17 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       {
     </span>
-    
+    <span
+      style={Object {}}
+    >
       
+
+    </span>
+    <span
+      style={Object {}}
+    >
+            
+    </span>
     <span
       className="token"
       style={
@@ -393,7 +479,12 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       (
     </span>
-    props
+    <span
+      className="token parameter"
+      style={Object {}}
+    >
+      props
+    </span>
     <span
       className="token"
       style={
@@ -404,7 +495,11 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       )
     </span>
-     
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="token"
       style={
@@ -415,8 +510,17 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       {
     </span>
-    
-          
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+                
+    </span>
     <span
       className="token"
       style={
@@ -437,7 +541,11 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       (
     </span>
-    props
+    <span
+      style={Object {}}
+    >
+      props
+    </span>
     <span
       className="token"
       style={
@@ -458,8 +566,17 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       ;
     </span>
-    
-          
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+                
+    </span>
     <span
       className="token"
       style={
@@ -480,7 +597,17 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       .
     </span>
-    state 
+    <span
+      className="token property-access"
+      style={Object {}}
+    >
+      state
+    </span>
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="token"
       style={
@@ -492,7 +619,11 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       =
     </span>
-     
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="token"
       style={
@@ -503,7 +634,11 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       {
     </span>
-     component
+    <span
+      style={Object {}}
+    >
+       component
+    </span>
     <span
       className="token"
       style={
@@ -514,7 +649,11 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       :
     </span>
-     props
+    <span
+      style={Object {}}
+    >
+       props
+    </span>
     <span
       className="token"
       style={
@@ -525,7 +664,17 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       .
     </span>
-    children 
+    <span
+      className="token property-access"
+      style={Object {}}
+    >
+      children
+    </span>
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="token"
       style={
@@ -536,8 +685,17 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       }
     </span>
-    
+    <span
+      style={Object {}}
+    >
       
+
+    </span>
+    <span
+      style={Object {}}
+    >
+            
+    </span>
     <span
       className="token"
       style={
@@ -548,8 +706,17 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       }
     </span>
-    
+    <span
+      style={Object {}}
+    >
       
+
+    </span>
+    <span
+      style={Object {}}
+    >
+            
+    </span>
     <span
       className="token"
       style={
@@ -580,7 +747,11 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       )
     </span>
-     
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="token"
       style={
@@ -591,8 +762,17 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       {
     </span>
-    
-          
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+                
+    </span>
     <span
       className="token"
       style={
@@ -633,9 +813,13 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       )
     </span>
-     
     <span
-      className="token"
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="token arrow"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -645,7 +829,11 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       =&gt;
     </span>
-     
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="token"
       style={
@@ -656,8 +844,17 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       {
     </span>
-    
-              
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+                    
+    </span>
     <span
       className="token"
       style={
@@ -679,7 +876,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
       .
     </span>
     <span
-      className="token"
+      className="token method property-access"
       style={
         Object {
           "color": "#DD4A68",
@@ -708,8 +905,17 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       {
     </span>
-    
-                  component
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+                        component
+    </span>
     <span
       className="token"
       style={
@@ -720,9 +926,13 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       :
     </span>
-     
     <span
-      className="token"
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="token null nil"
       style={
         Object {
           "color": "#07a",
@@ -731,8 +941,17 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       null
     </span>
-    
-              
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+                    
+    </span>
     <span
       className="token"
       style={
@@ -763,8 +982,17 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       ;
     </span>
-    
-          
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+                
+    </span>
     <span
       className="token"
       style={
@@ -785,7 +1013,11 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       ,
     </span>
-     
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="token"
       style={
@@ -806,7 +1038,12 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       .
     </span>
-    props
+    <span
+      className="token property-access"
+      style={Object {}}
+    >
+      props
+    </span>
     <span
       className="token"
       style={
@@ -817,7 +1054,17 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       .
     </span>
-    time 
+    <span
+      className="token property-access"
+      style={Object {}}
+    >
+      time
+    </span>
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="token"
       style={
@@ -829,7 +1076,11 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       ||
     </span>
-     
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="token"
       style={
@@ -850,7 +1101,12 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       .
     </span>
-    props
+    <span
+      className="token property-access"
+      style={Object {}}
+    >
+      props
+    </span>
     <span
       className="token"
       style={
@@ -861,7 +1117,17 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       .
     </span>
-    seconds 
+    <span
+      className="token property-access"
+      style={Object {}}
+    >
+      seconds
+    </span>
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="token"
       style={
@@ -873,7 +1139,11 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       *
     </span>
-     
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="token"
       style={
@@ -904,8 +1174,17 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       ;
     </span>
-    
+    <span
+      style={Object {}}
+    >
       
+
+    </span>
+    <span
+      style={Object {}}
+    >
+            
+    </span>
     <span
       className="token"
       style={
@@ -916,8 +1195,17 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       }
     </span>
-    
+    <span
+      style={Object {}}
+    >
       
+
+    </span>
+    <span
+      style={Object {}}
+    >
+            
+    </span>
     <span
       className="token"
       style={
@@ -948,7 +1236,11 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       )
     </span>
-     
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="token"
       style={
@@ -959,8 +1251,17 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       {
     </span>
-    
-          
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+                
+    </span>
     <span
       className="token"
       style={
@@ -971,7 +1272,11 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       return
     </span>
-     
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="token"
       style={
@@ -992,7 +1297,12 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       .
     </span>
-    state
+    <span
+      className="token property-access"
+      style={Object {}}
+    >
+      state
+    </span>
     <span
       className="token"
       style={
@@ -1003,7 +1313,12 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       .
     </span>
-    component
+    <span
+      className="token property-access"
+      style={Object {}}
+    >
+      component
+    </span>
     <span
       className="token"
       style={
@@ -1014,8 +1329,17 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       ;
     </span>
-    
+    <span
+      style={Object {}}
+    >
       
+
+    </span>
+    <span
+      style={Object {}}
+    >
+            
+    </span>
     <span
       className="token"
       style={
@@ -1026,8 +1350,17 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       }
     </span>
-    
-  
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+        
+    </span>
     <span
       className="token"
       style={

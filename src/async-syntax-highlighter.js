@@ -127,9 +127,13 @@ export default options => {
         return;
       }
 
-      ReactAsyncHighlighter.loadLanguage(language).then(() => {
-        this.forceUpdate();
-      });
+      ReactAsyncHighlighter.loadLanguage(language)
+        .then(() => {
+          return this.forceUpdate();
+        })
+        .catch(error => {
+          return;
+        });
     }
 
     normalizeLanguage(language) {

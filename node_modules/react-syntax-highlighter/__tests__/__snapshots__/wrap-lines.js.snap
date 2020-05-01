@@ -1,0 +1,1834 @@
+exports[`test SyntaxHighlighter allows lineStyle as function 1`] = `
+<pre
+  style={
+    Object {
+      "background": "#F0F0F0",
+      "color": "#444",
+      "display": "block",
+      "overflowX": "auto",
+      "padding": "0.5em"
+    }
+  }>
+  <code>
+    <span
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        const
+      </span>
+      <span
+        style={Object {}}>
+         woah = 
+      </span>
+      <span
+        style={Object {}}>
+        fun
+      </span>
+      <span
+        style={Object {}}>
+         =>
+      </span>
+      <span
+        style={Object {}}>
+         fun + 
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000"
+          }
+        }>
+        1
+      </span>
+      <span
+        style={Object {}}>
+        ;
+        
+      </span>
+    </span>
+    <span
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      <span
+        style={Object {}}>
+        
+      </span>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        const
+      </span>
+      <span
+        style={Object {}}>
+         dude = woah(
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000"
+          }
+        }>
+        2
+      </span>
+      <span
+        style={Object {}}>
+        ) + 
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000"
+          }
+        }>
+        3
+      </span>
+      <span
+        style={Object {}}>
+        ;
+        
+      </span>
+    </span>
+    <span
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      <span
+        style={Object {}}>
+        
+      </span>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        function
+      </span>
+      <span
+        style={Object {}}>
+         
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000",
+            "fontWeight": "bold"
+          }
+        }>
+        thisIsAFunction
+      </span>
+      <span
+        style={Object {}}>
+        (
+      </span>
+      <span
+        style={Object {}}>
+        ) 
+      </span>
+      <span
+        style={Object {}}>
+        {
+        
+      </span>
+    </span>
+    <span
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      <span
+        style={Object {}}>
+          
+      </span>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        return
+      </span>
+      <span
+        style={Object {}}>
+         [
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000"
+          }
+        }>
+        1
+      </span>
+      <span
+        style={Object {}}>
+        ,
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000"
+          }
+        }>
+        2
+      </span>
+      <span
+        style={Object {}}>
+        ,
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000"
+          }
+        }>
+        3
+      </span>
+      <span
+        style={Object {}}>
+        ].map(
+      </span>
+      <span
+        style={Object {}}>
+        n
+      </span>
+      <span
+        style={Object {}}>
+         =>
+      </span>
+      <span
+        style={Object {}}>
+         n + 
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000"
+          }
+        }>
+        1
+      </span>
+      <span
+        style={Object {}}>
+        ).filter(n !== 
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000"
+          }
+        }>
+        3
+      </span>
+      <span
+        style={Object {}}>
+        );
+        
+      </span>
+    </span>
+    <span
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      }
+      
+    </span>
+    <span
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      <span
+        style={Object {}}>
+        
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#397300"
+          }
+        }>
+        console
+      </span>
+      <span
+        style={Object {}}>
+        .log(
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000"
+          }
+        }>
+        \'making up fake code is really hard\'
+      </span>
+      <span
+        style={Object {}}>
+        );
+        
+      </span>
+    </span>
+    <span
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      
+      
+    </span>
+    <span
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      <span
+        style={Object {}}>
+        
+      </span>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        function
+      </span>
+      <span
+        style={Object {}}>
+         
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000",
+            "fontWeight": "bold"
+          }
+        }>
+        itIs
+      </span>
+      <span
+        style={Object {}}>
+        (
+      </span>
+      <span
+        style={Object {}}>
+        ) 
+      </span>
+      <span
+        style={Object {}}>
+        {
+        
+      </span>
+    </span>
+    <span
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      <span
+        style={Object {}}>
+          
+      </span>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        return
+      </span>
+      <span
+        style={Object {}}>
+         
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000"
+          }
+        }>
+        \'no seriously really it is\'
+      </span>
+      <span
+        style={Object {}}>
+        ;
+        
+      </span>
+    </span>
+    <span
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      }
+      
+    </span>
+    <span
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      
+      
+    </span>
+  </code>
+</pre>
+`;
+
+exports[`test SyntaxHighlighter allows lineStyle as object 1`] = `
+<pre
+  style={
+    Object {
+      "background": "#F0F0F0",
+      "color": "#444",
+      "display": "block",
+      "overflowX": "auto",
+      "padding": "0.5em"
+    }
+  }>
+  <code>
+    <span
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        const
+      </span>
+      <span
+        style={Object {}}>
+         woah = 
+      </span>
+      <span
+        style={Object {}}>
+        fun
+      </span>
+      <span
+        style={Object {}}>
+         =>
+      </span>
+      <span
+        style={Object {}}>
+         fun + 
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000"
+          }
+        }>
+        1
+      </span>
+      <span
+        style={Object {}}>
+        ;
+        
+      </span>
+    </span>
+    <span
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      <span
+        style={Object {}}>
+        
+      </span>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        const
+      </span>
+      <span
+        style={Object {}}>
+         dude = woah(
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000"
+          }
+        }>
+        2
+      </span>
+      <span
+        style={Object {}}>
+        ) + 
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000"
+          }
+        }>
+        3
+      </span>
+      <span
+        style={Object {}}>
+        ;
+        
+      </span>
+    </span>
+    <span
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      <span
+        style={Object {}}>
+        
+      </span>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        function
+      </span>
+      <span
+        style={Object {}}>
+         
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000",
+            "fontWeight": "bold"
+          }
+        }>
+        thisIsAFunction
+      </span>
+      <span
+        style={Object {}}>
+        (
+      </span>
+      <span
+        style={Object {}}>
+        ) 
+      </span>
+      <span
+        style={Object {}}>
+        {
+        
+      </span>
+    </span>
+    <span
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      <span
+        style={Object {}}>
+          
+      </span>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        return
+      </span>
+      <span
+        style={Object {}}>
+         [
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000"
+          }
+        }>
+        1
+      </span>
+      <span
+        style={Object {}}>
+        ,
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000"
+          }
+        }>
+        2
+      </span>
+      <span
+        style={Object {}}>
+        ,
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000"
+          }
+        }>
+        3
+      </span>
+      <span
+        style={Object {}}>
+        ].map(
+      </span>
+      <span
+        style={Object {}}>
+        n
+      </span>
+      <span
+        style={Object {}}>
+         =>
+      </span>
+      <span
+        style={Object {}}>
+         n + 
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000"
+          }
+        }>
+        1
+      </span>
+      <span
+        style={Object {}}>
+        ).filter(n !== 
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000"
+          }
+        }>
+        3
+      </span>
+      <span
+        style={Object {}}>
+        );
+        
+      </span>
+    </span>
+    <span
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      }
+      
+    </span>
+    <span
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      <span
+        style={Object {}}>
+        
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#397300"
+          }
+        }>
+        console
+      </span>
+      <span
+        style={Object {}}>
+        .log(
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000"
+          }
+        }>
+        \'making up fake code is really hard\'
+      </span>
+      <span
+        style={Object {}}>
+        );
+        
+      </span>
+    </span>
+    <span
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      
+      
+    </span>
+    <span
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      <span
+        style={Object {}}>
+        
+      </span>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        function
+      </span>
+      <span
+        style={Object {}}>
+         
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000",
+            "fontWeight": "bold"
+          }
+        }>
+        itIs
+      </span>
+      <span
+        style={Object {}}>
+        (
+      </span>
+      <span
+        style={Object {}}>
+        ) 
+      </span>
+      <span
+        style={Object {}}>
+        {
+        
+      </span>
+    </span>
+    <span
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      <span
+        style={Object {}}>
+          
+      </span>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        return
+      </span>
+      <span
+        style={Object {}}>
+         
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000"
+          }
+        }>
+        \'no seriously really it is\'
+      </span>
+      <span
+        style={Object {}}>
+        ;
+        
+      </span>
+    </span>
+    <span
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      }
+      
+    </span>
+    <span
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      
+      
+    </span>
+  </code>
+</pre>
+`;
+
+exports[`test SyntaxHighlighter component renders correctly 1`] = `
+<pre
+  style={
+    Object {
+      "background": "#F0F0F0",
+      "color": "#444",
+      "display": "block",
+      "overflowX": "auto",
+      "padding": "0.5em"
+    }
+  }>
+  <code>
+    <span
+      style={Object {}}>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        const
+      </span>
+      <span
+        style={Object {}}>
+         woah = 
+      </span>
+      <span
+        style={Object {}}>
+        fun
+      </span>
+      <span
+        style={Object {}}>
+         =>
+      </span>
+      <span
+        style={Object {}}>
+         fun + 
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000"
+          }
+        }>
+        1
+      </span>
+      <span
+        style={Object {}}>
+        ;
+        
+      </span>
+    </span>
+    <span
+      style={Object {}}>
+      <span
+        style={Object {}}>
+        
+      </span>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        const
+      </span>
+      <span
+        style={Object {}}>
+         dude = woah(
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000"
+          }
+        }>
+        2
+      </span>
+      <span
+        style={Object {}}>
+        ) + 
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000"
+          }
+        }>
+        3
+      </span>
+      <span
+        style={Object {}}>
+        ;
+        
+      </span>
+    </span>
+    <span
+      style={Object {}}>
+      <span
+        style={Object {}}>
+        
+      </span>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        function
+      </span>
+      <span
+        style={Object {}}>
+         
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000",
+            "fontWeight": "bold"
+          }
+        }>
+        thisIsAFunction
+      </span>
+      <span
+        style={Object {}}>
+        (
+      </span>
+      <span
+        style={Object {}}>
+        ) 
+      </span>
+      <span
+        style={Object {}}>
+        {
+        
+      </span>
+    </span>
+    <span
+      style={Object {}}>
+      <span
+        style={Object {}}>
+          
+      </span>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        return
+      </span>
+      <span
+        style={Object {}}>
+         [
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000"
+          }
+        }>
+        1
+      </span>
+      <span
+        style={Object {}}>
+        ,
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000"
+          }
+        }>
+        2
+      </span>
+      <span
+        style={Object {}}>
+        ,
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000"
+          }
+        }>
+        3
+      </span>
+      <span
+        style={Object {}}>
+        ].map(
+      </span>
+      <span
+        style={Object {}}>
+        n
+      </span>
+      <span
+        style={Object {}}>
+         =>
+      </span>
+      <span
+        style={Object {}}>
+         n + 
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000"
+          }
+        }>
+        1
+      </span>
+      <span
+        style={Object {}}>
+        ).filter(n !== 
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000"
+          }
+        }>
+        3
+      </span>
+      <span
+        style={Object {}}>
+        );
+        
+      </span>
+    </span>
+    <span
+      style={Object {}}>
+      }
+      
+    </span>
+    <span
+      style={Object {}}>
+      <span
+        style={Object {}}>
+        
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#397300"
+          }
+        }>
+        console
+      </span>
+      <span
+        style={Object {}}>
+        .log(
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000"
+          }
+        }>
+        \'making up fake code is really hard\'
+      </span>
+      <span
+        style={Object {}}>
+        );
+        
+      </span>
+    </span>
+    <span
+      style={Object {}}>
+      
+      
+    </span>
+    <span
+      style={Object {}}>
+      <span
+        style={Object {}}>
+        
+      </span>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        function
+      </span>
+      <span
+        style={Object {}}>
+         
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000",
+            "fontWeight": "bold"
+          }
+        }>
+        itIs
+      </span>
+      <span
+        style={Object {}}>
+        (
+      </span>
+      <span
+        style={Object {}}>
+        ) 
+      </span>
+      <span
+        style={Object {}}>
+        {
+        
+      </span>
+    </span>
+    <span
+      style={Object {}}>
+      <span
+        style={Object {}}>
+          
+      </span>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        return
+      </span>
+      <span
+        style={Object {}}>
+         
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000"
+          }
+        }>
+        \'no seriously really it is\'
+      </span>
+      <span
+        style={Object {}}>
+        ;
+        
+      </span>
+    </span>
+    <span
+      style={Object {}}>
+      }
+      
+    </span>
+    <span
+      style={Object {}}>
+      
+      
+    </span>
+  </code>
+</pre>
+`;
+
+exports[`test SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
+<pre
+  style={
+    Object {
+      "background": "#F0F0F0",
+      "color": "#444",
+      "display": "block",
+      "overflowX": "auto",
+      "padding": "0.5em"
+    }
+  }>
+  <code>
+    <span
+      style={
+        Object {
+          "backgroundColor": "#A9DBB8",
+          "display": "block"
+        }
+      }>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        package
+      </span>
+      <span
+        style={Object {}}>
+         com.javatest;
+        
+      </span>
+    </span>
+    <span
+      style={
+        Object {
+          "backgroundColor": "#A9DBB8",
+          "display": "block"
+        }
+      }>
+      
+      
+    </span>
+    <span
+      style={
+        Object {
+          "backgroundColor": "#A9DBB8",
+          "display": "block"
+        }
+      }>
+      <span
+        style={Object {}}>
+        
+      </span>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        public
+      </span>
+      <span
+        style={Object {}}>
+         
+      </span>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        class
+      </span>
+      <span
+        style={Object {}}>
+         
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000",
+            "fontWeight": "bold"
+          }
+        }>
+        BubbleSort
+      </span>
+      <span
+        style={Object {}}>
+         
+      </span>
+      <span
+        style={Object {}}>
+        {
+        
+      </span>
+    </span>
+    <span
+      style={
+        Object {
+          "backgroundColor": "#A9DBB8",
+          "display": "block"
+        }
+      }>
+      <span
+        style={Object {}}>
+          
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#888888"
+          }
+        }>
+        /**
+        
+      </span>
+    </span>
+    <span
+      style={
+        Object {
+          "backgroundColor": "#EDE4AF",
+          "display": "block"
+        }
+      }>
+         * Applies bubble sort to an array and returns whether the array was sorted correctly.
+      
+    </span>
+    <span
+      style={
+        Object {
+          "backgroundColor": "#EDE4AF",
+          "display": "block"
+        }
+      }>
+      <span
+        style={
+          Object {
+            "color": "#888888"
+          }
+        }>
+           */
+      </span>
+      <span
+        style={Object {}}>
+        
+        
+      </span>
+    </span>
+    <span
+      style={
+        Object {
+          "backgroundColor": "#EDE4AF",
+          "display": "block"
+        }
+      }>
+      <span
+        style={Object {}}>
+          
+      </span>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        public
+      </span>
+      <span
+        style={Object {}}>
+         
+      </span>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        boolean
+      </span>
+      <span
+        style={Object {}}>
+         
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000",
+            "fontWeight": "bold"
+          }
+        }>
+        checkSort
+      </span>
+      <span
+        style={Object {}}>
+        (
+      </span>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        int
+      </span>
+      <span
+        style={Object {}}>
+        [] a)
+      </span>
+      <span
+        style={Object {}}>
+         
+      </span>
+      <span
+        style={Object {}}>
+        {
+        
+      </span>
+    </span>
+    <span
+      style={
+        Object {
+          "backgroundColor": "#EDE4AF",
+          "display": "block"
+        }
+      }>
+          sort(a);
+      
+    </span>
+    <span
+      style={
+        Object {
+          "backgroundColor": "#EDE4AF",
+          "display": "block"
+        }
+      }>
+      
+      
+    </span>
+    <span
+      style={
+        Object {
+          "backgroundColor": "#BA2D0B",
+          "display": "block"
+        }
+      }>
+      <span
+        style={Object {}}>
+            
+      </span>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        for
+      </span>
+      <span
+        style={Object {}}>
+         (
+      </span>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        int
+      </span>
+      <span
+        style={Object {}}>
+         i = 
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000"
+          }
+        }>
+        0
+      </span>
+      <span
+        style={Object {}}>
+        ; i < a.length - 
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000"
+          }
+        }>
+        1
+      </span>
+      <span
+        style={Object {}}>
+        ; i++) {
+        
+      </span>
+    </span>
+    <span
+      style={
+        Object {
+          "backgroundColor": "#BA2D0B",
+          "display": "block"
+        }
+      }>
+      <span
+        style={Object {}}>
+              
+      </span>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        if
+      </span>
+      <span
+        style={Object {}}>
+         (a[i] > a[i + 
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000"
+          }
+        }>
+        1
+      </span>
+      <span
+        style={Object {}}>
+        ]) {
+        
+      </span>
+    </span>
+    <span
+      style={
+        Object {
+          "backgroundColor": "#BA2D0B",
+          "display": "block"
+        }
+      }>
+      <span
+        style={Object {}}>
+                
+      </span>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        return
+      </span>
+      <span
+        style={Object {}}>
+         
+      </span>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        false
+      </span>
+      <span
+        style={Object {}}>
+        ;
+        
+      </span>
+    </span>
+    <span
+      style={
+        Object {
+          "backgroundColor": "#BA2D0B",
+          "display": "block"
+        }
+      }>
+            }
+      
+    </span>
+    <span
+      style={
+        Object {
+          "backgroundColor": "#BA2D0B",
+          "display": "block"
+        }
+      }>
+          }
+      
+    </span>
+    <span
+      style={
+        Object {
+          "backgroundColor": "#BA2D0B",
+          "display": "block"
+        }
+      }>
+      
+      
+    </span>
+    <span
+      style={
+        Object {
+          "backgroundColor": "#BA2D0B",
+          "display": "block"
+        }
+      }>
+      <span
+        style={Object {}}>
+            
+      </span>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        return
+      </span>
+      <span
+        style={Object {}}>
+         
+      </span>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        true
+      </span>
+      <span
+        style={Object {}}>
+        ;
+        
+      </span>
+    </span>
+    <span
+      style={
+        Object {
+          "backgroundColor": "#BA2D0B",
+          "display": "block"
+        }
+      }>
+        }
+      
+    </span>
+    <span
+      style={
+        Object {
+          "backgroundColor": "#BA2D0B",
+          "display": "block"
+        }
+      }>
+      
+      
+    </span>
+    <span
+      style={
+        Object {
+          "backgroundColor": "#BA2D0B",
+          "display": "block"
+        }
+      }>
+      <span
+        style={Object {}}>
+          
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#888888"
+          }
+        }>
+        /**
+        
+      </span>
+    </span>
+    <span
+      style={
+        Object {
+          "backgroundColor": "",
+          "display": ""
+        }
+      }>
+         * Bubble sort an array, mutating the array (contains a bug).
+      
+    </span>
+    <span
+      style={
+        Object {
+          "backgroundColor": "",
+          "display": ""
+        }
+      }>
+      <span
+        style={
+          Object {
+            "color": "#888888"
+          }
+        }>
+           */
+      </span>
+      <span
+        style={Object {}}>
+        
+        
+      </span>
+    </span>
+    <span
+      style={
+        Object {
+          "backgroundColor": "",
+          "display": ""
+        }
+      }>
+      <span
+        style={Object {}}>
+          
+      </span>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        public
+      </span>
+      <span
+        style={Object {}}>
+         
+      </span>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        void
+      </span>
+      <span
+        style={Object {}}>
+         
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#880000",
+            "fontWeight": "bold"
+          }
+        }>
+        sort
+      </span>
+      <span
+        style={Object {}}>
+        (
+      </span>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        int
+      </span>
+      <span
+        style={Object {}}>
+         [] a)
+      </span>
+      <span
+        style={Object {}}>
+         
+      </span>
+      <span
+        style={Object {}}>
+        {
+        
+      </span>
+    </span>
+    <span
+      style={
+        Object {
+          "backgroundColor": "",
+          "display": ""
+        }
+      }>
+      <span
+        style={Object {}}>
+            
+      </span>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        int
+      </span>
+      <span
+        style={Object {}}>
+         j;
+        
+      </span>
+    </span>
+    <span
+      style={
+        Object {
+          "backgroundColor": "",
+          "display": ""
+        }
+      }>
+      <span
+        style={Object {}}>
+            
+      </span>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        boolean
+      </span>
+      <span
+        style={Object {}}>
+         flag = 
+      </span>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        true
+      </span>
+      <span
+        style={Object {}}>
+        ;
+        
+      </span>
+    </span>
+    <span
+      style={
+        Object {
+          "backgroundColor": "",
+          "display": ""
+        }
+      }>
+      <span
+        style={Object {}}>
+            
+      </span>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        int
+      </span>
+      <span
+        style={Object {}}>
+         temp;
+      </span>
+    </span>
+  </code>
+</pre>
+`;

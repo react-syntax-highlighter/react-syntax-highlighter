@@ -22,20 +22,28 @@ exports[`SyntaxHighlighter component renders custom react component where pre ta
     >
       const
     </span>
-     woah = 
+    <span
+      style={Object {}}
+    >
+       woah = 
+    </span>
+    <span
+      className="hljs-function hljs-params"
+      style={Object {}}
+    >
+      fun
+    </span>
     <span
       className="hljs-function"
       style={Object {}}
     >
-      <span
-        className="hljs-params"
-        style={Object {}}
-      >
-        fun
-      </span>
        =&gt;
     </span>
-     fun + 
+    <span
+      style={Object {}}
+    >
+       fun + 
+    </span>
     <span
       style={
         Object {
@@ -45,8 +53,17 @@ exports[`SyntaxHighlighter component renders custom react component where pre ta
     >
       1
     </span>
-    ;
+    <span
+      style={Object {}}
+    >
+      ;
 
+    </span>
+    <span
+      style={Object {}}
+    >
+      
+    </span>
     <span
       style={
         Object {
@@ -56,7 +73,11 @@ exports[`SyntaxHighlighter component renders custom react component where pre ta
     >
       const
     </span>
-     dude = woah(
+    <span
+      style={Object {}}
+    >
+       dude = woah(
+    </span>
     <span
       style={
         Object {
@@ -66,7 +87,11 @@ exports[`SyntaxHighlighter component renders custom react component where pre ta
     >
       2
     </span>
-    ) + 
+    <span
+      style={Object {}}
+    >
+      ) + 
+    </span>
     <span
       style={
         Object {
@@ -76,41 +101,67 @@ exports[`SyntaxHighlighter component renders custom react component where pre ta
     >
       3
     </span>
-    ;
+    <span
+      style={Object {}}
+    >
+      ;
 
+    </span>
+    <span
+      style={Object {}}
+    >
+      
+    </span>
+    <span
+      className="hljs-function"
+      style={
+        Object {
+          "fontWeight": "bold",
+        }
+      }
+    >
+      function
+    </span>
     <span
       className="hljs-function"
       style={Object {}}
     >
-      <span
-        style={
-          Object {
-            "fontWeight": "bold",
-          }
-        }
-      >
-        function
-      </span>
        
-      <span
-        style={
-          Object {
-            "color": "#880000",
-            "fontWeight": "bold",
-          }
+    </span>
+    <span
+      className="hljs-function"
+      style={
+        Object {
+          "color": "#880000",
+          "fontWeight": "bold",
         }
-      >
-        thisIsAFunction
-      </span>
+      }
+    >
+      thisIsAFunction
+    </span>
+    <span
+      className="hljs-function"
+      style={Object {}}
+    >
       (
-      <span
-        className="hljs-params"
-        style={Object {}}
-      />
+    </span>
+    <span
+      className="hljs-function"
+      style={Object {}}
+    >
       ) 
     </span>
-    {
-  
+    <span
+      style={Object {}}
+    >
+      {
+
+    </span>
+    <span
+      style={Object {}}
+    >
+        
+    </span>
     <span
       style={
         Object {
@@ -120,7 +171,11 @@ exports[`SyntaxHighlighter component renders custom react component where pre ta
     >
       return
     </span>
-     [
+    <span
+      style={Object {}}
+    >
+       [
+    </span>
     <span
       style={
         Object {
@@ -130,7 +185,11 @@ exports[`SyntaxHighlighter component renders custom react component where pre ta
     >
       1
     </span>
-    ,
+    <span
+      style={Object {}}
+    >
+      ,
+    </span>
     <span
       style={
         Object {
@@ -140,7 +199,11 @@ exports[`SyntaxHighlighter component renders custom react component where pre ta
     >
       2
     </span>
-    ,
+    <span
+      style={Object {}}
+    >
+      ,
+    </span>
     <span
       style={
         Object {
@@ -150,20 +213,28 @@ exports[`SyntaxHighlighter component renders custom react component where pre ta
     >
       3
     </span>
-    ].map(
+    <span
+      style={Object {}}
+    >
+      ].map(
+    </span>
+    <span
+      className="hljs-function hljs-params"
+      style={Object {}}
+    >
+      n
+    </span>
     <span
       className="hljs-function"
       style={Object {}}
     >
-      <span
-        className="hljs-params"
-        style={Object {}}
-      >
-        n
-      </span>
        =&gt;
     </span>
-     n + 
+    <span
+      style={Object {}}
+    >
+       n + 
+    </span>
     <span
       style={
         Object {
@@ -173,7 +244,11 @@ exports[`SyntaxHighlighter component renders custom react component where pre ta
     >
       1
     </span>
-    ).filter(n !== 
+    <span
+      style={Object {}}
+    >
+      ).filter(n !== 
+    </span>
     <span
       style={
         Object {
@@ -183,9 +258,19 @@ exports[`SyntaxHighlighter component renders custom react component where pre ta
     >
       3
     </span>
-    );
-}
+    <span
+      style={Object {}}
+    >
+      );
 
+    </span>
+    }
+
+    <span
+      style={Object {}}
+    >
+      
+    </span>
     <span
       style={
         Object {
@@ -195,7 +280,11 @@ exports[`SyntaxHighlighter component renders custom react component where pre ta
     >
       console
     </span>
-    .log(
+    <span
+      style={Object {}}
+    >
+      .log(
+    </span>
     <span
       style={
         Object {
@@ -205,42 +294,69 @@ exports[`SyntaxHighlighter component renders custom react component where pre ta
     >
       'making up fake code is really hard'
     </span>
-    );
+    <span
+      style={Object {}}
+    >
+      );
 
+    </span>
+    
 
+    <span
+      style={Object {}}
+    >
+      
+    </span>
+    <span
+      className="hljs-function"
+      style={
+        Object {
+          "fontWeight": "bold",
+        }
+      }
+    >
+      function
+    </span>
     <span
       className="hljs-function"
       style={Object {}}
     >
-      <span
-        style={
-          Object {
-            "fontWeight": "bold",
-          }
-        }
-      >
-        function
-      </span>
        
-      <span
-        style={
-          Object {
-            "color": "#880000",
-            "fontWeight": "bold",
-          }
+    </span>
+    <span
+      className="hljs-function"
+      style={
+        Object {
+          "color": "#880000",
+          "fontWeight": "bold",
         }
-      >
-        itIs
-      </span>
+      }
+    >
+      itIs
+    </span>
+    <span
+      className="hljs-function"
+      style={Object {}}
+    >
       (
-      <span
-        className="hljs-params"
-        style={Object {}}
-      />
+    </span>
+    <span
+      className="hljs-function"
+      style={Object {}}
+    >
       ) 
     </span>
-    {
-  
+    <span
+      style={Object {}}
+    >
+      {
+
+    </span>
+    <span
+      style={Object {}}
+    >
+        
+    </span>
     <span
       style={
         Object {
@@ -250,7 +366,11 @@ exports[`SyntaxHighlighter component renders custom react component where pre ta
     >
       return
     </span>
-     
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       style={
         Object {
@@ -260,8 +380,15 @@ exports[`SyntaxHighlighter component renders custom react component where pre ta
     >
       'no seriously really it is'
     </span>
-    ;
-}
+    <span
+      style={Object {}}
+    >
+      ;
+
+    </span>
+    }
+
+    
 
   </code>
 </p>
@@ -289,20 +416,28 @@ exports[`SyntaxHighlighter renders div where pre tag is by default 1`] = `
     >
       const
     </span>
-     woah = 
+    <span
+      style={Object {}}
+    >
+       woah = 
+    </span>
+    <span
+      className="hljs-function hljs-params"
+      style={Object {}}
+    >
+      fun
+    </span>
     <span
       className="hljs-function"
       style={Object {}}
     >
-      <span
-        className="hljs-params"
-        style={Object {}}
-      >
-        fun
-      </span>
        =&gt;
     </span>
-     fun + 
+    <span
+      style={Object {}}
+    >
+       fun + 
+    </span>
     <span
       style={
         Object {
@@ -312,8 +447,17 @@ exports[`SyntaxHighlighter renders div where pre tag is by default 1`] = `
     >
       1
     </span>
-    ;
+    <span
+      style={Object {}}
+    >
+      ;
 
+    </span>
+    <span
+      style={Object {}}
+    >
+      
+    </span>
     <span
       style={
         Object {
@@ -323,7 +467,11 @@ exports[`SyntaxHighlighter renders div where pre tag is by default 1`] = `
     >
       const
     </span>
-     dude = woah(
+    <span
+      style={Object {}}
+    >
+       dude = woah(
+    </span>
     <span
       style={
         Object {
@@ -333,7 +481,11 @@ exports[`SyntaxHighlighter renders div where pre tag is by default 1`] = `
     >
       2
     </span>
-    ) + 
+    <span
+      style={Object {}}
+    >
+      ) + 
+    </span>
     <span
       style={
         Object {
@@ -343,41 +495,67 @@ exports[`SyntaxHighlighter renders div where pre tag is by default 1`] = `
     >
       3
     </span>
-    ;
+    <span
+      style={Object {}}
+    >
+      ;
 
+    </span>
+    <span
+      style={Object {}}
+    >
+      
+    </span>
+    <span
+      className="hljs-function"
+      style={
+        Object {
+          "fontWeight": "bold",
+        }
+      }
+    >
+      function
+    </span>
     <span
       className="hljs-function"
       style={Object {}}
     >
-      <span
-        style={
-          Object {
-            "fontWeight": "bold",
-          }
-        }
-      >
-        function
-      </span>
        
-      <span
-        style={
-          Object {
-            "color": "#880000",
-            "fontWeight": "bold",
-          }
+    </span>
+    <span
+      className="hljs-function"
+      style={
+        Object {
+          "color": "#880000",
+          "fontWeight": "bold",
         }
-      >
-        thisIsAFunction
-      </span>
+      }
+    >
+      thisIsAFunction
+    </span>
+    <span
+      className="hljs-function"
+      style={Object {}}
+    >
       (
-      <span
-        className="hljs-params"
-        style={Object {}}
-      />
+    </span>
+    <span
+      className="hljs-function"
+      style={Object {}}
+    >
       ) 
     </span>
-    {
-  
+    <span
+      style={Object {}}
+    >
+      {
+
+    </span>
+    <span
+      style={Object {}}
+    >
+        
+    </span>
     <span
       style={
         Object {
@@ -387,7 +565,11 @@ exports[`SyntaxHighlighter renders div where pre tag is by default 1`] = `
     >
       return
     </span>
-     [
+    <span
+      style={Object {}}
+    >
+       [
+    </span>
     <span
       style={
         Object {
@@ -397,7 +579,11 @@ exports[`SyntaxHighlighter renders div where pre tag is by default 1`] = `
     >
       1
     </span>
-    ,
+    <span
+      style={Object {}}
+    >
+      ,
+    </span>
     <span
       style={
         Object {
@@ -407,7 +593,11 @@ exports[`SyntaxHighlighter renders div where pre tag is by default 1`] = `
     >
       2
     </span>
-    ,
+    <span
+      style={Object {}}
+    >
+      ,
+    </span>
     <span
       style={
         Object {
@@ -417,20 +607,28 @@ exports[`SyntaxHighlighter renders div where pre tag is by default 1`] = `
     >
       3
     </span>
-    ].map(
+    <span
+      style={Object {}}
+    >
+      ].map(
+    </span>
+    <span
+      className="hljs-function hljs-params"
+      style={Object {}}
+    >
+      n
+    </span>
     <span
       className="hljs-function"
       style={Object {}}
     >
-      <span
-        className="hljs-params"
-        style={Object {}}
-      >
-        n
-      </span>
        =&gt;
     </span>
-     n + 
+    <span
+      style={Object {}}
+    >
+       n + 
+    </span>
     <span
       style={
         Object {
@@ -440,7 +638,11 @@ exports[`SyntaxHighlighter renders div where pre tag is by default 1`] = `
     >
       1
     </span>
-    ).filter(n !== 
+    <span
+      style={Object {}}
+    >
+      ).filter(n !== 
+    </span>
     <span
       style={
         Object {
@@ -450,9 +652,19 @@ exports[`SyntaxHighlighter renders div where pre tag is by default 1`] = `
     >
       3
     </span>
-    );
-}
+    <span
+      style={Object {}}
+    >
+      );
 
+    </span>
+    }
+
+    <span
+      style={Object {}}
+    >
+      
+    </span>
     <span
       style={
         Object {
@@ -462,7 +674,11 @@ exports[`SyntaxHighlighter renders div where pre tag is by default 1`] = `
     >
       console
     </span>
-    .log(
+    <span
+      style={Object {}}
+    >
+      .log(
+    </span>
     <span
       style={
         Object {
@@ -472,42 +688,69 @@ exports[`SyntaxHighlighter renders div where pre tag is by default 1`] = `
     >
       'making up fake code is really hard'
     </span>
-    );
+    <span
+      style={Object {}}
+    >
+      );
 
+    </span>
+    
 
+    <span
+      style={Object {}}
+    >
+      
+    </span>
+    <span
+      className="hljs-function"
+      style={
+        Object {
+          "fontWeight": "bold",
+        }
+      }
+    >
+      function
+    </span>
     <span
       className="hljs-function"
       style={Object {}}
     >
-      <span
-        style={
-          Object {
-            "fontWeight": "bold",
-          }
-        }
-      >
-        function
-      </span>
        
-      <span
-        style={
-          Object {
-            "color": "#880000",
-            "fontWeight": "bold",
-          }
+    </span>
+    <span
+      className="hljs-function"
+      style={
+        Object {
+          "color": "#880000",
+          "fontWeight": "bold",
         }
-      >
-        itIs
-      </span>
+      }
+    >
+      itIs
+    </span>
+    <span
+      className="hljs-function"
+      style={Object {}}
+    >
       (
-      <span
-        className="hljs-params"
-        style={Object {}}
-      />
+    </span>
+    <span
+      className="hljs-function"
+      style={Object {}}
+    >
       ) 
     </span>
-    {
-  
+    <span
+      style={Object {}}
+    >
+      {
+
+    </span>
+    <span
+      style={Object {}}
+    >
+        
+    </span>
     <span
       style={
         Object {
@@ -517,7 +760,11 @@ exports[`SyntaxHighlighter renders div where pre tag is by default 1`] = `
     >
       return
     </span>
-     
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       style={
         Object {
@@ -527,8 +774,15 @@ exports[`SyntaxHighlighter renders div where pre tag is by default 1`] = `
     >
       'no seriously really it is'
     </span>
-    ;
-}
+    <span
+      style={Object {}}
+    >
+      ;
+
+    </span>
+    }
+
+    
 
   </code>
 </div>

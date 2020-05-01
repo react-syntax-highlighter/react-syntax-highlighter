@@ -1,0 +1,976 @@
+exports[`test SyntaxHighlighter allows lineNumberStyle as function 1`] = `
+<pre
+  style={
+    Object {
+      "background": "#F0F0F0",
+      "color": "#444",
+      "display": "block",
+      "overflowX": "auto",
+      "padding": "0.5em"
+    }
+  }>
+  <code
+    style={
+      Object {
+        "float": "left",
+        "paddingRight": "10px"
+      }
+    }>
+    <span
+      className="react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      1
+      
+    </span>
+    <span
+      className="react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      2
+      
+    </span>
+    <span
+      className="react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      3
+      
+    </span>
+    <span
+      className="react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      4
+      
+    </span>
+    <span
+      className="react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      5
+      
+    </span>
+    <span
+      className="react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      6
+      
+    </span>
+    <span
+      className="react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      7
+      
+    </span>
+    <span
+      className="react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      8
+      
+    </span>
+    <span
+      className="react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      9
+      
+    </span>
+    <span
+      className="react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      10
+      
+    </span>
+  </code>
+  <code>
+    <span
+      style={
+        Object {
+          "fontWeight": "bold"
+        }
+      }>
+      const
+    </span>
+     woah = 
+    <span
+      style={Object {}}>
+      <span
+        style={Object {}}>
+        fun
+      </span>
+       =>
+    </span>
+     fun + 
+    <span
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
+      1
+    </span>
+    ;
+    
+    <span
+      style={
+        Object {
+          "fontWeight": "bold"
+        }
+      }>
+      const
+    </span>
+     dude = woah(
+    <span
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
+      2
+    </span>
+    ) + 
+    <span
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
+      3
+    </span>
+    ;
+    
+    <span
+      style={Object {}}>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        function
+      </span>
+       
+      <span
+        style={
+          Object {
+            "color": "#880000",
+            "fontWeight": "bold"
+          }
+        }>
+        thisIsAFunction
+      </span>
+      (
+      <span
+        style={Object {}} />
+      ) 
+    </span>
+    {
+      
+    <span
+      style={
+        Object {
+          "fontWeight": "bold"
+        }
+      }>
+      return
+    </span>
+     [
+    <span
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
+      1
+    </span>
+    ,
+    <span
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
+      2
+    </span>
+    ,
+    <span
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
+      3
+    </span>
+    ].map(
+    <span
+      style={Object {}}>
+      <span
+        style={Object {}}>
+        n
+      </span>
+       =>
+    </span>
+     n + 
+    <span
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
+      1
+    </span>
+    ).filter(n !== 
+    <span
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
+      3
+    </span>
+    );
+    }
+    
+    <span
+      style={
+        Object {
+          "color": "#397300"
+        }
+      }>
+      console
+    </span>
+    .log(
+    <span
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
+      \'making up fake code is really hard\'
+    </span>
+    );
+    
+    
+    <span
+      style={Object {}}>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        function
+      </span>
+       
+      <span
+        style={
+          Object {
+            "color": "#880000",
+            "fontWeight": "bold"
+          }
+        }>
+        itIs
+      </span>
+      (
+      <span
+        style={Object {}} />
+      ) 
+    </span>
+    {
+      
+    <span
+      style={
+        Object {
+          "fontWeight": "bold"
+        }
+      }>
+      return
+    </span>
+     
+    <span
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
+      \'no seriously really it is\'
+    </span>
+    ;
+    }
+    
+  </code>
+</pre>
+`;
+
+exports[`test SyntaxHighlighter allows lineNumberStyle as object 1`] = `
+<pre
+  style={
+    Object {
+      "background": "#F0F0F0",
+      "color": "#444",
+      "display": "block",
+      "overflowX": "auto",
+      "padding": "0.5em"
+    }
+  }>
+  <code
+    style={
+      Object {
+        "float": "left",
+        "paddingRight": "10px"
+      }
+    }>
+    <span
+      className="react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      1
+      
+    </span>
+    <span
+      className="react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      2
+      
+    </span>
+    <span
+      className="react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      3
+      
+    </span>
+    <span
+      className="react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      4
+      
+    </span>
+    <span
+      className="react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      5
+      
+    </span>
+    <span
+      className="react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      6
+      
+    </span>
+    <span
+      className="react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      7
+      
+    </span>
+    <span
+      className="react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      8
+      
+    </span>
+    <span
+      className="react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      9
+      
+    </span>
+    <span
+      className="react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "color": "red"
+        }
+      }>
+      10
+      
+    </span>
+  </code>
+  <code>
+    <span
+      style={
+        Object {
+          "fontWeight": "bold"
+        }
+      }>
+      const
+    </span>
+     woah = 
+    <span
+      style={Object {}}>
+      <span
+        style={Object {}}>
+        fun
+      </span>
+       =>
+    </span>
+     fun + 
+    <span
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
+      1
+    </span>
+    ;
+    
+    <span
+      style={
+        Object {
+          "fontWeight": "bold"
+        }
+      }>
+      const
+    </span>
+     dude = woah(
+    <span
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
+      2
+    </span>
+    ) + 
+    <span
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
+      3
+    </span>
+    ;
+    
+    <span
+      style={Object {}}>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        function
+      </span>
+       
+      <span
+        style={
+          Object {
+            "color": "#880000",
+            "fontWeight": "bold"
+          }
+        }>
+        thisIsAFunction
+      </span>
+      (
+      <span
+        style={Object {}} />
+      ) 
+    </span>
+    {
+      
+    <span
+      style={
+        Object {
+          "fontWeight": "bold"
+        }
+      }>
+      return
+    </span>
+     [
+    <span
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
+      1
+    </span>
+    ,
+    <span
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
+      2
+    </span>
+    ,
+    <span
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
+      3
+    </span>
+    ].map(
+    <span
+      style={Object {}}>
+      <span
+        style={Object {}}>
+        n
+      </span>
+       =>
+    </span>
+     n + 
+    <span
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
+      1
+    </span>
+    ).filter(n !== 
+    <span
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
+      3
+    </span>
+    );
+    }
+    
+    <span
+      style={
+        Object {
+          "color": "#397300"
+        }
+      }>
+      console
+    </span>
+    .log(
+    <span
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
+      \'making up fake code is really hard\'
+    </span>
+    );
+    
+    
+    <span
+      style={Object {}}>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        function
+      </span>
+       
+      <span
+        style={
+          Object {
+            "color": "#880000",
+            "fontWeight": "bold"
+          }
+        }>
+        itIs
+      </span>
+      (
+      <span
+        style={Object {}} />
+      ) 
+    </span>
+    {
+      
+    <span
+      style={
+        Object {
+          "fontWeight": "bold"
+        }
+      }>
+      return
+    </span>
+     
+    <span
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
+      \'no seriously really it is\'
+    </span>
+    ;
+    }
+    
+  </code>
+</pre>
+`;
+
+exports[`test SyntaxHighlighter component renders correctly 1`] = `
+<pre
+  style={
+    Object {
+      "background": "#F0F0F0",
+      "color": "#444",
+      "display": "block",
+      "overflowX": "auto",
+      "padding": "0.5em"
+    }
+  }>
+  <code
+    style={
+      Object {
+        "float": "left",
+        "paddingRight": "10px"
+      }
+    }>
+    <span
+      className="react-syntax-highlighter-line-number"
+      style={Object {}}>
+      1
+      
+    </span>
+    <span
+      className="react-syntax-highlighter-line-number"
+      style={Object {}}>
+      2
+      
+    </span>
+    <span
+      className="react-syntax-highlighter-line-number"
+      style={Object {}}>
+      3
+      
+    </span>
+    <span
+      className="react-syntax-highlighter-line-number"
+      style={Object {}}>
+      4
+      
+    </span>
+    <span
+      className="react-syntax-highlighter-line-number"
+      style={Object {}}>
+      5
+      
+    </span>
+    <span
+      className="react-syntax-highlighter-line-number"
+      style={Object {}}>
+      6
+      
+    </span>
+    <span
+      className="react-syntax-highlighter-line-number"
+      style={Object {}}>
+      7
+      
+    </span>
+    <span
+      className="react-syntax-highlighter-line-number"
+      style={Object {}}>
+      8
+      
+    </span>
+    <span
+      className="react-syntax-highlighter-line-number"
+      style={Object {}}>
+      9
+      
+    </span>
+    <span
+      className="react-syntax-highlighter-line-number"
+      style={Object {}}>
+      10
+      
+    </span>
+  </code>
+  <code>
+    <span
+      style={
+        Object {
+          "fontWeight": "bold"
+        }
+      }>
+      const
+    </span>
+     woah = 
+    <span
+      style={Object {}}>
+      <span
+        style={Object {}}>
+        fun
+      </span>
+       =>
+    </span>
+     fun + 
+    <span
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
+      1
+    </span>
+    ;
+    
+    <span
+      style={
+        Object {
+          "fontWeight": "bold"
+        }
+      }>
+      const
+    </span>
+     dude = woah(
+    <span
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
+      2
+    </span>
+    ) + 
+    <span
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
+      3
+    </span>
+    ;
+    
+    <span
+      style={Object {}}>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        function
+      </span>
+       
+      <span
+        style={
+          Object {
+            "color": "#880000",
+            "fontWeight": "bold"
+          }
+        }>
+        thisIsAFunction
+      </span>
+      (
+      <span
+        style={Object {}} />
+      ) 
+    </span>
+    {
+      
+    <span
+      style={
+        Object {
+          "fontWeight": "bold"
+        }
+      }>
+      return
+    </span>
+     [
+    <span
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
+      1
+    </span>
+    ,
+    <span
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
+      2
+    </span>
+    ,
+    <span
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
+      3
+    </span>
+    ].map(
+    <span
+      style={Object {}}>
+      <span
+        style={Object {}}>
+        n
+      </span>
+       =>
+    </span>
+     n + 
+    <span
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
+      1
+    </span>
+    ).filter(n !== 
+    <span
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
+      3
+    </span>
+    );
+    }
+    
+    <span
+      style={
+        Object {
+          "color": "#397300"
+        }
+      }>
+      console
+    </span>
+    .log(
+    <span
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
+      \'making up fake code is really hard\'
+    </span>
+    );
+    
+    
+    <span
+      style={Object {}}>
+      <span
+        style={
+          Object {
+            "fontWeight": "bold"
+          }
+        }>
+        function
+      </span>
+       
+      <span
+        style={
+          Object {
+            "color": "#880000",
+            "fontWeight": "bold"
+          }
+        }>
+        itIs
+      </span>
+      (
+      <span
+        style={Object {}} />
+      ) 
+    </span>
+    {
+      
+    <span
+      style={
+        Object {
+          "fontWeight": "bold"
+        }
+      }>
+      return
+    </span>
+     
+    <span
+      style={
+        Object {
+          "color": "#880000"
+        }
+      }>
+      \'no seriously really it is\'
+    </span>
+    ;
+    }
+    
+  </code>
+</pre>
+`;
