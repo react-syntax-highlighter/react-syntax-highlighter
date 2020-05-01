@@ -9,8 +9,8 @@
     "@babel/runtime": "^7.3.1",
     "highlight.js": "~9.13.0",
     "lowlight": "~1.11.0",
-    "prismjs": "^1.8.4",
-    "refractor": "^2.4.1"
+    "prismjs": "^1.16.0",
+    "refractor": "^2.10.1"
   },
   "jest": {
     "coverageDirectory": "./coverage/",
@@ -33,7 +33,7 @@
     "css": "^2.2.1",
     "css-loader": "^0.23.1",
     "husky": "^1.1.4",
-    "jest": "^24.1.0",
+    "jest": "^25.1.0",
     "lint-staged": "^8.0.5",
     "prettier": "^1.15.2",
     "prism-themes": "https://github.com/PrismJS/prism-themes.git#afb4116547cd854074ad705b8171768403ca11f3",
@@ -61,7 +61,7 @@
     "build-languages-hljs": "node ./lib/build-languages-highlightjs.js",
     "build-styles-prism": "node ./lib/build-stylesheets-refractor.js",
     "build-languages-prism": "node ./lib/build-languages-refractor.js",
-    "prepublish": "npm run build-styles-hljs && npm run build-languages-hljs && npm run build-styles-prism && npm run build-languages-prism && npm run build",
+    "prepare": "npm run build-styles-hljs && npm run build-languages-hljs && npm run build-styles-prism && npm run build-languages-prism && npm run build",
     "test": "jest",
     "test-ci": "jest && codecov",
     "publish-coverage": "codecov",

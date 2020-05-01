@@ -35,6 +35,7 @@ I do realize that javascript styles are not for everyone, so you can optionally 
 - `codeTagProps` - props that will be spread into the `<code>` tag that is the direct parent of the highlighted code elements. Useful for styling/assigning classNames.
 - `useInlineStyles` - if this prop is passed in as false, react syntax highlighter will not add style objects to elements, and will instead append classNames. You can then style the code block by using one of the CSS files provided by highlight.js.
 - `showLineNumbers` - if this is enabled line numbers will be shown next to the code block.
+- `showInlineLineNumbers` - if this is enabled line numbers will be rendered into each line, which allows line numbers to display properly when using renderers such as <a href="https://github.com/conorhastings/react-syntax-highlighter-virtualized-renderer">react-syntax-highlighter-virtualized-renderer</a>.
 - `startingLineNumber` - if `showLineNumbers` is enabled the line numbering will start from here.
 - `lineNumberContainerStyle` - the line numbers container default to appearing to the left with 10px of right padding. You can use this to override those styles.
 - `lineNumberStyle` - inline style to be passed to the span wrapping each number. Can be either an object or a function that receives current line number as argument and returns style object.
@@ -143,10 +144,11 @@ SyntaxHighlighter.supportedLanguages;
 - [Alibaba Ice](https://github.com/alibaba/ice)
 - [Uber BaseUI Docs](https://github.com/uber-web/baseui)
 - [React Select Docs](https://github.com/JedWatson/react-select)
-- [Auto-layout](https://github.com/0123cf/auto-layout) - use flex laout
+- [Auto-layout](https://github.com/0123cf/auto-layout) - use flex layout
 - [npmview](https://github.com/pd4d10/npmview) - A web application to view npm package files
 - [Static Forms](https://www.staticforms.xyz) - Free HTML forms for your static websites.
 - [codeprinter](https://github.com/jaredpetersen/codeprinter) - Print out code easily
+- [React DemoTab](https://github.com/mkosir/react-demo-tab) - A React component to easily create demos of other components
 
 If your project uses react-syntax-highlighter please send a pr to add!
 

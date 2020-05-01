@@ -11,6 +11,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       "background": "#f5f2f0",
       "color": "black",
       "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+      "fontSize": "1em",
       "hyphens": "none",
       "lineHeight": "1.5",
       "margin": ".5em 0",
@@ -37,6 +38,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
         "background": "none",
         "color": "black",
         "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+        "fontSize": "1em",
         "hyphens": "none",
         "lineHeight": "1.5",
         "msHyphens": "none",
@@ -84,6 +86,7 @@ exports[`SyntaxHighlighter should just render text if syntax is not registered 1
       "background": "#f5f2f0",
       "color": "black",
       "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+      "fontSize": "1em",
       "hyphens": "none",
       "lineHeight": "1.5",
       "margin": ".5em 0",
@@ -110,6 +113,7 @@ exports[`SyntaxHighlighter should just render text if syntax is not registered 1
         "background": "none",
         "color": "black",
         "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+        "fontSize": "1em",
         "hyphens": "none",
         "lineHeight": "1.5",
         "msHyphens": "none",
@@ -123,7 +127,11 @@ exports[`SyntaxHighlighter should just render text if syntax is not registered 1
       }
     }
   >
-    print('hello')
+    <span
+      style={Object {}}
+    >
+      print('hello')
+    </span>
   </code>
 </pre>
 `;
@@ -139,6 +147,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
       "background": "#f5f2f0",
       "color": "black",
       "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+      "fontSize": "1em",
       "hyphens": "none",
       "lineHeight": "1.5",
       "margin": ".5em 0",
@@ -165,6 +174,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
         "background": "none",
         "color": "black",
         "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+        "fontSize": "1em",
         "hyphens": "none",
         "lineHeight": "1.5",
         "msHyphens": "none",
@@ -178,8 +188,17 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
       }
     }
   >
-    
-             
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+                   
+    </span>
     <span
       className="token"
       style={
@@ -190,33 +209,61 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
     >
       # Import the modules
     </span>
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+      
+    </span>
+    <span
+      className="token"
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      import
+    </span>
+    <span
+      style={Object {}}
+    >
+       sys
+
+    </span>
+    <span
+      style={Object {}}
+    >
+      
+    </span>
+    <span
+      className="token"
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      import
+    </span>
+    <span
+      style={Object {}}
+    >
+       random
+
+    </span>
     
 
     <span
-      className="token"
-      style={
-        Object {
-          "color": "#07a",
-        }
-      }
+      style={Object {}}
     >
-      import
+      ans 
     </span>
-     sys
-
-    <span
-      className="token"
-      style={
-        Object {
-          "color": "#07a",
-        }
-      }
-    >
-      import
-    </span>
-     random
-
-ans 
     <span
       className="token"
       style={
@@ -228,7 +275,11 @@ ans
     >
       =
     </span>
-     
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="token"
       style={
@@ -239,9 +290,19 @@ ans
     >
       True
     </span>
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
     
 
-
+    <span
+      style={Object {}}
+    >
+      
+    </span>
     <span
       className="token"
       style={
@@ -252,7 +313,11 @@ ans
     >
       while
     </span>
-     ans
+    <span
+      style={Object {}}
+    >
+       ans
+    </span>
     <span
       className="token"
       style={
@@ -263,8 +328,17 @@ ans
     >
       :
     </span>
-    
-    question 
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+          question 
+    </span>
     <span
       className="token"
       style={
@@ -276,7 +350,11 @@ ans
     >
       =
     </span>
-     
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="token"
       style={
@@ -317,9 +395,19 @@ ans
     >
       )
     </span>
-    
-    
-    answers 
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
+        
+
+    <span
+      style={Object {}}
+    >
+          answers 
+    </span>
     <span
       className="token"
       style={
@@ -331,7 +419,11 @@ ans
     >
       =
     </span>
-     random
+    <span
+      style={Object {}}
+    >
+       random
+    </span>
     <span
       className="token"
       style={
@@ -342,7 +434,11 @@ ans
     >
       .
     </span>
-    randint
+    <span
+      style={Object {}}
+    >
+      randint
+    </span>
     <span
       className="token"
       style={
@@ -393,9 +489,19 @@ ans
     >
       )
     </span>
-    
-    
-    
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
+        
+
+    <span
+      style={Object {}}
+    >
+          
+    </span>
     <span
       className="token"
       style={
@@ -406,7 +512,11 @@ ans
     >
       if
     </span>
-     question 
+    <span
+      style={Object {}}
+    >
+       question 
+    </span>
     <span
       className="token"
       style={
@@ -418,7 +528,11 @@ ans
     >
       ==
     </span>
-     
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="token"
       style={
@@ -439,8 +553,17 @@ ans
     >
       :
     </span>
-    
-        sys
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+              sys
+    </span>
     <span
       className="token"
       style={
@@ -451,7 +574,11 @@ ans
     >
       .
     </span>
-    exit
+    <span
+      style={Object {}}
+    >
+      exit
+    </span>
     <span
       className="token"
       style={
@@ -472,9 +599,19 @@ ans
     >
       )
     </span>
-    
-    
-    
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
+        
+
+    <span
+      style={Object {}}
+    >
+          
+    </span>
     <span
       className="token"
       style={
@@ -485,7 +622,11 @@ ans
     >
       elif
     </span>
-     answers 
+    <span
+      style={Object {}}
+    >
+       answers 
+    </span>
     <span
       className="token"
       style={
@@ -497,7 +638,11 @@ ans
     >
       ==
     </span>
-     
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="token"
       style={
@@ -518,8 +663,17 @@ ans
     >
       :
     </span>
-    
-        
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+              
+    </span>
     <span
       className="token"
       style={
@@ -530,7 +684,11 @@ ans
     >
       print
     </span>
-     
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="token"
       style={
@@ -541,9 +699,19 @@ ans
     >
       "It is certain"
     </span>
-    
-    
-    
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
+        
+
+    <span
+      style={Object {}}
+    >
+          
+    </span>
     <span
       className="token"
       style={
@@ -554,7 +722,11 @@ ans
     >
       elif
     </span>
-     answers 
+    <span
+      style={Object {}}
+    >
+       answers 
+    </span>
     <span
       className="token"
       style={
@@ -566,7 +738,11 @@ ans
     >
       ==
     </span>
-     
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="token"
       style={
@@ -587,8 +763,17 @@ ans
     >
       :
     </span>
-    
-        
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+              
+    </span>
     <span
       className="token"
       style={
@@ -599,7 +784,11 @@ ans
     >
       print
     </span>
-     
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="token"
       style={
@@ -610,9 +799,19 @@ ans
     >
       "Outlook good"
     </span>
-    
-    
-    
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
+        
+
+    <span
+      style={Object {}}
+    >
+          
+    </span>
     <span
       className="token"
       style={
@@ -623,7 +822,11 @@ ans
     >
       elif
     </span>
-     answers 
+    <span
+      style={Object {}}
+    >
+       answers 
+    </span>
     <span
       className="token"
       style={
@@ -635,7 +838,11 @@ ans
     >
       ==
     </span>
-     
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="token"
       style={
@@ -656,8 +863,17 @@ ans
     >
       :
     </span>
-    
-        
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+              
+    </span>
     <span
       className="token"
       style={
@@ -668,7 +884,11 @@ ans
     >
       print
     </span>
-     
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="token"
       style={
@@ -679,9 +899,19 @@ ans
     >
       "You may rely on it"
     </span>
-    
-    
-    
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
+        
+
+    <span
+      style={Object {}}
+    >
+          
+    </span>
     <span
       className="token"
       style={
@@ -692,7 +922,11 @@ ans
     >
       elif
     </span>
-     answers 
+    <span
+      style={Object {}}
+    >
+       answers 
+    </span>
     <span
       className="token"
       style={
@@ -704,7 +938,11 @@ ans
     >
       ==
     </span>
-     
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="token"
       style={
@@ -725,8 +963,17 @@ ans
     >
       :
     </span>
-    
-        
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+              
+    </span>
     <span
       className="token"
       style={
@@ -737,7 +984,11 @@ ans
     >
       print
     </span>
-     
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="token"
       style={
@@ -748,9 +999,19 @@ ans
     >
       "Ask again later"
     </span>
-    
-    
-    
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
+        
+
+    <span
+      style={Object {}}
+    >
+          
+    </span>
     <span
       className="token"
       style={
@@ -761,7 +1022,11 @@ ans
     >
       elif
     </span>
-     answers 
+    <span
+      style={Object {}}
+    >
+       answers 
+    </span>
     <span
       className="token"
       style={
@@ -773,7 +1038,11 @@ ans
     >
       ==
     </span>
-     
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="token"
       style={
@@ -794,8 +1063,17 @@ ans
     >
       :
     </span>
-    
-        
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+              
+    </span>
     <span
       className="token"
       style={
@@ -806,7 +1084,11 @@ ans
     >
       print
     </span>
-     
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="token"
       style={
@@ -817,9 +1099,19 @@ ans
     >
       "Concentrate and ask again"
     </span>
-    
-    
-    
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
+        
+
+    <span
+      style={Object {}}
+    >
+          
+    </span>
     <span
       className="token"
       style={
@@ -830,7 +1122,11 @@ ans
     >
       elif
     </span>
-     answers 
+    <span
+      style={Object {}}
+    >
+       answers 
+    </span>
     <span
       className="token"
       style={
@@ -842,7 +1138,11 @@ ans
     >
       ==
     </span>
-     
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="token"
       style={
@@ -863,8 +1163,17 @@ ans
     >
       :
     </span>
-    
-        
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+              
+    </span>
     <span
       className="token"
       style={
@@ -875,7 +1184,11 @@ ans
     >
       print
     </span>
-     
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="token"
       style={
@@ -886,9 +1199,19 @@ ans
     >
       "Reply hazy, try again"
     </span>
-    
-    
-    
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
+        
+
+    <span
+      style={Object {}}
+    >
+          
+    </span>
     <span
       className="token"
       style={
@@ -899,7 +1222,11 @@ ans
     >
       elif
     </span>
-     answers 
+    <span
+      style={Object {}}
+    >
+       answers 
+    </span>
     <span
       className="token"
       style={
@@ -911,7 +1238,11 @@ ans
     >
       ==
     </span>
-     
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="token"
       style={
@@ -932,8 +1263,17 @@ ans
     >
       :
     </span>
-    
-        
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+              
+    </span>
     <span
       className="token"
       style={
@@ -944,7 +1284,11 @@ ans
     >
       print
     </span>
-     
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="token"
       style={
@@ -955,9 +1299,19 @@ ans
     >
       "My reply is no"
     </span>
-    
-    
-    
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
+        
+
+    <span
+      style={Object {}}
+    >
+          
+    </span>
     <span
       className="token"
       style={
@@ -968,7 +1322,11 @@ ans
     >
       elif
     </span>
-     answers 
+    <span
+      style={Object {}}
+    >
+       answers 
+    </span>
     <span
       className="token"
       style={
@@ -980,7 +1338,11 @@ ans
     >
       ==
     </span>
-     
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="token"
       style={
@@ -1001,8 +1363,17 @@ ans
     >
       :
     </span>
-    
-        
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+              
+    </span>
     <span
       className="token"
       style={
@@ -1013,7 +1384,11 @@ ans
     >
       print
     </span>
-     
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       className="token"
       style={
@@ -1024,8 +1399,14 @@ ans
     >
       "My sources say no"
     </span>
-    
-             
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
+                 
+
   </code>
 </pre>
 `;

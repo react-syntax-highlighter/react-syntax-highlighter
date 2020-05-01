@@ -3,6 +3,7 @@ export default {
         "color": "white",
         "background": "none",
         "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+        "fontSize": "1em",
         "textAlign": "left",
         "textShadow": "0 -.1em .2em black",
         "whiteSpace": "pre",
@@ -22,6 +23,7 @@ export default {
         "color": "white",
         "background": "hsl(0, 0%, 8%)",
         "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+        "fontSize": "1em",
         "textAlign": "left",
         "textShadow": "0 -.1em .2em black",
         "whiteSpace": "pre",
@@ -98,7 +100,7 @@ export default {
     "punctuation": {
         "Opacity": ".7"
     },
-    ".namespace": {
+    "namespace": {
         "Opacity": ".7"
     },
     "tag": {
