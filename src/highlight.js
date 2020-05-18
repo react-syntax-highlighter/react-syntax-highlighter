@@ -94,7 +94,7 @@ function createLineElement({
   lineNumberStyle,
   largestLineNumber,
   showInlineLineNumbers,
-  lineProps,
+  lineProps = {},
   className = []
 }) {
   const properties =
