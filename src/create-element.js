@@ -48,7 +48,7 @@ export default function createElement({
     const props = useInlineStyles
       ? {
           ...properties,
-          ...{ className: className && createClassNameString(className) },
+          ...{ className: className && createClassNameString(properties.className) },
           style: createStyleObject(
             properties.className,
             Object.assign({}, properties.style, style),
