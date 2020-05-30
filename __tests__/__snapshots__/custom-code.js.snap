@@ -113,7 +113,7 @@ exports[`SyntaxHighlighter component renders custom react component where code t
       
     </span>
     <span
-      className="hljs-function"
+      className="hljs-function hljs-keyword"
       style={
         Object {
           "fontWeight": "bold",
@@ -129,7 +129,7 @@ exports[`SyntaxHighlighter component renders custom react component where code t
        
     </span>
     <span
-      className="hljs-function"
+      className="hljs-function hljs-title"
       style={
         Object {
           "color": "#880000",
@@ -308,7 +308,7 @@ exports[`SyntaxHighlighter component renders custom react component where code t
       
     </span>
     <span
-      className="hljs-function"
+      className="hljs-function hljs-keyword"
       style={
         Object {
           "fontWeight": "bold",
@@ -324,7 +324,7 @@ exports[`SyntaxHighlighter component renders custom react component where code t
        
     </span>
     <span
-      className="hljs-function"
+      className="hljs-function hljs-title"
       style={
         Object {
           "color": "#880000",
@@ -507,7 +507,7 @@ exports[`SyntaxHighlighter renders div where code tag is by default 1`] = `
       
     </span>
     <span
-      className="hljs-function"
+      className="hljs-function hljs-keyword"
       style={
         Object {
           "fontWeight": "bold",
@@ -523,7 +523,7 @@ exports[`SyntaxHighlighter renders div where code tag is by default 1`] = `
        
     </span>
     <span
-      className="hljs-function"
+      className="hljs-function hljs-title"
       style={
         Object {
           "color": "#880000",
@@ -702,7 +702,7 @@ exports[`SyntaxHighlighter renders div where code tag is by default 1`] = `
       
     </span>
     <span
-      className="hljs-function"
+      className="hljs-function hljs-keyword"
       style={
         Object {
           "fontWeight": "bold",
@@ -718,7 +718,7 @@ exports[`SyntaxHighlighter renders div where code tag is by default 1`] = `
        
     </span>
     <span
-      className="hljs-function"
+      className="hljs-function hljs-title"
       style={
         Object {
           "color": "#880000",

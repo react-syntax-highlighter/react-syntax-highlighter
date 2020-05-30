@@ -113,7 +113,7 @@ exports[`SyntaxHighlighter component renders correctly by falling back to highli
       
     </span>
     <span
-      className="hljs-function"
+      className="hljs-function hljs-keyword"
       style={
         Object {
           "fontWeight": "bold",
@@ -129,7 +129,7 @@ exports[`SyntaxHighlighter component renders correctly by falling back to highli
        
     </span>
     <span
-      className="hljs-function"
+      className="hljs-function hljs-title"
       style={
         Object {
           "color": "#880000",
@@ -308,7 +308,7 @@ exports[`SyntaxHighlighter component renders correctly by falling back to highli
       
     </span>
     <span
-      className="hljs-function"
+      className="hljs-function hljs-keyword"
       style={
         Object {
           "fontWeight": "bold",
@@ -324,7 +324,7 @@ exports[`SyntaxHighlighter component renders correctly by falling back to highli
        
     </span>
     <span
-      className="hljs-function"
+      className="hljs-function hljs-title"
       style={
         Object {
           "color": "#880000",

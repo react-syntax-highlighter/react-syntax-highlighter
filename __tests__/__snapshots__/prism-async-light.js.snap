@@ -200,7 +200,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
                    
     </span>
     <span
-      className="token"
+      className="token comment"
       style={
         Object {
           "color": "slategray",
@@ -221,7 +221,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
       
     </span>
     <span
-      className="token"
+      className="token keyword"
       style={
         Object {
           "color": "#07a",
@@ -242,7 +242,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
       
     </span>
     <span
-      className="token"
+      className="token keyword"
       style={
         Object {
           "color": "#07a",
@@ -265,7 +265,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
       ans 
     </span>
     <span
-      className="token"
+      className="token operator"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -281,7 +281,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
        
     </span>
     <span
-      className="token"
+      className="token boolean"
       style={
         Object {
           "color": "#905",
@@ -304,7 +304,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
       
     </span>
     <span
-      className="token"
+      className="token keyword"
       style={
         Object {
           "color": "#07a",
@@ -319,7 +319,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
        ans
     </span>
     <span
-      className="token"
+      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -340,7 +340,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
           question 
     </span>
     <span
-      className="token"
+      className="token operator"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -356,7 +356,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
        
     </span>
     <span
-      className="token"
+      className="token builtin"
       style={
         Object {
           "color": "#690",
@@ -366,7 +366,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
       raw_input
     </span>
     <span
-      className="token"
+      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -376,7 +376,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
       (
     </span>
     <span
-      className="token"
+      className="token string"
       style={
         Object {
           "color": "#690",
@@ -386,7 +386,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
       "Ask the magic 8 ball a question: (press enter to quit) "
     </span>
     <span
-      className="token"
+      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -409,7 +409,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
           answers 
     </span>
     <span
-      className="token"
+      className="token operator"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -425,7 +425,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
        random
     </span>
     <span
-      className="token"
+      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -440,7 +440,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
       randint
     </span>
     <span
-      className="token"
+      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -450,7 +450,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
       (
     </span>
     <span
-      className="token"
+      className="token number"
       style={
         Object {
           "color": "#905",
@@ -460,7 +460,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
       1
     </span>
     <span
-      className="token"
+      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -470,7 +470,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
       ,
     </span>
     <span
-      className="token"
+      className="token number"
       style={
         Object {
           "color": "#905",
@@ -480,7 +480,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
       8
     </span>
     <span
-      className="token"
+      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -503,7 +503,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
           
     </span>
     <span
-      className="token"
+      className="token keyword"
       style={
         Object {
           "color": "#07a",
@@ -518,7 +518,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
        question 
     </span>
     <span
-      className="token"
+      className="token operator"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -534,7 +534,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
        
     </span>
     <span
-      className="token"
+      className="token string"
       style={
         Object {
           "color": "#690",
@@ -544,7 +544,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
       ""
     </span>
     <span
-      className="token"
+      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -565,7 +565,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
               sys
     </span>
     <span
-      className="token"
+      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -580,7 +580,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
       exit
     </span>
     <span
-      className="token"
+      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -590,7 +590,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
       (
     </span>
     <span
-      className="token"
+      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -613,7 +613,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
           
     </span>
     <span
-      className="token"
+      className="token keyword"
       style={
         Object {
           "color": "#07a",
@@ -628,7 +628,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
        answers 
     </span>
     <span
-      className="token"
+      className="token operator"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -644,7 +644,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
        
     </span>
     <span
-      className="token"
+      className="token number"
       style={
         Object {
           "color": "#905",
@@ -654,7 +654,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
       1
     </span>
     <span
-      className="token"
+      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -675,7 +675,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
               
     </span>
     <span
-      className="token"
+      className="token keyword"
       style={
         Object {
           "color": "#07a",
@@ -690,7 +690,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
        
     </span>
     <span
-      className="token"
+      className="token string"
       style={
         Object {
           "color": "#690",
@@ -713,7 +713,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
           
     </span>
     <span
-      className="token"
+      className="token keyword"
       style={
         Object {
           "color": "#07a",
@@ -728,7 +728,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
        answers 
     </span>
     <span
-      className="token"
+      className="token operator"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -744,7 +744,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
        
     </span>
     <span
-      className="token"
+      className="token number"
       style={
         Object {
           "color": "#905",
@@ -754,7 +754,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
       2
     </span>
     <span
-      className="token"
+      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -775,7 +775,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
               
     </span>
     <span
-      className="token"
+      className="token keyword"
       style={
         Object {
           "color": "#07a",
@@ -790,7 +790,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
        
     </span>
     <span
-      className="token"
+      className="token string"
       style={
         Object {
           "color": "#690",
@@ -813,7 +813,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
           
     </span>
     <span
-      className="token"
+      className="token keyword"
       style={
         Object {
           "color": "#07a",
@@ -828,7 +828,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
        answers 
     </span>
     <span
-      className="token"
+      className="token operator"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -844,7 +844,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
        
     </span>
     <span
-      className="token"
+      className="token number"
       style={
         Object {
           "color": "#905",
@@ -854,7 +854,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
       3
     </span>
     <span
-      className="token"
+      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -875,7 +875,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
               
     </span>
     <span
-      className="token"
+      className="token keyword"
       style={
         Object {
           "color": "#07a",
@@ -890,7 +890,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
        
     </span>
     <span
-      className="token"
+      className="token string"
       style={
         Object {
           "color": "#690",
@@ -913,7 +913,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
           
     </span>
     <span
-      className="token"
+      className="token keyword"
       style={
         Object {
           "color": "#07a",
@@ -928,7 +928,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
        answers 
     </span>
     <span
-      className="token"
+      className="token operator"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -944,7 +944,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
        
     </span>
     <span
-      className="token"
+      className="token number"
       style={
         Object {
           "color": "#905",
@@ -954,7 +954,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
       4
     </span>
     <span
-      className="token"
+      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -975,7 +975,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
               
     </span>
     <span
-      className="token"
+      className="token keyword"
       style={
         Object {
           "color": "#07a",
@@ -990,7 +990,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
        
     </span>
     <span
-      className="token"
+      className="token string"
       style={
         Object {
           "color": "#690",
@@ -1013,7 +1013,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
           
     </span>
     <span
-      className="token"
+      className="token keyword"
       style={
         Object {
           "color": "#07a",
@@ -1028,7 +1028,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
        answers 
     </span>
     <span
-      className="token"
+      className="token operator"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -1044,7 +1044,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
        
     </span>
     <span
-      className="token"
+      className="token number"
       style={
         Object {
           "color": "#905",
@@ -1054,7 +1054,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
       5
     </span>
     <span
-      className="token"
+      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -1075,7 +1075,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
               
     </span>
     <span
-      className="token"
+      className="token keyword"
       style={
         Object {
           "color": "#07a",
@@ -1090,7 +1090,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
        
     </span>
     <span
-      className="token"
+      className="token string"
       style={
         Object {
           "color": "#690",
@@ -1113,7 +1113,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
           
     </span>
     <span
-      className="token"
+      className="token keyword"
       style={
         Object {
           "color": "#07a",
@@ -1128,7 +1128,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
        answers 
     </span>
     <span
-      className="token"
+      className="token operator"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -1144,7 +1144,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
        
     </span>
     <span
-      className="token"
+      className="token number"
       style={
         Object {
           "color": "#905",
@@ -1154,7 +1154,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
       6
     </span>
     <span
-      className="token"
+      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -1175,7 +1175,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
               
     </span>
     <span
-      className="token"
+      className="token keyword"
       style={
         Object {
           "color": "#07a",
@@ -1190,7 +1190,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
        
     </span>
     <span
-      className="token"
+      className="token string"
       style={
         Object {
           "color": "#690",
@@ -1213,7 +1213,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
           
     </span>
     <span
-      className="token"
+      className="token keyword"
       style={
         Object {
           "color": "#07a",
@@ -1228,7 +1228,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
        answers 
     </span>
     <span
-      className="token"
+      className="token operator"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -1244,7 +1244,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
        
     </span>
     <span
-      className="token"
+      className="token number"
       style={
         Object {
           "color": "#905",
@@ -1254,7 +1254,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
       7
     </span>
     <span
-      className="token"
+      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -1275,7 +1275,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
               
     </span>
     <span
-      className="token"
+      className="token keyword"
       style={
         Object {
           "color": "#07a",
@@ -1290,7 +1290,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
        
     </span>
     <span
-      className="token"
+      className="token string"
       style={
         Object {
           "color": "#690",
@@ -1313,7 +1313,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
           
     </span>
     <span
-      className="token"
+      className="token keyword"
       style={
         Object {
           "color": "#07a",
@@ -1328,7 +1328,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
        answers 
     </span>
     <span
-      className="token"
+      className="token operator"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -1344,7 +1344,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
        
     </span>
     <span
-      className="token"
+      className="token number"
       style={
         Object {
           "color": "#905",
@@ -1354,7 +1354,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
       8
     </span>
     <span
-      className="token"
+      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -1375,7 +1375,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
               
     </span>
     <span
-      className="token"
+      className="token keyword"
       style={
         Object {
           "color": "#07a",
@@ -1390,7 +1390,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
        
     </span>
     <span
-      className="token"
+      className="token string"
       style={
         Object {
           "color": "#690",
