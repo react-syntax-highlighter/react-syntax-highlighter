@@ -51,7 +51,7 @@ test('When the code split is loaded - SyntaxHighlighter renders jsx highlighted 
       <SyntaxHighlighter language="jsx" style={prism}>
         {`import React from "react";
   import uniquePropHOC from "./lib/unique-prop-hoc";
-  
+
   class Expire extends React.Component {
       constructor(props) {
           super(props);
