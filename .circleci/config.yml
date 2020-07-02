@@ -1,0 +1,42 @@
+# .circleci/.config.yml
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check {{ '/2.0/language-javascript/' | docs_url }} for more details
+#
+version: 2
+
+defaults: &defaults
+  working_directory: ~/repo
+  docker:
+    - image: circleci/node:8.9.1
+
+jobs:
+  test:
+    <<: *defaults
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          - v1-dependencies-
+
+      - run: npm install
+      - run:
+          name: Run tests & check code coverage
+          command: npm run test-ci
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+      - persist_to_workspace:
+          root: ~/repo
+          paths: .
+
+workflows:
+  version: 2
+  only_test:
+    jobs:
+      - test
