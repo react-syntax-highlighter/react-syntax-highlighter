@@ -3,10 +3,8 @@ export default {
         "display": "block",
         "overflowX": "auto",
         "padding": "0.5em",
-        "lineHeight": "1.3em",
         "color": "#abb2bf",
-        "background": "#282c34",
-        "borderRadius": "5px"
+        "background": "#282c34"
     },
     "hljs-keyword": {
         "color": "#F92672"

@@ -35,7 +35,6 @@
 * colorBrewer
 * darcula
 * dark
-* darkula
 * defaultStyle
 * docco
 * dracula
@@ -45,6 +44,7 @@
 * github
 * gml
 * googlecode
+* gradientDark
 * grayscale
 * gruvboxDark
 * gruvboxLight
@@ -57,10 +57,14 @@
 * kimbieDark
 * kimbieLight
 * lightfair
+* lioshi
 * magula
 * monoBlue
 * monokaiSublime
 * monokai
+* nightOwl
+* nnfxDark
+* nnfx
 * nord
 * obsidian
 * ocean
@@ -77,6 +81,7 @@
 * shadesOfPurple
 * solarizedDark
 * solarizedLight
+* srcery
 * sunburst
 * tomorrowNightBlue
 * tomorrowNightBright
