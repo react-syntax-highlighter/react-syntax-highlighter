@@ -9,7 +9,7 @@
     "@babel/runtime": "^7.3.1",
     "highlight.js": "~9.13.0",
     "lowlight": "~1.11.0",
-    "prismjs": "^1.16.0",
+    "prismjs": "^1.20.0",
     "refractor": "^3.0.0"
   },
   "jest": {
