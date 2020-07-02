@@ -94,14 +94,12 @@ function createLineElement({
   lineNumberStyle,
   largestLineNumber,
   showInlineLineNumbers,
-  lineProps,
+  lineProps = {},
   className = []
 }) {
   const properties =
-    (typeof lineProps === 'function' ? lineProps(lineNumber) : lineProps) || {};
-  properties.className = properties.className
-    ? className.concat(properties.className)
-    : className;
+    typeof lineProps === 'function' ? lineProps(lineNumber) : lineProps;
+  properties['className'] = className;
 
   if (lineNumber && showInlineLineNumbers) {
     const inlineLineNumberStyle = assembleLineNumberStyles(
