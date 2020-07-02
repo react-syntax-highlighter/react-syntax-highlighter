@@ -31,7 +31,7 @@
     "babel-plugin-transform-dynamic-import": "^2.1.0",
     "codecov": "^3.2.0",
     "css": "^2.2.1",
-    "css-loader": "^0.23.1",
+    "css-loader": "^3.6.0",
     "husky": "^1.1.4",
     "jest": "^26.1.0",
     "lint-staged": "^8.0.5",
