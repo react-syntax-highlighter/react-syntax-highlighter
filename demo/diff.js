@@ -25,9 +25,11 @@ function DiffHighlight() {
   };
 
   return (
-    <div>
-      <h1 style={h1Style}>React SyntaxHighlighter</h1>
+    <main>
+      <h1>React Syntax Highlighter Demo</h1>
+
       <ExamplesLinks />
+
       <div style={{ paddingTop: 20, display: 'flex' }}>
         <div style={{ flex: 1, width: '100%', flexDirection: 'column' }}>
           <SyntaxHighlighter
@@ -105,7 +107,7 @@ render(<DiffHighlight />, document.getElementById('app'));
           </SyntaxHighlighter>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
 

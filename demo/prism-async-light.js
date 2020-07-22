@@ -81,16 +81,18 @@ function createElement({ node, style, useInlineStyles, key }) {
     };
 
     return (
-      <div>
-        <h1 style={h1Style}>React Syntax Highlighter Prism Async Light</h1>
+      <main>
+        <h1>React Syntax Highlighter Demo</h1>
+
         <ExamplesLinks />
+
         {/* <h2 style={h2}>Change Style</h2>
         <select
           value={this.state.selected}
           onChange={(e) => this.setState({style: require(`../styles/prism/${e.target.value}`).default, selected: e.target.value})}
         >
           {availableStyles.map(s => <option key={s} value={s}>{s}</option>)}
-        </select> 
+        </select>
         <h2 style={h2}>Change Language</h2>
         <select
           value={this.state.language}
@@ -134,7 +136,7 @@ function createElement({ node, style, useInlineStyles, key }) {
             </SyntaxHighlighter>
           </div>
         </div>
-      </div>
+      </main>
     );
   }
 }

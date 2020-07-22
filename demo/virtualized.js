@@ -295,19 +295,12 @@ function createElement({ node, style, useInlineStyles, key }) {
     };
   }
   render() {
-    const h1Style = {
-      fontSize: 42,
-      color: 'aliceblue'
-    };
-    const h2 = {
-      fontSize: 24,
-      color: 'aliceblue'
-    };
-
     return (
       <div style={{ height: '100vh' }}>
-        <h1 style={h1Style}>React Syntax Highlighter Virtualized</h1>
+        <h1>React Syntax Highlighter Demo</h1>
+
         <ExamplesLinks />
+
         <SyntaxHighlighter
           customStyle={{ height: '100vh' }}
           style={this.state.style}

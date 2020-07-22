@@ -126,7 +126,7 @@ function createElement({ node, style, useInlineStyles, key }) {
   }
   render() {
     return (
-      <div>
+      <main>
         <h1>React Syntax Highlighter Demo</h1>
 
         <ExamplesLinks />
@@ -158,6 +158,7 @@ function createElement({ node, style, useInlineStyles, key }) {
             id="showLineNumbers"
           />
         </div>
+
         <div className="example-container">
           <textarea
             style={{ flex: 1, marginTop: 11 }}
@@ -182,7 +183,7 @@ function createElement({ node, style, useInlineStyles, key }) {
             </SyntaxHighlighter>
           </div>
         </div>
-      </div>
+      </main>
     );
   }
 }
