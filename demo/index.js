@@ -125,20 +125,13 @@ function createElement({ node, style, useInlineStyles, key }) {
     };
   }
   render() {
-    const h1Style = {
-      fontSize: 42,
-      color: 'aliceblue'
-    };
-    const h2 = {
-      fontSize: 24,
-      color: 'aliceblue'
-    };
-
     return (
       <div>
-        <h1 style={h1Style}>React Syntax Highlighter</h1>
+        <h1>React Syntax Highlighter Demo</h1>
+
         <ExamplesLinks />
-        <h2 style={h2}>Change Style</h2>
+
+        <h2>Change Style</h2>
         <select
           value={this.state.selected}
           onChange={e =>
@@ -154,7 +147,7 @@ function createElement({ node, style, useInlineStyles, key }) {
             </option>
           ))}
         </select>
-        <div style={{ paddingTop: '10px', fontSize: 16, color: 'aliceblue' }}>
+        <div>
           <label htmlFor="showLineNumbers">Show Line Numbers:</label>
           <input
             type="checkbox"
@@ -165,7 +158,7 @@ function createElement({ node, style, useInlineStyles, key }) {
             id="showLineNumbers"
           />
         </div>
-        <div style={{ paddingTop: 20, display: 'flex' }}>
+        <div className="example-container">
           <textarea
             style={{ flex: 1, marginTop: 11 }}
             rows={40}
