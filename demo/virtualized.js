@@ -305,7 +305,7 @@ function createElement({ node, style, useInlineStyles, key }) {
 
         <main>
           <aside className="options__container">
-            {/* <div className="options__option options__option--line-numbers">
+            <div className="options__option options__option--line-numbers">
               <label htmlFor="showLineNumbers" className="option__label">
                 <input
                   type="checkbox"
@@ -321,7 +321,7 @@ function createElement({ node, style, useInlineStyles, key }) {
 
                 <span className="label__text">Show line numbers</span>
               </label>
-            </div> */}
+            </div>
 
             <div className="options__option options__option--theme">
               <select
@@ -349,6 +349,7 @@ function createElement({ node, style, useInlineStyles, key }) {
               language={this.state.language}
               style={this.state.style}
               showLineNumbers={this.state.showLineNumbers}
+              showInlineLineNumbers={true}
               renderer={virtualizedRenderer({
                 rowHeight: 20
               })}
