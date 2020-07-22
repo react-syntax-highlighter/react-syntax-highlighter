@@ -22,6 +22,17 @@ h1 {
 h2 {
 }
 
+/* http://code.iamkate.com/html-and-css/fixing-browsers-broken-monospace-font-handling/ */
+pre,
+code,
+textarea,
+kbd,
+samp,
+tt {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
 /* nav ========================= */
 
 .demo-nav__ul {
