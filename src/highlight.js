@@ -265,9 +265,14 @@ function defaultRenderer({ rows, stylesheet, useInlineStyles }) {
   );
 }
 
+function checkForListedLanguage(astGenerator, language) {
+  const langs = astGenerator.listLanguages();
+  return langs.indexOf(language) !== -1;
+}
+
 function getCodeTree({ astGenerator, language, code, defaultCodeValue }) {
-  if (astGenerator.getLanguage) {
-    const hasLanguage = language && astGenerator.getLanguage(language);
+  if (astGenerator.listLanguages) {
+    const hasLanguage = checkForListedLanguage(astGenerator, language);
     if (language === 'text') {
       return { value: defaultCodeValue, language: 'text' };
     } else if (hasLanguage) {
