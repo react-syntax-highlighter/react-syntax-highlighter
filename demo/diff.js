@@ -19,11 +19,6 @@ const ADDED = [1, 2];
 const REMOVED = [6];
 
 function DiffHighlight() {
-  const h1Style = {
-    fontSize: 42,
-    color: 'aliceblue'
-  };
-
   return (
     <main>
       <h1>React Syntax Highlighter Demo</h1>
@@ -48,7 +43,9 @@ function DiffHighlight() {
           >
             {CODE}
           </SyntaxHighlighter>
-          <h1 style={h1Style}>The code to make this happen</h1>
+
+          <h2>The code to make this happen</h2>
+
           <SyntaxHighlighter style={docco} wrapLines={true}>
             {`import React from 'react';
 import { render } from 'react-dom';

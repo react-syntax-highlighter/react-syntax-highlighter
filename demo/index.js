@@ -72,6 +72,7 @@ const availableStyles = [
   'xt256',
   'zenburn'
 ];
+
 class Component extends React.Component {
   constructor() {
     super();
@@ -131,58 +132,73 @@ function createElement({ node, style, useInlineStyles, key }) {
 
         <ExamplesLinks />
 
-        <h2>Change Style</h2>
-        <select
-          value={this.state.selected}
-          onChange={e =>
-            this.setState({
-              style: require(`../src/styles/hljs/${e.target.value}`).default,
-              selected: e.target.value
-            })
-          }
-        >
-          {availableStyles.map(s => (
-            <option key={s} value={s}>
-              {s}
-            </option>
-          ))}
-        </select>
-        <div>
-          <label htmlFor="showLineNumbers">Show Line Numbers:</label>
-          <input
-            type="checkbox"
-            checked={this.state.showLineNumbers}
-            onChange={() =>
-              this.setState({ showLineNumbers: !this.state.showLineNumbers })
-            }
-            id="showLineNumbers"
-          />
-        </div>
+        <section>
+          <aside className="options__container">
+            <div className="options__option options__option--line-numbers">
+              <label htmlFor="showLineNumbers" className="option__label">
+                <input
+                  type="checkbox"
+                  className="option__checkbox"
+                  checked={this.state.showLineNumbers}
+                  onChange={() =>
+                    this.setState({
+                      showLineNumbers: !this.state.showLineNumbers
+                    })
+                  }
+                  id="showLineNumbers"
+                />
 
-        <div className="example-container">
-          <textarea
-            style={{ flex: 1, marginTop: 11 }}
-            rows={40}
-            cols={100}
-            value={this.state.code}
-            onChange={e => this.setState({ code: e.target.value })}
-          />
-          <div style={{ flex: 1, width: '50%' }}>
-            <SyntaxHighlighter
-              style={this.state.style}
-              showLineNumbers={this.state.showLineNumbers}
-              wrapLines={true}
-              lineProps={lineNumber => ({
-                style: { display: 'block', cursor: 'pointer' },
-                onClick() {
-                  alert(`Line Number Clicked: ${lineNumber}`);
+                <span className="label__text">Show line numbers</span>
+              </label>
+            </div>
+
+            <div className="options__option options__option--theme">
+              <select
+                className="select"
+                value={this.state.selected}
+                onChange={e =>
+                  this.setState({
+                    style: require(`../src/styles/hljs/${e.target.value}`)
+                      .default,
+                    selected: e.target.value
+                  })
                 }
-              })}
-            >
-              {this.state.code}
-            </SyntaxHighlighter>
+              >
+                {availableStyles.map(s => (
+                  <option key={s} value={s}>
+                    {s}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </aside>
+
+          <div className="example-container">
+            <textarea
+              style={{ flex: 1, marginTop: 11 }}
+              rows={40}
+              cols={100}
+              value={this.state.code}
+              onChange={e => this.setState({ code: e.target.value })}
+            />
+            <div style={{ flex: 1, width: '50%' }}>
+              <SyntaxHighlighter
+                language={this.state.language}
+                style={this.state.style}
+                showLineNumbers={this.state.showLineNumbers}
+                wrapLines={true}
+                lineProps={lineNumber => ({
+                  style: { display: 'block', cursor: 'pointer' },
+                  onClick() {
+                    alert(`Line Number Clicked: ${lineNumber}`);
+                  }
+                })}
+              >
+                {this.state.code}
+              </SyntaxHighlighter>
+            </div>
           </div>
-        </div>
+        </section>
       </main>
     );
   }

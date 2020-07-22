@@ -71,71 +71,76 @@ function createElement({ node, style, useInlineStyles, key }) {
   }
 
   render() {
-    const h1Style = {
-      fontSize: 42,
-      color: 'aliceblue'
-    };
-    const h2 = {
-      fontSize: 24,
-      color: 'aliceblue'
-    };
-
     return (
       <main>
         <h1>React Syntax Highlighter Demo</h1>
 
         <ExamplesLinks />
 
-        {/* <h2 style={h2}>Change Style</h2>
-        <select
-          value={this.state.selected}
-          onChange={(e) => this.setState({style: require(`../styles/prism/${e.target.value}`).default, selected: e.target.value})}
-        >
-          {availableStyles.map(s => <option key={s} value={s}>{s}</option>)}
-        </select>
-        <h2 style={h2}>Change Language</h2>
-        <select
-          value={this.state.language}
-          onChange={(e) => this.setState({language: e.target.value})}
-        >
-          {availableLanguages.map(s => <option key={s} value={s}>{s}</option>)}
-        </select>*/}
-        <div style={{ paddingTop: '10px', fontSize: 16, color: 'aliceblue' }}>
-          <label htmlFor="showLineNumbers">Show Line Numbers:</label>
-          <input
-            type="checkbox"
-            checked={this.state.showLineNumbers}
-            onChange={() =>
-              this.setState({ showLineNumbers: !this.state.showLineNumbers })
-            }
-            id="showLineNumbers"
-          />
-        </div>
-        <div style={{ paddingTop: 20, display: 'flex' }}>
-          <textarea
-            style={{ flex: 1, marginTop: 11 }}
-            rows={40}
-            cols={100}
-            value={this.state.code}
-            onChange={e => this.setState({ code: e.target.value })}
-          />
-          <div style={{ flex: 1, width: '50%' }}>
-            <SyntaxHighlighter
-              style={this.state.style}
-              showLineNumbers={this.state.showLineNumbers}
-              wrapLines={true}
-              lineProps={lineNumber => ({
-                style: { display: 'block', cursor: 'pointer' },
-                onClick() {
-                  alert(`Line Number Clicked: ${lineNumber}`);
-                }
-              })}
-              language={this.state.language}
+        <section>
+          <aside className="options__container">
+            {/* <h2 style={h2}>Change Style</h2>
+            <select
+              className="select"
+              value={this.state.selected}
+              onChange={(e) => this.setState({style: require(`../styles/prism/${e.target.value}`).default, selected: e.target.value})}
             >
-              {this.state.code}
-            </SyntaxHighlighter>
+              {availableStyles.map(s => <option key={s} value={s}>{s}</option>)}
+            </select>
+            <h2 style={h2}>Change Language</h2>
+            <select
+              className="select"
+              value={this.state.language}
+              onChange={(e) => this.setState({language: e.target.value})}
+            >
+              {availableLanguages.map(s => <option key={s} value={s}>{s}</option>)}
+            </select>*/}
+
+            <div className="options__option options__option--line-numbers">
+              <label htmlFor="showLineNumbers" className="option__label">
+                <input
+                  type="checkbox"
+                  className="option__checkbox"
+                  checked={this.state.showLineNumbers}
+                  onChange={() =>
+                    this.setState({
+                      showLineNumbers: !this.state.showLineNumbers
+                    })
+                  }
+                  id="showLineNumbers"
+                />
+
+                <span className="label__text">Show line numbers</span>
+              </label>
+            </div>
+          </aside>
+
+          <div style={{ paddingTop: 20, display: 'flex' }}>
+            <textarea
+              style={{ flex: 1, marginTop: 11 }}
+              rows={40}
+              cols={100}
+              value={this.state.code}
+              onChange={e => this.setState({ code: e.target.value })}
+            />
+            <div style={{ flex: 1, width: '50%' }}>
+              <SyntaxHighlighter
+                style={this.state.style}
+                showLineNumbers={this.state.showLineNumbers}
+                wrapLines={true}
+                lineProps={lineNumber => ({
+                  style: { display: 'block', cursor: 'pointer' },
+                  onClick() {
+                    alert(`Line Number Clicked: ${lineNumber}`);
+                  }
+                })}
+                language={this.state.language}
+              >
+                {this.state.code}
+              </SyntaxHighlighter>
+            </div>
           </div>
-        </div>
+        </section>
       </main>
     );
   }
