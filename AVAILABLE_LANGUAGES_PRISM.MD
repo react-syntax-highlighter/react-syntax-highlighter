@@ -3,9 +3,11 @@
 * abnf
 * actionscript
 * ada
+* antlr4
 * apacheconf
 * apl
 * applescript
+* aql
 * arduino
 * arff
 * asciidoc
@@ -16,9 +18,11 @@
 * bash
 * basic
 * batch
+* bbcode
 * bison
 * bnf
 * brainfuck
+* brightscript
 * bro
 * c
 * cil
@@ -26,6 +30,7 @@
 * clojure
 * cmake
 * coffeescript
+* concurnas
 * cpp
 * crystal
 * csharp
@@ -34,6 +39,7 @@
 * css
 * d
 * dart
+* dax
 * diff
 * django
 * dnsZoneFile (dns-zone-file)
@@ -45,10 +51,16 @@
 * elm
 * erb
 * erlang
+* etlua
+* excelFormula (excel-formula)
+* factor
+* firestoreSecurityRules (firestore-security-rules)
 * flow
 * fortran
 * fsharp
+* ftl
 * gcode
+* gdscript
 * gedcom
 * gherkin
 * git
@@ -89,11 +101,13 @@
 * keyman
 * kotlin
 * latex
+* latte
 * less
 * lilypond
 * liquid
 * lisp
 * livescript
+* llvm
 * lolcode
 * lua
 * makefile
@@ -104,10 +118,12 @@
 * mel
 * mizar
 * monkey
+* moonscript
 * n1ql
 * n4js
 * nand2tetrisHdl (nand2tetris-hdl)
 * nasm
+* neon
 * nginx
 * nim
 * nix
@@ -126,6 +142,7 @@
 * php
 * phpdoc
 * plsql
+* powerquery
 * powershell
 * processing
 * prolog
@@ -136,6 +153,7 @@
 * pure
 * python
 * q
+* qml
 * qore
 * r
 * reason
@@ -144,6 +162,7 @@
 * rest
 * rip
 * roboconf
+* robotframework
 * ruby
 * rust
 * sas
@@ -154,8 +173,12 @@
 * shellSession (shell-session)
 * smalltalk
 * smarty
+* solidity
+* solutionFile (solution-file)
 * soy
+* sparql
 * splunkSpl (splunk-spl)
+* sqf
 * sql
 * stylus
 * swift
@@ -168,6 +191,7 @@
 * toml
 * tsx
 * tt2
+* turtle
 * twig
 * typescript
 * vala
@@ -183,3 +207,4 @@
 * xojo
 * xquery
 * yaml
+* zig
