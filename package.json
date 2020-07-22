@@ -9,8 +9,8 @@
     "@babel/runtime": "^7.3.1",
     "highlight.js": "^10.1.1",
     "lowlight": "^1.14.0",
-    "prismjs": "^1.16.0",
-    "refractor": "^2.10.1"
+    "prismjs": "^1.20.0",
+    "refractor": "^3.0.0"
   },
   "jest": {
     "coverageDirectory": "./coverage/",
