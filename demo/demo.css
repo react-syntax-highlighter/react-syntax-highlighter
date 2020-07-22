@@ -9,7 +9,7 @@ body {
   color: #484644;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin: 0;
-  padding: 1rem 2rem;
+  padding: 0;
 }
 
 h1 {
@@ -33,7 +33,37 @@ tt {
   font-size: 1em;
 }
 
+/* our wrapper ========================= */
+
+.demo__root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 1rem 2rem;
+}
+
+.demo__root--virtualized {
+  height: 100vh;
+}
+.demo__root--virtualized main {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+.demo__root--virtualized pre {
+  flex: 1 0 auto;
+  padding: 0 !important;
+}
+
+.ReactVirtualized__List {
+  padding: 1rem;
+}
+
 /* nav ========================= */
+
+.demo-nav {
+  padding-bottom: 1rem;
+}
 
 .demo-nav__ul {
   align-items: flex-start;
@@ -176,19 +206,19 @@ tt {
 
 .example__container {
   display: flex;
+  flex: 1 0 auto;
   margin-top: 1rem;
 }
 
 .example__container > * {
   flex: 1 0 auto;
-  font-size: 1.23rem;
   margin: 0;
   width: 50%;
 }
 
 .textarea__wrapper {
   display: flex;
-  padding: 1rem;
+  padding: 1rem 1rem 1rem 0;
 }
 
 textarea {
@@ -201,5 +231,4 @@ pre {
   border: 1px solid #bbb;
   box-shadow: 0 5px 50px rgba(30, 20, 10, 0.1);
   margin: 0;
-  padding: 1rem !important;
 }

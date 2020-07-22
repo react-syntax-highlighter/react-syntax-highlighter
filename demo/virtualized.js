@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import SyntaxHighlighter from '../src/index';
-import renderer from 'react-syntax-highlighter-virtualized-renderer';
+import virtualizedRenderer from 'react-syntax-highlighter-virtualized-renderer';
 import ExamplesLinks from './examples-links';
 
 const availableStyles = [
@@ -286,8 +286,9 @@ function createElement({ node, style, useInlineStyles, key }) {
 }
   `;
     this.state = {
-      selected: 'tomorrow-night-eighties',
-      style: require('../src/styles/hljs/tomorrow-night-eighties').default,
+      language: 'javascript',
+      selected: 'atelier-dune-dark',
+      style: require('../src/styles/hljs/atelier-dune-dark').default,
       code: initialCodeString,
       showLineNumbers: false,
       width: window.innerWidth,
@@ -296,23 +297,66 @@ function createElement({ node, style, useInlineStyles, key }) {
   }
   render() {
     return (
-      <div style={{ height: '100vh' }}>
-        <h1>React Syntax Highlighter Demo</h1>
+      <div className="demo__root demo__root--virtualized">
+        <header>
+          <h1>React Syntax Highlighter Demo</h1>
+          <ExamplesLinks />
+        </header>
 
-        <ExamplesLinks />
+        <main>
+          <aside className="options__container">
+            {/* <div className="options__option options__option--line-numbers">
+              <label htmlFor="showLineNumbers" className="option__label">
+                <input
+                  type="checkbox"
+                  className="option__checkbox"
+                  checked={this.state.showLineNumbers}
+                  onChange={() =>
+                    this.setState({
+                      showLineNumbers: !this.state.showLineNumbers
+                    })
+                  }
+                  id="showLineNumbers"
+                />
 
-        <SyntaxHighlighter
-          customStyle={{ height: '100vh' }}
-          style={this.state.style}
-          showLineNumbers={this.state.showLineNumbers}
-          renderer={renderer({
-            height: this.state.height,
-            width: this.state.width
-          })}
-          codeTagProps={{ style: { height: '100vh' } }}
-        >
-          {this.state.code}
-        </SyntaxHighlighter>
+                <span className="label__text">Show line numbers</span>
+              </label>
+            </div> */}
+
+            <div className="options__option options__option--theme">
+              <select
+                className="select"
+                value={this.state.selected}
+                onChange={e =>
+                  this.setState({
+                    style: require(`../src/styles/hljs/${e.target.value}`)
+                      .default,
+                    selected: e.target.value
+                  })
+                }
+              >
+                {availableStyles.map(s => (
+                  <option key={s} value={s}>
+                    {s}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </aside>
+
+          <article className="example__container">
+            <SyntaxHighlighter
+              language={this.state.language}
+              style={this.state.style}
+              showLineNumbers={this.state.showLineNumbers}
+              renderer={virtualizedRenderer({
+                rowHeight: 20
+              })}
+            >
+              {this.state.code}
+            </SyntaxHighlighter>
+          </article>
+        </main>
       </div>
     );
   }
