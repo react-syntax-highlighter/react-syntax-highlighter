@@ -72,12 +72,13 @@ function createElement({ node, style, useInlineStyles, key }) {
 
   render() {
     return (
-      <main>
-        <h1>React Syntax Highlighter Demo</h1>
+      <div className="demo__root demo__root--prism-async-light">
+        <header>
+          <h1>React Syntax Highlighter Demo</h1>
+          <ExamplesLinks />
+        </header>
 
-        <ExamplesLinks />
-
-        <section>
+        <main>
           <aside className="options__container">
             {/* <h2 style={h2}>Change Style</h2>
             <select
@@ -140,8 +141,8 @@ function createElement({ node, style, useInlineStyles, key }) {
               </SyntaxHighlighter>
             </div>
           </div>
-        </section>
-      </main>
+        </main>
+      </div>
     );
   }
 }

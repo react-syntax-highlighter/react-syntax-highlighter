@@ -128,12 +128,13 @@ function createElement({ node, style, useInlineStyles, key }) {
   }
   render() {
     return (
-      <main>
-        <h1>React Syntax Highlighter Demo</h1>
+      <div className="demo__root demo__root--default">
+        <header>
+          <h1>React Syntax Highlighter Demo</h1>
+          <ExamplesLinks />
+        </header>
 
-        <ExamplesLinks />
-
-        <section>
+        <main>
           <aside className="options__container">
             <div className="options__option options__option--line-numbers">
               <label htmlFor="showLineNumbers" className="option__label">
@@ -198,8 +199,8 @@ function createElement({ node, style, useInlineStyles, key }) {
               {this.state.code}
             </SyntaxHighlighter>
           </article>
-        </section>
-      </main>
+        </main>
+      </div>
     );
   }
 }
