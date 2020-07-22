@@ -1,3 +1,9 @@
+/* general ========================= */
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #f6f5f4;
   color: #484644;
@@ -16,8 +22,7 @@ h1 {
 h2 {
 }
 
-.demo-nav {
-}
+/* nav ========================= */
 
 .demo-nav__ul {
   align-items: flex-start;
@@ -56,10 +61,7 @@ h2 {
   text-decoration: none;
 }
 
-.example-container {
-  display: flex;
-  padding-top: 20px;
-}
+/* options ========================= */
 
 .options__container {
   display: flex;
@@ -86,10 +88,6 @@ h2 {
   margin-right: 0.5rem;
   vertical-align: top;
 }
-
-/* .option__checkbox:checked ~ .label__text {
-  font-weight: bold;
-} */
 
 /* class applies to select element itself, not a wrapper element */
 .select {
@@ -161,4 +159,36 @@ h2 {
 .select:disabled:hover,
 .select[aria-disabled='true'] {
   border-color: #aaa;
+}
+
+/* examples ========================= */
+
+.example__container {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.example__container > * {
+  flex: 1 0 auto;
+  font-size: 1.23rem;
+  margin: 0;
+  width: 50%;
+}
+
+.textarea__wrapper {
+  display: flex;
+  padding: 1rem;
+}
+
+textarea {
+  flex: 1 0 auto;
+  padding: 1rem;
+  resize: vertical;
+}
+
+pre {
+  border: 1px solid #bbb;
+  box-shadow: 0 5px 50px rgba(30, 20, 10, 0.1);
+  margin: 0;
+  padding: 1rem !important;
 }

@@ -174,31 +174,30 @@ function createElement({ node, style, useInlineStyles, key }) {
             </div>
           </aside>
 
-          <div className="example-container">
-            <textarea
-              style={{ flex: 1, marginTop: 11 }}
-              rows={40}
-              cols={100}
-              value={this.state.code}
-              onChange={e => this.setState({ code: e.target.value })}
-            />
-            <div style={{ flex: 1, width: '50%' }}>
-              <SyntaxHighlighter
-                language={this.state.language}
-                style={this.state.style}
-                showLineNumbers={this.state.showLineNumbers}
-                wrapLines={true}
-                lineProps={lineNumber => ({
-                  style: { display: 'block', cursor: 'pointer' },
-                  onClick() {
-                    alert(`Line Number Clicked: ${lineNumber}`);
-                  }
-                })}
-              >
-                {this.state.code}
-              </SyntaxHighlighter>
+          <article className="example__container">
+            <div className="textarea__wrapper">
+              <textarea
+                rows={40}
+                value={this.state.code}
+                onChange={e => this.setState({ code: e.target.value })}
+              />
             </div>
-          </div>
+
+            <SyntaxHighlighter
+              language={this.state.language}
+              style={this.state.style}
+              showLineNumbers={this.state.showLineNumbers}
+              wrapLines={true}
+              lineProps={lineNumber => ({
+                style: { display: 'block', cursor: 'pointer' },
+                onClick() {
+                  alert(`Line Number Clicked: ${lineNumber}`);
+                }
+              })}
+            >
+              {this.state.code}
+            </SyntaxHighlighter>
+          </article>
         </section>
       </main>
     );
