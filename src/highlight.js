@@ -270,8 +270,17 @@ function checkForListedLanguage(astGenerator, language) {
   return langs.indexOf(language) !== -1;
 }
 
+// only highlight.js has the highlightAuto method
+function isHighlightJs(astGenerator) {
+  return typeof astGenerator.highlightAuto !== 'undefined';
+}
+
 function getCodeTree({ astGenerator, language, code, defaultCodeValue }) {
-  if (astGenerator.listLanguages) {
+  // figure out whether we're using lowlight/highlight or refractor/prism
+  // then attempt highlighting accordingly
+
+  // lowlight/highlight?
+  if (isHighlightJs(astGenerator)) {
     const hasLanguage = checkForListedLanguage(astGenerator, language);
     if (language === 'text') {
       return { value: defaultCodeValue, language: 'text' };
@@ -281,6 +290,8 @@ function getCodeTree({ astGenerator, language, code, defaultCodeValue }) {
       return astGenerator.highlightAuto(code);
     }
   }
+
+  // must be refractor/prism, then
   try {
     return language && language !== 'text'
       ? { value: astGenerator.highlight(code, language) }
