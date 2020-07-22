@@ -119,8 +119,9 @@ function createElement({ node, style, useInlineStyles, key }) {
 }
   `;
     this.state = {
-      selected: 'tomorrow-night-eighties',
-      style: require('../src/styles/hljs/tomorrow-night-eighties').default,
+      language: 'javascript',
+      selected: 'atelier-dune-dark',
+      style: require('../src/styles/hljs/atelier-dune-dark').default,
       code: initialCodeString,
       showLineNumbers: false
     };
