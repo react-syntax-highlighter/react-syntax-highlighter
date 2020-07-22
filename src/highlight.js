@@ -1,5 +1,6 @@
 import React from 'react';
 import createElement from './create-element';
+import checkForListedLanguage from './checkForListedLanguage';
 
 const newLineRegex = /\n/g;
 function getNewLines(str) {
@@ -263,11 +264,6 @@ function defaultRenderer({ rows, stylesheet, useInlineStyles }) {
       key: `code-segement${i}`
     })
   );
-}
-
-function checkForListedLanguage(astGenerator, language) {
-  const langs = astGenerator.listLanguages();
-  return langs.indexOf(language) !== -1;
 }
 
 // only highlight.js has the highlightAuto method
