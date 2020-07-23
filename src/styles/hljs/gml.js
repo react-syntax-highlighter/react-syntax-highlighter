@@ -6,7 +6,7 @@ export default {
         "background": "#222222",
         "color": "#C0C0C0"
     },
-    "hljs-keywords": {
+    "hljs-keyword": {
         "color": "#FFB871",
         "fontWeight": "bold"
     },

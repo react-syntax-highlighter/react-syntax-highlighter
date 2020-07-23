@@ -4,7 +4,7 @@ export default {
         "overflowX": "auto",
         "color": "#eaeaea",
         "background": "#000",
-        "padding": "0.5"
+        "padding": "0.5em"
     },
     "hljs-subst": {
         "color": "#eaeaea"

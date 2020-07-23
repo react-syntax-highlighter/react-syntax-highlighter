@@ -34,7 +34,7 @@ const availableStyles = [
   'codepen-embed',
   'color-brewer',
   'dark',
-  'darkula',
+  'darcula',
   'defaultStyle',
   'docco',
   'far',

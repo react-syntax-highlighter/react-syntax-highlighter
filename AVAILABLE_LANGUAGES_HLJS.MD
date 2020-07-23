@@ -21,6 +21,8 @@
 * basic
 * bnf
 * brainfuck
+* cLike (c-like)
+* c
 * cal
 * capnproto
 * ceylon
@@ -34,7 +36,7 @@
 * cpp
 * crmsh
 * crystal
-* cs
+* csharp
 * csp
 * css
 * d
@@ -89,6 +91,7 @@
 * julia
 * kotlin
 * lasso
+* latex
 * ldif
 * leaf
 * less
@@ -112,7 +115,7 @@
 * moonscript
 * n1ql
 * nginx
-* nimrod
+* nim
 * nix
 * nsis
 * objectivec
@@ -123,6 +126,7 @@
 * perl
 * pf
 * pgsql
+* phpTemplate (php-template)
 * php
 * plaintext
 * pony
@@ -134,6 +138,7 @@
 * protobuf
 * puppet
 * purebasic
+* pythonRepl (python-repl)
 * python
 * q
 * qml
@@ -166,7 +171,6 @@
 * taggerscript
 * tap
 * tcl
-* tex
 * thrift
 * tp
 * twig

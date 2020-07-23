@@ -2,8 +2,7 @@ export default {
     "hljs": {
         "display": "block",
         "overflowX": "auto",
-        "lineHeight": "1.45",
-        "padding": "2rem",
+        "padding": "0.5em",
         "background": "#2d2b57",
         "fontWeight": "normal",
         "color": "#e3dfff"
