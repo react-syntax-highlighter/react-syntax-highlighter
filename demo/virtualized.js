@@ -305,24 +305,6 @@ function createElement({ node, style, useInlineStyles, key }) {
 
         <main>
           <aside className="options__container">
-            <div className="options__option options__option--line-numbers">
-              <label htmlFor="showLineNumbers" className="option__label">
-                <input
-                  type="checkbox"
-                  className="option__checkbox"
-                  checked={this.state.showLineNumbers}
-                  onChange={() =>
-                    this.setState({
-                      showLineNumbers: !this.state.showLineNumbers
-                    })
-                  }
-                  id="showLineNumbers"
-                />
-
-                <span className="label__text">Show line numbers</span>
-              </label>
-            </div>
-
             <div className="options__option options__option--theme">
               <select
                 className="select"
@@ -341,6 +323,24 @@ function createElement({ node, style, useInlineStyles, key }) {
                   </option>
                 ))}
               </select>
+            </div>
+
+            <div className="options__option options__option--line-numbers">
+              <label htmlFor="showLineNumbers" className="option__label">
+                <input
+                  type="checkbox"
+                  className="option__checkbox"
+                  checked={this.state.showLineNumbers}
+                  onChange={() =>
+                    this.setState({
+                      showLineNumbers: !this.state.showLineNumbers
+                    })
+                  }
+                  id="showLineNumbers"
+                />
+
+                <span className="label__text">Show line numbers</span>
+              </label>
             </div>
           </aside>
 
