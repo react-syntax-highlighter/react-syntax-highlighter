@@ -472,7 +472,8 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       className="token"
       style={
         Object {
-          "color": "#999",
+          "background": "hsla(0, 0%, 100%, .5)",
+          "color": "#9a6e3a",
         }
       }
     >
@@ -749,7 +750,8 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       className="token"
       style={
         Object {
-          "color": "#999",
+          "background": "hsla(0, 0%, 100%, .5)",
+          "color": "#9a6e3a",
         }
       }
     >
