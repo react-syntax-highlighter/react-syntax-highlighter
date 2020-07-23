@@ -34,7 +34,6 @@ const availableStyles = [
   'color-brewer',
   'dark',
   'darcula',
-  'defaultStyle',
   'docco',
   'far',
   'foundation',
