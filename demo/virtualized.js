@@ -73,6 +73,7 @@ const availableStyles = [
   'xt256',
   'zenburn'
 ];
+
 class Component extends React.Component {
   constructor() {
     super();
