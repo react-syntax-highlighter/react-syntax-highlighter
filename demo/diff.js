@@ -48,7 +48,11 @@ function DiffHighlight() {
 
             <h2>The code to make this happen</h2>
 
-            <SyntaxHighlighter style={docco} wrapLines={true}>
+            <SyntaxHighlighter
+              style={docco}
+              wrapLines={true}
+              language="javascript"
+            >
               {`import React from 'react';
   import { render } from 'react-dom';
   import SyntaxHighlighter from '../';
