@@ -72,6 +72,203 @@ const availableStyles = [
   'zenburn'
 ];
 
+const availableLanguages = [
+  '1c',
+  'abnf',
+  'accesslog',
+  'actionscript',
+  'ada',
+  'angelscript',
+  'apache',
+  'applescript',
+  'arcade',
+  'arduino',
+  'armasm',
+  'asciidoc',
+  'aspectj',
+  'autohotkey',
+  'autoit',
+  'avrasm',
+  'awk',
+  'axapta',
+  'bash',
+  'basic',
+  'bnf',
+  'brainfuck',
+  'c',
+  'c-like',
+  'cal',
+  'capnproto',
+  'ceylon',
+  'clean',
+  'clojure',
+  'clojure-repl',
+  'cmake',
+  'coffeescript',
+  'coq',
+  'cos',
+  'cpp',
+  'crmsh',
+  'crystal',
+  'cs',
+  'csharp',
+  'csp',
+  'css',
+  'd',
+  'dart',
+  'delphi',
+  'diff',
+  'django',
+  'dns',
+  'dockerfile',
+  'dos',
+  'dsconfig',
+  'dts',
+  'dust',
+  'ebnf',
+  'elixir',
+  'elm',
+  'erb',
+  'erlang',
+  'erlang-repl',
+  'excel',
+  'fix',
+  'flix',
+  'fortran',
+  'fsharp',
+  'gams',
+  'gauss',
+  'gcode',
+  'gherkin',
+  'glsl',
+  'gml',
+  'go',
+  'golo',
+  'gradle',
+  'groovy',
+  'haml',
+  'handlebars',
+  'haskell',
+  'haxe',
+  'hsp',
+  'htmlbars',
+  'http',
+  'hy',
+  'index',
+  'inform7',
+  'ini',
+  'irpf90',
+  'isbl',
+  'java',
+  'javascript',
+  'jboss-cli',
+  'json',
+  'julia',
+  'julia-repl',
+  'kotlin',
+  'lasso',
+  'latex',
+  'ldif',
+  'leaf',
+  'less',
+  'lisp',
+  'livecodeserver',
+  'livescript',
+  'llvm',
+  'lsl',
+  'lua',
+  'makefile',
+  'markdown',
+  'mathematica',
+  'matlab',
+  'maxima',
+  'mel',
+  'mercury',
+  'mipsasm',
+  'mizar',
+  'mojolicious',
+  'monkey',
+  'moonscript',
+  'n1ql',
+  'nginx',
+  'nim',
+  'nimrod',
+  'nix',
+  'nsis',
+  'objectivec',
+  'ocaml',
+  'openscad',
+  'oxygene',
+  'parser3',
+  'perl',
+  'pf',
+  'pgsql',
+  'php',
+  'php-template',
+  'plaintext',
+  'pony',
+  'powershell',
+  'processing',
+  'profile',
+  'prolog',
+  'properties',
+  'protobuf',
+  'puppet',
+  'purebasic',
+  'python',
+  'python-repl',
+  'q',
+  'qml',
+  'r',
+  'reasonml',
+  'rib',
+  'roboconf',
+  'routeros',
+  'rsl',
+  'ruby',
+  'ruleslanguage',
+  'rust',
+  'sas',
+  'scala',
+  'scheme',
+  'scilab',
+  'scss',
+  'shell',
+  'smali',
+  'smalltalk',
+  'sml',
+  'sqf',
+  'sql',
+  'stan',
+  'stata',
+  'step21',
+  'stylus',
+  'subunit',
+  'supported-languages',
+  'swift',
+  'taggerscript',
+  'tap',
+  'tcl',
+  'tex',
+  'thrift',
+  'tp',
+  'twig',
+  'typescript',
+  'vala',
+  'vbnet',
+  'vbscript',
+  'vbscript-html',
+  'verilog',
+  'vhdl',
+  'vim',
+  'x86asm',
+  'xl',
+  'xml',
+  'xquery',
+  'yaml',
+  'zephir'
+];
+
 class Component extends React.Component {
   constructor() {
     super();
@@ -135,22 +332,18 @@ function createElement({ node, style, useInlineStyles, key }) {
 
         <main>
           <aside className="options__container">
-            <div className="options__option options__option--line-numbers">
-              <label htmlFor="showLineNumbers" className="option__label">
-                <input
-                  type="checkbox"
-                  className="option__checkbox"
-                  checked={this.state.showLineNumbers}
-                  onChange={() =>
-                    this.setState({
-                      showLineNumbers: !this.state.showLineNumbers
-                    })
-                  }
-                  id="showLineNumbers"
-                />
-
-                <span className="label__text">Show line numbers</span>
-              </label>
+            <div className="options__option options__option--language">
+              <select
+                className="select"
+                value={this.state.language}
+                onChange={e => this.setState({ language: e.target.value })}
+              >
+                {availableLanguages.map(s => (
+                  <option key={s} value={s}>
+                    {s}
+                  </option>
+                ))}
+              </select>
             </div>
 
             <div className="options__option options__option--theme">
@@ -171,6 +364,24 @@ function createElement({ node, style, useInlineStyles, key }) {
                   </option>
                 ))}
               </select>
+            </div>
+
+            <div className="options__option options__option--line-numbers">
+              <label htmlFor="showLineNumbers" className="option__label">
+                <input
+                  type="checkbox"
+                  className="option__checkbox"
+                  checked={this.state.showLineNumbers}
+                  onChange={() =>
+                    this.setState({
+                      showLineNumbers: !this.state.showLineNumbers
+                    })
+                  }
+                  id="showLineNumbers"
+                />
+
+                <span className="label__text">Show line numbers</span>
+              </label>
             </div>
           </aside>
 
