@@ -233,5 +233,5 @@ textarea {
 pre {
   border: 1px solid #bbb;
   box-shadow: 0 5px 50px rgba(30, 20, 10, 0.1);
-  margin: 0 !important;
+  margin: 0 !important; /* some themes try to override this */
 }
