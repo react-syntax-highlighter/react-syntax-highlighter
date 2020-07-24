@@ -1,62 +1,41 @@
 import React from 'react';
 import { render } from 'react-dom';
-import SyntaxHighlighter from '../src/index';
+import SyntaxHighlighter from '../src/prism';
 import ExamplesLinks from './examples-links';
-import hljsStyles from './styles/hljs';
-import hljsLanguages from '../src/languages/hljs/supported-languages';
+import prismStyles from './styles/prism';
+import prismLanguages from '../src/languages/prism/supported-languages';
 
-const availableStyles = hljsStyles;
-const availableLanguages = hljsLanguages;
+const availableStyles = prismStyles;
+const availableLanguages = prismLanguages;
 
 class Component extends React.Component {
   constructor() {
     super();
-    const initialCodeString = `function createStyleObject(classNames, style) {
-  return classNames.reduce((styleObject, className) => {
-    return {...styleObject, ...style[className]};
-  }, {});
+    const initialCodeString = `import React from "react";
+import uniquePropHOC from "./lib/unique-prop-hoc";
+
+class Expire extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { component: props.children }
+    }
+    componentDidMount() {
+        setTimeout(() => {
+            this.setState({
+                component: null
+            });
+        }, this.props.time || this.props.seconds * 1000);
+    }
+    render() {
+        return this.state.component;
+    }
 }
 
-function createClassNameString(classNames) {
-  return classNames.join(' ');
-}
-
-function createChildren(style, useInlineStyles) {
-  let childrenCount = 0;
-  return children => {
-    childrenCount += 1;
-    return children.map((child, i) => createElement({
-      node: child,
-      style,
-      useInlineStyles,
-      key:\`code-segment-$\{childrenCount}-$\{i}\`
-    }));
-  }
-}
-
-function createElement({ node, style, useInlineStyles, key }) {
-  const { properties, type, tagName, value } = node;
-  if (type === "text") {
-    return value;
-  } else if (tagName) {
-    const TagName = tagName;
-    const childrenCreator = createChildren(style, useInlineStyles);
-    const props = (
-      useInlineStyles
-      ?
-      { style: createStyleObject(properties.className, style) }
-      :
-      { className: createClassNameString(properties.className) }
-    );
-    const children = childrenCreator(node.children);
-    return <TagName key={key} {...props}>{children}</TagName>;
-  }
-}
-  `;
+export default uniquePropHOC(["time", "seconds"])(Expire);`;
     this.state = {
       language: 'javascript',
       selectedStyle: availableStyles[0],
-      style: require(`../src/styles/hljs/${availableStyles[0]}`).default,
+      style: require(`../src/styles/prism/${availableStyles[0]}`).default,
       code: initialCodeString,
       showLineNumbers: false
     };
@@ -91,7 +70,7 @@ function createElement({ node, style, useInlineStyles, key }) {
                 value={this.state.selectedStyle}
                 onChange={e =>
                   this.setState({
-                    style: require(`../src/styles/hljs/${e.target.value}`)
+                    style: require(`../src/styles/prism/${e.target.value}`)
                       .default,
                     selectedStyle: e.target.value
                   })
@@ -127,6 +106,7 @@ function createElement({ node, style, useInlineStyles, key }) {
           <article className="example__container">
             <div className="textarea__wrapper">
               <textarea
+                style={{ marginTop: 11 }}
                 rows={40}
                 value={this.state.code}
                 onChange={e => this.setState({ code: e.target.value })}
@@ -134,16 +114,9 @@ function createElement({ node, style, useInlineStyles, key }) {
             </div>
 
             <SyntaxHighlighter
-              language={this.state.language}
               style={this.state.style}
               showLineNumbers={this.state.showLineNumbers}
-              wrapLines={true}
-              lineProps={lineNumber => ({
-                style: { display: 'block', cursor: 'pointer' },
-                onClick() {
-                  alert(`Line Number Clicked: ${lineNumber}`);
-                }
-              })}
+              language={this.state.language}
             >
               {this.state.code}
             </SyntaxHighlighter>

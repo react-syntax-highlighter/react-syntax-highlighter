@@ -3,8 +3,12 @@ import React from 'react';
 const ExamplesLinks = () => {
   const demos = [
     {
-      label: 'Default',
+      label: 'Highlight.js (default)',
       path: '/demo/'
+    },
+    {
+      label: 'Prism.js',
+      path: '/demo/prism.html'
     },
     {
       label: 'Diff',

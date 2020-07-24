@@ -3,76 +3,9 @@ import { render } from 'react-dom';
 import SyntaxHighlighter from '../src/index';
 import virtualizedRenderer from 'react-syntax-highlighter-virtualized-renderer';
 import ExamplesLinks from './examples-links';
+import hljsStyles from './styles/hljs';
 
-const availableStyles = [
-  'agate',
-  'androidstudio',
-  'arduino-light',
-  'arta',
-  'ascetic',
-  'atelier-cave-dark',
-  'atelier-cave-light',
-  'atelier-dune-dark',
-  'atelier-dune-light',
-  'atelier-estuary-dark',
-  'atelier-estuary-light',
-  'atelier-forest-dark',
-  'atelier-forest-light',
-  'atelier-heath-dark',
-  'atelier-heath-light',
-  'atelier-lakeside-dark',
-  'atelier-lakeside-light',
-  'atelier-plateau-dark',
-  'atelier-plateau-light',
-  'atelier-savanna-dark',
-  'atelier-savanna-light',
-  'atelier-seaside-dark',
-  'atelier-seaside-light',
-  'atelier-sulphurpool-dark',
-  'atelier-sulphurpool-light',
-  'brown-paper',
-  'codepen-embed',
-  'color-brewer',
-  'dark',
-  'darcula',
-  'defaultStyle',
-  'docco',
-  'far',
-  'foundation',
-  'github-gist',
-  'github',
-  'googlecode',
-  'grayscale',
-  'hopscotch',
-  'hybrid',
-  'idea',
-  'ir-black',
-  'kimbie.dark',
-  'kimbie.light',
-  'magula',
-  'mono-blue',
-  'monokai-sublime',
-  'monokai',
-  'obsidian',
-  'paraiso-dark',
-  'paraiso-light',
-  'pojoaque',
-  'railscasts',
-  'rainbow',
-  'school-book',
-  'solarized-dark',
-  'solarized-light',
-  'sunburst',
-  'tomorrow-night-blue',
-  'tomorrow-night-bright',
-  'tomorrow-night-eighties',
-  'tomorrow-night',
-  'tomorrow',
-  'vs',
-  'xcode',
-  'xt256',
-  'zenburn'
-];
+const availableStyles = hljsStyles;
 
 class Component extends React.Component {
   constructor() {
@@ -287,13 +220,10 @@ function createElement({ node, style, useInlineStyles, key }) {
 }
   `;
     this.state = {
-      language: 'javascript',
-      selected: 'atelier-dune-dark',
-      style: require('../src/styles/hljs/atelier-dune-dark').default,
+      selectedStyle: availableStyles[0],
+      style: require(`../src/styles/hljs/${availableStyles[0]}`).default,
       code: initialCodeString,
-      showLineNumbers: false,
-      width: window.innerWidth,
-      height: window.innerHeight
+      showLineNumbers: false
     };
   }
   render() {
@@ -309,12 +239,12 @@ function createElement({ node, style, useInlineStyles, key }) {
             <div className="options__option options__option--theme">
               <select
                 className="select"
-                value={this.state.selected}
+                value={this.state.selectedStyle}
                 onChange={e =>
                   this.setState({
                     style: require(`../src/styles/hljs/${e.target.value}`)
                       .default,
-                    selected: e.target.value
+                    selectedStyle: e.target.value
                   })
                 }
               >
@@ -347,7 +277,7 @@ function createElement({ node, style, useInlineStyles, key }) {
 
           <article className="example__container">
             <SyntaxHighlighter
-              language={this.state.language}
+              language="javascript"
               style={this.state.style}
               showLineNumbers={this.state.showLineNumbers}
               showInlineLineNumbers={true}
