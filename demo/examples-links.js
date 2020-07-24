@@ -7,6 +7,10 @@ const ExamplesLinks = () => {
       path: '/demo/'
     },
     {
+      label: 'Prism.js',
+      path: '/demo/prism.html'
+    },
+    {
       label: 'Diff',
       path: '/demo/diff.html'
     },
