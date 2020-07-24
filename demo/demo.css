@@ -60,7 +60,7 @@ tt {
 /* nav ========================= */
 
 .demo-nav {
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 .demo-nav__ul {
@@ -105,11 +105,17 @@ tt {
 .options__container {
   display: flex;
   justify-content: flex-end;
+  padding-bottom: 1rem;
 }
 
 .options__option {
   display: flex;
   margin-left: 1rem;
+}
+
+.options__option--language {
+  margin-left: 0;
+  margin-right: auto;
 }
 
 .option__label {
@@ -205,7 +211,6 @@ tt {
 .example__container {
   display: flex;
   flex: 1 0 auto;
-  margin-top: 1rem;
 }
 
 .example__container > * {
@@ -228,5 +233,5 @@ textarea {
 pre {
   border: 1px solid #bbb;
   box-shadow: 0 5px 50px rgba(30, 20, 10, 0.1);
-  margin: 0;
+  margin: 0 !important;
 }
