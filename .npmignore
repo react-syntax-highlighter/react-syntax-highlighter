@@ -6,5 +6,5 @@ npm-debug.log
 __tests__
 coverage
 src
-circle.yml
+.circleci
 webpack.config.js

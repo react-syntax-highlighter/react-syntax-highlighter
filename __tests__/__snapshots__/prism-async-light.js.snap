@@ -11,6 +11,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       "background": "#f5f2f0",
       "color": "black",
       "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+      "fontSize": "1em",
       "hyphens": "none",
       "lineHeight": "1.5",
       "margin": ".5em 0",
@@ -37,6 +38,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
         "background": "none",
         "color": "black",
         "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+        "fontSize": "1em",
         "hyphens": "none",
         "lineHeight": "1.5",
         "msHyphens": "none",
@@ -84,6 +86,7 @@ exports[`SyntaxHighlighter should just render text if syntax is not registered 1
       "background": "#f5f2f0",
       "color": "black",
       "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+      "fontSize": "1em",
       "hyphens": "none",
       "lineHeight": "1.5",
       "margin": ".5em 0",
@@ -110,6 +113,7 @@ exports[`SyntaxHighlighter should just render text if syntax is not registered 1
         "background": "none",
         "color": "black",
         "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+        "fontSize": "1em",
         "hyphens": "none",
         "lineHeight": "1.5",
         "msHyphens": "none",
@@ -123,7 +127,11 @@ exports[`SyntaxHighlighter should just render text if syntax is not registered 1
       }
     }
   >
-    print('hello')
+    <span
+      style={Object {}}
+    >
+      print('hello')
+    </span>
   </code>
 </pre>
 `;
@@ -139,6 +147,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
       "background": "#f5f2f0",
       "color": "black",
       "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+      "fontSize": "1em",
       "hyphens": "none",
       "lineHeight": "1.5",
       "margin": ".5em 0",
@@ -165,6 +174,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
         "background": "none",
         "color": "black",
         "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+        "fontSize": "1em",
         "hyphens": "none",
         "lineHeight": "1.5",
         "msHyphens": "none",
@@ -178,14 +188,19 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
       }
     }
   >
-    
-             
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+                   
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "slategray",
@@ -194,47 +209,63 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
     >
       # Import the modules
     </span>
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+      
+    </span>
+    <span
+      className="token"
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      import
+    </span>
+    <span
+      style={Object {}}
+    >
+       sys
+
+    </span>
+    <span
+      style={Object {}}
+    >
+      
+    </span>
+    <span
+      className="token"
+      style={
+        Object {
+          "color": "#07a",
+        }
+      }
+    >
+      import
+    </span>
+    <span
+      style={Object {}}
+    >
+       random
+
+    </span>
     
 
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#07a",
-        }
-      }
+      style={Object {}}
     >
-      import
+      ans 
     </span>
-     sys
-
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
-      style={
-        Object {
-          "color": "#07a",
-        }
-      }
-    >
-      import
-    </span>
-     random
-
-ans 
-    <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -244,13 +275,13 @@ ans
     >
       =
     </span>
-     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#905",
@@ -259,15 +290,21 @@ ans
     >
       True
     </span>
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
     
 
-
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+      
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -276,13 +313,13 @@ ans
     >
       while
     </span>
-     ans
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       ans
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -291,14 +328,19 @@ ans
     >
       :
     </span>
-    
-    question 
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+          question 
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -308,13 +350,13 @@ ans
     >
       =
     </span>
-     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#690",
@@ -324,11 +366,7 @@ ans
       raw_input
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -338,11 +376,7 @@ ans
       (
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#690",
@@ -352,11 +386,7 @@ ans
       "Ask the magic 8 ball a question: (press enter to quit) "
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -365,15 +395,21 @@ ans
     >
       )
     </span>
-    
-    
-    answers 
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+      
+
+    </span>
+    
+
+    <span
+      style={Object {}}
+    >
+          answers 
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -383,13 +419,13 @@ ans
     >
       =
     </span>
-     random
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       random
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -398,13 +434,13 @@ ans
     >
       .
     </span>
-    randint
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+      randint
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -414,11 +450,7 @@ ans
       (
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#905",
@@ -428,11 +460,7 @@ ans
       1
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -442,11 +470,7 @@ ans
       ,
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#905",
@@ -456,11 +480,7 @@ ans
       8
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -469,15 +489,21 @@ ans
     >
       )
     </span>
-    
-    
-    
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+      
+
+    </span>
+    
+
+    <span
+      style={Object {}}
+    >
+          
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -486,13 +512,13 @@ ans
     >
       if
     </span>
-     question 
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       question 
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -502,13 +528,13 @@ ans
     >
       ==
     </span>
-     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#690",
@@ -518,11 +544,7 @@ ans
       ""
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -531,14 +553,19 @@ ans
     >
       :
     </span>
-    
-        sys
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+              sys
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -547,13 +574,13 @@ ans
     >
       .
     </span>
-    exit
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+      exit
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -563,11 +590,7 @@ ans
       (
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -576,15 +599,21 @@ ans
     >
       )
     </span>
-    
-    
-    
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+      
+
+    </span>
+    
+
+    <span
+      style={Object {}}
+    >
+          
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -593,13 +622,13 @@ ans
     >
       elif
     </span>
-     answers 
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       answers 
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -609,13 +638,13 @@ ans
     >
       ==
     </span>
-     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#905",
@@ -625,11 +654,7 @@ ans
       1
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -638,14 +663,19 @@ ans
     >
       :
     </span>
-    
-        
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+              
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -654,13 +684,13 @@ ans
     >
       print
     </span>
-     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#690",
@@ -669,15 +699,21 @@ ans
     >
       "It is certain"
     </span>
-    
-    
-    
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+      
+
+    </span>
+    
+
+    <span
+      style={Object {}}
+    >
+          
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -686,13 +722,13 @@ ans
     >
       elif
     </span>
-     answers 
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       answers 
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -702,13 +738,13 @@ ans
     >
       ==
     </span>
-     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#905",
@@ -718,11 +754,7 @@ ans
       2
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -731,14 +763,19 @@ ans
     >
       :
     </span>
-    
-        
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+              
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -747,13 +784,13 @@ ans
     >
       print
     </span>
-     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#690",
@@ -762,15 +799,21 @@ ans
     >
       "Outlook good"
     </span>
-    
-    
-    
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+      
+
+    </span>
+    
+
+    <span
+      style={Object {}}
+    >
+          
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -779,13 +822,13 @@ ans
     >
       elif
     </span>
-     answers 
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       answers 
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -795,13 +838,13 @@ ans
     >
       ==
     </span>
-     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#905",
@@ -811,11 +854,7 @@ ans
       3
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -824,14 +863,19 @@ ans
     >
       :
     </span>
-    
-        
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+              
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -840,13 +884,13 @@ ans
     >
       print
     </span>
-     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#690",
@@ -855,15 +899,21 @@ ans
     >
       "You may rely on it"
     </span>
-    
-    
-    
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+      
+
+    </span>
+    
+
+    <span
+      style={Object {}}
+    >
+          
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -872,13 +922,13 @@ ans
     >
       elif
     </span>
-     answers 
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       answers 
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -888,13 +938,13 @@ ans
     >
       ==
     </span>
-     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#905",
@@ -904,11 +954,7 @@ ans
       4
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -917,14 +963,19 @@ ans
     >
       :
     </span>
-    
-        
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+              
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -933,13 +984,13 @@ ans
     >
       print
     </span>
-     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#690",
@@ -948,15 +999,21 @@ ans
     >
       "Ask again later"
     </span>
-    
-    
-    
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+      
+
+    </span>
+    
+
+    <span
+      style={Object {}}
+    >
+          
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -965,13 +1022,13 @@ ans
     >
       elif
     </span>
-     answers 
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       answers 
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -981,13 +1038,13 @@ ans
     >
       ==
     </span>
-     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#905",
@@ -997,11 +1054,7 @@ ans
       5
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -1010,14 +1063,19 @@ ans
     >
       :
     </span>
-    
-        
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+              
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -1026,13 +1084,13 @@ ans
     >
       print
     </span>
-     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#690",
@@ -1041,15 +1099,21 @@ ans
     >
       "Concentrate and ask again"
     </span>
-    
-    
-    
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+      
+
+    </span>
+    
+
+    <span
+      style={Object {}}
+    >
+          
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -1058,13 +1122,13 @@ ans
     >
       elif
     </span>
-     answers 
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       answers 
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -1074,13 +1138,13 @@ ans
     >
       ==
     </span>
-     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#905",
@@ -1090,11 +1154,7 @@ ans
       6
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -1103,14 +1163,19 @@ ans
     >
       :
     </span>
-    
-        
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+              
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -1119,13 +1184,13 @@ ans
     >
       print
     </span>
-     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#690",
@@ -1134,15 +1199,21 @@ ans
     >
       "Reply hazy, try again"
     </span>
-    
-    
-    
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+      
+
+    </span>
+    
+
+    <span
+      style={Object {}}
+    >
+          
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -1151,13 +1222,13 @@ ans
     >
       elif
     </span>
-     answers 
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       answers 
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -1167,13 +1238,13 @@ ans
     >
       ==
     </span>
-     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#905",
@@ -1183,11 +1254,7 @@ ans
       7
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -1196,14 +1263,19 @@ ans
     >
       :
     </span>
-    
-        
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+              
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -1212,13 +1284,13 @@ ans
     >
       print
     </span>
-     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#690",
@@ -1227,15 +1299,21 @@ ans
     >
       "My reply is no"
     </span>
-    
-    
-    
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+      
+
+    </span>
+    
+
+    <span
+      style={Object {}}
+    >
+          
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -1244,13 +1322,13 @@ ans
     >
       elif
     </span>
-     answers 
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       answers 
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -1260,13 +1338,13 @@ ans
     >
       ==
     </span>
-     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#905",
@@ -1276,11 +1354,7 @@ ans
       8
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -1289,14 +1363,19 @@ ans
     >
       :
     </span>
-    
-        
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+              
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -1305,13 +1384,13 @@ ans
     >
       print
     </span>
-     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#690",
@@ -1320,8 +1399,14 @@ ans
     >
       "My sources say no"
     </span>
-    
-             
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
+                 
+
   </code>
 </pre>
 `;

@@ -4,10 +4,10 @@ export default {
         "overflowX": "auto",
         "padding": "0.5em",
         "background": "white",
-        "color": "#000000"
+        "color": "black"
     },
     "hljs-subst": {
-        "color": "#000000"
+        "color": "black"
     },
     "hljs-comment": {
         "color": "#555555",

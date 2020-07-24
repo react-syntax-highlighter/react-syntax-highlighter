@@ -35,22 +35,13 @@ exports[`SyntaxHighlighter allows lineProps as an object 1`] = `
          woah = 
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-            "hljs-params",
-          ]
-        }
+        className="hljs-function hljs-params"
         style={Object {}}
       >
         fun
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={Object {}}
       >
          =&gt;
@@ -145,11 +136,7 @@ exports[`SyntaxHighlighter allows lineProps as an object 1`] = `
         
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={
           Object {
             "fontWeight": "bold",
@@ -159,21 +146,13 @@ exports[`SyntaxHighlighter allows lineProps as an object 1`] = `
         function
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={Object {}}
       >
          
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={
           Object {
             "color": "#880000",
@@ -184,21 +163,13 @@ exports[`SyntaxHighlighter allows lineProps as an object 1`] = `
         thisIsAFunction
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={Object {}}
       >
         (
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={Object {}}
       >
         ) 
@@ -279,22 +250,13 @@ exports[`SyntaxHighlighter allows lineProps as an object 1`] = `
         ].map(
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-            "hljs-params",
-          ]
-        }
+        className="hljs-function hljs-params"
         style={Object {}}
       >
         n
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={Object {}}
       >
          =&gt;
@@ -409,11 +371,7 @@ exports[`SyntaxHighlighter allows lineProps as an object 1`] = `
         
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={
           Object {
             "fontWeight": "bold",
@@ -423,21 +381,13 @@ exports[`SyntaxHighlighter allows lineProps as an object 1`] = `
         function
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={Object {}}
       >
          
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={
           Object {
             "color": "#880000",
@@ -448,21 +398,13 @@ exports[`SyntaxHighlighter allows lineProps as an object 1`] = `
         itIs
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={Object {}}
       >
         (
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={Object {}}
       >
         ) 
@@ -575,22 +517,13 @@ exports[`SyntaxHighlighter allows lineProps as function 1`] = `
          woah = 
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-            "hljs-params",
-          ]
-        }
+        className="hljs-function hljs-params"
         style={Object {}}
       >
         fun
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={Object {}}
       >
          =&gt;
@@ -685,11 +618,7 @@ exports[`SyntaxHighlighter allows lineProps as function 1`] = `
         
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={
           Object {
             "fontWeight": "bold",
@@ -699,21 +628,13 @@ exports[`SyntaxHighlighter allows lineProps as function 1`] = `
         function
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={Object {}}
       >
          
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={
           Object {
             "color": "#880000",
@@ -724,21 +645,13 @@ exports[`SyntaxHighlighter allows lineProps as function 1`] = `
         thisIsAFunction
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={Object {}}
       >
         (
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={Object {}}
       >
         ) 
@@ -819,22 +732,13 @@ exports[`SyntaxHighlighter allows lineProps as function 1`] = `
         ].map(
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-            "hljs-params",
-          ]
-        }
+        className="hljs-function hljs-params"
         style={Object {}}
       >
         n
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={Object {}}
       >
          =&gt;
@@ -949,11 +853,7 @@ exports[`SyntaxHighlighter allows lineProps as function 1`] = `
         
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={
           Object {
             "fontWeight": "bold",
@@ -963,21 +863,13 @@ exports[`SyntaxHighlighter allows lineProps as function 1`] = `
         function
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={Object {}}
       >
          
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={
           Object {
             "color": "#880000",
@@ -988,21 +880,13 @@ exports[`SyntaxHighlighter allows lineProps as function 1`] = `
         itIs
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={Object {}}
       >
         (
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={Object {}}
       >
         ) 
@@ -1111,22 +995,13 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
          woah = 
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-            "hljs-params",
-          ]
-        }
+        className="hljs-function hljs-params"
         style={Object {}}
       >
         fun
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={Object {}}
       >
          =&gt;
@@ -1213,11 +1088,7 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
         
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={
           Object {
             "fontWeight": "bold",
@@ -1227,21 +1098,13 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
         function
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={Object {}}
       >
          
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={
           Object {
             "color": "#880000",
@@ -1252,21 +1115,13 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
         thisIsAFunction
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={Object {}}
       >
         (
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={Object {}}
       >
         ) 
@@ -1343,22 +1198,13 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
         ].map(
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-            "hljs-params",
-          ]
-        }
+        className="hljs-function hljs-params"
         style={Object {}}
       >
         n
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={Object {}}
       >
          =&gt;
@@ -1457,11 +1303,7 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
         
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={
           Object {
             "fontWeight": "bold",
@@ -1471,21 +1313,13 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
         function
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={Object {}}
       >
          
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={
           Object {
             "color": "#880000",
@@ -1496,21 +1330,13 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
         itIs
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={Object {}}
       >
         (
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={Object {}}
       >
         ) 
@@ -1652,11 +1478,7 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
          
       </span>
       <span
-        className={
-          Array [
-            "hljs-class",
-          ]
-        }
+        className="hljs-class"
         style={
           Object {
             "fontWeight": "bold",
@@ -1666,21 +1488,13 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
         class
       </span>
       <span
-        className={
-          Array [
-            "hljs-class",
-          ]
-        }
+        className="hljs-class"
         style={Object {}}
       >
          
       </span>
       <span
-        className={
-          Array [
-            "hljs-class",
-          ]
-        }
+        className="hljs-class"
         style={
           Object {
             "color": "#880000",
@@ -1691,11 +1505,7 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
         BubbleSort
       </span>
       <span
-        className={
-          Array [
-            "hljs-class",
-          ]
-        }
+        className="hljs-class"
         style={Object {}}
       >
          
@@ -1734,7 +1544,7 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "#EDE4AF",
+          "backgroundColor": "#A9DBB8",
           "color": "#888888",
           "display": "block",
         }
@@ -1746,7 +1556,7 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "#EDE4AF",
+          "backgroundColor": "#A9DBB8",
           "display": "block",
         }
       }
@@ -1770,7 +1580,7 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "#EDE4AF",
+          "backgroundColor": "#A9DBB8",
           "display": "block",
         }
       }
@@ -1781,11 +1591,7 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
           
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={
           Object {
             "fontWeight": "bold",
@@ -1795,21 +1601,13 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
         public
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={Object {}}
       >
          
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={
           Object {
             "fontWeight": "bold",
@@ -1819,21 +1617,13 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
         boolean
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={Object {}}
       >
          
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={
           Object {
             "color": "#880000",
@@ -1844,23 +1634,13 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
         checkSort
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-            "hljs-params",
-          ]
-        }
+        className="hljs-function hljs-params"
         style={Object {}}
       >
         (
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-            "hljs-params",
-          ]
-        }
+        className="hljs-function hljs-params"
         style={
           Object {
             "fontWeight": "bold",
@@ -1870,22 +1650,13 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
         int
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-            "hljs-params",
-          ]
-        }
+        className="hljs-function hljs-params"
         style={Object {}}
       >
         [] a)
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={Object {}}
       >
          
@@ -1900,7 +1671,7 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "#EDE4AF",
+          "backgroundColor": "#A9DBB8",
           "display": "block",
         }
       }
@@ -1911,7 +1682,7 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "#EDE4AF",
+          "backgroundColor": "#A9DBB8",
           "display": "block",
         }
       }
@@ -1922,7 +1693,7 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "#BA2D0B",
+          "backgroundColor": "#A9DBB8",
           "display": "block",
         }
       }
@@ -1993,7 +1764,7 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "#BA2D0B",
+          "backgroundColor": "#A9DBB8",
           "display": "block",
         }
       }
@@ -2036,7 +1807,7 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "#BA2D0B",
+          "backgroundColor": "#A9DBB8",
           "display": "block",
         }
       }
@@ -2079,7 +1850,7 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "#BA2D0B",
+          "backgroundColor": "#A9DBB8",
           "display": "block",
         }
       }
@@ -2090,7 +1861,7 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "#BA2D0B",
+          "backgroundColor": "#A9DBB8",
           "display": "block",
         }
       }
@@ -2101,7 +1872,7 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "#BA2D0B",
+          "backgroundColor": "#A9DBB8",
           "display": "block",
         }
       }
@@ -2112,7 +1883,7 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "#BA2D0B",
+          "backgroundColor": "#A9DBB8",
           "display": "block",
         }
       }
@@ -2155,7 +1926,7 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "#BA2D0B",
+          "backgroundColor": "#A9DBB8",
           "display": "block",
         }
       }
@@ -2166,7 +1937,7 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "#BA2D0B",
+          "backgroundColor": "#A9DBB8",
           "display": "block",
         }
       }
@@ -2177,7 +1948,7 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "#BA2D0B",
+          "backgroundColor": "#A9DBB8",
           "display": "block",
         }
       }
@@ -2201,9 +1972,9 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "",
+          "backgroundColor": "#A9DBB8",
           "color": "#888888",
-          "display": "",
+          "display": "block",
         }
       }
     >
@@ -2213,8 +1984,8 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "",
-          "display": "",
+          "backgroundColor": "#A9DBB8",
+          "display": "block",
         }
       }
     >
@@ -2237,8 +2008,8 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "",
-          "display": "",
+          "backgroundColor": "#A9DBB8",
+          "display": "block",
         }
       }
     >
@@ -2248,11 +2019,7 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
           
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={
           Object {
             "fontWeight": "bold",
@@ -2262,21 +2029,13 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
         public
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={Object {}}
       >
          
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={
           Object {
             "fontWeight": "bold",
@@ -2286,21 +2045,13 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
         void
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={Object {}}
       >
          
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={
           Object {
             "color": "#880000",
@@ -2311,23 +2062,13 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
         sort
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-            "hljs-params",
-          ]
-        }
+        className="hljs-function hljs-params"
         style={Object {}}
       >
         (
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-            "hljs-params",
-          ]
-        }
+        className="hljs-function hljs-params"
         style={
           Object {
             "fontWeight": "bold",
@@ -2337,22 +2078,13 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
         int
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-            "hljs-params",
-          ]
-        }
+        className="hljs-function hljs-params"
         style={Object {}}
       >
          [] a)
       </span>
       <span
-        className={
-          Array [
-            "hljs-function",
-          ]
-        }
+        className="hljs-function"
         style={Object {}}
       >
          
@@ -2367,8 +2099,8 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "",
-          "display": "",
+          "backgroundColor": "#A9DBB8",
+          "display": "block",
         }
       }
     >
@@ -2396,8 +2128,8 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "",
-          "display": "",
+          "backgroundColor": "#A9DBB8",
+          "display": "block",
         }
       }
     >

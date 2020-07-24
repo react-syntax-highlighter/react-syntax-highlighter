@@ -11,6 +11,7 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
       "background": "#f5f2f0",
       "color": "black",
       "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+      "fontSize": "1em",
       "hyphens": "none",
       "lineHeight": "1.5",
       "margin": ".5em 0",
@@ -37,6 +38,7 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
         "background": "none",
         "color": "black",
         "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+        "fontSize": "1em",
         "hyphens": "none",
         "lineHeight": "1.5",
         "msHyphens": "none",
@@ -51,11 +53,7 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
     }
   >
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -64,14 +62,13 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
     >
       const
     </span>
-     
     <span
-      className={
-        Array [
-          "token",
-          "function-variable",
-        ]
-      }
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="token function-variable"
       style={
         Object {
           "color": "#DD4A68",
@@ -80,13 +77,13 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
     >
       woah
     </span>
-     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -96,13 +93,24 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
     >
       =
     </span>
-     fun 
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="token parameter"
+      style={Object {}}
+    >
+      fun
+    </span>
+    <span
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="token arrow"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -112,13 +120,13 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
     >
       =&gt;
     </span>
-     fun 
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       fun 
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -128,13 +136,13 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
     >
       +
     </span>
-     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#905",
@@ -144,11 +152,7 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
       1
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -157,14 +161,19 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
     >
       ;
     </span>
-    
-
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+      
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -173,13 +182,13 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
     >
       const
     </span>
-     dude 
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       dude 
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -189,13 +198,13 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
     >
       =
     </span>
-     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#DD4A68",
@@ -205,11 +214,7 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
       woah
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -219,11 +224,7 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
       (
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#905",
@@ -233,11 +234,7 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
       2
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -246,13 +243,13 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
     >
       )
     </span>
-     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -262,13 +259,13 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
     >
       +
     </span>
-     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#905",
@@ -278,11 +275,7 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
       3
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -291,14 +284,19 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
     >
       ;
     </span>
-    
-
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+      
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -307,13 +305,13 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
     >
       function
     </span>
-     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#DD4A68",
@@ -323,11 +321,7 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
       thisIsAFunction
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -337,11 +331,7 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
       (
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -350,13 +340,13 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
     >
       )
     </span>
-     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -365,14 +355,19 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
     >
       {
     </span>
-    
-  
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+        
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -381,13 +376,13 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
     >
       return
     </span>
-     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -397,11 +392,7 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
       [
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#905",
@@ -411,11 +402,7 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
       1
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -425,11 +412,7 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
       ,
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#905",
@@ -439,11 +422,7 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
       2
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -453,11 +432,7 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
       ,
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#905",
@@ -467,11 +442,7 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
       3
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -481,11 +452,7 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
       ]
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -495,11 +462,7 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
       .
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token method property-access"
       style={
         Object {
           "color": "#DD4A68",
@@ -509,11 +472,7 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
       map
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -522,13 +481,19 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
     >
       (
     </span>
-    n 
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token parameter"
+      style={Object {}}
+    >
+      n
+    </span>
+    <span
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="token arrow"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -538,13 +503,13 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
     >
       =&gt;
     </span>
-     n 
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       n 
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -554,13 +519,13 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
     >
       +
     </span>
-     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#905",
@@ -570,11 +535,7 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
       1
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -584,11 +545,7 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
       )
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -598,11 +555,7 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
       .
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token method property-access"
       style={
         Object {
           "color": "#DD4A68",
@@ -612,11 +565,7 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
       filter
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -625,13 +574,13 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
     >
       (
     </span>
-    n 
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+      n 
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -641,13 +590,13 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
     >
       !==
     </span>
-     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#905",
@@ -657,11 +606,7 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
       3
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -671,11 +616,7 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
       )
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -684,14 +625,19 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
     >
       ;
     </span>
-    
-
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+      
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -700,14 +646,29 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
     >
       }
     </span>
-    
-console
     <span
-      className={
-        Array [
-          "token",
-        ]
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+      
+    </span>
+    <span
+      className="token console"
+      style={
+        Object {
+          "color": "#DD4A68",
+        }
       }
+    >
+      console
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -717,11 +678,7 @@ console
       .
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token method property-access"
       style={
         Object {
           "color": "#DD4A68",
@@ -731,11 +688,7 @@ console
       log
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -745,11 +698,7 @@ console
       (
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#690",
@@ -759,11 +708,7 @@ console
       'making up fake code is really hard'
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -773,11 +718,7 @@ console
       )
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -786,15 +727,21 @@ console
     >
       ;
     </span>
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
     
 
-
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+      
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -803,13 +750,13 @@ console
     >
       function
     </span>
-     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#DD4A68",
@@ -819,11 +766,7 @@ console
       itIs
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -833,11 +776,7 @@ console
       (
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -846,13 +785,13 @@ console
     >
       )
     </span>
-     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -861,14 +800,19 @@ console
     >
       {
     </span>
-    
-  
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+        
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#07a",
@@ -877,13 +821,13 @@ console
     >
       return
     </span>
-     
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#690",
@@ -893,11 +837,7 @@ console
       'no seriously really it is'
     </span>
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -906,14 +846,19 @@ console
     >
       ;
     </span>
-    
-
     <span
-      className={
-        Array [
-          "token",
-        ]
-      }
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+      
+    </span>
+    <span
+      className="token"
       style={
         Object {
           "color": "#999",
@@ -921,6 +866,12 @@ console
       }
     >
       }
+    </span>
+    <span
+      style={Object {}}
+    >
+      
+
     </span>
     
 

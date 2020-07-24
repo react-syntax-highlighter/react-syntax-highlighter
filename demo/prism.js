@@ -1,10 +1,12 @@
 import React from 'react';
 import { render } from 'react-dom';
 import SyntaxHighlighter from '../src/prism';
-import * as styles from "../styles/prism";
-import ExamplesLinks from "./examples-links";
+import ExamplesLinks from './examples-links';
+import prismStyles from './styles/prism';
+import prismLanguages from '../src/languages/prism/supported-languages';
 
-const availableStyles = Object.keys(styles);
+const availableStyles = prismStyles;
+const availableLanguages = prismLanguages;
 
 class Component extends React.Component {
   constructor() {
@@ -31,55 +33,98 @@ class Expire extends React.Component {
 
 export default uniquePropHOC(["time", "seconds"])(Expire);`;
     this.state = {
-      selected: 'atomDark',
-      style: styles.atomDark,
+      language: 'javascript',
+      selectedStyle: availableStyles[0],
+      style: require(`../src/styles/prism/${availableStyles[0]}`).default,
       code: initialCodeString,
       showLineNumbers: false
-    }
+    };
   }
   render() {
-    const h1Style = {
-      fontSize: 42,
-      color: 'aliceblue'
-    };
-    const h2 = {
-      fontSize: 24,
-      color: 'aliceblue'
-    }
-
     return (
-      <div>
-        <h1 style={h1Style}>React Syntax Highlighter</h1>
-        <ExamplesLinks />
-        <h2 style={h2}>Change Style</h2>
-        <select 
-          value={this.state.selected} 
-          onChange={(e) => this.setState({style: styles[e.target.value], selected: e.target.value })}
-        >
-          {availableStyles.map(s => <option key={s} value={s}>{s}</option>)}
-        </select>
-        <div style={{paddingTop: 20, display: 'flex'}}>
-          <textarea 
-            style={{marginTop: 11}}
-            rows={40} 
-            cols={100} 
-            value={this.state.code}
-            onChange={(e) => this.setState({code: e.target.value})}
-          />
-          <div style={{flex: 1, width: '50%'}}>
-            <SyntaxHighlighter 
-              style={this.state.style} 
+      <div className="demo__root demo__root--default">
+        <header>
+          <h1>React Syntax Highlighter Demo</h1>
+          <ExamplesLinks />
+        </header>
+
+        <main>
+          <aside className="options__container">
+            <div className="options__option options__option--language">
+              <select
+                className="select"
+                value={this.state.language}
+                onChange={e => this.setState({ language: e.target.value })}
+              >
+                {availableLanguages.map(l => (
+                  <option key={l} value={l}>
+                    {l}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div className="options__option options__option--theme">
+              <select
+                className="select"
+                value={this.state.selectedStyle}
+                onChange={e =>
+                  this.setState({
+                    style: require(`../src/styles/prism/${e.target.value}`)
+                      .default,
+                    selectedStyle: e.target.value
+                  })
+                }
+              >
+                {availableStyles.map(s => (
+                  <option key={s} value={s}>
+                    {s}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div className="options__option options__option--line-numbers">
+              <label htmlFor="showLineNumbers" className="option__label">
+                <input
+                  type="checkbox"
+                  className="option__checkbox"
+                  checked={this.state.showLineNumbers}
+                  onChange={() =>
+                    this.setState({
+                      showLineNumbers: !this.state.showLineNumbers
+                    })
+                  }
+                  id="showLineNumbers"
+                />
+
+                <span className="label__text">Show line numbers</span>
+              </label>
+            </div>
+          </aside>
+
+          <article className="example__container">
+            <div className="textarea__wrapper">
+              <textarea
+                style={{ marginTop: 11 }}
+                rows={40}
+                value={this.state.code}
+                onChange={e => this.setState({ code: e.target.value })}
+              />
+            </div>
+
+            <SyntaxHighlighter
+              style={this.state.style}
               showLineNumbers={this.state.showLineNumbers}
-              language="jsx"
+              language={this.state.language}
             >
               {this.state.code}
             </SyntaxHighlighter>
-          </div>
-        </div>
+          </article>
+        </main>
       </div>
     );
   }
 }
-
 
 render(<Component />, document.getElementById('app'));

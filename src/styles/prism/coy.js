@@ -3,6 +3,7 @@ export default {
         "color": "black",
         "background": "none",
         "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+        "fontSize": "1em",
         "textAlign": "left",
         "whiteSpace": "pre",
         "wordSpacing": "normal",
@@ -21,6 +22,7 @@ export default {
         "color": "black",
         "background": "none",
         "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+        "fontSize": "1em",
         "textAlign": "left",
         "whiteSpace": "pre",
         "wordSpacing": "normal",
@@ -232,7 +234,7 @@ export default {
     "italic": {
         "fontStyle": "italic"
     },
-    ".namespace": {
+    "namespace": {
         "Opacity": ".7"
     },
     "tab:not(:empty):before": {

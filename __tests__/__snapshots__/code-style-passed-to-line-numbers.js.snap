@@ -16,89 +16,89 @@ exports[`SyntaxHighlighter component passes along code style to LineNumbers 1`] 
     style={
       Object {
         "color": "blue",
-        "float": "left",
-        "paddingRight": "10px",
       }
     }
   >
-    <span
-      className="react-syntax-highlighter-line-number"
-      style={Object {}}
-    >
-      1
-
-    </span>
-    <span
-      className="react-syntax-highlighter-line-number"
-      style={Object {}}
-    >
-      2
-
-    </span>
-    <span
-      className="react-syntax-highlighter-line-number"
-      style={Object {}}
-    >
-      3
-
-    </span>
-    <span
-      className="react-syntax-highlighter-line-number"
-      style={Object {}}
-    >
-      4
-
-    </span>
-    <span
-      className="react-syntax-highlighter-line-number"
-      style={Object {}}
-    >
-      5
-
-    </span>
-    <span
-      className="react-syntax-highlighter-line-number"
-      style={Object {}}
-    >
-      6
-
-    </span>
-    <span
-      className="react-syntax-highlighter-line-number"
-      style={Object {}}
-    >
-      7
-
-    </span>
-    <span
-      className="react-syntax-highlighter-line-number"
-      style={Object {}}
-    >
-      8
-
-    </span>
-    <span
-      className="react-syntax-highlighter-line-number"
-      style={Object {}}
-    >
-      9
-
-    </span>
-    <span
-      className="react-syntax-highlighter-line-number"
-      style={Object {}}
-    >
-      10
-
-    </span>
-  </code>
-  <code
-    style={
-      Object {
-        "color": "blue",
+    <code
+      style={
+        Object {
+          "color": "blue",
+          "float": "left",
+          "paddingRight": "10px",
+        }
       }
-    }
-  >
+    >
+      <span
+        className="react-syntax-highlighter-line-number"
+        style={Object {}}
+      >
+        1
+
+      </span>
+      <span
+        className="react-syntax-highlighter-line-number"
+        style={Object {}}
+      >
+        2
+
+      </span>
+      <span
+        className="react-syntax-highlighter-line-number"
+        style={Object {}}
+      >
+        3
+
+      </span>
+      <span
+        className="react-syntax-highlighter-line-number"
+        style={Object {}}
+      >
+        4
+
+      </span>
+      <span
+        className="react-syntax-highlighter-line-number"
+        style={Object {}}
+      >
+        5
+
+      </span>
+      <span
+        className="react-syntax-highlighter-line-number"
+        style={Object {}}
+      >
+        6
+
+      </span>
+      <span
+        className="react-syntax-highlighter-line-number"
+        style={Object {}}
+      >
+        7
+
+      </span>
+      <span
+        className="react-syntax-highlighter-line-number"
+        style={Object {}}
+      >
+        8
+
+      </span>
+      <span
+        className="react-syntax-highlighter-line-number"
+        style={Object {}}
+      >
+        9
+
+      </span>
+      <span
+        className="react-syntax-highlighter-line-number"
+        style={Object {}}
+      >
+        10
+
+      </span>
+    </code>
     <span
       style={
         Object {
@@ -108,28 +108,28 @@ exports[`SyntaxHighlighter component passes along code style to LineNumbers 1`] 
     >
       const
     </span>
-     woah = 
     <span
-      className={
-        Array [
-          "hljs-function",
-        ]
-      }
       style={Object {}}
     >
-      <span
-        className={
-          Array [
-            "hljs-params",
-          ]
-        }
-        style={Object {}}
-      >
-        fun
-      </span>
+       woah = 
+    </span>
+    <span
+      className="hljs-function hljs-params"
+      style={Object {}}
+    >
+      fun
+    </span>
+    <span
+      className="hljs-function"
+      style={Object {}}
+    >
        =&gt;
     </span>
-     fun + 
+    <span
+      style={Object {}}
+    >
+       fun + 
+    </span>
     <span
       style={
         Object {
@@ -139,8 +139,17 @@ exports[`SyntaxHighlighter component passes along code style to LineNumbers 1`] 
     >
       1
     </span>
-    ;
+    <span
+      style={Object {}}
+    >
+      ;
 
+    </span>
+    <span
+      style={Object {}}
+    >
+      
+    </span>
     <span
       style={
         Object {
@@ -150,7 +159,11 @@ exports[`SyntaxHighlighter component passes along code style to LineNumbers 1`] 
     >
       const
     </span>
-     dude = woah(
+    <span
+      style={Object {}}
+    >
+       dude = woah(
+    </span>
     <span
       style={
         Object {
@@ -160,7 +173,11 @@ exports[`SyntaxHighlighter component passes along code style to LineNumbers 1`] 
     >
       2
     </span>
-    ) + 
+    <span
+      style={Object {}}
+    >
+      ) + 
+    </span>
     <span
       style={
         Object {
@@ -170,49 +187,67 @@ exports[`SyntaxHighlighter component passes along code style to LineNumbers 1`] 
     >
       3
     </span>
-    ;
-
     <span
-      className={
-        Array [
-          "hljs-function",
-        ]
-      }
       style={Object {}}
     >
-      <span
-        style={
-          Object {
-            "fontWeight": "bold",
-          }
+      ;
+
+    </span>
+    <span
+      style={Object {}}
+    >
+      
+    </span>
+    <span
+      className="hljs-function"
+      style={
+        Object {
+          "fontWeight": "bold",
         }
-      >
-        function
-      </span>
+      }
+    >
+      function
+    </span>
+    <span
+      className="hljs-function"
+      style={Object {}}
+    >
        
-      <span
-        style={
-          Object {
-            "color": "#880000",
-            "fontWeight": "bold",
-          }
+    </span>
+    <span
+      className="hljs-function"
+      style={
+        Object {
+          "color": "#880000",
+          "fontWeight": "bold",
         }
-      >
-        thisIsAFunction
-      </span>
+      }
+    >
+      thisIsAFunction
+    </span>
+    <span
+      className="hljs-function"
+      style={Object {}}
+    >
       (
-      <span
-        className={
-          Array [
-            "hljs-params",
-          ]
-        }
-        style={Object {}}
-      />
+    </span>
+    <span
+      className="hljs-function"
+      style={Object {}}
+    >
       ) 
     </span>
-    {
-  
+    <span
+      style={Object {}}
+    >
+      {
+
+    </span>
+    <span
+      style={Object {}}
+    >
+        
+    </span>
     <span
       style={
         Object {
@@ -222,7 +257,11 @@ exports[`SyntaxHighlighter component passes along code style to LineNumbers 1`] 
     >
       return
     </span>
-     [
+    <span
+      style={Object {}}
+    >
+       [
+    </span>
     <span
       style={
         Object {
@@ -232,7 +271,11 @@ exports[`SyntaxHighlighter component passes along code style to LineNumbers 1`] 
     >
       1
     </span>
-    ,
+    <span
+      style={Object {}}
+    >
+      ,
+    </span>
     <span
       style={
         Object {
@@ -242,7 +285,11 @@ exports[`SyntaxHighlighter component passes along code style to LineNumbers 1`] 
     >
       2
     </span>
-    ,
+    <span
+      style={Object {}}
+    >
+      ,
+    </span>
     <span
       style={
         Object {
@@ -252,28 +299,28 @@ exports[`SyntaxHighlighter component passes along code style to LineNumbers 1`] 
     >
       3
     </span>
-    ].map(
     <span
-      className={
-        Array [
-          "hljs-function",
-        ]
-      }
       style={Object {}}
     >
-      <span
-        className={
-          Array [
-            "hljs-params",
-          ]
-        }
-        style={Object {}}
-      >
-        n
-      </span>
+      ].map(
+    </span>
+    <span
+      className="hljs-function hljs-params"
+      style={Object {}}
+    >
+      n
+    </span>
+    <span
+      className="hljs-function"
+      style={Object {}}
+    >
        =&gt;
     </span>
-     n + 
+    <span
+      style={Object {}}
+    >
+       n + 
+    </span>
     <span
       style={
         Object {
@@ -283,7 +330,11 @@ exports[`SyntaxHighlighter component passes along code style to LineNumbers 1`] 
     >
       1
     </span>
-    ).filter(n !== 
+    <span
+      style={Object {}}
+    >
+      ).filter(n !== 
+    </span>
     <span
       style={
         Object {
@@ -293,9 +344,19 @@ exports[`SyntaxHighlighter component passes along code style to LineNumbers 1`] 
     >
       3
     </span>
-    );
-}
+    <span
+      style={Object {}}
+    >
+      );
 
+    </span>
+    }
+
+    <span
+      style={Object {}}
+    >
+      
+    </span>
     <span
       style={
         Object {
@@ -305,7 +366,11 @@ exports[`SyntaxHighlighter component passes along code style to LineNumbers 1`] 
     >
       console
     </span>
-    .log(
+    <span
+      style={Object {}}
+    >
+      .log(
+    </span>
     <span
       style={
         Object {
@@ -315,50 +380,69 @@ exports[`SyntaxHighlighter component passes along code style to LineNumbers 1`] 
     >
       'making up fake code is really hard'
     </span>
-    );
-
-
     <span
-      className={
-        Array [
-          "hljs-function",
-        ]
-      }
       style={Object {}}
     >
-      <span
-        style={
-          Object {
-            "fontWeight": "bold",
-          }
+      );
+
+    </span>
+    
+
+    <span
+      style={Object {}}
+    >
+      
+    </span>
+    <span
+      className="hljs-function"
+      style={
+        Object {
+          "fontWeight": "bold",
         }
-      >
-        function
-      </span>
+      }
+    >
+      function
+    </span>
+    <span
+      className="hljs-function"
+      style={Object {}}
+    >
        
-      <span
-        style={
-          Object {
-            "color": "#880000",
-            "fontWeight": "bold",
-          }
+    </span>
+    <span
+      className="hljs-function"
+      style={
+        Object {
+          "color": "#880000",
+          "fontWeight": "bold",
         }
-      >
-        itIs
-      </span>
+      }
+    >
+      itIs
+    </span>
+    <span
+      className="hljs-function"
+      style={Object {}}
+    >
       (
-      <span
-        className={
-          Array [
-            "hljs-params",
-          ]
-        }
-        style={Object {}}
-      />
+    </span>
+    <span
+      className="hljs-function"
+      style={Object {}}
+    >
       ) 
     </span>
-    {
-  
+    <span
+      style={Object {}}
+    >
+      {
+
+    </span>
+    <span
+      style={Object {}}
+    >
+        
+    </span>
     <span
       style={
         Object {
@@ -368,7 +452,11 @@ exports[`SyntaxHighlighter component passes along code style to LineNumbers 1`] 
     >
       return
     </span>
-     
+    <span
+      style={Object {}}
+    >
+       
+    </span>
     <span
       style={
         Object {
@@ -378,8 +466,15 @@ exports[`SyntaxHighlighter component passes along code style to LineNumbers 1`] 
     >
       'no seriously really it is'
     </span>
-    ;
-}
+    <span
+      style={Object {}}
+    >
+      ;
+
+    </span>
+    }
+
+    
 
   </code>
 </pre>

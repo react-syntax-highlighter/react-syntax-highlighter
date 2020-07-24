@@ -2,98 +2,11 @@ import React from 'react';
 import { render } from 'react-dom';
 import SyntaxHighlighter from '../src/index';
 import ExamplesLinks from './examples-links';
+import hljsStyles from './styles/hljs';
+import hljsLanguages from '../src/languages/hljs/supported-languages';
 
-const availableStyles = [
-  'a11y-dark',
-  'a11y-light',
-  'agate',
-  'an-old-hope',
-  'androidstudio',
-  'arduino-light',
-  'arta',
-  'ascetic',
-  'atelier-cave-dark',
-  'atelier-cave-light',
-  'atelier-dune-dark',
-  'atelier-dune-light',
-  'atelier-estuary-dark',
-  'atelier-estuary-light',
-  'atelier-forest-dark',
-  'atelier-forest-light',
-  'atelier-heath-dark',
-  'atelier-heath-light',
-  'atelier-lakeside-dark',
-  'atelier-lakeside-light',
-  'atelier-plateau-dark',
-  'atelier-plateau-light',
-  'atelier-savanna-dark',
-  'atelier-savanna-light',
-  'atelier-seaside-dark',
-  'atelier-seaside-light',
-  'atelier-sulphurpool-dark',
-  'atelier-sulphurpool-light',
-  'atom-one-dark-reasonable',
-  'atom-one-dark',
-  'atom-one-light',
-  'brown-paper',
-  'codepen-embed',
-  'color-brewer',
-  'darcula',
-  'dark',
-  'darkula',
-  'default-style',
-  'docco',
-  'dracula',
-  'far',
-  'foundation',
-  'github-gist',
-  'github',
-  'gml',
-  'googlecode',
-  'grayscale',
-  'gruvbox-dark',
-  'gruvbox-light',
-  'hopscotch',
-  'hybrid',
-  'idea',
-  'ir-black',
-  'isbl-editor-dark',
-  'isbl-editor-light',
-  'kimbie-dark',
-  'kimbie-light',
-  'lightfair',
-  'magula',
-  'mono-blue',
-  'monokai-sublime',
-  'monokai',
-  'nord',
-  'obsidian',
-  'ocean',
-  'paraiso-dark',
-  'paraiso-light',
-  'pojoaque',
-  'purebasic',
-  'qtcreator-dark',
-  'qtcreator-light',
-  'railscasts',
-  'rainbow',
-  'routeros',
-  'school-book',
-  'shades-of-purple',
-  'solarized-dark',
-  'solarized-light',
-  'sunburst',
-  'tomorrow-night-blue',
-  'tomorrow-night-bright',
-  'tomorrow-night-eighties',
-  'tomorrow-night',
-  'tomorrow',
-  'vs',
-  'vs2015',
-  'xcode',
-  'xt256',
-  'zenburn'
-];
+const availableStyles = hljsStyles;
+const availableLanguages = hljsLanguages;
 
 class Component extends React.Component {
   constructor() {
@@ -141,63 +54,87 @@ function createElement({ node, style, useInlineStyles, key }) {
 }
   `;
     this.state = {
-      selected: 'tomorrow-night-eighties',
-      style: require('../src/styles/hljs/tomorrow-night-eighties').default,
+      language: 'javascript',
+      selectedStyle: availableStyles[0],
+      style: require(`../src/styles/hljs/${availableStyles[0]}`).default,
       code: initialCodeString,
       showLineNumbers: false
     };
   }
   render() {
-    const h1Style = {
-      fontSize: 42,
-      color: 'aliceblue'
-    };
-    const h2 = {
-      fontSize: 24,
-      color: 'aliceblue'
-    };
-
     return (
-      <div>
-        <h1 style={h1Style}>React Syntax Highlighter</h1>
-        <ExamplesLinks />
-        <h2 style={h2}>Change Style</h2>
-        <select
-          value={this.state.selected}
-          onChange={e =>
-            this.setState({
-              style: require(`../src/styles/hljs/${e.target.value}`).default,
-              selected: e.target.value
-            })
-          }
-        >
-          {availableStyles.map(s => (
-            <option key={s} value={s}>
-              {s}
-            </option>
-          ))}
-        </select>
-        <div style={{ paddingTop: '10px', fontSize: 16, color: 'aliceblue' }}>
-          <label htmlFor="showLineNumbers">Show Line Numbers:</label>
-          <input
-            type="checkbox"
-            checked={this.state.showLineNumbers}
-            onChange={() =>
-              this.setState({ showLineNumbers: !this.state.showLineNumbers })
-            }
-            id="showLineNumbers"
-          />
-        </div>
-        <div style={{ paddingTop: 20, display: 'flex' }}>
-          <textarea
-            style={{ flex: 1, marginTop: 11 }}
-            rows={40}
-            cols={100}
-            value={this.state.code}
-            onChange={e => this.setState({ code: e.target.value })}
-          />
-          <div style={{ flex: 1, width: '50%' }}>
+      <div className="demo__root demo__root--default">
+        <header>
+          <h1>React Syntax Highlighter Demo</h1>
+          <ExamplesLinks />
+        </header>
+
+        <main>
+          <aside className="options__container">
+            <div className="options__option options__option--language">
+              <select
+                className="select"
+                value={this.state.language}
+                onChange={e => this.setState({ language: e.target.value })}
+              >
+                {availableLanguages.map(l => (
+                  <option key={l} value={l}>
+                    {l}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div className="options__option options__option--theme">
+              <select
+                className="select"
+                value={this.state.selectedStyle}
+                onChange={e =>
+                  this.setState({
+                    style: require(`../src/styles/hljs/${e.target.value}`)
+                      .default,
+                    selectedStyle: e.target.value
+                  })
+                }
+              >
+                {availableStyles.map(s => (
+                  <option key={s} value={s}>
+                    {s}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div className="options__option options__option--line-numbers">
+              <label htmlFor="showLineNumbers" className="option__label">
+                <input
+                  type="checkbox"
+                  className="option__checkbox"
+                  checked={this.state.showLineNumbers}
+                  onChange={() =>
+                    this.setState({
+                      showLineNumbers: !this.state.showLineNumbers
+                    })
+                  }
+                  id="showLineNumbers"
+                />
+
+                <span className="label__text">Show line numbers</span>
+              </label>
+            </div>
+          </aside>
+
+          <article className="example__container">
+            <div className="textarea__wrapper">
+              <textarea
+                rows={40}
+                value={this.state.code}
+                onChange={e => this.setState({ code: e.target.value })}
+              />
+            </div>
+
             <SyntaxHighlighter
+              language={this.state.language}
               style={this.state.style}
               showLineNumbers={this.state.showLineNumbers}
               wrapLines={true}
@@ -210,8 +147,8 @@ function createElement({ node, style, useInlineStyles, key }) {
             >
               {this.state.code}
             </SyntaxHighlighter>
-          </div>
-        </div>
+          </article>
+        </main>
       </div>
     );
   }

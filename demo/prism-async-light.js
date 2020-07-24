@@ -1,20 +1,54 @@
 import React from 'react';
 import { render } from 'react-dom';
 import SyntaxHighlighter from '../src/prism-async-light';
-import clike from '../src/languages/prism/clike';
-import markup from '../src/languages/prism/markup';
-import markupTemplating from '../src/languages/prism/markup-templating';
 import ExamplesLinks from './examples-links';
 
+import clike from '../src/languages/prism/clike';
+import javascript from '../src/languages/prism/javascript';
+import jsx from '../src/languages/prism/jsx';
+import markup from '../src/languages/prism/markup';
+import markupTemplating from '../src/languages/prism/markup-templating';
+
+SyntaxHighlighter.registerLanguage('clike', clike);
+SyntaxHighlighter.registerLanguage('javascript', javascript);
+SyntaxHighlighter.registerLanguage('jsx', jsx);
 SyntaxHighlighter.registerLanguage('markup', markup);
 SyntaxHighlighter.registerLanguage('markup-templating', markupTemplating);
-SyntaxHighlighter.registerLanguage('clike', clike);
 
 const availableStyles = [
-  // TODO: Generate list
+  'atom-dark',
+  'base16-ateliersulphurpool.light',
+  'cb',
+  'coy',
+  'darcula',
+  'dark',
+  'duotone-dark',
+  'duotone-earth',
+  'duotone-forest',
+  'duotone-light',
+  'duotone-sea',
+  'duotone-space',
+  'funky',
+  'ghcolors',
+  'hopscotch',
+  'okaidia',
+  'pojoaque',
+  'prism',
+  'solarizedlight',
+  'tomorrow',
+  'twilight',
+  'vs',
+  'vs-dark',
+  'xonokai'
 ];
 
-const availableLanguages = ['text', 'javascript', 'java', 'yaml'];
+const availableLanguages = [
+  'clike',
+  'javascript',
+  'jsx',
+  'markup',
+  'markup-templating'
+];
 
 class Component extends React.Component {
   constructor() {
@@ -62,64 +96,97 @@ function createElement({ node, style, useInlineStyles, key }) {
 }
   `;
     this.state = {
-      selected: 'atom-dark',
-      style: require('../src/styles/prism/atom-dark').default,
       code: initialCodeString,
       showLineNumbers: false,
-      language: 'javascript'
+      style: 'atom-dark',
+      styleSrc: require('../src/styles/prism/atom-dark').default,
+      language: 'jsx',
+      languageSrc: require(`../src/languages/prism/jsx`).default
     };
   }
 
   render() {
-    const h1Style = {
-      fontSize: 42,
-      color: 'aliceblue'
-    };
-    const h2 = {
-      fontSize: 24,
-      color: 'aliceblue'
-    };
-
     return (
-      <div>
-        <h1 style={h1Style}>React Syntax Highlighter Prism Async Light</h1>
-        <ExamplesLinks />
-        {/* <h2 style={h2}>Change Style</h2>
-        <select
-          value={this.state.selected}
-          onChange={(e) => this.setState({style: require(`../styles/prism/${e.target.value}`).default, selected: e.target.value})}
-        >
-          {availableStyles.map(s => <option key={s} value={s}>{s}</option>)}
-        </select> 
-        <h2 style={h2}>Change Language</h2>
-        <select
-          value={this.state.language}
-          onChange={(e) => this.setState({language: e.target.value})}
-        >
-          {availableLanguages.map(s => <option key={s} value={s}>{s}</option>)}
-        </select>*/}
-        <div style={{ paddingTop: '10px', fontSize: 16, color: 'aliceblue' }}>
-          <label htmlFor="showLineNumbers">Show Line Numbers:</label>
-          <input
-            type="checkbox"
-            checked={this.state.showLineNumbers}
-            onChange={() =>
-              this.setState({ showLineNumbers: !this.state.showLineNumbers })
-            }
-            id="showLineNumbers"
-          />
-        </div>
-        <div style={{ paddingTop: 20, display: 'flex' }}>
-          <textarea
-            style={{ flex: 1, marginTop: 11 }}
-            rows={40}
-            cols={100}
-            value={this.state.code}
-            onChange={e => this.setState({ code: e.target.value })}
-          />
-          <div style={{ flex: 1, width: '50%' }}>
+      <div className="demo__root demo__root--prism-async-light">
+        <header>
+          <h1>React Syntax Highlighter Demo</h1>
+          <ExamplesLinks />
+        </header>
+
+        <main>
+          <aside className="options__container">
+            <div className="options__option options__option--language">
+              <select
+                className="select"
+                value={this.state.language}
+                onChange={e =>
+                  this.setState({
+                    languageSrc: require(`../src/languages/prism/${
+                      e.target.value
+                    }`).default,
+                    language: e.target.value
+                  })
+                }
+              >
+                {availableLanguages.map(l => (
+                  <option key={l} value={l}>
+                    {l}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div className="options__option options__option--theme">
+              <select
+                className="select"
+                value={this.state.selectedStyle}
+                onChange={e =>
+                  this.setState({
+                    styleSrc: require(`../src/styles/prism/${e.target.value}`)
+                      .default,
+                    style: e.target.value
+                  })
+                }
+              >
+                {availableStyles.map(s => (
+                  <option key={s} value={s}>
+                    {s}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div className="options__option options__option--line-numbers">
+              <label htmlFor="showLineNumbers" className="option__label">
+                <input
+                  type="checkbox"
+                  className="option__checkbox"
+                  checked={this.state.showLineNumbers}
+                  onChange={() =>
+                    this.setState({
+                      showLineNumbers: !this.state.showLineNumbers
+                    })
+                  }
+                  id="showLineNumbers"
+                />
+
+                <span className="label__text">Show line numbers</span>
+              </label>
+            </div>
+          </aside>
+
+          <article className="example__container">
+            <div className="textarea__wrapper">
+              <textarea
+                style={{ flex: 1, marginTop: 11 }}
+                rows={40}
+                value={this.state.code}
+                onChange={e => this.setState({ code: e.target.value })}
+              />
+            </div>
+
             <SyntaxHighlighter
-              style={this.state.style}
+              style={this.state.styleSrc}
               showLineNumbers={this.state.showLineNumbers}
               wrapLines={true}
               lineProps={lineNumber => ({
@@ -132,8 +199,8 @@ function createElement({ node, style, useInlineStyles, key }) {
             >
               {this.state.code}
             </SyntaxHighlighter>
-          </div>
-        </div>
+          </article>
+        </main>
       </div>
     );
   }

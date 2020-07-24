@@ -13,16 +13,31 @@ exports[`SyntaxHighlighter component renders monospace text when text is passed 
   }
 >
   <code>
-    const woah = fun =&gt; fun + 1;
-const dude = woah(2) + 3;
-function thisIsAFunction() {
-  return [1,2,3].map(n =&gt; n + 1).filter(n !== 3);
-}
-console.log('making up fake code is really hard');
+    <span
+      style={Object {}}
+    >
+      const woah = fun =&gt; fun + 1;
 
-function itIs() {
-  return 'no seriously really it is';
-}
+    </span>
+    const dude = woah(2) + 3;
+
+    function thisIsAFunction() {
+
+      return [1,2,3].map(n =&gt; n + 1).filter(n !== 3);
+
+    }
+
+    console.log('making up fake code is really hard');
+
+    
+
+    function itIs() {
+
+      return 'no seriously really it is';
+
+    }
+
+    
 
   </code>
 </pre>

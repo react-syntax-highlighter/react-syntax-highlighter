@@ -1,10 +1,13 @@
 ## Available `language` imports 
 * abap
+* abnf
 * actionscript
 * ada
+* antlr4
 * apacheconf
 * apl
 * applescript
+* aql
 * arduino
 * arff
 * asciidoc
@@ -15,13 +18,19 @@
 * bash
 * basic
 * batch
+* bbcode
 * bison
+* bnf
 * brainfuck
+* brightscript
 * bro
 * c
+* cil
 * clike
 * clojure
+* cmake
 * coffeescript
+* concurnas
 * cpp
 * crystal
 * csharp
@@ -30,21 +39,33 @@
 * css
 * d
 * dart
+* dax
 * diff
 * django
+* dnsZoneFile (dns-zone-file)
 * docker
+* ebnf
 * eiffel
+* ejs
 * elixir
 * elm
 * erb
 * erlang
+* etlua
+* excelFormula (excel-formula)
+* factor
+* firestoreSecurityRules (firestore-security-rules)
 * flow
 * fortran
 * fsharp
+* ftl
+* gcode
+* gdscript
 * gedcom
 * gherkin
 * git
 * glsl
+* gml
 * go
 * graphql
 * groovy
@@ -52,6 +73,7 @@
 * handlebars
 * haskell
 * haxe
+* hcl
 * hpkp
 * hsts
 * http
@@ -62,18 +84,30 @@
 * io
 * j
 * java
+* javadoc
+* javadoclike
 * javascript
+* javastacktrace
 * jolie
+* jq
+* jsExtras (js-extras)
+* jsTemplates (js-templates)
+* jsdoc
 * json
+* json5
+* jsonp
 * jsx
 * julia
 * keyman
 * kotlin
 * latex
+* latte
 * less
+* lilypond
 * liquid
 * lisp
 * livescript
+* llvm
 * lolcode
 * lua
 * makefile
@@ -84,8 +118,12 @@
 * mel
 * mizar
 * monkey
+* moonscript
+* n1ql
 * n4js
+* nand2tetrisHdl (nand2tetris-hdl)
 * nasm
+* neon
 * nginx
 * nim
 * nix
@@ -97,10 +135,14 @@
 * parigp
 * parser
 * pascal
+* pascaligo
+* pcaxis
 * perl
 * phpExtras (php-extras)
 * php
+* phpdoc
 * plsql
+* powerquery
 * powershell
 * processing
 * prolog
@@ -111,13 +153,16 @@
 * pure
 * python
 * q
+* qml
 * qore
 * r
 * reason
+* regex
 * renpy
 * rest
 * rip
 * roboconf
+* robotframework
 * ruby
 * rust
 * sas
@@ -125,19 +170,31 @@
 * scala
 * scheme
 * scss
+* shellSession (shell-session)
 * smalltalk
 * smarty
+* solidity
+* solutionFile (solution-file)
 * soy
+* sparql
+* splunkSpl (splunk-spl)
+* sqf
 * sql
 * stylus
 * swift
+* t4Cs (t4-cs)
+* t4Templating (t4-templating)
+* t4Vb (t4-vb)
 * tap
 * tcl
 * textile
+* toml
 * tsx
 * tt2
+* turtle
 * twig
 * typescript
+* vala
 * vbnet
 * velocity
 * verilog
@@ -150,3 +207,4 @@
 * xojo
 * xquery
 * yaml
+* zig

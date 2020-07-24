@@ -1,78 +1,12 @@
 import React from 'react';
 import { render } from 'react-dom';
 import SyntaxHighlighter from '../src/index';
-import renderer from 'react-syntax-highlighter-virtualized-renderer';
+import virtualizedRenderer from 'react-syntax-highlighter-virtualized-renderer';
 import ExamplesLinks from './examples-links';
+import hljsStyles from './styles/hljs';
 
-const availableStyles = [
-  'agate',
-  'androidstudio',
-  'arduino-light',
-  'arta',
-  'ascetic',
-  'atelier-cave-dark',
-  'atelier-cave-light',
-  'atelier-dune-dark',
-  'atelier-dune-light',
-  'atelier-estuary-dark',
-  'atelier-estuary-light',
-  'atelier-forest-dark',
-  'atelier-forest-light',
-  'atelier-heath-dark',
-  'atelier-heath-light',
-  'atelier-lakeside-dark',
-  'atelier-lakeside-light',
-  'atelier-plateau-dark',
-  'atelier-plateau-light',
-  'atelier-savanna-dark',
-  'atelier-savanna-light',
-  'atelier-seaside-dark',
-  'atelier-seaside-light',
-  'atelier-sulphurpool-dark',
-  'atelier-sulphurpool-light',
-  'brown-paper',
-  'codepen-embed',
-  'color-brewer',
-  'dark',
-  'darkula',
-  'defaultStyle',
-  'docco',
-  'far',
-  'foundation',
-  'github-gist',
-  'github',
-  'googlecode',
-  'grayscale',
-  'hopscotch',
-  'hybrid',
-  'idea',
-  'ir-black',
-  'kimbie.dark',
-  'kimbie.light',
-  'magula',
-  'mono-blue',
-  'monokai-sublime',
-  'monokai',
-  'obsidian',
-  'paraiso-dark',
-  'paraiso-light',
-  'pojoaque',
-  'railscasts',
-  'rainbow',
-  'school-book',
-  'solarized-dark',
-  'solarized-light',
-  'sunburst',
-  'tomorrow-night-blue',
-  'tomorrow-night-bright',
-  'tomorrow-night-eighties',
-  'tomorrow-night',
-  'tomorrow',
-  'vs',
-  'xcode',
-  'xt256',
-  'zenburn'
-];
+const availableStyles = hljsStyles;
+
 class Component extends React.Component {
   constructor() {
     super();
@@ -20677,40 +20611,75 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 },{}]},{},[94])(94)
 });`;
     this.state = {
-      selected: 'tomorrow-night-eighties',
-      style: require('../src/styles/hljs/tomorrow-night-eighties').default,
+      selectedStyle: availableStyles[0],
+      style: require(`../src/styles/hljs/${availableStyles[0]}`).default,
       code: initialCodeString,
-      showLineNumbers: false,
-      width: window.innerWidth,
-      height: window.innerHeight
+      showLineNumbers: false
     };
   }
   render() {
-    const h1Style = {
-      fontSize: 42,
-      color: 'aliceblue'
-    };
-    const h2 = {
-      fontSize: 24,
-      color: 'aliceblue'
-    };
-
     return (
-      <div style={{ height: '100vh' }}>
-        <h1 style={h1Style}>React Syntax Highlighter Virtualized</h1>
-        <ExamplesLinks />
-        <SyntaxHighlighter
-          customStyle={{ height: '100vh' }}
-          style={this.state.style}
-          showLineNumbers={this.state.showLineNumbers}
-          renderer={renderer({
-            height: this.state.height,
-            width: this.state.width
-          })}
-          codeTagProps={{ style: { height: '100vh' } }}
-        >
-          {this.state.code}
-        </SyntaxHighlighter>
+      <div className="demo__root demo__root--virtualized">
+        <header>
+          <h1>React Syntax Highlighter Demo</h1>
+          <ExamplesLinks />
+        </header>
+
+        <main>
+          <aside className="options__container">
+            <div className="options__option options__option--theme">
+              <select
+                className="select"
+                value={this.state.selectedStyle}
+                onChange={e =>
+                  this.setState({
+                    style: require(`../src/styles/hljs/${e.target.value}`)
+                      .default,
+                    selectedStyle: e.target.value
+                  })
+                }
+              >
+                {availableStyles.map(s => (
+                  <option key={s} value={s}>
+                    {s}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div className="options__option options__option--line-numbers">
+              <label htmlFor="showLineNumbers" className="option__label">
+                <input
+                  type="checkbox"
+                  className="option__checkbox"
+                  checked={this.state.showLineNumbers}
+                  onChange={() =>
+                    this.setState({
+                      showLineNumbers: !this.state.showLineNumbers
+                    })
+                  }
+                  id="showLineNumbers"
+                />
+
+                <span className="label__text">Show line numbers</span>
+              </label>
+            </div>
+          </aside>
+
+          <article className="example__container">
+            <SyntaxHighlighter
+              language="javascript"
+              style={this.state.style}
+              showLineNumbers={this.state.showLineNumbers}
+              showInlineLineNumbers={true}
+              renderer={virtualizedRenderer({
+                rowHeight: 20
+              })}
+            >
+              {this.state.code}
+            </SyntaxHighlighter>
+          </article>
+        </main>
       </div>
     );
   }
