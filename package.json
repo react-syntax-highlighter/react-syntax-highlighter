@@ -53,7 +53,7 @@
   },
   "scripts": {
     "dev": "webpack-dev-server --hot --inline",
-    "build": "npm run build:cjs && npm run build:esm",
+    "build": "npm run build:cjs && npm run build:esm && webpack",
     "build:cjs": "BABEL_ENV=cjs babel src --out-dir ./dist/cjs",
     "build:esm": "BABEL_ENV=esm babel src --out-dir ./dist/esm",
     "watch": "babel src --watch --out-dir .",
