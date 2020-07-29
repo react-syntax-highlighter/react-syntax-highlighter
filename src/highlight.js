@@ -337,7 +337,10 @@ export default function(defaultAstGenerator, defaultStyle) {
       ? Object.assign({}, rest, {
           style: Object.assign({}, defaultPreStyle, customStyle)
         })
-      : Object.assign({}, rest, { className: 'hljs' });
+      : Object.assign({}, rest, {
+          className: rest.className ? `hljs ${rest.className}` : 'hljs',
+          style: Object.assign({}, customStyle)
+        });
 
     if (!astGenerator) {
       return (
