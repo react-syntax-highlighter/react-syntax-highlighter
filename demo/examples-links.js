@@ -25,7 +25,6 @@ const ExamplesLinks = () => {
   ];
 
   const baseLiClass = 'demo-nav__li';
-  const demoHost = 'http://localhost:9001';
 
   return (
     <nav className="demo-nav">
@@ -39,7 +38,7 @@ const ExamplesLinks = () => {
 
           return (
             <li className={itemClass}>
-              <a className="demo-nav__a" href={`${demoHost}${path}`}>
+              <a className="demo-nav__a" href={path}>
                 {label}
               </a>
             </li>
