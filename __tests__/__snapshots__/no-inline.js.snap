@@ -3,6 +3,7 @@
 exports[`SyntaxHighlighter component renders correctly without inline styles when useInlineStyles=false 1`] = `
 <pre
   className="hljs"
+  style={Object {}}
 >
   <code>
     <span
