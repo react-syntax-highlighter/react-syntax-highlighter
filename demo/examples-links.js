@@ -8,19 +8,19 @@ const ExamplesLinks = () => {
     },
     {
       label: 'Prism.js',
-      path: 'prism.html'
+      path: './prism.html'
     },
     {
       label: 'Diff',
-      path: 'diff.html'
+      path: './diff.html'
     },
     {
       label: 'Virtualized',
-      path: 'virtualized.html'
+      path: './virtualized.html'
     },
     {
       label: 'Prism async light',
-      path: 'prism-async-light.html'
+      path: './prism-async-light.html'
     }
   ];
 

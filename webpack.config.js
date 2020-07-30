@@ -6,7 +6,7 @@ module.exports = {
   devtool: 'source-map',
   mode: 'development',
   devServer: {
-    publicPath: '/demo',
+    publicPath: path.resolve('demo'),
     port: '9001',
     host: '0.0.0.0',
     compress: true,
@@ -36,7 +36,7 @@ module.exports = {
     prismAsyncLight: './demo/prism-async-light.js'
   },
   output: {
-    path: path.join(__dirname, 'demo'),
+    path: path.resolve('demo'),
     filename: '[name]-build.js'
   },
   module: {
