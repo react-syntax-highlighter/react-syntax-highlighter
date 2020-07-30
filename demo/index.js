@@ -62,6 +62,7 @@ function createElement({ node, style, useInlineStyles, key }) {
     };
   }
   render() {
+    console.warn('WOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO');
     return (
       <div className="demo__root demo__root--default">
         <header>

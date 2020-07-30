@@ -1,0 +1,72 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_highlight_jbossCli"],{
+
+/***/ "./node_modules/highlight.js/lib/languages/jboss-cli.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/highlight.js/lib/languages/jboss-cli.js ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/*
+ Language: JBoss CLI
+ Author: Raphaël Parrëe <rparree@edc4it.com>
+ Description: language definition jboss cli
+ Website: https://docs.jboss.org/author/display/WFLY/Command+Line+Interface
+ Category: config
+ */
+
+function jbossCli (hljs) {
+  var PARAM = {
+    begin: /[\w-]+ *=/, returnBegin: true,
+    relevance: 0,
+    contains: [{className: 'attr', begin: /[\w-]+/}]
+  };
+  var PARAMSBLOCK = {
+    className: 'params',
+    begin: /\(/,
+    end: /\)/,
+    contains: [PARAM],
+    relevance : 0
+  };
+  var OPERATION = {
+    className: 'function',
+    begin: /:[\w\-.]+/,
+    relevance: 0
+  };
+  var PATH = {
+    className: 'string',
+    begin: /\B(([\/.])[\w\-.\/=]+)+/,
+  };
+  var COMMAND_PARAMS = {
+    className: 'params',
+    begin: /--[\w\-=\/]+/,
+  };
+  return {
+    name: 'JBoss CLI',
+    aliases: ['wildfly-cli'],
+    keywords: {
+      $pattern: '[a-z\-]+',
+      keyword: 'alias batch cd clear command connect connection-factory connection-info data-source deploy ' +
+      'deployment-info deployment-overlay echo echo-dmr help history if jdbc-driver-info jms-queue|20 jms-topic|20 ls ' +
+      'patch pwd quit read-attribute read-operation reload rollout-plan run-batch set shutdown try unalias ' +
+      'undeploy unset version xa-data-source', // module
+      literal: 'true false'
+    },
+    contains: [
+      hljs.HASH_COMMENT_MODE,
+      hljs.QUOTE_STRING_MODE,
+      COMMAND_PARAMS,
+      OPERATION,
+      PATH,
+      PARAMSBLOCK
+    ]
+  }
+}
+
+module.exports = jbossCli;
+
+
+/***/ })
+
+}]);
+//# sourceMappingURL=react-syntax-highlighter_languages_highlight_jbossCli.js.map

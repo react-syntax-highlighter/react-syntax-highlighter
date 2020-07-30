@@ -4,42 +4,49 @@ const ExamplesLinks = () => {
   const demos = [
     {
       label: 'Highlight.js (default)',
-      path: '/demo/'
+      path: ''
     },
     {
       label: 'Prism.js',
-      path: '/demo/prism.html'
+      path: './prism.html'
     },
     {
       label: 'Diff',
-      path: '/demo/diff.html'
+      path: './diff.html'
     },
     {
       label: 'Virtualized',
-      path: '/demo/virtualized.html'
+      path: './virtualized.html'
     },
     {
       label: 'Prism async light',
-      path: '/demo/prism-async-light.html'
+      path: './prism-async-light.html'
     }
   ];
 
   const baseLiClass = 'demo-nav__li';
-  const demoHost = 'http://localhost:9001';
 
   return (
     <nav className="demo-nav">
       <ul className="demo-nav__ul">
         {demos.map(demo => {
           const { label, path } = demo;
-          const isCurrent = window.location.pathname === path;
+
+          const currentPath = new URL(window.location.href).pathname
+            .split('/')
+            .filter(Boolean)
+            .pop();
+          const isCurrent =
+            path === `./${currentPath}` || (!path && currentPath === 'demo');
           const itemClass = isCurrent
             ? `${baseLiClass} ${baseLiClass}--current`
             : baseLiClass;
 
+          console.log(`current: ${currentPath}`);
+
           return (
             <li className={itemClass}>
-              <a className="demo-nav__a" href={`${demoHost}${path}`}>
+              <a className="demo-nav__a" href={path || './'}>
                 {label}
               </a>
             </li>
