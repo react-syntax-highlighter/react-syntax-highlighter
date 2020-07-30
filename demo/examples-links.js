@@ -37,10 +37,12 @@ const ExamplesLinks = () => {
             .filter(Boolean)
             .pop();
           const isCurrent =
-            path === currentPath || (!path && currentPath === 'demo');
+            path === `./${currentPath}` || (!path && currentPath === 'demo');
           const itemClass = isCurrent
             ? `${baseLiClass} ${baseLiClass}--current`
             : baseLiClass;
+
+          console.log(`current: ${currentPath}`);
 
           return (
             <li className={itemClass}>

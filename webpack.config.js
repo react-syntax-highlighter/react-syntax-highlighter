@@ -6,7 +6,7 @@ module.exports = {
   devtool: 'source-map',
   mode: 'development',
   devServer: {
-    publicPath: path.resolve('demo'),
+    publicPath: '/demo',
     port: '9001',
     host: '0.0.0.0',
     compress: true,
