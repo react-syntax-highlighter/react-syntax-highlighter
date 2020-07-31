@@ -278,12 +278,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _src_prism_async_light__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../src/prism-async-light */ "./src/prism-async-light.js");
-/* harmony import */ var _examples_links__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./examples-links */ "./demo/examples-links.js");
-/* harmony import */ var _src_languages_prism_clike__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../src/languages/prism/clike */ "./src/languages/prism/clike.js");
-/* harmony import */ var _src_languages_prism_javascript__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../src/languages/prism/javascript */ "./src/languages/prism/javascript.js");
-/* harmony import */ var _src_languages_prism_jsx__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../src/languages/prism/jsx */ "./src/languages/prism/jsx.js");
-/* harmony import */ var _src_languages_prism_markup__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../src/languages/prism/markup */ "./src/languages/prism/markup.js");
-/* harmony import */ var _src_languages_prism_markup_templating__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../src/languages/prism/markup-templating */ "./src/languages/prism/markup-templating.js");
+/* harmony import */ var _styles_prism__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./styles/prism */ "./demo/styles/prism.js");
+/* harmony import */ var _examples_links__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./examples-links */ "./demo/examples-links.js");
+/* harmony import */ var _src_languages_prism_clike__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../src/languages/prism/clike */ "./src/languages/prism/clike.js");
+/* harmony import */ var _src_languages_prism_javascript__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../src/languages/prism/javascript */ "./src/languages/prism/javascript.js");
+/* harmony import */ var _src_languages_prism_jsx__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../src/languages/prism/jsx */ "./src/languages/prism/jsx.js");
+/* harmony import */ var _src_languages_prism_markup__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../src/languages/prism/markup */ "./src/languages/prism/markup.js");
+/* harmony import */ var _src_languages_prism_markup_templating__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../src/languages/prism/markup-templating */ "./src/languages/prism/markup-templating.js");
 
 
 
@@ -298,12 +299,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-_src_prism_async_light__WEBPACK_IMPORTED_MODULE_7__["default"].registerLanguage('clike', _src_languages_prism_clike__WEBPACK_IMPORTED_MODULE_9__["default"]);
-_src_prism_async_light__WEBPACK_IMPORTED_MODULE_7__["default"].registerLanguage('javascript', _src_languages_prism_javascript__WEBPACK_IMPORTED_MODULE_10__["default"]);
-_src_prism_async_light__WEBPACK_IMPORTED_MODULE_7__["default"].registerLanguage('jsx', _src_languages_prism_jsx__WEBPACK_IMPORTED_MODULE_11__["default"]);
-_src_prism_async_light__WEBPACK_IMPORTED_MODULE_7__["default"].registerLanguage('markup', _src_languages_prism_markup__WEBPACK_IMPORTED_MODULE_12__["default"]);
-_src_prism_async_light__WEBPACK_IMPORTED_MODULE_7__["default"].registerLanguage('markup-templating', _src_languages_prism_markup_templating__WEBPACK_IMPORTED_MODULE_13__["default"]);
-var availableStyles = ['atom-dark', 'base16-ateliersulphurpool.light', 'cb', 'coy', 'darcula', 'dark', 'duotone-dark', 'duotone-earth', 'duotone-forest', 'duotone-light', 'duotone-sea', 'duotone-space', 'funky', 'ghcolors', 'hopscotch', 'okaidia', 'pojoaque', 'prism', 'solarizedlight', 'tomorrow', 'twilight', 'vs', 'vs-dark', 'xonokai'];
+
+_src_prism_async_light__WEBPACK_IMPORTED_MODULE_7__["default"].registerLanguage('clike', _src_languages_prism_clike__WEBPACK_IMPORTED_MODULE_10__["default"]);
+_src_prism_async_light__WEBPACK_IMPORTED_MODULE_7__["default"].registerLanguage('javascript', _src_languages_prism_javascript__WEBPACK_IMPORTED_MODULE_11__["default"]);
+_src_prism_async_light__WEBPACK_IMPORTED_MODULE_7__["default"].registerLanguage('jsx', _src_languages_prism_jsx__WEBPACK_IMPORTED_MODULE_12__["default"]);
+_src_prism_async_light__WEBPACK_IMPORTED_MODULE_7__["default"].registerLanguage('markup', _src_languages_prism_markup__WEBPACK_IMPORTED_MODULE_13__["default"]);
+_src_prism_async_light__WEBPACK_IMPORTED_MODULE_7__["default"].registerLanguage('markup-templating', _src_languages_prism_markup_templating__WEBPACK_IMPORTED_MODULE_14__["default"]);
+var availableStyles = _styles_prism__WEBPACK_IMPORTED_MODULE_8__["default"];
 var availableLanguages = ['clike', 'javascript', 'jsx', 'markup', 'markup-templating'];
 
 var Component =
@@ -336,7 +338,7 @@ function (_React$Component) {
 
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "demo__root demo__root--prism-async-light"
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("header", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", null, "React Syntax Highlighter Demo"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_examples_links__WEBPACK_IMPORTED_MODULE_8__["default"], null)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("main", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("aside", {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("header", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", null, "React Syntax Highlighter Demo"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_examples_links__WEBPACK_IMPORTED_MODULE_9__["default"], null)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("main", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("aside", {
         className: "options__container"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "options__option options__option--language"
@@ -427,6 +429,22 @@ function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_5___default.a.Component);
 
 Object(react_dom__WEBPACK_IMPORTED_MODULE_6__["render"])(react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(Component, null), document.getElementById('app'));
+
+/***/ }),
+
+/***/ "./demo/styles/prism.js":
+/*!******************************!*\
+  !*** ./demo/styles/prism.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+// This file has been auto-generated by the `npm run build-styles-prism` task
+//
+/* harmony default export */ __webpack_exports__["default"] = (['a11y-dark', 'atom-dark', 'base16-ateliersulphurpool.light', 'cb', 'coy', 'darcula', 'dark', 'dracula', 'duotone-dark', 'duotone-earth', 'duotone-forest', 'duotone-light', 'duotone-sea', 'duotone-space', 'funky', 'ghcolors', 'hopscotch', 'material-dark', 'material-light', 'material-oceanic', 'nord', 'okaidia', 'pojoaque', 'prism', 'shades-of-purple', 'solarizedlight', 'synthwave84', 'tomorrow', 'twilight', 'vs', 'vsc-dark-plus', 'xonokai']);
 
 /***/ }),
 
