@@ -7,10 +7,12 @@
 * tomorrow
 * twilight
 * prism
+* a11yDark
 * atomDark
 * base16AteliersulphurpoolLight
 * cb
 * darcula
+* dracula
 * duotoneDark
 * duotoneEarth
 * duotoneForest
@@ -19,6 +21,13 @@
 * duotoneSpace
 * ghcolors
 * hopscotch
+* materialDark
+* materialLight
+* materialOceanic
+* nord
 * pojoaque
+* shadesOfPurple
+* synthwave84
 * vs
+* vscDarkPlus
 * xonokai
