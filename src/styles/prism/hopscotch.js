@@ -1,27 +1,6 @@
 export default {
     "code[class*=\"language-\"]": {
-        "color": "#b9b5b8",
-        "fontFamily": "\"Fira Mono\", Menlo, Monaco, \"Lucida Console\",\"Courier New\", Courier, monospace",
-        "fontSize": "16px",
-        "lineHeight": "1.375",
-        "direction": "ltr",
-        "textAlign": "left",
-        "wordSpacing": "normal",
-        "MozTabSize": "4",
-        "OTabSize": "4",
-        "tabSize": "4",
-        "WebkitHyphens": "none",
-        "MozHyphens": "none",
-        "msHyphens": "none",
-        "hyphens": "none",
-        "whiteSpace": "pre-wrap",
-        "wordBreak": "break-all",
-        "wordWrap": "break-word",
-        "background": "#322931"
-    },
-    "pre[class*=\"language-\"]": {
-        "color": "#b9b5b8",
-        "fontFamily": "\"Fira Mono\", Menlo, Monaco, \"Lucida Console\",\"Courier New\", Courier, monospace",
+        "fontFamily": "\"Fira Mono\", Menlo, Monaco, \"Lucida Console\", \"Courier New\", Courier, monospace",
         "fontSize": "16px",
         "lineHeight": "1.375",
         "direction": "ltr",
@@ -38,9 +17,33 @@ export default {
         "wordBreak": "break-all",
         "wordWrap": "break-word",
         "background": "#322931",
+        "color": "#b9b5b8"
+    },
+    "pre[class*=\"language-\"]": {
+        "fontFamily": "\"Fira Mono\", Menlo, Monaco, \"Lucida Console\", \"Courier New\", Courier, monospace",
+        "fontSize": "16px",
+        "lineHeight": "1.375",
+        "direction": "ltr",
+        "textAlign": "left",
+        "wordSpacing": "normal",
+        "MozTabSize": "4",
+        "OTabSize": "4",
+        "tabSize": "4",
+        "WebkitHyphens": "none",
+        "MozHyphens": "none",
+        "msHyphens": "none",
+        "hyphens": "none",
+        "whiteSpace": "pre-wrap",
+        "wordBreak": "break-all",
+        "wordWrap": "break-word",
+        "background": "#322931",
+        "color": "#b9b5b8",
         "padding": "1em",
         "margin": ".5em 0",
         "overflow": "auto"
+    },
+    "pre > code[class*=\"language-\"]": {
+        "fontSize": "1em"
     },
     ":not(pre) > code[class*=\"language-\"]": {
         "padding": ".1em",

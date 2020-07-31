@@ -35,7 +35,10 @@ export default {
         "overflow": "auto",
         "position": "relative"
     },
-    ":not(pre)>code[class*=\"language-\"]": {
+    "pre > code[class*=\"language-\"]": {
+        "fontSize": "1em"
+    },
+    ":not(pre) > code[class*=\"language-\"]": {
         "background": "#2a2a2a",
         "padding": "0.15em 0.2em 0.05em",
         "borderRadius": ".3em",

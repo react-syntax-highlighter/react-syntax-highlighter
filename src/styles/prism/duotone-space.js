@@ -40,6 +40,9 @@ export default {
         "margin": ".5em 0",
         "overflow": "auto"
     },
+    "pre > code[class*=\"language-\"]": {
+        "fontSize": "1em"
+    },
     "pre[class*=\"language-\"]::-moz-selection": {
         "textShadow": "none",
         "background": "#5151e6"

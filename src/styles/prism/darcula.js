@@ -39,35 +39,35 @@ export default {
     },
     "pre[class*=\"language-\"]::-moz-selection": {
         "color": "inherit",
-        "background": "rgba(33,66,131,.85)"
+        "background": "rgba(33, 66, 131, .85)"
     },
     "pre[class*=\"language-\"] ::-moz-selection": {
         "color": "inherit",
-        "background": "rgba(33,66,131,.85)"
+        "background": "rgba(33, 66, 131, .85)"
     },
     "code[class*=\"language-\"]::-moz-selection": {
         "color": "inherit",
-        "background": "rgba(33,66,131,.85)"
+        "background": "rgba(33, 66, 131, .85)"
     },
     "code[class*=\"language-\"] ::-moz-selection": {
         "color": "inherit",
-        "background": "rgba(33,66,131,.85)"
+        "background": "rgba(33, 66, 131, .85)"
     },
     "pre[class*=\"language-\"]::selection": {
         "color": "inherit",
-        "background": "rgba(33,66,131,.85)"
+        "background": "rgba(33, 66, 131, .85)"
     },
     "pre[class*=\"language-\"] ::selection": {
         "color": "inherit",
-        "background": "rgba(33,66,131,.85)"
+        "background": "rgba(33, 66, 131, .85)"
     },
     "code[class*=\"language-\"]::selection": {
         "color": "inherit",
-        "background": "rgba(33,66,131,.85)"
+        "background": "rgba(33, 66, 131, .85)"
     },
     "code[class*=\"language-\"] ::selection": {
         "color": "inherit",
-        "background": "rgba(33,66,131,.85)"
+        "background": "rgba(33, 66, 131, .85)"
     },
     ":not(pre) > code[class*=\"language-\"]": {
         "background": "#2b2b2b",

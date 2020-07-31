@@ -3,12 +3,14 @@
 //
 
 export default [
+  'a11y-dark',
   'atom-dark',
   'base16-ateliersulphurpool.light',
   'cb',
   'coy',
   'darcula',
   'dark',
+  'dracula',
   'duotone-dark',
   'duotone-earth',
   'duotone-forest',
@@ -18,12 +20,19 @@ export default [
   'funky',
   'ghcolors',
   'hopscotch',
+  'material-dark',
+  'material-light',
+  'material-oceanic',
+  'nord',
   'okaidia',
   'pojoaque',
   'prism',
+  'shades-of-purple',
   'solarizedlight',
+  'synthwave84',
   'tomorrow',
   'twilight',
   'vs',
+  'vsc-dark-plus',
   'xonokai'
 ];

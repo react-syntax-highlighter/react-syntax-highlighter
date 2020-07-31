@@ -38,6 +38,9 @@ export default {
         "padding": "12px",
         "overflow": "auto"
     },
+    "pre > code[class*=\"language-\"]": {
+        "fontSize": "1em"
+    },
     ":not(pre) > code[class*=\"language-\"]": {
         "borderRadius": "5px",
         "border": "1px solid #000",

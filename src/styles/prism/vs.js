@@ -7,7 +7,7 @@ export default {
         "whiteSpace": "pre",
         "wordSpacing": "normal",
         "wordBreak": "normal",
-        "fontSize": "0.95em",
+        "fontSize": ".9em",
         "lineHeight": "1.2em",
         "MozTabSize": "4",
         "OTabSize": "4",
@@ -25,7 +25,7 @@ export default {
         "whiteSpace": "pre",
         "wordSpacing": "normal",
         "wordBreak": "normal",
-        "fontSize": "0.95em",
+        "fontSize": ".9em",
         "lineHeight": "1.2em",
         "MozTabSize": "4",
         "OTabSize": "4",
@@ -39,6 +39,9 @@ export default {
         "overflow": "auto",
         "border": "1px solid #dddddd",
         "backgroundColor": "white"
+    },
+    "pre > code[class*=\"language-\"]": {
+        "fontSize": "1em"
     },
     "pre[class*=\"language-\"]::-moz-selection": {
         "background": "#C1DEF1"
@@ -186,7 +189,7 @@ export default {
     "entity": {
         "color": "#ff0000"
     },
-    "directive.tag  .tag": {
+    "directive.tag .tag": {
         "background": "#ffff00",
         "color": "#393A34"
     },

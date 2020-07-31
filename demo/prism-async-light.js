@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import SyntaxHighlighter from '../src/prism-async-light';
+import prismStyles from './styles/prism';
 import ExamplesLinks from './examples-links';
 
 import clike from '../src/languages/prism/clike';
@@ -15,33 +16,7 @@ SyntaxHighlighter.registerLanguage('jsx', jsx);
 SyntaxHighlighter.registerLanguage('markup', markup);
 SyntaxHighlighter.registerLanguage('markup-templating', markupTemplating);
 
-const availableStyles = [
-  'atom-dark',
-  'base16-ateliersulphurpool.light',
-  'cb',
-  'coy',
-  'darcula',
-  'dark',
-  'duotone-dark',
-  'duotone-earth',
-  'duotone-forest',
-  'duotone-light',
-  'duotone-sea',
-  'duotone-space',
-  'funky',
-  'ghcolors',
-  'hopscotch',
-  'okaidia',
-  'pojoaque',
-  'prism',
-  'solarizedlight',
-  'tomorrow',
-  'twilight',
-  'vs',
-  'vs-dark',
-  'xonokai'
-];
-
+const availableStyles = prismStyles;
 const availableLanguages = [
   'clike',
   'javascript',
