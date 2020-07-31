@@ -69,7 +69,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/conorhastings/react-syntax-highlighter.git"
+    "url": "git+https://github.com/react-syntax-highlighter/react-syntax-highlighter.git"
   },
   "keywords": [
     "react",
@@ -81,9 +81,9 @@
   "author": "Conor Hastings",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/conorhastings/react-syntax-highlighter/issues"
+    "url": "https://github.com/react-syntax-highlighter/react-syntax-highlighter/issues"
   },
-  "homepage": "https://github.com/conorhastings/react-syntax-highlighter#readme",
+  "homepage": "https://github.com/react-syntax-highlighter/react-syntax-highlighter#readme",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
