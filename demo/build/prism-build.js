@@ -41730,7 +41730,12 @@ __webpack_require__.r(__webpack_exports__);
     "WebkitHyphens": "none",
     "MozHyphens": "none",
     "msHyphens": "none",
-    "hyphens": "none"
+    "hyphens": "none",
+    "maxHeight": "inherit",
+    "height": "inherit",
+    "padding": "0 1em",
+    "display": "block",
+    "overflow": "auto"
   },
   "pre[class*=\"language-\"]": {
     "color": "black",
@@ -41769,13 +41774,6 @@ __webpack_require__.r(__webpack_exports__);
     "backgroundSize": "3em 3em",
     "backgroundOrigin": "content-box",
     "backgroundAttachment": "local"
-  },
-  "code[class*=\"language\"]": {
-    "maxHeight": "inherit",
-    "height": "inherit",
-    "padding": "0 1em",
-    "display": "block",
-    "overflow": "auto"
   },
   ":not(pre) > code[class*=\"language-\"]": {
     "backgroundColor": "#fdfdfd",
@@ -41825,15 +41823,6 @@ __webpack_require__.r(__webpack_exports__);
     "OTransform": "rotate(2deg)",
     "transform": "rotate(2deg)",
     "right": "0.75em"
-  },
-  ":not(pre) > code[class*=\"language-\"]:after": {
-    "right": "0.75em",
-    "left": "auto",
-    "WebkitTransform": "rotate(2deg)",
-    "MozTransform": "rotate(2deg)",
-    "msTransform": "rotate(2deg)",
-    "OTransform": "rotate(2deg)",
-    "transform": "rotate(2deg)"
   },
   "comment": {
     "color": "#7D8B99"
@@ -41950,15 +41939,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   "namespace": {
     "Opacity": ".7"
-  },
-  "tab:not(:empty):before": {
-    "color": "#e0d7d1"
-  },
-  "cr:before": {
-    "color": "#e0d7d1"
-  },
-  "lf:before": {
-    "color": "#e0d7d1"
   },
   "pre[class*=\"language-\"].line-numbers.line-numbers": {
     "paddingLeft": "0"
@@ -45431,16 +45411,16 @@ __webpack_require__.r(__webpack_exports__);
     "whiteSpace": "normal"
   },
   "comment": {
-    "color": "slategray"
+    "color": "#8292a2"
   },
   "prolog": {
-    "color": "slategray"
+    "color": "#8292a2"
   },
   "doctype": {
-    "color": "slategray"
+    "color": "#8292a2"
   },
   "cdata": {
-    "color": "slategray"
+    "color": "#8292a2"
   },
   "punctuation": {
     "color": "#f8f8f2"
