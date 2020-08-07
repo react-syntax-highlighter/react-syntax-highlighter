@@ -1,0 +1,174 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Syntaxhighliter correctly renders multi-line comments in arduino language 1`] = `
+<pre
+  style={
+    Object {
+      "background": "#F0F0F0",
+      "color": "#444",
+      "display": "block",
+      "overflowX": "auto",
+      "padding": "0.5em",
+    }
+  }
+>
+  <code>
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      style={Object {}}
+    >
+      
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#888888",
+        }
+      }
+    >
+      /* This is a multi-
+
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#888888",
+        }
+      }
+    >
+         line comment. 
+
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#888888",
+        }
+      }
+    >
+      */
+    </span>
+    <span
+      style={Object {}}
+    >
+      
+
+    </span>
+    
+
+    <span
+      style={Object {}}
+    >
+      
+    </span>
+    <span
+      className="hljs-function"
+      style={
+        Object {
+          "fontWeight": "bold",
+        }
+      }
+    >
+      void
+    </span>
+    <span
+      className="hljs-function"
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="hljs-function"
+      style={
+        Object {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      setup
+    </span>
+    <span
+      className="hljs-function hljs-params"
+      style={Object {}}
+    >
+      ()
+    </span>
+    <span
+      className="hljs-function"
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      style={Object {}}
+    >
+      {
+
+    </span>
+    }
+
+    
+
+    <span
+      style={Object {}}
+    >
+      
+    </span>
+    <span
+      className="hljs-function"
+      style={
+        Object {
+          "fontWeight": "bold",
+        }
+      }
+    >
+      void
+    </span>
+    <span
+      className="hljs-function"
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="hljs-function"
+      style={
+        Object {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      loop
+    </span>
+    <span
+      className="hljs-function hljs-params"
+      style={Object {}}
+    >
+      ()
+    </span>
+    <span
+      className="hljs-function"
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      style={Object {}}
+    >
+      {
+
+    </span>
+    }
+
+    
+
+  </code>
+</pre>
+`;
