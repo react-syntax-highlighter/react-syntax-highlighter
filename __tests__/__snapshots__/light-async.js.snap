@@ -736,26 +736,76 @@ exports[`SyntaxHighlighter renders fortran highlighted text 1`] = `
       'S FORMULA WE CALCULATE THE
 
     </span>
-                C AREA OF THE TRIANGLE
+    <span
+      className="hljs-string"
+      style={Object {}}
+    >
+                  C AREA OF THE TRIANGLE
 
-                799 S = FLOATF (IA + IB + IC) / 2.0
+    </span>
+    <span
+      className="hljs-string"
+      style={Object {}}
+    >
+                  799 S = FLOATF (IA + IB + IC) / 2.0
 
-                    AREA = SQRTF( S * (S - FLOATF(IA)) * (S - FLOATF(IB)) *
+    </span>
+    <span
+      className="hljs-string"
+      style={Object {}}
+    >
+                      AREA = SQRTF( S * (S - FLOATF(IA)) * (S - FLOATF(IB)) *
 
-                    +     (S - FLOATF(IC)))
+    </span>
+    <span
+      className="hljs-string"
+      style={Object {}}
+    >
+                      +     (S - FLOATF(IC)))
 
-                    WRITE OUTPUT TAPE 6, 601, IA, IB, IC, AREA
+    </span>
+    <span
+      className="hljs-string"
+      style={Object {}}
+    >
+                      WRITE OUTPUT TAPE 6, 601, IA, IB, IC, AREA
 
-                601 FORMAT (4H A= ,I5,5H  B= ,I5,5H  C= ,I5,8H  AREA= ,F10.2,
+    </span>
+    <span
+      className="hljs-string"
+      style={Object {}}
+    >
+                  601 FORMAT (4H A= ,I5,5H  B= ,I5,5H  C= ,I5,8H  AREA= ,F10.2,
 
-                    +        13H SQUARE UNITS)
+    </span>
+    <span
+      className="hljs-string"
+      style={Object {}}
+    >
+                      +        13H SQUARE UNITS)
 
-                    STOP
+    </span>
+    <span
+      className="hljs-string"
+      style={Object {}}
+    >
+                      STOP
 
-                    END
+    </span>
+    <span
+      className="hljs-string"
+      style={Object {}}
+    >
+                      END
 
-                       
+    </span>
+    <span
+      className="hljs-string"
+      style={Object {}}
+    >
+                         
 
+    </span>
   </code>
 </pre>
 `;
@@ -1533,26 +1583,76 @@ exports[`SyntaxHighlighter renders text while language loads 1`] = `
       'S FORMULA WE CALCULATE THE
 
     </span>
-                C AREA OF THE TRIANGLE
+    <span
+      className="hljs-string"
+      style={Object {}}
+    >
+                  C AREA OF THE TRIANGLE
 
-                799 S = FLOATF (IA + IB + IC) / 2.0
+    </span>
+    <span
+      className="hljs-string"
+      style={Object {}}
+    >
+                  799 S = FLOATF (IA + IB + IC) / 2.0
 
-                    AREA = SQRTF( S * (S - FLOATF(IA)) * (S - FLOATF(IB)) *
+    </span>
+    <span
+      className="hljs-string"
+      style={Object {}}
+    >
+                      AREA = SQRTF( S * (S - FLOATF(IA)) * (S - FLOATF(IB)) *
 
-                    +     (S - FLOATF(IC)))
+    </span>
+    <span
+      className="hljs-string"
+      style={Object {}}
+    >
+                      +     (S - FLOATF(IC)))
 
-                    WRITE OUTPUT TAPE 6, 601, IA, IB, IC, AREA
+    </span>
+    <span
+      className="hljs-string"
+      style={Object {}}
+    >
+                      WRITE OUTPUT TAPE 6, 601, IA, IB, IC, AREA
 
-                601 FORMAT (4H A= ,I5,5H  B= ,I5,5H  C= ,I5,8H  AREA= ,F10.2,
+    </span>
+    <span
+      className="hljs-string"
+      style={Object {}}
+    >
+                  601 FORMAT (4H A= ,I5,5H  B= ,I5,5H  C= ,I5,8H  AREA= ,F10.2,
 
-                    +        13H SQUARE UNITS)
+    </span>
+    <span
+      className="hljs-string"
+      style={Object {}}
+    >
+                      +        13H SQUARE UNITS)
 
-                    STOP
+    </span>
+    <span
+      className="hljs-string"
+      style={Object {}}
+    >
+                      STOP
 
-                    END
+    </span>
+    <span
+      className="hljs-string"
+      style={Object {}}
+    >
+                      END
 
-                       
+    </span>
+    <span
+      className="hljs-string"
+      style={Object {}}
+    >
+                         
 
+    </span>
   </code>
 </pre>
 `;

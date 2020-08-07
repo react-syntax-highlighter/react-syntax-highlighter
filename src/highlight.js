@@ -175,7 +175,7 @@ function processLines(
   }
 
   function createLine(children, lineNumber, className = []) {
-    return wrapLines
+    return wrapLines || className.length > 0
       ? createWrappedLine(children, lineNumber, className)
       : createUnwrappedLine(children, lineNumber);
   }
@@ -204,7 +204,7 @@ function processLines(
           const line = createLine(children, lineNumber);
           newTree.push(line);
 
-          // if it's neither the first nor the last line
+          // if it's the last line
         } else if (i === splitValue.length - 1) {
           const stringChild =
             tree[index + 1] &&
@@ -227,7 +227,7 @@ function processLines(
             newTree.push(line);
           }
 
-          // if it's the last line
+          // if it's neither the first nor the last line
         } else {
           const children = [newChild];
           const line = createLine(
