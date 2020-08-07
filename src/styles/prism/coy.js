@@ -16,7 +16,12 @@ export default {
         "WebkitHyphens": "none",
         "MozHyphens": "none",
         "msHyphens": "none",
-        "hyphens": "none"
+        "hyphens": "none",
+        "maxHeight": "inherit",
+        "height": "inherit",
+        "padding": "0 1em",
+        "display": "block",
+        "overflow": "auto"
     },
     "pre[class*=\"language-\"]": {
         "color": "black",
@@ -55,13 +60,6 @@ export default {
         "backgroundSize": "3em 3em",
         "backgroundOrigin": "content-box",
         "backgroundAttachment": "local"
-    },
-    "code[class*=\"language\"]": {
-        "maxHeight": "inherit",
-        "height": "inherit",
-        "padding": "0 1em",
-        "display": "block",
-        "overflow": "auto"
     },
     ":not(pre) > code[class*=\"language-\"]": {
         "backgroundColor": "#fdfdfd",
@@ -111,15 +109,6 @@ export default {
         "OTransform": "rotate(2deg)",
         "transform": "rotate(2deg)",
         "right": "0.75em"
-    },
-    ":not(pre) > code[class*=\"language-\"]:after": {
-        "right": "0.75em",
-        "left": "auto",
-        "WebkitTransform": "rotate(2deg)",
-        "MozTransform": "rotate(2deg)",
-        "msTransform": "rotate(2deg)",
-        "OTransform": "rotate(2deg)",
-        "transform": "rotate(2deg)"
     },
     "comment": {
         "color": "#7D8B99"
@@ -236,15 +225,6 @@ export default {
     },
     "namespace": {
         "Opacity": ".7"
-    },
-    "tab:not(:empty):before": {
-        "color": "#e0d7d1"
-    },
-    "cr:before": {
-        "color": "#e0d7d1"
-    },
-    "lf:before": {
-        "color": "#e0d7d1"
     },
     "pre[class*=\"language-\"].line-numbers.line-numbers": {
         "paddingLeft": "0"

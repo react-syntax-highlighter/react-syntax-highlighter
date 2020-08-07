@@ -50,16 +50,16 @@ export default {
         "whiteSpace": "normal"
     },
     "comment": {
-        "color": "slategray"
+        "color": "#8292a2"
     },
     "prolog": {
-        "color": "slategray"
+        "color": "#8292a2"
     },
     "doctype": {
-        "color": "slategray"
+        "color": "#8292a2"
     },
     "cdata": {
-        "color": "slategray"
+        "color": "#8292a2"
     },
     "punctuation": {
         "color": "#f8f8f2"

@@ -3669,6 +3669,8 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
      Begin prism-core.js
 ********************************************** */
 
+/// <reference lib="WebWorker"/>
+
 var _self = (typeof window !== 'undefined')
 	? window   // if in browser
 	: (
@@ -3679,10 +3681,12 @@ var _self = (typeof window !== 'undefined')
 
 /**
  * Prism: Lightweight, robust, elegant syntax highlighting
- * MIT license http://www.opensource.org/licenses/mit-license.php/
- * @author Lea Verou http://lea.verou.me
+ *
+ * @license MIT <https://opensource.org/licenses/MIT>
+ * @author Lea Verou <https://lea.verou.me>
+ * @namespace
+ * @public
  */
-
 var Prism = (function (_self){
 
 // Private helper vars
@@ -3691,8 +3695,39 @@ var uniqueId = 0;
 
 
 var _ = {
+	/**
+	 * By default, Prism will attempt to highlight all code elements (by calling {@link Prism.highlightAll}) on the
+	 * current page after the page finished loading. This might be a problem if e.g. you wanted to asynchronously load
+	 * additional languages or plugins yourself.
+	 *
+	 * By setting this value to `true`, Prism will not automatically highlight all code elements on the page.
+	 *
+	 * You obviously have to change this value before the automatic highlighting started. To do this, you can add an
+	 * empty Prism object into the global scope before loading the Prism script like this:
+	 *
+	 * ```js
+	 * window.Prism = window.Prism || {};
+	 * Prism.manual = true;
+	 * // add a new <script> to load Prism's script
+	 * ```
+	 *
+	 * @default false
+	 * @type {boolean}
+	 * @memberof Prism
+	 * @public
+	 */
 	manual: _self.Prism && _self.Prism.manual,
 	disableWorkerMessageHandler: _self.Prism && _self.Prism.disableWorkerMessageHandler,
+
+	/**
+	 * A namespace for utility methods.
+	 *
+	 * All function in this namespace that are not explicitly marked as _public_ are for __internal use only__ and may
+	 * change or disappear at any time.
+	 *
+	 * @namespace
+	 * @memberof Prism
+	 */
 	util: {
 		encode: function encode(tokens) {
 			if (tokens instanceof Token) {
@@ -3704,10 +3739,32 @@ var _ = {
 			}
 		},
 
+		/**
+		 * Returns the name of the type of the given value.
+		 *
+		 * @param {any} o
+		 * @returns {string}
+		 * @example
+		 * type(null)      === 'Null'
+		 * type(undefined) === 'Undefined'
+		 * type(123)       === 'Number'
+		 * type('foo')     === 'String'
+		 * type(true)      === 'Boolean'
+		 * type([1, 2])    === 'Array'
+		 * type({})        === 'Object'
+		 * type(String)    === 'Function'
+		 * type(/abc+/)    === 'RegExp'
+		 */
 		type: function (o) {
 			return Object.prototype.toString.call(o).slice(8, -1);
 		},
 
+		/**
+		 * Returns a unique number for the given object. Later calls will still return the same number.
+		 *
+		 * @param {Object} obj
+		 * @returns {number}
+		 */
 		objId: function (obj) {
 			if (!obj['__id']) {
 				Object.defineProperty(obj, '__id', { value: ++uniqueId });
@@ -3715,18 +3772,27 @@ var _ = {
 			return obj['__id'];
 		},
 
-		// Deep clone a language definition (e.g. to extend it)
+		/**
+		 * Creates a deep clone of the given object.
+		 *
+		 * The main intended use of this function is to clone language definitions.
+		 *
+		 * @param {T} o
+		 * @param {Record<number, any>} [visited]
+		 * @returns {T}
+		 * @template T
+		 */
 		clone: function deepClone(o, visited) {
-			var clone, id, type = _.util.type(o);
 			visited = visited || {};
 
-			switch (type) {
+			var clone, id;
+			switch (_.util.type(o)) {
 				case 'Object':
 					id = _.util.objId(o);
 					if (visited[id]) {
 						return visited[id];
 					}
-					clone = {};
+					clone = /** @type {Record<string, any>} */ ({});
 					visited[id] = clone;
 
 					for (var key in o) {
@@ -3735,7 +3801,7 @@ var _ = {
 						}
 					}
 
-					return clone;
+					return /** @type {any} */ (clone);
 
 				case 'Array':
 					id = _.util.objId(o);
@@ -3745,11 +3811,11 @@ var _ = {
 					clone = [];
 					visited[id] = clone;
 
-					o.forEach(function (v, i) {
+					(/** @type {Array} */(/** @type {any} */(o))).forEach(function (v, i) {
 						clone[i] = deepClone(v, visited);
 					});
 
-					return clone;
+					return /** @type {any} */ (clone);
 
 				default:
 					return o;
@@ -3785,8 +3851,8 @@ var _ = {
 			if (typeof document === 'undefined') {
 				return null;
 			}
-			if ('currentScript' in document) {
-				return document.currentScript;
+			if ('currentScript' in document && 1 < 2 /* hack to trip TS' flow analysis */) {
+				return /** @type {any} */ (document.currentScript);
 			}
 
 			// IE11 workaround
@@ -3814,10 +3880,80 @@ var _ = {
 				}
 				return null;
 			}
+		},
+
+		/**
+		 * Returns whether a given class is active for `element`.
+		 *
+		 * The class can be activated if `element` or one of its ancestors has the given class and it can be deactivated
+		 * if `element` or one of its ancestors has the negated version of the given class. The _negated version_ of the
+		 * given class is just the given class with a `no-` prefix.
+		 *
+		 * Whether the class is active is determined by the closest ancestor of `element` (where `element` itself is
+		 * closest ancestor) that has the given class or the negated version of it. If neither `element` nor any of its
+		 * ancestors have the given class or the negated version of it, then the default activation will be returned.
+		 *
+		 * In the paradoxical situation where the closest ancestor contains __both__ the given class and the negated
+		 * version of it, the class is considered active.
+		 *
+		 * @param {Element} element
+		 * @param {string} className
+		 * @param {boolean} [defaultActivation=false]
+		 * @returns {boolean}
+		 */
+		isActive: function (element, className, defaultActivation) {
+			var no = 'no-' + className;
+
+			while (element) {
+				var classList = element.classList;
+				if (classList.contains(className)) {
+					return true;
+				}
+				if (classList.contains(no)) {
+					return false;
+				}
+				element = element.parentElement;
+			}
+			return !!defaultActivation;
 		}
 	},
 
+	/**
+	 * This namespace contains all currently loaded languages and the some helper functions to create and modify languages.
+	 *
+	 * @namespace
+	 * @memberof Prism
+	 * @public
+	 */
 	languages: {
+		/**
+		 * Creates a deep copy of the language with the given id and appends the given tokens.
+		 *
+		 * If a token in `redef` also appears in the copied language, then the existing token in the copied language
+		 * will be overwritten at its original position.
+		 *
+		 * ## Best practices
+		 *
+		 * Since the position of overwriting tokens (token in `redef` that overwrite tokens in the copied language)
+		 * doesn't matter, they can technically be in any order. However, this can be confusing to others that trying to
+		 * understand the language definition because, normally, the order of tokens matters in Prism grammars.
+		 *
+		 * Therefore, it is encouraged to order overwriting tokens according to the positions of the overwritten tokens.
+		 * Furthermore, all non-overwriting tokens should be placed after the overwriting ones.
+		 *
+		 * @param {string} id The id of the language to extend. This has to be a key in `Prism.languages`.
+		 * @param {Grammar} redef The new tokens to append.
+		 * @returns {Grammar} The new language created.
+		 * @public
+		 * @example
+		 * Prism.languages['css-with-colors'] = Prism.languages.extend('css', {
+		 *     // Prism.languages.css already has a 'comment' token, so this token will overwrite CSS' 'comment' token
+		 *     // at its original position
+		 *     'comment': { ... },
+		 *     // CSS doesn't have a 'color' token, so this token will be appended
+		 *     'color': /\b(?:red|green|blue)\b/
+		 * });
+		 */
 		extend: function (id, redef) {
 			var lang = _.util.clone(_.languages[id]);
 
@@ -3829,17 +3965,84 @@ var _ = {
 		},
 
 		/**
-		 * Insert a token before another token in a language literal
-		 * As this needs to recreate the object (we cannot actually insert before keys in object literals),
-		 * we cannot just provide an object, we need an object and a key.
-		 * @param inside The key (or language id) of the parent
-		 * @param before The key to insert before.
-		 * @param insert Object with the key/value pairs to insert
-		 * @param root The object that contains `inside`. If equal to Prism.languages, it can be omitted.
+		 * Inserts tokens _before_ another token in a language definition or any other grammar.
+		 *
+		 * ## Usage
+		 *
+		 * This helper method makes it easy to modify existing languages. For example, the CSS language definition
+		 * not only defines CSS highlighting for CSS documents, but also needs to define highlighting for CSS embedded
+		 * in HTML through `<style>` elements. To do this, it needs to modify `Prism.languages.markup` and add the
+		 * appropriate tokens. However, `Prism.languages.markup` is a regular JavaScript object literal, so if you do
+		 * this:
+		 *
+		 * ```js
+		 * Prism.languages.markup.style = {
+		 *     // token
+		 * };
+		 * ```
+		 *
+		 * then the `style` token will be added (and processed) at the end. `insertBefore` allows you to insert tokens
+		 * before existing tokens. For the CSS example above, you would use it like this:
+		 *
+		 * ```js
+		 * Prism.languages.insertBefore('markup', 'cdata', {
+		 *     'style': {
+		 *         // token
+		 *     }
+		 * });
+		 * ```
+		 *
+		 * ## Special cases
+		 *
+		 * If the grammars of `inside` and `insert` have tokens with the same name, the tokens in `inside`'s grammar
+		 * will be ignored.
+		 *
+		 * This behavior can be used to insert tokens after `before`:
+		 *
+		 * ```js
+		 * Prism.languages.insertBefore('markup', 'comment', {
+		 *     'comment': Prism.languages.markup.comment,
+		 *     // tokens after 'comment'
+		 * });
+		 * ```
+		 *
+		 * ## Limitations
+		 *
+		 * The main problem `insertBefore` has to solve is iteration order. Since ES2015, the iteration order for object
+		 * properties is guaranteed to be the insertion order (except for integer keys) but some browsers behave
+		 * differently when keys are deleted and re-inserted. So `insertBefore` can't be implemented by temporarily
+		 * deleting properties which is necessary to insert at arbitrary positions.
+		 *
+		 * To solve this problem, `insertBefore` doesn't actually insert the given tokens into the target object.
+		 * Instead, it will create a new object and replace all references to the target object with the new one. This
+		 * can be done without temporarily deleting properties, so the iteration order is well-defined.
+		 *
+		 * However, only references that can be reached from `Prism.languages` or `insert` will be replaced. I.e. if
+		 * you hold the target object in a variable, then the value of the variable will not change.
+		 *
+		 * ```js
+		 * var oldMarkup = Prism.languages.markup;
+		 * var newMarkup = Prism.languages.insertBefore('markup', 'comment', { ... });
+		 *
+		 * assert(oldMarkup !== Prism.languages.markup);
+		 * assert(newMarkup === Prism.languages.markup);
+		 * ```
+		 *
+		 * @param {string} inside The property of `root` (e.g. a language id in `Prism.languages`) that contains the
+		 * object to be modified.
+		 * @param {string} before The key to insert before.
+		 * @param {Grammar} insert An object containing the key-value pairs to be inserted.
+		 * @param {Object<string, any>} [root] The object containing `inside`, i.e. the object that contains the
+		 * object to be modified.
+		 *
+		 * Defaults to `Prism.languages`.
+		 * @returns {Grammar} The new grammar object.
+		 * @public
 		 */
 		insertBefore: function (inside, before, insert, root) {
-			root = root || _.languages;
+			root = root || /** @type {any} */ (_.languages);
 			var grammar = root[inside];
+			/** @type {Grammar} */
 			var ret = {};
 
 			for (var token in grammar) {
@@ -3898,12 +4101,39 @@ var _ = {
 			}
 		}
 	},
+
 	plugins: {},
 
+	/**
+	 * This is the most high-level function in Prism’s API.
+	 * It fetches all the elements that have a `.language-xxxx` class and then calls {@link Prism.highlightElement} on
+	 * each one of them.
+	 *
+	 * This is equivalent to `Prism.highlightAllUnder(document, async, callback)`.
+	 *
+	 * @param {boolean} [async=false] Same as in {@link Prism.highlightAllUnder}.
+	 * @param {HighlightCallback} [callback] Same as in {@link Prism.highlightAllUnder}.
+	 * @memberof Prism
+	 * @public
+	 */
 	highlightAll: function(async, callback) {
 		_.highlightAllUnder(document, async, callback);
 	},
 
+	/**
+	 * Fetches all the descendants of `container` that have a `.language-xxxx` class and then calls
+	 * {@link Prism.highlightElement} on each one of them.
+	 *
+	 * The following hooks will be run:
+	 * 1. `before-highlightall`
+	 * 2. All hooks of {@link Prism.highlightElement} for each element.
+	 *
+	 * @param {ParentNode} container The root element, whose descendants that have a `.language-xxxx` class will be highlighted.
+	 * @param {boolean} [async=false] Whether each element is to be highlighted asynchronously using Web Workers.
+	 * @param {HighlightCallback} [callback] An optional callback to be invoked on each element after its highlighting is done.
+	 * @memberof Prism
+	 * @public
+	 */
 	highlightAllUnder: function(container, async, callback) {
 		var env = {
 			callback: callback,
@@ -3922,6 +4152,31 @@ var _ = {
 		}
 	},
 
+	/**
+	 * Highlights the code inside a single element.
+	 *
+	 * The following hooks will be run:
+	 * 1. `before-sanity-check`
+	 * 2. `before-highlight`
+	 * 3. All hooks of {@link Prism.highlight}. These hooks will only be run by the current worker if `async` is `true`.
+	 * 4. `before-insert`
+	 * 5. `after-highlight`
+	 * 6. `complete`
+	 *
+	 * @param {Element} element The element containing the code.
+	 * It must have a class of `language-xxxx` to be processed, where `xxxx` is a valid language identifier.
+	 * @param {boolean} [async=false] Whether the element is to be highlighted asynchronously using Web Workers
+	 * to improve performance and avoid blocking the UI when highlighting very large chunks of code. This option is
+	 * [disabled by default](https://prismjs.com/faq.html#why-is-asynchronous-highlighting-disabled-by-default).
+	 *
+	 * Note: All language definitions required to highlight the code must be included in the main `prism.js` file for
+	 * asynchronous highlighting to work. You can build your own bundle on the
+	 * [Download page](https://prismjs.com/download.html).
+	 * @param {HighlightCallback} [callback] An optional callback to be invoked after the highlighting is done.
+	 * Mostly useful when `async` is `true`, since in that case, the highlighting is done asynchronously.
+	 * @memberof Prism
+	 * @public
+	 */
 	highlightElement: function(element, async, callback) {
 		// Find language
 		var language = _.util.getLanguage(element);
@@ -3931,7 +4186,7 @@ var _ = {
 		element.className = element.className.replace(lang, '').replace(/\s+/g, ' ') + ' language-' + language;
 
 		// Set language on the parent, for styling
-		var parent = element.parentNode;
+		var parent = element.parentElement;
 		if (parent && parent.nodeName.toLowerCase() === 'pre') {
 			parent.className = parent.className.replace(lang, '').replace(/\s+/g, ' ') + ' language-' + language;
 		}
@@ -3990,6 +4245,26 @@ var _ = {
 		}
 	},
 
+	/**
+	 * Low-level function, only use if you know what you’re doing. It accepts a string of text as input
+	 * and the language definitions to use, and returns a string with the HTML produced.
+	 *
+	 * The following hooks will be run:
+	 * 1. `before-tokenize`
+	 * 2. `after-tokenize`
+	 * 3. `wrap`: On each {@link Token}.
+	 *
+	 * @param {string} text A string with the code to be highlighted.
+	 * @param {Grammar} grammar An object containing the tokens to use.
+	 *
+	 * Usually a language definition like `Prism.languages.markup`.
+	 * @param {string} language The name of the language definition passed to `grammar`.
+	 * @returns {string} The highlighted HTML.
+	 * @memberof Prism
+	 * @public
+	 * @example
+	 * Prism.highlight('var foo = true;', Prism.languages.javascript, 'javascript');
+	 */
 	highlight: function (text, grammar, language) {
 		var env = {
 			code: text,
@@ -4002,6 +4277,30 @@ var _ = {
 		return Token.stringify(_.util.encode(env.tokens), env.language);
 	},
 
+	/**
+	 * This is the heart of Prism, and the most low-level function you can use. It accepts a string of text as input
+	 * and the language definitions to use, and returns an array with the tokenized code.
+	 *
+	 * When the language definition includes nested tokens, the function is called recursively on each of these tokens.
+	 *
+	 * This method could be useful in other contexts as well, as a very crude parser.
+	 *
+	 * @param {string} text A string with the code to be highlighted.
+	 * @param {Grammar} grammar An object containing the tokens to use.
+	 *
+	 * Usually a language definition like `Prism.languages.markup`.
+	 * @returns {TokenStream} An array of strings and tokens, a token stream.
+	 * @memberof Prism
+	 * @public
+	 * @example
+	 * let code = `var foo = 0;`;
+	 * let tokens = Prism.tokenize(code, Prism.languages.javascript);
+	 * tokens.forEach(token => {
+	 *     if (token instanceof Prism.Token && token.type === 'number') {
+	 *         console.log(`Found numeric literal: ${token.content}`);
+	 *     }
+	 * });
+	 */
 	tokenize: function(text, grammar) {
 		var rest = grammar.rest;
 		if (rest) {
@@ -4020,9 +4319,26 @@ var _ = {
 		return toArray(tokenList);
 	},
 
+	/**
+	 * @namespace
+	 * @memberof Prism
+	 * @public
+	 */
 	hooks: {
 		all: {},
 
+		/**
+		 * Adds the given callback to the list of callbacks for the given hook.
+		 *
+		 * The callback will be invoked when the hook it is registered for is run.
+		 * Hooks are usually directly run by a highlight function but you can also run hooks yourself.
+		 *
+		 * One callback function can be registered to multiple hooks and the same hook multiple times.
+		 *
+		 * @param {string} name The name of the hook.
+		 * @param {HookCallback} callback The callback function which is given environment variables.
+		 * @public
+		 */
 		add: function (name, callback) {
 			var hooks = _.hooks.all;
 
@@ -4031,6 +4347,15 @@ var _ = {
 			hooks[name].push(callback);
 		},
 
+		/**
+		 * Runs a hook invoking all registered callbacks with the given environment variables.
+		 *
+		 * Callbacks will be invoked synchronously and in the order in which they were registered.
+		 *
+		 * @param {string} name The name of the hook.
+		 * @param {Object<string, any>} env The environment variables of the hook passed to all callbacks registered.
+		 * @public
+		 */
 		run: function (name, env) {
 			var callbacks = _.hooks.all[name];
 
@@ -4046,18 +4371,85 @@ var _ = {
 
 	Token: Token
 };
-
 _self.Prism = _;
 
-function Token(type, content, alias, matchedStr, greedy) {
+
+// Typescript note:
+// The following can be used to import the Token type in JSDoc:
+//
+//   @typedef {InstanceType<import("./prism-core")["Token"]>} Token
+
+/**
+ * Creates a new token.
+ *
+ * @param {string} type See {@link Token#type type}
+ * @param {string | TokenStream} content See {@link Token#content content}
+ * @param {string|string[]} [alias] The alias(es) of the token.
+ * @param {string} [matchedStr=""] A copy of the full string this token was created from.
+ * @class
+ * @global
+ * @public
+ */
+function Token(type, content, alias, matchedStr) {
+	/**
+	 * The type of the token.
+	 *
+	 * This is usually the key of a pattern in a {@link Grammar}.
+	 *
+	 * @type {string}
+	 * @see GrammarToken
+	 * @public
+	 */
 	this.type = type;
+	/**
+	 * The strings or tokens contained by this token.
+	 *
+	 * This will be a token stream if the pattern matched also defined an `inside` grammar.
+	 *
+	 * @type {string | TokenStream}
+	 * @public
+	 */
 	this.content = content;
+	/**
+	 * The alias(es) of the token.
+	 *
+	 * @type {string|string[]}
+	 * @see GrammarToken
+	 * @public
+	 */
 	this.alias = alias;
 	// Copy of the full string this token was created from
-	this.length = (matchedStr || '').length|0;
-	this.greedy = !!greedy;
+	this.length = (matchedStr || '').length | 0;
 }
 
+/**
+ * A token stream is an array of strings and {@link Token Token} objects.
+ *
+ * Token streams have to fulfill a few properties that are assumed by most functions (mostly internal ones) that process
+ * them.
+ *
+ * 1. No adjacent strings.
+ * 2. No empty strings.
+ *
+ *    The only exception here is the token stream that only contains the empty string and nothing else.
+ *
+ * @typedef {Array<string | Token>} TokenStream
+ * @global
+ * @public
+ */
+
+/**
+ * Converts the given token or token stream to an HTML representation.
+ *
+ * The following hooks will be run:
+ * 1. `wrap`: On each {@link Token}.
+ *
+ * @param {string | Token | TokenStream} o The token or token stream to be converted.
+ * @param {string} language The name of current language.
+ * @returns {string} The HTML representation of the token or token stream.
+ * @memberof Token
+ * @static
+ */
 Token.stringify = function stringify(o, language) {
 	if (typeof o == 'string') {
 		return o;
@@ -4104,10 +4496,15 @@ Token.stringify = function stringify(o, language) {
  * @param {any} grammar
  * @param {LinkedListNode<string | Token>} startNode
  * @param {number} startPos
- * @param {boolean} [oneshot=false]
- * @param {string} [target]
+ * @param {RematchOptions} [rematch]
+ * @returns {void}
+ * @private
+ *
+ * @typedef RematchOptions
+ * @property {string} cause
+ * @property {number} reach
  */
-function matchGrammar(text, tokenList, grammar, startNode, startPos, oneshot, target) {
+function matchGrammar(text, tokenList, grammar, startNode, startPos, rematch) {
 	for (var token in grammar) {
 		if (!grammar.hasOwnProperty(token) || !grammar[token]) {
 			continue;
@@ -4117,30 +4514,35 @@ function matchGrammar(text, tokenList, grammar, startNode, startPos, oneshot, ta
 		patterns = Array.isArray(patterns) ? patterns : [patterns];
 
 		for (var j = 0; j < patterns.length; ++j) {
-			if (target && target == token + ',' + j) {
+			if (rematch && rematch.cause == token + ',' + j) {
 				return;
 			}
 
-			var pattern = patterns[j],
-				inside = pattern.inside,
-				lookbehind = !!pattern.lookbehind,
-				greedy = !!pattern.greedy,
+			var patternObj = patterns[j],
+				inside = patternObj.inside,
+				lookbehind = !!patternObj.lookbehind,
+				greedy = !!patternObj.greedy,
 				lookbehindLength = 0,
-				alias = pattern.alias;
+				alias = patternObj.alias;
 
-			if (greedy && !pattern.pattern.global) {
+			if (greedy && !patternObj.pattern.global) {
 				// Without the global flag, lastIndex won't work
-				var flags = pattern.pattern.toString().match(/[imsuy]*$/)[0];
-				pattern.pattern = RegExp(pattern.pattern.source, flags + 'g');
+				var flags = patternObj.pattern.toString().match(/[imsuy]*$/)[0];
+				patternObj.pattern = RegExp(patternObj.pattern.source, flags + 'g');
 			}
 
-			pattern = pattern.pattern || pattern;
+			/** @type {RegExp} */
+			var pattern = patternObj.pattern || patternObj;
 
 			for ( // iterate the token list and keep track of the current token/string position
 				var currentNode = startNode.next, pos = startPos;
 				currentNode !== tokenList.tail;
 				pos += currentNode.value.length, currentNode = currentNode.next
 			) {
+
+				if (rematch && pos >= rematch.reach) {
+					break;
+				}
 
 				var str = currentNode.value;
 
@@ -4184,7 +4586,7 @@ function matchGrammar(text, tokenList, grammar, startNode, startPos, oneshot, ta
 					// find the last node which is affected by this match
 					for (
 						var k = currentNode;
-						k !== tokenList.tail && (p < to || (typeof k.value === 'string' && !k.prev.value.greedy));
+						k !== tokenList.tail && (p < to || typeof k.value === 'string');
 						k = k.next
 					) {
 						removeCount++;
@@ -4202,10 +4604,6 @@ function matchGrammar(text, tokenList, grammar, startNode, startPos, oneshot, ta
 				}
 
 				if (!match) {
-					if (oneshot) {
-						break;
-					}
-
 					continue;
 				}
 
@@ -4214,10 +4612,15 @@ function matchGrammar(text, tokenList, grammar, startNode, startPos, oneshot, ta
 				}
 
 				var from = match.index + lookbehindLength,
-					match = match[0].slice(lookbehindLength),
-					to = from + match.length,
+					matchStr = match[0].slice(lookbehindLength),
+					to = from + matchStr.length,
 					before = str.slice(0, from),
 					after = str.slice(to);
+
+				var reach = pos + str.length;
+				if (rematch && reach > rematch.reach) {
+					rematch.reach = reach;
+				}
 
 				var removeFrom = currentNode.prev;
 
@@ -4228,19 +4631,21 @@ function matchGrammar(text, tokenList, grammar, startNode, startPos, oneshot, ta
 
 				removeRange(tokenList, removeFrom, removeCount);
 
-				var wrapped = new Token(token, inside ? _.tokenize(match, inside) : match, alias, match, greedy);
+				var wrapped = new Token(token, inside ? _.tokenize(matchStr, inside) : matchStr, alias, matchStr);
 				currentNode = addAfter(tokenList, removeFrom, wrapped);
 
 				if (after) {
 					addAfter(tokenList, currentNode, after);
 				}
 
-
-				if (removeCount > 1)
-					matchGrammar(text, tokenList, grammar, currentNode.prev, pos, true, token + ',' + j);
-
-				if (oneshot)
-					break;
+				if (removeCount > 1) {
+					// at least one Token object was removed, so we have to do some rematching
+					// this can only happen if the current pattern is greedy
+					matchGrammar(text, tokenList, grammar, currentNode.prev, pos, {
+						cause: token + ',' + j,
+						reach: reach
+					});
+				}
 			}
 		}
 	}
@@ -4252,10 +4657,12 @@ function matchGrammar(text, tokenList, grammar, startNode, startPos, oneshot, ta
  * @property {LinkedListNode<T> | null} prev The previous node.
  * @property {LinkedListNode<T> | null} next The next node.
  * @template T
+ * @private
  */
 
 /**
  * @template T
+ * @private
  */
 function LinkedList() {
 	/** @type {LinkedListNode<T>} */
@@ -4346,7 +4753,7 @@ if (!_self.document) {
 	return _;
 }
 
-//Get current script and highlight
+// Get current script and highlight
 var script = _.util.currentScript();
 
 if (script) {
@@ -4395,6 +4802,55 @@ if (typeof global !== 'undefined') {
 	global.Prism = Prism;
 }
 
+// some additional documentation/types
+
+/**
+ * The expansion of a simple `RegExp` literal to support additional properties.
+ *
+ * @typedef GrammarToken
+ * @property {RegExp} pattern The regular expression of the token.
+ * @property {boolean} [lookbehind=false] If `true`, then the first capturing group of `pattern` will (effectively)
+ * behave as a lookbehind group meaning that the captured text will not be part of the matched text of the new token.
+ * @property {boolean} [greedy=false] Whether the token is greedy.
+ * @property {string|string[]} [alias] An optional alias or list of aliases.
+ * @property {Grammar} [inside] The nested grammar of this token.
+ *
+ * The `inside` grammar will be used to tokenize the text value of each token of this kind.
+ *
+ * This can be used to make nested and even recursive language definitions.
+ *
+ * Note: This can cause infinite recursion. Be careful when you embed different languages or even the same language into
+ * each another.
+ * @global
+ * @public
+*/
+
+/**
+ * @typedef Grammar
+ * @type {Object<string, RegExp | GrammarToken | Array<RegExp | GrammarToken>>}
+ * @property {Grammar} [rest] An optional grammar object that will be appended to this grammar.
+ * @global
+ * @public
+ */
+
+/**
+ * A function which will invoked after an element was successfully highlighted.
+ *
+ * @callback HighlightCallback
+ * @param {Element} element The element successfully highlighted.
+ * @returns {void}
+ * @global
+ * @public
+*/
+
+/**
+ * @callback HookCallback
+ * @param {Object<string, any>} env The environment variables of the hook.
+ * @returns {void}
+ * @global
+ * @public
+ */
+
 
 /* **********************************************
      Begin prism-markup.js
@@ -4404,30 +4860,46 @@ Prism.languages.markup = {
 	'comment': /<!--[\s\S]*?-->/,
 	'prolog': /<\?[\s\S]+?\?>/,
 	'doctype': {
-		pattern: /<!DOCTYPE(?:[^>"'[\]]|"[^"]*"|'[^']*')+(?:\[(?:(?!<!--)[^"'\]]|"[^"]*"|'[^']*'|<!--[\s\S]*?-->)*\]\s*)?>/i,
-		greedy: true
+		// https://www.w3.org/TR/xml/#NT-doctypedecl
+		pattern: /<!DOCTYPE(?:[^>"'[\]]|"[^"]*"|'[^']*')+(?:\[(?:[^<"'\]]|"[^"]*"|'[^']*'|<(?!!--)|<!--(?:[^-]|-(?!->))*-->)*\]\s*)?>/i,
+		greedy: true,
+		inside: {
+			'internal-subset': {
+				pattern: /(\[)[\s\S]+(?=\]>$)/,
+				lookbehind: true,
+				greedy: true,
+				inside: null // see below
+			},
+			'string': {
+				pattern: /"[^"]*"|'[^']*'/,
+				greedy: true
+			},
+			'punctuation': /^<!|>$|[[\]]/,
+			'doctype-tag': /^DOCTYPE/,
+			'name': /[^\s<>'"]+/
+		}
 	},
 	'cdata': /<!\[CDATA\[[\s\S]*?]]>/i,
 	'tag': {
-		pattern: /<\/?(?!\d)[^\s>\/=$<%]+(?:\s(?:\s*[^\s>\/=]+(?:\s*=\s*(?:"[^"]*"|'[^']*'|[^\s'">=]+(?=[\s>]))|(?=[\s/>])))+)?\s*\/?>/i,
+		pattern: /<\/?(?!\d)[^\s>\/=$<%]+(?:\s(?:\s*[^\s>\/=]+(?:\s*=\s*(?:"[^"]*"|'[^']*'|[^\s'">=]+(?=[\s>]))|(?=[\s/>])))+)?\s*\/?>/,
 		greedy: true,
 		inside: {
 			'tag': {
-				pattern: /^<\/?[^\s>\/]+/i,
+				pattern: /^<\/?[^\s>\/]+/,
 				inside: {
 					'punctuation': /^<\/?/,
 					'namespace': /^[^\s>\/:]+:/
 				}
 			},
 			'attr-value': {
-				pattern: /=\s*(?:"[^"]*"|'[^']*'|[^\s'">=]+)/i,
+				pattern: /=\s*(?:"[^"]*"|'[^']*'|[^\s'">=]+)/,
 				inside: {
 					'punctuation': [
-						/^=/,
 						{
-							pattern: /^(\s*)["']|["']$/,
-							lookbehind: true
-						}
+							pattern: /^=/,
+							alias: 'attr-equals'
+						},
+						/"|'/
 					]
 				}
 			},
@@ -4441,14 +4913,21 @@ Prism.languages.markup = {
 
 		}
 	},
-	'entity': /&#?[\da-z]{1,8};/i
+	'entity': [
+		{
+			pattern: /&[\da-z]{1,8};/i,
+			alias: 'named-entity'
+		},
+		/&#x?[\da-f]{1,8};/i
+	]
 };
 
 Prism.languages.markup['tag'].inside['attr-value'].inside['entity'] =
 	Prism.languages.markup['entity'];
+Prism.languages.markup['doctype'].inside['internal-subset'].inside = Prism.languages.markup;
 
 // Plugin to make entity title show the real entity, idea by Roman Komarov
-Prism.hooks.add('wrap', function(env) {
+Prism.hooks.add('wrap', function (env) {
 
 	if (env.type === 'entity') {
 		env.attributes['title'] = env.content.replace(/&amp;/, '&');
@@ -4489,7 +4968,7 @@ Object.defineProperty(Prism.languages.markup.tag, 'addInlined', {
 
 		var def = {};
 		def[tagName] = {
-			pattern: RegExp(/(<__[\s\S]*?>)(?:<!\[CDATA\[[\s\S]*?\]\]>\s*|[\s\S])*?(?=<\/__>)/.source.replace(/__/g, function () { return tagName; }), 'i'),
+			pattern: RegExp(/(<__[\s\S]*?>)(?:<!\[CDATA\[(?:[^\]]|\](?!\]>))*\]\]>|(?!<!\[CDATA\[)[\s\S])*?(?=<\/__>)/.source.replace(/__/g, function () { return tagName; }), 'i'),
 			lookbehind: true,
 			greedy: true,
 			inside: inside
@@ -4499,10 +4978,14 @@ Object.defineProperty(Prism.languages.markup.tag, 'addInlined', {
 	}
 });
 
-Prism.languages.xml = Prism.languages.extend('markup', {});
 Prism.languages.html = Prism.languages.markup;
 Prism.languages.mathml = Prism.languages.markup;
 Prism.languages.svg = Prism.languages.markup;
+
+Prism.languages.xml = Prism.languages.extend('markup', {});
+Prism.languages.ssml = Prism.languages.xml;
+Prism.languages.atom = Prism.languages.xml;
+Prism.languages.rss = Prism.languages.xml;
 
 
 /* **********************************************
@@ -4523,16 +5006,25 @@ Prism.languages.svg = Prism.languages.markup;
 					pattern: /(\bselector\s*\((?!\s*\))\s*)(?:[^()]|\((?:[^()]|\([^()]*\))*\))+?(?=\s*\))/,
 					lookbehind: true,
 					alias: 'selector'
+				},
+				'keyword': {
+					pattern: /(^|[^\w-])(?:and|not|only|or)(?![\w-])/,
+					lookbehind: true
 				}
 				// See rest below
 			}
 		},
 		'url': {
-			pattern: RegExp('url\\((?:' + string.source + '|[^\n\r()]*)\\)', 'i'),
+			// https://drafts.csswg.org/css-values-3/#urls
+			pattern: RegExp('\\burl\\((?:' + string.source + '|' + /(?:[^\\\r\n()"']|\\[\s\S])*/.source + ')\\)', 'i'),
 			greedy: true,
 			inside: {
 				'function': /^url/i,
-				'punctuation': /^\(|\)$/
+				'punctuation': /^\(|\)$/,
+				'string': {
+					pattern: RegExp('^' + string.source + '$'),
+					alias: 'url'
+				}
 			}
 		},
 		'selector': RegExp('[^{}\\s](?:[^{};"\']|' + string.source + ')*?(?=\\s*\\{)'),
@@ -4628,21 +5120,21 @@ Prism.languages.javascript = Prism.languages.extend('clike', {
 			lookbehind: true
 		},
 		{
-			pattern: /(^|[^.]|\.\.\.\s*)\b(?:as|async(?=\s*(?:function\b|\(|[$\w\xA0-\uFFFF]|$))|await|break|case|class|const|continue|debugger|default|delete|do|else|enum|export|extends|for|from|function|get|if|implements|import|in|instanceof|interface|let|new|null|of|package|private|protected|public|return|set|static|super|switch|this|throw|try|typeof|undefined|var|void|while|with|yield)\b/,
+			pattern: /(^|[^.]|\.\.\.\s*)\b(?:as|async(?=\s*(?:function\b|\(|[$\w\xA0-\uFFFF]|$))|await|break|case|class|const|continue|debugger|default|delete|do|else|enum|export|extends|for|from|function|(?:get|set)(?=\s*[\[$\w\xA0-\uFFFF])|if|implements|import|in|instanceof|interface|let|new|null|of|package|private|protected|public|return|static|super|switch|this|throw|try|typeof|undefined|var|void|while|with|yield)\b/,
 			lookbehind: true
 		},
 	],
 	'number': /\b(?:(?:0[xX](?:[\dA-Fa-f](?:_[\dA-Fa-f])?)+|0[bB](?:[01](?:_[01])?)+|0[oO](?:[0-7](?:_[0-7])?)+)n?|(?:\d(?:_\d)?)+n|NaN|Infinity)\b|(?:\b(?:\d(?:_\d)?)+\.?(?:\d(?:_\d)?)*|\B\.(?:\d(?:_\d)?)+)(?:[Ee][+-]?(?:\d(?:_\d)?)+)?/,
 	// Allow for all non-ASCII characters (See http://stackoverflow.com/a/2008444)
 	'function': /#?[_$a-zA-Z\xA0-\uFFFF][$\w\xA0-\uFFFF]*(?=\s*(?:\.\s*(?:apply|bind|call)\s*)?\()/,
-	'operator': /--|\+\+|\*\*=?|=>|&&|\|\||[!=]==|<<=?|>>>?=?|[-+*/%&|^!=<>]=?|\.{3}|\?[.?]?|[~:]/
+	'operator': /--|\+\+|\*\*=?|=>|&&=?|\|\|=?|[!=]==|<<=?|>>>?=?|[-+*/%&|^!=<>]=?|\.{3}|\?\?=?|\?\.?|[~:]/
 });
 
 Prism.languages.javascript['class-name'][0].pattern = /(\b(?:class|interface|extends|implements|instanceof|new)\s+)[\w.\\]+/;
 
 Prism.languages.insertBefore('javascript', 'keyword', {
 	'regex': {
-		pattern: /((?:^|[^$\w\xA0-\uFFFF."'\])\s])\s*)\/(?:\[(?:[^\]\\\r\n]|\\.)*]|\\.|[^/\\\[\r\n])+\/[gimyus]{0,6}(?=(?:\s|\/\*[\s\S]*?\*\/)*(?:$|[\r\n,.;:})\]]|\/\/))/,
+		pattern: /((?:^|[^$\w\xA0-\uFFFF."'\])\s]|\b(?:return|yield))\s*)\/(?:\[(?:[^\]\\\r\n]|\\.)*]|\\.|[^/\\\[\r\n])+\/[gimyus]{0,6}(?=(?:\s|\/\*(?:[^*]|\*(?!\/))*\*\/)*(?:$|[\r\n,.;:})\]]|\/\/))/,
 		lookbehind: true,
 		greedy: true
 	},
@@ -4667,7 +5159,7 @@ Prism.languages.insertBefore('javascript', 'keyword', {
 			inside: Prism.languages.javascript
 		},
 		{
-			pattern: /((?:\b|\s|^)(?!(?:as|async|await|break|case|catch|class|const|continue|debugger|default|delete|do|else|enum|export|extends|finally|for|from|function|get|if|implements|import|in|instanceof|interface|let|new|null|of|package|private|protected|public|return|set|static|super|switch|this|throw|try|typeof|undefined|var|void|while|with|yield)(?![$\w\xA0-\uFFFF]))(?:[_$A-Za-z\xA0-\uFFFF][$\w\xA0-\uFFFF]*\s*)\(\s*)(?!\s)(?:[^()]|\([^()]*\))+?(?=\s*\)\s*\{)/,
+			pattern: /((?:\b|\s|^)(?!(?:as|async|await|break|case|catch|class|const|continue|debugger|default|delete|do|else|enum|export|extends|finally|for|from|function|get|if|implements|import|in|instanceof|interface|let|new|null|of|package|private|protected|public|return|set|static|super|switch|this|throw|try|typeof|undefined|var|void|while|with|yield)(?![$\w\xA0-\uFFFF]))(?:[_$A-Za-z\xA0-\uFFFF][$\w\xA0-\uFFFF]*\s*)\(\s*|\]\s*\(\s*)(?!\s)(?:[^()]|\([^()]*\))+?(?=\s*\)\s*\{)/,
 			lookbehind: true,
 			inside: Prism.languages.javascript
 		}
@@ -4712,92 +5204,144 @@ Prism.languages.js = Prism.languages.javascript;
 ********************************************** */
 
 (function () {
-	if (typeof self === 'undefined' || !self.Prism || !self.document || !document.querySelector) {
+	if (typeof self === 'undefined' || !self.Prism || !self.document) {
 		return;
 	}
 
+	var Prism = window.Prism;
+
+	var LOADING_MESSAGE = 'Loading…';
+	var FAILURE_MESSAGE = function (status, message) {
+		return '✖ Error ' + status + ' while fetching file: ' + message;
+	};
+	var FAILURE_EMPTY_MESSAGE = '✖ Error: File does not exist or is empty';
+
+	var EXTENSIONS = {
+		'js': 'javascript',
+		'py': 'python',
+		'rb': 'ruby',
+		'ps1': 'powershell',
+		'psm1': 'powershell',
+		'sh': 'bash',
+		'bat': 'batch',
+		'h': 'c',
+		'tex': 'latex'
+	};
+
+	var STATUS_ATTR = 'data-src-status';
+	var STATUS_LOADING = 'loading';
+	var STATUS_LOADED = 'loaded';
+	var STATUS_FAILED = 'failed';
+
+	var SELECTOR = 'pre[data-src]:not([' + STATUS_ATTR + '="' + STATUS_LOADED + '"])'
+		+ ':not([' + STATUS_ATTR + '="' + STATUS_LOADING + '"])';
+
+	var lang = /\blang(?:uage)?-([\w-]+)\b/i;
+
 	/**
-	 * @param {Element} [container=document]
+	 * Sets the Prism `language-xxxx` or `lang-xxxx` class to the given language.
+	 *
+	 * @param {HTMLElement} element
+	 * @param {string} language
+	 * @returns {void}
 	 */
-	self.Prism.fileHighlight = function(container) {
-		container = container || document;
+	function setLanguageClass(element, language) {
+		var className = element.className;
+		className = className.replace(lang, ' ') + ' language-' + language;
+		element.className = className.replace(/\s+/g, ' ').trim();
+	}
 
-		var Extensions = {
-			'js': 'javascript',
-			'py': 'python',
-			'rb': 'ruby',
-			'ps1': 'powershell',
-			'psm1': 'powershell',
-			'sh': 'bash',
-			'bat': 'batch',
-			'h': 'c',
-			'tex': 'latex'
-		};
 
-		Array.prototype.slice.call(container.querySelectorAll('pre[data-src]')).forEach(function (pre) {
-			// ignore if already loaded
-			if (pre.hasAttribute('data-src-loaded')) {
-				return;
-			}
+	Prism.hooks.add('before-highlightall', function (env) {
+		env.selector += ', ' + SELECTOR;
+	});
 
-			// load current
+	Prism.hooks.add('before-sanity-check', function (env) {
+		var pre = /** @type {HTMLPreElement} */ (env.element);
+		if (pre.matches(SELECTOR)) {
+			env.code = ''; // fast-path the whole thing and go to complete
+
+			pre.setAttribute(STATUS_ATTR, STATUS_LOADING); // mark as loading
+
+			// add code element with loading message
+			var code = pre.appendChild(document.createElement('CODE'));
+			code.textContent = LOADING_MESSAGE;
+
 			var src = pre.getAttribute('data-src');
 
-			var language, parent = pre;
-			var lang = /\blang(?:uage)?-([\w-]+)\b/i;
-			while (parent && !lang.test(parent.className)) {
-				parent = parent.parentNode;
+			var language = env.language;
+			if (language === 'none') {
+				// the language might be 'none' because there is no language set;
+				// in this case, we want to use the extension as the language
+				var extension = (/\.(\w+)$/.exec(src) || [, 'none'])[1];
+				language = EXTENSIONS[extension] || extension;
 			}
 
-			if (parent) {
-				language = (pre.className.match(lang) || [, ''])[1];
+			// set language classes
+			setLanguageClass(code, language);
+			setLanguageClass(pre, language);
+
+			// preload the language
+			var autoloader = Prism.plugins.autoloader;
+			if (autoloader) {
+				autoloader.loadLanguages(language);
 			}
 
-			if (!language) {
-				var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
-				language = Extensions[extension] || extension;
-			}
-
-			var code = document.createElement('code');
-			code.className = 'language-' + language;
-
-			pre.textContent = '';
-
-			code.textContent = 'Loading…';
-
-			pre.appendChild(code);
-
+			// load file
 			var xhr = new XMLHttpRequest();
-
 			xhr.open('GET', src, true);
-
 			xhr.onreadystatechange = function () {
 				if (xhr.readyState == 4) {
-
 					if (xhr.status < 400 && xhr.responseText) {
-						code.textContent = xhr.responseText;
-
-						Prism.highlightElement(code);
 						// mark as loaded
-						pre.setAttribute('data-src-loaded', '');
-					}
-					else if (xhr.status >= 400) {
-						code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
-					}
-					else {
-						code.textContent = '✖ Error: File does not exist or is empty';
+						pre.setAttribute(STATUS_ATTR, STATUS_LOADED);
+
+						// highlight code
+						code.textContent = xhr.responseText;
+						Prism.highlightElement(code);
+
+					} else {
+						// mark as failed
+						pre.setAttribute(STATUS_ATTR, STATUS_FAILED);
+
+						if (xhr.status >= 400) {
+							code.textContent = FAILURE_MESSAGE(xhr.status, xhr.statusText);
+						} else {
+							code.textContent = FAILURE_EMPTY_MESSAGE;
+						}
 					}
 				}
 			};
-
 			xhr.send(null);
-		});
+		}
+	});
+
+	Prism.plugins.fileHighlight = {
+		/**
+		 * Executes the File Highlight plugin for all matching `pre` elements under the given container.
+		 *
+		 * Note: Elements which are already loaded or currently loading will not be touched by this method.
+		 *
+		 * @param {ParentNode} [container=document]
+		 */
+		highlight: function highlight(container) {
+			var elements = (container || document).querySelectorAll(SELECTOR);
+
+			for (var i = 0, element; element = elements[i++];) {
+				Prism.highlightElement(element);
+			}
+		}
 	};
 
-	document.addEventListener('DOMContentLoaded', function () {
-		// execute inside handler, for dropping Event as argument
-		self.Prism.fileHighlight();
-	});
+	var logged = false;
+	/** @deprecated Use `Prism.plugins.fileHighlight.highlight` instead. */
+	Prism.fileHighlight = function () {
+		if (!logged) {
+			console.warn('Prism.fileHighlight is deprecated. Use `Prism.plugins.fileHighlight.highlight` instead.');
+			logged = true;
+		}
+		Prism.plugins.fileHighlight.highlight.apply(this, arguments);
+	}
 
 })();
 
@@ -39341,631 +39885,631 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./create-language-async-loader */ "./src/async-languages/create-language-async-loader.js");
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  abap: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('abap', function () {
+  abap: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("abap", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/abap.js */ "./node_modules/refractor/lang/abap.js", 7));
   }),
-  abnf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('abnf', function () {
+  abnf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("abnf", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/abnf.js */ "./node_modules/refractor/lang/abnf.js", 7));
   }),
-  actionscript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('actionscript', function () {
+  actionscript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("actionscript", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/actionscript.js */ "./node_modules/refractor/lang/actionscript.js", 7));
   }),
-  ada: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('ada', function () {
+  ada: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("ada", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/ada.js */ "./node_modules/refractor/lang/ada.js", 7));
   }),
-  antlr4: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('antlr4', function () {
+  antlr4: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("antlr4", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/antlr4.js */ "./node_modules/refractor/lang/antlr4.js", 7));
   }),
-  apacheconf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('apacheconf', function () {
+  apacheconf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("apacheconf", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/apacheconf.js */ "./node_modules/refractor/lang/apacheconf.js", 7));
   }),
-  apl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('apl', function () {
+  apl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("apl", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/apl.js */ "./node_modules/refractor/lang/apl.js", 7));
   }),
-  applescript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('applescript', function () {
+  applescript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("applescript", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/applescript.js */ "./node_modules/refractor/lang/applescript.js", 7));
   }),
-  aql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('aql', function () {
+  aql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("aql", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/aql.js */ "./node_modules/refractor/lang/aql.js", 7));
   }),
-  arduino: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('arduino', function () {
+  arduino: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("arduino", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/arduino.js */ "./node_modules/refractor/lang/arduino.js", 7));
   }),
-  arff: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('arff', function () {
+  arff: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("arff", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/arff.js */ "./node_modules/refractor/lang/arff.js", 7));
   }),
-  asciidoc: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('asciidoc', function () {
+  asciidoc: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("asciidoc", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/asciidoc.js */ "./node_modules/refractor/lang/asciidoc.js", 7));
   }),
-  asm6502: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('asm6502', function () {
+  asm6502: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("asm6502", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/asm6502.js */ "./node_modules/refractor/lang/asm6502.js", 7));
   }),
-  aspnet: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('aspnet', function () {
+  aspnet: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("aspnet", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/aspnet.js */ "./node_modules/refractor/lang/aspnet.js", 7));
   }),
-  autohotkey: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('autohotkey', function () {
+  autohotkey: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("autohotkey", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/autohotkey.js */ "./node_modules/refractor/lang/autohotkey.js", 7));
   }),
-  autoit: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('autoit', function () {
+  autoit: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("autoit", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/autoit.js */ "./node_modules/refractor/lang/autoit.js", 7));
   }),
-  bash: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('bash', function () {
+  bash: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("bash", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/bash.js */ "./node_modules/refractor/lang/bash.js", 7));
   }),
-  basic: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('basic', function () {
+  basic: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("basic", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/basic.js */ "./node_modules/refractor/lang/basic.js", 7));
   }),
-  batch: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('batch', function () {
+  batch: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("batch", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/batch.js */ "./node_modules/refractor/lang/batch.js", 7));
   }),
-  bbcode: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('bbcode', function () {
+  bbcode: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("bbcode", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/bbcode.js */ "./node_modules/refractor/lang/bbcode.js", 7));
   }),
-  bison: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('bison', function () {
+  bison: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("bison", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/bison.js */ "./node_modules/refractor/lang/bison.js", 7));
   }),
-  bnf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('bnf', function () {
+  bnf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("bnf", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/bnf.js */ "./node_modules/refractor/lang/bnf.js", 7));
   }),
-  brainfuck: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('brainfuck', function () {
+  brainfuck: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("brainfuck", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/brainfuck.js */ "./node_modules/refractor/lang/brainfuck.js", 7));
   }),
-  brightscript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('brightscript', function () {
+  brightscript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("brightscript", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/brightscript.js */ "./node_modules/refractor/lang/brightscript.js", 7));
   }),
-  bro: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('bro', function () {
+  bro: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("bro", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/bro.js */ "./node_modules/refractor/lang/bro.js", 7));
   }),
-  c: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('c', function () {
+  c: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("c", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/c.js */ "./node_modules/refractor/lang/c.js", 7));
   }),
-  cil: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('cil', function () {
+  cil: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("cil", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/cil.js */ "./node_modules/refractor/lang/cil.js", 7));
   }),
-  clike: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('clike', function () {
+  clike: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("clike", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/clike.js */ "./node_modules/refractor/lang/clike.js", 7));
   }),
-  clojure: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('clojure', function () {
+  clojure: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("clojure", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/clojure.js */ "./node_modules/refractor/lang/clojure.js", 7));
   }),
-  cmake: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('cmake', function () {
+  cmake: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("cmake", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/cmake.js */ "./node_modules/refractor/lang/cmake.js", 7));
   }),
-  coffeescript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('coffeescript', function () {
+  coffeescript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("coffeescript", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/coffeescript.js */ "./node_modules/refractor/lang/coffeescript.js", 7));
   }),
-  concurnas: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('concurnas', function () {
+  concurnas: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("concurnas", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/concurnas.js */ "./node_modules/refractor/lang/concurnas.js", 7));
   }),
-  cpp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('cpp', function () {
+  cpp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("cpp", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/cpp.js */ "./node_modules/refractor/lang/cpp.js", 7));
   }),
-  crystal: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('crystal', function () {
+  crystal: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("crystal", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/crystal.js */ "./node_modules/refractor/lang/crystal.js", 7));
   }),
-  csharp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('csharp', function () {
+  csharp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("csharp", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/csharp.js */ "./node_modules/refractor/lang/csharp.js", 7));
   }),
-  csp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('csp', function () {
+  csp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("csp", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/csp.js */ "./node_modules/refractor/lang/csp.js", 7));
   }),
-  cssExtras: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('cssExtras', function () {
+  cssExtras: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("cssExtras", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/css-extras.js */ "./node_modules/refractor/lang/css-extras.js", 7));
   }),
-  css: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('css', function () {
+  css: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("css", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/css.js */ "./node_modules/refractor/lang/css.js", 7));
   }),
-  d: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('d', function () {
+  d: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("d", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/d.js */ "./node_modules/refractor/lang/d.js", 7));
   }),
-  dart: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('dart', function () {
+  dart: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("dart", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/dart.js */ "./node_modules/refractor/lang/dart.js", 7));
   }),
-  dax: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('dax', function () {
+  dax: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("dax", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/dax.js */ "./node_modules/refractor/lang/dax.js", 7));
   }),
-  diff: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('diff', function () {
+  diff: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("diff", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/diff.js */ "./node_modules/refractor/lang/diff.js", 7));
   }),
-  django: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('django', function () {
+  django: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("django", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/django.js */ "./node_modules/refractor/lang/django.js", 7));
   }),
-  dnsZoneFile: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('dnsZoneFile', function () {
+  dnsZoneFile: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("dnsZoneFile", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/dns-zone-file.js */ "./node_modules/refractor/lang/dns-zone-file.js", 7));
   }),
-  docker: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('docker', function () {
+  docker: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("docker", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/docker.js */ "./node_modules/refractor/lang/docker.js", 7));
   }),
-  ebnf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('ebnf', function () {
+  ebnf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("ebnf", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/ebnf.js */ "./node_modules/refractor/lang/ebnf.js", 7));
   }),
-  eiffel: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('eiffel', function () {
+  eiffel: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("eiffel", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/eiffel.js */ "./node_modules/refractor/lang/eiffel.js", 7));
   }),
-  ejs: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('ejs', function () {
+  ejs: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("ejs", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/ejs.js */ "./node_modules/refractor/lang/ejs.js", 7));
   }),
-  elixir: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('elixir', function () {
+  elixir: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("elixir", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/elixir.js */ "./node_modules/refractor/lang/elixir.js", 7));
   }),
-  elm: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('elm', function () {
+  elm: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("elm", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/elm.js */ "./node_modules/refractor/lang/elm.js", 7));
   }),
-  erb: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('erb', function () {
+  erb: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("erb", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/erb.js */ "./node_modules/refractor/lang/erb.js", 7));
   }),
-  erlang: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('erlang', function () {
+  erlang: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("erlang", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/erlang.js */ "./node_modules/refractor/lang/erlang.js", 7));
   }),
-  etlua: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('etlua', function () {
+  etlua: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("etlua", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/etlua.js */ "./node_modules/refractor/lang/etlua.js", 7));
   }),
-  excelFormula: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('excelFormula', function () {
+  excelFormula: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("excelFormula", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/excel-formula.js */ "./node_modules/refractor/lang/excel-formula.js", 7));
   }),
-  factor: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('factor', function () {
+  factor: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("factor", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/factor.js */ "./node_modules/refractor/lang/factor.js", 7));
   }),
-  firestoreSecurityRules: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('firestoreSecurityRules', function () {
+  firestoreSecurityRules: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("firestoreSecurityRules", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/firestore-security-rules.js */ "./node_modules/refractor/lang/firestore-security-rules.js", 7));
   }),
-  flow: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('flow', function () {
+  flow: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("flow", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/flow.js */ "./node_modules/refractor/lang/flow.js", 7));
   }),
-  fortran: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('fortran', function () {
+  fortran: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("fortran", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/fortran.js */ "./node_modules/refractor/lang/fortran.js", 7));
   }),
-  fsharp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('fsharp', function () {
+  fsharp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("fsharp", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/fsharp.js */ "./node_modules/refractor/lang/fsharp.js", 7));
   }),
-  ftl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('ftl', function () {
+  ftl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("ftl", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/ftl.js */ "./node_modules/refractor/lang/ftl.js", 7));
   }),
-  gcode: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('gcode', function () {
+  gcode: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("gcode", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/gcode.js */ "./node_modules/refractor/lang/gcode.js", 7));
   }),
-  gdscript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('gdscript', function () {
+  gdscript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("gdscript", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/gdscript.js */ "./node_modules/refractor/lang/gdscript.js", 7));
   }),
-  gedcom: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('gedcom', function () {
+  gedcom: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("gedcom", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/gedcom.js */ "./node_modules/refractor/lang/gedcom.js", 7));
   }),
-  gherkin: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('gherkin', function () {
+  gherkin: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("gherkin", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/gherkin.js */ "./node_modules/refractor/lang/gherkin.js", 7));
   }),
-  git: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('git', function () {
+  git: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("git", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/git.js */ "./node_modules/refractor/lang/git.js", 7));
   }),
-  glsl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('glsl', function () {
+  glsl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("glsl", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/glsl.js */ "./node_modules/refractor/lang/glsl.js", 7));
   }),
-  gml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('gml', function () {
+  gml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("gml", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/gml.js */ "./node_modules/refractor/lang/gml.js", 7));
   }),
-  go: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('go', function () {
+  go: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("go", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/go.js */ "./node_modules/refractor/lang/go.js", 7));
   }),
-  graphql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('graphql', function () {
+  graphql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("graphql", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/graphql.js */ "./node_modules/refractor/lang/graphql.js", 7));
   }),
-  groovy: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('groovy', function () {
+  groovy: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("groovy", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/groovy.js */ "./node_modules/refractor/lang/groovy.js", 7));
   }),
-  haml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('haml', function () {
+  haml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("haml", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/haml.js */ "./node_modules/refractor/lang/haml.js", 7));
   }),
-  handlebars: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('handlebars', function () {
+  handlebars: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("handlebars", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/handlebars.js */ "./node_modules/refractor/lang/handlebars.js", 7));
   }),
-  haskell: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('haskell', function () {
+  haskell: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("haskell", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/haskell.js */ "./node_modules/refractor/lang/haskell.js", 7));
   }),
-  haxe: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('haxe', function () {
+  haxe: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("haxe", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/haxe.js */ "./node_modules/refractor/lang/haxe.js", 7));
   }),
-  hcl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('hcl', function () {
+  hcl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("hcl", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/hcl.js */ "./node_modules/refractor/lang/hcl.js", 7));
   }),
-  hpkp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('hpkp', function () {
+  hpkp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("hpkp", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/hpkp.js */ "./node_modules/refractor/lang/hpkp.js", 7));
   }),
-  hsts: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('hsts', function () {
+  hsts: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("hsts", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/hsts.js */ "./node_modules/refractor/lang/hsts.js", 7));
   }),
-  http: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('http', function () {
+  http: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("http", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/http.js */ "./node_modules/refractor/lang/http.js", 7));
   }),
-  ichigojam: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('ichigojam', function () {
+  ichigojam: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("ichigojam", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/ichigojam.js */ "./node_modules/refractor/lang/ichigojam.js", 7));
   }),
-  icon: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('icon', function () {
+  icon: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("icon", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/icon.js */ "./node_modules/refractor/lang/icon.js", 7));
   }),
-  inform7: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('inform7', function () {
+  inform7: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("inform7", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/inform7.js */ "./node_modules/refractor/lang/inform7.js", 7));
   }),
-  ini: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('ini', function () {
+  ini: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("ini", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/ini.js */ "./node_modules/refractor/lang/ini.js", 7));
   }),
-  io: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('io', function () {
+  io: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("io", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/io.js */ "./node_modules/refractor/lang/io.js", 7));
   }),
-  j: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('j', function () {
+  j: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("j", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/j.js */ "./node_modules/refractor/lang/j.js", 7));
   }),
-  java: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('java', function () {
+  java: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("java", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/java.js */ "./node_modules/refractor/lang/java.js", 7));
   }),
-  javadoc: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('javadoc', function () {
+  javadoc: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("javadoc", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/javadoc.js */ "./node_modules/refractor/lang/javadoc.js", 7));
   }),
-  javadoclike: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('javadoclike', function () {
+  javadoclike: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("javadoclike", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/javadoclike.js */ "./node_modules/refractor/lang/javadoclike.js", 7));
   }),
-  javascript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('javascript', function () {
+  javascript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("javascript", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/javascript.js */ "./node_modules/refractor/lang/javascript.js", 7));
   }),
-  javastacktrace: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('javastacktrace', function () {
+  javastacktrace: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("javastacktrace", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/javastacktrace.js */ "./node_modules/refractor/lang/javastacktrace.js", 7));
   }),
-  jolie: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('jolie', function () {
+  jolie: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("jolie", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/jolie.js */ "./node_modules/refractor/lang/jolie.js", 7));
   }),
-  jq: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('jq', function () {
+  jq: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("jq", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/jq.js */ "./node_modules/refractor/lang/jq.js", 7));
   }),
-  jsExtras: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('jsExtras', function () {
+  jsExtras: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("jsExtras", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/js-extras.js */ "./node_modules/refractor/lang/js-extras.js", 7));
   }),
-  jsTemplates: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('jsTemplates', function () {
+  jsTemplates: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("jsTemplates", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/js-templates.js */ "./node_modules/refractor/lang/js-templates.js", 7));
   }),
-  jsdoc: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('jsdoc', function () {
+  jsdoc: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("jsdoc", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/jsdoc.js */ "./node_modules/refractor/lang/jsdoc.js", 7));
   }),
-  json: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('json', function () {
+  json: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("json", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/json.js */ "./node_modules/refractor/lang/json.js", 7));
   }),
-  json5: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('json5', function () {
+  json5: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("json5", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/json5.js */ "./node_modules/refractor/lang/json5.js", 7));
   }),
-  jsonp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('jsonp', function () {
+  jsonp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("jsonp", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/jsonp.js */ "./node_modules/refractor/lang/jsonp.js", 7));
   }),
-  jsx: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('jsx', function () {
+  jsx: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("jsx", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/jsx.js */ "./node_modules/refractor/lang/jsx.js", 7));
   }),
-  julia: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('julia', function () {
+  julia: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("julia", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/julia.js */ "./node_modules/refractor/lang/julia.js", 7));
   }),
-  keyman: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('keyman', function () {
+  keyman: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("keyman", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/keyman.js */ "./node_modules/refractor/lang/keyman.js", 7));
   }),
-  kotlin: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('kotlin', function () {
+  kotlin: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("kotlin", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/kotlin.js */ "./node_modules/refractor/lang/kotlin.js", 7));
   }),
-  latex: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('latex', function () {
+  latex: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("latex", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/latex.js */ "./node_modules/refractor/lang/latex.js", 7));
   }),
-  latte: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('latte', function () {
+  latte: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("latte", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/latte.js */ "./node_modules/refractor/lang/latte.js", 7));
   }),
-  less: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('less', function () {
+  less: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("less", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/less.js */ "./node_modules/refractor/lang/less.js", 7));
   }),
-  lilypond: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('lilypond', function () {
+  lilypond: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("lilypond", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/lilypond.js */ "./node_modules/refractor/lang/lilypond.js", 7));
   }),
-  liquid: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('liquid', function () {
+  liquid: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("liquid", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/liquid.js */ "./node_modules/refractor/lang/liquid.js", 7));
   }),
-  lisp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('lisp', function () {
+  lisp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("lisp", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/lisp.js */ "./node_modules/refractor/lang/lisp.js", 7));
   }),
-  livescript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('livescript', function () {
+  livescript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("livescript", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/livescript.js */ "./node_modules/refractor/lang/livescript.js", 7));
   }),
-  llvm: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('llvm', function () {
+  llvm: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("llvm", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/llvm.js */ "./node_modules/refractor/lang/llvm.js", 7));
   }),
-  lolcode: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('lolcode', function () {
+  lolcode: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("lolcode", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/lolcode.js */ "./node_modules/refractor/lang/lolcode.js", 7));
   }),
-  lua: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('lua', function () {
+  lua: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("lua", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/lua.js */ "./node_modules/refractor/lang/lua.js", 7));
   }),
-  makefile: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('makefile', function () {
+  makefile: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("makefile", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/makefile.js */ "./node_modules/refractor/lang/makefile.js", 7));
   }),
-  markdown: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('markdown', function () {
+  markdown: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("markdown", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/markdown.js */ "./node_modules/refractor/lang/markdown.js", 7));
   }),
-  markupTemplating: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('markupTemplating', function () {
+  markupTemplating: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("markupTemplating", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/markup-templating.js */ "./node_modules/refractor/lang/markup-templating.js", 7));
   }),
-  markup: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('markup', function () {
+  markup: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("markup", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/markup.js */ "./node_modules/refractor/lang/markup.js", 7));
   }),
-  matlab: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('matlab', function () {
+  matlab: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("matlab", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/matlab.js */ "./node_modules/refractor/lang/matlab.js", 7));
   }),
-  mel: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('mel', function () {
+  mel: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("mel", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/mel.js */ "./node_modules/refractor/lang/mel.js", 7));
   }),
-  mizar: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('mizar', function () {
+  mizar: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("mizar", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/mizar.js */ "./node_modules/refractor/lang/mizar.js", 7));
   }),
-  monkey: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('monkey', function () {
+  monkey: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("monkey", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/monkey.js */ "./node_modules/refractor/lang/monkey.js", 7));
   }),
-  moonscript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('moonscript', function () {
+  moonscript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("moonscript", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/moonscript.js */ "./node_modules/refractor/lang/moonscript.js", 7));
   }),
-  n1ql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('n1ql', function () {
+  n1ql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("n1ql", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/n1ql.js */ "./node_modules/refractor/lang/n1ql.js", 7));
   }),
-  n4js: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('n4js', function () {
+  n4js: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("n4js", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/n4js.js */ "./node_modules/refractor/lang/n4js.js", 7));
   }),
-  nand2tetrisHdl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('nand2tetrisHdl', function () {
+  nand2tetrisHdl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("nand2tetrisHdl", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/nand2tetris-hdl.js */ "./node_modules/refractor/lang/nand2tetris-hdl.js", 7));
   }),
-  nasm: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('nasm', function () {
+  nasm: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("nasm", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/nasm.js */ "./node_modules/refractor/lang/nasm.js", 7));
   }),
-  neon: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('neon', function () {
+  neon: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("neon", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/neon.js */ "./node_modules/refractor/lang/neon.js", 7));
   }),
-  nginx: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('nginx', function () {
+  nginx: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("nginx", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/nginx.js */ "./node_modules/refractor/lang/nginx.js", 7));
   }),
-  nim: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('nim', function () {
+  nim: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("nim", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/nim.js */ "./node_modules/refractor/lang/nim.js", 7));
   }),
-  nix: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('nix', function () {
+  nix: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("nix", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/nix.js */ "./node_modules/refractor/lang/nix.js", 7));
   }),
-  nsis: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('nsis', function () {
+  nsis: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("nsis", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/nsis.js */ "./node_modules/refractor/lang/nsis.js", 7));
   }),
-  objectivec: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('objectivec', function () {
+  objectivec: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("objectivec", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/objectivec.js */ "./node_modules/refractor/lang/objectivec.js", 7));
   }),
-  ocaml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('ocaml', function () {
+  ocaml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("ocaml", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/ocaml.js */ "./node_modules/refractor/lang/ocaml.js", 7));
   }),
-  opencl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('opencl', function () {
+  opencl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("opencl", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/opencl.js */ "./node_modules/refractor/lang/opencl.js", 7));
   }),
-  oz: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('oz', function () {
+  oz: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("oz", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/oz.js */ "./node_modules/refractor/lang/oz.js", 7));
   }),
-  parigp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('parigp', function () {
+  parigp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("parigp", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/parigp.js */ "./node_modules/refractor/lang/parigp.js", 7));
   }),
-  parser: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('parser', function () {
+  parser: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("parser", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/parser.js */ "./node_modules/refractor/lang/parser.js", 7));
   }),
-  pascal: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('pascal', function () {
+  pascal: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("pascal", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/pascal.js */ "./node_modules/refractor/lang/pascal.js", 7));
   }),
-  pascaligo: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('pascaligo', function () {
+  pascaligo: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("pascaligo", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/pascaligo.js */ "./node_modules/refractor/lang/pascaligo.js", 7));
   }),
-  pcaxis: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('pcaxis', function () {
+  pcaxis: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("pcaxis", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/pcaxis.js */ "./node_modules/refractor/lang/pcaxis.js", 7));
   }),
-  perl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('perl', function () {
+  perl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("perl", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/perl.js */ "./node_modules/refractor/lang/perl.js", 7));
   }),
-  phpExtras: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('phpExtras', function () {
+  phpExtras: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("phpExtras", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/php-extras.js */ "./node_modules/refractor/lang/php-extras.js", 7));
   }),
-  php: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('php', function () {
+  php: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("php", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/php.js */ "./node_modules/refractor/lang/php.js", 7));
   }),
-  phpdoc: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('phpdoc', function () {
+  phpdoc: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("phpdoc", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/phpdoc.js */ "./node_modules/refractor/lang/phpdoc.js", 7));
   }),
-  plsql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('plsql', function () {
+  plsql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("plsql", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/plsql.js */ "./node_modules/refractor/lang/plsql.js", 7));
   }),
-  powerquery: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('powerquery', function () {
+  powerquery: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("powerquery", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/powerquery.js */ "./node_modules/refractor/lang/powerquery.js", 7));
   }),
-  powershell: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('powershell', function () {
+  powershell: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("powershell", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/powershell.js */ "./node_modules/refractor/lang/powershell.js", 7));
   }),
-  processing: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('processing', function () {
+  processing: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("processing", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/processing.js */ "./node_modules/refractor/lang/processing.js", 7));
   }),
-  prolog: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('prolog', function () {
+  prolog: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("prolog", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/prolog.js */ "./node_modules/refractor/lang/prolog.js", 7));
   }),
-  properties: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('properties', function () {
+  properties: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("properties", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/properties.js */ "./node_modules/refractor/lang/properties.js", 7));
   }),
-  protobuf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('protobuf', function () {
+  protobuf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("protobuf", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/protobuf.js */ "./node_modules/refractor/lang/protobuf.js", 7));
   }),
-  pug: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('pug', function () {
+  pug: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("pug", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/pug.js */ "./node_modules/refractor/lang/pug.js", 7));
   }),
-  puppet: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('puppet', function () {
+  puppet: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("puppet", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/puppet.js */ "./node_modules/refractor/lang/puppet.js", 7));
   }),
-  pure: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('pure', function () {
+  pure: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("pure", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/pure.js */ "./node_modules/refractor/lang/pure.js", 7));
   }),
-  python: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('python', function () {
+  python: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("python", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/python.js */ "./node_modules/refractor/lang/python.js", 7));
   }),
-  q: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('q', function () {
+  q: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("q", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/q.js */ "./node_modules/refractor/lang/q.js", 7));
   }),
-  qml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('qml', function () {
+  qml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("qml", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/qml.js */ "./node_modules/refractor/lang/qml.js", 7));
   }),
-  qore: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('qore', function () {
+  qore: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("qore", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/qore.js */ "./node_modules/refractor/lang/qore.js", 7));
   }),
-  r: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('r', function () {
+  r: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("r", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/r.js */ "./node_modules/refractor/lang/r.js", 7));
   }),
-  reason: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('reason', function () {
+  reason: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("reason", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/reason.js */ "./node_modules/refractor/lang/reason.js", 7));
   }),
-  regex: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('regex', function () {
+  regex: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("regex", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/regex.js */ "./node_modules/refractor/lang/regex.js", 7));
   }),
-  renpy: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('renpy', function () {
+  renpy: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("renpy", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/renpy.js */ "./node_modules/refractor/lang/renpy.js", 7));
   }),
-  rest: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('rest', function () {
+  rest: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("rest", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/rest.js */ "./node_modules/refractor/lang/rest.js", 7));
   }),
-  rip: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('rip', function () {
+  rip: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("rip", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/rip.js */ "./node_modules/refractor/lang/rip.js", 7));
   }),
-  roboconf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('roboconf', function () {
+  roboconf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("roboconf", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/roboconf.js */ "./node_modules/refractor/lang/roboconf.js", 7));
   }),
-  robotframework: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('robotframework', function () {
+  robotframework: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("robotframework", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/robotframework.js */ "./node_modules/refractor/lang/robotframework.js", 7));
   }),
-  ruby: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('ruby', function () {
+  ruby: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("ruby", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/ruby.js */ "./node_modules/refractor/lang/ruby.js", 7));
   }),
-  rust: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('rust', function () {
+  rust: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("rust", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/rust.js */ "./node_modules/refractor/lang/rust.js", 7));
   }),
-  sas: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('sas', function () {
+  sas: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("sas", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/sas.js */ "./node_modules/refractor/lang/sas.js", 7));
   }),
-  sass: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('sass', function () {
+  sass: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("sass", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/sass.js */ "./node_modules/refractor/lang/sass.js", 7));
   }),
-  scala: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('scala', function () {
+  scala: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("scala", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/scala.js */ "./node_modules/refractor/lang/scala.js", 7));
   }),
-  scheme: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('scheme', function () {
+  scheme: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("scheme", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/scheme.js */ "./node_modules/refractor/lang/scheme.js", 7));
   }),
-  scss: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('scss', function () {
+  scss: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("scss", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/scss.js */ "./node_modules/refractor/lang/scss.js", 7));
   }),
-  shellSession: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('shellSession', function () {
+  shellSession: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("shellSession", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/shell-session.js */ "./node_modules/refractor/lang/shell-session.js", 7));
   }),
-  smalltalk: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('smalltalk', function () {
+  smalltalk: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("smalltalk", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/smalltalk.js */ "./node_modules/refractor/lang/smalltalk.js", 7));
   }),
-  smarty: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('smarty', function () {
+  smarty: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("smarty", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/smarty.js */ "./node_modules/refractor/lang/smarty.js", 7));
   }),
-  solidity: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('solidity', function () {
+  solidity: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("solidity", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/solidity.js */ "./node_modules/refractor/lang/solidity.js", 7));
   }),
-  solutionFile: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('solutionFile', function () {
+  solutionFile: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("solutionFile", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/solution-file.js */ "./node_modules/refractor/lang/solution-file.js", 7));
   }),
-  soy: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('soy', function () {
+  soy: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("soy", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/soy.js */ "./node_modules/refractor/lang/soy.js", 7));
   }),
-  sparql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('sparql', function () {
+  sparql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("sparql", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/sparql.js */ "./node_modules/refractor/lang/sparql.js", 7));
   }),
-  splunkSpl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('splunkSpl', function () {
+  splunkSpl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("splunkSpl", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/splunk-spl.js */ "./node_modules/refractor/lang/splunk-spl.js", 7));
   }),
-  sqf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('sqf', function () {
+  sqf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("sqf", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/sqf.js */ "./node_modules/refractor/lang/sqf.js", 7));
   }),
-  sql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('sql', function () {
+  sql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("sql", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/sql.js */ "./node_modules/refractor/lang/sql.js", 7));
   }),
-  stylus: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('stylus', function () {
+  stylus: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("stylus", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/stylus.js */ "./node_modules/refractor/lang/stylus.js", 7));
   }),
-  swift: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('swift', function () {
+  swift: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("swift", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/swift.js */ "./node_modules/refractor/lang/swift.js", 7));
   }),
-  t4Cs: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('t4Cs', function () {
+  t4Cs: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("t4Cs", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/t4-cs.js */ "./node_modules/refractor/lang/t4-cs.js", 7));
   }),
-  t4Templating: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('t4Templating', function () {
+  t4Templating: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("t4Templating", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/t4-templating.js */ "./node_modules/refractor/lang/t4-templating.js", 7));
   }),
-  t4Vb: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('t4Vb', function () {
+  t4Vb: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("t4Vb", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/t4-vb.js */ "./node_modules/refractor/lang/t4-vb.js", 7));
   }),
-  tap: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('tap', function () {
+  tap: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("tap", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/tap.js */ "./node_modules/refractor/lang/tap.js", 7));
   }),
-  tcl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('tcl', function () {
+  tcl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("tcl", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/tcl.js */ "./node_modules/refractor/lang/tcl.js", 7));
   }),
-  textile: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('textile', function () {
+  textile: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("textile", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/textile.js */ "./node_modules/refractor/lang/textile.js", 7));
   }),
-  toml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('toml', function () {
+  toml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("toml", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/toml.js */ "./node_modules/refractor/lang/toml.js", 7));
   }),
-  tsx: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('tsx', function () {
+  tsx: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("tsx", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/tsx.js */ "./node_modules/refractor/lang/tsx.js", 7));
   }),
-  tt2: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('tt2', function () {
+  tt2: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("tt2", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/tt2.js */ "./node_modules/refractor/lang/tt2.js", 7));
   }),
-  turtle: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('turtle', function () {
+  turtle: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("turtle", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/turtle.js */ "./node_modules/refractor/lang/turtle.js", 7));
   }),
-  twig: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('twig', function () {
+  twig: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("twig", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/twig.js */ "./node_modules/refractor/lang/twig.js", 7));
   }),
-  typescript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('typescript', function () {
+  typescript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("typescript", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/typescript.js */ "./node_modules/refractor/lang/typescript.js", 7));
   }),
-  vala: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('vala', function () {
+  vala: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("vala", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/vala.js */ "./node_modules/refractor/lang/vala.js", 7));
   }),
-  vbnet: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('vbnet', function () {
+  vbnet: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("vbnet", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/vbnet.js */ "./node_modules/refractor/lang/vbnet.js", 7));
   }),
-  velocity: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('velocity', function () {
+  velocity: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("velocity", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/velocity.js */ "./node_modules/refractor/lang/velocity.js", 7));
   }),
-  verilog: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('verilog', function () {
+  verilog: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("verilog", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/verilog.js */ "./node_modules/refractor/lang/verilog.js", 7));
   }),
-  vhdl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('vhdl', function () {
+  vhdl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("vhdl", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/vhdl.js */ "./node_modules/refractor/lang/vhdl.js", 7));
   }),
-  vim: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('vim', function () {
+  vim: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("vim", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/vim.js */ "./node_modules/refractor/lang/vim.js", 7));
   }),
-  visualBasic: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('visualBasic', function () {
+  visualBasic: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("visualBasic", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/visual-basic.js */ "./node_modules/refractor/lang/visual-basic.js", 7));
   }),
-  wasm: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('wasm', function () {
+  wasm: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("wasm", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/wasm.js */ "./node_modules/refractor/lang/wasm.js", 7));
   }),
-  wiki: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('wiki', function () {
+  wiki: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("wiki", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/wiki.js */ "./node_modules/refractor/lang/wiki.js", 7));
   }),
-  xeora: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('xeora', function () {
+  xeora: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("xeora", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/xeora.js */ "./node_modules/refractor/lang/xeora.js", 7));
   }),
-  xojo: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('xojo', function () {
+  xojo: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("xojo", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/xojo.js */ "./node_modules/refractor/lang/xojo.js", 7));
   }),
-  xquery: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('xquery', function () {
+  xquery: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("xquery", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/xquery.js */ "./node_modules/refractor/lang/xquery.js", 7));
   }),
-  yaml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('yaml', function () {
+  yaml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("yaml", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/yaml.js */ "./node_modules/refractor/lang/yaml.js", 7));
   }),
-  zig: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('zig', function () {
+  zig: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("zig", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/zig.js */ "./node_modules/refractor/lang/zig.js", 7));
   })
 });
@@ -46488,7 +47032,12 @@ __webpack_require__.r(__webpack_exports__);
     "WebkitHyphens": "none",
     "MozHyphens": "none",
     "msHyphens": "none",
-    "hyphens": "none"
+    "hyphens": "none",
+    "maxHeight": "inherit",
+    "height": "inherit",
+    "padding": "0 1em",
+    "display": "block",
+    "overflow": "auto"
   },
   "pre[class*=\"language-\"]": {
     "color": "black",
@@ -46527,13 +47076,6 @@ __webpack_require__.r(__webpack_exports__);
     "backgroundSize": "3em 3em",
     "backgroundOrigin": "content-box",
     "backgroundAttachment": "local"
-  },
-  "code[class*=\"language\"]": {
-    "maxHeight": "inherit",
-    "height": "inherit",
-    "padding": "0 1em",
-    "display": "block",
-    "overflow": "auto"
   },
   ":not(pre) > code[class*=\"language-\"]": {
     "backgroundColor": "#fdfdfd",
@@ -46583,15 +47125,6 @@ __webpack_require__.r(__webpack_exports__);
     "OTransform": "rotate(2deg)",
     "transform": "rotate(2deg)",
     "right": "0.75em"
-  },
-  ":not(pre) > code[class*=\"language-\"]:after": {
-    "right": "0.75em",
-    "left": "auto",
-    "WebkitTransform": "rotate(2deg)",
-    "MozTransform": "rotate(2deg)",
-    "msTransform": "rotate(2deg)",
-    "OTransform": "rotate(2deg)",
-    "transform": "rotate(2deg)"
   },
   "comment": {
     "color": "#7D8B99"
@@ -46708,15 +47241,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   "namespace": {
     "Opacity": ".7"
-  },
-  "tab:not(:empty):before": {
-    "color": "#e0d7d1"
-  },
-  "cr:before": {
-    "color": "#e0d7d1"
-  },
-  "lf:before": {
-    "color": "#e0d7d1"
   },
   "pre[class*=\"language-\"].line-numbers.line-numbers": {
     "paddingLeft": "0"
@@ -50189,16 +50713,16 @@ __webpack_require__.r(__webpack_exports__);
     "whiteSpace": "normal"
   },
   "comment": {
-    "color": "slategray"
+    "color": "#8292a2"
   },
   "prolog": {
-    "color": "slategray"
+    "color": "#8292a2"
   },
   "doctype": {
-    "color": "slategray"
+    "color": "#8292a2"
   },
   "cdata": {
-    "color": "slategray"
+    "color": "#8292a2"
   },
   "punctuation": {
     "color": "#f8f8f2"
