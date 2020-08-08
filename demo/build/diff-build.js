@@ -73563,7 +73563,7 @@ function processLines(codeTree, wrapLines, lineProps, showLineNumbers, showInlin
 
   function createLine(children, lineNumber) {
     var className = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : [];
-    return wrapLines ? createWrappedLine(children, lineNumber, className) : createUnwrappedLine(children, lineNumber);
+    return wrapLines || className.length > 0 ? createWrappedLine(children, lineNumber, className) : createUnwrappedLine(children, lineNumber);
   }
 
   var _loop = function _loop() {
@@ -73588,7 +73588,7 @@ function processLines(codeTree, wrapLines, lineProps, showLineNumbers, showInlin
 
           var _line = createLine(_children, lineNumber);
 
-          newTree.push(_line); // if it's neither the first nor the last line
+          newTree.push(_line); // if it's the last line
         } else if (i === splitValue.length - 1) {
           var stringChild = tree[index + 1] && tree[index + 1].children && tree[index + 1].children[0];
 
@@ -73608,7 +73608,7 @@ function processLines(codeTree, wrapLines, lineProps, showLineNumbers, showInlin
             var _line2 = createLine(_children2, lineNumber, node.properties.className);
 
             newTree.push(_line2);
-          } // if it's the last line
+          } // if it's neither the first nor the last line
 
         } else {
           var _children3 = [newChild];
@@ -73749,7 +73749,8 @@ function getCodeTree(_ref6) {
     var preProps = useInlineStyles ? Object.assign({}, rest, {
       style: Object.assign({}, defaultPreStyle, customStyle)
     }) : Object.assign({}, rest, {
-      className: 'hljs'
+      className: rest.className ? "hljs ".concat(rest.className) : 'hljs',
+      style: Object.assign({}, customStyle)
     });
 
     if (!astGenerator) {
