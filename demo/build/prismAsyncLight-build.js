@@ -39885,631 +39885,631 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./create-language-async-loader */ "./src/async-languages/create-language-async-loader.js");
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  abap: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("abap", function () {
+  abap: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('abap', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/abap.js */ "./node_modules/refractor/lang/abap.js", 7));
   }),
-  abnf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("abnf", function () {
+  abnf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('abnf', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/abnf.js */ "./node_modules/refractor/lang/abnf.js", 7));
   }),
-  actionscript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("actionscript", function () {
+  actionscript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('actionscript', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/actionscript.js */ "./node_modules/refractor/lang/actionscript.js", 7));
   }),
-  ada: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("ada", function () {
+  ada: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('ada', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/ada.js */ "./node_modules/refractor/lang/ada.js", 7));
   }),
-  antlr4: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("antlr4", function () {
+  antlr4: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('antlr4', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/antlr4.js */ "./node_modules/refractor/lang/antlr4.js", 7));
   }),
-  apacheconf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("apacheconf", function () {
+  apacheconf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('apacheconf', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/apacheconf.js */ "./node_modules/refractor/lang/apacheconf.js", 7));
   }),
-  apl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("apl", function () {
+  apl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('apl', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/apl.js */ "./node_modules/refractor/lang/apl.js", 7));
   }),
-  applescript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("applescript", function () {
+  applescript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('applescript', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/applescript.js */ "./node_modules/refractor/lang/applescript.js", 7));
   }),
-  aql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("aql", function () {
+  aql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('aql', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/aql.js */ "./node_modules/refractor/lang/aql.js", 7));
   }),
-  arduino: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("arduino", function () {
+  arduino: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('arduino', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/arduino.js */ "./node_modules/refractor/lang/arduino.js", 7));
   }),
-  arff: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("arff", function () {
+  arff: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('arff', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/arff.js */ "./node_modules/refractor/lang/arff.js", 7));
   }),
-  asciidoc: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("asciidoc", function () {
+  asciidoc: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('asciidoc', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/asciidoc.js */ "./node_modules/refractor/lang/asciidoc.js", 7));
   }),
-  asm6502: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("asm6502", function () {
+  asm6502: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('asm6502', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/asm6502.js */ "./node_modules/refractor/lang/asm6502.js", 7));
   }),
-  aspnet: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("aspnet", function () {
+  aspnet: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('aspnet', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/aspnet.js */ "./node_modules/refractor/lang/aspnet.js", 7));
   }),
-  autohotkey: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("autohotkey", function () {
+  autohotkey: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('autohotkey', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/autohotkey.js */ "./node_modules/refractor/lang/autohotkey.js", 7));
   }),
-  autoit: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("autoit", function () {
+  autoit: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('autoit', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/autoit.js */ "./node_modules/refractor/lang/autoit.js", 7));
   }),
-  bash: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("bash", function () {
+  bash: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('bash', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/bash.js */ "./node_modules/refractor/lang/bash.js", 7));
   }),
-  basic: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("basic", function () {
+  basic: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('basic', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/basic.js */ "./node_modules/refractor/lang/basic.js", 7));
   }),
-  batch: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("batch", function () {
+  batch: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('batch', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/batch.js */ "./node_modules/refractor/lang/batch.js", 7));
   }),
-  bbcode: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("bbcode", function () {
+  bbcode: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('bbcode', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/bbcode.js */ "./node_modules/refractor/lang/bbcode.js", 7));
   }),
-  bison: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("bison", function () {
+  bison: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('bison', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/bison.js */ "./node_modules/refractor/lang/bison.js", 7));
   }),
-  bnf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("bnf", function () {
+  bnf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('bnf', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/bnf.js */ "./node_modules/refractor/lang/bnf.js", 7));
   }),
-  brainfuck: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("brainfuck", function () {
+  brainfuck: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('brainfuck', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/brainfuck.js */ "./node_modules/refractor/lang/brainfuck.js", 7));
   }),
-  brightscript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("brightscript", function () {
+  brightscript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('brightscript', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/brightscript.js */ "./node_modules/refractor/lang/brightscript.js", 7));
   }),
-  bro: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("bro", function () {
+  bro: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('bro', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/bro.js */ "./node_modules/refractor/lang/bro.js", 7));
   }),
-  c: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("c", function () {
+  c: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('c', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/c.js */ "./node_modules/refractor/lang/c.js", 7));
   }),
-  cil: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("cil", function () {
+  cil: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('cil', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/cil.js */ "./node_modules/refractor/lang/cil.js", 7));
   }),
-  clike: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("clike", function () {
+  clike: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('clike', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/clike.js */ "./node_modules/refractor/lang/clike.js", 7));
   }),
-  clojure: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("clojure", function () {
+  clojure: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('clojure', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/clojure.js */ "./node_modules/refractor/lang/clojure.js", 7));
   }),
-  cmake: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("cmake", function () {
+  cmake: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('cmake', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/cmake.js */ "./node_modules/refractor/lang/cmake.js", 7));
   }),
-  coffeescript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("coffeescript", function () {
+  coffeescript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('coffeescript', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/coffeescript.js */ "./node_modules/refractor/lang/coffeescript.js", 7));
   }),
-  concurnas: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("concurnas", function () {
+  concurnas: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('concurnas', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/concurnas.js */ "./node_modules/refractor/lang/concurnas.js", 7));
   }),
-  cpp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("cpp", function () {
+  cpp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('cpp', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/cpp.js */ "./node_modules/refractor/lang/cpp.js", 7));
   }),
-  crystal: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("crystal", function () {
+  crystal: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('crystal', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/crystal.js */ "./node_modules/refractor/lang/crystal.js", 7));
   }),
-  csharp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("csharp", function () {
+  csharp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('csharp', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/csharp.js */ "./node_modules/refractor/lang/csharp.js", 7));
   }),
-  csp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("csp", function () {
+  csp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('csp', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/csp.js */ "./node_modules/refractor/lang/csp.js", 7));
   }),
-  cssExtras: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("cssExtras", function () {
+  cssExtras: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('cssExtras', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/css-extras.js */ "./node_modules/refractor/lang/css-extras.js", 7));
   }),
-  css: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("css", function () {
+  css: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('css', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/css.js */ "./node_modules/refractor/lang/css.js", 7));
   }),
-  d: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("d", function () {
+  d: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('d', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/d.js */ "./node_modules/refractor/lang/d.js", 7));
   }),
-  dart: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("dart", function () {
+  dart: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('dart', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/dart.js */ "./node_modules/refractor/lang/dart.js", 7));
   }),
-  dax: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("dax", function () {
+  dax: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('dax', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/dax.js */ "./node_modules/refractor/lang/dax.js", 7));
   }),
-  diff: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("diff", function () {
+  diff: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('diff', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/diff.js */ "./node_modules/refractor/lang/diff.js", 7));
   }),
-  django: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("django", function () {
+  django: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('django', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/django.js */ "./node_modules/refractor/lang/django.js", 7));
   }),
-  dnsZoneFile: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("dnsZoneFile", function () {
+  dnsZoneFile: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('dnsZoneFile', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/dns-zone-file.js */ "./node_modules/refractor/lang/dns-zone-file.js", 7));
   }),
-  docker: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("docker", function () {
+  docker: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('docker', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/docker.js */ "./node_modules/refractor/lang/docker.js", 7));
   }),
-  ebnf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("ebnf", function () {
+  ebnf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('ebnf', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/ebnf.js */ "./node_modules/refractor/lang/ebnf.js", 7));
   }),
-  eiffel: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("eiffel", function () {
+  eiffel: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('eiffel', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/eiffel.js */ "./node_modules/refractor/lang/eiffel.js", 7));
   }),
-  ejs: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("ejs", function () {
+  ejs: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('ejs', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/ejs.js */ "./node_modules/refractor/lang/ejs.js", 7));
   }),
-  elixir: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("elixir", function () {
+  elixir: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('elixir', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/elixir.js */ "./node_modules/refractor/lang/elixir.js", 7));
   }),
-  elm: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("elm", function () {
+  elm: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('elm', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/elm.js */ "./node_modules/refractor/lang/elm.js", 7));
   }),
-  erb: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("erb", function () {
+  erb: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('erb', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/erb.js */ "./node_modules/refractor/lang/erb.js", 7));
   }),
-  erlang: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("erlang", function () {
+  erlang: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('erlang', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/erlang.js */ "./node_modules/refractor/lang/erlang.js", 7));
   }),
-  etlua: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("etlua", function () {
+  etlua: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('etlua', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/etlua.js */ "./node_modules/refractor/lang/etlua.js", 7));
   }),
-  excelFormula: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("excelFormula", function () {
+  excelFormula: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('excelFormula', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/excel-formula.js */ "./node_modules/refractor/lang/excel-formula.js", 7));
   }),
-  factor: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("factor", function () {
+  factor: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('factor', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/factor.js */ "./node_modules/refractor/lang/factor.js", 7));
   }),
-  firestoreSecurityRules: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("firestoreSecurityRules", function () {
+  firestoreSecurityRules: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('firestoreSecurityRules', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/firestore-security-rules.js */ "./node_modules/refractor/lang/firestore-security-rules.js", 7));
   }),
-  flow: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("flow", function () {
+  flow: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('flow', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/flow.js */ "./node_modules/refractor/lang/flow.js", 7));
   }),
-  fortran: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("fortran", function () {
+  fortran: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('fortran', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/fortran.js */ "./node_modules/refractor/lang/fortran.js", 7));
   }),
-  fsharp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("fsharp", function () {
+  fsharp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('fsharp', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/fsharp.js */ "./node_modules/refractor/lang/fsharp.js", 7));
   }),
-  ftl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("ftl", function () {
+  ftl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('ftl', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/ftl.js */ "./node_modules/refractor/lang/ftl.js", 7));
   }),
-  gcode: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("gcode", function () {
+  gcode: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('gcode', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/gcode.js */ "./node_modules/refractor/lang/gcode.js", 7));
   }),
-  gdscript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("gdscript", function () {
+  gdscript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('gdscript', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/gdscript.js */ "./node_modules/refractor/lang/gdscript.js", 7));
   }),
-  gedcom: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("gedcom", function () {
+  gedcom: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('gedcom', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/gedcom.js */ "./node_modules/refractor/lang/gedcom.js", 7));
   }),
-  gherkin: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("gherkin", function () {
+  gherkin: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('gherkin', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/gherkin.js */ "./node_modules/refractor/lang/gherkin.js", 7));
   }),
-  git: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("git", function () {
+  git: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('git', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/git.js */ "./node_modules/refractor/lang/git.js", 7));
   }),
-  glsl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("glsl", function () {
+  glsl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('glsl', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/glsl.js */ "./node_modules/refractor/lang/glsl.js", 7));
   }),
-  gml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("gml", function () {
+  gml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('gml', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/gml.js */ "./node_modules/refractor/lang/gml.js", 7));
   }),
-  go: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("go", function () {
+  go: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('go', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/go.js */ "./node_modules/refractor/lang/go.js", 7));
   }),
-  graphql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("graphql", function () {
+  graphql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('graphql', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/graphql.js */ "./node_modules/refractor/lang/graphql.js", 7));
   }),
-  groovy: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("groovy", function () {
+  groovy: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('groovy', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/groovy.js */ "./node_modules/refractor/lang/groovy.js", 7));
   }),
-  haml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("haml", function () {
+  haml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('haml', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/haml.js */ "./node_modules/refractor/lang/haml.js", 7));
   }),
-  handlebars: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("handlebars", function () {
+  handlebars: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('handlebars', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/handlebars.js */ "./node_modules/refractor/lang/handlebars.js", 7));
   }),
-  haskell: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("haskell", function () {
+  haskell: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('haskell', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/haskell.js */ "./node_modules/refractor/lang/haskell.js", 7));
   }),
-  haxe: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("haxe", function () {
+  haxe: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('haxe', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/haxe.js */ "./node_modules/refractor/lang/haxe.js", 7));
   }),
-  hcl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("hcl", function () {
+  hcl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('hcl', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/hcl.js */ "./node_modules/refractor/lang/hcl.js", 7));
   }),
-  hpkp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("hpkp", function () {
+  hpkp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('hpkp', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/hpkp.js */ "./node_modules/refractor/lang/hpkp.js", 7));
   }),
-  hsts: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("hsts", function () {
+  hsts: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('hsts', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/hsts.js */ "./node_modules/refractor/lang/hsts.js", 7));
   }),
-  http: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("http", function () {
+  http: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('http', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/http.js */ "./node_modules/refractor/lang/http.js", 7));
   }),
-  ichigojam: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("ichigojam", function () {
+  ichigojam: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('ichigojam', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/ichigojam.js */ "./node_modules/refractor/lang/ichigojam.js", 7));
   }),
-  icon: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("icon", function () {
+  icon: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('icon', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/icon.js */ "./node_modules/refractor/lang/icon.js", 7));
   }),
-  inform7: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("inform7", function () {
+  inform7: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('inform7', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/inform7.js */ "./node_modules/refractor/lang/inform7.js", 7));
   }),
-  ini: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("ini", function () {
+  ini: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('ini', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/ini.js */ "./node_modules/refractor/lang/ini.js", 7));
   }),
-  io: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("io", function () {
+  io: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('io', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/io.js */ "./node_modules/refractor/lang/io.js", 7));
   }),
-  j: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("j", function () {
+  j: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('j', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/j.js */ "./node_modules/refractor/lang/j.js", 7));
   }),
-  java: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("java", function () {
+  java: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('java', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/java.js */ "./node_modules/refractor/lang/java.js", 7));
   }),
-  javadoc: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("javadoc", function () {
+  javadoc: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('javadoc', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/javadoc.js */ "./node_modules/refractor/lang/javadoc.js", 7));
   }),
-  javadoclike: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("javadoclike", function () {
+  javadoclike: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('javadoclike', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/javadoclike.js */ "./node_modules/refractor/lang/javadoclike.js", 7));
   }),
-  javascript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("javascript", function () {
+  javascript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('javascript', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/javascript.js */ "./node_modules/refractor/lang/javascript.js", 7));
   }),
-  javastacktrace: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("javastacktrace", function () {
+  javastacktrace: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('javastacktrace', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/javastacktrace.js */ "./node_modules/refractor/lang/javastacktrace.js", 7));
   }),
-  jolie: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("jolie", function () {
+  jolie: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('jolie', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/jolie.js */ "./node_modules/refractor/lang/jolie.js", 7));
   }),
-  jq: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("jq", function () {
+  jq: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('jq', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/jq.js */ "./node_modules/refractor/lang/jq.js", 7));
   }),
-  jsExtras: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("jsExtras", function () {
+  jsExtras: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('jsExtras', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/js-extras.js */ "./node_modules/refractor/lang/js-extras.js", 7));
   }),
-  jsTemplates: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("jsTemplates", function () {
+  jsTemplates: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('jsTemplates', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/js-templates.js */ "./node_modules/refractor/lang/js-templates.js", 7));
   }),
-  jsdoc: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("jsdoc", function () {
+  jsdoc: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('jsdoc', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/jsdoc.js */ "./node_modules/refractor/lang/jsdoc.js", 7));
   }),
-  json: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("json", function () {
+  json: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('json', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/json.js */ "./node_modules/refractor/lang/json.js", 7));
   }),
-  json5: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("json5", function () {
+  json5: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('json5', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/json5.js */ "./node_modules/refractor/lang/json5.js", 7));
   }),
-  jsonp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("jsonp", function () {
+  jsonp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('jsonp', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/jsonp.js */ "./node_modules/refractor/lang/jsonp.js", 7));
   }),
-  jsx: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("jsx", function () {
+  jsx: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('jsx', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/jsx.js */ "./node_modules/refractor/lang/jsx.js", 7));
   }),
-  julia: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("julia", function () {
+  julia: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('julia', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/julia.js */ "./node_modules/refractor/lang/julia.js", 7));
   }),
-  keyman: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("keyman", function () {
+  keyman: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('keyman', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/keyman.js */ "./node_modules/refractor/lang/keyman.js", 7));
   }),
-  kotlin: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("kotlin", function () {
+  kotlin: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('kotlin', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/kotlin.js */ "./node_modules/refractor/lang/kotlin.js", 7));
   }),
-  latex: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("latex", function () {
+  latex: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('latex', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/latex.js */ "./node_modules/refractor/lang/latex.js", 7));
   }),
-  latte: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("latte", function () {
+  latte: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('latte', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/latte.js */ "./node_modules/refractor/lang/latte.js", 7));
   }),
-  less: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("less", function () {
+  less: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('less', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/less.js */ "./node_modules/refractor/lang/less.js", 7));
   }),
-  lilypond: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("lilypond", function () {
+  lilypond: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('lilypond', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/lilypond.js */ "./node_modules/refractor/lang/lilypond.js", 7));
   }),
-  liquid: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("liquid", function () {
+  liquid: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('liquid', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/liquid.js */ "./node_modules/refractor/lang/liquid.js", 7));
   }),
-  lisp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("lisp", function () {
+  lisp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('lisp', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/lisp.js */ "./node_modules/refractor/lang/lisp.js", 7));
   }),
-  livescript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("livescript", function () {
+  livescript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('livescript', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/livescript.js */ "./node_modules/refractor/lang/livescript.js", 7));
   }),
-  llvm: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("llvm", function () {
+  llvm: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('llvm', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/llvm.js */ "./node_modules/refractor/lang/llvm.js", 7));
   }),
-  lolcode: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("lolcode", function () {
+  lolcode: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('lolcode', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/lolcode.js */ "./node_modules/refractor/lang/lolcode.js", 7));
   }),
-  lua: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("lua", function () {
+  lua: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('lua', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/lua.js */ "./node_modules/refractor/lang/lua.js", 7));
   }),
-  makefile: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("makefile", function () {
+  makefile: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('makefile', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/makefile.js */ "./node_modules/refractor/lang/makefile.js", 7));
   }),
-  markdown: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("markdown", function () {
+  markdown: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('markdown', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/markdown.js */ "./node_modules/refractor/lang/markdown.js", 7));
   }),
-  markupTemplating: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("markupTemplating", function () {
+  markupTemplating: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('markupTemplating', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/markup-templating.js */ "./node_modules/refractor/lang/markup-templating.js", 7));
   }),
-  markup: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("markup", function () {
+  markup: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('markup', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/markup.js */ "./node_modules/refractor/lang/markup.js", 7));
   }),
-  matlab: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("matlab", function () {
+  matlab: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('matlab', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/matlab.js */ "./node_modules/refractor/lang/matlab.js", 7));
   }),
-  mel: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("mel", function () {
+  mel: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('mel', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/mel.js */ "./node_modules/refractor/lang/mel.js", 7));
   }),
-  mizar: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("mizar", function () {
+  mizar: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('mizar', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/mizar.js */ "./node_modules/refractor/lang/mizar.js", 7));
   }),
-  monkey: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("monkey", function () {
+  monkey: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('monkey', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/monkey.js */ "./node_modules/refractor/lang/monkey.js", 7));
   }),
-  moonscript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("moonscript", function () {
+  moonscript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('moonscript', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/moonscript.js */ "./node_modules/refractor/lang/moonscript.js", 7));
   }),
-  n1ql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("n1ql", function () {
+  n1ql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('n1ql', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/n1ql.js */ "./node_modules/refractor/lang/n1ql.js", 7));
   }),
-  n4js: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("n4js", function () {
+  n4js: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('n4js', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/n4js.js */ "./node_modules/refractor/lang/n4js.js", 7));
   }),
-  nand2tetrisHdl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("nand2tetrisHdl", function () {
+  nand2tetrisHdl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('nand2tetrisHdl', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/nand2tetris-hdl.js */ "./node_modules/refractor/lang/nand2tetris-hdl.js", 7));
   }),
-  nasm: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("nasm", function () {
+  nasm: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('nasm', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/nasm.js */ "./node_modules/refractor/lang/nasm.js", 7));
   }),
-  neon: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("neon", function () {
+  neon: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('neon', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/neon.js */ "./node_modules/refractor/lang/neon.js", 7));
   }),
-  nginx: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("nginx", function () {
+  nginx: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('nginx', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/nginx.js */ "./node_modules/refractor/lang/nginx.js", 7));
   }),
-  nim: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("nim", function () {
+  nim: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('nim', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/nim.js */ "./node_modules/refractor/lang/nim.js", 7));
   }),
-  nix: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("nix", function () {
+  nix: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('nix', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/nix.js */ "./node_modules/refractor/lang/nix.js", 7));
   }),
-  nsis: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("nsis", function () {
+  nsis: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('nsis', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/nsis.js */ "./node_modules/refractor/lang/nsis.js", 7));
   }),
-  objectivec: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("objectivec", function () {
+  objectivec: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('objectivec', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/objectivec.js */ "./node_modules/refractor/lang/objectivec.js", 7));
   }),
-  ocaml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("ocaml", function () {
+  ocaml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('ocaml', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/ocaml.js */ "./node_modules/refractor/lang/ocaml.js", 7));
   }),
-  opencl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("opencl", function () {
+  opencl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('opencl', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/opencl.js */ "./node_modules/refractor/lang/opencl.js", 7));
   }),
-  oz: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("oz", function () {
+  oz: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('oz', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/oz.js */ "./node_modules/refractor/lang/oz.js", 7));
   }),
-  parigp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("parigp", function () {
+  parigp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('parigp', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/parigp.js */ "./node_modules/refractor/lang/parigp.js", 7));
   }),
-  parser: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("parser", function () {
+  parser: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('parser', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/parser.js */ "./node_modules/refractor/lang/parser.js", 7));
   }),
-  pascal: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("pascal", function () {
+  pascal: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('pascal', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/pascal.js */ "./node_modules/refractor/lang/pascal.js", 7));
   }),
-  pascaligo: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("pascaligo", function () {
+  pascaligo: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('pascaligo', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/pascaligo.js */ "./node_modules/refractor/lang/pascaligo.js", 7));
   }),
-  pcaxis: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("pcaxis", function () {
+  pcaxis: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('pcaxis', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/pcaxis.js */ "./node_modules/refractor/lang/pcaxis.js", 7));
   }),
-  perl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("perl", function () {
+  perl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('perl', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/perl.js */ "./node_modules/refractor/lang/perl.js", 7));
   }),
-  phpExtras: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("phpExtras", function () {
+  phpExtras: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('phpExtras', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/php-extras.js */ "./node_modules/refractor/lang/php-extras.js", 7));
   }),
-  php: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("php", function () {
+  php: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('php', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/php.js */ "./node_modules/refractor/lang/php.js", 7));
   }),
-  phpdoc: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("phpdoc", function () {
+  phpdoc: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('phpdoc', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/phpdoc.js */ "./node_modules/refractor/lang/phpdoc.js", 7));
   }),
-  plsql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("plsql", function () {
+  plsql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('plsql', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/plsql.js */ "./node_modules/refractor/lang/plsql.js", 7));
   }),
-  powerquery: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("powerquery", function () {
+  powerquery: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('powerquery', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/powerquery.js */ "./node_modules/refractor/lang/powerquery.js", 7));
   }),
-  powershell: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("powershell", function () {
+  powershell: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('powershell', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/powershell.js */ "./node_modules/refractor/lang/powershell.js", 7));
   }),
-  processing: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("processing", function () {
+  processing: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('processing', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/processing.js */ "./node_modules/refractor/lang/processing.js", 7));
   }),
-  prolog: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("prolog", function () {
+  prolog: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('prolog', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/prolog.js */ "./node_modules/refractor/lang/prolog.js", 7));
   }),
-  properties: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("properties", function () {
+  properties: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('properties', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/properties.js */ "./node_modules/refractor/lang/properties.js", 7));
   }),
-  protobuf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("protobuf", function () {
+  protobuf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('protobuf', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/protobuf.js */ "./node_modules/refractor/lang/protobuf.js", 7));
   }),
-  pug: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("pug", function () {
+  pug: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('pug', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/pug.js */ "./node_modules/refractor/lang/pug.js", 7));
   }),
-  puppet: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("puppet", function () {
+  puppet: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('puppet', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/puppet.js */ "./node_modules/refractor/lang/puppet.js", 7));
   }),
-  pure: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("pure", function () {
+  pure: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('pure', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/pure.js */ "./node_modules/refractor/lang/pure.js", 7));
   }),
-  python: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("python", function () {
+  python: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('python', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/python.js */ "./node_modules/refractor/lang/python.js", 7));
   }),
-  q: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("q", function () {
+  q: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('q', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/q.js */ "./node_modules/refractor/lang/q.js", 7));
   }),
-  qml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("qml", function () {
+  qml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('qml', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/qml.js */ "./node_modules/refractor/lang/qml.js", 7));
   }),
-  qore: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("qore", function () {
+  qore: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('qore', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/qore.js */ "./node_modules/refractor/lang/qore.js", 7));
   }),
-  r: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("r", function () {
+  r: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('r', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/r.js */ "./node_modules/refractor/lang/r.js", 7));
   }),
-  reason: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("reason", function () {
+  reason: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('reason', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/reason.js */ "./node_modules/refractor/lang/reason.js", 7));
   }),
-  regex: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("regex", function () {
+  regex: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('regex', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/regex.js */ "./node_modules/refractor/lang/regex.js", 7));
   }),
-  renpy: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("renpy", function () {
+  renpy: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('renpy', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/renpy.js */ "./node_modules/refractor/lang/renpy.js", 7));
   }),
-  rest: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("rest", function () {
+  rest: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('rest', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/rest.js */ "./node_modules/refractor/lang/rest.js", 7));
   }),
-  rip: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("rip", function () {
+  rip: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('rip', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/rip.js */ "./node_modules/refractor/lang/rip.js", 7));
   }),
-  roboconf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("roboconf", function () {
+  roboconf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('roboconf', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/roboconf.js */ "./node_modules/refractor/lang/roboconf.js", 7));
   }),
-  robotframework: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("robotframework", function () {
+  robotframework: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('robotframework', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/robotframework.js */ "./node_modules/refractor/lang/robotframework.js", 7));
   }),
-  ruby: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("ruby", function () {
+  ruby: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('ruby', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/ruby.js */ "./node_modules/refractor/lang/ruby.js", 7));
   }),
-  rust: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("rust", function () {
+  rust: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('rust', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/rust.js */ "./node_modules/refractor/lang/rust.js", 7));
   }),
-  sas: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("sas", function () {
+  sas: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('sas', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/sas.js */ "./node_modules/refractor/lang/sas.js", 7));
   }),
-  sass: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("sass", function () {
+  sass: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('sass', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/sass.js */ "./node_modules/refractor/lang/sass.js", 7));
   }),
-  scala: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("scala", function () {
+  scala: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('scala', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/scala.js */ "./node_modules/refractor/lang/scala.js", 7));
   }),
-  scheme: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("scheme", function () {
+  scheme: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('scheme', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/scheme.js */ "./node_modules/refractor/lang/scheme.js", 7));
   }),
-  scss: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("scss", function () {
+  scss: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('scss', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/scss.js */ "./node_modules/refractor/lang/scss.js", 7));
   }),
-  shellSession: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("shellSession", function () {
+  shellSession: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('shellSession', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/shell-session.js */ "./node_modules/refractor/lang/shell-session.js", 7));
   }),
-  smalltalk: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("smalltalk", function () {
+  smalltalk: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('smalltalk', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/smalltalk.js */ "./node_modules/refractor/lang/smalltalk.js", 7));
   }),
-  smarty: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("smarty", function () {
+  smarty: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('smarty', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/smarty.js */ "./node_modules/refractor/lang/smarty.js", 7));
   }),
-  solidity: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("solidity", function () {
+  solidity: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('solidity', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/solidity.js */ "./node_modules/refractor/lang/solidity.js", 7));
   }),
-  solutionFile: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("solutionFile", function () {
+  solutionFile: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('solutionFile', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/solution-file.js */ "./node_modules/refractor/lang/solution-file.js", 7));
   }),
-  soy: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("soy", function () {
+  soy: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('soy', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/soy.js */ "./node_modules/refractor/lang/soy.js", 7));
   }),
-  sparql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("sparql", function () {
+  sparql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('sparql', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/sparql.js */ "./node_modules/refractor/lang/sparql.js", 7));
   }),
-  splunkSpl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("splunkSpl", function () {
+  splunkSpl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('splunkSpl', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/splunk-spl.js */ "./node_modules/refractor/lang/splunk-spl.js", 7));
   }),
-  sqf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("sqf", function () {
+  sqf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('sqf', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/sqf.js */ "./node_modules/refractor/lang/sqf.js", 7));
   }),
-  sql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("sql", function () {
+  sql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('sql', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/sql.js */ "./node_modules/refractor/lang/sql.js", 7));
   }),
-  stylus: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("stylus", function () {
+  stylus: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('stylus', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/stylus.js */ "./node_modules/refractor/lang/stylus.js", 7));
   }),
-  swift: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("swift", function () {
+  swift: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('swift', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/swift.js */ "./node_modules/refractor/lang/swift.js", 7));
   }),
-  t4Cs: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("t4Cs", function () {
+  t4Cs: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('t4Cs', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/t4-cs.js */ "./node_modules/refractor/lang/t4-cs.js", 7));
   }),
-  t4Templating: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("t4Templating", function () {
+  t4Templating: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('t4Templating', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/t4-templating.js */ "./node_modules/refractor/lang/t4-templating.js", 7));
   }),
-  t4Vb: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("t4Vb", function () {
+  t4Vb: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('t4Vb', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/t4-vb.js */ "./node_modules/refractor/lang/t4-vb.js", 7));
   }),
-  tap: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("tap", function () {
+  tap: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('tap', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/tap.js */ "./node_modules/refractor/lang/tap.js", 7));
   }),
-  tcl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("tcl", function () {
+  tcl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('tcl', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/tcl.js */ "./node_modules/refractor/lang/tcl.js", 7));
   }),
-  textile: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("textile", function () {
+  textile: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('textile', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/textile.js */ "./node_modules/refractor/lang/textile.js", 7));
   }),
-  toml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("toml", function () {
+  toml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('toml', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/toml.js */ "./node_modules/refractor/lang/toml.js", 7));
   }),
-  tsx: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("tsx", function () {
+  tsx: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('tsx', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/tsx.js */ "./node_modules/refractor/lang/tsx.js", 7));
   }),
-  tt2: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("tt2", function () {
+  tt2: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('tt2', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/tt2.js */ "./node_modules/refractor/lang/tt2.js", 7));
   }),
-  turtle: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("turtle", function () {
+  turtle: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('turtle', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/turtle.js */ "./node_modules/refractor/lang/turtle.js", 7));
   }),
-  twig: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("twig", function () {
+  twig: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('twig', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/twig.js */ "./node_modules/refractor/lang/twig.js", 7));
   }),
-  typescript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("typescript", function () {
+  typescript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('typescript', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/typescript.js */ "./node_modules/refractor/lang/typescript.js", 7));
   }),
-  vala: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("vala", function () {
+  vala: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('vala', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/vala.js */ "./node_modules/refractor/lang/vala.js", 7));
   }),
-  vbnet: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("vbnet", function () {
+  vbnet: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('vbnet', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/vbnet.js */ "./node_modules/refractor/lang/vbnet.js", 7));
   }),
-  velocity: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("velocity", function () {
+  velocity: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('velocity', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/velocity.js */ "./node_modules/refractor/lang/velocity.js", 7));
   }),
-  verilog: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("verilog", function () {
+  verilog: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('verilog', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/verilog.js */ "./node_modules/refractor/lang/verilog.js", 7));
   }),
-  vhdl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("vhdl", function () {
+  vhdl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('vhdl', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/vhdl.js */ "./node_modules/refractor/lang/vhdl.js", 7));
   }),
-  vim: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("vim", function () {
+  vim: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('vim', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/vim.js */ "./node_modules/refractor/lang/vim.js", 7));
   }),
-  visualBasic: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("visualBasic", function () {
+  visualBasic: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('visualBasic', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/visual-basic.js */ "./node_modules/refractor/lang/visual-basic.js", 7));
   }),
-  wasm: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("wasm", function () {
+  wasm: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('wasm', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/wasm.js */ "./node_modules/refractor/lang/wasm.js", 7));
   }),
-  wiki: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("wiki", function () {
+  wiki: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('wiki', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/wiki.js */ "./node_modules/refractor/lang/wiki.js", 7));
   }),
-  xeora: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("xeora", function () {
+  xeora: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('xeora', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/xeora.js */ "./node_modules/refractor/lang/xeora.js", 7));
   }),
-  xojo: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("xojo", function () {
+  xojo: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('xojo', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/xojo.js */ "./node_modules/refractor/lang/xojo.js", 7));
   }),
-  xquery: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("xquery", function () {
+  xquery: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('xquery', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/xquery.js */ "./node_modules/refractor/lang/xquery.js", 7));
   }),
-  yaml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("yaml", function () {
+  yaml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('yaml', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/yaml.js */ "./node_modules/refractor/lang/yaml.js", 7));
   }),
-  zig: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("zig", function () {
+  zig: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('zig', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/zig.js */ "./node_modules/refractor/lang/zig.js", 7));
   })
 });
@@ -41162,6 +41162,7 @@ function getCodeTree(_ref6) {
         customStyle = _ref7$customStyle === void 0 ? {} : _ref7$customStyle,
         _ref7$codeTagProps = _ref7.codeTagProps,
         codeTagProps = _ref7$codeTagProps === void 0 ? {
+      className: language ? "language-".concat(language) : undefined,
       style: style['code[class*="language-"]']
     } : _ref7$codeTagProps,
         _ref7$useInlineStyles = _ref7.useInlineStyles,
@@ -41199,10 +41200,11 @@ function getCodeTree(_ref6) {
     var defaultPreStyle = style.hljs || style['pre[class*="language-"]'] || {
       backgroundColor: '#fff'
     };
+    var generatorClassName = isHighlightJs(astGenerator) ? 'hljs' : 'prismjs';
     var preProps = useInlineStyles ? Object.assign({}, rest, {
       style: Object.assign({}, defaultPreStyle, customStyle)
     }) : Object.assign({}, rest, {
-      className: rest.className ? "hljs ".concat(rest.className) : 'hljs',
+      className: rest.className ? "".concat(generatorClassName, " ").concat(rest.className) : generatorClassName,
       style: Object.assign({}, customStyle)
     });
 

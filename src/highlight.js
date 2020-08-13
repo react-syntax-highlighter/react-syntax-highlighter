@@ -268,7 +268,7 @@ function defaultRenderer({ rows, stylesheet, useInlineStyles }) {
 
 // only highlight.js has the highlightAuto method
 function isHighlightJs(astGenerator) {
-  return typeof astGenerator.highlightAuto !== 'undefined';
+  return astGenerator && typeof astGenerator.highlightAuto !== 'undefined';
 }
 
 function getCodeTree({ astGenerator, language, code, defaultCodeValue }) {
@@ -303,7 +303,10 @@ export default function(defaultAstGenerator, defaultStyle) {
     children,
     style = defaultStyle,
     customStyle = {},
-    codeTagProps = { style: style['code[class*="language-"]'] },
+    codeTagProps = {
+      className: language ? `language-${language}` : undefined,
+      style: style['code[class*="language-"]']
+    },
     useInlineStyles = true,
     showLineNumbers = false,
     showInlineLineNumbers = false,
@@ -333,12 +336,15 @@ export default function(defaultAstGenerator, defaultStyle) {
 
     const defaultPreStyle = style.hljs ||
       style['pre[class*="language-"]'] || { backgroundColor: '#fff' };
+    const generatorClassName = isHighlightJs(astGenerator) ? 'hljs' : 'prismjs';
     const preProps = useInlineStyles
       ? Object.assign({}, rest, {
           style: Object.assign({}, defaultPreStyle, customStyle)
         })
       : Object.assign({}, rest, {
-          className: rest.className ? `hljs ${rest.className}` : 'hljs',
+          className: rest.className
+            ? `${generatorClassName} ${rest.className}`
+            : generatorClassName,
           style: Object.assign({}, customStyle)
         });
 
