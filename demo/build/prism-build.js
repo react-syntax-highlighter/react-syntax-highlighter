@@ -40742,6 +40742,7 @@ function getCodeTree(_ref6) {
         customStyle = _ref7$customStyle === void 0 ? {} : _ref7$customStyle,
         _ref7$codeTagProps = _ref7.codeTagProps,
         codeTagProps = _ref7$codeTagProps === void 0 ? {
+      className: language ? "language-".concat(language) : undefined,
       style: style['code[class*="language-"]']
     } : _ref7$codeTagProps,
         _ref7$useInlineStyles = _ref7.useInlineStyles,
@@ -40779,10 +40780,11 @@ function getCodeTree(_ref6) {
     var defaultPreStyle = style.hljs || style['pre[class*="language-"]'] || {
       backgroundColor: '#fff'
     };
+    var generatorClassName = isHighlightJs(astGenerator) ? 'hljs' : 'prismjs';
     var preProps = useInlineStyles ? Object.assign({}, rest, {
       style: Object.assign({}, defaultPreStyle, customStyle)
     }) : Object.assign({}, rest, {
-      className: rest.className ? "hljs ".concat(rest.className) : 'hljs',
+      className: rest.className ? "".concat(generatorClassName, " ").concat(rest.className) : generatorClassName,
       style: Object.assign({}, customStyle)
     });
 
