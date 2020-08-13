@@ -303,7 +303,10 @@ export default function(defaultAstGenerator, defaultStyle) {
     children,
     style = defaultStyle,
     customStyle = {},
-    codeTagProps = { style: style['code[class*="language-"]'] },
+    codeTagProps = {
+      className: `language-${language}`,
+      style: style['code[class*="language-"]']
+    },
     useInlineStyles = true,
     showLineNumbers = false,
     showInlineLineNumbers = false,
