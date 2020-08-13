@@ -136,6 +136,77 @@ function flattenCodeTree(tree, className = [], newTree = []) {
   return newTree;
 }
 
+// function processLinesREWRITE(
+//   codeTree,
+//   wrapLines,
+//   lineProps,
+//   showLineNumbers,
+//   showInlineLineNumbers,
+//   spotlightedLines,
+//   startingLineNumber,
+//   largestLineNumber,
+//   lineNumberStyle
+// ) {
+//   // tokenizedTree has been processed by your astGenerator of choice (hljs or prism)
+//   // it's an array containing tokenized elements (word, punctuation, whitespace, linebreak)
+//   // the original text content of each element is contained in the single-item "children" array
+//   const tokenizedTree = flattenCodeTree(codeTree.value);
+
+//   function createWrappedLine(children, lineNumber, className = []) {
+//     return createLineElement({
+//       children,
+//       lineNumber,
+//       lineNumberStyle,
+//       largestLineNumber,
+//       showInlineLineNumbers,
+//       lineProps,
+//       className
+//     });
+//   }
+
+//   function createUnwrappedLine(children, lineNumber) {
+//     if (lineNumber && showInlineLineNumbers) {
+//       const inlineLineNumberStyle = assembleLineNumberStyles(
+//         lineNumberStyle,
+//         largestLineNumber
+//       );
+//       children.unshift(getInlineLineNumber(lineNumber, inlineLineNumberStyle));
+//     }
+//     return children;
+//   }
+
+//   function createLine(children, lineNumber, className = [], ) {
+//     return wrapLines || className.length > 0
+//       ? createWrappedLine(children, lineNumber, className)
+//       : createUnwrappedLine(children, lineNumber);
+//   }
+
+//   const processedLines = tree.map((node, index) => {
+//     const values = node.children[0].value.split('\n');
+
+//     const lines = values.map((text, i) => {
+//       const lineNumber = i + startingLineNumber;
+//       const isLineSpotlighted = spotlightedLines.indexOf(lineNumber) !== -1;
+//       const newChild = { type: 'text', value: `${text}\n` };
+
+//       if (i === 0) {
+//         const children = tree.slice(lastLineBreakIndex + 1, index).concat(
+//           createLineElement({
+//             children: [newChild],
+//             className: node.properties.className
+//           })
+//         );
+//       }
+
+//       // return ...
+//     })
+
+//     return lines;
+//   })
+
+//   return processedLines;
+// }
+
 function processLines(
   codeTree,
   wrapLines,
