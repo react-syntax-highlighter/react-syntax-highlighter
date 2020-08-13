@@ -268,7 +268,7 @@ function defaultRenderer({ rows, stylesheet, useInlineStyles }) {
 
 // only highlight.js has the highlightAuto method
 function isHighlightJs(astGenerator) {
-  return typeof astGenerator.highlightAuto !== 'undefined';
+  return astGenerator && typeof astGenerator.highlightAuto !== 'undefined';
 }
 
 function getCodeTree({ astGenerator, language, code, defaultCodeValue }) {
