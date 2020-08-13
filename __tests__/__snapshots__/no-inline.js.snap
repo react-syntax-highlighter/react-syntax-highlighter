@@ -5,7 +5,9 @@ exports[`SyntaxHighlighter component renders correctly without inline styles whe
   className="hljs"
   style={Object {}}
 >
-  <code>
+  <code
+    className="language-javascript"
+  >
     <span
       className="hljs-keyword"
     >

@@ -29,6 +29,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
   }
 >
   <code
+    className="language-jsx"
     style={
       Object {
         "MozHyphens": "none",
@@ -104,6 +105,7 @@ exports[`SyntaxHighlighter should just render text if syntax is not registered 1
   }
 >
   <code
+    className="language-text"
     style={
       Object {
         "MozHyphens": "none",
@@ -165,6 +167,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
   }
 >
   <code
+    className="language-python"
     style={
       Object {
         "MozHyphens": "none",

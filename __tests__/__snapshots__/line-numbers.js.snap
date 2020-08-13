@@ -12,7 +12,9 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function 1`] = `
     }
   }
 >
-  <code>
+  <code
+    className="language-javascript"
+  >
     <code
       style={
         Object {
@@ -525,7 +527,9 @@ exports[`SyntaxHighlighter allows lineNumberStyle as object 1`] = `
     }
   }
 >
-  <code>
+  <code
+    className="language-javascript"
+  >
     <code
       style={
         Object {
@@ -1038,7 +1042,9 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
     }
   }
 >
-  <code>
+  <code
+    className="language-javascript"
+  >
     <code
       style={
         Object {

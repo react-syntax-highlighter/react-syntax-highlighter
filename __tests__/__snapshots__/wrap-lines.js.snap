@@ -12,7 +12,9 @@ exports[`SyntaxHighlighter allows lineProps as an object 1`] = `
     }
   }
 >
-  <code>
+  <code
+    className="language-javascript"
+  >
     <span
       style={
         Object {
@@ -494,7 +496,9 @@ exports[`SyntaxHighlighter allows lineProps as function 1`] = `
     }
   }
 >
-  <code>
+  <code
+    className="language-javascript"
+  >
     <span
       style={
         Object {
@@ -976,7 +980,9 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
     }
   }
 >
-  <code>
+  <code
+    className="language-javascript"
+  >
     <span
       style={Object {}}
     >
@@ -1414,7 +1420,9 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     }
   }
 >
-  <code>
+  <code
+    className="language-java"
+  >
     <span
       style={
         Object {

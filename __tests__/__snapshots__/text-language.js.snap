@@ -12,7 +12,9 @@ exports[`SyntaxHighlighter component renders monospace text when text is passed 
     }
   }
 >
-  <code>
+  <code
+    className="language-text"
+  >
     <span
       style={Object {}}
     >

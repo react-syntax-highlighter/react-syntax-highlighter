@@ -12,7 +12,9 @@ exports[`SyntaxHighlighter component renders correctly by falling back to highli
     }
   }
 >
-  <code>
+  <code
+    className="language-j"
+  >
     <span
       style={
         Object {
