@@ -527,7 +527,9 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function for inline line nu
     }
   }
 >
-  <code>
+  <code
+    className="language-javascript"
+  >
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
