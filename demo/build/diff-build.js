@@ -71824,571 +71824,571 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./create-language-async-loader */ "./src/async-languages/create-language-async-loader.js");
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  oneC: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("oneC", function () {
+  oneC: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('oneC', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_oneC */ "vendors~react-syntax-highlighter_languages_highlight_oneC").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/1c */ "./node_modules/highlight.js/lib/languages/1c.js", 7));
   }),
-  abnf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("abnf", function () {
+  abnf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('abnf', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_abnf */ "react-syntax-highlighter_languages_highlight_abnf").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/abnf */ "./node_modules/highlight.js/lib/languages/abnf.js", 7));
   }),
-  accesslog: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("accesslog", function () {
+  accesslog: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('accesslog', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_accesslog */ "react-syntax-highlighter_languages_highlight_accesslog").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/accesslog */ "./node_modules/highlight.js/lib/languages/accesslog.js", 7));
   }),
-  actionscript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("actionscript", function () {
+  actionscript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('actionscript', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_actionscript */ "react-syntax-highlighter_languages_highlight_actionscript").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/actionscript */ "./node_modules/highlight.js/lib/languages/actionscript.js", 7));
   }),
-  ada: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("ada", function () {
+  ada: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('ada', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_ada */ "react-syntax-highlighter_languages_highlight_ada").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/ada */ "./node_modules/highlight.js/lib/languages/ada.js", 7));
   }),
-  angelscript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("angelscript", function () {
+  angelscript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('angelscript', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_angelscript */ "react-syntax-highlighter_languages_highlight_angelscript").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/angelscript */ "./node_modules/highlight.js/lib/languages/angelscript.js", 7));
   }),
-  apache: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("apache", function () {
+  apache: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('apache', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_apache */ "react-syntax-highlighter_languages_highlight_apache").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/apache */ "./node_modules/highlight.js/lib/languages/apache.js", 7));
   }),
-  applescript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("applescript", function () {
+  applescript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('applescript', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_applescript */ "react-syntax-highlighter_languages_highlight_applescript").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/applescript */ "./node_modules/highlight.js/lib/languages/applescript.js", 7));
   }),
-  arcade: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("arcade", function () {
+  arcade: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('arcade', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_arcade */ "react-syntax-highlighter_languages_highlight_arcade").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/arcade */ "./node_modules/highlight.js/lib/languages/arcade.js", 7));
   }),
-  arduino: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("arduino", function () {
+  arduino: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('arduino', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_arduino */ "react-syntax-highlighter_languages_highlight_arduino").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/arduino */ "./node_modules/highlight.js/lib/languages/arduino.js", 7));
   }),
-  armasm: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("armasm", function () {
+  armasm: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('armasm', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_armasm */ "react-syntax-highlighter_languages_highlight_armasm").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/armasm */ "./node_modules/highlight.js/lib/languages/armasm.js", 7));
   }),
-  asciidoc: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("asciidoc", function () {
+  asciidoc: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('asciidoc', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_asciidoc */ "react-syntax-highlighter_languages_highlight_asciidoc").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/asciidoc */ "./node_modules/highlight.js/lib/languages/asciidoc.js", 7));
   }),
-  aspectj: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("aspectj", function () {
+  aspectj: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('aspectj', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_aspectj */ "react-syntax-highlighter_languages_highlight_aspectj").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/aspectj */ "./node_modules/highlight.js/lib/languages/aspectj.js", 7));
   }),
-  autohotkey: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("autohotkey", function () {
+  autohotkey: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('autohotkey', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_autohotkey */ "react-syntax-highlighter_languages_highlight_autohotkey").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/autohotkey */ "./node_modules/highlight.js/lib/languages/autohotkey.js", 7));
   }),
-  autoit: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("autoit", function () {
+  autoit: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('autoit', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_autoit */ "vendors~react-syntax-highlighter_languages_highlight_autoit").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/autoit */ "./node_modules/highlight.js/lib/languages/autoit.js", 7));
   }),
-  avrasm: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("avrasm", function () {
+  avrasm: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('avrasm', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_avrasm */ "react-syntax-highlighter_languages_highlight_avrasm").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/avrasm */ "./node_modules/highlight.js/lib/languages/avrasm.js", 7));
   }),
-  awk: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("awk", function () {
+  awk: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('awk', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_awk */ "react-syntax-highlighter_languages_highlight_awk").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/awk */ "./node_modules/highlight.js/lib/languages/awk.js", 7));
   }),
-  axapta: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("axapta", function () {
+  axapta: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('axapta', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_axapta */ "react-syntax-highlighter_languages_highlight_axapta").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/axapta */ "./node_modules/highlight.js/lib/languages/axapta.js", 7));
   }),
-  bash: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("bash", function () {
+  bash: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('bash', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_bash */ "react-syntax-highlighter_languages_highlight_bash").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/bash */ "./node_modules/highlight.js/lib/languages/bash.js", 7));
   }),
-  basic: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("basic", function () {
+  basic: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('basic', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_basic */ "react-syntax-highlighter_languages_highlight_basic").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/basic */ "./node_modules/highlight.js/lib/languages/basic.js", 7));
   }),
-  bnf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("bnf", function () {
+  bnf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('bnf', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_bnf */ "react-syntax-highlighter_languages_highlight_bnf").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/bnf */ "./node_modules/highlight.js/lib/languages/bnf.js", 7));
   }),
-  brainfuck: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("brainfuck", function () {
+  brainfuck: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('brainfuck', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_brainfuck */ "react-syntax-highlighter_languages_highlight_brainfuck").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/brainfuck */ "./node_modules/highlight.js/lib/languages/brainfuck.js", 7));
   }),
-  cLike: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("cLike", function () {
+  cLike: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('cLike', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_cLike */ "react-syntax-highlighter_languages_highlight_cLike").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/c-like */ "./node_modules/highlight.js/lib/languages/c-like.js", 7));
   }),
-  c: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("c", function () {
+  c: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('c', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_c */ "react-syntax-highlighter_languages_highlight_c").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/c */ "./node_modules/highlight.js/lib/languages/c.js", 7));
   }),
-  cal: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("cal", function () {
+  cal: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('cal', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_cal */ "react-syntax-highlighter_languages_highlight_cal").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/cal */ "./node_modules/highlight.js/lib/languages/cal.js", 7));
   }),
-  capnproto: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("capnproto", function () {
+  capnproto: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('capnproto', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_capnproto */ "react-syntax-highlighter_languages_highlight_capnproto").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/capnproto */ "./node_modules/highlight.js/lib/languages/capnproto.js", 7));
   }),
-  ceylon: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("ceylon", function () {
+  ceylon: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('ceylon', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_ceylon */ "react-syntax-highlighter_languages_highlight_ceylon").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/ceylon */ "./node_modules/highlight.js/lib/languages/ceylon.js", 7));
   }),
-  clean: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("clean", function () {
+  clean: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('clean', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_clean */ "react-syntax-highlighter_languages_highlight_clean").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/clean */ "./node_modules/highlight.js/lib/languages/clean.js", 7));
   }),
-  clojureRepl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("clojureRepl", function () {
+  clojureRepl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('clojureRepl', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_clojureRepl */ "react-syntax-highlighter_languages_highlight_clojureRepl").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/clojure-repl */ "./node_modules/highlight.js/lib/languages/clojure-repl.js", 7));
   }),
-  clojure: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("clojure", function () {
+  clojure: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('clojure', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_clojure */ "react-syntax-highlighter_languages_highlight_clojure").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/clojure */ "./node_modules/highlight.js/lib/languages/clojure.js", 7));
   }),
-  cmake: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("cmake", function () {
+  cmake: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('cmake', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_cmake */ "react-syntax-highlighter_languages_highlight_cmake").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/cmake */ "./node_modules/highlight.js/lib/languages/cmake.js", 7));
   }),
-  coffeescript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("coffeescript", function () {
+  coffeescript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('coffeescript', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_coffeescript */ "react-syntax-highlighter_languages_highlight_coffeescript").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/coffeescript */ "./node_modules/highlight.js/lib/languages/coffeescript.js", 7));
   }),
-  coq: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("coq", function () {
+  coq: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('coq', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_coq */ "react-syntax-highlighter_languages_highlight_coq").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/coq */ "./node_modules/highlight.js/lib/languages/coq.js", 7));
   }),
-  cos: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("cos", function () {
+  cos: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('cos', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_cos */ "react-syntax-highlighter_languages_highlight_cos").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/cos */ "./node_modules/highlight.js/lib/languages/cos.js", 7));
   }),
-  cpp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("cpp", function () {
+  cpp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('cpp', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_cpp */ "react-syntax-highlighter_languages_highlight_cpp").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/cpp */ "./node_modules/highlight.js/lib/languages/cpp.js", 7));
   }),
-  crmsh: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("crmsh", function () {
+  crmsh: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('crmsh', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_crmsh */ "react-syntax-highlighter_languages_highlight_crmsh").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/crmsh */ "./node_modules/highlight.js/lib/languages/crmsh.js", 7));
   }),
-  crystal: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("crystal", function () {
+  crystal: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('crystal', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_crystal */ "react-syntax-highlighter_languages_highlight_crystal").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/crystal */ "./node_modules/highlight.js/lib/languages/crystal.js", 7));
   }),
-  csharp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("csharp", function () {
+  csharp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('csharp', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_csharp */ "react-syntax-highlighter_languages_highlight_csharp").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/csharp */ "./node_modules/highlight.js/lib/languages/csharp.js", 7));
   }),
-  csp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("csp", function () {
+  csp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('csp', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_csp */ "react-syntax-highlighter_languages_highlight_csp").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/csp */ "./node_modules/highlight.js/lib/languages/csp.js", 7));
   }),
-  css: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("css", function () {
+  css: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('css', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_css */ "react-syntax-highlighter_languages_highlight_css").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/css */ "./node_modules/highlight.js/lib/languages/css.js", 7));
   }),
-  d: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("d", function () {
+  d: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('d', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_d */ "react-syntax-highlighter_languages_highlight_d").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/d */ "./node_modules/highlight.js/lib/languages/d.js", 7));
   }),
-  dart: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("dart", function () {
+  dart: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('dart', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_dart */ "react-syntax-highlighter_languages_highlight_dart").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/dart */ "./node_modules/highlight.js/lib/languages/dart.js", 7));
   }),
-  delphi: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("delphi", function () {
+  delphi: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('delphi', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_delphi */ "react-syntax-highlighter_languages_highlight_delphi").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/delphi */ "./node_modules/highlight.js/lib/languages/delphi.js", 7));
   }),
-  diff: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("diff", function () {
+  diff: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('diff', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_diff */ "react-syntax-highlighter_languages_highlight_diff").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/diff */ "./node_modules/highlight.js/lib/languages/diff.js", 7));
   }),
-  django: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("django", function () {
+  django: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('django', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_django */ "react-syntax-highlighter_languages_highlight_django").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/django */ "./node_modules/highlight.js/lib/languages/django.js", 7));
   }),
-  dns: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("dns", function () {
+  dns: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('dns', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_dns */ "react-syntax-highlighter_languages_highlight_dns").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/dns */ "./node_modules/highlight.js/lib/languages/dns.js", 7));
   }),
-  dockerfile: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("dockerfile", function () {
+  dockerfile: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('dockerfile', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_dockerfile */ "react-syntax-highlighter_languages_highlight_dockerfile").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/dockerfile */ "./node_modules/highlight.js/lib/languages/dockerfile.js", 7));
   }),
-  dos: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("dos", function () {
+  dos: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('dos', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_dos */ "react-syntax-highlighter_languages_highlight_dos").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/dos */ "./node_modules/highlight.js/lib/languages/dos.js", 7));
   }),
-  dsconfig: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("dsconfig", function () {
+  dsconfig: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('dsconfig', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_dsconfig */ "react-syntax-highlighter_languages_highlight_dsconfig").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/dsconfig */ "./node_modules/highlight.js/lib/languages/dsconfig.js", 7));
   }),
-  dts: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("dts", function () {
+  dts: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('dts', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_dts */ "react-syntax-highlighter_languages_highlight_dts").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/dts */ "./node_modules/highlight.js/lib/languages/dts.js", 7));
   }),
-  dust: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("dust", function () {
+  dust: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('dust', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_dust */ "react-syntax-highlighter_languages_highlight_dust").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/dust */ "./node_modules/highlight.js/lib/languages/dust.js", 7));
   }),
-  ebnf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("ebnf", function () {
+  ebnf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('ebnf', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_ebnf */ "react-syntax-highlighter_languages_highlight_ebnf").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/ebnf */ "./node_modules/highlight.js/lib/languages/ebnf.js", 7));
   }),
-  elixir: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("elixir", function () {
+  elixir: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('elixir', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_elixir */ "react-syntax-highlighter_languages_highlight_elixir").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/elixir */ "./node_modules/highlight.js/lib/languages/elixir.js", 7));
   }),
-  elm: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("elm", function () {
+  elm: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('elm', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_elm */ "react-syntax-highlighter_languages_highlight_elm").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/elm */ "./node_modules/highlight.js/lib/languages/elm.js", 7));
   }),
-  erb: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("erb", function () {
+  erb: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('erb', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_erb */ "react-syntax-highlighter_languages_highlight_erb").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/erb */ "./node_modules/highlight.js/lib/languages/erb.js", 7));
   }),
-  erlangRepl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("erlangRepl", function () {
+  erlangRepl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('erlangRepl', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_erlangRepl */ "react-syntax-highlighter_languages_highlight_erlangRepl").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/erlang-repl */ "./node_modules/highlight.js/lib/languages/erlang-repl.js", 7));
   }),
-  erlang: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("erlang", function () {
+  erlang: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('erlang', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_erlang */ "react-syntax-highlighter_languages_highlight_erlang").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/erlang */ "./node_modules/highlight.js/lib/languages/erlang.js", 7));
   }),
-  excel: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("excel", function () {
+  excel: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('excel', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_excel */ "react-syntax-highlighter_languages_highlight_excel").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/excel */ "./node_modules/highlight.js/lib/languages/excel.js", 7));
   }),
-  fix: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("fix", function () {
+  fix: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('fix', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_fix */ "react-syntax-highlighter_languages_highlight_fix").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/fix */ "./node_modules/highlight.js/lib/languages/fix.js", 7));
   }),
-  flix: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("flix", function () {
+  flix: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('flix', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_flix */ "react-syntax-highlighter_languages_highlight_flix").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/flix */ "./node_modules/highlight.js/lib/languages/flix.js", 7));
   }),
-  fortran: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("fortran", function () {
+  fortran: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('fortran', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_fortran */ "react-syntax-highlighter_languages_highlight_fortran").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/fortran */ "./node_modules/highlight.js/lib/languages/fortran.js", 7));
   }),
-  fsharp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("fsharp", function () {
+  fsharp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('fsharp', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_fsharp */ "react-syntax-highlighter_languages_highlight_fsharp").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/fsharp */ "./node_modules/highlight.js/lib/languages/fsharp.js", 7));
   }),
-  gams: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("gams", function () {
+  gams: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('gams', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_gams */ "react-syntax-highlighter_languages_highlight_gams").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/gams */ "./node_modules/highlight.js/lib/languages/gams.js", 7));
   }),
-  gauss: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("gauss", function () {
+  gauss: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('gauss', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_gauss */ "vendors~react-syntax-highlighter_languages_highlight_gauss").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/gauss */ "./node_modules/highlight.js/lib/languages/gauss.js", 7));
   }),
-  gcode: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("gcode", function () {
+  gcode: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('gcode', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_gcode */ "react-syntax-highlighter_languages_highlight_gcode").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/gcode */ "./node_modules/highlight.js/lib/languages/gcode.js", 7));
   }),
-  gherkin: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("gherkin", function () {
+  gherkin: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('gherkin', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_gherkin */ "react-syntax-highlighter_languages_highlight_gherkin").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/gherkin */ "./node_modules/highlight.js/lib/languages/gherkin.js", 7));
   }),
-  glsl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("glsl", function () {
+  glsl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('glsl', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_glsl */ "react-syntax-highlighter_languages_highlight_glsl").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/glsl */ "./node_modules/highlight.js/lib/languages/glsl.js", 7));
   }),
-  gml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("gml", function () {
+  gml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('gml', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_gml */ "vendors~react-syntax-highlighter_languages_highlight_gml").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/gml */ "./node_modules/highlight.js/lib/languages/gml.js", 7));
   }),
-  go: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("go", function () {
+  go: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('go', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_go */ "react-syntax-highlighter_languages_highlight_go").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/go */ "./node_modules/highlight.js/lib/languages/go.js", 7));
   }),
-  golo: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("golo", function () {
+  golo: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('golo', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_golo */ "react-syntax-highlighter_languages_highlight_golo").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/golo */ "./node_modules/highlight.js/lib/languages/golo.js", 7));
   }),
-  gradle: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("gradle", function () {
+  gradle: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('gradle', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_gradle */ "react-syntax-highlighter_languages_highlight_gradle").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/gradle */ "./node_modules/highlight.js/lib/languages/gradle.js", 7));
   }),
-  groovy: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("groovy", function () {
+  groovy: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('groovy', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_groovy */ "react-syntax-highlighter_languages_highlight_groovy").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/groovy */ "./node_modules/highlight.js/lib/languages/groovy.js", 7));
   }),
-  haml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("haml", function () {
+  haml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('haml', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_haml */ "react-syntax-highlighter_languages_highlight_haml").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/haml */ "./node_modules/highlight.js/lib/languages/haml.js", 7));
   }),
-  handlebars: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("handlebars", function () {
+  handlebars: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('handlebars', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_handlebars */ "react-syntax-highlighter_languages_highlight_handlebars").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/handlebars */ "./node_modules/highlight.js/lib/languages/handlebars.js", 7));
   }),
-  haskell: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("haskell", function () {
+  haskell: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('haskell', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_haskell */ "react-syntax-highlighter_languages_highlight_haskell").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/haskell */ "./node_modules/highlight.js/lib/languages/haskell.js", 7));
   }),
-  haxe: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("haxe", function () {
+  haxe: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('haxe', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_haxe */ "react-syntax-highlighter_languages_highlight_haxe").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/haxe */ "./node_modules/highlight.js/lib/languages/haxe.js", 7));
   }),
-  hsp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("hsp", function () {
+  hsp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('hsp', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_hsp */ "react-syntax-highlighter_languages_highlight_hsp").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/hsp */ "./node_modules/highlight.js/lib/languages/hsp.js", 7));
   }),
-  htmlbars: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("htmlbars", function () {
+  htmlbars: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('htmlbars', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_htmlbars */ "react-syntax-highlighter_languages_highlight_htmlbars").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/htmlbars */ "./node_modules/highlight.js/lib/languages/htmlbars.js", 7));
   }),
-  http: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("http", function () {
+  http: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('http', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_http */ "react-syntax-highlighter_languages_highlight_http").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/http */ "./node_modules/highlight.js/lib/languages/http.js", 7));
   }),
-  hy: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("hy", function () {
+  hy: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('hy', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_hy */ "react-syntax-highlighter_languages_highlight_hy").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/hy */ "./node_modules/highlight.js/lib/languages/hy.js", 7));
   }),
-  inform7: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("inform7", function () {
+  inform7: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('inform7', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_inform7 */ "react-syntax-highlighter_languages_highlight_inform7").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/inform7 */ "./node_modules/highlight.js/lib/languages/inform7.js", 7));
   }),
-  ini: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("ini", function () {
+  ini: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('ini', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_ini */ "react-syntax-highlighter_languages_highlight_ini").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/ini */ "./node_modules/highlight.js/lib/languages/ini.js", 7));
   }),
-  irpf90: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("irpf90", function () {
+  irpf90: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('irpf90', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_irpf90 */ "react-syntax-highlighter_languages_highlight_irpf90").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/irpf90 */ "./node_modules/highlight.js/lib/languages/irpf90.js", 7));
   }),
-  isbl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("isbl", function () {
+  isbl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('isbl', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_isbl */ "vendors~react-syntax-highlighter_languages_highlight_isbl").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/isbl */ "./node_modules/highlight.js/lib/languages/isbl.js", 7));
   }),
-  java: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("java", function () {
+  java: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('java', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_java */ "react-syntax-highlighter_languages_highlight_java").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/java */ "./node_modules/highlight.js/lib/languages/java.js", 7));
   }),
-  javascript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("javascript", function () {
+  javascript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('javascript', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_javascript */ "vendors~react-syntax-highlighter_languages_highlight_javascript").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/javascript */ "./node_modules/highlight.js/lib/languages/javascript.js", 7));
   }),
-  jbossCli: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("jbossCli", function () {
+  jbossCli: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('jbossCli', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_jbossCli */ "react-syntax-highlighter_languages_highlight_jbossCli").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/jboss-cli */ "./node_modules/highlight.js/lib/languages/jboss-cli.js", 7));
   }),
-  json: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("json", function () {
+  json: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('json', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_json */ "react-syntax-highlighter_languages_highlight_json").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/json */ "./node_modules/highlight.js/lib/languages/json.js", 7));
   }),
-  juliaRepl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("juliaRepl", function () {
+  juliaRepl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('juliaRepl', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_juliaRepl */ "react-syntax-highlighter_languages_highlight_juliaRepl").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/julia-repl */ "./node_modules/highlight.js/lib/languages/julia-repl.js", 7));
   }),
-  julia: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("julia", function () {
+  julia: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('julia', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_julia */ "react-syntax-highlighter_languages_highlight_julia").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/julia */ "./node_modules/highlight.js/lib/languages/julia.js", 7));
   }),
-  kotlin: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("kotlin", function () {
+  kotlin: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('kotlin', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_kotlin */ "react-syntax-highlighter_languages_highlight_kotlin").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/kotlin */ "./node_modules/highlight.js/lib/languages/kotlin.js", 7));
   }),
-  lasso: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("lasso", function () {
+  lasso: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('lasso', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_lasso */ "react-syntax-highlighter_languages_highlight_lasso").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/lasso */ "./node_modules/highlight.js/lib/languages/lasso.js", 7));
   }),
-  latex: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("latex", function () {
+  latex: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('latex', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_latex */ "react-syntax-highlighter_languages_highlight_latex").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/latex */ "./node_modules/highlight.js/lib/languages/latex.js", 7));
   }),
-  ldif: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("ldif", function () {
+  ldif: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('ldif', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_ldif */ "react-syntax-highlighter_languages_highlight_ldif").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/ldif */ "./node_modules/highlight.js/lib/languages/ldif.js", 7));
   }),
-  leaf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("leaf", function () {
+  leaf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('leaf', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_leaf */ "react-syntax-highlighter_languages_highlight_leaf").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/leaf */ "./node_modules/highlight.js/lib/languages/leaf.js", 7));
   }),
-  less: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("less", function () {
+  less: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('less', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_less */ "react-syntax-highlighter_languages_highlight_less").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/less */ "./node_modules/highlight.js/lib/languages/less.js", 7));
   }),
-  lisp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("lisp", function () {
+  lisp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('lisp', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_lisp */ "react-syntax-highlighter_languages_highlight_lisp").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/lisp */ "./node_modules/highlight.js/lib/languages/lisp.js", 7));
   }),
-  livecodeserver: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("livecodeserver", function () {
+  livecodeserver: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('livecodeserver', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_livecodeserver */ "vendors~react-syntax-highlighter_languages_highlight_livecodeserver").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/livecodeserver */ "./node_modules/highlight.js/lib/languages/livecodeserver.js", 7));
   }),
-  livescript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("livescript", function () {
+  livescript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('livescript', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_livescript */ "react-syntax-highlighter_languages_highlight_livescript").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/livescript */ "./node_modules/highlight.js/lib/languages/livescript.js", 7));
   }),
-  llvm: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("llvm", function () {
+  llvm: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('llvm', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_llvm */ "react-syntax-highlighter_languages_highlight_llvm").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/llvm */ "./node_modules/highlight.js/lib/languages/llvm.js", 7));
   }),
-  lsl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("lsl", function () {
+  lsl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('lsl', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_lsl */ "vendors~react-syntax-highlighter_languages_highlight_lsl").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/lsl */ "./node_modules/highlight.js/lib/languages/lsl.js", 7));
   }),
-  lua: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("lua", function () {
+  lua: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('lua', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_lua */ "react-syntax-highlighter_languages_highlight_lua").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/lua */ "./node_modules/highlight.js/lib/languages/lua.js", 7));
   }),
-  makefile: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("makefile", function () {
+  makefile: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('makefile', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_makefile */ "react-syntax-highlighter_languages_highlight_makefile").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/makefile */ "./node_modules/highlight.js/lib/languages/makefile.js", 7));
   }),
-  markdown: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("markdown", function () {
+  markdown: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('markdown', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_markdown */ "react-syntax-highlighter_languages_highlight_markdown").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/markdown */ "./node_modules/highlight.js/lib/languages/markdown.js", 7));
   }),
-  mathematica: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("mathematica", function () {
+  mathematica: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('mathematica', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_mathematica */ "vendors~react-syntax-highlighter_languages_highlight_mathematica").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/mathematica */ "./node_modules/highlight.js/lib/languages/mathematica.js", 7));
   }),
-  matlab: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("matlab", function () {
+  matlab: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('matlab', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_matlab */ "react-syntax-highlighter_languages_highlight_matlab").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/matlab */ "./node_modules/highlight.js/lib/languages/matlab.js", 7));
   }),
-  maxima: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("maxima", function () {
+  maxima: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('maxima', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_maxima */ "vendors~react-syntax-highlighter_languages_highlight_maxima").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/maxima */ "./node_modules/highlight.js/lib/languages/maxima.js", 7));
   }),
-  mel: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("mel", function () {
+  mel: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('mel', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_mel */ "vendors~react-syntax-highlighter_languages_highlight_mel").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/mel */ "./node_modules/highlight.js/lib/languages/mel.js", 7));
   }),
-  mercury: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("mercury", function () {
+  mercury: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('mercury', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_mercury */ "react-syntax-highlighter_languages_highlight_mercury").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/mercury */ "./node_modules/highlight.js/lib/languages/mercury.js", 7));
   }),
-  mipsasm: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("mipsasm", function () {
+  mipsasm: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('mipsasm', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_mipsasm */ "react-syntax-highlighter_languages_highlight_mipsasm").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/mipsasm */ "./node_modules/highlight.js/lib/languages/mipsasm.js", 7));
   }),
-  mizar: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("mizar", function () {
+  mizar: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('mizar', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_mizar */ "react-syntax-highlighter_languages_highlight_mizar").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/mizar */ "./node_modules/highlight.js/lib/languages/mizar.js", 7));
   }),
-  mojolicious: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("mojolicious", function () {
+  mojolicious: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('mojolicious', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_mojolicious */ "react-syntax-highlighter_languages_highlight_mojolicious").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/mojolicious */ "./node_modules/highlight.js/lib/languages/mojolicious.js", 7));
   }),
-  monkey: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("monkey", function () {
+  monkey: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('monkey', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_monkey */ "react-syntax-highlighter_languages_highlight_monkey").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/monkey */ "./node_modules/highlight.js/lib/languages/monkey.js", 7));
   }),
-  moonscript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("moonscript", function () {
+  moonscript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('moonscript', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_moonscript */ "react-syntax-highlighter_languages_highlight_moonscript").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/moonscript */ "./node_modules/highlight.js/lib/languages/moonscript.js", 7));
   }),
-  n1ql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("n1ql", function () {
+  n1ql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('n1ql', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_n1ql */ "react-syntax-highlighter_languages_highlight_n1ql").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/n1ql */ "./node_modules/highlight.js/lib/languages/n1ql.js", 7));
   }),
-  nginx: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("nginx", function () {
+  nginx: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('nginx', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_nginx */ "react-syntax-highlighter_languages_highlight_nginx").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/nginx */ "./node_modules/highlight.js/lib/languages/nginx.js", 7));
   }),
-  nim: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("nim", function () {
+  nim: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('nim', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_nim */ "react-syntax-highlighter_languages_highlight_nim").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/nim */ "./node_modules/highlight.js/lib/languages/nim.js", 7));
   }),
-  nix: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("nix", function () {
+  nix: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('nix', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_nix */ "react-syntax-highlighter_languages_highlight_nix").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/nix */ "./node_modules/highlight.js/lib/languages/nix.js", 7));
   }),
-  nsis: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("nsis", function () {
+  nsis: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('nsis', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_nsis */ "react-syntax-highlighter_languages_highlight_nsis").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/nsis */ "./node_modules/highlight.js/lib/languages/nsis.js", 7));
   }),
-  objectivec: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("objectivec", function () {
+  objectivec: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('objectivec', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_objectivec */ "react-syntax-highlighter_languages_highlight_objectivec").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/objectivec */ "./node_modules/highlight.js/lib/languages/objectivec.js", 7));
   }),
-  ocaml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("ocaml", function () {
+  ocaml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('ocaml', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_ocaml */ "react-syntax-highlighter_languages_highlight_ocaml").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/ocaml */ "./node_modules/highlight.js/lib/languages/ocaml.js", 7));
   }),
-  openscad: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("openscad", function () {
+  openscad: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('openscad', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_openscad */ "react-syntax-highlighter_languages_highlight_openscad").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/openscad */ "./node_modules/highlight.js/lib/languages/openscad.js", 7));
   }),
-  oxygene: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("oxygene", function () {
+  oxygene: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('oxygene', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_oxygene */ "react-syntax-highlighter_languages_highlight_oxygene").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/oxygene */ "./node_modules/highlight.js/lib/languages/oxygene.js", 7));
   }),
-  parser3: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("parser3", function () {
+  parser3: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('parser3', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_parser3 */ "react-syntax-highlighter_languages_highlight_parser3").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/parser3 */ "./node_modules/highlight.js/lib/languages/parser3.js", 7));
   }),
-  perl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("perl", function () {
+  perl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('perl', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_perl */ "react-syntax-highlighter_languages_highlight_perl").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/perl */ "./node_modules/highlight.js/lib/languages/perl.js", 7));
   }),
-  pf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("pf", function () {
+  pf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('pf', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_pf */ "react-syntax-highlighter_languages_highlight_pf").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/pf */ "./node_modules/highlight.js/lib/languages/pf.js", 7));
   }),
-  pgsql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("pgsql", function () {
+  pgsql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('pgsql', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_pgsql */ "vendors~react-syntax-highlighter_languages_highlight_pgsql").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/pgsql */ "./node_modules/highlight.js/lib/languages/pgsql.js", 7));
   }),
-  phpTemplate: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("phpTemplate", function () {
+  phpTemplate: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('phpTemplate', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_phpTemplate */ "react-syntax-highlighter_languages_highlight_phpTemplate").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/php-template */ "./node_modules/highlight.js/lib/languages/php-template.js", 7));
   }),
-  php: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("php", function () {
+  php: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('php', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_php */ "react-syntax-highlighter_languages_highlight_php").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/php */ "./node_modules/highlight.js/lib/languages/php.js", 7));
   }),
-  plaintext: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("plaintext", function () {
+  plaintext: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('plaintext', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_plaintext */ "react-syntax-highlighter_languages_highlight_plaintext").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/plaintext */ "./node_modules/highlight.js/lib/languages/plaintext.js", 7));
   }),
-  pony: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("pony", function () {
+  pony: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('pony', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_pony */ "react-syntax-highlighter_languages_highlight_pony").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/pony */ "./node_modules/highlight.js/lib/languages/pony.js", 7));
   }),
-  powershell: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("powershell", function () {
+  powershell: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('powershell', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_powershell */ "react-syntax-highlighter_languages_highlight_powershell").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/powershell */ "./node_modules/highlight.js/lib/languages/powershell.js", 7));
   }),
-  processing: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("processing", function () {
+  processing: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('processing', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_processing */ "react-syntax-highlighter_languages_highlight_processing").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/processing */ "./node_modules/highlight.js/lib/languages/processing.js", 7));
   }),
-  profile: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("profile", function () {
+  profile: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('profile', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_profile */ "react-syntax-highlighter_languages_highlight_profile").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/profile */ "./node_modules/highlight.js/lib/languages/profile.js", 7));
   }),
-  prolog: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("prolog", function () {
+  prolog: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('prolog', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_prolog */ "react-syntax-highlighter_languages_highlight_prolog").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/prolog */ "./node_modules/highlight.js/lib/languages/prolog.js", 7));
   }),
-  properties: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("properties", function () {
+  properties: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('properties', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_properties */ "react-syntax-highlighter_languages_highlight_properties").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/properties */ "./node_modules/highlight.js/lib/languages/properties.js", 7));
   }),
-  protobuf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("protobuf", function () {
+  protobuf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('protobuf', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_protobuf */ "react-syntax-highlighter_languages_highlight_protobuf").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/protobuf */ "./node_modules/highlight.js/lib/languages/protobuf.js", 7));
   }),
-  puppet: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("puppet", function () {
+  puppet: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('puppet', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_puppet */ "react-syntax-highlighter_languages_highlight_puppet").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/puppet */ "./node_modules/highlight.js/lib/languages/puppet.js", 7));
   }),
-  purebasic: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("purebasic", function () {
+  purebasic: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('purebasic', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_purebasic */ "react-syntax-highlighter_languages_highlight_purebasic").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/purebasic */ "./node_modules/highlight.js/lib/languages/purebasic.js", 7));
   }),
-  pythonRepl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("pythonRepl", function () {
+  pythonRepl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('pythonRepl', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_pythonRepl */ "react-syntax-highlighter_languages_highlight_pythonRepl").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/python-repl */ "./node_modules/highlight.js/lib/languages/python-repl.js", 7));
   }),
-  python: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("python", function () {
+  python: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('python', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_python */ "react-syntax-highlighter_languages_highlight_python").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/python */ "./node_modules/highlight.js/lib/languages/python.js", 7));
   }),
-  q: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("q", function () {
+  q: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('q', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_q */ "react-syntax-highlighter_languages_highlight_q").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/q */ "./node_modules/highlight.js/lib/languages/q.js", 7));
   }),
-  qml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("qml", function () {
+  qml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('qml', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_qml */ "react-syntax-highlighter_languages_highlight_qml").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/qml */ "./node_modules/highlight.js/lib/languages/qml.js", 7));
   }),
-  r: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("r", function () {
+  r: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('r', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_r */ "react-syntax-highlighter_languages_highlight_r").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/r */ "./node_modules/highlight.js/lib/languages/r.js", 7));
   }),
-  reasonml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("reasonml", function () {
+  reasonml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('reasonml', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_reasonml */ "react-syntax-highlighter_languages_highlight_reasonml").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/reasonml */ "./node_modules/highlight.js/lib/languages/reasonml.js", 7));
   }),
-  rib: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("rib", function () {
+  rib: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('rib', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_rib */ "react-syntax-highlighter_languages_highlight_rib").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/rib */ "./node_modules/highlight.js/lib/languages/rib.js", 7));
   }),
-  roboconf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("roboconf", function () {
+  roboconf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('roboconf', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_roboconf */ "react-syntax-highlighter_languages_highlight_roboconf").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/roboconf */ "./node_modules/highlight.js/lib/languages/roboconf.js", 7));
   }),
-  routeros: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("routeros", function () {
+  routeros: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('routeros', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_routeros */ "react-syntax-highlighter_languages_highlight_routeros").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/routeros */ "./node_modules/highlight.js/lib/languages/routeros.js", 7));
   }),
-  rsl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("rsl", function () {
+  rsl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('rsl', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_rsl */ "react-syntax-highlighter_languages_highlight_rsl").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/rsl */ "./node_modules/highlight.js/lib/languages/rsl.js", 7));
   }),
-  ruby: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("ruby", function () {
+  ruby: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('ruby', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_ruby */ "react-syntax-highlighter_languages_highlight_ruby").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/ruby */ "./node_modules/highlight.js/lib/languages/ruby.js", 7));
   }),
-  ruleslanguage: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("ruleslanguage", function () {
+  ruleslanguage: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('ruleslanguage', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_ruleslanguage */ "react-syntax-highlighter_languages_highlight_ruleslanguage").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/ruleslanguage */ "./node_modules/highlight.js/lib/languages/ruleslanguage.js", 7));
   }),
-  rust: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("rust", function () {
+  rust: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('rust', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_rust */ "react-syntax-highlighter_languages_highlight_rust").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/rust */ "./node_modules/highlight.js/lib/languages/rust.js", 7));
   }),
-  sas: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("sas", function () {
+  sas: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('sas', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_sas */ "react-syntax-highlighter_languages_highlight_sas").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/sas */ "./node_modules/highlight.js/lib/languages/sas.js", 7));
   }),
-  scala: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("scala", function () {
+  scala: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('scala', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_scala */ "react-syntax-highlighter_languages_highlight_scala").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/scala */ "./node_modules/highlight.js/lib/languages/scala.js", 7));
   }),
-  scheme: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("scheme", function () {
+  scheme: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('scheme', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_scheme */ "react-syntax-highlighter_languages_highlight_scheme").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/scheme */ "./node_modules/highlight.js/lib/languages/scheme.js", 7));
   }),
-  scilab: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("scilab", function () {
+  scilab: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('scilab', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_scilab */ "react-syntax-highlighter_languages_highlight_scilab").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/scilab */ "./node_modules/highlight.js/lib/languages/scilab.js", 7));
   }),
-  scss: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("scss", function () {
+  scss: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('scss', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_scss */ "react-syntax-highlighter_languages_highlight_scss").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/scss */ "./node_modules/highlight.js/lib/languages/scss.js", 7));
   }),
-  shell: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("shell", function () {
+  shell: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('shell', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_shell */ "react-syntax-highlighter_languages_highlight_shell").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/shell */ "./node_modules/highlight.js/lib/languages/shell.js", 7));
   }),
-  smali: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("smali", function () {
+  smali: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('smali', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_smali */ "react-syntax-highlighter_languages_highlight_smali").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/smali */ "./node_modules/highlight.js/lib/languages/smali.js", 7));
   }),
-  smalltalk: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("smalltalk", function () {
+  smalltalk: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('smalltalk', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_smalltalk */ "react-syntax-highlighter_languages_highlight_smalltalk").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/smalltalk */ "./node_modules/highlight.js/lib/languages/smalltalk.js", 7));
   }),
-  sml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("sml", function () {
+  sml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('sml', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_sml */ "react-syntax-highlighter_languages_highlight_sml").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/sml */ "./node_modules/highlight.js/lib/languages/sml.js", 7));
   }),
-  sqf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("sqf", function () {
+  sqf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('sqf', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_sqf */ "vendors~react-syntax-highlighter_languages_highlight_sqf").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/sqf */ "./node_modules/highlight.js/lib/languages/sqf.js", 7));
   }),
-  sql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("sql", function () {
+  sql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('sql', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_sql */ "vendors~react-syntax-highlighter_languages_highlight_sql").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/sql */ "./node_modules/highlight.js/lib/languages/sql.js", 7));
   }),
-  stan: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("stan", function () {
+  stan: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('stan', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_stan */ "react-syntax-highlighter_languages_highlight_stan").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/stan */ "./node_modules/highlight.js/lib/languages/stan.js", 7));
   }),
-  stata: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("stata", function () {
+  stata: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('stata', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_stata */ "vendors~react-syntax-highlighter_languages_highlight_stata").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/stata */ "./node_modules/highlight.js/lib/languages/stata.js", 7));
   }),
-  step21: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("step21", function () {
+  step21: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('step21', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_step21 */ "react-syntax-highlighter_languages_highlight_step21").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/step21 */ "./node_modules/highlight.js/lib/languages/step21.js", 7));
   }),
-  stylus: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("stylus", function () {
+  stylus: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('stylus', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_stylus */ "react-syntax-highlighter_languages_highlight_stylus").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/stylus */ "./node_modules/highlight.js/lib/languages/stylus.js", 7));
   }),
-  subunit: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("subunit", function () {
+  subunit: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('subunit', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_subunit */ "react-syntax-highlighter_languages_highlight_subunit").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/subunit */ "./node_modules/highlight.js/lib/languages/subunit.js", 7));
   }),
-  swift: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("swift", function () {
+  swift: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('swift', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_swift */ "react-syntax-highlighter_languages_highlight_swift").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/swift */ "./node_modules/highlight.js/lib/languages/swift.js", 7));
   }),
-  taggerscript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("taggerscript", function () {
+  taggerscript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('taggerscript', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_taggerscript */ "react-syntax-highlighter_languages_highlight_taggerscript").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/taggerscript */ "./node_modules/highlight.js/lib/languages/taggerscript.js", 7));
   }),
-  tap: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("tap", function () {
+  tap: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('tap', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_tap */ "react-syntax-highlighter_languages_highlight_tap").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/tap */ "./node_modules/highlight.js/lib/languages/tap.js", 7));
   }),
-  tcl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("tcl", function () {
+  tcl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('tcl', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_tcl */ "react-syntax-highlighter_languages_highlight_tcl").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/tcl */ "./node_modules/highlight.js/lib/languages/tcl.js", 7));
   }),
-  thrift: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("thrift", function () {
+  thrift: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('thrift', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_thrift */ "react-syntax-highlighter_languages_highlight_thrift").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/thrift */ "./node_modules/highlight.js/lib/languages/thrift.js", 7));
   }),
-  tp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("tp", function () {
+  tp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('tp', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_tp */ "react-syntax-highlighter_languages_highlight_tp").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/tp */ "./node_modules/highlight.js/lib/languages/tp.js", 7));
   }),
-  twig: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("twig", function () {
+  twig: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('twig', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_twig */ "react-syntax-highlighter_languages_highlight_twig").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/twig */ "./node_modules/highlight.js/lib/languages/twig.js", 7));
   }),
-  typescript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("typescript", function () {
+  typescript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('typescript', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_typescript */ "react-syntax-highlighter_languages_highlight_typescript").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/typescript */ "./node_modules/highlight.js/lib/languages/typescript.js", 7));
   }),
-  vala: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("vala", function () {
+  vala: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('vala', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_vala */ "react-syntax-highlighter_languages_highlight_vala").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/vala */ "./node_modules/highlight.js/lib/languages/vala.js", 7));
   }),
-  vbnet: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("vbnet", function () {
+  vbnet: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('vbnet', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_vbnet */ "react-syntax-highlighter_languages_highlight_vbnet").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/vbnet */ "./node_modules/highlight.js/lib/languages/vbnet.js", 7));
   }),
-  vbscriptHtml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("vbscriptHtml", function () {
+  vbscriptHtml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('vbscriptHtml', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_vbscriptHtml */ "react-syntax-highlighter_languages_highlight_vbscriptHtml").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/vbscript-html */ "./node_modules/highlight.js/lib/languages/vbscript-html.js", 7));
   }),
-  vbscript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("vbscript", function () {
+  vbscript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('vbscript', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_vbscript */ "react-syntax-highlighter_languages_highlight_vbscript").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/vbscript */ "./node_modules/highlight.js/lib/languages/vbscript.js", 7));
   }),
-  verilog: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("verilog", function () {
+  verilog: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('verilog', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_verilog */ "react-syntax-highlighter_languages_highlight_verilog").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/verilog */ "./node_modules/highlight.js/lib/languages/verilog.js", 7));
   }),
-  vhdl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("vhdl", function () {
+  vhdl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('vhdl', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_vhdl */ "react-syntax-highlighter_languages_highlight_vhdl").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/vhdl */ "./node_modules/highlight.js/lib/languages/vhdl.js", 7));
   }),
-  vim: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("vim", function () {
+  vim: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('vim', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_vim */ "vendors~react-syntax-highlighter_languages_highlight_vim").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/vim */ "./node_modules/highlight.js/lib/languages/vim.js", 7));
   }),
-  x86asm: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("x86asm", function () {
+  x86asm: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('x86asm', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_x86asm */ "vendors~react-syntax-highlighter_languages_highlight_x86asm").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/x86asm */ "./node_modules/highlight.js/lib/languages/x86asm.js", 7));
   }),
-  xl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("xl", function () {
+  xl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('xl', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_xl */ "react-syntax-highlighter_languages_highlight_xl").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/xl */ "./node_modules/highlight.js/lib/languages/xl.js", 7));
   }),
-  xml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("xml", function () {
+  xml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('xml', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_xml */ "react-syntax-highlighter_languages_highlight_xml").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/xml */ "./node_modules/highlight.js/lib/languages/xml.js", 7));
   }),
-  xquery: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("xquery", function () {
+  xquery: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('xquery', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_xquery */ "react-syntax-highlighter_languages_highlight_xquery").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/xquery */ "./node_modules/highlight.js/lib/languages/xquery.js", 7));
   }),
-  yaml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("yaml", function () {
+  yaml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('yaml', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_yaml */ "react-syntax-highlighter_languages_highlight_yaml").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/yaml */ "./node_modules/highlight.js/lib/languages/yaml.js", 7));
   }),
-  zephir: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("zephir", function () {
+  zephir: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('zephir', function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_highlight_zephir */ "react-syntax-highlighter_languages_highlight_zephir").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/zephir */ "./node_modules/highlight.js/lib/languages/zephir.js", 7));
   })
 });
@@ -72407,631 +72407,631 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./create-language-async-loader */ "./src/async-languages/create-language-async-loader.js");
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  abap: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("abap", function () {
+  abap: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('abap', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/abap.js */ "./node_modules/refractor/lang/abap.js", 7));
   }),
-  abnf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("abnf", function () {
+  abnf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('abnf', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/abnf.js */ "./node_modules/refractor/lang/abnf.js", 7));
   }),
-  actionscript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("actionscript", function () {
+  actionscript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('actionscript', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/actionscript.js */ "./node_modules/refractor/lang/actionscript.js", 7));
   }),
-  ada: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("ada", function () {
+  ada: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('ada', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/ada.js */ "./node_modules/refractor/lang/ada.js", 7));
   }),
-  antlr4: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("antlr4", function () {
+  antlr4: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('antlr4', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/antlr4.js */ "./node_modules/refractor/lang/antlr4.js", 7));
   }),
-  apacheconf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("apacheconf", function () {
+  apacheconf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('apacheconf', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/apacheconf.js */ "./node_modules/refractor/lang/apacheconf.js", 7));
   }),
-  apl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("apl", function () {
+  apl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('apl', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/apl.js */ "./node_modules/refractor/lang/apl.js", 7));
   }),
-  applescript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("applescript", function () {
+  applescript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('applescript', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/applescript.js */ "./node_modules/refractor/lang/applescript.js", 7));
   }),
-  aql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("aql", function () {
+  aql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('aql', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/aql.js */ "./node_modules/refractor/lang/aql.js", 7));
   }),
-  arduino: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("arduino", function () {
+  arduino: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('arduino', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/arduino.js */ "./node_modules/refractor/lang/arduino.js", 7));
   }),
-  arff: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("arff", function () {
+  arff: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('arff', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/arff.js */ "./node_modules/refractor/lang/arff.js", 7));
   }),
-  asciidoc: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("asciidoc", function () {
+  asciidoc: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('asciidoc', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/asciidoc.js */ "./node_modules/refractor/lang/asciidoc.js", 7));
   }),
-  asm6502: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("asm6502", function () {
+  asm6502: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('asm6502', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/asm6502.js */ "./node_modules/refractor/lang/asm6502.js", 7));
   }),
-  aspnet: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("aspnet", function () {
+  aspnet: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('aspnet', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/aspnet.js */ "./node_modules/refractor/lang/aspnet.js", 7));
   }),
-  autohotkey: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("autohotkey", function () {
+  autohotkey: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('autohotkey', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/autohotkey.js */ "./node_modules/refractor/lang/autohotkey.js", 7));
   }),
-  autoit: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("autoit", function () {
+  autoit: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('autoit', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/autoit.js */ "./node_modules/refractor/lang/autoit.js", 7));
   }),
-  bash: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("bash", function () {
+  bash: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('bash', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/bash.js */ "./node_modules/refractor/lang/bash.js", 7));
   }),
-  basic: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("basic", function () {
+  basic: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('basic', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/basic.js */ "./node_modules/refractor/lang/basic.js", 7));
   }),
-  batch: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("batch", function () {
+  batch: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('batch', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/batch.js */ "./node_modules/refractor/lang/batch.js", 7));
   }),
-  bbcode: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("bbcode", function () {
+  bbcode: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('bbcode', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/bbcode.js */ "./node_modules/refractor/lang/bbcode.js", 7));
   }),
-  bison: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("bison", function () {
+  bison: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('bison', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/bison.js */ "./node_modules/refractor/lang/bison.js", 7));
   }),
-  bnf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("bnf", function () {
+  bnf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('bnf', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/bnf.js */ "./node_modules/refractor/lang/bnf.js", 7));
   }),
-  brainfuck: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("brainfuck", function () {
+  brainfuck: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('brainfuck', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/brainfuck.js */ "./node_modules/refractor/lang/brainfuck.js", 7));
   }),
-  brightscript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("brightscript", function () {
+  brightscript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('brightscript', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/brightscript.js */ "./node_modules/refractor/lang/brightscript.js", 7));
   }),
-  bro: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("bro", function () {
+  bro: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('bro', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/bro.js */ "./node_modules/refractor/lang/bro.js", 7));
   }),
-  c: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("c", function () {
+  c: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('c', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/c.js */ "./node_modules/refractor/lang/c.js", 7));
   }),
-  cil: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("cil", function () {
+  cil: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('cil', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/cil.js */ "./node_modules/refractor/lang/cil.js", 7));
   }),
-  clike: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("clike", function () {
+  clike: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('clike', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/clike.js */ "./node_modules/refractor/lang/clike.js", 7));
   }),
-  clojure: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("clojure", function () {
+  clojure: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('clojure', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/clojure.js */ "./node_modules/refractor/lang/clojure.js", 7));
   }),
-  cmake: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("cmake", function () {
+  cmake: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('cmake', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/cmake.js */ "./node_modules/refractor/lang/cmake.js", 7));
   }),
-  coffeescript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("coffeescript", function () {
+  coffeescript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('coffeescript', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/coffeescript.js */ "./node_modules/refractor/lang/coffeescript.js", 7));
   }),
-  concurnas: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("concurnas", function () {
+  concurnas: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('concurnas', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/concurnas.js */ "./node_modules/refractor/lang/concurnas.js", 7));
   }),
-  cpp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("cpp", function () {
+  cpp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('cpp', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/cpp.js */ "./node_modules/refractor/lang/cpp.js", 7));
   }),
-  crystal: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("crystal", function () {
+  crystal: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('crystal', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/crystal.js */ "./node_modules/refractor/lang/crystal.js", 7));
   }),
-  csharp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("csharp", function () {
+  csharp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('csharp', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/csharp.js */ "./node_modules/refractor/lang/csharp.js", 7));
   }),
-  csp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("csp", function () {
+  csp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('csp', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/csp.js */ "./node_modules/refractor/lang/csp.js", 7));
   }),
-  cssExtras: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("cssExtras", function () {
+  cssExtras: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('cssExtras', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/css-extras.js */ "./node_modules/refractor/lang/css-extras.js", 7));
   }),
-  css: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("css", function () {
+  css: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('css', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/css.js */ "./node_modules/refractor/lang/css.js", 7));
   }),
-  d: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("d", function () {
+  d: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('d', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/d.js */ "./node_modules/refractor/lang/d.js", 7));
   }),
-  dart: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("dart", function () {
+  dart: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('dart', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/dart.js */ "./node_modules/refractor/lang/dart.js", 7));
   }),
-  dax: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("dax", function () {
+  dax: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('dax', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/dax.js */ "./node_modules/refractor/lang/dax.js", 7));
   }),
-  diff: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("diff", function () {
+  diff: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('diff', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/diff.js */ "./node_modules/refractor/lang/diff.js", 7));
   }),
-  django: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("django", function () {
+  django: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('django', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/django.js */ "./node_modules/refractor/lang/django.js", 7));
   }),
-  dnsZoneFile: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("dnsZoneFile", function () {
+  dnsZoneFile: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('dnsZoneFile', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/dns-zone-file.js */ "./node_modules/refractor/lang/dns-zone-file.js", 7));
   }),
-  docker: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("docker", function () {
+  docker: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('docker', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/docker.js */ "./node_modules/refractor/lang/docker.js", 7));
   }),
-  ebnf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("ebnf", function () {
+  ebnf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('ebnf', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/ebnf.js */ "./node_modules/refractor/lang/ebnf.js", 7));
   }),
-  eiffel: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("eiffel", function () {
+  eiffel: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('eiffel', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/eiffel.js */ "./node_modules/refractor/lang/eiffel.js", 7));
   }),
-  ejs: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("ejs", function () {
+  ejs: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('ejs', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/ejs.js */ "./node_modules/refractor/lang/ejs.js", 7));
   }),
-  elixir: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("elixir", function () {
+  elixir: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('elixir', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/elixir.js */ "./node_modules/refractor/lang/elixir.js", 7));
   }),
-  elm: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("elm", function () {
+  elm: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('elm', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/elm.js */ "./node_modules/refractor/lang/elm.js", 7));
   }),
-  erb: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("erb", function () {
+  erb: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('erb', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/erb.js */ "./node_modules/refractor/lang/erb.js", 7));
   }),
-  erlang: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("erlang", function () {
+  erlang: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('erlang', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/erlang.js */ "./node_modules/refractor/lang/erlang.js", 7));
   }),
-  etlua: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("etlua", function () {
+  etlua: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('etlua', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/etlua.js */ "./node_modules/refractor/lang/etlua.js", 7));
   }),
-  excelFormula: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("excelFormula", function () {
+  excelFormula: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('excelFormula', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/excel-formula.js */ "./node_modules/refractor/lang/excel-formula.js", 7));
   }),
-  factor: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("factor", function () {
+  factor: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('factor', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/factor.js */ "./node_modules/refractor/lang/factor.js", 7));
   }),
-  firestoreSecurityRules: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("firestoreSecurityRules", function () {
+  firestoreSecurityRules: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('firestoreSecurityRules', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/firestore-security-rules.js */ "./node_modules/refractor/lang/firestore-security-rules.js", 7));
   }),
-  flow: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("flow", function () {
+  flow: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('flow', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/flow.js */ "./node_modules/refractor/lang/flow.js", 7));
   }),
-  fortran: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("fortran", function () {
+  fortran: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('fortran', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/fortran.js */ "./node_modules/refractor/lang/fortran.js", 7));
   }),
-  fsharp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("fsharp", function () {
+  fsharp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('fsharp', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/fsharp.js */ "./node_modules/refractor/lang/fsharp.js", 7));
   }),
-  ftl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("ftl", function () {
+  ftl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('ftl', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/ftl.js */ "./node_modules/refractor/lang/ftl.js", 7));
   }),
-  gcode: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("gcode", function () {
+  gcode: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('gcode', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/gcode.js */ "./node_modules/refractor/lang/gcode.js", 7));
   }),
-  gdscript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("gdscript", function () {
+  gdscript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('gdscript', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/gdscript.js */ "./node_modules/refractor/lang/gdscript.js", 7));
   }),
-  gedcom: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("gedcom", function () {
+  gedcom: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('gedcom', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/gedcom.js */ "./node_modules/refractor/lang/gedcom.js", 7));
   }),
-  gherkin: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("gherkin", function () {
+  gherkin: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('gherkin', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/gherkin.js */ "./node_modules/refractor/lang/gherkin.js", 7));
   }),
-  git: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("git", function () {
+  git: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('git', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/git.js */ "./node_modules/refractor/lang/git.js", 7));
   }),
-  glsl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("glsl", function () {
+  glsl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('glsl', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/glsl.js */ "./node_modules/refractor/lang/glsl.js", 7));
   }),
-  gml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("gml", function () {
+  gml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('gml', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/gml.js */ "./node_modules/refractor/lang/gml.js", 7));
   }),
-  go: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("go", function () {
+  go: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('go', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/go.js */ "./node_modules/refractor/lang/go.js", 7));
   }),
-  graphql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("graphql", function () {
+  graphql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('graphql', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/graphql.js */ "./node_modules/refractor/lang/graphql.js", 7));
   }),
-  groovy: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("groovy", function () {
+  groovy: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('groovy', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/groovy.js */ "./node_modules/refractor/lang/groovy.js", 7));
   }),
-  haml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("haml", function () {
+  haml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('haml', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/haml.js */ "./node_modules/refractor/lang/haml.js", 7));
   }),
-  handlebars: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("handlebars", function () {
+  handlebars: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('handlebars', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/handlebars.js */ "./node_modules/refractor/lang/handlebars.js", 7));
   }),
-  haskell: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("haskell", function () {
+  haskell: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('haskell', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/haskell.js */ "./node_modules/refractor/lang/haskell.js", 7));
   }),
-  haxe: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("haxe", function () {
+  haxe: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('haxe', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/haxe.js */ "./node_modules/refractor/lang/haxe.js", 7));
   }),
-  hcl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("hcl", function () {
+  hcl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('hcl', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/hcl.js */ "./node_modules/refractor/lang/hcl.js", 7));
   }),
-  hpkp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("hpkp", function () {
+  hpkp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('hpkp', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/hpkp.js */ "./node_modules/refractor/lang/hpkp.js", 7));
   }),
-  hsts: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("hsts", function () {
+  hsts: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('hsts', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/hsts.js */ "./node_modules/refractor/lang/hsts.js", 7));
   }),
-  http: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("http", function () {
+  http: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('http', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/http.js */ "./node_modules/refractor/lang/http.js", 7));
   }),
-  ichigojam: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("ichigojam", function () {
+  ichigojam: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('ichigojam', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/ichigojam.js */ "./node_modules/refractor/lang/ichigojam.js", 7));
   }),
-  icon: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("icon", function () {
+  icon: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('icon', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/icon.js */ "./node_modules/refractor/lang/icon.js", 7));
   }),
-  inform7: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("inform7", function () {
+  inform7: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('inform7', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/inform7.js */ "./node_modules/refractor/lang/inform7.js", 7));
   }),
-  ini: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("ini", function () {
+  ini: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('ini', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/ini.js */ "./node_modules/refractor/lang/ini.js", 7));
   }),
-  io: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("io", function () {
+  io: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('io', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/io.js */ "./node_modules/refractor/lang/io.js", 7));
   }),
-  j: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("j", function () {
+  j: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('j', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/j.js */ "./node_modules/refractor/lang/j.js", 7));
   }),
-  java: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("java", function () {
+  java: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('java', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/java.js */ "./node_modules/refractor/lang/java.js", 7));
   }),
-  javadoc: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("javadoc", function () {
+  javadoc: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('javadoc', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/javadoc.js */ "./node_modules/refractor/lang/javadoc.js", 7));
   }),
-  javadoclike: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("javadoclike", function () {
+  javadoclike: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('javadoclike', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/javadoclike.js */ "./node_modules/refractor/lang/javadoclike.js", 7));
   }),
-  javascript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("javascript", function () {
+  javascript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('javascript', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/javascript.js */ "./node_modules/refractor/lang/javascript.js", 7));
   }),
-  javastacktrace: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("javastacktrace", function () {
+  javastacktrace: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('javastacktrace', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/javastacktrace.js */ "./node_modules/refractor/lang/javastacktrace.js", 7));
   }),
-  jolie: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("jolie", function () {
+  jolie: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('jolie', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/jolie.js */ "./node_modules/refractor/lang/jolie.js", 7));
   }),
-  jq: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("jq", function () {
+  jq: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('jq', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/jq.js */ "./node_modules/refractor/lang/jq.js", 7));
   }),
-  jsExtras: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("jsExtras", function () {
+  jsExtras: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('jsExtras', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/js-extras.js */ "./node_modules/refractor/lang/js-extras.js", 7));
   }),
-  jsTemplates: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("jsTemplates", function () {
+  jsTemplates: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('jsTemplates', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/js-templates.js */ "./node_modules/refractor/lang/js-templates.js", 7));
   }),
-  jsdoc: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("jsdoc", function () {
+  jsdoc: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('jsdoc', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/jsdoc.js */ "./node_modules/refractor/lang/jsdoc.js", 7));
   }),
-  json: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("json", function () {
+  json: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('json', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/json.js */ "./node_modules/refractor/lang/json.js", 7));
   }),
-  json5: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("json5", function () {
+  json5: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('json5', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/json5.js */ "./node_modules/refractor/lang/json5.js", 7));
   }),
-  jsonp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("jsonp", function () {
+  jsonp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('jsonp', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/jsonp.js */ "./node_modules/refractor/lang/jsonp.js", 7));
   }),
-  jsx: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("jsx", function () {
+  jsx: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('jsx', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/jsx.js */ "./node_modules/refractor/lang/jsx.js", 7));
   }),
-  julia: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("julia", function () {
+  julia: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('julia', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/julia.js */ "./node_modules/refractor/lang/julia.js", 7));
   }),
-  keyman: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("keyman", function () {
+  keyman: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('keyman', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/keyman.js */ "./node_modules/refractor/lang/keyman.js", 7));
   }),
-  kotlin: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("kotlin", function () {
+  kotlin: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('kotlin', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/kotlin.js */ "./node_modules/refractor/lang/kotlin.js", 7));
   }),
-  latex: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("latex", function () {
+  latex: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('latex', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/latex.js */ "./node_modules/refractor/lang/latex.js", 7));
   }),
-  latte: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("latte", function () {
+  latte: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('latte', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/latte.js */ "./node_modules/refractor/lang/latte.js", 7));
   }),
-  less: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("less", function () {
+  less: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('less', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/less.js */ "./node_modules/refractor/lang/less.js", 7));
   }),
-  lilypond: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("lilypond", function () {
+  lilypond: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('lilypond', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/lilypond.js */ "./node_modules/refractor/lang/lilypond.js", 7));
   }),
-  liquid: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("liquid", function () {
+  liquid: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('liquid', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/liquid.js */ "./node_modules/refractor/lang/liquid.js", 7));
   }),
-  lisp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("lisp", function () {
+  lisp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('lisp', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/lisp.js */ "./node_modules/refractor/lang/lisp.js", 7));
   }),
-  livescript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("livescript", function () {
+  livescript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('livescript', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/livescript.js */ "./node_modules/refractor/lang/livescript.js", 7));
   }),
-  llvm: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("llvm", function () {
+  llvm: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('llvm', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/llvm.js */ "./node_modules/refractor/lang/llvm.js", 7));
   }),
-  lolcode: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("lolcode", function () {
+  lolcode: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('lolcode', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/lolcode.js */ "./node_modules/refractor/lang/lolcode.js", 7));
   }),
-  lua: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("lua", function () {
+  lua: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('lua', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/lua.js */ "./node_modules/refractor/lang/lua.js", 7));
   }),
-  makefile: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("makefile", function () {
+  makefile: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('makefile', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/makefile.js */ "./node_modules/refractor/lang/makefile.js", 7));
   }),
-  markdown: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("markdown", function () {
+  markdown: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('markdown', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/markdown.js */ "./node_modules/refractor/lang/markdown.js", 7));
   }),
-  markupTemplating: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("markupTemplating", function () {
+  markupTemplating: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('markupTemplating', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/markup-templating.js */ "./node_modules/refractor/lang/markup-templating.js", 7));
   }),
-  markup: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("markup", function () {
+  markup: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('markup', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/markup.js */ "./node_modules/refractor/lang/markup.js", 7));
   }),
-  matlab: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("matlab", function () {
+  matlab: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('matlab', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/matlab.js */ "./node_modules/refractor/lang/matlab.js", 7));
   }),
-  mel: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("mel", function () {
+  mel: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('mel', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/mel.js */ "./node_modules/refractor/lang/mel.js", 7));
   }),
-  mizar: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("mizar", function () {
+  mizar: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('mizar', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/mizar.js */ "./node_modules/refractor/lang/mizar.js", 7));
   }),
-  monkey: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("monkey", function () {
+  monkey: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('monkey', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/monkey.js */ "./node_modules/refractor/lang/monkey.js", 7));
   }),
-  moonscript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("moonscript", function () {
+  moonscript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('moonscript', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/moonscript.js */ "./node_modules/refractor/lang/moonscript.js", 7));
   }),
-  n1ql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("n1ql", function () {
+  n1ql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('n1ql', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/n1ql.js */ "./node_modules/refractor/lang/n1ql.js", 7));
   }),
-  n4js: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("n4js", function () {
+  n4js: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('n4js', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/n4js.js */ "./node_modules/refractor/lang/n4js.js", 7));
   }),
-  nand2tetrisHdl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("nand2tetrisHdl", function () {
+  nand2tetrisHdl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('nand2tetrisHdl', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/nand2tetris-hdl.js */ "./node_modules/refractor/lang/nand2tetris-hdl.js", 7));
   }),
-  nasm: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("nasm", function () {
+  nasm: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('nasm', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/nasm.js */ "./node_modules/refractor/lang/nasm.js", 7));
   }),
-  neon: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("neon", function () {
+  neon: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('neon', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/neon.js */ "./node_modules/refractor/lang/neon.js", 7));
   }),
-  nginx: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("nginx", function () {
+  nginx: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('nginx', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/nginx.js */ "./node_modules/refractor/lang/nginx.js", 7));
   }),
-  nim: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("nim", function () {
+  nim: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('nim', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/nim.js */ "./node_modules/refractor/lang/nim.js", 7));
   }),
-  nix: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("nix", function () {
+  nix: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('nix', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/nix.js */ "./node_modules/refractor/lang/nix.js", 7));
   }),
-  nsis: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("nsis", function () {
+  nsis: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('nsis', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/nsis.js */ "./node_modules/refractor/lang/nsis.js", 7));
   }),
-  objectivec: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("objectivec", function () {
+  objectivec: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('objectivec', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/objectivec.js */ "./node_modules/refractor/lang/objectivec.js", 7));
   }),
-  ocaml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("ocaml", function () {
+  ocaml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('ocaml', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/ocaml.js */ "./node_modules/refractor/lang/ocaml.js", 7));
   }),
-  opencl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("opencl", function () {
+  opencl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('opencl', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/opencl.js */ "./node_modules/refractor/lang/opencl.js", 7));
   }),
-  oz: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("oz", function () {
+  oz: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('oz', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/oz.js */ "./node_modules/refractor/lang/oz.js", 7));
   }),
-  parigp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("parigp", function () {
+  parigp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('parigp', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/parigp.js */ "./node_modules/refractor/lang/parigp.js", 7));
   }),
-  parser: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("parser", function () {
+  parser: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('parser', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/parser.js */ "./node_modules/refractor/lang/parser.js", 7));
   }),
-  pascal: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("pascal", function () {
+  pascal: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('pascal', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/pascal.js */ "./node_modules/refractor/lang/pascal.js", 7));
   }),
-  pascaligo: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("pascaligo", function () {
+  pascaligo: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('pascaligo', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/pascaligo.js */ "./node_modules/refractor/lang/pascaligo.js", 7));
   }),
-  pcaxis: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("pcaxis", function () {
+  pcaxis: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('pcaxis', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/pcaxis.js */ "./node_modules/refractor/lang/pcaxis.js", 7));
   }),
-  perl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("perl", function () {
+  perl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('perl', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/perl.js */ "./node_modules/refractor/lang/perl.js", 7));
   }),
-  phpExtras: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("phpExtras", function () {
+  phpExtras: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('phpExtras', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/php-extras.js */ "./node_modules/refractor/lang/php-extras.js", 7));
   }),
-  php: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("php", function () {
+  php: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('php', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/php.js */ "./node_modules/refractor/lang/php.js", 7));
   }),
-  phpdoc: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("phpdoc", function () {
+  phpdoc: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('phpdoc', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/phpdoc.js */ "./node_modules/refractor/lang/phpdoc.js", 7));
   }),
-  plsql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("plsql", function () {
+  plsql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('plsql', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/plsql.js */ "./node_modules/refractor/lang/plsql.js", 7));
   }),
-  powerquery: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("powerquery", function () {
+  powerquery: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('powerquery', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/powerquery.js */ "./node_modules/refractor/lang/powerquery.js", 7));
   }),
-  powershell: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("powershell", function () {
+  powershell: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('powershell', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/powershell.js */ "./node_modules/refractor/lang/powershell.js", 7));
   }),
-  processing: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("processing", function () {
+  processing: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('processing', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/processing.js */ "./node_modules/refractor/lang/processing.js", 7));
   }),
-  prolog: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("prolog", function () {
+  prolog: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('prolog', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/prolog.js */ "./node_modules/refractor/lang/prolog.js", 7));
   }),
-  properties: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("properties", function () {
+  properties: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('properties', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/properties.js */ "./node_modules/refractor/lang/properties.js", 7));
   }),
-  protobuf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("protobuf", function () {
+  protobuf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('protobuf', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/protobuf.js */ "./node_modules/refractor/lang/protobuf.js", 7));
   }),
-  pug: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("pug", function () {
+  pug: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('pug', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/pug.js */ "./node_modules/refractor/lang/pug.js", 7));
   }),
-  puppet: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("puppet", function () {
+  puppet: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('puppet', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/puppet.js */ "./node_modules/refractor/lang/puppet.js", 7));
   }),
-  pure: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("pure", function () {
+  pure: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('pure', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/pure.js */ "./node_modules/refractor/lang/pure.js", 7));
   }),
-  python: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("python", function () {
+  python: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('python', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/python.js */ "./node_modules/refractor/lang/python.js", 7));
   }),
-  q: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("q", function () {
+  q: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('q', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/q.js */ "./node_modules/refractor/lang/q.js", 7));
   }),
-  qml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("qml", function () {
+  qml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('qml', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/qml.js */ "./node_modules/refractor/lang/qml.js", 7));
   }),
-  qore: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("qore", function () {
+  qore: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('qore', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/qore.js */ "./node_modules/refractor/lang/qore.js", 7));
   }),
-  r: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("r", function () {
+  r: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('r', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/r.js */ "./node_modules/refractor/lang/r.js", 7));
   }),
-  reason: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("reason", function () {
+  reason: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('reason', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/reason.js */ "./node_modules/refractor/lang/reason.js", 7));
   }),
-  regex: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("regex", function () {
+  regex: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('regex', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/regex.js */ "./node_modules/refractor/lang/regex.js", 7));
   }),
-  renpy: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("renpy", function () {
+  renpy: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('renpy', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/renpy.js */ "./node_modules/refractor/lang/renpy.js", 7));
   }),
-  rest: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("rest", function () {
+  rest: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('rest', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/rest.js */ "./node_modules/refractor/lang/rest.js", 7));
   }),
-  rip: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("rip", function () {
+  rip: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('rip', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/rip.js */ "./node_modules/refractor/lang/rip.js", 7));
   }),
-  roboconf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("roboconf", function () {
+  roboconf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('roboconf', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/roboconf.js */ "./node_modules/refractor/lang/roboconf.js", 7));
   }),
-  robotframework: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("robotframework", function () {
+  robotframework: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('robotframework', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/robotframework.js */ "./node_modules/refractor/lang/robotframework.js", 7));
   }),
-  ruby: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("ruby", function () {
+  ruby: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('ruby', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/ruby.js */ "./node_modules/refractor/lang/ruby.js", 7));
   }),
-  rust: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("rust", function () {
+  rust: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('rust', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/rust.js */ "./node_modules/refractor/lang/rust.js", 7));
   }),
-  sas: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("sas", function () {
+  sas: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('sas', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/sas.js */ "./node_modules/refractor/lang/sas.js", 7));
   }),
-  sass: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("sass", function () {
+  sass: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('sass', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/sass.js */ "./node_modules/refractor/lang/sass.js", 7));
   }),
-  scala: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("scala", function () {
+  scala: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('scala', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/scala.js */ "./node_modules/refractor/lang/scala.js", 7));
   }),
-  scheme: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("scheme", function () {
+  scheme: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('scheme', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/scheme.js */ "./node_modules/refractor/lang/scheme.js", 7));
   }),
-  scss: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("scss", function () {
+  scss: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('scss', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/scss.js */ "./node_modules/refractor/lang/scss.js", 7));
   }),
-  shellSession: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("shellSession", function () {
+  shellSession: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('shellSession', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/shell-session.js */ "./node_modules/refractor/lang/shell-session.js", 7));
   }),
-  smalltalk: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("smalltalk", function () {
+  smalltalk: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('smalltalk', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/smalltalk.js */ "./node_modules/refractor/lang/smalltalk.js", 7));
   }),
-  smarty: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("smarty", function () {
+  smarty: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('smarty', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/smarty.js */ "./node_modules/refractor/lang/smarty.js", 7));
   }),
-  solidity: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("solidity", function () {
+  solidity: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('solidity', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/solidity.js */ "./node_modules/refractor/lang/solidity.js", 7));
   }),
-  solutionFile: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("solutionFile", function () {
+  solutionFile: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('solutionFile', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/solution-file.js */ "./node_modules/refractor/lang/solution-file.js", 7));
   }),
-  soy: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("soy", function () {
+  soy: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('soy', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/soy.js */ "./node_modules/refractor/lang/soy.js", 7));
   }),
-  sparql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("sparql", function () {
+  sparql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('sparql', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/sparql.js */ "./node_modules/refractor/lang/sparql.js", 7));
   }),
-  splunkSpl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("splunkSpl", function () {
+  splunkSpl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('splunkSpl', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/splunk-spl.js */ "./node_modules/refractor/lang/splunk-spl.js", 7));
   }),
-  sqf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("sqf", function () {
+  sqf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('sqf', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/sqf.js */ "./node_modules/refractor/lang/sqf.js", 7));
   }),
-  sql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("sql", function () {
+  sql: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('sql', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/sql.js */ "./node_modules/refractor/lang/sql.js", 7));
   }),
-  stylus: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("stylus", function () {
+  stylus: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('stylus', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/stylus.js */ "./node_modules/refractor/lang/stylus.js", 7));
   }),
-  swift: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("swift", function () {
+  swift: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('swift', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/swift.js */ "./node_modules/refractor/lang/swift.js", 7));
   }),
-  t4Cs: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("t4Cs", function () {
+  t4Cs: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('t4Cs', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/t4-cs.js */ "./node_modules/refractor/lang/t4-cs.js", 7));
   }),
-  t4Templating: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("t4Templating", function () {
+  t4Templating: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('t4Templating', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/t4-templating.js */ "./node_modules/refractor/lang/t4-templating.js", 7));
   }),
-  t4Vb: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("t4Vb", function () {
+  t4Vb: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('t4Vb', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/t4-vb.js */ "./node_modules/refractor/lang/t4-vb.js", 7));
   }),
-  tap: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("tap", function () {
+  tap: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('tap', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/tap.js */ "./node_modules/refractor/lang/tap.js", 7));
   }),
-  tcl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("tcl", function () {
+  tcl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('tcl', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/tcl.js */ "./node_modules/refractor/lang/tcl.js", 7));
   }),
-  textile: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("textile", function () {
+  textile: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('textile', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/textile.js */ "./node_modules/refractor/lang/textile.js", 7));
   }),
-  toml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("toml", function () {
+  toml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('toml', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/toml.js */ "./node_modules/refractor/lang/toml.js", 7));
   }),
-  tsx: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("tsx", function () {
+  tsx: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('tsx', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/tsx.js */ "./node_modules/refractor/lang/tsx.js", 7));
   }),
-  tt2: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("tt2", function () {
+  tt2: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('tt2', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/tt2.js */ "./node_modules/refractor/lang/tt2.js", 7));
   }),
-  turtle: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("turtle", function () {
+  turtle: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('turtle', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/turtle.js */ "./node_modules/refractor/lang/turtle.js", 7));
   }),
-  twig: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("twig", function () {
+  twig: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('twig', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/twig.js */ "./node_modules/refractor/lang/twig.js", 7));
   }),
-  typescript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("typescript", function () {
+  typescript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('typescript', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/typescript.js */ "./node_modules/refractor/lang/typescript.js", 7));
   }),
-  vala: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("vala", function () {
+  vala: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('vala', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/vala.js */ "./node_modules/refractor/lang/vala.js", 7));
   }),
-  vbnet: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("vbnet", function () {
+  vbnet: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('vbnet', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/vbnet.js */ "./node_modules/refractor/lang/vbnet.js", 7));
   }),
-  velocity: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("velocity", function () {
+  velocity: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('velocity', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/velocity.js */ "./node_modules/refractor/lang/velocity.js", 7));
   }),
-  verilog: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("verilog", function () {
+  verilog: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('verilog', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/verilog.js */ "./node_modules/refractor/lang/verilog.js", 7));
   }),
-  vhdl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("vhdl", function () {
+  vhdl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('vhdl', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/vhdl.js */ "./node_modules/refractor/lang/vhdl.js", 7));
   }),
-  vim: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("vim", function () {
+  vim: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('vim', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/vim.js */ "./node_modules/refractor/lang/vim.js", 7));
   }),
-  visualBasic: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("visualBasic", function () {
+  visualBasic: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('visualBasic', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/visual-basic.js */ "./node_modules/refractor/lang/visual-basic.js", 7));
   }),
-  wasm: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("wasm", function () {
+  wasm: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('wasm', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/wasm.js */ "./node_modules/refractor/lang/wasm.js", 7));
   }),
-  wiki: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("wiki", function () {
+  wiki: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('wiki', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/wiki.js */ "./node_modules/refractor/lang/wiki.js", 7));
   }),
-  xeora: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("xeora", function () {
+  xeora: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('xeora', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/xeora.js */ "./node_modules/refractor/lang/xeora.js", 7));
   }),
-  xojo: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("xojo", function () {
+  xojo: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('xojo', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/xojo.js */ "./node_modules/refractor/lang/xojo.js", 7));
   }),
-  xquery: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("xquery", function () {
+  xquery: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('xquery', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/xquery.js */ "./node_modules/refractor/lang/xquery.js", 7));
   }),
-  yaml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("yaml", function () {
+  yaml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('yaml', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/yaml.js */ "./node_modules/refractor/lang/yaml.js", 7));
   }),
-  zig: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("zig", function () {
+  zig: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])('zig', function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/zig.js */ "./node_modules/refractor/lang/zig.js", 7));
   })
 });
@@ -73656,7 +73656,7 @@ function defaultRenderer(_ref5) {
 
 
 function isHighlightJs(astGenerator) {
-  return typeof astGenerator.highlightAuto !== 'undefined';
+  return astGenerator && typeof astGenerator.highlightAuto !== 'undefined';
 }
 
 function getCodeTree(_ref6) {
@@ -73707,6 +73707,7 @@ function getCodeTree(_ref6) {
         customStyle = _ref7$customStyle === void 0 ? {} : _ref7$customStyle,
         _ref7$codeTagProps = _ref7.codeTagProps,
         codeTagProps = _ref7$codeTagProps === void 0 ? {
+      className: language ? "language-".concat(language) : undefined,
       style: style['code[class*="language-"]']
     } : _ref7$codeTagProps,
         _ref7$useInlineStyles = _ref7.useInlineStyles,
@@ -73744,10 +73745,11 @@ function getCodeTree(_ref6) {
     var defaultPreStyle = style.hljs || style['pre[class*="language-"]'] || {
       backgroundColor: '#fff'
     };
+    var generatorClassName = isHighlightJs(astGenerator) ? 'hljs' : 'prismjs';
     var preProps = useInlineStyles ? Object.assign({}, rest, {
       style: Object.assign({}, defaultPreStyle, customStyle)
     }) : Object.assign({}, rest, {
-      className: rest.className ? "hljs ".concat(rest.className) : 'hljs',
+      className: rest.className ? "".concat(generatorClassName, " ").concat(rest.className) : generatorClassName,
       style: Object.assign({}, customStyle)
     });
 
