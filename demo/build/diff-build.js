@@ -306,7 +306,6 @@ var ExamplesLinks = function ExamplesLinks() {
     var currentPath = new URL(window.location.href).pathname.split('/').filter(Boolean).pop();
     var isCurrent = path === "./".concat(currentPath) || !path && currentPath === 'demo';
     var itemClass = isCurrent ? "".concat(baseLiClass, " ").concat(baseLiClass, "--current") : baseLiClass;
-    console.log("current: ".concat(currentPath));
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
       className: itemClass
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -73467,7 +73466,7 @@ function getInlineLineNumber(lineNumber, inlineLineNumberStyle) {
   };
 }
 
-function assembleLineNumberStyles(lineNumberStyle, largestLineNumber) {
+function assembleLineNumberStyles(lineNumberStyle, lineNumber, largestLineNumber) {
   // minimally necessary styling for line numbers
   var defaultLineNumberStyle = {
     display: 'inline-block',
@@ -73498,7 +73497,7 @@ function createLineElement(_ref3) {
   properties['className'] = className;
 
   if (lineNumber && showInlineLineNumbers) {
-    var inlineLineNumberStyle = assembleLineNumberStyles(lineNumberStyle, largestLineNumber);
+    var inlineLineNumberStyle = assembleLineNumberStyles(lineNumberStyle, lineNumber, largestLineNumber);
     children.unshift(getInlineLineNumber(lineNumber, inlineLineNumberStyle));
   }
 
@@ -73554,7 +73553,7 @@ function processLines(codeTree, wrapLines, lineProps, showLineNumbers, showInlin
 
   function createUnwrappedLine(children, lineNumber) {
     if (lineNumber && showInlineLineNumbers) {
-      var inlineLineNumberStyle = assembleLineNumberStyles(lineNumberStyle, largestLineNumber);
+      var inlineLineNumberStyle = assembleLineNumberStyles(lineNumberStyle, lineNumber, largestLineNumber);
       children.unshift(getInlineLineNumber(lineNumber, inlineLineNumberStyle));
     }
 
@@ -73632,9 +73631,8 @@ function processLines(codeTree, wrapLines, lineProps, showLineNumbers, showInlin
     var children = tree.slice(lastLineBreakIndex + 1, tree.length);
 
     if (children && children.length) {
-      var _lineNumber = newTree.length + startingLineNumber;
-
-      var line = createLine(children, _lineNumber);
+      var lineNumber = newTree.length + startingLineNumber;
+      var line = createLine(children, lineNumber);
       newTree.push(line);
     }
   }

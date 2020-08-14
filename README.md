@@ -153,6 +153,7 @@ SyntaxHighlighter.supportedLanguages;
 - [codeprinter](https://github.com/jaredpetersen/codeprinter) - Print out code easily
 - [Neumorphism](https://www.neumorphism.io) - CSS code generator for Soft UI/Neumorphism shadows
 - [grape-ui](https://www.grapeui.com) - Component library using styled-system and other open source components.
+- [✅ Good Arduino Code](https://goodarduinocode.com) - A curated library of Arduino Coding examples
 
 If your project uses react-syntax-highlighter please send a pr to add!
 

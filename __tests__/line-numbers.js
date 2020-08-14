@@ -17,7 +17,7 @@ function itIs() {
 test('SyntaxHighlighter component renders correctly', () => {
   const tree = renderer
     .create(
-      <SyntaxHighlighter language="javascript" showLineNumbers={true}>
+      <SyntaxHighlighter language="javascript" showLineNumbers>
         {code}
       </SyntaxHighlighter>
     )
@@ -30,7 +30,7 @@ test('SyntaxHighlighter allows lineNumberStyle as object', () => {
     .create(
       <SyntaxHighlighter
         language="javascript"
-        showLineNumbers={true}
+        showLineNumbers
         lineNumberStyle={{ color: 'red' }}
       >
         {code}
@@ -45,7 +45,23 @@ test('SyntaxHighlighter allows lineNumberStyle as function', () => {
     .create(
       <SyntaxHighlighter
         language="javascript"
-        showLineNumbers={true}
+        showLineNumbers
+        lineNumberStyle={() => ({ color: 'red' })}
+      >
+        {code}
+      </SyntaxHighlighter>
+    )
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
+test('SyntaxHighlighter allows lineNumberStyle as function for inline line numbers', () => {
+  const tree = renderer
+    .create(
+      <SyntaxHighlighter
+        language="javascript"
+        showLineNumbers
+        showInlineLineNumbers
         lineNumberStyle={() => ({ color: 'red' })}
       >
         {code}

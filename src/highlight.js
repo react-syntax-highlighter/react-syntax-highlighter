@@ -67,7 +67,11 @@ function getInlineLineNumber(lineNumber, inlineLineNumberStyle) {
   };
 }
 
-function assembleLineNumberStyles(lineNumberStyle, largestLineNumber) {
+function assembleLineNumberStyles(
+  lineNumberStyle,
+  lineNumber,
+  largestLineNumber
+) {
   // minimally necessary styling for line numbers
   const defaultLineNumberStyle = {
     display: 'inline-block',
@@ -105,6 +109,7 @@ function createLineElement({
   if (lineNumber && showInlineLineNumbers) {
     const inlineLineNumberStyle = assembleLineNumberStyles(
       lineNumberStyle,
+      lineNumber,
       largestLineNumber
     );
     children.unshift(getInlineLineNumber(lineNumber, inlineLineNumberStyle));
@@ -167,6 +172,7 @@ function processLines(
     if (lineNumber && showInlineLineNumbers) {
       const inlineLineNumberStyle = assembleLineNumberStyles(
         lineNumberStyle,
+        lineNumber,
         largestLineNumber
       );
       children.unshift(getInlineLineNumber(lineNumber, inlineLineNumberStyle));

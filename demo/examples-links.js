@@ -42,8 +42,6 @@ const ExamplesLinks = () => {
             ? `${baseLiClass} ${baseLiClass}--current`
             : baseLiClass;
 
-          console.log(`current: ${currentPath}`);
-
           return (
             <li className={itemClass}>
               <a className="demo-nav__a" href={path || './'}>
