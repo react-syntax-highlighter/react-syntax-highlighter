@@ -23,7 +23,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['lib/build*', '.eslintrc.js', 'babel.config.js'],
+      files: ['scripts/*', '.eslintrc.js', 'babel.config.js'],
       env: {
         node: true
       }
