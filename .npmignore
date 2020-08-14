@@ -1,10 +1,11 @@
 node_modules
 demo
-npm-debug.log
-.DS_Store
-.babelrc
-__tests__
 coverage
-src
-.circleci
+__tests__
+
+npm-debug.log
 webpack.config.js
+babel.config.js
+
+.DS_Store
+.circleci
