@@ -1,6 +1,6 @@
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, '__esModule', {
   value: true
 });
 exports.createElement = undefined;
@@ -26,6 +26,11 @@ var _lowlight = require('lowlight');
 
 var _lowlight2 = _interopRequireDefault(_lowlight);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
 
-exports.default = (0, _highlight2.default)(_lowlight2.default, _defaultStyle2.default);
+exports.default = (0, _highlight2.default)(
+  _lowlight2.default,
+  _defaultStyle2.default
+);

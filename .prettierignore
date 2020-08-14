@@ -1,6 +1,11 @@
 src/async-languages
 src/languages
 src/styles
+styles
+languages
+async-lanagues
+
 dist
 build
 coverage
+demo

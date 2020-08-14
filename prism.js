@@ -1,6 +1,6 @@
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, '__esModule', {
   value: true
 });
 
@@ -16,6 +16,11 @@ var _refractor = require('refractor');
 
 var _refractor2 = _interopRequireDefault(_refractor);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
 
-exports.default = (0, _highlight2.default)(_refractor2.default, _prism2.default);
+exports.default = (0, _highlight2.default)(
+  _refractor2.default,
+  _prism2.default
+);

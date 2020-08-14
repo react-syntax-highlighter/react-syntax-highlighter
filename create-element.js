@@ -1,6 +1,6 @@
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, '__esModule', {
   value: true
 });
 
@@ -21,13 +21,16 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
 
 function createStyleObject(classNames) {
-  var elementStyle = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+  var elementStyle =
+    arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
   var stylesheet = arguments[2];
 
-  return classNames.reduce(function (styleObject, className) {
+  return classNames.reduce(function(styleObject, className) {
     return (0, _extends3.default)({}, styleObject, stylesheet[className]);
   }, elementStyle);
 }
@@ -38,9 +41,9 @@ function createClassNameString(classNames) {
 
 function createChildren(stylesheet, useInlineStyles) {
   var childrenCount = 0;
-  return function (children) {
+  return function(children) {
     childrenCount += 1;
-    return children.map(function (child, i) {
+    return children.map(function(child, i) {
       return createElement({
         node: child,
         stylesheet: stylesheet,
@@ -53,27 +56,46 @@ function createChildren(stylesheet, useInlineStyles) {
 
 function createElement(_ref) {
   var node = _ref.node,
-      stylesheet = _ref.stylesheet,
-      _ref$style = _ref.style,
-      style = _ref$style === undefined ? {} : _ref$style,
-      useInlineStyles = _ref.useInlineStyles,
-      key = _ref.key;
+    stylesheet = _ref.stylesheet,
+    _ref$style = _ref.style,
+    style = _ref$style === undefined ? {} : _ref$style,
+    useInlineStyles = _ref.useInlineStyles,
+    key = _ref.key;
   var properties = node.properties,
-      type = node.type,
-      TagName = node.tagName,
-      value = node.value;
+    type = node.type,
+    TagName = node.tagName,
+    value = node.value;
 
   if (type === 'text') {
     return value;
   } else if (TagName) {
     var childrenCreator = createChildren(stylesheet, useInlineStyles);
-    var nonStylesheetClassNames = useInlineStyles && properties.className && properties.className.filter(function (className) {
-      return !stylesheet[className];
-    });
-    var className = nonStylesheetClassNames && nonStylesheetClassNames.length ? nonStylesheetClassNames : undefined;
-    var props = useInlineStyles ? (0, _extends3.default)({}, properties, { className: className }, {
-      style: createStyleObject(properties.className, (0, _assign2.default)({}, properties.style, style), stylesheet)
-    }) : (0, _extends3.default)({}, properties, { className: createClassNameString(properties.className) });
+    var nonStylesheetClassNames =
+      useInlineStyles &&
+      properties.className &&
+      properties.className.filter(function(className) {
+        return !stylesheet[className];
+      });
+    var className =
+      nonStylesheetClassNames && nonStylesheetClassNames.length
+        ? nonStylesheetClassNames
+        : undefined;
+    var props = useInlineStyles
+      ? (0, _extends3.default)(
+          {},
+          properties,
+          { className: className },
+          {
+            style: createStyleObject(
+              properties.className,
+              (0, _assign2.default)({}, properties.style, style),
+              stylesheet
+            )
+          }
+        )
+      : (0, _extends3.default)({}, properties, {
+          className: createClassNameString(properties.className)
+        });
     var children = childrenCreator(node.children);
     return _react2.default.createElement(
       TagName,
