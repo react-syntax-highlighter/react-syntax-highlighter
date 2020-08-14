@@ -26,12 +26,17 @@
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.1.0",
     "babel-jest": "^26.1.0",
     "babel-loader": "^8.0.4",
     "babel-plugin-transform-dynamic-import": "^2.1.0",
     "codecov": "^3.2.0",
     "css": "^2.2.1",
     "css-loader": "^3.6.0",
+    "eslint": "^7.7.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.6",
     "husky": "^1.1.4",
     "jest": "^26.1.0",
     "lint-staged": "^8.0.5",
@@ -65,7 +70,8 @@
     "test": "jest",
     "test-ci": "jest && codecov",
     "publish-coverage": "codecov",
-    "format": "prettier --write --no-editorconfig \"**/*.js\""
+    "format": "prettier --write --no-editorconfig \"**/*.js\"",
+    "lint": "eslint --ext .js,.jsx src/ lib/"
   },
   "repository": {
     "type": "git",

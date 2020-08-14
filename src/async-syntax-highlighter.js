@@ -131,9 +131,7 @@ export default options => {
         .then(() => {
           return this.forceUpdate();
         })
-        .catch(error => {
-          return;
-        });
+        .catch(() => {});
     }
 
     normalizeLanguage(language) {
