@@ -29,6 +29,7 @@ exports[`SyntaxHighlighter render as text if language doesnt exist 1`] = `
   }
 >
   <code
+    className="language-text"
     style={
       Object {
         "MozHyphens": "none",
@@ -90,6 +91,7 @@ exports[`SyntaxHighlighter renders fortran highlighted text 1`] = `
   }
 >
   <code
+    className="language-fortran"
     style={
       Object {
         "MozHyphens": "none",
@@ -839,6 +841,7 @@ exports[`SyntaxHighlighter renders javascript highlighted text 1`] = `
   }
 >
   <code
+    className="language-javascript"
     style={
       Object {
         "MozHyphens": "none",
@@ -937,6 +940,7 @@ exports[`SyntaxHighlighter renders text while language loads 1`] = `
   }
 >
   <code
+    className="language-gherkin"
     style={
       Object {
         "MozHyphens": "none",
@@ -1686,6 +1690,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
   }
 >
   <code
+    className="language-javascript"
     style={
       Object {
         "MozHyphens": "none",

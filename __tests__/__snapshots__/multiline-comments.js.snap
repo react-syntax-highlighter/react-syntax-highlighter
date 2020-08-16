@@ -12,7 +12,9 @@ exports[`Syntaxhighliter correctly renders multi-line comments in arduino langua
     }
   }
 >
-  <code>
+  <code
+    className="language-arduino"
+  >
     <span
       style={Object {}}
     >

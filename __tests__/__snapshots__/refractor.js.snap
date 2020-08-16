@@ -29,6 +29,7 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
   }
 >
   <code
+    className="language-javascript"
     style={
       Object {
         "MozHyphens": "none",

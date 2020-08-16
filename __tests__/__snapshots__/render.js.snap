@@ -12,7 +12,9 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
     }
   }
 >
-  <code>
+  <code
+    className="language-javascript"
+  >
     <span
       style={
         Object {

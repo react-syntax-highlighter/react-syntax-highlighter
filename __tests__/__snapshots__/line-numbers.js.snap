@@ -12,7 +12,9 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function 1`] = `
     }
   }
 >
-  <code>
+  <code
+    className="language-javascript"
+  >
     <code
       style={
         Object {
@@ -513,6 +515,567 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function 1`] = `
 </pre>
 `;
 
+exports[`SyntaxHighlighter allows lineNumberStyle as function for inline line numbers 1`] = `
+<pre
+  style={
+    Object {
+      "background": "#F0F0F0",
+      "color": "#444",
+      "display": "block",
+      "overflowX": "auto",
+      "padding": "0.5em",
+    }
+  }
+>
+  <code
+    className="language-javascript"
+  >
+    <span
+      className="comment linenumber react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "color": "red",
+          "display": "inline-block",
+          "minWidth": "2em",
+          "paddingRight": "1em",
+          "textAlign": "right",
+          "userSelect": "none",
+        }
+      }
+    >
+      1
+    </span>
+    <span
+      style={
+        Object {
+          "fontWeight": "bold",
+        }
+      }
+    >
+      const
+    </span>
+    <span
+      style={Object {}}
+    >
+       woah = 
+    </span>
+    <span
+      className="hljs-function hljs-params"
+      style={Object {}}
+    >
+      fun
+    </span>
+    <span
+      className="hljs-function"
+      style={Object {}}
+    >
+       =&gt;
+    </span>
+    <span
+      style={Object {}}
+    >
+       fun + 
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#880000",
+        }
+      }
+    >
+      1
+    </span>
+    <span
+      style={Object {}}
+    >
+      ;
+
+    </span>
+    <span
+      className="comment linenumber react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "color": "red",
+          "display": "inline-block",
+          "minWidth": "2em",
+          "paddingRight": "1em",
+          "textAlign": "right",
+          "userSelect": "none",
+        }
+      }
+    >
+      2
+    </span>
+    <span
+      style={Object {}}
+    >
+      
+    </span>
+    <span
+      style={
+        Object {
+          "fontWeight": "bold",
+        }
+      }
+    >
+      const
+    </span>
+    <span
+      style={Object {}}
+    >
+       dude = woah(
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#880000",
+        }
+      }
+    >
+      2
+    </span>
+    <span
+      style={Object {}}
+    >
+      ) + 
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#880000",
+        }
+      }
+    >
+      3
+    </span>
+    <span
+      style={Object {}}
+    >
+      ;
+
+    </span>
+    <span
+      className="comment linenumber react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "color": "red",
+          "display": "inline-block",
+          "minWidth": "2em",
+          "paddingRight": "1em",
+          "textAlign": "right",
+          "userSelect": "none",
+        }
+      }
+    >
+      3
+    </span>
+    <span
+      style={Object {}}
+    >
+      
+    </span>
+    <span
+      className="hljs-function"
+      style={
+        Object {
+          "fontWeight": "bold",
+        }
+      }
+    >
+      function
+    </span>
+    <span
+      className="hljs-function"
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="hljs-function"
+      style={
+        Object {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      thisIsAFunction
+    </span>
+    <span
+      className="hljs-function"
+      style={Object {}}
+    >
+      (
+    </span>
+    <span
+      className="hljs-function"
+      style={Object {}}
+    >
+      ) 
+    </span>
+    <span
+      style={Object {}}
+    >
+      {
+
+    </span>
+    <span
+      className="comment linenumber react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "color": "red",
+          "display": "inline-block",
+          "minWidth": "2em",
+          "paddingRight": "1em",
+          "textAlign": "right",
+          "userSelect": "none",
+        }
+      }
+    >
+      4
+    </span>
+    <span
+      style={Object {}}
+    >
+        
+    </span>
+    <span
+      style={
+        Object {
+          "fontWeight": "bold",
+        }
+      }
+    >
+      return
+    </span>
+    <span
+      style={Object {}}
+    >
+       [
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#880000",
+        }
+      }
+    >
+      1
+    </span>
+    <span
+      style={Object {}}
+    >
+      ,
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#880000",
+        }
+      }
+    >
+      2
+    </span>
+    <span
+      style={Object {}}
+    >
+      ,
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#880000",
+        }
+      }
+    >
+      3
+    </span>
+    <span
+      style={Object {}}
+    >
+      ].map(
+    </span>
+    <span
+      className="hljs-function hljs-params"
+      style={Object {}}
+    >
+      n
+    </span>
+    <span
+      className="hljs-function"
+      style={Object {}}
+    >
+       =&gt;
+    </span>
+    <span
+      style={Object {}}
+    >
+       n + 
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#880000",
+        }
+      }
+    >
+      1
+    </span>
+    <span
+      style={Object {}}
+    >
+      ).filter(n !== 
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#880000",
+        }
+      }
+    >
+      3
+    </span>
+    <span
+      style={Object {}}
+    >
+      );
+
+    </span>
+    <span
+      className="comment linenumber react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "color": "red",
+          "display": "inline-block",
+          "minWidth": "2em",
+          "paddingRight": "1em",
+          "textAlign": "right",
+          "userSelect": "none",
+        }
+      }
+    >
+      5
+    </span>
+    }
+
+    <span
+      className="comment linenumber react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "color": "red",
+          "display": "inline-block",
+          "minWidth": "2em",
+          "paddingRight": "1em",
+          "textAlign": "right",
+          "userSelect": "none",
+        }
+      }
+    >
+      6
+    </span>
+    <span
+      style={Object {}}
+    >
+      
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#397300",
+        }
+      }
+    >
+      console
+    </span>
+    <span
+      style={Object {}}
+    >
+      .log(
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#880000",
+        }
+      }
+    >
+      'making up fake code is really hard'
+    </span>
+    <span
+      style={Object {}}
+    >
+      );
+
+    </span>
+    <span
+      className="comment linenumber react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "color": "red",
+          "display": "inline-block",
+          "minWidth": "2em",
+          "paddingRight": "1em",
+          "textAlign": "right",
+          "userSelect": "none",
+        }
+      }
+    >
+      7
+    </span>
+    
+
+    <span
+      className="comment linenumber react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "color": "red",
+          "display": "inline-block",
+          "minWidth": "2em",
+          "paddingRight": "1em",
+          "textAlign": "right",
+          "userSelect": "none",
+        }
+      }
+    >
+      8
+    </span>
+    <span
+      style={Object {}}
+    >
+      
+    </span>
+    <span
+      className="hljs-function"
+      style={
+        Object {
+          "fontWeight": "bold",
+        }
+      }
+    >
+      function
+    </span>
+    <span
+      className="hljs-function"
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="hljs-function"
+      style={
+        Object {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      itIs
+    </span>
+    <span
+      className="hljs-function"
+      style={Object {}}
+    >
+      (
+    </span>
+    <span
+      className="hljs-function"
+      style={Object {}}
+    >
+      ) 
+    </span>
+    <span
+      style={Object {}}
+    >
+      {
+
+    </span>
+    <span
+      className="comment linenumber react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "color": "red",
+          "display": "inline-block",
+          "minWidth": "2em",
+          "paddingRight": "1em",
+          "textAlign": "right",
+          "userSelect": "none",
+        }
+      }
+    >
+      9
+    </span>
+    <span
+      style={Object {}}
+    >
+        
+    </span>
+    <span
+      style={
+        Object {
+          "fontWeight": "bold",
+        }
+      }
+    >
+      return
+    </span>
+    <span
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#880000",
+        }
+      }
+    >
+      'no seriously really it is'
+    </span>
+    <span
+      style={Object {}}
+    >
+      ;
+
+    </span>
+    <span
+      className="comment linenumber react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "color": "red",
+          "display": "inline-block",
+          "minWidth": "2em",
+          "paddingRight": "1em",
+          "textAlign": "right",
+          "userSelect": "none",
+        }
+      }
+    >
+      10
+    </span>
+    }
+
+    <span
+      className="comment linenumber react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "color": "red",
+          "display": "inline-block",
+          "minWidth": "2em",
+          "paddingRight": "1em",
+          "textAlign": "right",
+          "userSelect": "none",
+        }
+      }
+    >
+      11
+    </span>
+    
+
+  </code>
+</pre>
+`;
+
 exports[`SyntaxHighlighter allows lineNumberStyle as object 1`] = `
 <pre
   style={
@@ -525,7 +1088,9 @@ exports[`SyntaxHighlighter allows lineNumberStyle as object 1`] = `
     }
   }
 >
-  <code>
+  <code
+    className="language-javascript"
+  >
     <code
       style={
         Object {
@@ -1038,7 +1603,9 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
     }
   }
 >
-  <code>
+  <code
+    className="language-javascript"
+  >
     <code
       style={
         Object {

@@ -306,7 +306,6 @@ var ExamplesLinks = function ExamplesLinks() {
     var currentPath = new URL(window.location.href).pathname.split('/').filter(Boolean).pop();
     var isCurrent = path === "./".concat(currentPath) || !path && currentPath === 'demo';
     var itemClass = isCurrent ? "".concat(baseLiClass, " ").concat(baseLiClass, "--current") : baseLiClass;
-    console.log("current: ".concat(currentPath));
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
       className: itemClass
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -73137,9 +73136,7 @@ __webpack_require__.r(__webpack_exports__);
 
         ReactAsyncHighlighter.loadLanguage(language).then(function () {
           return _this2.forceUpdate();
-        }).catch(function (error) {
-          return;
-        });
+        }).catch(function () {});
       }
     }, {
       key: "normalizeLanguage",
@@ -73467,7 +73464,7 @@ function getInlineLineNumber(lineNumber, inlineLineNumberStyle) {
   };
 }
 
-function assembleLineNumberStyles(lineNumberStyle, largestLineNumber) {
+function assembleLineNumberStyles(lineNumberStyle, lineNumber, largestLineNumber) {
   // minimally necessary styling for line numbers
   var defaultLineNumberStyle = {
     display: 'inline-block',
@@ -73498,7 +73495,7 @@ function createLineElement(_ref3) {
   properties['className'] = className;
 
   if (lineNumber && showInlineLineNumbers) {
-    var inlineLineNumberStyle = assembleLineNumberStyles(lineNumberStyle, largestLineNumber);
+    var inlineLineNumberStyle = assembleLineNumberStyles(lineNumberStyle, lineNumber, largestLineNumber);
     children.unshift(getInlineLineNumber(lineNumber, inlineLineNumberStyle));
   }
 
@@ -73554,7 +73551,7 @@ function processLines(codeTree, wrapLines, lineProps, showLineNumbers, showInlin
 
   function createUnwrappedLine(children, lineNumber) {
     if (lineNumber && showInlineLineNumbers) {
-      var inlineLineNumberStyle = assembleLineNumberStyles(lineNumberStyle, largestLineNumber);
+      var inlineLineNumberStyle = assembleLineNumberStyles(lineNumberStyle, lineNumber, largestLineNumber);
       children.unshift(getInlineLineNumber(lineNumber, inlineLineNumberStyle));
     }
 
@@ -73632,9 +73629,8 @@ function processLines(codeTree, wrapLines, lineProps, showLineNumbers, showInlin
     var children = tree.slice(lastLineBreakIndex + 1, tree.length);
 
     if (children && children.length) {
-      var _lineNumber = newTree.length + startingLineNumber;
-
-      var line = createLine(children, _lineNumber);
+      var lineNumber = newTree.length + startingLineNumber;
+      var line = createLine(children, lineNumber);
       newTree.push(line);
     }
   }
@@ -73658,7 +73654,7 @@ function defaultRenderer(_ref5) {
 
 
 function isHighlightJs(astGenerator) {
-  return typeof astGenerator.highlightAuto !== 'undefined';
+  return astGenerator && typeof astGenerator.highlightAuto !== 'undefined';
 }
 
 function getCodeTree(_ref6) {
@@ -73709,6 +73705,7 @@ function getCodeTree(_ref6) {
         customStyle = _ref7$customStyle === void 0 ? {} : _ref7$customStyle,
         _ref7$codeTagProps = _ref7.codeTagProps,
         codeTagProps = _ref7$codeTagProps === void 0 ? {
+      className: language ? "language-".concat(language) : undefined,
       style: style['code[class*="language-"]']
     } : _ref7$codeTagProps,
         _ref7$useInlineStyles = _ref7.useInlineStyles,
@@ -73746,10 +73743,11 @@ function getCodeTree(_ref6) {
     var defaultPreStyle = style.hljs || style['pre[class*="language-"]'] || {
       backgroundColor: '#fff'
     };
+    var generatorClassName = isHighlightJs(astGenerator) ? 'hljs' : 'prismjs';
     var preProps = useInlineStyles ? Object.assign({}, rest, {
       style: Object.assign({}, defaultPreStyle, customStyle)
     }) : Object.assign({}, rest, {
-      className: rest.className ? "hljs ".concat(rest.className) : 'hljs',
+      className: rest.className ? "".concat(generatorClassName, " ").concat(rest.className) : generatorClassName,
       style: Object.assign({}, customStyle)
     });
 
