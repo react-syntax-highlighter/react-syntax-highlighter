@@ -6,7 +6,8 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
+    'plugin:jest/recommended'
   ],
   parser: 'babel-eslint',
   parserOptions: {
@@ -16,13 +17,13 @@ module.exports = {
     ecmaVersion: 11,
     sourceType: 'module'
   },
-  plugins: ['react'],
+  plugins: ['react', 'jest'],
   rules: {
     'react/prop-types': 0
   },
   overrides: [
     {
-      files: ['lib/build*', '.eslintrc.js'],
+      files: ['scripts/*', '.eslintrc.js', 'babel.config.js'],
       env: {
         node: true
       }

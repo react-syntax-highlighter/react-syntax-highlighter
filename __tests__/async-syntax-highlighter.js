@@ -1,5 +1,3 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
 import AsyncSyntaxHighlighter from '../src/async-syntax-highlighter';
 
 test('AsyncSyntaxHighlighter registerLanguage when registerLanguage is undefined', () => {

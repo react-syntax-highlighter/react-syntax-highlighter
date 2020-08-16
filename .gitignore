@@ -1,5 +1,8 @@
 node_modules
 dist
+coverage
+demo/**/*.map
+
+.nvmrc
 .DS_Store
 npm-debug.log
-coverage
