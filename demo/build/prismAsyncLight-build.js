@@ -23424,6 +23424,90 @@ function ada(Prism) {
 
 /***/ }),
 
+/***/ "./node_modules/refractor/lang/agda.js":
+/*!*********************************************!*\
+  !*** ./node_modules/refractor/lang/agda.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = agda
+agda.displayName = 'agda'
+agda.aliases = []
+function agda(Prism) {
+  ;(function (Prism) {
+    Prism.languages.agda = {
+      comment: /\{-[\s\S]*?(?:-\}|$)|--.*/,
+      string: {
+        pattern: /"(?:\\(?:\r\n|[\s\S])|[^\\\r\n"])*"/,
+        greedy: true
+      },
+      punctuation: /[(){}⦃⦄.;@]/,
+      'class-name': {
+        pattern: /((?:data|record) +)\S+/,
+        lookbehind: true
+      },
+      function: {
+        pattern: /(^[ \t]*)[^:\r\n]+?(?=:)/m,
+        lookbehind: true
+      },
+      operator: {
+        pattern: /(^\s*|\s)(?:[=|:∀→λ\\?_]|->)(?=\s)/,
+        lookbehind: true
+      },
+      keyword: /\b(?:Set|abstract|constructor|data|eta-equality|field|forall|forall|hiding|import|in|inductive|infix|infixl|infixr|instance|let|macro|module|mutual|no-eta-equality|open|overlap|pattern|postulate|primitive|private|public|quote|quoteContext|quoteGoal|quoteTerm|record|renaming|rewrite|syntax|tactic|unquote|unquoteDecl|unquoteDef|using|variable|where|with)\b/
+    }
+  })(Prism)
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/refractor/lang/al.js":
+/*!*******************************************!*\
+  !*** ./node_modules/refractor/lang/al.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = al
+al.displayName = 'al'
+al.aliases = []
+function al(Prism) {
+  // based on https://github.com/microsoft/AL/blob/master/grammar/alsyntax.tmlanguage
+  Prism.languages.al = {
+    comment: /\/\/.*|\/\*[\s\S]*?\*\//,
+    string: {
+      pattern: /'(?:''|[^'\r\n])*'(?!')|"(?:""|[^"\r\n])*"(?!")/,
+      greedy: true
+    },
+    function: {
+      pattern: /(\b(?:event|procedure|trigger)\s+|(?:^|[^.])\.\s*)[a-z_]\w*(?=\s*\()/i,
+      lookbehind: true
+    },
+    keyword: [
+      // keywords
+      /\b(?:array|asserterror|begin|break|case|do|downto|else|end|event|exit|for|foreach|function|if|implements|in|indataset|interface|internal|local|of|procedure|program|protected|repeat|runonclient|securityfiltering|suppressdispose|temporary|then|to|trigger|until|var|while|with|withevents)\b/i, // objects and metadata that are used like keywords
+      /\b(?:action|actions|addafter|addbefore|addfirst|addlast|area|assembly|chartpart|codeunit|column|controladdin|cuegroup|customizes|dataitem|dataset|dotnet|elements|enum|enumextension|extends|field|fieldattribute|fieldelement|fieldgroup|fieldgroups|fields|filter|fixed|grid|group|key|keys|label|labels|layout|modify|moveafter|movebefore|movefirst|movelast|page|pagecustomization|pageextension|part|profile|query|repeater|report|requestpage|schema|separator|systempart|table|tableelement|tableextension|textattribute|textelement|type|usercontrol|value|xmlport)\b/i
+    ],
+    number: /\b(?:0x[\da-f]+|(?:\d+\.?\d*|\.\d+)(?:e[+-]?\d+)?)(?:F|U(?:LL?)?|LL?)?\b/i,
+    boolean: /\b(?:false|true)\b/i,
+    variable: /\b(?:Curr(?:FieldNo|Page|Report)|RequestOptionsPage|x?Rec)\b/,
+    'class-name': /\b(?:automation|biginteger|bigtext|blob|boolean|byte|char|clienttype|code|completiontriggererrorlevel|connectiontype|database|dataclassification|datascope|date|dateformula|datetime|decimal|defaultlayout|dialog|dictionary|dotnetassembly|dotnettypedeclaration|duration|errorinfo|errortype|executioncontext|executionmode|fieldclass|fieldref|fieldtype|file|filterpagebuilder|guid|httpclient|httpcontent|httpheaders|httprequestmessage|httpresponsemessage|instream|integer|joker|jsonarray|jsonobject|jsontoken|jsonvalue|keyref|list|moduledependencyinfo|moduleinfo|none|notification|notificationscope|objecttype|option|outstream|pageresult|record|recordid|recordref|reportformat|securityfilter|sessionsettings|tableconnectiontype|tablefilter|testaction|testfield|testfilterfield|testpage|testpermissions|testrequestpage|text|textbuilder|textconst|textencoding|time|transactionmodel|transactiontype|variant|verbosity|version|view|views|webserviceactioncontext|webserviceactionresultcode|xmlattribute|xmlattributecollection|xmlcdata|xmlcomment|xmldeclaration|xmldocument|xmldocumenttype|xmlelement|xmlnamespacemanager|xmlnametable|xmlnode|xmlnodelist|xmlprocessinginstruction|xmlreadoptions|xmltext|xmlwriteoptions)\b/i,
+    operator: /\.\.|:[=:]|[-+*/]=?|<>|[<>]=?|=|\b(?:and|div|mod|not|or|xor)\b/i,
+    punctuation: /[()\[\]{}:.;,]/
+  }
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/refractor/lang/antlr4.js":
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/antlr4.js ***!
@@ -23471,7 +23555,7 @@ function antlr4(Prism) {
       }
     },
     command: {
-      pattern: /(->\s*)(?:\s*(?:,\s*)?[a-z]\w*(?:\s*\([^()\r\n]*\))?)+(?=\s*;)/i,
+      pattern: /(->\s*)(?:\s*(?:,\s*)?\b[a-z]\w*(?:\s*\([^()\r\n]*\))?)+(?=\s*;)/i,
       lookbehind: true,
       inside: {
         function: /\b\w+(?=\s*(?:[,(]|$))/,
@@ -23593,7 +23677,7 @@ function apl(Prism) {
       pattern: /'(?:[^'\r\n]|'')*'/,
       greedy: true
     },
-    number: /¯?(?:\d*\.?\d+(?:e[+¯]?\d+)?|¯|∞)(?:j¯?(?:\d*\.?\d+(?:e[+¯]?\d+)?|¯|∞))?/i,
+    number: /¯?(?:\d*\.?\b\d+(?:e[+¯]?\d+)?|¯|∞)(?:j¯?(?:\d*\.?\d+(?:e[+¯]?\d+)?|¯|∞))?/i,
     statement: /:[A-Z][a-z][A-Za-z]*\b/,
     'system-function': {
       pattern: /⎕[A-Z]+/i,
@@ -23606,7 +23690,7 @@ function apl(Prism) {
       alias: 'operator'
     },
     'dyadic-operator': {
-      pattern: /[.⍣⍠⍤∘⌸@⌺]/,
+      pattern: /[.⍣⍠⍤∘⌸@⌺⍥]/,
       alias: 'operator'
     },
     assignment: {
@@ -23641,7 +23725,7 @@ function applescript(Prism) {
   Prism.languages.applescript = {
     comment: [
       // Allow one level of nesting
-      /\(\*(?:\(\*[\s\S]*?\*\)|[\s\S])*?\*\)/,
+      /\(\*(?:\(\*(?:[^*]|\*(?!\)))*\*\)|(?!\(\*)[\s\S])*?\*\)/,
       /--.+/,
       /#.+/
     ],
@@ -23927,7 +24011,7 @@ Then we handle the unconstrained quotes.
 Those do not have the restrictions of the constrained quotes.
 They are, in order: __emphasis__, **strong**, ++monospace++, +++passthrough+++, ##unquoted##, $$passthrough$$, ~subscript~, ^superscript^, {attribute-reference}, [[anchor]], [[[bibliography anchor]]], <<xref>>, (((indexes))) and ((indexes))
 */
-        pattern: /(^|[^\\])(?:(?:\B\[(?:[^\]\\"]|(["'])(?:(?!\2)[^\\]|\\.)*\2|\\.)*\])?(?:\b_(?!\s)(?: _|[^_\\\r\n]|\\.)+(?:(?:\r?\n|\r)(?: _|[^_\\\r\n]|\\.)+)*_\b|\B``(?!\s).+?(?:(?:\r?\n|\r).+?)*''\B|\B`(?!\s)(?: ['`]|.)+?(?:(?:\r?\n|\r)(?: ['`]|.)+?)*['`]\B|\B(['*+#])(?!\s)(?: \3|(?!\3)[^\\\r\n]|\\.)+(?:(?:\r?\n|\r)(?: \3|(?!\3)[^\\\r\n]|\\.)+)*\3\B)|(?:\[(?:[^\]\\"]|(["'])(?:(?!\4)[^\\]|\\.)*\4|\\.)*\])?(?:(__|\*\*|\+\+\+?|##|\$\$|[~^]).+?(?:(?:\r?\n|\r).+?)*\5|\{[^}\r\n]+\}|\[\[\[?.+?(?:(?:\r?\n|\r).+?)*\]?\]\]|<<.+?(?:(?:\r?\n|\r).+?)*>>|\(\(\(?.+?(?:(?:\r?\n|\r).+?)*\)?\)\)))/m,
+        pattern: /(^|[^\\])(?:(?:\B\[(?:[^\]\\"]|(["'])(?:(?!\2)[^\\]|\\.)*\2|\\.)*\])?(?:\b_(?!\s)(?: _|[^_\\\r\n]|\\.)+(?:(?:\r?\n|\r)(?: _|[^_\\\r\n]|\\.)+)*_\b|\B``(?!\s).+?(?:(?:\r?\n|\r).+?)*''\B|\B`(?!\s)(?:[^`'\s]|\s+\S)+['`]\B|\B(['*+#])(?!\s)(?: \3|(?!\3)[^\\\r\n]|\\.)+(?:(?:\r?\n|\r)(?: \3|(?!\3)[^\\\r\n]|\\.)+)*\3\B)|(?:\[(?:[^\]\\"]|(["'])(?:(?!\4)[^\\]|\\.)*\4|\\.)*\])?(?:(__|\*\*|\+\+\+?|##|\$\$|[~^]).+?(?:(?:\r?\n|\r).+?)*\5|\{[^}\r\n]+\}|\[\[\[?.+?(?:(?:\r?\n|\r).+?)*\]?\]\]|<<.+?(?:(?:\r?\n|\r).+?)*>>|\(\(\(?.+?(?:(?:\r?\n|\r).+?)*\)?\)\)))/m,
         lookbehind: true,
         inside: {
           attributes: attributes,
@@ -24034,15 +24118,15 @@ function asm6502(Prism) {
       alias: 'property'
     },
     hexnumber: {
-      pattern: /#?\$[\da-f]{2,4}/i,
+      pattern: /#?\$[\da-f]{2,4}\b/i,
       alias: 'string'
     },
     binarynumber: {
-      pattern: /#?%[01]+/,
+      pattern: /#?%[01]+\b/,
       alias: 'string'
     },
     decimalnumber: {
-      pattern: /#?\d+/,
+      pattern: /#?\b\d+\b/,
       alias: 'string'
     },
     register: {
@@ -24064,11 +24148,12 @@ function asm6502(Prism) {
 
 "use strict";
 
-
+var refractorCsharp = __webpack_require__(/*! ./csharp.js */ "./node_modules/refractor/lang/csharp.js")
 module.exports = aspnet
 aspnet.displayName = 'aspnet'
 aspnet.aliases = []
 function aspnet(Prism) {
+  Prism.register(refractorCsharp)
   Prism.languages.aspnet = Prism.languages.extend('markup', {
     'page-directive': {
       pattern: /<%\s*@.*%>/i,
@@ -24141,26 +24226,32 @@ autohotkey.aliases = []
 function autohotkey(Prism) {
   // NOTES - follows first-first highlight method, block is locked after highlight, different from SyntaxHl
   Prism.languages.autohotkey = {
-    comment: {
-      pattern: /(^[^";\n]*(?:"[^"\n]*?"[^"\n]*?)*)(?:;.*$|^\s*\/\*[\s\S]*\n\*\/)/m,
-      lookbehind: true
-    },
+    comment: [
+      {
+        pattern: /(^|\s);.*/,
+        lookbehind: true
+      },
+      {
+        pattern: /(^\s*)\/\*[^\r\n]*(?:[\r\n](?![ \t]*\*\/)|[^\r\n])*(?:[\r\n][ \t]*\*\/)?/m,
+        lookbehind: true,
+        greedy: true
+      }
+    ],
     string: /"(?:[^"\n\r]|"")*"/m,
-    function: /[^(); \t,\n+*\-=?>:\\\/<&%\[\]]+?(?=\()/m,
-    //function - don't use .*\) in the end bcoz string locks it
     tag: /^[ \t]*[^\s:]+?(?=:(?:[^:]|$))/m,
     //labels
     variable: /%\w+%/,
     number: /\b0x[\dA-Fa-f]+\b|(?:\b\d+\.?\d*|\B\.\d+)(?:[Ee]-?\d+)?/,
     operator: /\?|\/\/?=?|:=|\|[=|]?|&[=&]?|\+[=+]?|-[=-]?|\*[=*]?|<(?:<=?|>|=)?|>>?=?|[.^!=~]=?|\b(?:AND|NOT|OR)\b/,
-    punctuation: /[{}[\]():,]/,
     boolean: /\b(?:true|false)\b/,
-    selector: /\b(?:AutoTrim|BlockInput|Break|Click|ClipWait|Continue|Control|ControlClick|ControlFocus|ControlGet|ControlGetFocus|ControlGetPos|ControlGetText|ControlMove|ControlSend|ControlSendRaw|ControlSetText|CoordMode|Critical|DetectHiddenText|DetectHiddenWindows|Drive|DriveGet|DriveSpaceFree|EnvAdd|EnvDiv|EnvGet|EnvMult|EnvSet|EnvSub|EnvUpdate|Exit|ExitApp|FileAppend|FileCopy|FileCopyDir|FileCreateDir|FileCreateShortcut|FileDelete|FileEncoding|FileGetAttrib|FileGetShortcut|FileGetSize|FileGetTime|FileGetVersion|FileInstall|FileMove|FileMoveDir|FileRead|FileReadLine|FileRecycle|FileRecycleEmpty|FileRemoveDir|FileSelectFile|FileSelectFolder|FileSetAttrib|FileSetTime|FormatTime|GetKeyState|Gosub|Goto|GroupActivate|GroupAdd|GroupClose|GroupDeactivate|Gui|GuiControl|GuiControlGet|Hotkey|ImageSearch|IniDelete|IniRead|IniWrite|Input|InputBox|KeyWait|ListHotkeys|ListLines|ListVars|Loop|Menu|MouseClick|MouseClickDrag|MouseGetPos|MouseMove|MsgBox|OnExit|OutputDebug|Pause|PixelGetColor|PixelSearch|PostMessage|Process|Progress|Random|RegDelete|RegRead|RegWrite|Reload|Repeat|Return|Run|RunAs|RunWait|Send|SendEvent|SendInput|SendMessage|SendMode|SendPlay|SendRaw|SetBatchLines|SetCapslockState|SetControlDelay|SetDefaultMouseSpeed|SetEnv|SetFormat|SetKeyDelay|SetMouseDelay|SetNumlockState|SetScrollLockState|SetStoreCapslockMode|SetTimer|SetTitleMatchMode|SetWinDelay|SetWorkingDir|Shutdown|Sleep|Sort|SoundBeep|SoundGet|SoundGetWaveVolume|SoundPlay|SoundSet|SoundSetWaveVolume|SplashImage|SplashTextOff|SplashTextOn|SplitPath|StatusBarGetText|StatusBarWait|StringCaseSense|StringGetPos|StringLeft|StringLen|StringLower|StringMid|StringReplace|StringRight|StringSplit|StringTrimLeft|StringTrimRight|StringUpper|Suspend|SysGet|Thread|ToolTip|Transform|TrayTip|URLDownloadToFile|WinActivate|WinActivateBottom|WinClose|WinGet|WinGetActiveStats|WinGetActiveTitle|WinGetClass|WinGetPos|WinGetText|WinGetTitle|WinHide|WinKill|WinMaximize|WinMenuSelectItem|WinMinimize|WinMinimizeAll|WinMinimizeAllUndo|WinMove|WinRestore|WinSet|WinSetTitle|WinShow|WinWait|WinWaitActive|WinWaitClose|WinWaitNotActive)\b/i,
-    constant: /\b(?:a_ahkpath|a_ahkversion|a_appdata|a_appdatacommon|a_autotrim|a_batchlines|a_caretx|a_carety|a_computername|a_controldelay|a_cursor|a_dd|a_ddd|a_dddd|a_defaultmousespeed|a_desktop|a_desktopcommon|a_detecthiddentext|a_detecthiddenwindows|a_endchar|a_eventinfo|a_exitreason|a_formatfloat|a_formatinteger|a_gui|a_guievent|a_guicontrol|a_guicontrolevent|a_guiheight|a_guiwidth|a_guix|a_guiy|a_hour|a_iconfile|a_iconhidden|a_iconnumber|a_icontip|a_index|a_ipaddress1|a_ipaddress2|a_ipaddress3|a_ipaddress4|a_isadmin|a_iscompiled|a_iscritical|a_ispaused|a_issuspended|a_isunicode|a_keydelay|a_language|a_lasterror|a_linefile|a_linenumber|a_loopfield|a_loopfileattrib|a_loopfiledir|a_loopfileext|a_loopfilefullpath|a_loopfilelongpath|a_loopfilename|a_loopfileshortname|a_loopfileshortpath|a_loopfilesize|a_loopfilesizekb|a_loopfilesizemb|a_loopfiletimeaccessed|a_loopfiletimecreated|a_loopfiletimemodified|a_loopreadline|a_loopregkey|a_loopregname|a_loopregsubkey|a_loopregtimemodified|a_loopregtype|a_mday|a_min|a_mm|a_mmm|a_mmmm|a_mon|a_mousedelay|a_msec|a_mydocuments|a_now|a_nowutc|a_numbatchlines|a_ostype|a_osversion|a_priorhotkey|programfiles|a_programfiles|a_programs|a_programscommon|a_screenheight|a_screenwidth|a_scriptdir|a_scriptfullpath|a_scriptname|a_sec|a_space|a_startmenu|a_startmenucommon|a_startup|a_startupcommon|a_stringcasesense|a_tab|a_temp|a_thisfunc|a_thishotkey|a_thislabel|a_thismenu|a_thismenuitem|a_thismenuitempos|a_tickcount|a_timeidle|a_timeidlephysical|a_timesincepriorhotkey|a_timesincethishotkey|a_titlematchmode|a_titlematchmodespeed|a_username|a_wday|a_windelay|a_windir|a_workingdir|a_yday|a_year|a_yweek|a_yyyy|clipboard|clipboardall|comspec|errorlevel)\b/i,
-    builtin: /\b(?:abs|acos|asc|asin|atan|ceil|chr|class|cos|dllcall|exp|fileexist|Fileopen|floor|il_add|il_create|il_destroy|instr|substr|isfunc|islabel|IsObject|ln|log|lv_add|lv_delete|lv_deletecol|lv_getcount|lv_getnext|lv_gettext|lv_insert|lv_insertcol|lv_modify|lv_modifycol|lv_setimagelist|mod|onmessage|numget|numput|registercallback|regexmatch|regexreplace|round|sin|tan|sqrt|strlen|sb_seticon|sb_setparts|sb_settext|strsplit|tv_add|tv_delete|tv_getchild|tv_getcount|tv_getnext|tv_get|tv_getparent|tv_getprev|tv_getselection|tv_gettext|tv_modify|varsetcapacity|winactive|winexist|__New|__Call|__Get|__Set)\b/i,
+    selector: /\b(?:AutoTrim|BlockInput|Break|Click|ClipWait|Continue|Control|ControlClick|ControlFocus|ControlGet|ControlGetFocus|ControlGetPos|ControlGetText|ControlMove|ControlSend|ControlSendRaw|ControlSetText|CoordMode|Critical|DetectHiddenText|DetectHiddenWindows|Drive|DriveGet|DriveSpaceFree|EnvAdd|EnvDiv|EnvGet|EnvMult|EnvSet|EnvSub|EnvUpdate|Exit|ExitApp|FileAppend|FileCopy|FileCopyDir|FileCreateDir|FileCreateShortcut|FileDelete|FileEncoding|FileGetAttrib|FileGetShortcut|FileGetSize|FileGetTime|FileGetVersion|FileInstall|FileMove|FileMoveDir|FileRead|FileReadLine|FileRecycle|FileRecycleEmpty|FileRemoveDir|FileSelectFile|FileSelectFolder|FileSetAttrib|FileSetTime|FormatTime|GetKeyState|Gosub|Goto|GroupActivate|GroupAdd|GroupClose|GroupDeactivate|Gui|GuiControl|GuiControlGet|Hotkey|ImageSearch|IniDelete|IniRead|IniWrite|Input|InputBox|KeyWait|ListHotkeys|ListLines|ListVars|Loop|Menu|MouseClick|MouseClickDrag|MouseGetPos|MouseMove|MsgBox|OnExit|OutputDebug|Pause|PixelGetColor|PixelSearch|PostMessage|Process|Progress|Random|RegDelete|RegRead|RegWrite|Reload|Repeat|Return|Run|RunAs|RunWait|Send|SendEvent|SendInput|SendMessage|SendMode|SendPlay|SendRaw|SetBatchLines|SetCapslockState|SetControlDelay|SetDefaultMouseSpeed|SetEnv|SetFormat|SetKeyDelay|SetMouseDelay|SetNumlockState|SetRegView|SetScrollLockState|SetStoreCapslockMode|SetTimer|SetTitleMatchMode|SetWinDelay|SetWorkingDir|Shutdown|Sleep|Sort|SoundBeep|SoundGet|SoundGetWaveVolume|SoundPlay|SoundSet|SoundSetWaveVolume|SplashImage|SplashTextOff|SplashTextOn|SplitPath|StatusBarGetText|StatusBarWait|StringCaseSense|StringGetPos|StringLeft|StringLen|StringLower|StringMid|StringReplace|StringRight|StringSplit|StringTrimLeft|StringTrimRight|StringUpper|Suspend|SysGet|Thread|ToolTip|Transform|TrayTip|URLDownloadToFile|WinActivate|WinActivateBottom|WinClose|WinGet|WinGetActiveStats|WinGetActiveTitle|WinGetClass|WinGetPos|WinGetText|WinGetTitle|WinHide|WinKill|WinMaximize|WinMenuSelectItem|WinMinimize|WinMinimizeAll|WinMinimizeAllUndo|WinMove|WinRestore|WinSet|WinSetTitle|WinShow|WinWait|WinWaitActive|WinWaitClose|WinWaitNotActive)\b/i,
+    constant: /\b(?:a_ahkpath|a_ahkversion|a_appdata|a_appdatacommon|a_autotrim|a_batchlines|a_caretx|a_carety|a_computername|a_controldelay|a_cursor|a_dd|a_ddd|a_dddd|a_defaultmousespeed|a_desktop|a_desktopcommon|a_detecthiddentext|a_detecthiddenwindows|a_endchar|a_eventinfo|a_exitreason|a_fileencoding|a_formatfloat|a_formatinteger|a_gui|a_guievent|a_guicontrol|a_guicontrolevent|a_guiheight|a_guiwidth|a_guix|a_guiy|a_hour|a_iconfile|a_iconhidden|a_iconnumber|a_icontip|a_index|a_ipaddress1|a_ipaddress2|a_ipaddress3|a_ipaddress4|a_is64bitos|a_isadmin|a_iscompiled|a_iscritical|a_ispaused|a_issuspended|a_isunicode|a_keydelay|a_language|a_lasterror|a_linefile|a_linenumber|a_loopfield|a_loopfileattrib|a_loopfiledir|a_loopfileext|a_loopfilefullpath|a_loopfilelongpath|a_loopfilename|a_loopfileshortname|a_loopfileshortpath|a_loopfilesize|a_loopfilesizekb|a_loopfilesizemb|a_loopfiletimeaccessed|a_loopfiletimecreated|a_loopfiletimemodified|a_loopreadline|a_loopregkey|a_loopregname|a_loopregsubkey|a_loopregtimemodified|a_loopregtype|a_mday|a_min|a_mm|a_mmm|a_mmmm|a_mon|a_mousedelay|a_msec|a_mydocuments|a_now|a_nowutc|a_numbatchlines|a_ostype|a_osversion|a_priorhotkey|a_priorkey|programfiles|a_programfiles|a_programs|a_programscommon|a_ptrsize|a_regview|a_screendpi|a_screenheight|a_screenwidth|a_scriptdir|a_scriptfullpath|a_scripthwnd|a_scriptname|a_sec|a_space|a_startmenu|a_startmenucommon|a_startup|a_startupcommon|a_stringcasesense|a_tab|a_temp|a_thisfunc|a_thishotkey|a_thislabel|a_thismenu|a_thismenuitem|a_thismenuitempos|a_tickcount|a_timeidle|a_timeidlephysical|a_timesincepriorhotkey|a_timesincethishotkey|a_titlematchmode|a_titlematchmodespeed|a_username|a_wday|a_windelay|a_windir|a_workingdir|a_yday|a_year|a_yweek|a_yyyy|clipboard|clipboardall|comspec|errorlevel)\b/i,
+    builtin: /\b(?:abs|acos|asc|asin|atan|ceil|chr|class|comobjactive|comobjarray|comobjconnect|comobjcreate|comobjerror|comobjflags|comobjget|comobjquery|comobjtype|comobjvalue|cos|dllcall|exp|fileexist|Fileopen|floor|format|il_add|il_create|il_destroy|instr|substr|isfunc|islabel|IsObject|ln|log|lv_add|lv_delete|lv_deletecol|lv_getcount|lv_getnext|lv_gettext|lv_insert|lv_insertcol|lv_modify|lv_modifycol|lv_setimagelist|ltrim|rtrim|mod|onmessage|numget|numput|registercallback|regexmatch|regexreplace|round|sin|tan|sqrt|strlen|strreplace|sb_seticon|sb_setparts|sb_settext|strsplit|tv_add|tv_delete|tv_getchild|tv_getcount|tv_getnext|tv_get|tv_getparent|tv_getprev|tv_getselection|tv_gettext|tv_modify|varsetcapacity|winactive|winexist|__New|__Call|__Get|__Set)\b/i,
     symbol: /\b(?:alt|altdown|altup|appskey|backspace|browser_back|browser_favorites|browser_forward|browser_home|browser_refresh|browser_search|browser_stop|bs|capslock|ctrl|ctrlbreak|ctrldown|ctrlup|del|delete|down|end|enter|esc|escape|f1|f10|f11|f12|f13|f14|f15|f16|f17|f18|f19|f2|f20|f21|f22|f23|f24|f3|f4|f5|f6|f7|f8|f9|home|ins|insert|joy1|joy10|joy11|joy12|joy13|joy14|joy15|joy16|joy17|joy18|joy19|joy2|joy20|joy21|joy22|joy23|joy24|joy25|joy26|joy27|joy28|joy29|joy3|joy30|joy31|joy32|joy4|joy5|joy6|joy7|joy8|joy9|joyaxes|joybuttons|joyinfo|joyname|joypov|joyr|joyu|joyv|joyx|joyy|joyz|lalt|launch_app1|launch_app2|launch_mail|launch_media|lbutton|lcontrol|lctrl|left|lshift|lwin|lwindown|lwinup|mbutton|media_next|media_play_pause|media_prev|media_stop|numlock|numpad0|numpad1|numpad2|numpad3|numpad4|numpad5|numpad6|numpad7|numpad8|numpad9|numpadadd|numpadclear|numpaddel|numpaddiv|numpaddot|numpaddown|numpadend|numpadenter|numpadhome|numpadins|numpadleft|numpadmult|numpadpgdn|numpadpgup|numpadright|numpadsub|numpadup|pgdn|pgup|printscreen|ralt|rbutton|rcontrol|rctrl|right|rshift|rwin|rwindown|rwinup|scrolllock|shift|shiftdown|shiftup|space|tab|up|volume_down|volume_mute|volume_up|wheeldown|wheelleft|wheelright|wheelup|xbutton1|xbutton2)\b/i,
-    important: /#\b(?:AllowSameLineComments|ClipboardTimeout|CommentFlag|ErrorStdOut|EscapeChar|HotkeyInterval|HotkeyModifierTimeout|Hotstring|IfWinActive|IfWinExist|IfWinNotActive|IfWinNotExist|Include|IncludeAgain|InstallKeybdHook|InstallMouseHook|KeyHistory|LTrim|MaxHotkeysPerInterval|MaxMem|MaxThreads|MaxThreadsBuffer|MaxThreadsPerHotkey|NoEnv|NoTrayIcon|Persistent|SingleInstance|UseHook|WinActivateForce)\b/i,
-    keyword: /\b(?:Abort|AboveNormal|Add|ahk_class|ahk_group|ahk_id|ahk_pid|All|Alnum|Alpha|AltSubmit|AltTab|AltTabAndMenu|AltTabMenu|AltTabMenuDismiss|AlwaysOnTop|AutoSize|Background|BackgroundTrans|BelowNormal|between|BitAnd|BitNot|BitOr|BitShiftLeft|BitShiftRight|BitXOr|Bold|Border|Button|ByRef|Checkbox|Checked|CheckedGray|Choose|ChooseString|Close|Color|ComboBox|Contains|ControlList|Count|Date|DateTime|Days|DDL|Default|DeleteAll|Delimiter|Deref|Destroy|Digit|Disable|Disabled|DropDownList|Edit|Eject|Else|Enable|Enabled|Error|Exist|Expand|ExStyle|FileSystem|First|Flash|Float|FloatFast|Focus|Font|for|global|Grid|Group|GroupBox|GuiClose|GuiContextMenu|GuiDropFiles|GuiEscape|GuiSize|Hdr|Hidden|Hide|High|HKCC|HKCR|HKCU|HKEY_CLASSES_ROOT|HKEY_CURRENT_CONFIG|HKEY_CURRENT_USER|HKEY_LOCAL_MACHINE|HKEY_USERS|HKLM|HKU|Hours|HScroll|Icon|IconSmall|ID|IDLast|If|IfEqual|IfExist|IfGreater|IfGreaterOrEqual|IfInString|IfLess|IfLessOrEqual|IfMsgBox|IfNotEqual|IfNotExist|IfNotInString|IfWinActive|IfWinExist|IfWinNotActive|IfWinNotExist|Ignore|ImageList|in|Integer|IntegerFast|Interrupt|is|italic|Join|Label|LastFound|LastFoundExist|Limit|Lines|List|ListBox|ListView|local|Lock|Logoff|Low|Lower|Lowercase|MainWindow|Margin|Maximize|MaximizeBox|MaxSize|Minimize|MinimizeBox|MinMax|MinSize|Minutes|MonthCal|Mouse|Move|Multi|NA|No|NoActivate|NoDefault|NoHide|NoIcon|NoMainWindow|norm|Normal|NoSort|NoSortHdr|NoStandard|Not|NoTab|NoTimers|Number|Off|Ok|On|OwnDialogs|Owner|Parse|Password|Picture|Pixel|Pos|Pow|Priority|ProcessName|Radio|Range|Read|ReadOnly|Realtime|Redraw|REG_BINARY|REG_DWORD|REG_EXPAND_SZ|REG_MULTI_SZ|REG_SZ|Region|Relative|Rename|Report|Resize|Restore|Retry|RGB|Screen|Seconds|Section|Serial|SetLabel|ShiftAltTab|Show|Single|Slider|SortDesc|Standard|static|Status|StatusBar|StatusCD|strike|Style|Submit|SysMenu|Tab2|TabStop|Text|Theme|Tile|ToggleCheck|ToggleEnable|ToolWindow|Top|Topmost|TransColor|Transparent|Tray|TreeView|TryAgain|Type|UnCheck|underline|Unicode|Unlock|UpDown|Upper|Uppercase|UseErrorLevel|Vis|VisFirst|Visible|VScroll|Wait|WaitClose|WantCtrlA|WantF2|WantReturn|While|Wrap|Xdigit|xm|xp|xs|Yes|ym|yp|ys)\b/i
+    important: /#\b(?:AllowSameLineComments|ClipboardTimeout|CommentFlag|DerefChar|ErrorStdOut|EscapeChar|HotkeyInterval|HotkeyModifierTimeout|Hotstring|If|IfTimeout|IfWinActive|IfWinExist|IfWinNotActive|IfWinNotExist|Include|IncludeAgain|InputLevel|InstallKeybdHook|InstallMouseHook|KeyHistory|MaxHotkeysPerInterval|MaxMem|MaxThreads|MaxThreadsBuffer|MaxThreadsPerHotkey|MenuMaskKey|NoEnv|NoTrayIcon|Persistent|SingleInstance|UseHook|Warn|WinActivateForce)\b/i,
+    keyword: /\b(?:Abort|AboveNormal|Add|ahk_class|ahk_exe|ahk_group|ahk_id|ahk_pid|All|Alnum|Alpha|AltSubmit|AltTab|AltTabAndMenu|AltTabMenu|AltTabMenuDismiss|AlwaysOnTop|AutoSize|Background|BackgroundTrans|BelowNormal|between|BitAnd|BitNot|BitOr|BitShiftLeft|BitShiftRight|BitXOr|Bold|Border|Button|ByRef|Checkbox|Checked|CheckedGray|Choose|ChooseString|Close|Color|ComboBox|Contains|ControlList|Count|Date|DateTime|Days|DDL|Default|DeleteAll|Delimiter|Deref|Destroy|Digit|Disable|Disabled|DropDownList|Edit|Eject|Else|Enable|Enabled|Error|Exist|Expand|ExStyle|FileSystem|First|Flash|Float|FloatFast|Focus|Font|for|global|Grid|Group|GroupBox|GuiClose|GuiContextMenu|GuiDropFiles|GuiEscape|GuiSize|Hdr|Hidden|Hide|High|HKCC|HKCR|HKCU|HKEY_CLASSES_ROOT|HKEY_CURRENT_CONFIG|HKEY_CURRENT_USER|HKEY_LOCAL_MACHINE|HKEY_USERS|HKLM|HKU|Hours|HScroll|Icon|IconSmall|ID|IDLast|If|IfEqual|IfExist|IfGreater|IfGreaterOrEqual|IfInString|IfLess|IfLessOrEqual|IfMsgBox|IfNotEqual|IfNotExist|IfNotInString|IfWinActive|IfWinExist|IfWinNotActive|IfWinNotExist|Ignore|ImageList|in|Integer|IntegerFast|Interrupt|is|italic|Join|Label|LastFound|LastFoundExist|Limit|Lines|List|ListBox|ListView|local|Lock|Logoff|Low|Lower|Lowercase|MainWindow|Margin|Maximize|MaximizeBox|MaxSize|Minimize|MinimizeBox|MinMax|MinSize|Minutes|MonthCal|Mouse|Move|Multi|NA|No|NoActivate|NoDefault|NoHide|NoIcon|NoMainWindow|norm|Normal|NoSort|NoSortHdr|NoStandard|Not|NoTab|NoTimers|Number|Off|Ok|On|OwnDialogs|Owner|Parse|Password|Picture|Pixel|Pos|Pow|Priority|ProcessName|Radio|Range|Read|ReadOnly|Realtime|Redraw|REG_BINARY|REG_DWORD|REG_EXPAND_SZ|REG_MULTI_SZ|REG_SZ|Region|Relative|Rename|Report|Resize|Restore|Retry|RGB|Screen|Seconds|Section|Serial|SetLabel|ShiftAltTab|Show|Single|Slider|SortDesc|Standard|static|Status|StatusBar|StatusCD|strike|Style|Submit|SysMenu|Tab2|TabStop|Text|Theme|Tile|ToggleCheck|ToggleEnable|ToolWindow|Top|Topmost|TransColor|Transparent|Tray|TreeView|TryAgain|Throw|Try|Catch|Finally|Type|UnCheck|underline|Unicode|Unlock|Until|UpDown|Upper|Uppercase|UseErrorLevel|Vis|VisFirst|Visible|VScroll|Wait|WaitClose|WantCtrlA|WantF2|WantReturn|While|Wrap|Xdigit|xm|xp|xs|Yes|ym|yp|ys)\b/i,
+    function: /[^(); \t,\n+*\-=?>:\\\/<&%\[\]]+?(?=\()/m,
+    punctuation: /[{}[\]():,]/
   }
 }
 
@@ -24365,7 +24456,7 @@ function bash(Prism) {
       },
       variable: insideString.variable,
       function: {
-        pattern: /(^|[\s;|&]|[<>]\()(?:add|apropos|apt|aptitude|apt-cache|apt-get|aspell|automysqlbackup|awk|basename|bash|bc|bconsole|bg|bzip2|cal|cat|cfdisk|chgrp|chkconfig|chmod|chown|chroot|cksum|clear|cmp|column|comm|cp|cron|crontab|csplit|curl|cut|date|dc|dd|ddrescue|debootstrap|df|diff|diff3|dig|dir|dircolors|dirname|dirs|dmesg|du|egrep|eject|env|ethtool|expand|expect|expr|fdformat|fdisk|fg|fgrep|file|find|fmt|fold|format|free|fsck|ftp|fuser|gawk|git|gparted|grep|groupadd|groupdel|groupmod|groups|grub-mkconfig|gzip|halt|head|hg|history|host|hostname|htop|iconv|id|ifconfig|ifdown|ifup|import|install|ip|jobs|join|kill|killall|less|link|ln|locate|logname|logrotate|look|lpc|lpr|lprint|lprintd|lprintq|lprm|ls|lsof|lynx|make|man|mc|mdadm|mkconfig|mkdir|mke2fs|mkfifo|mkfs|mkisofs|mknod|mkswap|mmv|more|most|mount|mtools|mtr|mutt|mv|nano|nc|netstat|nice|nl|nohup|notify-send|npm|nslookup|op|open|parted|passwd|paste|pathchk|ping|pkill|pnpm|popd|pr|printcap|printenv|ps|pushd|pv|quota|quotacheck|quotactl|ram|rar|rcp|reboot|remsync|rename|renice|rev|rm|rmdir|rpm|rsync|scp|screen|sdiff|sed|sendmail|seq|service|sftp|sh|shellcheck|shuf|shutdown|sleep|slocate|sort|split|ssh|stat|strace|su|sudo|sum|suspend|swapon|sync|tac|tail|tar|tee|time|timeout|top|touch|tr|traceroute|tsort|tty|umount|uname|unexpand|uniq|units|unrar|unshar|unzip|update-grub|uptime|useradd|userdel|usermod|users|uudecode|uuencode|v|vdir|vi|vim|virsh|vmstat|wait|watch|wc|wget|whereis|which|who|whoami|write|xargs|xdg-open|yarn|yes|zenity|zip|zsh|zypper)(?=$|[)\s;|&])/,
+        pattern: /(^|[\s;|&]|[<>]\()(?:add|apropos|apt|aptitude|apt-cache|apt-get|aspell|automysqlbackup|awk|basename|bash|bc|bconsole|bg|bzip2|cal|cat|cfdisk|chgrp|chkconfig|chmod|chown|chroot|cksum|clear|cmp|column|comm|composer|cp|cron|crontab|csplit|curl|cut|date|dc|dd|ddrescue|debootstrap|df|diff|diff3|dig|dir|dircolors|dirname|dirs|dmesg|du|egrep|eject|env|ethtool|expand|expect|expr|fdformat|fdisk|fg|fgrep|file|find|fmt|fold|format|free|fsck|ftp|fuser|gawk|git|gparted|grep|groupadd|groupdel|groupmod|groups|grub-mkconfig|gzip|halt|head|hg|history|host|hostname|htop|iconv|id|ifconfig|ifdown|ifup|import|install|ip|jobs|join|kill|killall|less|link|ln|locate|logname|logrotate|look|lpc|lpr|lprint|lprintd|lprintq|lprm|ls|lsof|lynx|make|man|mc|mdadm|mkconfig|mkdir|mke2fs|mkfifo|mkfs|mkisofs|mknod|mkswap|mmv|more|most|mount|mtools|mtr|mutt|mv|nano|nc|netstat|nice|nl|nohup|notify-send|npm|nslookup|op|open|parted|passwd|paste|pathchk|ping|pkill|pnpm|popd|pr|printcap|printenv|ps|pushd|pv|quota|quotacheck|quotactl|ram|rar|rcp|reboot|remsync|rename|renice|rev|rm|rmdir|rpm|rsync|scp|screen|sdiff|sed|sendmail|seq|service|sftp|sh|shellcheck|shuf|shutdown|sleep|slocate|sort|split|ssh|stat|strace|su|sudo|sum|suspend|swapon|sync|tac|tail|tar|tee|time|timeout|top|touch|tr|traceroute|tsort|tty|umount|uname|unexpand|uniq|units|unrar|unshar|unzip|update-grub|uptime|useradd|userdel|usermod|users|uudecode|uuencode|v|vdir|vi|vim|virsh|vmstat|wait|watch|wc|wget|whereis|which|who|whoami|write|xargs|xdg-open|yarn|yes|zenity|zip|zsh|zypper)(?=$|[)\s;|&])/,
         lookbehind: true
       },
       keyword: {
@@ -24490,7 +24581,7 @@ function batch(Prism) {
         punctuation: /:/
       }
     }
-    var string = /"[^"]*"/
+    var string = /"(?:[\\"]"|[^"])*"(?!")/
     var number = /(?:\b|-)\d+\b/
     Prism.languages.batch = {
       comment: [
@@ -24555,7 +24646,7 @@ function batch(Prism) {
         },
         {
           // Other commands
-          pattern: /((?:^|[&(])[ \t]*@?)\w+\b(?:[^^&)\r\n]|\^(?:\r\n|[\s\S]))*/im,
+          pattern: /((?:^|[&(])[ \t]*@?)\w+\b(?:"(?:[\\"]"|[^"])*"(?!")|[^"^&)\r\n]|\^(?:\r\n|[\s\S]))*/im,
           lookbehind: true,
           inside: {
             keyword: /^\w+\b/i,
@@ -24915,20 +25006,31 @@ function c(Prism) {
     macro: {
       // allow for multiline macro definitions
       // spaces after the # character compile fine with gcc
-      pattern: /(^\s*)#\s*[a-z]+(?:[^\r\n\\]|\\(?:\r\n|[\s\S]))*/im,
+      pattern: /(^\s*)#\s*[a-z]+(?:[^\r\n\\/]|\/(?!\*)|\/\*(?:[^*]|\*(?!\/))*\*\/|\\(?:\r\n|[\s\S]))*/im,
       lookbehind: true,
+      greedy: true,
       alias: 'property',
       inside: {
-        // highlight the path of the include statement as a string
-        string: {
-          pattern: /(#\s*include\s*)(?:<.+?>|("|')(?:\\?.)+?\2)/,
-          lookbehind: true
-        },
+        string: [
+          {
+            // highlight the path of the include statement as a string
+            pattern: /^(#\s*include\s*)<[^>]+>/,
+            lookbehind: true
+          },
+          Prism.languages.c['string']
+        ],
+        comment: Prism.languages.c['comment'],
         // highlight macro directives as keywords
         directive: {
-          pattern: /(#\s*)\b(?:define|defined|elif|else|endif|error|ifdef|ifndef|if|import|include|line|pragma|undef|using)\b/,
+          pattern: /^(#\s*)[a-z]+/,
           lookbehind: true,
           alias: 'keyword'
+        },
+        'directive-hash': /^#/,
+        punctuation: /##|\\(?=[\r\n])/,
+        expression: {
+          pattern: /\S[\s\S]*/,
+          inside: Prism.languages.c
         }
       }
     },
@@ -25291,26 +25393,65 @@ cpp.displayName = 'cpp'
 cpp.aliases = []
 function cpp(Prism) {
   Prism.register(refractorC)
-  Prism.languages.cpp = Prism.languages.extend('c', {
-    'class-name': {
-      pattern: /(\b(?:class|enum|struct)\s+)\w+/,
-      lookbehind: true
-    },
-    keyword: /\b(?:alignas|alignof|asm|auto|bool|break|case|catch|char|char8_t|char16_t|char32_t|class|compl|concept|const|consteval|constexpr|constinit|const_cast|continue|co_await|co_return|co_yield|decltype|default|delete|do|double|dynamic_cast|else|enum|explicit|export|extern|float|for|friend|goto|if|inline|int|int8_t|int16_t|int32_t|int64_t|uint8_t|uint16_t|uint32_t|uint64_t|long|mutable|namespace|new|noexcept|nullptr|operator|private|protected|public|register|reinterpret_cast|requires|return|short|signed|sizeof|static|static_assert|static_cast|struct|switch|template|this|thread_local|throw|try|typedef|typeid|typename|union|unsigned|using|virtual|void|volatile|wchar_t|while)\b/,
-    number: {
-      pattern: /(?:\b0b[01']+|\b0x(?:[\da-f']+\.?[\da-f']*|\.[\da-f']+)(?:p[+-]?[\d']+)?|(?:\b[\d']+\.?[\d']*|\B\.[\d']+)(?:e[+-]?[\d']+)?)[ful]*/i,
-      greedy: true
-    },
-    operator: />>=?|<<=?|->|([-+&|:])\1|[?:~]|[-+*/%&|^!=<>]=?|\b(?:and|and_eq|bitand|bitor|not|not_eq|or|or_eq|xor|xor_eq)\b/,
-    boolean: /\b(?:true|false)\b/
-  })
-  Prism.languages.insertBefore('cpp', 'string', {
-    'raw-string': {
-      pattern: /R"([^()\\ ]{0,16})\([\s\S]*?\)\1"/,
-      alias: 'string',
-      greedy: true
-    }
-  })
+  ;(function (Prism) {
+    var keyword = /\b(?:alignas|alignof|asm|auto|bool|break|case|catch|char|char8_t|char16_t|char32_t|class|compl|concept|const|consteval|constexpr|constinit|const_cast|continue|co_await|co_return|co_yield|decltype|default|delete|do|double|dynamic_cast|else|enum|explicit|export|extern|float|for|friend|goto|if|inline|int|int8_t|int16_t|int32_t|int64_t|uint8_t|uint16_t|uint32_t|uint64_t|long|mutable|namespace|new|noexcept|nullptr|operator|private|protected|public|register|reinterpret_cast|requires|return|short|signed|sizeof|static|static_assert|static_cast|struct|switch|template|this|thread_local|throw|try|typedef|typeid|typename|union|unsigned|using|virtual|void|volatile|wchar_t|while)\b/
+    Prism.languages.cpp = Prism.languages.extend('c', {
+      'class-name': [
+        {
+          pattern: RegExp(
+            /(\b(?:class|concept|enum|struct|typename)\s+)(?!<keyword>)\w+/.source.replace(
+              /<keyword>/g,
+              function () {
+                return keyword.source
+              }
+            )
+          ),
+          lookbehind: true
+        }, // This is intended to capture the class name of method implementations like:
+        //   void foo::bar() const {}
+        // However! The `foo` in the above example could also be a namespace, so we only capture the class name if
+        // it starts with an uppercase letter. This approximation should give decent results.
+        /\b[A-Z]\w*(?=\s*::\s*\w+\s*\()/, // This will capture the class name before destructors like:
+        //   Foo::~Foo() {}
+        /\b[A-Z_]\w*(?=\s*::\s*~\w+\s*\()/i, // This also intends to capture the class name of method implementations but here the class has template
+        // parameters, so it can't be a namespace (until C++ adds generic namespaces).
+        /\w+(?=\s*<(?:[^<>]|<(?:[^<>]|<[^<>]*>)*>)*>\s*::\s*\w+\s*\()/
+      ],
+      keyword: keyword,
+      number: {
+        pattern: /(?:\b0b[01']+|\b0x(?:[\da-f']+\.?[\da-f']*|\.[\da-f']+)(?:p[+-]?[\d']+)?|(?:\b[\d']+\.?[\d']*|\B\.[\d']+)(?:e[+-]?[\d']+)?)[ful]*/i,
+        greedy: true
+      },
+      operator: />>=?|<<=?|->|([-+&|:])\1|[?:~]|<=>|[-+*/%&|^!=<>]=?|\b(?:and|and_eq|bitand|bitor|not|not_eq|or|or_eq|xor|xor_eq)\b/,
+      boolean: /\b(?:true|false)\b/
+    })
+    Prism.languages.insertBefore('cpp', 'string', {
+      'raw-string': {
+        pattern: /R"([^()\\ ]{0,16})\([\s\S]*?\)\1"/,
+        alias: 'string',
+        greedy: true
+      }
+    })
+    Prism.languages.insertBefore('cpp', 'class-name', {
+      // the base clause is an optional list of parent classes
+      // https://en.cppreference.com/w/cpp/language/class
+      'base-clause': {
+        pattern: /(\b(?:class|struct)\s+\w+\s*:\s*)(?:[^;{}"'])+?(?=\s*[;{])/,
+        lookbehind: true,
+        greedy: true,
+        inside: Prism.languages.extend('cpp', {})
+      }
+    })
+    Prism.languages.insertBefore(
+      'inside',
+      'operator',
+      {
+        // All untokenized words that are not namespaces should be class names
+        'class-name': /\b[a-z_]\w*\b(?!\s*::)/i
+      },
+      Prism.languages.cpp['base-clause']
+    )
+  })(Prism)
 }
 
 
@@ -25446,7 +25587,7 @@ function csharp(Prism) {
       // contextual keywords
       // ("var" and "dynamic" are missing because they are used like types)
       contextual:
-        'add alias ascending async await by descending from get global group into join let nameof notnull on orderby partial remove select set unmanaged value when where where',
+        'add alias and ascending async await by descending from get global group into join let nameof not notnull on or orderby partial remove select set unmanaged value when where where',
       // all other keywords
       other:
         'abstract as base break case catch checked const continue default delegate do else event explicit extern finally fixed for foreach goto if implicit in internal is lock namespace new null operator out override params private protected public readonly ref return sealed sizeof stackalloc static switch this throw try typeof unchecked unsafe using virtual volatile while yield'
@@ -25491,6 +25632,10 @@ function csharp(Prism) {
       genericName
     ])
     var array = /\[\s*(?:,\s*)*\]/.source
+    var typeExpressionWithoutTuple = replace(
+      /<<0>>(?:\s*(?:\?\s*)?<<1>>)*(?:\s*\?)?/.source,
+      [identifier, array]
+    )
     var tupleElement = replace(
       /[^,()<>[\];=+\-*/%&|^]|<<0>>|<<1>>|<<2>>/.source,
       [generic, nestedRound, array]
@@ -25582,7 +25727,9 @@ function csharp(Prism) {
           // Casts and checks via as and is.
           // as Foo<A>, is Bar<B>
           // (things like if(a is Foo b) is covered by variable declaration)
-          pattern: re(/(\b(?:is|as)\s+)<<0>>/.source, [typeExpression]),
+          pattern: re(/(\b(?:is(?:\s+not)?|as)\s+)<<0>>/.source, [
+            typeExpressionWithoutTuple
+          ]),
           lookbehind: true,
           inside: typeInside
         },
@@ -25590,7 +25737,8 @@ function csharp(Prism) {
           // Variable, field and parameter declaration
           // (Foo bar, Bar baz, Foo[,,] bay, Foo<Bar, FooBar<Bar>> bax)
           pattern: re(
-            /\b<<0>>(?=\s+(?!<<1>>)<<2>>(?:\s*[=,;:{)\]]|\s+in))/.source,
+            /\b<<0>>(?=\s+(?!<<1>>)<<2>>(?:\s*[=,;:{)\]]|\s+(?:in|when)\b))/
+              .source,
             [typeExpression, nonContextualKeywords, name]
           ),
           inside: typeInside
@@ -25717,7 +25865,7 @@ alias: 'class-name'
     }) // attributes
     var regularStringOrCharacter = regularString + '|' + character
     var regularStringCharacterOrComment = replace(
-      /\/(?![*/])|\/\/[^\r\n]*[\r\n]|\/\*[\s\S]*?\*\/|<<0>>/.source,
+      /\/(?![*/])|\/\/[^\r\n]*[\r\n]|\/\*(?:[^*]|\*(?!\/))*\*\/|<<0>>/.source,
       [regularStringOrCharacter]
     )
     var roundExpression = nested(
@@ -25774,9 +25922,11 @@ alias: 'class-name'
       formatString
     ]) // single line
     var sInterpolationRound = nested(
-      replace(/[^"'/()]|\/(?!\*)|\/\*.*?\*\/|<<0>>|\(<<self>>*\)/.source, [
-        regularStringOrCharacter
-      ]),
+      replace(
+        /[^"'/()]|\/(?!\*)|\/\*(?:[^*]|\*(?!\/))*\*\/|<<0>>|\(<<self>>*\)/
+          .source,
+        [regularStringOrCharacter]
+      ),
       2
     )
     var sInterpolation = replace(/\{(?!\{)(?:(?![}:])<<0>>)*<<1>>?\}/.source, [
@@ -25786,7 +25936,7 @@ alias: 'class-name'
     function createInterpolationInside(interpolation, interpolationRound) {
       return {
         interpolation: {
-          pattern: re(/([^{](?:\{\{)*)<<0>>/.source, [interpolation]),
+          pattern: re(/((?:^|[^{])(?:\{\{)*)<<0>>/.source, [interpolation]),
           lookbehind: true,
           inside: {
             'format-string': {
@@ -25864,7 +26014,7 @@ function csp(Prism) {
    */
   Prism.languages.csp = {
     directive: {
-      pattern: /\b(?:(?:base-uri|form-action|frame-ancestors|plugin-types|referrer|reflected-xss|report-to|report-uri|require-sri-for|sandbox) |(?:block-all-mixed-content|disown-opener|upgrade-insecure-requests)(?: |;)|(?:child|connect|default|font|frame|img|manifest|media|object|script|style|worker)-src )/i,
+      pattern: /\b(?:base-uri|block-all-mixed-content|(?:child|connect|default|font|frame|img|manifest|media|object|script|style|worker)-src|disown-opener|form-action|frame-ancestors|plugin-types|referrer|reflected-xss|report-to|report-uri|require-sri-for|sandbox|upgrade-insecure-requests)\b/i,
       alias: 'keyword'
     },
     safe: {
@@ -25903,8 +26053,8 @@ function cssExtras(Prism) {
       inside: (selectorInside = {
         'pseudo-element': /:(?:after|before|first-letter|first-line|selection)|::[-\w]+/,
         'pseudo-class': /:[-\w]+/,
-        class: /\.[-:.\w]+/,
-        id: /#[-:.\w]+/,
+        class: /\.[-\w]+/,
+        id: /#[-\w]+/,
         attribute: {
           pattern: RegExp('\\[(?:[^[\\]"\']|' + string.source + ')*\\]'),
           greedy: true,
@@ -25922,11 +26072,11 @@ function cssExtras(Prism) {
                 punctuation: /\|$/
               }
             },
-            attribute: {
+            'attr-name': {
               pattern: /^(\s*)[-\w\xA0-\uFFFF]+/,
               lookbehind: true
             },
-            value: [
+            'attr-value': [
               string,
               {
                 pattern: /(=\s*)[-\w\xA0-\uFFFF]+(?=\s*$)/,
@@ -25950,7 +26100,11 @@ function cssExtras(Prism) {
             lookbehind: true
           }
         ],
-        punctuation: /[()]/
+        combinator: />|\+|~|\|\|/,
+        // the `tag` token has been existed and removed.
+        // because we can't find a perfect tokenize to match it.
+        // if you want to add it, please read https://github.com/PrismJS/prism/pull/2373 first.
+        punctuation: /[(),]/
       })
     }
     Prism.languages.css['atrule'].inside[
@@ -25963,7 +26117,7 @@ function cssExtras(Prism) {
       }
     })
     var unit = {
-      pattern: /(\d)(?:%|[a-z]+)/,
+      pattern: /(\b\d+)(?:%|[a-z]+\b)/,
       lookbehind: true
     } // 123 -123 .123 -.123 12.3 -12.3
     var number = {
@@ -25993,6 +26147,7 @@ function cssExtras(Prism) {
           }
         }
       ],
+      // it's important that there is no boundary assertion after the hex digits
       entity: /\\[\da-f]{1,8}/i,
       unit: unit,
       number: number
@@ -26029,15 +26184,31 @@ function css(Prism) {
             pattern: /(\bselector\s*\((?!\s*\))\s*)(?:[^()]|\((?:[^()]|\([^()]*\))*\))+?(?=\s*\))/,
             lookbehind: true,
             alias: 'selector'
+          },
+          keyword: {
+            pattern: /(^|[^\w-])(?:and|not|only|or)(?![\w-])/,
+            lookbehind: true
           } // See rest below
         }
       },
       url: {
-        pattern: RegExp('url\\((?:' + string.source + '|[^\n\r()]*)\\)', 'i'),
+        // https://drafts.csswg.org/css-values-3/#urls
+        pattern: RegExp(
+          '\\burl\\((?:' +
+            string.source +
+            '|' +
+            /(?:[^\\\r\n()"']|\\[\s\S])*/.source +
+            ')\\)',
+          'i'
+        ),
         greedy: true,
         inside: {
           function: /^url/i,
-          punctuation: /^\(|\)$/
+          punctuation: /^\(|\)$/,
+          string: {
+            pattern: RegExp('^' + string.source + '$'),
+            alias: 'url'
+          }
         }
       },
       selector: RegExp(
@@ -26085,6 +26256,58 @@ function css(Prism) {
 
 /***/ }),
 
+/***/ "./node_modules/refractor/lang/cypher.js":
+/*!***********************************************!*\
+  !*** ./node_modules/refractor/lang/cypher.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = cypher
+cypher.displayName = 'cypher'
+cypher.aliases = []
+function cypher(Prism) {
+  Prism.languages.cypher = {
+    // https://neo4j.com/docs/cypher-manual/current/syntax/comments/
+    comment: /\/\/.*/,
+    string: {
+      pattern: /"(?:[^"\\\r\n]|\\.)*"|'(?:[^'\\\r\n]|\\.)*'/,
+      greedy: true
+    },
+    'class-name': {
+      pattern: /(:\s*)(?:\w+|`(?:[^`\\\r\n])*`)(?=\s*[{):])/,
+      lookbehind: true,
+      greedy: true
+    },
+    relationship: {
+      pattern: /(-\[\s*(?:\w+\s*|`(?:[^`\\\r\n])*`\s*)?:\s*|\|\s*:\s*)(?:\w+|`(?:[^`\\\r\n])*`)/,
+      lookbehind: true,
+      greedy: true,
+      alias: 'property'
+    },
+    identifier: {
+      pattern: /`(?:[^`\\\r\n])*`/,
+      greedy: true,
+      alias: 'symbol'
+    },
+    variable: /\$\w+/,
+    // https://neo4j.com/docs/cypher-manual/current/syntax/reserved/
+    keyword: /\b(?:ADD|ALL|AND|AS|ASC|ASCENDING|ASSERT|BY|CALL|CASE|COMMIT|CONSTRAINT|CONTAINS|CREATE|CSV|DELETE|DESC|DESCENDING|DETACH|DISTINCT|DO|DROP|ELSE|END|ENDS|EXISTS|FOR|FOREACH|IN|INDEX|IS|JOIN|KEY|LIMIT|LOAD|MANDATORY|MATCH|MERGE|NODE|NOT|OF|ON|OPTIONAL|OR|ORDER(?=\s+BY)|PERIODIC|REMOVE|REQUIRE|RETURN|SCALAR|SCAN|SET|SKIP|START|STARTS|THEN|UNION|UNIQUE|UNWIND|USING|WHEN|WHERE|WITH|XOR|YIELD)\b/i,
+    function: /\b\w+\b(?=\s*\()/,
+    boolean: /\b(?:true|false|null)\b/i,
+    number: /\b(?:0x[\da-fA-F]+|\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)\b/,
+    // https://neo4j.com/docs/cypher-manual/current/syntax/operators/
+    operator: /:|<--?|--?>?|<>|=~?|[<>]=?|[+*/%^|]|\.\.\.?/,
+    punctuation: /[()[\]{},;.]/
+  }
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/refractor/lang/d.js":
 /*!******************************************!*\
   !*** ./node_modules/refractor/lang/d.js ***!
@@ -26113,7 +26336,7 @@ function d(Prism) {
             [
               // /+ comment +/
               // Allow one level of nesting
-              /\/\+(?:\/\+[\s\S]*?\+\/|(?!\/\+)[\s\S])*?\+\//.source, // // comment
+              /\/\+(?:\/\+(?:[^+]|\+(?!\/))*\+\/|(?!\/\+)[\s\S])*?\+\//.source, // // comment
               /\/\/.*/.source, // /* comment */
               /\/\*[\s\S]*?\*\//.source
             ].join('|') +
@@ -26203,7 +26426,7 @@ function dart(Prism) {
     ],
     keyword: [
       /\b(?:async|sync|yield)\*/,
-      /\b(?:abstract|assert|async|await|break|case|catch|class|const|continue|default|deferred|do|dynamic|else|enum|export|external|extends|factory|final|finally|for|get|if|implements|import|in|library|new|null|operator|part|rethrow|return|set|static|super|switch|this|throw|try|typedef|var|void|while|with|yield)\b/
+      /\b(?:abstract|assert|async|await|break|case|catch|class|const|continue|covariant|default|deferred|do|dynamic|else|enum|export|extension|external|extends|factory|final|finally|for|Function|get|hide|if|implements|interface|import|in|library|mixin|new|null|on|operator|part|rethrow|return|set|show|static|super|switch|sync|this|throw|try|typedef|var|void|while|with|yield)\b/
     ],
     operator: /\bis!|\b(?:as|is)\b|\+\+|--|&&|\|\||<<=?|>>=?|~(?:\/=?)?|[+\-*\/%&^|=!<>]=?|\?/
   })
@@ -26264,6 +26487,90 @@ function dax(Prism) {
 
 /***/ }),
 
+/***/ "./node_modules/refractor/lang/dhall.js":
+/*!**********************************************!*\
+  !*** ./node_modules/refractor/lang/dhall.js ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = dhall
+dhall.displayName = 'dhall'
+dhall.aliases = []
+function dhall(Prism) {
+  // ABNF grammar:
+  // https://github.com/dhall-lang/dhall-lang/blob/master/standard/dhall.abnf
+  Prism.languages.dhall = {
+    // Multi-line comments can be nested. E.g. {- foo {- bar -} -}
+    // The multi-line pattern is essentially this:
+    //   \{-(?:[^-{]|-(?!\})|\{(?!-)|<SELF>)*-\}
+    comment: /--.*|\{-(?:[^-{]|-(?!\})|\{(?!-)|\{-(?:[^-{]|-(?!\})|\{(?!-))*-\})*-\}/,
+    string: {
+      pattern: /"(?:[^"\\]|\\.)*"|''(?:[^']|'(?!')|'''|''\$\{)*''(?!'|\$)/,
+      greedy: true,
+      inside: {
+        interpolation: {
+          pattern: /\$\{[^{}]*\}/,
+          inside: {
+            expression: {
+              pattern: /(^\$\{)[\s\S]+(?=\}$)/,
+              lookbehind: true,
+              alias: 'language-dhall',
+              inside: null // see blow
+            },
+            punctuation: /\$\{|\}/
+          }
+        }
+      }
+    },
+    label: {
+      pattern: /`[^`]*`/,
+      greedy: true
+    },
+    url: {
+      // https://github.com/dhall-lang/dhall-lang/blob/5fde8ef1bead6fb4e999d3c1ffe7044cd019d63a/standard/dhall.abnf#L596
+      pattern: /\bhttps?:\/\/[\w.:%!$&'*+;=@~-]+(?:\/[\w.:%!$&'*+;=@~-]*)*(?:\?[/?\w.:%!$&'*+;=@~-]*)?/,
+      greedy: true
+    },
+    env: {
+      // https://github.com/dhall-lang/dhall-lang/blob/5fde8ef1bead6fb4e999d3c1ffe7044cd019d63a/standard/dhall.abnf#L661
+      pattern: /\benv:(?:(?!\d)\w+|"(?:[^"\\=]|\\.)*")/,
+      greedy: true,
+      inside: {
+        function: /^env/,
+        operator: /^:/,
+        variable: /[\s\S]+/
+      }
+    },
+    hash: {
+      // https://github.com/dhall-lang/dhall-lang/blob/5fde8ef1bead6fb4e999d3c1ffe7044cd019d63a/standard/dhall.abnf#L725
+      pattern: /\bsha256:[\da-fA-F]{64}\b/,
+      inside: {
+        function: /sha256/,
+        operator: /:/,
+        number: /[\da-fA-F]{64}/
+      }
+    },
+    // https://github.com/dhall-lang/dhall-lang/blob/5fde8ef1bead6fb4e999d3c1ffe7044cd019d63a/standard/dhall.abnf#L359
+    keyword: /\b(?:as|assert|else|forall|if|in|let|merge|missing|then|toMap|using|with)\b|\u2200/,
+    builtin: /\b(?:Some|None)\b/,
+    boolean: /\b(?:False|True)\b/,
+    number: /\bNaN\b|-?\bInfinity\b|[+-]?\b(?:0x[\da-fA-F]+|\d+(?:\.\d+)?(?:e[+-]?\d+)?)\b/,
+    operator: /\/\\|\/\/\\\\|&&|\|\||[!=]=|===|\/\/|->|\+\+|::|[+*#@=:?<>|\\\u2227\u2a53\u2261\u2afd\u03bb\u2192]/,
+    punctuation: /\.\.|[{}\[\](),./]/,
+    // we'll just assume that every capital word left is a type name
+    'class-name': /\b[A-Z]\w*\b/
+  }
+  Prism.languages.dhall.string.inside.interpolation.inside.expression.inside =
+    Prism.languages.dhall
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/refractor/lang/diff.js":
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/diff.js ***!
@@ -26311,12 +26618,21 @@ function diff(Prism) {
         alias.push('bold')
       }
       Prism.languages.diff[name] = {
-        // pattern: /^(?:[_].*(?:\r\n?|\n|(?![\s\S])))+/m
         pattern: RegExp(
           '^(?:[' + prefix + '].*(?:\r\n?|\n|(?![\\s\\S])))+',
           'm'
         ),
-        alias: alias
+        alias: alias,
+        inside: {
+          line: {
+            pattern: /(.)(?=[\s\S]).*(?:\r\n?|\n)?/,
+            lookbehind: true
+          },
+          prefix: {
+            pattern: /[\s\S]/,
+            alias: /\w+/.exec(name)[0]
+          }
+        }
       }
     }) // make prefixes available to Diff plugin
     Object.defineProperty(Prism.languages.diff, 'PREFIXES', {
@@ -26471,7 +26787,10 @@ function docker(Prism) {
       lookbehind: true
     },
     string: /("|')(?:(?!\1)[^\\\r\n]|\\(?:\r\n|[\s\S]))*\1/,
-    comment: /#.*/,
+    comment: {
+      pattern: /#.*/,
+      greedy: true
+    },
     punctuation: /---|\.\.\.|[:[\]{}\-,|>?]/
   }
   Prism.languages.dockerfile = Prism.languages.docker
@@ -26510,9 +26829,54 @@ function ebnf(Prism) {
       lookbehind: true,
       alias: ['rule', 'keyword']
     },
-    rule: /[a-z]\w*(?:[ \t]+[a-z]\w*)*/i,
+    rule: /\b[a-z]\w*(?:[ \t]+[a-z]\w*)*\b/i,
     punctuation: /\([:/]|[:/]\)|[.,;()[\]{}]/,
     operator: /[-=|*/!]/
+  }
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/refractor/lang/editorconfig.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/refractor/lang/editorconfig.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = editorconfig
+editorconfig.displayName = 'editorconfig'
+editorconfig.aliases = []
+function editorconfig(Prism) {
+  Prism.languages.editorconfig = {
+    // https://editorconfig-specification.readthedocs.io/en/latest/
+    comment: /[;#].*/,
+    section: {
+      pattern: /(^[ \t]*)\[.+]/m,
+      lookbehind: true,
+      alias: 'keyword',
+      inside: {
+        regex: /\\\\[\[\]{},!?.*]/,
+        // Escape special characters with '\\'
+        operator: /[!?]|\.\.|\*{1,2}/,
+        punctuation: /[\[\]{},]/
+      }
+    },
+    property: {
+      pattern: /(^[ \t]*)[^\s=]+(?=[ \t]*=)/m,
+      lookbehind: true
+    },
+    value: {
+      pattern: /=.*/,
+      alias: 'string',
+      inside: {
+        punctuation: /^=/
+      }
+    }
   }
 }
 
@@ -26546,7 +26910,7 @@ function eiffel(Prism) {
         greedy: true
       }, // Single-line string
       {
-        pattern: /"(?:%\s+%|%.|[^%"\r\n])*"/,
+        pattern: /"(?:%\s*\n\s*%|%.|[^%"\r\n])*"/,
         greedy: true
       }
     ],
@@ -26562,7 +26926,7 @@ function eiffel(Prism) {
     number: [
       // hexa | octal | bin
       /\b0[xcb][\da-f](?:_*[\da-f])*\b/i, // Decimal
-      /(?:\d(?:_*\d)*)?\.(?:(?:\d(?:_*\d)*)?e[+-]?)?\d(?:_*\d)*|\d(?:_*\d)*\.?/i
+      /(?:\b\d(?:_*\d)*)?\.(?:(?:\d(?:_*\d)*)?e[+-]?)?\d(?:_*\d)*\b|\b\d(?:_*\d)*\b\.?/i
     ],
     punctuation: /:=|<<|>>|\(\||\|\)|->|\.(?=\w)|[{}[\];(),:?]/,
     operator: /\\\\|\|\.\.\||\.\.|\/[~\/=]?|[><]=?|[-+*^=~]/
@@ -26584,7 +26948,7 @@ function eiffel(Prism) {
 var refractorMarkupTemplating = __webpack_require__(/*! ./markup-templating.js */ "./node_modules/refractor/lang/markup-templating.js")
 module.exports = ejs
 ejs.displayName = 'ejs'
-ejs.aliases = []
+ejs.aliases = ['eta']
 function ejs(Prism) {
   Prism.register(refractorMarkupTemplating)
   ;(function (Prism) {
@@ -26610,6 +26974,7 @@ function ejs(Prism) {
     Prism.hooks.add('after-tokenize', function (env) {
       Prism.languages['markup-templating'].tokenizePlaceholders(env, 'ejs')
     })
+    Prism.languages.eta = Prism.languages.ejs
   })(Prism)
 }
 
@@ -26640,7 +27005,7 @@ function elixir(Prism) {
     string: [
       {
         // ~s"""foo""" (multi-line), ~s'''foo''' (multi-line), ~s/foo/, ~s|foo|, ~s"foo", ~s'foo', ~s(foo), ~s[foo], ~s{foo} (with interpolation care), ~s<foo>
-        pattern: /~[cCsSwW](?:("""|''')(?:\\[\s\S]|(?!\1)[^\\])+\1|([\/|"'])(?:\\.|(?!\2)[^\\\r\n])+\2|\((?:\\.|[^\\)\r\n])+\)|\[(?:\\.|[^\\\]\r\n])+\]|\{(?:\\.|#\{[^}]+\}|[^\\}\r\n])+\}|<(?:\\.|[^\\>\r\n])+>)[csa]?/,
+        pattern: /~[cCsSwW](?:("""|''')(?:\\[\s\S]|(?!\1)[^\\])+\1|([\/|"'])(?:\\.|(?!\2)[^\\\r\n])+\2|\((?:\\.|[^\\)\r\n])+\)|\[(?:\\.|[^\\\]\r\n])+\]|\{(?:\\.|#\{[^}]+\}|#(?!\{)|[^#\\}\r\n])+\}|<(?:\\.|[^\\>\r\n])+>)[csa]?/,
         greedy: true,
         inside: {
           // See interpolation below
@@ -26795,14 +27160,14 @@ function elm(Prism) {
 
 "use strict";
 
-var refractorMarkupTemplating = __webpack_require__(/*! ./markup-templating.js */ "./node_modules/refractor/lang/markup-templating.js")
 var refractorRuby = __webpack_require__(/*! ./ruby.js */ "./node_modules/refractor/lang/ruby.js")
+var refractorMarkupTemplating = __webpack_require__(/*! ./markup-templating.js */ "./node_modules/refractor/lang/markup-templating.js")
 module.exports = erb
 erb.displayName = 'erb'
 erb.aliases = []
 function erb(Prism) {
-  Prism.register(refractorMarkupTemplating)
   Prism.register(refractorRuby)
+  Prism.register(refractorMarkupTemplating)
   ;(function (Prism) {
     Prism.languages.erb = Prism.languages.extend('ruby', {})
     Prism.languages.insertBefore('erb', 'comment', {
@@ -26899,11 +27264,13 @@ function erlang(Prism) {
 
 "use strict";
 
+var refractorLua = __webpack_require__(/*! ./lua.js */ "./node_modules/refractor/lang/lua.js")
 var refractorMarkupTemplating = __webpack_require__(/*! ./markup-templating.js */ "./node_modules/refractor/lang/markup-templating.js")
 module.exports = etlua
 etlua.displayName = 'etlua'
 etlua.aliases = []
 function etlua(Prism) {
+  Prism.register(refractorLua)
   Prism.register(refractorMarkupTemplating)
   ;(function (Prism) {
     Prism.languages.etlua = {
@@ -26985,11 +27352,11 @@ function excelFormula(Prism) {
       }
     },
     'function-name': {
-      pattern: /[A-Z]\w*(?=\()/i,
+      pattern: /\b[A-Z]\w*(?=\()/i,
       alias: 'keyword'
     },
     range: {
-      pattern: /\$?(?:[A-Z]+\$?\d+:\$?[A-Z]+\$?\d+|[A-Z]+:\$?[A-Z]+|\d+:\$?\d+)/i,
+      pattern: /\$?\b(?:[A-Z]+\$?\d+:\$?[A-Z]+\$?\d+|[A-Z]+:\$?[A-Z]+|\d+:\$?\d+)\b/i,
       alias: 'property',
       inside: {
         operator: /:/,
@@ -27001,7 +27368,7 @@ function excelFormula(Prism) {
     cell: {
       // Excel is case insensitive, so the string "foo1" could be either a variable or a cell.
       // To combat this, we match cells case insensitive, if the contain at least one "$", and case sensitive otherwise.
-      pattern: /[A-Z]+\d+|\$[A-Za-z]+\$?\d+|[A-Za-z]+\$\d+/,
+      pattern: /\b[A-Z]+\d+\b|\$[A-Za-z]+\$?\d+\b|\b[A-Za-z]+\$\d+\b/,
       alias: 'property'
     },
     number: /(?:\b\d+(?:\.\d+)?|\B\.\d+)(?:e[+-]?\d+)?\b/i,
@@ -28216,14 +28583,14 @@ function ftl(Prism) {
   ;(function (Prism) {
     // https://freemarker.apache.org/docs/dgui_template_exp.html
     // FTL expression with 4 levels of nesting supported
-    var FTL_EXPR = /(?!<#--)[^()"']|\((?:<expr>)*\)|<#--[\s\S]*?-->|"(?:[^\\"]|\\.)*"|'(?:[^\\']|\\.)*'/
+    var FTL_EXPR = /[^<()"']|\((?:<expr>)*\)|<(?!#--)|<#--(?:[^-]|-(?!->))*-->|"(?:[^\\"]|\\.)*"|'(?:[^\\']|\\.)*'/
       .source
     for (var i = 0; i < 2; i++) {
       FTL_EXPR = FTL_EXPR.replace(/<expr>/g, function () {
         return FTL_EXPR
       })
     }
-    FTL_EXPR = FTL_EXPR.replace(/<expr>/g, '[^sS]')
+    FTL_EXPR = FTL_EXPR.replace(/<expr>/g, /[^\s\S]/.source)
     var ftl = {
       comment: /<#--[\s\S]*?-->/,
       string: [
@@ -28655,22 +29022,14 @@ function git(Prism) {
 
 "use strict";
 
-
+var refractorC = __webpack_require__(/*! ./c.js */ "./node_modules/refractor/lang/c.js")
 module.exports = glsl
 glsl.displayName = 'glsl'
 glsl.aliases = []
 function glsl(Prism) {
-  Prism.languages.glsl = Prism.languages.extend('clike', {
-    comment: [/\/\*[\s\S]*?\*\//, /\/\/(?:\\(?:\r\n|[\s\S])|[^\\\r\n])*/],
-    number: /(?:\b0x[\da-f]+|(?:\b\d+\.?\d*|\B\.\d+)(?:e[+-]?\d+)?)[ulf]*/i,
+  Prism.register(refractorC)
+  Prism.languages.glsl = Prism.languages.extend('c', {
     keyword: /\b(?:attribute|const|uniform|varying|buffer|shared|coherent|volatile|restrict|readonly|writeonly|atomic_uint|layout|centroid|flat|smooth|noperspective|patch|sample|break|continue|do|for|while|switch|case|default|if|else|subroutine|in|out|inout|float|double|int|void|bool|true|false|invariant|precise|discard|return|d?mat[234](?:x[234])?|[ibdu]?vec[234]|uint|lowp|mediump|highp|precision|[iu]?sampler[123]D|[iu]?samplerCube|sampler[12]DShadow|samplerCubeShadow|[iu]?sampler[12]DArray|sampler[12]DArrayShadow|[iu]?sampler2DRect|sampler2DRectShadow|[iu]?samplerBuffer|[iu]?sampler2DMS(?:Array)?|[iu]?samplerCubeArray|samplerCubeArrayShadow|[iu]?image[123]D|[iu]?image2DRect|[iu]?imageCube|[iu]?imageBuffer|[iu]?image[12]DArray|[iu]?imageCubeArray|[iu]?image2DMS(?:Array)?|struct|common|partition|active|asm|class|union|enum|typedef|template|this|resource|goto|inline|noinline|public|static|extern|external|interface|long|short|half|fixed|unsigned|superp|input|output|hvec[234]|fvec[234]|sampler3DRect|filter|sizeof|cast|namespace|using)\b/
-  })
-  Prism.languages.insertBefore('glsl', 'comment', {
-    preprocessor: {
-      pattern: /(^[ \t]*)#(?:(?:define|undef|if|ifdef|ifndef|else|elif|endif|error|pragma|extension|version|line)\b)?/m,
-      lookbehind: true,
-      alias: 'builtin'
-    }
   })
 }
 
@@ -28753,8 +29112,20 @@ graphql.aliases = []
 function graphql(Prism) {
   Prism.languages.graphql = {
     comment: /#.*/,
+    description: {
+      pattern: /(?:"""(?:[^"]|(?!""")")*"""|"(?:\\.|[^\\"\r\n])*")(?=\s*[a-z_])/i,
+      greedy: true,
+      alias: 'string',
+      inside: {
+        'language-markdown': {
+          pattern: /(^"(?:"")?)(?!\1)[\s\S]+(?=\1$)/,
+          lookbehind: true,
+          inside: Prism.languages.markdown
+        }
+      }
+    },
     string: {
-      pattern: /"(?:\\.|[^\\"\r\n])*"/,
+      pattern: /"""(?:[^"]|(?!""")")*"""|"(?:\\.|[^\\"\r\n])*"/,
       greedy: true
     },
     number: /(?:\B-|\b)\d+(?:\.\d+)?(?:e[+-]?\d+)?\b/i,
@@ -28769,7 +29140,7 @@ function graphql(Prism) {
       greedy: true
     },
     'class-name': {
-      pattern: /(\b(?:enum|implements|interface|on|scalar|type|union)\s+)[a-zA-Z_]\w*/,
+      pattern: /(\b(?:enum|implements|interface|on|scalar|type|union)\s+|&\s*)[a-zA-Z_]\w*/,
       lookbehind: true
     },
     fragment: {
@@ -28777,8 +29148,8 @@ function graphql(Prism) {
       lookbehind: true,
       alias: 'function'
     },
-    keyword: /\b(?:enum|fragment|implements|input|interface|mutation|on|query|scalar|schema|type|union)\b/,
-    operator: /[!=|]|\.{3}/,
+    keyword: /\b(?:directive|enum|extend|fragment|implements|input|interface|mutation|on|query|repeatable|scalar|schema|subscription|type|union)\b/,
+    operator: /[!=|&]|\.{3}/,
     punctuation: /[!(){}\[\]:=,]/,
     constant: /\b(?!ID\b)[A-Z][A-Z_\d]*\b/
   }
@@ -28804,7 +29175,8 @@ function groovy(Prism) {
   Prism.languages.groovy = Prism.languages.extend('clike', {
     string: [
       {
-        pattern: /("""|''')(?:[^\\]|\\[\s\S])*?\1|\$\/(?:\$\/\$|[\s\S])*?\/\$/,
+        // https://groovy-lang.org/syntax.html#_dollar_slashy_string
+        pattern: /("""|''')(?:[^\\]|\\[\s\S])*?\1|\$\/(?:[^/$]|\$(?:[/$]|(?![/$]))|\/(?!\$))*\/\$/,
         greedy: true
       },
       {
@@ -28874,11 +29246,12 @@ function groovy(Prism) {
 
 "use strict";
 
-
+var refractorRuby = __webpack_require__(/*! ./ruby.js */ "./node_modules/refractor/lang/ruby.js")
 module.exports = haml
 haml.displayName = 'haml'
 haml.aliases = []
 function haml(Prism) {
+  Prism.register(refractorRuby)
   /* TODO
 Handle multiline code after tag
 %foo= some |
@@ -29251,9 +29624,7 @@ function hcl(Prism) {
           }
         }
       },
-      {
-        pattern: /[\w-]+(?=\s+{)/
-      }
+      /[\w-]+(?=\s+{)/
     ],
     property: [/[\w-\.]+(?=\s*=(?!=))/, /"(?:\\[\s\S]|[^\\"])+"(?=\s*[:=])/],
     string: {
@@ -29275,16 +29646,54 @@ function hcl(Prism) {
               pattern: /"(?:\\[\s\S]|[^\\"])*"/,
               greedy: true
             },
-            number: /\b0x[\da-f]+|\d+\.?\d*(?:e[+-]?\d+)?/i,
+            number: /\b0x[\da-f]+\b|\b\d+\.?\d*(?:e[+-]?\d+)?/i,
             punctuation: /[!\$#%&'()*+,.\/;<=>@\[\\\]^`{|}~?:]/
           }
         }
       }
     },
-    number: /\b0x[\da-f]+|\d+\.?\d*(?:e[+-]?\d+)?/i,
+    number: /\b0x[\da-f]+\b|\b\d+\.?\d*(?:e[+-]?\d+)?/i,
     boolean: /\b(?:true|false)\b/i,
     punctuation: /[=\[\]{}]/
   }
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/refractor/lang/hlsl.js":
+/*!*********************************************!*\
+  !*** ./node_modules/refractor/lang/hlsl.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var refractorC = __webpack_require__(/*! ./c.js */ "./node_modules/refractor/lang/c.js")
+module.exports = hlsl
+hlsl.displayName = 'hlsl'
+hlsl.aliases = []
+function hlsl(Prism) {
+  Prism.register(refractorC)
+  Prism.languages.hlsl = Prism.languages.extend('c', {
+    // Regarding keywords and class names:
+    // The list of all keywords was split into 'keyword' and 'class-name' tokens based on whether they are capitalized.
+    // https://docs.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl-appendix-keywords
+    // https://docs.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl-appendix-reserved-words
+    'class-name': [
+      Prism.languages.c['class-name'],
+      /\b(?:AppendStructuredBuffer|BlendState|Buffer|ByteAddressBuffer|CompileShader|ComputeShader|ConsumeStructuredBuffer|DepthStencilState|DepthStencilView|DomainShader|GeometryShader|Hullshader|InputPatch|LineStream|OutputPatch|PixelShader|PointStream|RasterizerState|RenderTargetView|RWBuffer|RWByteAddressBuffer|RWStructuredBuffer|RWTexture(?:1D|1DArray|2D|2DArray|3D)|SamplerComparisonState|SamplerState|StructuredBuffer|Texture(?:1D|1DArray|2D|2DArray|2DMS|2DMSArray|3D|Cube|CubeArray)|TriangleStream|VertexShader)\b/
+    ],
+    keyword: [
+      // HLSL keyword
+      /\b(?:asm|asm_fragment|auto|break|case|catch|cbuffer|centroid|char|class|column_major|compile|compile_fragment|const|const_cast|continue|default|delete|discard|do|dynamic_cast|else|enum|explicit|export|extern|for|friend|fxgroup|goto|groupshared|if|in|inline|inout|interface|line|lineadj|linear|long|matrix|mutable|namespace|new|nointerpolation|noperspective|operator|out|packoffset|pass|pixelfragment|point|precise|private|protected|public|register|reinterpret_cast|return|row_major|sample|sampler|shared|short|signed|sizeof|snorm|stateblock|stateblock_state|static|static_cast|string|struct|switch|tbuffer|technique|technique10|technique11|template|texture|this|throw|triangle|triangleadj|try|typedef|typename|uniform|union|unorm|unsigned|using|vector|vertexfragment|virtual|void|volatile|while)\b/, // scalar, vector, and matrix types
+      /\b(?:bool|double|dword|float|half|int|min(?:10float|12int|16(?:float|int|uint))|uint)(?:[1-4](?:x[1-4])?)?\b/
+    ],
+    // https://docs.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl-appendix-grammar#floating-point-numbers
+    number: /(?:(?:\b\d+\.?\d*|\B\.\d+)(?:[eE][+-]?\d+)?|\b0x[\da-fA-F]+)[fFhHlLuU]?\b/,
+    boolean: /\b(?:false|true)\b/
+  })
 }
 
 
@@ -29315,11 +29724,11 @@ function hpkp(Prism) {
       alias: 'keyword'
     },
     safe: {
-      pattern: /\d{7,}/,
+      pattern: /\b\d{7,}\b/,
       alias: 'selector'
     },
     unsafe: {
-      pattern: /\d{1,6}/,
+      pattern: /\b\d{1,6}\b/,
       alias: 'function'
     }
   }
@@ -29353,11 +29762,11 @@ function hsts(Prism) {
       alias: 'keyword'
     },
     safe: {
-      pattern: /\d{8,}/,
+      pattern: /\b\d{8,}\b/,
       alias: 'selector'
     },
     unsafe: {
-      pattern: /\d{1,7}/,
+      pattern: /\b\d{1,7}\b/,
       alias: 'function'
     }
   }
@@ -29533,6 +29942,95 @@ function icon(Prism) {
 
 /***/ }),
 
+/***/ "./node_modules/refractor/lang/iecst.js":
+/*!**********************************************!*\
+  !*** ./node_modules/refractor/lang/iecst.js ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = iecst
+iecst.displayName = 'iecst'
+iecst.aliases = []
+function iecst(Prism) {
+  Prism.languages.iecst = {
+    comment: [
+      {
+        pattern: /(^|[^\\])(?:\/\*[\s\S]*?(?:\*\/|$)|\(\*[\s\S]*?(?:\*\)|$)|\{[\s\S]*?(?:\}|$))/,
+        lookbehind: true
+      },
+      {
+        pattern: /(^|[^\\:])\/\/.*/,
+        lookbehind: true,
+        greedy: true
+      }
+    ],
+    string: {
+      pattern: /(["'])(?:\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/,
+      greedy: true
+    },
+    'class-name': /\b(?:END_)?(?:PROGRAM|CONFIGURATION|INTERFACE|FUNCTION_BLOCK|FUNCTION|ACTION|TRANSITION|TYPE|STRUCT|(?:INITIAL_)?STEP|NAMESPACE|LIBRARY|CHANNEL|FOLDER|RESOURCE|VAR_(?:GLOBAL|INPUT|PUTPUT|IN_OUT|ACCESS|TEMP|EXTERNAL|CONFIG)|VAR|METHOD|PROPERTY)\b/i,
+    keyword: /\b(?:(?:END_)?(?:IF|WHILE|REPEAT|CASE|FOR)|ELSE|FROM|THEN|ELSIF|DO|TO|BY|PRIVATE|PUBLIC|PROTECTED|CONSTANT|RETURN|EXIT|CONTINUE|GOTO|JMP|AT|RETAIN|NON_RETAIN|TASK|WITH|UNTIL|USING|EXTENDS|IMPLEMENTS|GET|SET|__TRY|__CATCH|__FINALLY|__ENDTRY)\b/,
+    variable: /\b(?:AT|BOOL|BYTE|(?:D|L)?WORD|U?(?:S|D|L)?INT|L?REAL|TIME(?:_OF_DAY)?|TOD|DT|DATE(?:_AND_TIME)?|STRING|ARRAY|ANY|POINTER)\b/,
+    symbol: /%[IQM][XBWDL][\d.]*|%[IQ][\d.]*/,
+    number: /\b(?:16#[\da-f]+|2#[01_]+|0x[\da-f]+)\b|\b(?:T|D|DT|TOD)#[\d_shmd:]*|\b[A-Z]*\#[\d.,_]*|(?:\b\d+\.?\d*|\B\.\d+)(?:e[+-]?\d+)?/i,
+    boolean: /\b(?:TRUE|FALSE|NULL)\b/,
+    function: /\w+(?=\()/,
+    operator: /(?:S?R?:?=>?|&&?|\*\*?|<=?|>=?|[-:^/+])|\b(?:OR|AND|MOD|NOT|XOR|LE|GE|EQ|NE|GE|LT)\b/,
+    punctuation: /[();]/,
+    type: {
+      pattern: /#/,
+      alias: 'selector'
+    }
+  }
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/refractor/lang/ignore.js":
+/*!***********************************************!*\
+  !*** ./node_modules/refractor/lang/ignore.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = ignore
+ignore.displayName = 'ignore'
+ignore.aliases = []
+function ignore(Prism) {
+  ;(function (Prism) {
+    Prism.languages.ignore = {
+      // https://git-scm.com/docs/gitignore
+      comment: /^#.*/m,
+      entry: {
+        pattern: /\S(?:.*(?:(?:\\ )|\S))?/,
+        alias: 'string',
+        inside: {
+          operator: /^!|\*\*?|\?/,
+          regex: {
+            pattern: /(^|[^\\])\[[^\[\]]*\]/,
+            lookbehind: true
+          },
+          punctuation: /\//
+        }
+      }
+    }
+    Prism.languages.gitignore = Prism.languages.ignore
+    Prism.languages.hgignore = Prism.languages.ignore
+    Prism.languages.npmignore = Prism.languages.ignore
+  })(Prism)
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/refractor/lang/inform7.js":
 /*!************************************************!*\
   !*** ./node_modules/refractor/lang/inform7.js ***!
@@ -29683,7 +30181,7 @@ function io(Prism) {
     builtin: /\b(?:Array|AudioDevice|AudioMixer|Block|Box|Buffer|CFunction|CGI|Color|Curses|DBM|DNSResolver|DOConnection|DOProxy|DOServer|Date|Directory|Duration|DynLib|Error|Exception|FFT|File|Fnmatch|Font|Future|GL|GLE|GLScissor|GLU|GLUCylinder|GLUQuadric|GLUSphere|GLUT|Host|Image|Importer|LinkList|List|Lobby|Locals|MD5|MP3Decoder|MP3Encoder|Map|Message|Movie|Notification|Number|Object|OpenGL|Point|Protos|Regex|SGML|SGMLElement|SGMLParser|SQLite|Server|Sequence|ShowMessage|SleepyCat|SleepyCatCursor|Socket|SocketManager|Sound|Soup|Store|String|Tree|UDPSender|UPDReceiver|URL|User|Warning|WeakLink|Random|BigNum|Sequence)\b/,
     boolean: /\b(?:true|false|nil)\b/,
     number: /\b0x[\da-f]+\b|(?:\b\d+\.?\d*|\B\.\d+)(?:e-?\d+)?/i,
-    operator: /[=!*/%+-^&|]=|>>?=?|<<?=?|:?:?=|\+\+?|--?|\*\*?|\/\/?|%|\|\|?|&&?|\b(?:return|and|or|not)\b|@@?|\?\??|\.\./,
+    operator: /[=!*/%+\-^&|]=|>>?=?|<<?=?|:?:?=|\+\+?|--?|\*\*?|\/\/?|%|\|\|?|&&?|\b(?:return|and|or|not)\b|@@?|\?\??|\.\./,
     punctuation: /[{}[\];(),.:]/
   }
 }
@@ -29718,7 +30216,7 @@ function j(Prism) {
       pattern: /(?!\^:|;\.|[=!][.:])(?:\{(?:\.|::?)?|p(?:\.\.?|:)|[=!\]]|[<>+*\-%$|,#][.:]?|[?^]\.?|[;\[]:?|[~}"i][.:]|[ACeEIjLor]\.|(?:[_\/\\qsux]|_?\d):)/,
       alias: 'keyword'
     },
-    number: /\b_?(?:(?!\d:)\d+(?:\.\d+)?(?:(?:[ejpx]|ad|ar)_?\d+(?:\.\d+)?)*(?:b_?[\da-z]+(?:\.[\da-z]+)?)?|_(?!\.))/,
+    number: /\b_?(?:(?!\d:)\d+(?:\.\d+)?(?:(?:[ejpx]|ad|ar)_?\d+(?:\.\d+)?)*(?:b_?[\da-z]+(?:\.[\da-z]+)?)?|_\b(?!\.))/,
     adverb: {
       pattern: /[~}]|[\/\\]\.?|[bfM]\.|t[.:]/,
       alias: 'builtin'
@@ -29787,7 +30285,14 @@ function java(Prism) {
         lookbehind: true
       },
       namespace: {
-        pattern: /(\b(?:exports|import(?:\s+static)?|module|open|opens|package|provides|requires|to|transitive|uses|with)\s+)[a-z]\w*(?:\.[a-z]\w*)+/,
+        pattern: RegExp(
+          /(\b(?:exports|import(?:\s+static)?|module|open|opens|package|provides|requires|to|transitive|uses|with)\s+)(?!<keyword>)[a-z]\w*(?:\.[a-z]\w*)*\.?/.source.replace(
+            /<keyword>/g,
+            function () {
+              return keywords.source
+            }
+          )
+        ),
         lookbehind: true,
         inside: {
           punctuation: /\./
@@ -29818,60 +30323,100 @@ function java(Prism) {
 
 "use strict";
 
+var refractorJava = __webpack_require__(/*! ./java.js */ "./node_modules/refractor/lang/java.js")
 var refractorJavadoclike = __webpack_require__(/*! ./javadoclike.js */ "./node_modules/refractor/lang/javadoclike.js")
 module.exports = javadoc
 javadoc.displayName = 'javadoc'
 javadoc.aliases = []
 function javadoc(Prism) {
+  Prism.register(refractorJava)
   Prism.register(refractorJavadoclike)
   ;(function (Prism) {
-    var codeLines = {
-      code: {
-        pattern: /(^(?:\s*(?:\*\s*)*)).*[^*\s].+$/m,
-        lookbehind: true,
-        inside: Prism.languages.java,
-        alias: 'language-java'
+    var codeLinePattern = /(^(?:\s*(?:\*\s*)*)).*[^*\s].*$/m
+    var memberReference = /#\s*\w+(?:\s*\([^()]*\))?/.source
+    var reference = /(?:[a-zA-Z]\w+\s*\.\s*)*[A-Z]\w*(?:\s*<mem>)?|<mem>/.source.replace(
+      /<mem>/g,
+      function () {
+        return memberReference
       }
-    }
+    )
     Prism.languages.javadoc = Prism.languages.extend('javadoclike', {})
     Prism.languages.insertBefore('javadoc', 'keyword', {
-      'class-name': [
-        {
-          pattern: /(@(?:exception|throws|see|link|linkplain|value)\s+(?:[a-z\d]+\.)*)[A-Z](?:\w*[a-z]\w*)?(?:\.[A-Z](?:\w*[a-z]\w*)?)*/,
-          lookbehind: true,
-          inside: {
-            punctuation: /\./
-          }
-        },
-        {
-          // @param <T> the first generic type parameter
-          pattern: /(@param\s+)<[A-Z]\w*>/,
-          lookbehind: true,
-          inside: {
-            punctuation: /[.<>]/
-          }
-        }
-      ],
-      namespace: {
-        pattern: /(@(?:exception|throws|see|link|linkplain)\s+)(?:[a-z\d]+\.)+/,
+      reference: {
+        pattern: RegExp(
+          /(@(?:exception|throws|see|link|linkplain|value)\s+(?:\*\s*)?)/
+            .source +
+            '(?:' +
+            reference +
+            ')'
+        ),
         lookbehind: true,
         inside: {
-          punctuation: /\./
+          function: {
+            pattern: /(#\s*)\w+(?=\s*\()/,
+            lookbehind: true
+          },
+          field: {
+            pattern: /(#\s*)\w+/,
+            lookbehind: true
+          },
+          namespace: {
+            pattern: /\b(?:[a-z]\w*\s*\.\s*)+/,
+            inside: {
+              punctuation: /\./
+            }
+          },
+          'class-name': /\b[A-Z]\w*/,
+          keyword: Prism.languages.java.keyword,
+          punctuation: /[#()[\],.]/
+        }
+      },
+      'class-name': {
+        // @param <T> the first generic type parameter
+        pattern: /(@param\s+)<[A-Z]\w*>/,
+        lookbehind: true,
+        inside: {
+          punctuation: /[.<>]/
         }
       },
       'code-section': [
         {
-          pattern: /(\{@code\s+)(?:[^{}]|\{[^{}]*\})+?(?=\s*\})/,
+          pattern: /(\{@code\s+)(?:[^{}]|\{(?:[^{}]|\{(?:[^{}]|\{(?:[^{}]|\{[^{}]*\})*\})*\})*\})+?(?=\s*\})/,
           lookbehind: true,
-          inside: codeLines
+          inside: {
+            code: {
+              // there can't be any HTML inside of {@code} tags
+              pattern: codeLinePattern,
+              lookbehind: true,
+              inside: Prism.languages.java,
+              alias: 'language-java'
+            }
+          }
         },
         {
-          pattern: /(<(code|tt)>\s*)[\s\S]+?(?=\s*<\/\2>)/,
+          pattern: /(<(code|pre|tt)>(?!<code>)\s*)[\s\S]+?(?=\s*<\/\2>)/,
           lookbehind: true,
-          inside: codeLines
+          inside: {
+            line: {
+              pattern: codeLinePattern,
+              lookbehind: true,
+              inside: {
+                // highlight HTML tags and entities
+                tag: Prism.languages.markup.tag,
+                entity: Prism.languages.markup.entity,
+                code: {
+                  // everything else is Java code
+                  pattern: /.+/,
+                  inside: Prism.languages.java,
+                  alias: 'language-java'
+                }
+              }
+            }
+          }
         }
       ],
-      tag: Prism.languages.markup.tag
+      tag: Prism.languages.markup.tag,
+      entity: Prism.languages.markup.entity
     })
     Prism.languages.javadoclike.addSupport('java', Prism.languages.javadoc)
   })(Prism)
@@ -30008,21 +30553,21 @@ function javascript(Prism) {
         lookbehind: true
       },
       {
-        pattern: /(^|[^.]|\.\.\.\s*)\b(?:as|async(?=\s*(?:function\b|\(|[$\w\xA0-\uFFFF]|$))|await|break|case|class|const|continue|debugger|default|delete|do|else|enum|export|extends|for|from|function|get|if|implements|import|in|instanceof|interface|let|new|null|of|package|private|protected|public|return|set|static|super|switch|this|throw|try|typeof|undefined|var|void|while|with|yield)\b/,
+        pattern: /(^|[^.]|\.\.\.\s*)\b(?:as|async(?=\s*(?:function\b|\(|[$\w\xA0-\uFFFF]|$))|await|break|case|class|const|continue|debugger|default|delete|do|else|enum|export|extends|for|from|function|(?:get|set)(?=\s*[\[$\w\xA0-\uFFFF])|if|implements|import|in|instanceof|interface|let|new|null|of|package|private|protected|public|return|static|super|switch|this|throw|try|typeof|undefined|var|void|while|with|yield)\b/,
         lookbehind: true
       }
     ],
     number: /\b(?:(?:0[xX](?:[\dA-Fa-f](?:_[\dA-Fa-f])?)+|0[bB](?:[01](?:_[01])?)+|0[oO](?:[0-7](?:_[0-7])?)+)n?|(?:\d(?:_\d)?)+n|NaN|Infinity)\b|(?:\b(?:\d(?:_\d)?)+\.?(?:\d(?:_\d)?)*|\B\.(?:\d(?:_\d)?)+)(?:[Ee][+-]?(?:\d(?:_\d)?)+)?/,
     // Allow for all non-ASCII characters (See http://stackoverflow.com/a/2008444)
     function: /#?[_$a-zA-Z\xA0-\uFFFF][$\w\xA0-\uFFFF]*(?=\s*(?:\.\s*(?:apply|bind|call)\s*)?\()/,
-    operator: /--|\+\+|\*\*=?|=>|&&|\|\||[!=]==|<<=?|>>>?=?|[-+*/%&|^!=<>]=?|\.{3}|\?[.?]?|[~:]/
+    operator: /--|\+\+|\*\*=?|=>|&&=?|\|\|=?|[!=]==|<<=?|>>>?=?|[-+*/%&|^!=<>]=?|\.{3}|\?\?=?|\?\.?|[~:]/
   })
   Prism.languages.javascript[
     'class-name'
   ][0].pattern = /(\b(?:class|interface|extends|implements|instanceof|new)\s+)[\w.\\]+/
   Prism.languages.insertBefore('javascript', 'keyword', {
     regex: {
-      pattern: /((?:^|[^$\w\xA0-\uFFFF."'\])\s])\s*)\/(?:\[(?:[^\]\\\r\n]|\\.)*]|\\.|[^/\\\[\r\n])+\/[gimyus]{0,6}(?=(?:\s|\/\*[\s\S]*?\*\/)*(?:$|[\r\n,.;:})\]]|\/\/))/,
+      pattern: /((?:^|[^$\w\xA0-\uFFFF."'\])\s]|\b(?:return|yield))\s*)\/(?:\[(?:[^\]\\\r\n]|\\.)*]|\\.|[^/\\\[\r\n])+\/[gimyus]{0,6}(?=(?:\s|\/\*(?:[^*]|\*(?!\/))*\*\/)*(?:$|[\r\n,.;:})\]]|\/\/))/,
       lookbehind: true,
       greedy: true
     },
@@ -30047,7 +30592,7 @@ function javascript(Prism) {
         inside: Prism.languages.javascript
       },
       {
-        pattern: /((?:\b|\s|^)(?!(?:as|async|await|break|case|catch|class|const|continue|debugger|default|delete|do|else|enum|export|extends|finally|for|from|function|get|if|implements|import|in|instanceof|interface|let|new|null|of|package|private|protected|public|return|set|static|super|switch|this|throw|try|typeof|undefined|var|void|while|with|yield)(?![$\w\xA0-\uFFFF]))(?:[_$A-Za-z\xA0-\uFFFF][$\w\xA0-\uFFFF]*\s*)\(\s*)(?!\s)(?:[^()]|\([^()]*\))+?(?=\s*\)\s*\{)/,
+        pattern: /((?:\b|\s|^)(?!(?:as|async|await|break|case|catch|class|const|continue|debugger|default|delete|do|else|enum|export|extends|finally|for|from|function|get|if|implements|import|in|instanceof|interface|let|new|null|of|package|private|protected|public|return|set|static|super|switch|this|throw|try|typeof|undefined|var|void|while|with|yield)(?![$\w\xA0-\uFFFF]))(?:[_$A-Za-z\xA0-\uFFFF][$\w\xA0-\uFFFF]*\s*)\(\s*|\]\s*\(\s*)(?!\s)(?:[^()]|\([^()]*\))+?(?=\s*\)\s*\{)/,
         lookbehind: true,
         inside: Prism.languages.javascript
       }
@@ -30317,12 +30862,12 @@ function jq(Prism) {
       },
       variable: /\B\$\w+/,
       'property-literal': {
-        pattern: /[a-z_]\w*(?=\s*:(?!:))/i,
+        pattern: /\b[a-z_]\w*(?=\s*:(?!:))/i,
         alias: 'property'
       },
       keyword: /\b(?:as|break|catch|def|elif|else|end|foreach|if|import|include|label|module|modulemeta|null|reduce|then|try|while)\b/,
       boolean: /\b(?:true|false)\b/,
-      number: /(?:\b\d+\.|\B\.)?\d+(?:[eE][+-]?\d+)?\b/,
+      number: /(?:\b\d+\.|\B\.)?\b\d+(?:[eE][+-]?\d+)?\b/,
       operator: [
         {
           pattern: /\|=?/,
@@ -30816,11 +31361,13 @@ function jsTemplates(Prism) {
 "use strict";
 
 var refractorJavadoclike = __webpack_require__(/*! ./javadoclike.js */ "./node_modules/refractor/lang/javadoclike.js")
+var refractorTypescript = __webpack_require__(/*! ./typescript.js */ "./node_modules/refractor/lang/typescript.js")
 module.exports = jsdoc
 jsdoc.displayName = 'jsdoc'
 jsdoc.aliases = []
 function jsdoc(Prism) {
   Prism.register(refractorJavadoclike)
+  Prism.register(refractorTypescript)
   ;(function (Prism) {
     var javascript = Prism.languages.javascript
     var type = /{(?:[^{}]|{(?:[^{}]|{[^{}]*})*})+}/.source
@@ -30862,17 +31409,29 @@ function jsdoc(Prism) {
       },
       'class-name': [
         {
-          pattern: RegExp('(@[a-z]+\\s+)' + type),
-          lookbehind: true,
-          inside: {
-            punctuation: /[.,:?=<>|{}()[\]]/
-          }
-        },
-        {
-          pattern: /(@(?:augments|extends|class|interface|memberof!?|this)\s+)[A-Z]\w*(?:\.[A-Z]\w*)*/,
+          pattern: RegExp(
+            /(@(?:augments|extends|class|interface|memberof!?|template|this|typedef)\s+(?:<TYPE>\s+)?)[A-Z]\w*(?:\.[A-Z]\w*)*/.source.replace(
+              /<TYPE>/g,
+              function () {
+                return type
+              }
+            )
+          ),
           lookbehind: true,
           inside: {
             punctuation: /\./
+          }
+        },
+        {
+          pattern: RegExp('(@[a-z]+\\s+)' + type),
+          lookbehind: true,
+          inside: {
+            string: javascript.string,
+            number: javascript.number,
+            boolean: javascript.boolean,
+            keyword: Prism.languages.typescript.keyword,
+            operator: /=>|\.\.\.|[&|?:*]/,
+            punctuation: /[.,;=<>{}()[\]]/
           }
         }
       ],
@@ -30908,8 +31467,9 @@ function jsdoc(Prism) {
 
 module.exports = json
 json.displayName = 'json'
-json.aliases = []
+json.aliases = ['webmanifest']
 function json(Prism) {
+  // https://www.json.org/json-en.html
   Prism.languages.json = {
     property: {
       pattern: /"(?:\\.|[^\\"\r\n])*"(?=\s*:)/,
@@ -30919,8 +31479,11 @@ function json(Prism) {
       pattern: /"(?:\\.|[^\\"\r\n])*"(?!\s*:)/,
       greedy: true
     },
-    comment: /\/\/.*|\/\*[\s\S]*?(?:\*\/|$)/,
-    number: /-?\d+\.?\d*(?:e[+-]?\d+)?/i,
+    comment: {
+      pattern: /\/\/.*|\/\*[\s\S]*?(?:\*\/|$)/,
+      greedy: true
+    },
+    number: /-?\b\d+(?:\.\d+)?(?:e[+-]?\d+)?\b/i,
     punctuation: /[{}[\],]/,
     operator: /:/,
     boolean: /\b(?:true|false)\b/,
@@ -30929,6 +31492,7 @@ function json(Prism) {
       alias: 'keyword'
     }
   }
+  Prism.languages.webmanifest = Prism.languages.json
 }
 
 
@@ -30966,7 +31530,7 @@ function json5(Prism) {
         pattern: string,
         greedy: true
       },
-      number: /[+-]?(?:NaN|Infinity|0x[a-fA-F\d]+|(?:\d+\.?\d*|\.\d+)(?:[eE][+-]?\d+)?)/
+      number: /[+-]?\b(?:NaN|Infinity|0x[a-fA-F\d]+)\b|[+-]?(?:\b\d+\.?\d*|\B\.\d+)(?:[eE][+-]?\d+\b)?/
     })
   })(Prism)
 }
@@ -31000,6 +31564,65 @@ function jsonp(Prism) {
 
 /***/ }),
 
+/***/ "./node_modules/refractor/lang/jsstacktrace.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/refractor/lang/jsstacktrace.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = jsstacktrace
+jsstacktrace.displayName = 'jsstacktrace'
+jsstacktrace.aliases = []
+function jsstacktrace(Prism) {
+  Prism.languages.jsstacktrace = {
+    'error-message': {
+      pattern: /^\S.*/m,
+      alias: 'string'
+    },
+    'stack-frame': {
+      pattern: /^[ \t]+at[ \t]+.*/m,
+      inside: {
+        'not-my-code': {
+          pattern: /[ \t]+at[ \t]+(?:node\.js|\<unknown\>|.*(?:node_modules|\(\<anonymous\>\)|\(\<unknown\>|\<anonymous\>$|\(internal\/|\(node\.js)).*/m,
+          alias: 'comment'
+        },
+        filename: {
+          pattern: /(\bat\s+|\()(?:[a-zA-Z]:)?[^():]+(?=:)/,
+          lookbehind: true,
+          alias: 'url'
+        },
+        function: {
+          pattern: /(at\s+(?:new\s+)?)[_$a-zA-Z\xA0-\uFFFF<][.$\w\xA0-\uFFFF<>]*/,
+          lookbehind: true,
+          inside: {
+            punctuation: /\./
+          }
+        },
+        punctuation: /[()]/,
+        keyword: /\b(?:at|new)\b/,
+        alias: {
+          pattern: /\[(?:as\s+)?[_$a-zA-Z\xA0-\uFFFF][$\w\xA0-\uFFFF]*\]/,
+          alias: 'variable'
+        },
+        'line-number': {
+          pattern: /:[0-9]+(?::[0-9]+)?\b/,
+          alias: 'number',
+          inside: {
+            punctuation: /:/
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/refractor/lang/jsx.js":
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/jsx.js ***!
@@ -31017,7 +31640,7 @@ function jsx(Prism) {
   ;(function (Prism) {
     var javascript = Prism.util.clone(Prism.languages.javascript)
     Prism.languages.jsx = Prism.languages.extend('markup', javascript)
-    Prism.languages.jsx.tag.pattern = /<\/?(?:[\w.:-]+\s*(?:\s+(?:[\w.:$-]+(?:=(?:("|')(?:\\[\s\S]|(?!\1)[^\\])*\1|[^\s{'">=]+|\{(?:\{(?:\{[^}]*\}|[^{}])*\}|[^{}])+\}))?|\{\s*\.{3}\s*[a-z_$][\w$]*(?:\.[a-z_$][\w$]*)*\s*\}))*\s*\/?)?>/i
+    Prism.languages.jsx.tag.pattern = /<\/?(?:[\w.:-]+\s*(?:\s+(?:[\w.:$-]+(?:=(?:("|')(?:\\[\s\S]|(?!\1)[^\\])*\1|[^\s{'">=]+|\{(?:\{(?:\{[^{}]*\}|[^{}])*\}|[^{}])+\}))?|\{\s*\.{3}\s*[a-z_$][\w$]*(?:\.[a-z_$][\w$]*)*\s*\}))*\s*\/?)?>/i
     Prism.languages.jsx.tag.inside['tag'].pattern = /^<\/?[^\s>\/]*/i
     Prism.languages.jsx.tag.inside[
       'attr-value'
@@ -31045,7 +31668,7 @@ function jsx(Prism) {
       {
         script: {
           // Allow for two levels of nesting
-          pattern: /=(?:\{(?:\{(?:\{[^}]*\}|[^}])*\}|[^}])+\})/i,
+          pattern: /=(?:\{(?:\{(?:\{[^{}]*\}|[^{}])*\}|[^{}])+\})/i,
           inside: {
             'script-punctuation': {
               pattern: /^=(?={)/,
@@ -31188,16 +31811,34 @@ julia.aliases = []
 function julia(Prism) {
   Prism.languages.julia = {
     comment: {
-      pattern: /(^|[^\\])#.*/,
+      // support one level of nested comments
+      // https://github.com/JuliaLang/julia/pull/6128
+      pattern: /(^|[^\\])(?:#=(?:[^#=]|=(?!#)|#(?!=)|#=(?:[^#=]|=(?!#)|#(?!=))*=#)*=#|#.*)/,
       lookbehind: true
     },
-    string: /("""|''')[\s\S]+?\1|("|')(?:\\.|(?!\2)[^\\\r\n])*\2/,
+    regex: {
+      // https://docs.julialang.org/en/v1/manual/strings/#Regular-Expressions-1
+      pattern: /r"(?:\\.|[^"\\\r\n])*"[imsx]{0,4}/,
+      greedy: true
+    },
+    string: {
+      // https://docs.julialang.org/en/v1/manual/strings/#man-characters-1
+      // https://docs.julialang.org/en/v1/manual/strings/#String-Basics-1
+      // https://docs.julialang.org/en/v1/manual/strings/#non-standard-string-literals-1
+      // https://docs.julialang.org/en/v1/manual/running-external-programs/#Running-External-Programs-1
+      pattern: /"""[\s\S]+?"""|\w*"(?:\\.|[^"\\\r\n])*"|(^|[^\w'])'(?:\\[^\r\n][^'\r\n]*|[^\\\r\n])'|`(?:[^\\`\r\n]|\\.)*`/,
+      lookbehind: true,
+      greedy: true
+    },
     keyword: /\b(?:abstract|baremodule|begin|bitstype|break|catch|ccall|const|continue|do|else|elseif|end|export|finally|for|function|global|if|immutable|import|importall|in|let|local|macro|module|print|println|quote|return|struct|try|type|typealias|using|while)\b/,
     boolean: /\b(?:true|false)\b/,
-    number: /(?:\b(?=\d)|\B(?=\.))(?:0[box])?(?:[\da-f]+\.?\d*|\.\d+)(?:[efp][+-]?\d+)?j?/i,
-    operator: /[-+*^%÷&$\\]=?|\/[\/=]?|!=?=?|\|[=>]?|<(?:<=?|[=:])?|>(?:=|>>?=?)?|==?=?|[~≠≤≥]/,
-    punctuation: /[{}[\];(),.:]/,
-    constant: /\b(?:(?:NaN|Inf)(?:16|32|64)?)\b/
+    number: /(?:\b(?=\d)|\B(?=\.))(?:0[box])?(?:[\da-f]+(?:_[\da-f]+)*\.?(?:\d+(?:_\d+)*)?|\.\d+(?:_\d+)*)(?:[efp][+-]?\d+(?:_\d+)*)?j?/i,
+    // https://docs.julialang.org/en/v1/manual/mathematical-operations/
+    // https://docs.julialang.org/en/v1/manual/mathematical-operations/#Operator-Precedence-and-Associativity-1
+    operator: /&&|\|\||[-+*^%÷⊻&$\\]=?|\/[\/=]?|!=?=?|\|[=>]?|<(?:<=?|[=:|])?|>(?:=|>>?=?)?|==?=?|[~≠≤≥'√∛]/,
+    punctuation: /::?|[{}[\]();,.?]/,
+    // https://docs.julialang.org/en/v1/base/numbers/#Base.im
+    constant: /\b(?:(?:NaN|Inf)(?:16|32|64)?|im|pi|e|catalan|eulergamma|golden)\b|[πℯγφ]/
   }
 }
 
@@ -31254,7 +31895,7 @@ function keyman(Prism) {
 
 module.exports = kotlin
 kotlin.displayName = 'kotlin'
-kotlin.aliases = []
+kotlin.aliases = ['kt', 'kts']
 function kotlin(Prism) {
   ;(function (Prism) {
     Prism.languages.kotlin = Prism.languages.extend('clike', {
@@ -31313,6 +31954,8 @@ function kotlin(Prism) {
     ].inside = {
       interpolation: interpolation
     }
+    Prism.languages.kt = Prism.languages.kotlin
+    Prism.languages.kts = Prism.languages.kotlin
   })(Prism)
 }
 
@@ -31410,11 +32053,13 @@ function latex(Prism) {
 "use strict";
 
 var refractorMarkupTemplating = __webpack_require__(/*! ./markup-templating.js */ "./node_modules/refractor/lang/markup-templating.js")
+var refractorPhp = __webpack_require__(/*! ./php.js */ "./node_modules/refractor/lang/php.js")
 module.exports = latte
 latte.displayName = 'latte'
 latte.aliases = []
 function latte(Prism) {
   Prism.register(refractorMarkupTemplating)
+  Prism.register(refractorPhp)
   ;(function (Prism) {
     Prism.languages.latte = {
       comment: /^\{\*[\s\S]*/,
@@ -31571,13 +32216,14 @@ A comment before a mixin usage prevents the latter to be properly highlighted.
 
 "use strict";
 
-
+var refractorScheme = __webpack_require__(/*! ./scheme.js */ "./node_modules/refractor/lang/scheme.js")
 module.exports = lilypond
 lilypond.displayName = 'lilypond'
 lilypond.aliases = []
 function lilypond(Prism) {
+  Prism.register(refractorScheme)
   ;(function (Prism) {
-    var schemeExpression = /\((?:[^();"#\\]|\\[\s\S]|;.*|"(?:[^"\\]|\\.)*"|#(?:\{(?:(?!#\})[\s\S])*#\}|[^{])|<expr>)*\)/
+    var schemeExpression = /\((?:[^();"#\\]|\\[\s\S]|;.*(?!.)|"(?:[^"\\]|\\.)*"|#(?:\{(?:(?!#\})[\s\S])*#\}|[^{])|<expr>)*\)/
       .source // allow for up to pow(2, recursivenessLog2) many levels of recursive brace expressions
     // For some reason, this can't be 4
     var recursivenessLog2 = 5
@@ -31953,7 +32599,7 @@ function livescript(Prism) {
     ],
     regex: [
       {
-        pattern: /\/\/(?:\[.+?]|\\.|(?!\/\/)[^\\])+\/\/[gimyu]{0,5}/,
+        pattern: /\/\/(?:\[[^\r\n\]]*\]|\\.|(?!\/\/)[^\\\[])+\/\/[gimyu]{0,5}/,
         greedy: true,
         inside: {
           comment: {
@@ -31963,7 +32609,7 @@ function livescript(Prism) {
         }
       },
       {
-        pattern: /\/(?:\[.+?]|\\.|[^/\\\r\n])+\/[gimyu]{0,5}/,
+        pattern: /\/(?:\[[^\r\n\]]*\]|\\.|[^/\\\r\n\[])+\/[gimyu]{0,5}/,
         greedy: true
       }
     ],
@@ -32083,7 +32729,7 @@ function lolcode(Prism) {
   Prism.languages.lolcode = {
     comment: [/\bOBTW\s+[\s\S]*?\s+TLDR\b/, /\bBTW.+/],
     string: {
-      pattern: /"(?::.|[^"])*"/,
+      pattern: /"(?::.|[^":])*"/,
       inside: {
         variable: /:\{[^}]+\}/,
         symbol: [/:\([a-f\d]+\)/i, /:\[[^\]]+\]/, /:[)>o":]/]
@@ -32246,19 +32892,16 @@ function markdown(Prism) {
      * _Note:_ Keep in mind that this adds a capturing group.
      *
      * @param {string} pattern
-     * @param {boolean} starAlternative Whether to also add an alternative where all `_`s are replaced with `*`s.
      * @returns {RegExp}
      */
-    function createInline(pattern, starAlternative) {
+    function createInline(pattern) {
       pattern = pattern.replace(/<inner>/g, function () {
         return inner
       })
-      if (starAlternative) {
-        pattern = pattern + '|' + pattern.replace(/_/g, '\\*')
-      }
       return RegExp(/((?:^|[^\\])(?:\\{2})*)/.source + '(?:' + pattern + ')')
     }
-    var tableCell = /(?:\\.|``.+?``|`[^`\r\n]+`|[^\\|\r\n`])+/.source
+    var tableCell = /(?:\\.|``(?:[^`\r\n]|`(?!`))+``|`[^`\r\n]+`|[^\\|\r\n`])+/
+      .source
     var tableRow = /\|?__(?:\|__)+\|?(?:(?:\n|\r\n?)|$)/.source.replace(
       /__/g,
       function () {
@@ -32407,8 +33050,8 @@ function markdown(Prism) {
         // __strong__
         // allow one nested instance of italic text using the same delimiter
         pattern: createInline(
-          /__(?:(?!_)<inner>|_(?:(?!_)<inner>)+_)+__/.source,
-          true
+          /\b__(?:(?!_)<inner>|_(?:(?!_)<inner>)+_)+__\b|\*\*(?:(?!\*)<inner>|\*(?:(?!\*)<inner>)+\*)+\*\*/
+            .source
         ),
         lookbehind: true,
         greedy: true,
@@ -32426,8 +33069,8 @@ function markdown(Prism) {
         // _em_
         // allow one nested instance of bold text using the same delimiter
         pattern: createInline(
-          /_(?:(?!_)<inner>|__(?:(?!_)<inner>)+__)+_/.source,
-          true
+          /\b_(?:(?!_)<inner>|__(?:(?!_)<inner>)+__)+_\b|\*(?:(?!\*)<inner>|\*\*(?:(?!\*)<inner>)+\*\*)+\*/
+            .source
         ),
         lookbehind: true,
         greedy: true,
@@ -32443,7 +33086,7 @@ function markdown(Prism) {
       strike: {
         // ~~strike through~~
         // ~strike~
-        pattern: createInline(/(~~?)(?:(?!~)<inner>)+?\2/.source, false),
+        pattern: createInline(/(~~?)(?:(?!~)<inner>)+?\2/.source),
         lookbehind: true,
         greedy: true,
         inside: {
@@ -32461,8 +33104,7 @@ function markdown(Prism) {
         // [example] [id]
         pattern: createInline(
           /!?\[(?:(?!\])<inner>)+\](?:\([^\s)]+(?:[\t ]+"(?:\\.|[^"\\])*")?\)| ?\[(?:(?!\])<inner>)+\])/
-            .source,
-          false
+            .source
         ),
         lookbehind: true,
         greedy: true,
@@ -32738,36 +33380,52 @@ function markupTemplating(Prism) {
 
 module.exports = markup
 markup.displayName = 'markup'
-markup.aliases = ['xml', 'html', 'mathml', 'svg']
+markup.aliases = ['html', 'mathml', 'svg', 'xml', 'ssml', 'atom', 'rss']
 function markup(Prism) {
   Prism.languages.markup = {
     comment: /<!--[\s\S]*?-->/,
     prolog: /<\?[\s\S]+?\?>/,
     doctype: {
-      pattern: /<!DOCTYPE(?:[^>"'[\]]|"[^"]*"|'[^']*')+(?:\[(?:(?!<!--)[^"'\]]|"[^"]*"|'[^']*'|<!--[\s\S]*?-->)*\]\s*)?>/i,
-      greedy: true
+      // https://www.w3.org/TR/xml/#NT-doctypedecl
+      pattern: /<!DOCTYPE(?:[^>"'[\]]|"[^"]*"|'[^']*')+(?:\[(?:[^<"'\]]|"[^"]*"|'[^']*'|<(?!!--)|<!--(?:[^-]|-(?!->))*-->)*\]\s*)?>/i,
+      greedy: true,
+      inside: {
+        'internal-subset': {
+          pattern: /(\[)[\s\S]+(?=\]>$)/,
+          lookbehind: true,
+          greedy: true,
+          inside: null // see below
+        },
+        string: {
+          pattern: /"[^"]*"|'[^']*'/,
+          greedy: true
+        },
+        punctuation: /^<!|>$|[[\]]/,
+        'doctype-tag': /^DOCTYPE/,
+        name: /[^\s<>'"]+/
+      }
     },
     cdata: /<!\[CDATA\[[\s\S]*?]]>/i,
     tag: {
-      pattern: /<\/?(?!\d)[^\s>\/=$<%]+(?:\s(?:\s*[^\s>\/=]+(?:\s*=\s*(?:"[^"]*"|'[^']*'|[^\s'">=]+(?=[\s>]))|(?=[\s/>])))+)?\s*\/?>/i,
+      pattern: /<\/?(?!\d)[^\s>\/=$<%]+(?:\s(?:\s*[^\s>\/=]+(?:\s*=\s*(?:"[^"]*"|'[^']*'|[^\s'">=]+(?=[\s>]))|(?=[\s/>])))+)?\s*\/?>/,
       greedy: true,
       inside: {
         tag: {
-          pattern: /^<\/?[^\s>\/]+/i,
+          pattern: /^<\/?[^\s>\/]+/,
           inside: {
             punctuation: /^<\/?/,
             namespace: /^[^\s>\/:]+:/
           }
         },
         'attr-value': {
-          pattern: /=\s*(?:"[^"]*"|'[^']*'|[^\s'">=]+)/i,
+          pattern: /=\s*(?:"[^"]*"|'[^']*'|[^\s'">=]+)/,
           inside: {
             punctuation: [
-              /^=/,
               {
-                pattern: /^(\s*)["']|["']$/,
-                lookbehind: true
-              }
+                pattern: /^=/,
+                alias: 'attr-equals'
+              },
+              /"|'/
             ]
           }
         },
@@ -32780,10 +33438,18 @@ function markup(Prism) {
         }
       }
     },
-    entity: /&#?[\da-z]{1,8};/i
+    entity: [
+      {
+        pattern: /&[\da-z]{1,8};/i,
+        alias: 'named-entity'
+      },
+      /&#x?[\da-f]{1,8};/i
+    ]
   }
   Prism.languages.markup['tag'].inside['attr-value'].inside['entity'] =
-    Prism.languages.markup['entity'] // Plugin to make entity title show the real entity, idea by Roman Komarov
+    Prism.languages.markup['entity']
+  Prism.languages.markup['doctype'].inside['internal-subset'].inside =
+    Prism.languages.markup // Plugin to make entity title show the real entity, idea by Roman Komarov
   Prism.hooks.add('wrap', function (env) {
     if (env.type === 'entity') {
       env.attributes['title'] = env.content.value.replace(/&amp;/, '&')
@@ -32822,7 +33488,7 @@ function markup(Prism) {
       var def = {}
       def[tagName] = {
         pattern: RegExp(
-          /(<__[\s\S]*?>)(?:<!\[CDATA\[[\s\S]*?\]\]>\s*|[\s\S])*?(?=<\/__>)/.source.replace(
+          /(<__[\s\S]*?>)(?:<!\[CDATA\[(?:[^\]]|\](?!\]>))*\]\]>|(?!<!\[CDATA\[)[\s\S])*?(?=<\/__>)/.source.replace(
             /__/g,
             function () {
               return tagName
@@ -32837,10 +33503,13 @@ function markup(Prism) {
       Prism.languages.insertBefore('markup', 'cdata', def)
     }
   })
-  Prism.languages.xml = Prism.languages.extend('markup', {})
   Prism.languages.html = Prism.languages.markup
   Prism.languages.mathml = Prism.languages.markup
   Prism.languages.svg = Prism.languages.markup
+  Prism.languages.xml = Prism.languages.extend('markup', {})
+  Prism.languages.ssml = Prism.languages.xml
+  Prism.languages.atom = Prism.languages.xml
+  Prism.languages.rss = Prism.languages.xml
 }
 
 
@@ -33275,7 +33944,7 @@ function neon(Prism) {
       alias: 'keyword'
     },
     string: {
-      pattern: /(^|[[{(=:,\s])(?:('''|""")\r?\n(?:(?:[^\r\n]|\r?\n(?![\t ]*\2))*\r?\n)?[\t ]*\2|'[^'\r\n]*'|"(?:\\.|[^"\r\n])*")/,
+      pattern: /(^|[[{(=:,\s])(?:('''|""")\r?\n(?:(?:[^\r\n]|\r?\n(?![\t ]*\2))*\r?\n)?[\t ]*\2|'[^'\r\n]*'|"(?:\\.|[^\\"\r\n])*")/,
       lookbehind: true,
       greedy: true
     },
@@ -33490,7 +34159,7 @@ function nsis(Prism) {
 var refractorC = __webpack_require__(/*! ./c.js */ "./node_modules/refractor/lang/c.js")
 module.exports = objectivec
 objectivec.displayName = 'objectivec'
-objectivec.aliases = []
+objectivec.aliases = ['objc']
 function objectivec(Prism) {
   Prism.register(refractorC)
   Prism.languages.objectivec = Prism.languages.extend('c', {
@@ -33499,6 +34168,7 @@ function objectivec(Prism) {
     operator: /-[->]?|\+\+?|!=?|<<?=?|>>?=?|==?|&&?|\|\|?|[~^%?*\/@]/
   })
   delete Prism.languages.objectivec['class-name']
+  Prism.languages.objc = Prism.languages.objectivec
 }
 
 
@@ -33557,7 +34227,7 @@ function ocaml(Prism) {
     boolean: /\b(?:false|true)\b/,
     // Custom operators are allowed
     operator: /:=|[=<>@^|&+\-*\/$%!?~][!$%&*+\-.\/:<=>?@^|~]*|\b(?:and|asr|land|lor|lsl|lsr|lxor|mod|or)\b/,
-    punctuation: /[(){}\[\]|_.,:;]/
+    punctuation: /[(){}\[\]|.,:;]|\b_\b/
   }
 }
 
@@ -33574,13 +34244,11 @@ function ocaml(Prism) {
 "use strict";
 
 var refractorC = __webpack_require__(/*! ./c.js */ "./node_modules/refractor/lang/c.js")
-var refractorCpp = __webpack_require__(/*! ./cpp.js */ "./node_modules/refractor/lang/cpp.js")
 module.exports = opencl
 opencl.displayName = 'opencl'
 opencl.aliases = []
 function opencl(Prism) {
   Prism.register(refractorC)
-  Prism.register(refractorCpp)
   ;(function (Prism) {
     /* OpenCL kernel language */
     Prism.languages.opencl = Prism.languages.extend('c', {
@@ -33660,15 +34328,15 @@ function oz(Prism) {
       greedy: true,
       alias: 'builtin'
     },
-    keyword: /[$_]|\[\]|\b(?:at|attr|case|catch|choice|class|cond|declare|define|dis|else(?:case|if)?|end|export|fail|false|feat|finally|from|fun|functor|if|import|in|local|lock|meth|nil|not|of|or|prepare|proc|prop|raise|require|self|skip|then|thread|true|try|unit)\b/,
+    keyword: /\$|\[\]|\b(?:_|at|attr|case|catch|choice|class|cond|declare|define|dis|else(?:case|if)?|end|export|fail|false|feat|finally|from|fun|functor|if|import|in|local|lock|meth|nil|not|of|or|prepare|proc|prop|raise|require|self|skip|then|thread|true|try|unit)\b/,
     function: [
-      /[a-z][A-Za-z\d]*(?=\()/,
+      /\b[a-z][A-Za-z\d]*(?=\()/,
       {
-        pattern: /(\{)[A-Z][A-Za-z\d]*/,
+        pattern: /(\{)[A-Z][A-Za-z\d]*\b/,
         lookbehind: true
       }
     ],
-    number: /\b(?:0[bx][\da-f]+|\d+\.?\d*(?:e~?\d+)?\b)|&(?:[^\\]|\\(?:\d{3}|.))/i,
+    number: /\b(?:0[bx][\da-f]+|\d+\.?\d*(?:e~?\d+)?)\b|&(?:[^\\]|\\(?:\d{3}|.))/i,
     variable: /\b[A-Z][A-Za-z\d]*|`(?:[^`\\]|\\.)+`/,
     'attr-name': /\w+(?=:)/,
     operator: /:(?:=|::?)|<[-:=]?|=(?:=|<?:?)|>=?:?|\\=:?|!!?|[|#+\-*\/,~^@]|\b(?:andthen|div|mod|orelse)\b/,
@@ -33738,7 +34406,7 @@ function parigp(Prism) {
     function: /\w[\w ]*?(?= *\()/,
     number: {
       // The lookbehind and the negative lookahead prevent from breaking the .. operator
-      pattern: /((?:\. *\. *)?)(?:\d(?: *\d)*(?: *(?!\. *\.)\.(?: *\d)*)?|\. *\d(?: *\d)*)(?: *e *[+-]? *\d(?: *\d)*)?/i,
+      pattern: /((?:\. *\. *)?)(?:\b\d(?: *\d)*(?: *(?!\. *\.)\.(?: *\d)*)?|\. *\d(?: *\d)*)(?: *e *[+-]? *\d(?: *\d)*)?/i,
       lookbehind: true
     },
     operator: /\. *\.|[*\/!](?: *=)?|%(?: *=|(?: *#)?(?: *')*)?|\+(?: *[+=])?|-(?: *[-=>])?|<(?:(?: *<)?(?: *=)?| *>)?|>(?: *>)?(?: *=)?|=(?: *=){0,2}|\\(?: *\/)?(?: *=)?|&(?: *&)?|\| *\||['#~^]/,
@@ -33863,7 +34531,7 @@ Support inline asm ?
   Prism.languages.pascal = {
     comment: [/\(\*[\s\S]+?\*\)/, /\{[\s\S]+?\}/, /\/\/.*/],
     string: {
-      pattern: /(?:'(?:''|[^'\r\n])*'|#[&$%]?[a-f\d]+)+|\^[a-z]/i,
+      pattern: /(?:'(?:''|[^'\r\n])*'(?!')|#[&$%]?[a-f\d]+)+|\^[a-z]/i,
       greedy: true
     },
     keyword: [
@@ -34076,6 +34744,64 @@ function pcaxis(Prism) {
     boolean: /YES|NO/
   }
   Prism.languages.px = Prism.languages.pcaxis
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/refractor/lang/peoplecode.js":
+/*!***************************************************!*\
+  !*** ./node_modules/refractor/lang/peoplecode.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = peoplecode
+peoplecode.displayName = 'peoplecode'
+peoplecode.aliases = ['pcode']
+function peoplecode(Prism) {
+  Prism.languages.peoplecode = {
+    comment: RegExp(
+      [
+        // C-style multiline comments
+        /\/\*[\s\S]*?\*\//.source, // REM comments
+        /\bREM[^;]*;/.source, // Nested <* *> comments
+        /<\*(?:[^<*]|\*(?!>)|<(?!\*)|<\*(?:(?!\*>)[\s\S])*\*>)*\*>/.source, // /+ +/ comments
+        /\/\+[\s\S]*?\+\//.source
+      ].join('|')
+    ),
+    string: {
+      pattern: /'(?:''|[^'\r\n])*'(?!')|"(?:""|[^"\r\n])*"(?!")/,
+      greedy: true
+    },
+    variable: /%\w+/,
+    'function-definition': {
+      pattern: /((?:^|[^\w-])(?:function|method)\s+)\w+/i,
+      lookbehind: true,
+      alias: 'function'
+    },
+    'class-name': {
+      pattern: /((?:^|[^-\w])(?:as|catch|class|component|create|extends|global|implements|instance|local|of|property|returns)\s+)\w+(?::\w+)*/i,
+      lookbehind: true,
+      inside: {
+        punctuation: /:/
+      }
+    },
+    keyword: /\b(?:abstract|alias|as|catch|class|component|constant|create|declare|else|end-(?:class|evaluate|for|function|get|if|method|set|try|while)|evaluate|extends|for|function|get|global|implements|import|instance|if|library|local|method|null|of|out|peopleCode|private|program|property|protected|readonly|ref|repeat|returns?|set|step|then|throw|to|try|until|value|when(?:-other)?|while)\b/i,
+    'operator-keyword': {
+      pattern: /\b(?:and|not|or)\b/i,
+      alias: 'operator'
+    },
+    function: /[_a-z]\w*(?=\s*\()/i,
+    boolean: /\b(?:false|true)\b/i,
+    number: /\b\d+(?:\.\d+)?\b/,
+    operator: /<>|[<>]=?|!=|\*\*|[-+*/|=@]/,
+    punctuation: /[:.;,()[\]]/
+  }
+  Prism.languages.pcode = Prism.languages.peoplecode
 }
 
 
@@ -34348,13 +35074,13 @@ function php(Prism) {
       }
     })
     var string_interpolation = {
-      pattern: /{\$(?:{(?:{[^{}]+}|[^{}]+)}|[^{}])+}|(^|[^\\{])\$+(?:\w+(?:\[.+?]|->\w+)*)/,
+      pattern: /{\$(?:{(?:{[^{}]+}|[^{}]+)}|[^{}])+}|(^|[^\\{])\$+(?:\w+(?:\[[^\r\n\[\]]+\]|->\w+)*)/,
       lookbehind: true,
       inside: Prism.languages.php
     }
     Prism.languages.insertBefore('php', 'string', {
       'nowdoc-string': {
-        pattern: /<<<'([^']+)'(?:\r\n?|\n)(?:.*(?:\r\n?|\n))*?\1;/,
+        pattern: /<<<'([^']+)'[\r\n](?:.*[\r\n])*?\1;/,
         greedy: true,
         alias: 'string',
         inside: {
@@ -34368,7 +35094,7 @@ function php(Prism) {
         }
       },
       'heredoc-string': {
-        pattern: /<<<(?:"([^"]+)"(?:\r\n?|\n)(?:.*(?:\r\n?|\n))*?\1;|([a-z_]\w*)(?:\r\n?|\n)(?:.*(?:\r\n?|\n))*?\2;)/i,
+        pattern: /<<<(?:"([^"]+)"[\r\n](?:.*[\r\n])*?\1;|([a-z_]\w*)[\r\n](?:.*[\r\n])*?\2;)/i,
         greedy: true,
         alias: 'string',
         inside: {
@@ -34426,11 +35152,13 @@ function php(Prism) {
 
 "use strict";
 
+var refractorPhp = __webpack_require__(/*! ./php.js */ "./node_modules/refractor/lang/php.js")
 var refractorJavadoclike = __webpack_require__(/*! ./javadoclike.js */ "./node_modules/refractor/lang/javadoclike.js")
 module.exports = phpdoc
 phpdoc.displayName = 'phpdoc'
 phpdoc.aliases = []
 function phpdoc(Prism) {
+  Prism.register(refractorPhp)
   Prism.register(refractorJavadoclike)
   ;(function (Prism) {
     var typeExpression = /(?:\b[a-zA-Z]\w*|[|\\[\]])+/.source
@@ -34608,7 +35336,7 @@ function powershell(Prism) {
           inside: {
             function: {
               // Allow for one level of nesting
-              pattern: /(^|[^`])\$\((?:\$\(.*?\)|(?!\$\()[^\r\n)])*\)/,
+              pattern: /(^|[^`])\$\((?:\$\([^\r\n()]*\)|(?!\$\()[^\r\n)])*\)/,
               lookbehind: true,
               // Populated at end of file
               inside: {}
@@ -34624,12 +35352,12 @@ function powershell(Prism) {
       // Supports two levels of nested brackets (e.g. `[OutputType([System.Collections.Generic.List[int]])]`)
       namespace: /\[[a-z](?:\[(?:\[[^\]]*]|[^\[\]])*]|[^\[\]])*]/i,
       boolean: /\$(?:true|false)\b/i,
-      variable: /\$\w+\b/i,
+      variable: /\$\w+\b/,
       // Cmdlets and aliases. Aliases should come last, otherwise "write" gets preferred over "write-host" for example
       // Get-Command | ?{ $_.ModuleName -match "Microsoft.PowerShell.(Util|Core|Management)" }
       // Get-Alias | ?{ $_.ReferencedCommand.Module.Name -match "Microsoft.PowerShell.(Util|Core|Management)" }
       function: [
-        /\b(?:Add-(?:Computer|Content|History|Member|PSSnapin|Type)|Checkpoint-Computer|Clear-(?:Content|EventLog|History|Item|ItemProperty|Variable)|Compare-Object|Complete-Transaction|Connect-PSSession|ConvertFrom-(?:Csv|Json|StringData)|Convert-Path|ConvertTo-(?:Csv|Html|Json|Xml)|Copy-(?:Item|ItemProperty)|Debug-Process|Disable-(?:ComputerRestore|PSBreakpoint|PSRemoting|PSSessionConfiguration)|Disconnect-PSSession|Enable-(?:ComputerRestore|PSBreakpoint|PSRemoting|PSSessionConfiguration)|Enter-PSSession|Exit-PSSession|Export-(?:Alias|Clixml|Console|Csv|FormatData|ModuleMember|PSSession)|ForEach-Object|Format-(?:Custom|List|Table|Wide)|Get-(?:Alias|ChildItem|Command|ComputerRestorePoint|Content|ControlPanelItem|Culture|Date|Event|EventLog|EventSubscriber|FormatData|Help|History|Host|HotFix|Item|ItemProperty|Job|Location|Member|Module|Process|PSBreakpoint|PSCallStack|PSDrive|PSProvider|PSSession|PSSessionConfiguration|PSSnapin|Random|Service|TraceSource|Transaction|TypeData|UICulture|Unique|Variable|WmiObject)|Group-Object|Import-(?:Alias|Clixml|Csv|LocalizedData|Module|PSSession)|Invoke-(?:Command|Expression|History|Item|RestMethod|WebRequest|WmiMethod)|Join-Path|Limit-EventLog|Measure-(?:Command|Object)|Move-(?:Item|ItemProperty)|New-(?:Alias|Event|EventLog|Item|ItemProperty|Module|ModuleManifest|Object|PSDrive|PSSession|PSSessionConfigurationFile|PSSessionOption|PSTransportOption|Service|TimeSpan|Variable|WebServiceProxy)|Out-(?:Default|File|GridView|Host|Null|Printer|String)|Pop-Location|Push-Location|Read-Host|Receive-(?:Job|PSSession)|Register-(?:EngineEvent|ObjectEvent|PSSessionConfiguration|WmiEvent)|Remove-(?:Computer|Event|EventLog|Item|ItemProperty|Job|Module|PSBreakpoint|PSDrive|PSSession|PSSnapin|TypeData|Variable|WmiObject)|Rename-(?:Computer|Item|ItemProperty)|Reset-ComputerMachinePassword|Resolve-Path|Restart-(?:Computer|Service)|Restore-Computer|Resume-(?:Job|Service)|Save-Help|Select-(?:Object|String|Xml)|Send-MailMessage|Set-(?:Alias|Content|Date|Item|ItemProperty|Location|PSBreakpoint|PSDebug|PSSessionConfiguration|Service|StrictMode|TraceSource|Variable|WmiInstance)|Show-(?:Command|ControlPanelItem|EventLog)|Sort-Object|Split-Path|Start-(?:Job|Process|Service|Sleep|Transaction)|Stop-(?:Computer|Job|Process|Service)|Suspend-(?:Job|Service)|Tee-Object|Test-(?:ComputerSecureChannel|Connection|ModuleManifest|Path|PSSessionConfigurationFile)|Trace-Command|Unblock-File|Undo-Transaction|Unregister-(?:Event|PSSessionConfiguration)|Update-(?:FormatData|Help|List|TypeData)|Use-Transaction|Wait-(?:Event|Job|Process)|Where-Object|Write-(?:Debug|Error|EventLog|Host|Output|Progress|Verbose|Warning))\b/i,
+        /\b(?:Add|Approve|Assert|Backup|Block|Checkpoint|Clear|Close|Compare|Complete|Compress|Confirm|Connect|Convert|ConvertFrom|ConvertTo|Copy|Debug|Deny|Disable|Disconnect|Dismount|Edit|Enable|Enter|Exit|Expand|Export|Find|ForEach|Format|Get|Grant|Group|Hide|Import|Initialize|Install|Invoke|Join|Limit|Lock|Measure|Merge|Move|New|New|Open|Optimize|Out|Ping|Pop|Protect|Publish|Push|Read|Receive|Redo|Register|Remove|Rename|Repair|Request|Reset|Resize|Resolve|Restart|Restore|Resume|Revoke|Save|Search|Select|Send|Set|Show|Skip|Sort|Split|Start|Step|Stop|Submit|Suspend|Switch|Sync|Tee|Test|Trace|Unblock|Undo|Uninstall|Unlock|Unprotect|Unpublish|Unregister|Update|Use|Wait|Watch|Where|Write)-[a-z]+\b/i,
         /\b(?:ac|cat|chdir|clc|cli|clp|clv|compare|copy|cp|cpi|cpp|cvpa|dbp|del|diff|dir|ebp|echo|epal|epcsv|epsn|erase|fc|fl|ft|fw|gal|gbp|gc|gci|gcs|gdr|gi|gl|gm|gp|gps|group|gsv|gu|gv|gwmi|iex|ii|ipal|ipcsv|ipsn|irm|iwmi|iwr|kill|lp|ls|measure|mi|mount|move|mp|mv|nal|ndr|ni|nv|ogv|popd|ps|pushd|pwd|rbp|rd|rdr|ren|ri|rm|rmdir|rni|rnp|rp|rv|rvpa|rwmi|sal|saps|sasv|sbp|sc|select|set|shcm|si|sl|sleep|sls|sort|sp|spps|spsv|start|sv|swmi|tee|trcm|type|write)\b/i
       ],
       // per http://technet.microsoft.com/en-us/library/hh847744.aspx
@@ -34764,15 +35492,22 @@ function protobuf(Prism) {
   ;(function (Prism) {
     var builtinTypes = /\b(?:double|float|[su]?int(?:32|64)|s?fixed(?:32|64)|bool|string|bytes)\b/
     Prism.languages.protobuf = Prism.languages.extend('clike', {
-      'class-name': {
-        pattern: /(\b(?:enum|extend|message|service)\s+)[A-Za-z_]\w*(?=\s*\{)/,
-        lookbehind: true
-      },
-      keyword: /\b(?:enum|extend|extensions|import|message|oneof|option|optional|package|public|repeated|required|reserved|service|syntax|to)\b/
+      'class-name': [
+        {
+          pattern: /(\b(?:enum|extend|message|service)\s+)[A-Za-z_]\w*(?=\s*\{)/,
+          lookbehind: true
+        },
+        {
+          pattern: /(\b(?:rpc\s+\w+|returns)\s*\(\s*(?:stream\s+)?)\.?[A-Za-z_]\w*(?:\.[A-Za-z_]\w*)*(?=\s*\))/,
+          lookbehind: true
+        }
+      ],
+      keyword: /\b(?:enum|extend|extensions|import|message|oneof|option|optional|package|public|repeated|required|reserved|returns|rpc(?=\s+\w)|service|stream|syntax|to)\b(?!\s*=\s*\d)/,
+      function: /[a-z_]\w*(?=\s*\()/i
     })
     Prism.languages.insertBefore('protobuf', 'operator', {
       map: {
-        pattern: /\bmap<\s*[\w.]+\s*,\s*[\w.]+\s*>(?=\s+[A-Za-z_]\w*\s*[=;])/,
+        pattern: /\bmap<\s*[\w.]+\s*,\s*[\w.]+\s*>(?=\s+[a-z_]\w*\s*[=;])/i,
         alias: 'class-name',
         inside: {
           punctuation: /[<>.,]/,
@@ -34781,14 +35516,14 @@ function protobuf(Prism) {
       },
       builtin: builtinTypes,
       'positional-class-name': {
-        pattern: /(?:\b|\B\.)[A-Za-z_]\w*(?:\.[A-Za-z_]\w*)*(?=\s+[A-Za-z_]\w*\s*[=;])/,
+        pattern: /(?:\b|\B\.)[a-z_]\w*(?:\.[a-z_]\w*)*(?=\s+[a-z_]\w*\s*[=;])/i,
         alias: 'class-name',
         inside: {
           punctuation: /\./
         }
       },
       annotation: {
-        pattern: /(\[\s*)[A-Za-z_]\w*(?=\s*=)/,
+        pattern: /(\[\s*)[a-z_]\w*(?=\s*=)/i,
         lookbehind: true
       }
     })
@@ -34935,7 +35670,9 @@ function pug(Prism) {
               }
             }
           ],
-          punctuation: /:/
+          punctuation: /:/,
+          'attr-id': /#[\w\-]+/,
+          'attr-class': /\.[\w\-]+/
         }
       },
       code: [
@@ -35167,13 +35904,13 @@ function puppet(Prism) {
 
 "use strict";
 
-var refractorC = __webpack_require__(/*! ./c.js */ "./node_modules/refractor/lang/c.js")
+
 module.exports = pure
 pure.displayName = 'pure'
 pure.aliases = []
 function pure(Prism) {
-  Prism.register(refractorC)
   ;(function (Prism) {
+    // https://agraef.github.io/pure-docs/pure.html#lexical-matters
     Prism.languages.pure = {
       comment: [
         {
@@ -35217,7 +35954,7 @@ function pure(Prism) {
         alias: 'builtin'
       },
       // Any combination of operator chars can be an operator
-      operator: /(?=\b_|[^_])[!"#$%&'*+,\-.\/:<=>?@\\^_`|~\u00a1-\u00bf\u00d7-\u00f7\u20d0-\u2bff]+|\b(?:and|div|mod|not|or)\b/,
+      operator: /(?:[!"#$%&'*+,\-.\/:<=>?@\\^`|~\u00a1-\u00bf\u00d7-\u00f7\u20d0-\u2bff]|\b_+\b)+|\b(?:and|div|mod|not|or)\b/,
       // FIXME: How can we prevent | and , to be highlighted as operator when they are used alone?
       punctuation: /[(){}\[\];,|]/
     }
@@ -35265,6 +36002,90 @@ function pure(Prism) {
 
 /***/ }),
 
+/***/ "./node_modules/refractor/lang/purebasic.js":
+/*!**************************************************!*\
+  !*** ./node_modules/refractor/lang/purebasic.js ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = purebasic
+purebasic.displayName = 'purebasic'
+purebasic.aliases = []
+function purebasic(Prism) {
+  /*
+Original Code by Bas Groothedde
+!!MANY THANKS!! I never would have made this, regex and me will never be best friends ;)
+==> https://codepen.io/ImagineProgramming/details/JYydBy/
+slightly changed to pass all tests
+*/
+  // PureBasic support, steal stuff from ansi-c
+  Prism.languages.purebasic = Prism.languages.extend('clike', {
+    comment: /;.*/,
+    keyword: /\b(?:declarecdll|declaredll|compilerselect|compilercase|compilerdefault|compilerendselect|compilererror|enableexplicit|disableexplicit|not|and|or|xor|calldebugger|debuglevel|enabledebugger|disabledebugger|restore|read|includepath|includebinary|threaded|runtime|with|endwith|structureunion|endstructureunion|align|newlist|newmap|interface|endinterface|extends|enumeration|endenumeration|swap|foreach|continue|fakereturn|goto|gosub|return|break|module|endmodule|declaremodule|enddeclaremodule|declare|declarec|prototype|prototypec|enableasm|disableasm|dim|redim|data|datasection|enddatasection|to|procedurereturn|debug|default|case|select|endselect|as|import|endimport|importc|compilerif|compilerelse|compilerendif|compilerelseif|end|structure|endstructure|while|wend|for|next|step|if|else|elseif|endif|repeat|until|procedure|proceduredll|procedurec|procedurecdll|endprocedure|protected|shared|static|global|define|includefile|xincludefile|macro|endmacro)\b/i,
+    function: /\b\w+(?:\.\w+)?\s*(?=\()/,
+    number: /(?:\$[\da-f]+|\b-?\d*\.?\d+(?:e[+-]?\d+)?)\b/i,
+    operator: /(?:@\*?|\?|\*)\w+|-[>-]?|\+\+?|!=?|<<?=?|>>?=?|==?|&&?|\|?\||[~^%?*/@]/
+  })
+  Prism.languages.insertBefore('purebasic', 'keyword', {
+    tag: /#\w+/,
+    asm: {
+      pattern: /(^\s*)!.*/m,
+      lookbehind: true,
+      alias: 'tag',
+      inside: {
+        comment: /;.*/,
+        string: {
+          pattern: /(["'`])(?:\\.|(?!\1)[^\\\r\n])*\1/,
+          greedy: true
+        },
+        // Anonymous label references, i.e.: jmp @b
+        'label-reference-anonymous': {
+          pattern: /(\s*!\s*j[a-z]+\s+)@[fb]/i,
+          lookbehind: true,
+          alias: 'fasm-label'
+        },
+        // Named label reference, i.e.: jne label1
+        'label-reference-addressed': {
+          pattern: /(\s*!\s*j[a-z]+\s+)[A-Z._?$@][\w.?$@~#]*/i,
+          lookbehind: true,
+          alias: 'fasm-label'
+        },
+        function: {
+          pattern: /^(\s*!\s*)[\da-z]+(?=\s|$)/im,
+          lookbehind: true
+        },
+        'function-inline': {
+          pattern: /(\s*:\s*)[\da-z]+(?=\s)/i,
+          lookbehind: true,
+          alias: 'function'
+        },
+        label: {
+          pattern: /^(\s*!\s*)[A-Za-z._?$@][\w.?$@~#]*(?=:)/m,
+          lookbehind: true,
+          alias: 'fasm-label'
+        },
+        keyword: [
+          /(?:extern|extern|global)[^;\r\n]*/i,
+          /(?:CPU|FLOAT|DEFAULT).*/
+        ],
+        register: /\b(?:st\d|[xyz]mm\d\d?|[cdt]r\d|r\d\d?[bwd]?|[er]?[abcd]x|[abcd][hl]|[er]?(?:bp|sp|si|di)|[cdefgs]s|mm\d+)\b/i,
+        number: /(?:\b|-|(?=\$))(?:0[hx][\da-f]*\.?[\da-f]+(?:p[+-]?\d+)?|\d[\da-f]+[hx]|\$\d[\da-f]*|0[oq][0-7]+|[0-7]+[oq]|0[by][01]+|[01]+[by]|0[dt]\d+|\d*\.?\d+(?:\.?e[+-]?\d+)?[dt]?)\b/i,
+        operator: /[\[\]*+\-/%<>=&|$!,.:]/
+      }
+    }
+  })
+  delete Prism.languages.purebasic['class-name']
+  delete Prism.languages.purebasic['boolean']
+  Prism.languages.pbfasm = Prism.languages['purebasic']
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/refractor/lang/python.js":
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/python.js ***!
@@ -35285,7 +36106,7 @@ function python(Prism) {
       lookbehind: true
     },
     'string-interpolation': {
-      pattern: /(?:f|rf|fr)(?:("""|''')[\s\S]+?\1|("|')(?:\\.|(?!\2)[^\\\r\n])*\2)/i,
+      pattern: /(?:f|rf|fr)(?:("""|''')[\s\S]*?\1|("|')(?:\\.|(?!\2)[^\\\r\n])*\2)/i,
       greedy: true,
       inside: {
         interpolation: {
@@ -35308,7 +36129,7 @@ function python(Prism) {
       }
     },
     'triple-quoted-string': {
-      pattern: /(?:[rub]|rb|br)?("""|''')[\s\S]+?\1/i,
+      pattern: /(?:[rub]|rb|br)?("""|''')[\s\S]*?\1/i,
       greedy: true,
       alias: 'string'
     },
@@ -35405,7 +36226,7 @@ function q(Prism) {
       alias: 'function'
     },
     verb: {
-      pattern: /(?:\B\.\B|\b[01]:|<[=>]?|>=?|[:+\-*%,!?_~=|$&#@^]):?/,
+      pattern: /(?:\B\.\B|\b[01]:|<[=>]?|>=?|[:+\-*%,!?~=|$&#@^]):?|\b_\b:?/,
       alias: 'operator'
     },
     punctuation: /[(){}\[\];.]/
@@ -35431,7 +36252,7 @@ qml.aliases = []
 function qml(Prism) {
   ;(function (Prism) {
     var jsString = /"(?:\\.|[^\\"\r\n])*"|'(?:\\.|[^\\'\r\n])*'/.source
-    var jsComment = /\/\/.*|\/\*(?:(?!\*\/)[\s\S])*\*\//.source
+    var jsComment = /\/\/.*(?!.)|\/\*(?:[^*]|\*(?!\/))*\*\//.source
     var jsExpr = /(?:[^\\()[\]{}"'/]|<string>|\/(?![*/])|<comment>|\(<expr>*\)|\[<expr>*\]|\{<expr>*\}|\\[\s\S])/.source
       .replace(/<string>/g, function () {
         return jsString
@@ -35588,6 +36409,93 @@ function r(Prism) {
 
 /***/ }),
 
+/***/ "./node_modules/refractor/lang/racket.js":
+/*!***********************************************!*\
+  !*** ./node_modules/refractor/lang/racket.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var refractorScheme = __webpack_require__(/*! ./scheme.js */ "./node_modules/refractor/lang/scheme.js")
+module.exports = racket
+racket.displayName = 'racket'
+racket.aliases = ['rkt']
+function racket(Prism) {
+  Prism.register(refractorScheme)
+  Prism.languages.racket = Prism.languages.extend('scheme', {
+    'lambda-parameter': {
+      // the racket lambda syntax is a lot more complex, so we won't even attempt to capture it.
+      // this will just prevent false positives of the `function` pattern
+      pattern: /(\(lambda\s+\()[^()'\s]+/,
+      lookbehind: true
+    }
+  }) // Add brackets to racket
+  // The basic idea here is to go through all pattens of Scheme and replace all occurrences of "(" with the union of "("
+  // and "["; Similar for ")". This is a bit tricky because "(" can be escaped or inside a character set. Both cases
+  // have to be handled differently and, of course, we don't want to destroy groups, so we can only replace literal "("
+  // and ")".
+  // To do this, we use a regular expression which will parse any JS regular expression. It works because regexes are
+  // matches from left to right and already matched text cannot be matched again. We use this to first capture all
+  // escaped characters (not really, we don't get escape sequences but we don't need them). Because we already captured
+  // all escaped characters, we know that any "[" character is the start of a character set, so we match that character
+  // set whole.
+  // With the regex parsed, we only have to replace all escaped "(" (they cannot be unescaped outside of character sets)
+  // with /[([]/ and replace all "(" inside character sets.
+  // Note: This method does not work for "(" that are escaped like this /\x28/ or this /\u0028/.
+  Prism.languages.DFS(Prism.languages.racket, function (key, value) {
+    if (Prism.util.type(value) === 'RegExp') {
+      var source = value.source.replace(
+        /\\(.)|\[\^?((?:\\.|[^\\\]])*)\]/g,
+        function (m, g1, g2) {
+          if (g1) {
+            if (g1 === '(') {
+              // replace all '(' characters outside character sets
+              return '[([]'
+            }
+            if (g1 === ')') {
+              // replace all ')' characters outside character sets
+              return '[)\\]]'
+            }
+          }
+          if (g2) {
+            var prefix = m[1] === '^' ? '[^' : '['
+            return (
+              prefix +
+              g2.replace(/\\(.)|[()]/g, function (m, g1) {
+                if (m === '(' || g1 === '(') {
+                  // replace all '(' characters inside character sets
+                  return '(['
+                }
+                if (m === ')' || g1 === ')') {
+                  // replace all ')' characters inside character sets
+                  return ')\\]'
+                }
+                return m
+              }) +
+              ']'
+            )
+          }
+          return m
+        }
+      )
+      this[key] = RegExp(source, value.flags)
+    }
+  })
+  Prism.languages.insertBefore('racket', 'string', {
+    lang: {
+      pattern: /^#lang.+/m,
+      greedy: true,
+      alias: 'keyword'
+    }
+  })
+  Prism.languages.rkt = Prism.languages.racket
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/refractor/lang/reason.js":
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/reason.js ***!
@@ -35653,7 +36561,14 @@ function regex(Prism) {
       alias: 'escape'
     }
     var escape = /\\(?:x[\da-fA-F]{2}|u[\da-fA-F]{4}|u\{[\da-fA-F]+\}|c[a-zA-Z]|0[0-7]{0,2}|[123][0-7]{2}|.)/
-    var charClass = /\\[wsd]|\.|\\p{[^{}]+}/i
+    var charClass = {
+      pattern: /\.|\\[wsd]|\\p{[^{}]+}/i,
+      alias: 'class-name'
+    }
+    var charClassWithoutDot = {
+      pattern: /\\[wsd]|\\p{[^{}]+}/i,
+      alias: 'class-name'
+    }
     var rangeChar = '(?:[^\\\\-]|' + escape.source + ')'
     var range = RegExp(rangeChar + '-' + rangeChar) // the name of a capturing group
     var groupName = {
@@ -35661,15 +36576,6 @@ function regex(Prism) {
       lookbehind: true,
       alias: 'variable'
     }
-    var backreference = [
-      /\\(?![123][0-7]{2})[1-9]/, // a backreference which is not an octal escape
-      {
-        pattern: /\\k<[^<>']+>/,
-        inside: {
-          'group-name': groupName
-        }
-      }
-    ]
     Prism.languages.regex = {
       charset: {
         pattern: /((?:^|[^\\])(?:\\\\)*)\[(?:[^\\\]]|\\[\s\S])*\]/,
@@ -35677,26 +36583,48 @@ function regex(Prism) {
         inside: {
           'charset-negation': {
             pattern: /(^\[)\^/,
-            lookbehind: true
+            lookbehind: true,
+            alias: 'operator'
           },
-          'charset-punctuation': /^\[|\]$/,
+          'charset-punctuation': {
+            pattern: /^\[|\]$/,
+            alias: 'punctuation'
+          },
           range: {
             pattern: range,
             inside: {
               escape: escape,
-              'range-punctuation': /-/
+              'range-punctuation': {
+                pattern: /-/,
+                alias: 'operator'
+              }
             }
           },
           'special-escape': specialEscape,
-          charclass: charClass,
-          backreference: backreference,
+          charclass: charClassWithoutDot,
           escape: escape
         }
       },
       'special-escape': specialEscape,
       charclass: charClass,
-      backreference: backreference,
-      anchor: /[$^]|\\[ABbGZz]/,
+      backreference: [
+        {
+          // a backreference which is not an octal escape
+          pattern: /\\(?![123][0-7]{2})[1-9]/,
+          alias: 'keyword'
+        },
+        {
+          pattern: /\\k<[^<>']+>/,
+          alias: 'keyword',
+          inside: {
+            'group-name': groupName
+          }
+        }
+      ],
+      anchor: {
+        pattern: /[$^]|\\[ABbGZz]/,
+        alias: 'function'
+      },
       escape: escape,
       group: [
         {
@@ -35704,14 +36632,24 @@ function regex(Prism) {
           // https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference?view=netframework-4.7.2#grouping-constructs
           // (), (?<name>), (?'name'), (?>), (?:), (?=), (?!), (?<=), (?<!), (?is-m), (?i-m:)
           pattern: /\((?:\?(?:<[^<>']+>|'[^<>']+'|[>:]|<?[=!]|[idmnsuxU]+(?:-[idmnsuxU]+)?:?))?/,
+          alias: 'punctuation',
           inside: {
             'group-name': groupName
           }
         },
-        /\)/
+        {
+          pattern: /\)/,
+          alias: 'punctuation'
+        }
       ],
-      quantifier: /[+*?]|\{(?:\d+,?\d*)\}/,
-      alternation: /\|/
+      quantifier: {
+        pattern: /(?:[+*?]|\{(?:\d+,?\d*)\})[?+]?/,
+        alias: 'number'
+      },
+      alternation: {
+        pattern: /\|/,
+        alias: 'keyword'
+      }
     }
     ;[
       'actionscript',
@@ -35724,12 +36662,13 @@ function regex(Prism) {
       var grammar = Prism.languages[lang]
       if (grammar) {
         grammar['regex'].inside = {
-          'regex-flags': /[a-z]+$/,
-          'regex-delimiter': /^\/|\/$/,
           'language-regex': {
-            pattern: /[\s\S]+/,
+            pattern: /^(\/)[\s\S]+(?=\/[a-z]*$)/i,
+            lookbehind: true,
             inside: Prism.languages.regex
-          }
+          },
+          'regex-flags': /[a-z]+$/i,
+          'regex-delimiter': /^\/|\/$/
         }
       }
     })
@@ -35751,7 +36690,7 @@ function regex(Prism) {
 
 module.exports = renpy
 renpy.displayName = 'renpy'
-renpy.aliases = []
+renpy.aliases = ['rpy']
 function renpy(Prism) {
   Prism.languages.renpy = {
     // TODO Write tests.
@@ -35772,6 +36711,7 @@ function renpy(Prism) {
     operator: /[-+%=]=?|!=|\*\*?=?|\/\/?=?|<[<=>]?|>[=>]?|[&|^~]|\b(?:or|and|not|with|at)\b/,
     punctuation: /[{}[\];(),.:]/
   }
+  Prism.languages.rpy = Prism.languages.renpy
 }
 
 
@@ -36017,7 +36957,7 @@ function rip(Prism) {
     datetime: /\b\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\b/,
     character: /\B`[^\s`'",.:;#\/\\()<>\[\]{}]\b/,
     regex: {
-      pattern: /(^|[^/])\/(?!\/)(?:\[.+?]|\\.|[^/\\\r\n])+\/(?=\s*(?:$|[\r\n,.;})]))/,
+      pattern: /(^|[^/])\/(?!\/)(?:\[[^\n\r\]]*\]|\\.|[^/\\\r\n\[])+\/(?=\s*(?:$|[\r\n,.;})]))/,
       lookbehind: true,
       greedy: true
     },
@@ -36026,7 +36966,7 @@ function rip(Prism) {
       pattern: /("|')(?:\\.|(?!\1)[^\\\r\n])*\1/,
       greedy: true
     },
-    number: /[+-]?(?:(?:\d+\.\d+)|(?:\d+))/,
+    number: /[+-]?\b(?:\d+\.\d+|\d+)\b/,
     punctuation: /(?:\.{2,3})|[`,.:;=\/\\()<>\[\]{}]/,
     reference: /[^\d\s`'",.:;#\/\\()<>\[\]{}][^\s`'",.:;#\/\\()<>\[\]{}]*/
   }
@@ -36141,7 +37081,7 @@ function robotframework(Prism) {
       }
     }
     var docTag = {
-      pattern: /(\[Documentation\](?:  |\t)[ \t]*)(?![ \t]|#)(?:.|[ \t]*(?:\r\n?|\n)[ \t]*\.{3}[ \t]*)+/,
+      pattern: /(\[Documentation\](?:  |\t)[ \t]*)(?![ \t]|#)(?:.|(?:\r\n?|\n)[ \t]*\.{3})+/,
       lookbehind: true,
       alias: 'string'
     }
@@ -36163,7 +37103,7 @@ function robotframework(Prism) {
     Prism.languages['robotframework'] = {
       settings: createSection('Settings', {
         documentation: {
-          pattern: /([\r\n] ?Documentation(?:  |\t)[ \t]*)(?![ \t]|#)(?:.|[ \t]*(?:\r\n?|\n)[ \t]*\.{3}[ \t]*)+/,
+          pattern: /([\r\n] ?Documentation(?:  |\t)[ \t]*)(?![ \t]|#)(?:.|(?:\r\n?|\n)[ \t]*\.{3})+/,
           lookbehind: true,
           alias: 'string'
         },
@@ -36249,36 +37189,19 @@ function ruby(Prism) {
     Prism.languages.insertBefore('ruby', 'keyword', {
       regex: [
         {
-          pattern: /%r([^a-zA-Z0-9\s{(\[<])(?:(?!\1)[^\\]|\\[\s\S])*\1[gim]{0,3}/,
-          greedy: true,
-          inside: {
-            interpolation: interpolation
-          }
-        },
-        {
-          pattern: /%r\((?:[^()\\]|\\[\s\S])*\)[gim]{0,3}/,
-          greedy: true,
-          inside: {
-            interpolation: interpolation
-          }
-        },
-        {
-          // Here we need to specifically allow interpolation
-          pattern: /%r\{(?:[^#{}\\]|#(?:\{[^}]+\})?|\\[\s\S])*\}[gim]{0,3}/,
-          greedy: true,
-          inside: {
-            interpolation: interpolation
-          }
-        },
-        {
-          pattern: /%r\[(?:[^\[\]\\]|\\[\s\S])*\][gim]{0,3}/,
-          greedy: true,
-          inside: {
-            interpolation: interpolation
-          }
-        },
-        {
-          pattern: /%r<(?:[^<>\\]|\\[\s\S])*>[gim]{0,3}/,
+          pattern: RegExp(
+            /%r/.source +
+              '(?:' +
+              [
+                /([^a-zA-Z0-9\s{(\[<])(?:(?!\1)[^\\]|\\[\s\S])*\1[gim]{0,3}/
+                  .source,
+                /\((?:[^()\\]|\\[\s\S])*\)[gim]{0,3}/.source, // Here we need to specifically allow interpolation
+                /\{(?:[^#{}\\]|#(?:\{[^}]+\})?|\\[\s\S])*\}[gim]{0,3}/.source,
+                /\[(?:[^\[\]\\]|\\[\s\S])*\][gim]{0,3}/.source,
+                /<(?:[^<>\\]|\\[\s\S])*>[gim]{0,3}/.source
+              ].join('|') +
+              ')'
+          ),
           greedy: true,
           inside: {
             interpolation: interpolation
@@ -36310,36 +37233,18 @@ function ruby(Prism) {
     })
     Prism.languages.ruby.string = [
       {
-        pattern: /%[qQiIwWxs]?([^a-zA-Z0-9\s{(\[<])(?:(?!\1)[^\\]|\\[\s\S])*\1/,
-        greedy: true,
-        inside: {
-          interpolation: interpolation
-        }
-      },
-      {
-        pattern: /%[qQiIwWxs]?\((?:[^()\\]|\\[\s\S])*\)/,
-        greedy: true,
-        inside: {
-          interpolation: interpolation
-        }
-      },
-      {
-        // Here we need to specifically allow interpolation
-        pattern: /%[qQiIwWxs]?\{(?:[^#{}\\]|#(?:\{[^}]+\})?|\\[\s\S])*\}/,
-        greedy: true,
-        inside: {
-          interpolation: interpolation
-        }
-      },
-      {
-        pattern: /%[qQiIwWxs]?\[(?:[^\[\]\\]|\\[\s\S])*\]/,
-        greedy: true,
-        inside: {
-          interpolation: interpolation
-        }
-      },
-      {
-        pattern: /%[qQiIwWxs]?<(?:[^<>\\]|\\[\s\S])*>/,
+        pattern: RegExp(
+          /%[qQiIwWxs]?/.source +
+            '(?:' +
+            [
+              /([^a-zA-Z0-9\s{(\[<])(?:(?!\1)[^\\]|\\[\s\S])*\1/.source,
+              /\((?:[^()\\]|\\[\s\S])*\)/.source, // Here we need to specifically allow interpolation
+              /\{(?:[^#{}\\]|#(?:\{[^}]+\})?|\\[\s\S])*\}/.source,
+              /\[(?:[^\[\]\\]|\\[\s\S])*\]/.source,
+              /<(?:[^<>\\]|\\[\s\S])*>/.source
+            ].join('|') +
+            ')'
+        ),
         greedy: true,
         inside: {
           interpolation: interpolation
@@ -36374,68 +37279,127 @@ module.exports = rust
 rust.displayName = 'rust'
 rust.aliases = []
 function rust(Prism) {
-  /* TODO
-Add support for Markdown notation inside doc comments
-Add support for nested block comments...
-Match closure params even when not followed by dash or brace
-Add better support for macro definition
-*/
-  Prism.languages.rust = {
-    comment: [
-      {
-        pattern: /(^|[^\\])\/\*[\s\S]*?\*\//,
-        lookbehind: true
-      },
-      {
-        pattern: /(^|[^\\:])\/\/.*/,
-        lookbehind: true
-      }
-    ],
-    string: [
-      {
-        pattern: /b?r(#*)"(?:\\.|(?!"\1)[^\\\r\n])*"\1/,
+  ;(function (Prism) {
+    var multilineComment = /\/\*(?:[^*/]|\*(?!\/)|\/(?!\*)|<self>)*\*\//.source
+    for (var i = 0; i < 2; i++) {
+      // support 4 levels of nested comments
+      multilineComment = multilineComment.replace(/<self>/g, function () {
+        return multilineComment
+      })
+    }
+    multilineComment = multilineComment.replace(/<self>/g, function () {
+      return /[^\s\S]/.source
+    })
+    Prism.languages.rust = {
+      comment: [
+        {
+          pattern: RegExp(/(^|[^\\])/.source + multilineComment),
+          lookbehind: true,
+          greedy: true
+        },
+        {
+          pattern: /(^|[^\\:])\/\/.*/,
+          lookbehind: true,
+          greedy: true
+        }
+      ],
+      string: {
+        pattern: /b?"(?:\\[\s\S]|[^\\"])*"|b?r(#*)"(?:[^"]|"(?!\1))*"\1/,
         greedy: true
       },
-      {
-        pattern: /b?"(?:\\.|[^\\\r\n"])*"/,
-        greedy: true
-      }
-    ],
-    char: {
-      pattern: /b?'(?:\\(?:x[0-7][\da-fA-F]|u{(?:[\da-fA-F]_*){1,6}|.)|[^\\\r\n\t'])'/,
-      alias: 'string'
-    },
-    'lifetime-annotation': {
-      pattern: /'[^\s>']+/,
-      alias: 'symbol'
-    },
-    keyword: /\b(?:abstract|alignof|as|async|await|be|box|break|const|continue|crate|do|dyn|else|enum|extern|false|final|fn|for|if|impl|in|let|loop|match|mod|move|mut|offsetof|once|override|priv|pub|pure|ref|return|sizeof|static|self|Self|struct|super|true|trait|type|typeof|union|unsafe|unsized|use|virtual|where|while|yield)\b/,
-    attribute: {
-      pattern: /#!?\[.+?\]/,
-      greedy: true,
-      alias: 'attr-name'
-    },
-    function: [
-      /\w+(?=\s*\()/, // Macros can use parens or brackets
-      /\w+!(?=\s*\(|\[)/
-    ],
-    'macro-rules': {
-      pattern: /\w+!/,
-      alias: 'function'
-    },
-    // Hex, oct, bin, dec numbers with visual separators and type suffix
-    number: /\b(?:0x[\dA-Fa-f](?:_?[\dA-Fa-f])*|0o[0-7](?:_?[0-7])*|0b[01](?:_?[01])*|(?:\d(?:_?\d)*)?\.?\d(?:_?\d)*(?:[Ee][+-]?\d+)?)(?:_?(?:[iu](?:8|16|32|64)?|f32|f64))?\b/,
-    // Closure params should not be confused with bitwise OR |
-    'closure-params': {
-      pattern: /\|[^|]*\|(?=\s*[{-])/,
-      inside: {
-        punctuation: /[|:,]/,
-        operator: /[&*]/
-      }
-    },
-    punctuation: /->|\.\.=|\.{1,3}|::|[{}[\];(),:]/,
-    operator: /[-+*\/%!^]=?|=[=>]?|&[&=]?|\|[|=]?|<<?=?|>>?=?|[@?]/
-  }
+      char: {
+        pattern: /b?'(?:\\(?:x[0-7][\da-fA-F]|u{(?:[\da-fA-F]_*){1,6}|.)|[^\\\r\n\t'])'/,
+        greedy: true,
+        alias: 'string'
+      },
+      attribute: {
+        pattern: /#!?\[(?:[^\[\]"]|"(?:\\[\s\S]|[^\\"])*")*\]/,
+        greedy: true,
+        alias: 'attr-name',
+        inside: {
+          string: null // see below
+        }
+      },
+      // Closure params should not be confused with bitwise OR |
+      'closure-params': {
+        pattern: /([=(,:]\s*|\bmove\s*)\|[^|]*\||\|[^|]*\|(?=\s*(?:\{|->))/,
+        lookbehind: true,
+        greedy: true,
+        inside: {
+          'closure-punctuation': {
+            pattern: /^\||\|$/,
+            alias: 'punctuation'
+          },
+          rest: null // see below
+        }
+      },
+      'lifetime-annotation': {
+        pattern: /'\w+/,
+        alias: 'symbol'
+      },
+      'fragment-specifier': {
+        pattern: /(\$\w+:)[a-z]+/,
+        lookbehind: true,
+        alias: 'punctuation'
+      },
+      variable: /\$\w+/,
+      'function-definition': {
+        pattern: /(\bfn\s+)\w+/,
+        lookbehind: true,
+        alias: 'function'
+      },
+      'type-definition': {
+        pattern: /(\b(?:enum|struct|union)\s+)\w+/,
+        lookbehind: true,
+        alias: 'class-name'
+      },
+      'module-declaration': [
+        {
+          pattern: /(\b(?:crate|mod)\s+)[a-z][a-z_\d]*/,
+          lookbehind: true,
+          alias: 'namespace'
+        },
+        {
+          pattern: /(\b(?:crate|self|super)\s*)::\s*[a-z][a-z_\d]*\b(?:\s*::(?:\s*[a-z][a-z_\d]*\s*::)*)?/,
+          lookbehind: true,
+          alias: 'namespace',
+          inside: {
+            punctuation: /::/
+          }
+        }
+      ],
+      keyword: [
+        // https://github.com/rust-lang/reference/blob/master/src/keywords.md
+        /\b(?:abstract|as|async|await|become|box|break|const|continue|crate|do|dyn|else|enum|extern|final|fn|for|if|impl|in|let|loop|macro|match|mod|move|mut|override|priv|pub|ref|return|self|Self|static|struct|super|trait|try|type|typeof|union|unsafe|unsized|use|virtual|where|while|yield)\b/, // primitives and str
+        // https://doc.rust-lang.org/stable/rust-by-example/primitives.html
+        /\b(?:[ui](?:8|16|32|64|128|size)|f(?:32|64)|bool|char|str)\b/
+      ],
+      // functions can technically start with an upper-case letter, but this will introduce a lot of false positives
+      // and Rust's naming conventions recommend snake_case anyway.
+      // https://doc.rust-lang.org/1.0.0/style/style/naming/README.html
+      function: /\b[a-z_]\w*(?=\s*(?:::\s*<|\())/,
+      macro: {
+        pattern: /\w+!/,
+        alias: 'property'
+      },
+      constant: /\b[A-Z_][A-Z_\d]+\b/,
+      'class-name': /\b[A-Z]\w*\b/,
+      namespace: {
+        pattern: /(?:\b[a-z][a-z_\d]*\s*::\s*)*\b[a-z][a-z_\d]*\s*::(?!\s*<)/,
+        inside: {
+          punctuation: /::/
+        }
+      },
+      // Hex, oct, bin, dec numbers with visual separators and type suffix
+      number: /\b(?:0x[\dA-Fa-f](?:_?[\dA-Fa-f])*|0o[0-7](?:_?[0-7])*|0b[01](?:_?[01])*|(?:\d(?:_?\d)*)?\.?\d(?:_?\d)*(?:[Ee][+-]?\d+)?)(?:_?(?:[iu](?:8|16|32|64|size)?|f32|f64))?\b/,
+      boolean: /\b(?:false|true)\b/,
+      punctuation: /->|\.\.=|\.{1,3}|::|[{}[\];(),:]/,
+      operator: /[-+*\/%!^]=?|=[=>]?|&[&=]?|\|[|=]?|<<?=?|>>?=?|[@?]/
+    }
+    Prism.languages.rust['closure-params'].inside.rest = Prism.languages.rust
+    Prism.languages.rust['attribute'].inside['string'] =
+      Prism.languages.rust['string']
+  })(Prism)
 }
 
 
@@ -36461,6 +37425,14 @@ function sas(Prism) {
     var numericConstant = {
       pattern: RegExp(stringPattern + '[bx]'),
       alias: 'number'
+    }
+    var macroVariable = {
+      pattern: /&[a-z_][a-z_0-9]*/i
+    }
+    var macroKeyword = {
+      pattern: /((?:^|\s|=|\())%(?:ABORT|BY|CMS|COPY|DISPLAY|DO|ELSE|END|EVAL|GLOBAL|GO|GOTO|IF|INC|INCLUDE|INDEX|INPUT|KTRIM|LENGTH|LET|LIST|LOCAL|PUT|QKTRIM|QSCAN|QSUBSTR|QSYSFUNC|QUPCASE|RETURN|RUN|SCAN|SUBSTR|SUPERQ|SYMDEL|SYMGLOBL|SYMLOCAL|SYMEXIST|SYSCALL|SYSEVALF|SYSEXEC|SYSFUNC|SYSGET|SYSRPUT|THEN|TO|TSO|UNQUOTE|UNTIL|UPCASE|WHILE|WINDOW)\b/i,
+      lookbehind: true,
+      alias: 'keyword'
     }
     var step = {
       pattern: /(^|\s+)(?:proc\s+\w+|quit|run|data(?!\=))\b/i,
@@ -36490,10 +37462,7 @@ function sas(Prism) {
         lookbehind: true
       },
       operator: /=/,
-      'macro-variable': {
-        pattern: /&[^\.]*\./i,
-        alias: 'string'
-      },
+      'macro-variable': macroVariable,
       arg: {
         pattern: /[A-Z]+/i,
         alias: 'keyword'
@@ -36558,10 +37527,10 @@ function sas(Prism) {
           pattern: /(?:action)/i,
           alias: 'keyword'
         },
+        comment: comment,
         function: func,
         'arg-value': args['arg-value'],
         operator: args.operator,
-        comment: comment,
         argument: args.arg,
         number: number,
         'numeric-constant': numericConstant,
@@ -36615,9 +37584,10 @@ function sas(Prism) {
         }
       },
       'proc-groovy': {
-        pattern: /(^proc\s+groovy(?:\s+[\w|=]+)?;)(?:\s*submit)[\s\S]+?(?=^(?:proc\s+\w+|quit|run|data);|(?![\s\S]))/im,
+        pattern: /(^proc\s+groovy(?:\s+[\w|=]+)?;)[\s\S]+?(?=^(?:proc\s+\w+|quit|run|data);|(?![\s\S]))/im,
         lookbehind: true,
         inside: {
+          comment: comment,
           groovy: {
             pattern: RegExp(
               /(^[ \t]*submit(?:\s+(?:load|parseonly|norun))?)(?:<str>|[^"'])+?(?=endsubmit;)/.source.replace(
@@ -36632,6 +37602,7 @@ function sas(Prism) {
             alias: 'language-groovy',
             inside: Prism.languages.groovy
           },
+          keyword: keywords,
           'submit-statement': submitStatement,
           'global-statements': globalStatements,
           number: number,
@@ -36641,9 +37612,10 @@ function sas(Prism) {
         }
       },
       'proc-lua': {
-        pattern: /(^proc\s+lua(?:\s+[\w|=]+)?;)(?:\s*submit)[\s\S]+?(?=^(?:proc\s+\w+|quit|run|data);|(?![\s\S]))/im,
+        pattern: /(^proc\s+lua(?:\s+[\w|=]+)?;)[\s\S]+?(?=^(?:proc\s+\w+|quit|run|data);|(?![\s\S]))/im,
         lookbehind: true,
         inside: {
+          comment: comment,
           lua: {
             pattern: RegExp(
               /(^[ \t]*submit(?:\s+(?:load|parseonly|norun))?)(?:<str>|[^"'])+?(?=endsubmit;)/.source.replace(
@@ -36658,6 +37630,7 @@ function sas(Prism) {
             alias: 'language-lua',
             inside: Prism.languages.lua
           },
+          keyword: keywords,
           'submit-statement': submitStatement,
           'global-statements': globalStatements,
           number: number,
@@ -36670,6 +37643,7 @@ function sas(Prism) {
         pattern: /(^proc\s+cas(?:\s+[\w|=]+)?;)[\s\S]+?(?=^(?:proc\s+\w+|quit|data);|(?![\s\S]))/im,
         lookbehind: true,
         inside: {
+          comment: comment,
           'statement-var': {
             pattern: /((?:^|\s)=?)saveresult\s+[^;]+/im,
             lookbehind: true,
@@ -36692,7 +37666,6 @@ function sas(Prism) {
           step: step,
           keyword: keywords,
           function: func,
-          comment: comment,
           format: format,
           altformat: altformat,
           'global-statements': globalStatements,
@@ -36716,10 +37689,23 @@ function sas(Prism) {
         inside: args
       },
       /*Special keywords within macros*/
-      'macro-keyword': {
-        pattern: /((?:^|\s)=?)%(?:ABORT|BQUOTE|BY|CMS|COPY|DISPLAY|DO|ELSE|END|EVAL|GLOBAL|GO|GOTO|IF|INC|INCLUDE|INDEX|INPUT|KTRIM|LENGTH|LET|LIST|LOCAL|NRBQUOTE|NRQUOTE|NRSTR|PUT|QKTRIM|QSCAN|QSUBSTR|QSYSFUNC|QUOTE|QUPCASE|RETURN|RUN|SCAN|STR|SUBSTR|SUPERQ|SYMDEL|SYMGLOBL|SYMLOCAL|SYMEXIST|SYSCALL|SYSEVALF|SYSEXEC|SYSFUNC|SYSGET|SYSRPUT|THEN|TO|TSO|UNQUOTE|UNTIL|UPCASE|WHILE|WINDOW)\b/i,
+      'macro-keyword': macroKeyword,
+      'macro-variable': macroVariable,
+      'macro-string-functions': {
+        pattern: /((?:^|\s|=))%(?:NRBQUOTE|NRQUOTE|NRSTR|BQUOTE|QUOTE|STR)\(.*?(?:[^%]\))/i,
         lookbehind: true,
-        alias: 'keyword'
+        inside: {
+          function: {
+            pattern: /%(?:NRBQUOTE|NRQUOTE|NRSTR|BQUOTE|QUOTE|STR)/i,
+            alias: 'keyword'
+          },
+          'macro-keyword': macroKeyword,
+          'macro-variable': macroVariable,
+          'escaped-char': {
+            pattern: /%['"()<>=¬^~;,#]/i
+          },
+          punctuation: punctuation
+        }
       },
       'macro-declaration': {
         pattern: /^%macro[^;]+(?=;)/im,
@@ -36923,32 +37909,66 @@ function scheme(Prism) {
   Prism.languages.scheme = {
     comment: /;.*/,
     string: {
-      pattern: /"(?:[^"\\]|\\.)*"|'[^()#'\s]+/,
+      pattern: /"(?:[^"\\]|\\.)*"/,
+      greedy: true
+    },
+    symbol: {
+      pattern: /'[^()#'\s]+/,
       greedy: true
     },
     character: {
-      pattern: /#\\(?:[ux][a-fA-F\d]+|[a-zA-Z]+|\S)/,
+      pattern: /#\\(?:[ux][a-fA-F\d]+|[-a-zA-Z]+|\S)/,
+      greedy: true,
       alias: 'string'
     },
+    'lambda-parameter': [
+      // https://www.cs.cmu.edu/Groups/AI/html/r4rs/r4rs_6.html#SEC30
+      {
+        pattern: /(\(lambda\s+)[^()'\s]+/,
+        lookbehind: true
+      },
+      {
+        pattern: /(\(lambda\s+\()[^()']+/,
+        lookbehind: true
+      }
+    ],
     keyword: {
-      pattern: /(\()(?:define(?:-syntax|-library|-values)?|(?:case-)?lambda|let(?:\*|rec)?(?:-values)?|else|if|cond|begin|delay(?:-force)?|parameterize|guard|set!|(?:quasi-)?quote|syntax-rules)(?=[()\s])/,
+      pattern: /(\()(?:define(?:-library|-macro|-syntax|-values)?|defmacro|(?:case-)?lambda|let(?:(?:\*|rec)?(?:-values)?|-syntax|rec-syntax)|else|if|cond|begin|delay(?:-force)?|parameterize|guard|set!|(?:quasi-)?quote|syntax-(?:case|rules))(?=[()\s]|$)/,
       lookbehind: true
     },
     builtin: {
-      pattern: /(\()(?:(?:cons|car|cdr|list|call-with-current-continuation|call\/cc|append|abs|apply|eval)\b|null\?|pair\?|boolean\?|eof-object\?|char\?|procedure\?|number\?|port\?|string\?|vector\?|symbol\?|bytevector\?)(?=[()\s])/,
+      pattern: /(\()(?:(?:cons|car|cdr|list|call-with-current-continuation|call\/cc|append|abs|apply|eval)\b|null\?|pair\?|boolean\?|eof-object\?|char\?|procedure\?|number\?|port\?|string\?|vector\?|symbol\?|bytevector\?)(?=[()\s]|$)/,
       lookbehind: true
     },
     number: {
-      pattern: /([\s()])[-+]?(?:\d+\/\d+|\d*\.?\d+(?:\s*[-+]\s*\d*\.?\d+i)?)\b/,
+      // This pattern (apart from the lookarounds) works like this:
+      //
+      // Decimal numbers
+      // <dec real>       := \d*\.?\d+(?:[eE][+-]?\d+)?|\d+\/\d+
+      // <dec complex>    := <dec real>(?:[+-]<dec real>i)?|<dec real>i
+      // <dec prefix>     := (?:#d(?:#[ei])?|#[ei](?:#d)?)?
+      // <dec number>     := <dec prefix>[+-]?<complex>
+      //
+      // Binary, octal, and hexadecimal numbers
+      // <b.o.x. real>    := [\da-fA-F]+(?:\/[\da-fA-F]+)?
+      // <b.o.x. complex> := <b.o.x. real>(?:[+-]<b.o.x. real>i)?|<b.o.x. real>i
+      // <b.o.x. prefix>  := #[box](?:#[ei])?|#[ei](?:#[box])?
+      // <b.o.x. number>  := <b.o.x. prefix>[+-]?<b.o.x. complex>
+      //
+      // <number>         := <dec number>|<b.o.x. number>
+      pattern: /(^|[\s()])(?:(?:#d(?:#[ei])?|#[ei](?:#d)?)?[+-]?(?:(?:\d*\.?\d+(?:[eE][+-]?\d+)?|\d+\/\d+)(?:[+-](?:\d*\.?\d+(?:[eE][+-]?\d+)?|\d+\/\d+)i)?|(?:\d*\.?\d+(?:[eE][+-]?\d+)?|\d+\/\d+)i)|(?:#[box](?:#[ei])?|#[ei](?:#[box])?)[+-]?(?:[\da-fA-F]+(?:\/[\da-fA-F]+)?(?:[+-][\da-fA-F]+(?:\/[\da-fA-F]+)?i)?|[\da-fA-F]+(?:\/[\da-fA-F]+)?i))(?=[()\s]|$)/,
       lookbehind: true
     },
-    boolean: /#[tf]/,
+    boolean: {
+      pattern: /(^|[\s()])#[ft](?=[()\s]|$)/,
+      lookbehind: true
+    },
     operator: {
-      pattern: /(\()(?:[-+*%\/]|[<>]=?|=>?)(?=\s|$)/,
+      pattern: /(\()(?:[-+*%\/]|[<>]=?|=>?)(?=[()\s]|$)/,
       lookbehind: true
     },
     function: {
-      pattern: /(\()[^()'\s]+(?=[()\s)]|$)/,
+      pattern: /(\()[^()'\s]+(?=[()\s]|$)/,
       lookbehind: true
     },
     punctuation: /[()']/
@@ -37058,11 +38078,12 @@ function scss(Prism) {
 
 "use strict";
 
-
+var refractorBash = __webpack_require__(/*! ./bash.js */ "./node_modules/refractor/lang/bash.js")
 module.exports = shellSession
 shellSession.displayName = 'shellSession'
 shellSession.aliases = []
 function shellSession(Prism) {
+  Prism.register(refractorBash)
   ;(function (Prism) {
     // CAREFUL!
     // The following patterns are concatenated, so the group referenced by a back reference is non-obvious!
@@ -37071,9 +38092,9 @@ function shellSession(Prism) {
       // 1 capturing group
       /(["'])(?:\\[\s\S]|\$\([^)]+\)|`[^`]+`|(?!\1)[^\\])*\1/.source, // here doc
       // 1 capturing group
-      /<<-?\s*(\w+?)\s*(?:\r?\n|\r)[\s\S]*?(?:\r?\n|\r)\2/.source, // here doc quoted
+      /<<-?\s*(\w+?)[ \t]*(?!.)[\s\S]*?[\r\n]\2/.source, // here doc quoted
       // 2 capturing group
-      /<<-?\s*(["'])(\w+)\3\s*(?:\r?\n|\r)[\s\S]*?(?:\r?\n|\r)\4/.source
+      /<<-?\s*(["'])(\w+)\3[ \t]*(?!.)[\s\S]*?[\r\n]\4/.source
     ].join('|')
     Prism.languages['shell-session'] = {
       info: {
@@ -37113,9 +38134,108 @@ function shellSession(Prism) {
           }
         }
       },
-      output: /.(?:.*(?:\r\n?|\n|.$))*/
+      output: /.(?:.*(?:[\r\n]|.$))*/
     }
   })(Prism)
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/refractor/lang/smali.js":
+/*!**********************************************!*\
+  !*** ./node_modules/refractor/lang/smali.js ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = smali
+smali.displayName = 'smali'
+smali.aliases = []
+function smali(Prism) {
+  // Test files for the parser itself:
+  // https://github.com/JesusFreke/smali/tree/master/smali/src/test/resources/LexerTest
+  Prism.languages.smali = {
+    comment: /#.*/,
+    string: {
+      pattern: /"(?:[^\r\n\\"]|\\.)*"|'(?:[^\r\n\\']|\\(?:.|u[\da-fA-F]{4}))'/,
+      greedy: true
+    },
+    'class-name': {
+      pattern: /L(?:(?:\w+|`[^`\r\n]*`)\/)*(?:[\w$]+|`[^`\r\n]*`)(?=\s*;)/,
+      inside: {
+        'class-name': {
+          pattern: /(^L|\/)(?:[\w$]+|`[^`\r\n]*`)$/,
+          lookbehind: true
+        },
+        namespace: {
+          pattern: /^(L)(?:(?:\w+|`[^`\r\n]*`)\/)+/,
+          lookbehind: true,
+          inside: {
+            punctuation: /\//
+          }
+        },
+        builtin: /^L/
+      }
+    },
+    builtin: [
+      {
+        // Reference: https://github.com/JesusFreke/smali/wiki/TypesMethodsAndFields#types
+        pattern: /([();\[])[BCDFIJSVZ]+/,
+        lookbehind: true
+      },
+      {
+        // e.g. .field mWifiOnUid:I
+        pattern: /([\w$>]:)[BCDFIJSVZ]/,
+        lookbehind: true
+      }
+    ],
+    keyword: [
+      {
+        pattern: /(\.end\s+)[\w-]+/,
+        lookbehind: true
+      },
+      {
+        pattern: /(^|[^\w.-])\.(?!\d)[\w-]+/,
+        lookbehind: true
+      },
+      {
+        pattern: /(^|[^\w.-])(?:abstract|annotation|bridge|constructor|enum|final|interface|private|protected|public|runtime|static|synthetic|system|transient)(?![\w.-])/,
+        lookbehind: true
+      }
+    ],
+    function: {
+      pattern: /(^|[^\w.-])(?:\w+|<[\w$-]+>)(?=\()/,
+      lookbehind: true
+    },
+    field: {
+      pattern: /[\w$]+(?=:)/,
+      alias: 'variable'
+    },
+    register: {
+      pattern: /(^|[^\w.-])[vp]\d(?![\w.-])/,
+      lookbehind: true,
+      alias: 'variable'
+    },
+    boolean: {
+      pattern: /(^|[^\w.-])(?:true|false)(?![\w.-])/,
+      lookbehind: true
+    },
+    number: {
+      pattern: /(^|[^/\w.-])-?(?:NAN|INFINITY|0x(?:[\dA-F]+(?:\.[\dA-F]*)?|\.[\dA-F]+)(?:p[+-]?[\dA-F]+)?|(?:\d+(?:\.\d*)?|\.\d+)(?:e[+-]?\d+)?)[dflst]?(?![\w.-])/i,
+      lookbehind: true
+    },
+    label: {
+      pattern: /(:)\w+/,
+      lookbehind: true,
+      alias: 'property'
+    },
+    operator: /->|\.\.|[\[=]/,
+    punctuation: /[{}(),;:]/
+  }
 }
 
 
@@ -37283,7 +38403,7 @@ Add support for {php}
 
 module.exports = solidity
 solidity.displayName = 'solidity'
-solidity.aliases = []
+solidity.aliases = ['sol']
 function solidity(Prism) {
   Prism.languages.solidity = Prism.languages.extend('clike', {
     'class-name': {
@@ -37303,6 +38423,7 @@ function solidity(Prism) {
       alias: 'number'
     }
   })
+  Prism.languages.sol = Prism.languages.solidity
 }
 
 
@@ -37648,7 +38769,7 @@ function sql(Prism) {
     },
     function: /\b(?:AVG|COUNT|FIRST|FORMAT|LAST|LCASE|LEN|MAX|MID|MIN|MOD|NOW|ROUND|SUM|UCASE)(?=\s*\()/i,
     // Should we highlight user defined functions too?
-    keyword: /\b(?:ACTION|ADD|AFTER|ALGORITHM|ALL|ALTER|ANALYZE|ANY|APPLY|AS|ASC|AUTHORIZATION|AUTO_INCREMENT|BACKUP|BDB|BEGIN|BERKELEYDB|BIGINT|BINARY|BIT|BLOB|BOOL|BOOLEAN|BREAK|BROWSE|BTREE|BULK|BY|CALL|CASCADED?|CASE|CHAIN|CHAR(?:ACTER|SET)?|CHECK(?:POINT)?|CLOSE|CLUSTERED|COALESCE|COLLATE|COLUMNS?|COMMENT|COMMIT(?:TED)?|COMPUTE|CONNECT|CONSISTENT|CONSTRAINT|CONTAINS(?:TABLE)?|CONTINUE|CONVERT|CREATE|CROSS|CURRENT(?:_DATE|_TIME|_TIMESTAMP|_USER)?|CURSOR|CYCLE|DATA(?:BASES?)?|DATE(?:TIME)?|DAY|DBCC|DEALLOCATE|DEC|DECIMAL|DECLARE|DEFAULT|DEFINER|DELAYED|DELETE|DELIMITERS?|DENY|DESC|DESCRIBE|DETERMINISTIC|DISABLE|DISCARD|DISK|DISTINCT|DISTINCTROW|DISTRIBUTED|DO|DOUBLE|DROP|DUMMY|DUMP(?:FILE)?|DUPLICATE|ELSE(?:IF)?|ENABLE|ENCLOSED|END|ENGINE|ENUM|ERRLVL|ERRORS|ESCAPED?|EXCEPT|EXEC(?:UTE)?|EXISTS|EXIT|EXPLAIN|EXTENDED|FETCH|FIELDS|FILE|FILLFACTOR|FIRST|FIXED|FLOAT|FOLLOWING|FOR(?: EACH ROW)?|FORCE|FOREIGN|FREETEXT(?:TABLE)?|FROM|FULL|FUNCTION|GEOMETRY(?:COLLECTION)?|GLOBAL|GOTO|GRANT|GROUP|HANDLER|HASH|HAVING|HOLDLOCK|HOUR|IDENTITY(?:_INSERT|COL)?|IF|IGNORE|IMPORT|INDEX|INFILE|INNER|INNODB|INOUT|INSERT|INT|INTEGER|INTERSECT|INTERVAL|INTO|INVOKER|ISOLATION|ITERATE|JOIN|KEYS?|KILL|LANGUAGE|LAST|LEAVE|LEFT|LEVEL|LIMIT|LINENO|LINES|LINESTRING|LOAD|LOCAL|LOCK|LONG(?:BLOB|TEXT)|LOOP|MATCH(?:ED)?|MEDIUM(?:BLOB|INT|TEXT)|MERGE|MIDDLEINT|MINUTE|MODE|MODIFIES|MODIFY|MONTH|MULTI(?:LINESTRING|POINT|POLYGON)|NATIONAL|NATURAL|NCHAR|NEXT|NO|NONCLUSTERED|NULLIF|NUMERIC|OFF?|OFFSETS?|ON|OPEN(?:DATASOURCE|QUERY|ROWSET)?|OPTIMIZE|OPTION(?:ALLY)?|ORDER|OUT(?:ER|FILE)?|OVER|PARTIAL|PARTITION|PERCENT|PIVOT|PLAN|POINT|POLYGON|PRECEDING|PRECISION|PREPARE|PREV|PRIMARY|PRINT|PRIVILEGES|PROC(?:EDURE)?|PUBLIC|PURGE|QUICK|RAISERROR|READS?|REAL|RECONFIGURE|REFERENCES|RELEASE|RENAME|REPEAT(?:ABLE)?|REPLACE|REPLICATION|REQUIRE|RESIGNAL|RESTORE|RESTRICT|RETURNS?|REVOKE|RIGHT|ROLLBACK|ROUTINE|ROW(?:COUNT|GUIDCOL|S)?|RTREE|RULE|SAVE(?:POINT)?|SCHEMA|SECOND|SELECT|SERIAL(?:IZABLE)?|SESSION(?:_USER)?|SET(?:USER)?|SHARE|SHOW|SHUTDOWN|SIMPLE|SMALLINT|SNAPSHOT|SOME|SONAME|SQL|START(?:ING)?|STATISTICS|STATUS|STRIPED|SYSTEM_USER|TABLES?|TABLESPACE|TEMP(?:ORARY|TABLE)?|TERMINATED|TEXT(?:SIZE)?|THEN|TIME(?:STAMP)?|TINY(?:BLOB|INT|TEXT)|TOP?|TRAN(?:SACTIONS?)?|TRIGGER|TRUNCATE|TSEQUAL|TYPES?|UNBOUNDED|UNCOMMITTED|UNDEFINED|UNION|UNIQUE|UNLOCK|UNPIVOT|UNSIGNED|UPDATE(?:TEXT)?|USAGE|USE|USER|USING|VALUES?|VAR(?:BINARY|CHAR|CHARACTER|YING)|VIEW|WAITFOR|WARNINGS|WHEN|WHERE|WHILE|WITH(?: ROLLUP|IN)?|WORK|WRITE(?:TEXT)?|YEAR)\b/i,
+    keyword: /\b(?:ACTION|ADD|AFTER|ALGORITHM|ALL|ALTER|ANALYZE|ANY|APPLY|AS|ASC|AUTHORIZATION|AUTO_INCREMENT|BACKUP|BDB|BEGIN|BERKELEYDB|BIGINT|BINARY|BIT|BLOB|BOOL|BOOLEAN|BREAK|BROWSE|BTREE|BULK|BY|CALL|CASCADED?|CASE|CHAIN|CHAR(?:ACTER|SET)?|CHECK(?:POINT)?|CLOSE|CLUSTERED|COALESCE|COLLATE|COLUMNS?|COMMENT|COMMIT(?:TED)?|COMPUTE|CONNECT|CONSISTENT|CONSTRAINT|CONTAINS(?:TABLE)?|CONTINUE|CONVERT|CREATE|CROSS|CURRENT(?:_DATE|_TIME|_TIMESTAMP|_USER)?|CURSOR|CYCLE|DATA(?:BASES?)?|DATE(?:TIME)?|DAY|DBCC|DEALLOCATE|DEC|DECIMAL|DECLARE|DEFAULT|DEFINER|DELAYED|DELETE|DELIMITERS?|DENY|DESC|DESCRIBE|DETERMINISTIC|DISABLE|DISCARD|DISK|DISTINCT|DISTINCTROW|DISTRIBUTED|DO|DOUBLE|DROP|DUMMY|DUMP(?:FILE)?|DUPLICATE|ELSE(?:IF)?|ENABLE|ENCLOSED|END|ENGINE|ENUM|ERRLVL|ERRORS|ESCAPED?|EXCEPT|EXEC(?:UTE)?|EXISTS|EXIT|EXPLAIN|EXTENDED|FETCH|FIELDS|FILE|FILLFACTOR|FIRST|FIXED|FLOAT|FOLLOWING|FOR(?: EACH ROW)?|FORCE|FOREIGN|FREETEXT(?:TABLE)?|FROM|FULL|FUNCTION|GEOMETRY(?:COLLECTION)?|GLOBAL|GOTO|GRANT|GROUP|HANDLER|HASH|HAVING|HOLDLOCK|HOUR|IDENTITY(?:_INSERT|COL)?|IF|IGNORE|IMPORT|INDEX|INFILE|INNER|INNODB|INOUT|INSERT|INT|INTEGER|INTERSECT|INTERVAL|INTO|INVOKER|ISOLATION|ITERATE|JOIN|KEYS?|KILL|LANGUAGE|LAST|LEAVE|LEFT|LEVEL|LIMIT|LINENO|LINES|LINESTRING|LOAD|LOCAL|LOCK|LONG(?:BLOB|TEXT)|LOOP|MATCH(?:ED)?|MEDIUM(?:BLOB|INT|TEXT)|MERGE|MIDDLEINT|MINUTE|MODE|MODIFIES|MODIFY|MONTH|MULTI(?:LINESTRING|POINT|POLYGON)|NATIONAL|NATURAL|NCHAR|NEXT|NO|NONCLUSTERED|NULLIF|NUMERIC|OFF?|OFFSETS?|ON|OPEN(?:DATASOURCE|QUERY|ROWSET)?|OPTIMIZE|OPTION(?:ALLY)?|ORDER|OUT(?:ER|FILE)?|OVER|PARTIAL|PARTITION|PERCENT|PIVOT|PLAN|POINT|POLYGON|PRECEDING|PRECISION|PREPARE|PREV|PRIMARY|PRINT|PRIVILEGES|PROC(?:EDURE)?|PUBLIC|PURGE|QUICK|RAISERROR|READS?|REAL|RECONFIGURE|REFERENCES|RELEASE|RENAME|REPEAT(?:ABLE)?|REPLACE|REPLICATION|REQUIRE|RESIGNAL|RESTORE|RESTRICT|RETURN(?:S|ING)?|REVOKE|RIGHT|ROLLBACK|ROUTINE|ROW(?:COUNT|GUIDCOL|S)?|RTREE|RULE|SAVE(?:POINT)?|SCHEMA|SECOND|SELECT|SERIAL(?:IZABLE)?|SESSION(?:_USER)?|SET(?:USER)?|SHARE|SHOW|SHUTDOWN|SIMPLE|SMALLINT|SNAPSHOT|SOME|SONAME|SQL|START(?:ING)?|STATISTICS|STATUS|STRIPED|SYSTEM_USER|TABLES?|TABLESPACE|TEMP(?:ORARY|TABLE)?|TERMINATED|TEXT(?:SIZE)?|THEN|TIME(?:STAMP)?|TINY(?:BLOB|INT|TEXT)|TOP?|TRAN(?:SACTIONS?)?|TRIGGER|TRUNCATE|TSEQUAL|TYPES?|UNBOUNDED|UNCOMMITTED|UNDEFINED|UNION|UNIQUE|UNLOCK|UNPIVOT|UNSIGNED|UPDATE(?:TEXT)?|USAGE|USE|USER|USING|VALUES?|VAR(?:BINARY|CHAR|CHARACTER|YING)|VIEW|WAITFOR|WARNINGS|WHEN|WHERE|WHILE|WITH(?: ROLLUP|IN)?|WORK|WRITE(?:TEXT)?|YEAR)\b/i,
     boolean: /\b(?:TRUE|FALSE|NULL)\b/i,
     number: /\b0x[\da-f]+\b|\b\d+\.?\d*|\B\.\d+\b/i,
     operator: /[-+*\/=%^~]|&&?|\|\|?|!=?|<(?:=>?|<|>)?|>[>=]?|\b(?:AND|BETWEEN|IN|LIKE|NOT|OR|IS|DIV|REGEXP|RLIKE|SOUNDS LIKE|XOR)\b/i,
@@ -37674,8 +38795,23 @@ stylus.displayName = 'stylus'
 stylus.aliases = []
 function stylus(Prism) {
   ;(function (Prism) {
+    var unit = {
+      pattern: /(\b\d+)(?:%|[a-z]+)/,
+      lookbehind: true
+    } // 123 -123 .123 -.123 12.3 -12.3
+    var number = {
+      pattern: /(^|[^\w.-])-?\d*\.?\d+/,
+      lookbehind: true
+    }
     var inside = {
-      url: /url\((["']?).*?\1\)/i,
+      comment: {
+        pattern: /(^|[^\\])(?:\/\*[\s\S]*?\*\/|\/\/.*)/,
+        lookbehind: true
+      },
+      url: {
+        pattern: /url\((["']?).*?\1\)/i,
+        greedy: true
+      },
       string: {
         pattern: /("|')(?:(?!\1)[^\\\r\n]|\\(?:\r\n|[\s\S]))*\1/,
         greedy: true
@@ -37690,13 +38826,27 @@ function stylus(Prism) {
         lookbehind: true
       },
       hexcode: /#[\da-f]{3,6}/i,
-      number: /\b\d+(?:\.\d+)?%?/,
+      color: [
+        /\b(?:AliceBlue|AntiqueWhite|Aqua|Aquamarine|Azure|Beige|Bisque|Black|BlanchedAlmond|Blue|BlueViolet|Brown|BurlyWood|CadetBlue|Chartreuse|Chocolate|Coral|CornflowerBlue|Cornsilk|Crimson|Cyan|DarkBlue|DarkCyan|DarkGoldenRod|DarkGr[ae]y|DarkGreen|DarkKhaki|DarkMagenta|DarkOliveGreen|DarkOrange|DarkOrchid|DarkRed|DarkSalmon|DarkSeaGreen|DarkSlateBlue|DarkSlateGr[ae]y|DarkTurquoise|DarkViolet|DeepPink|DeepSkyBlue|DimGr[ae]y|DodgerBlue|FireBrick|FloralWhite|ForestGreen|Fuchsia|Gainsboro|GhostWhite|Gold|GoldenRod|Gr[ae]y|Green|GreenYellow|HoneyDew|HotPink|IndianRed|Indigo|Ivory|Khaki|Lavender|LavenderBlush|LawnGreen|LemonChiffon|LightBlue|LightCoral|LightCyan|LightGoldenRodYellow|LightGr[ae]y|LightGreen|LightPink|LightSalmon|LightSeaGreen|LightSkyBlue|LightSlateGr[ae]y|LightSteelBlue|LightYellow|Lime|LimeGreen|Linen|Magenta|Maroon|MediumAquaMarine|MediumBlue|MediumOrchid|MediumPurple|MediumSeaGreen|MediumSlateBlue|MediumSpringGreen|MediumTurquoise|MediumVioletRed|MidnightBlue|MintCream|MistyRose|Moccasin|NavajoWhite|Navy|OldLace|Olive|OliveDrab|Orange|OrangeRed|Orchid|PaleGoldenRod|PaleGreen|PaleTurquoise|PaleVioletRed|PapayaWhip|PeachPuff|Peru|Pink|Plum|PowderBlue|Purple|Red|RosyBrown|RoyalBlue|SaddleBrown|Salmon|SandyBrown|SeaGreen|SeaShell|Sienna|Silver|SkyBlue|SlateBlue|SlateGr[ae]y|Snow|SpringGreen|SteelBlue|Tan|Teal|Thistle|Tomato|Transparent|Turquoise|Violet|Wheat|White|WhiteSmoke|Yellow|YellowGreen)\b/i,
+        {
+          pattern: /\b(?:rgb|hsl)\(\s*\d{1,3}\s*,\s*\d{1,3}%?\s*,\s*\d{1,3}%?\s*\)\B|\b(?:rgb|hsl)a\(\s*\d{1,3}\s*,\s*\d{1,3}%?\s*,\s*\d{1,3}%?\s*,\s*(?:0|0?\.\d+|1)\s*\)\B/i,
+          inside: {
+            unit: unit,
+            number: number,
+            function: /[\w-]+(?=\()/,
+            punctuation: /[(),]/
+          }
+        }
+      ],
+      entity: /\\[\da-f]{1,8}/i,
+      unit: unit,
       boolean: /\b(?:true|false)\b/,
       operator: [
         // We want non-word chars around "-" because it is
         // accepted in property names.
-        /~|[+!\/%<>?=]=?|[-:]=|\*[*=]?|\.+|&&|\|\||\B-\B|\b(?:and|in|is(?: a| defined| not|nt)?|not|or)\b/
+        /~|[+!\/%<>?=]=?|[-:]=|\*[*=]?|\.{2,3}|&&|\|\||\B-\B|\b(?:and|in|is(?: a| defined| not|nt)?|not|or)\b/
       ],
+      number: number,
       punctuation: /[{}()\[\];:,]/
     }
     inside['interpolation'] = {
@@ -37718,10 +38868,6 @@ function stylus(Prism) {
       }
     }
     Prism.languages.stylus = {
-      comment: {
-        pattern: /(^|[^\\])(?:\/\*[\s\S]*?\*\/|\/\/.*)/,
-        lookbehind: true
-      },
       'atrule-declaration': {
         pattern: /(^\s*)@.+/m,
         lookbehind: true,
@@ -37769,11 +38915,17 @@ function stylus(Prism) {
         lookbehind: true,
         inside: {
           interpolation: inside.interpolation,
+          comment: inside.comment,
           punctuation: /[{},]/
         }
       },
       func: inside.func,
       string: inside.string,
+      comment: {
+        pattern: /(^|[^\\])(?:\/\*[\s\S]*?\*\/|\/\/.*)/,
+        lookbehind: true,
+        greedy: true
+      },
       interpolation: inside.interpolation,
       punctuation: /[{}()\[\];:.]/
     }
@@ -37837,11 +38989,13 @@ function swift(Prism) {
 "use strict";
 
 var refractorT4Templating = __webpack_require__(/*! ./t4-templating.js */ "./node_modules/refractor/lang/t4-templating.js")
+var refractorCsharp = __webpack_require__(/*! ./csharp.js */ "./node_modules/refractor/lang/csharp.js")
 module.exports = t4Cs
 t4Cs.displayName = 't4Cs'
 t4Cs.aliases = []
 function t4Cs(Prism) {
   Prism.register(refractorT4Templating)
+  Prism.register(refractorCsharp)
   Prism.languages.t4 = Prism.languages['t4-cs'] = Prism.languages[
     't4-templating'
   ].createT4('csharp')
@@ -37925,14 +39079,14 @@ function t4Templating(Prism) {
 "use strict";
 
 var refractorT4Templating = __webpack_require__(/*! ./t4-templating.js */ "./node_modules/refractor/lang/t4-templating.js")
+var refractorVbnet = __webpack_require__(/*! ./vbnet.js */ "./node_modules/refractor/lang/vbnet.js")
 module.exports = t4Vb
 t4Vb.displayName = 't4Vb'
 t4Vb.aliases = []
 function t4Vb(Prism) {
   Prism.register(refractorT4Templating)
-  Prism.languages['t4-vb'] = Prism.languages['t4-templating'].createT4(
-    'visual-basic'
-  )
+  Prism.register(refractorVbnet)
+  Prism.languages['t4-vb'] = Prism.languages['t4-templating'].createT4('vbnet')
 }
 
 
@@ -37947,11 +39101,12 @@ function t4Vb(Prism) {
 
 "use strict";
 
-
+var refractorYaml = __webpack_require__(/*! ./yaml.js */ "./node_modules/refractor/lang/yaml.js")
 module.exports = tap
 tap.displayName = 'tap'
 tap.aliases = []
 function tap(Prism) {
+  Prism.register(refractorYaml)
   Prism.languages.tap = {
     fail: /not ok[^#{\n\r]*/,
     pass: /ok[^#{\n\r]*/,
@@ -38059,7 +39214,25 @@ function textile(Prism) {
   ;(function (Prism) {
     // We don't allow for pipes inside parentheses
     // to not break table pattern |(. foo |). bar |
-    var modifierRegex = /(?:\([^|)]+\)|\[[^\]]+\]|\{[^}]+\})+/.source
+    var modifierRegex = /\([^|()\n]+\)|\[[^\]\n]+\]|\{[^}\n]+\}/.source // Opening and closing parentheses which are not a modifier
+    // This pattern is necessary to prevent exponential backtracking
+    var parenthesesRegex = /\)|\((?![^|()\n]+\))/.source
+    /**
+     * @param {string} source
+     * @param {string} [flags]
+     */
+    function withModifier(source, flags) {
+      return RegExp(
+        source
+          .replace(/<MOD>/g, function () {
+            return '(?:' + modifierRegex + ')'
+          })
+          .replace(/<PAR>/g, function () {
+            return '(?:' + parenthesesRegex + ')'
+          }),
+        flags || ''
+      )
+    }
     var modifierTokens = {
       css: {
         pattern: /\{[^}]+\}/,
@@ -38087,11 +39260,11 @@ function textile(Prism) {
         inside: {
           // h1. Header 1
           'block-tag': {
-            pattern: RegExp('^[a-z]\\w*(?:' + modifierRegex + '|[<>=()])*\\.'),
+            pattern: withModifier(/^[a-z]\w*(?:<MOD>|<PAR>|[<>=])*\./.source),
             inside: {
               modifier: {
-                pattern: RegExp(
-                  '(^[a-z]\\w*)(?:' + modifierRegex + '|[<>=()])+(?=\\.)'
+                pattern: withModifier(
+                  /(^[a-z]\w*)(?:<MOD>|<PAR>|[<>=])+(?=\.)/.source
                 ),
                 lookbehind: true,
                 inside: modifierTokens
@@ -38103,10 +39276,10 @@ function textile(Prism) {
           // # List item
           // * List item
           list: {
-            pattern: RegExp('^[*#]+(?:' + modifierRegex + ')?\\s+.+', 'm'),
+            pattern: withModifier(/^[*#]+<MOD>*\s+.+/.source, 'm'),
             inside: {
               modifier: {
-                pattern: RegExp('(^[*#]+)' + modifierRegex),
+                pattern: withModifier(/(^[*#]+)<MOD>+/.source),
                 lookbehind: true,
                 inside: modifierTokens
               },
@@ -38117,22 +39290,18 @@ function textile(Prism) {
           table: {
             // Modifiers can be applied to the row: {color:red}.|1|2|3|
             // or the cell: |{color:red}.1|2|3|
-            pattern: RegExp(
-              '^(?:(?:' +
-                modifierRegex +
-                '|[<>=()^~])+\\.\\s*)?(?:\\|(?:(?:' +
-                modifierRegex +
-                '|[<>=()^~_]|[\\\\/]\\d+)+\\.)?[^|]*)+\\|',
+            pattern: withModifier(
+              /^(?:(?:<MOD>|<PAR>|[<>=^~])+\.\s*)?(?:\|(?:(?:<MOD>|<PAR>|[<>=^~_]|[\\/]\d+)+\.)?[^|]*)+\|/
+                .source,
               'm'
             ),
             inside: {
               modifier: {
                 // Modifiers for rows after the first one are
                 // preceded by a pipe and a line feed
-                pattern: RegExp(
-                  '(^|\\|(?:\\r?\\n|\\r)?)(?:' +
-                    modifierRegex +
-                    '|[<>=()^~_]|[\\\\/]\\d+)+(?=\\.)'
+                pattern: withModifier(
+                  /(^|\|(?:\r?\n|\r)?)(?:<MOD>|<PAR>|[<>=^~_]|[\\/]\d+)+(?=\.)/
+                    .source
                 ),
                 lookbehind: true,
                 inside: modifierTokens
@@ -38141,55 +39310,53 @@ function textile(Prism) {
             }
           },
           inline: {
-            pattern: RegExp(
-              '(\\*\\*|__|\\?\\?|[*_%@+\\-^~])(?:' + modifierRegex + ')?.+?\\1'
+            pattern: withModifier(
+              /(^|[^a-zA-Z\d])(\*\*|__|\?\?|[*_%@+\-^~])<MOD>*.+?\2(?![a-zA-Z\d])/
+                .source
             ),
+            lookbehind: true,
             inside: {
               // Note: superscripts and subscripts are not handled specifically
               // *bold*, **bold**
               bold: {
-                pattern: RegExp(
-                  '(^(\\*\\*?)(?:' + modifierRegex + ')?).+?(?=\\2)'
-                ),
+                pattern: withModifier(/(^(\*\*?)<MOD>*).+?(?=\2)/.source),
                 lookbehind: true
               },
               // _italic_, __italic__
               italic: {
-                pattern: RegExp('(^(__?)(?:' + modifierRegex + ')?).+?(?=\\2)'),
+                pattern: withModifier(/(^(__?)<MOD>*).+?(?=\2)/.source),
                 lookbehind: true
               },
               // ??cite??
               cite: {
-                pattern: RegExp(
-                  '(^\\?\\?(?:' + modifierRegex + ')?).+?(?=\\?\\?)'
-                ),
+                pattern: withModifier(/(^\?\?<MOD>*).+?(?=\?\?)/.source),
                 lookbehind: true,
                 alias: 'string'
               },
               // @code@
               code: {
-                pattern: RegExp('(^@(?:' + modifierRegex + ')?).+?(?=@)'),
+                pattern: withModifier(/(^@<MOD>*).+?(?=@)/.source),
                 lookbehind: true,
                 alias: 'keyword'
               },
               // +inserted+
               inserted: {
-                pattern: RegExp('(^\\+(?:' + modifierRegex + ')?).+?(?=\\+)'),
+                pattern: withModifier(/(^\+<MOD>*).+?(?=\+)/.source),
                 lookbehind: true
               },
               // -deleted-
               deleted: {
-                pattern: RegExp('(^-(?:' + modifierRegex + ')?).+?(?=-)'),
+                pattern: withModifier(/(^-<MOD>*).+?(?=-)/.source),
                 lookbehind: true
               },
               // %span%
               span: {
-                pattern: RegExp('(^%(?:' + modifierRegex + ')?).+?(?=%)'),
+                pattern: withModifier(/(^%<MOD>*).+?(?=%)/.source),
                 lookbehind: true
               },
               modifier: {
-                pattern: RegExp(
-                  '(^\\*\\*|__|\\?\\?|[*_%@+\\-^~])' + modifierRegex
+                pattern: withModifier(
+                  /(^\*\*|__|\?\?|[*_%@+\-^~])<MOD>+/.source
                 ),
                 lookbehind: true,
                 inside: modifierTokens
@@ -38215,16 +39382,16 @@ function textile(Prism) {
           // "text":http://example.com
           // "text":link-ref
           link: {
-            pattern: RegExp(
-              '"(?:' + modifierRegex + ')?[^"]+":.+?(?=[^\\w/]?(?:\\s|$))'
+            pattern: withModifier(
+              /"<MOD>*[^"]+":.+?(?=[^\w/]?(?:\s|$))/.source
             ),
             inside: {
               text: {
-                pattern: RegExp('(^"(?:' + modifierRegex + ')?)[^"]+(?=")'),
+                pattern: withModifier(/(^"<MOD>*)[^"]+(?=")/.source),
                 lookbehind: true
               },
               modifier: {
-                pattern: RegExp('(^")' + modifierRegex),
+                pattern: withModifier(/(^")<MOD>+/.source),
                 lookbehind: true,
                 inside: modifierTokens
               },
@@ -38238,23 +39405,21 @@ function textile(Prism) {
           // !image.jpg!
           // !image.jpg(Title)!:http://example.com
           image: {
-            pattern: RegExp(
-              '!(?:' +
-                modifierRegex +
-                '|[<>=()])*[^!\\s()]+(?:\\([^)]+\\))?!(?::.+?(?=[^\\w/]?(?:\\s|$)))?'
+            pattern: withModifier(
+              /!(?:<MOD>|<PAR>|[<>=])*[^!\s()]+(?:\([^)]+\))?!(?::.+?(?=[^\w/]?(?:\s|$)))?/
+                .source
             ),
             inside: {
               source: {
-                pattern: RegExp(
-                  '(^!(?:' +
-                    modifierRegex +
-                    '|[<>=()])*)[^!\\s()]+(?:\\([^)]+\\))?(?=!)'
+                pattern: withModifier(
+                  /(^!(?:<MOD>|<PAR>|[<>=])*)[^!\s()]+(?:\([^)]+\))?(?=!)/
+                    .source
                 ),
                 lookbehind: true,
                 alias: 'url'
               },
               modifier: {
-                pattern: RegExp('(^!)(?:' + modifierRegex + '|[<>=()])+'),
+                pattern: withModifier(/(^!)(?:<MOD>|<PAR>|[<>=])+/.source),
                 lookbehind: true,
                 inside: modifierTokens
               },
@@ -38339,8 +39504,15 @@ toml.displayName = 'toml'
 toml.aliases = []
 function toml(Prism) {
   ;(function (Prism) {
-    // pattern: /(?:[\w-]+|'[^'\n\r]*'|"(?:\.|[^\\"\r\n])*")/
-    var key = '(?:[\\w-]+|\'[^\'\n\r]*\'|"(?:\\.|[^\\\\"\r\n])*")'
+    var key = /(?:[\w-]+|'[^'\n\r]*'|"(?:\\.|[^\\"\r\n])*")/.source
+    /**
+     * @param {string} pattern
+     */
+    function insertKey(pattern) {
+      return pattern.replace(/__/g, function () {
+        return key
+      })
+    }
     Prism.languages.toml = {
       comment: {
         pattern: /#.*/,
@@ -38348,11 +39520,7 @@ function toml(Prism) {
       },
       table: {
         pattern: RegExp(
-          '(^\\s*\\[\\s*(?:\\[\\s*)?)' +
-            key +
-            '(?:\\s*\\.\\s*' +
-            key +
-            ')*(?=\\s*\\])',
+          insertKey(/(^\s*\[\s*(?:\[\s*)?)__(?:\s*\.\s*__)*(?=\s*\])/.source),
           'm'
         ),
         lookbehind: true,
@@ -38361,7 +39529,7 @@ function toml(Prism) {
       },
       key: {
         pattern: RegExp(
-          '(^\\s*|[{,]\\s*)' + key + '(?:\\s*\\.\\s*' + key + ')*(?=\\s*=)',
+          insertKey(/(^\s*|[{,]\s*)__(?:\s*\.\s*__)*(?=\s*=)/.source),
           'm'
         ),
         lookbehind: true,
@@ -38375,16 +39543,16 @@ function toml(Prism) {
       date: [
         {
           // Offset Date-Time, Local Date-Time, Local Date
-          pattern: /\d{4}-\d{2}-\d{2}(?:[T\s]\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})?)?/i,
+          pattern: /\b\d{4}-\d{2}-\d{2}(?:[T\s]\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})?)?\b/i,
           alias: 'number'
         },
         {
           // Local Time
-          pattern: /\d{2}:\d{2}:\d{2}(?:\.\d+)?/i,
+          pattern: /\b\d{2}:\d{2}:\d{2}(?:\.\d+)?\b/,
           alias: 'number'
         }
       ],
-      number: /(?:\b0(?:x[\da-zA-Z]+(?:_[\da-zA-Z]+)*|o[0-7]+(?:_[0-7]+)*|b[10]+(?:_[10]+)*))\b|[-+]?\d+(?:_\d+)*(?:\.\d+(?:_\d+)*)?(?:[eE][+-]?\d+(?:_\d+)*)?\b|[-+]?(?:inf|nan)\b/,
+      number: /(?:\b0(?:x[\da-zA-Z]+(?:_[\da-zA-Z]+)*|o[0-7]+(?:_[0-7]+)*|b[10]+(?:_[10]+)*))\b|[-+]?\b\d+(?:_\d+)*(?:\.\d+(?:_\d+)*)?(?:[eE][+-]?\d+(?:_\d+)*)?\b|[-+]?\b(?:inf|nan)\b/,
       boolean: /\b(?:true|false)\b/,
       punctuation: /[.,=[\]{}]/
     }
@@ -38442,7 +39610,7 @@ function tt2(Prism) {
     Prism.languages.insertBefore('tt2', 'number', {
       operator: /=[>=]?|!=?|<=?|>=?|&&|\|\|?|\b(?:and|or|not)\b/,
       variable: {
-        pattern: /[a-z]\w*(?:\s*\.\s*(?:\d+|\$?[a-z]\w*))*/i
+        pattern: /\b[a-z]\w*(?:\s*\.\s*(?:\d+|\$?[a-z]\w*))*\b/i
       }
     })
     Prism.languages.insertBefore('tt2', 'keyword', {
@@ -38518,7 +39686,7 @@ function turtle(Prism) {
       greedy: true
     },
     url: {
-      pattern: /<(?:[^\x00-\x20<>"{}|^`\\]|\\(?:u[\da-f]{4}|U[\da-f]{8}))*>/i,
+      pattern: /<(?:[^\x00-\x20<>"{}|^`\\]|\\(?:u[\da-fA-F]{4}|U[\da-fA-F]{8}))*>/,
       greedy: true,
       inside: {
         punctuation: /[<>]/
@@ -38634,12 +39802,98 @@ module.exports = typescript
 typescript.displayName = 'typescript'
 typescript.aliases = ['ts']
 function typescript(Prism) {
-  Prism.languages.typescript = Prism.languages.extend('javascript', {
-    // From JavaScript Prism keyword list and TypeScript language spec: https://github.com/Microsoft/TypeScript/blob/master/doc/spec.md#221-reserved-words
-    keyword: /\b(?:abstract|as|async|await|break|case|catch|class|const|constructor|continue|debugger|declare|default|delete|do|else|enum|export|extends|finally|for|from|function|get|if|implements|import|in|instanceof|interface|is|keyof|let|module|namespace|new|null|of|package|private|protected|public|readonly|return|require|set|static|super|switch|this|throw|try|type|typeof|undefined|var|void|while|with|yield)\b/,
-    builtin: /\b(?:string|Function|any|number|boolean|Array|symbol|console|Promise|unknown|never)\b/
-  })
-  Prism.languages.ts = Prism.languages.typescript
+  ;(function (Prism) {
+    Prism.languages.typescript = Prism.languages.extend('javascript', {
+      'class-name': {
+        pattern: /(\b(?:class|extends|implements|instanceof|interface|new|type)\s+)(?!keyof\b)[_$a-zA-Z\xA0-\uFFFF][$\w\xA0-\uFFFF]*(?:\s*<(?:[^<>]|<(?:[^<>]|<[^<>]*>)*>)*>)?/,
+        lookbehind: true,
+        greedy: true,
+        inside: null // see below
+      },
+      // From JavaScript Prism keyword list and TypeScript language spec: https://github.com/Microsoft/TypeScript/blob/master/doc/spec.md#221-reserved-words
+      keyword: /\b(?:abstract|as|asserts|async|await|break|case|catch|class|const|constructor|continue|debugger|declare|default|delete|do|else|enum|export|extends|finally|for|from|function|get|if|implements|import|in|instanceof|interface|is|keyof|let|module|namespace|new|null|of|package|private|protected|public|readonly|return|require|set|static|super|switch|this|throw|try|type|typeof|undefined|var|void|while|with|yield)\b/,
+      builtin: /\b(?:string|Function|any|number|boolean|Array|symbol|console|Promise|unknown|never)\b/
+    }) // doesn't work with TS because TS is too complex
+    delete Prism.languages.typescript['parameter'] // a version of typescript specifically for highlighting types
+    var typeInside = Prism.languages.extend('typescript', {})
+    delete typeInside['class-name']
+    Prism.languages.typescript['class-name'].inside = typeInside
+    Prism.languages.insertBefore('typescript', 'function', {
+      'generic-function': {
+        // e.g. foo<T extends "bar" | "baz">( ...
+        pattern: /#?[_$a-zA-Z\xA0-\uFFFF][$\w\xA0-\uFFFF]*\s*<(?:[^<>]|<(?:[^<>]|<[^<>]*>)*>)*>(?=\s*\()/,
+        greedy: true,
+        inside: {
+          function: /^#?[_$a-zA-Z\xA0-\uFFFF][$\w\xA0-\uFFFF]*/,
+          generic: {
+            pattern: /<[\s\S]+/,
+            // everything after the first <
+            alias: 'class-name',
+            inside: typeInside
+          }
+        }
+      }
+    })
+    Prism.languages.ts = Prism.languages.typescript
+  })(Prism)
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/refractor/lang/unrealscript.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/refractor/lang/unrealscript.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = unrealscript
+unrealscript.displayName = 'unrealscript'
+unrealscript.aliases = ['uc', 'uscript']
+function unrealscript(Prism) {
+  Prism.languages.unrealscript = {
+    comment: /\/\/.*|\/\*[\s\S]*?\*\//,
+    string: {
+      pattern: /(["'])(?:\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/,
+      greedy: true
+    },
+    category: {
+      pattern: /(\b(?:(?:autoexpand|hide|show)categories|var)\s*\()[^()]+(?=\))/,
+      lookbehind: true,
+      greedy: true,
+      alias: 'property'
+    },
+    metadata: {
+      pattern: /(\w\s*)<\s*\w+\s*=[^<>|=\r\n]+(?:\|\s*\w+\s*=[^<>|=\r\n]+)*>/,
+      lookbehind: true,
+      greedy: true,
+      inside: {
+        property: /\w+(?=\s*=)/,
+        operator: /=/,
+        punctuation: /[<>|]/
+      }
+    },
+    macro: {
+      pattern: /`\w+/,
+      alias: 'property'
+    },
+    'class-name': {
+      pattern: /(\b(?:class|enum|extends|interface|state(?:\(\))?|struct|within)\s+)\w+/,
+      lookbehind: true
+    },
+    keyword: /\b(?:abstract|actor|array|auto|autoexpandcategories|bool|break|byte|case|class|classgroup|client|coerce|collapsecategories|config|const|continue|default|defaultproperties|delegate|dependson|deprecated|do|dontcollapsecategories|editconst|editinlinenew|else|enum|event|exec|export|extends|final|float|for|forcescriptorder|foreach|function|goto|guid|hidecategories|hidedropdown|if|ignores|implements|inherits|input|int|interface|iterator|latent|local|material|name|native|nativereplication|noexport|nontransient|noteditinlinenew|notplaceable|operator|optional|out|pawn|perobjectconfig|perobjectlocalized|placeable|postoperator|preoperator|private|protected|reliable|replication|return|server|showcategories|simulated|singular|state|static|string|struct|structdefault|structdefaultproperties|switch|texture|transient|travel|unreliable|until|var|vector|while|within)\b/,
+    function: /[a-z_]\w*(?=\s*\()/i,
+    boolean: /\b(?:false|true)\b/,
+    number: /\b0x[\da-f]+\b|(?:\b\d+\.?\d*|\B\.\d+)(?:e[+-]?\d+)?/i,
+    // https://docs.unrealengine.com/udk/Three/UnrealScriptExpressions.html
+    operator: />>|<<|--|\+\+|\*\*|[-+*/~!=<>$@]=?|&&?|\|\|?|\^\^?|[?:%]|\b(?:Cross|Dot|ClockwiseFrom)\b/,
+    punctuation: /[()[\]{};,.]/
+  }
+  Prism.languages.uc = Prism.languages.uscript = Prism.languages.unrealscript
 }
 
 
@@ -38999,12 +40253,12 @@ function visualBasic(Prism) {
       greedy: true
     },
     date: {
-      pattern: /#[^\S\r\n]*(?:\d+([/-])\d+\1\d+(?:[^\S\r\n]+(?:\d+[^\S\r\n]*(?:AM|PM)|\d+:\d+(?::\d+)?(?:[^\S\r\n]*(?:AM|PM))?))?|(?:\d+[^\S\r\n]*(?:AM|PM)|\d+:\d+(?::\d+)?(?:[^\S\r\n]*(?:AM|PM))?))[^\S\r\n]*#/i,
+      pattern: /#[^\S\r\n]*(?:\d+([/-])\d+\1\d+(?:[^\S\r\n]+(?:\d+[^\S\r\n]*(?:AM|PM)|\d+:\d+(?::\d+)?(?:[^\S\r\n]*(?:AM|PM))?))?|\d+[^\S\r\n]*(?:AM|PM)|\d+:\d+(?::\d+)?(?:[^\S\r\n]*(?:AM|PM))?)[^\S\r\n]*#/i,
       alias: 'builtin'
     },
     number: /(?:(?:\b\d+(?:\.\d+)?|\.\d+)(?:E[+-]?\d+)?|&[HO][\dA-F]+)(?:U?[ILS]|[FRD])?/i,
     boolean: /\b(?:True|False|Nothing)\b/i,
-    keyword: /\b(?:AddHandler|AddressOf|Alias|And(?:Also)?|As|Boolean|ByRef|Byte|ByVal|Call|Case|Catch|C(?:Bool|Byte|Char|Date|Dbl|Dec|Int|Lng|Obj|SByte|Short|Sng|Str|Type|UInt|ULng|UShort)|Char|Class|Const|Continue|Date|Decimal|Declare|Default|Delegate|Dim|DirectCast|Do|Double|Each|Else(?:If)?|End(?:If)?|Enum|Erase|Error|Event|Exit|Finally|For|Friend|Function|Get(?:Type|XMLNamespace)?|Global|GoSub|GoTo|Handles|If|Implements|Imports|In|Inherits|Integer|Interface|Is|IsNot|Let|Lib|Like|Long|Loop|Me|Mod|Module|Must(?:Inherit|Override)|My(?:Base|Class)|Namespace|Narrowing|New|Next|Not(?:Inheritable|Overridable)?|Object|Of|On|Operator|Option(?:al)?|Or(?:Else)?|Out|Overloads|Overridable|Overrides|ParamArray|Partial|Private|Property|Protected|Public|RaiseEvent|ReadOnly|ReDim|RemoveHandler|Resume|Return|SByte|Select|Set|Shadows|Shared|short|Single|Static|Step|Stop|String|Structure|Sub|SyncLock|Then|Throw|To|Try|TryCast|TypeOf|U(?:Integer|Long|Short)|Using|Variant|Wend|When|While|Widening|With(?:Events)?|WriteOnly|Xor)\b/i,
+    keyword: /\b(?:AddHandler|AddressOf|Alias|And(?:Also)?|As|Boolean|ByRef|Byte|ByVal|Call|Case|Catch|C(?:Bool|Byte|Char|Date|Dbl|Dec|Int|Lng|Obj|SByte|Short|Sng|Str|Type|UInt|ULng|UShort)|Char|Class|Const|Continue|Currency|Date|Decimal|Declare|Default|Delegate|Dim|DirectCast|Do|Double|Each|Else(?:If)?|End(?:If)?|Enum|Erase|Error|Event|Exit|Finally|For|Friend|Function|Get(?:Type|XMLNamespace)?|Global|GoSub|GoTo|Handles|If|Implements|Imports|In|Inherits|Integer|Interface|Is|IsNot|Let|Lib|Like|Long|Loop|Me|Mod|Module|Must(?:Inherit|Override)|My(?:Base|Class)|Namespace|Narrowing|New|Next|Not(?:Inheritable|Overridable)?|Object|Of|On|Operator|Option(?:al)?|Or(?:Else)?|Out|Overloads|Overridable|Overrides|ParamArray|Partial|Private|Property|Protected|Public|RaiseEvent|ReadOnly|ReDim|RemoveHandler|Resume|Return|SByte|Select|Set|Shadows|Shared|short|Single|Static|Step|Stop|String|Structure|Sub|SyncLock|Then|Throw|To|Try|TryCast|Type|TypeOf|U(?:Integer|Long|Short)|Using|Variant|Wend|When|While|Widening|With(?:Events)?|WriteOnly|Until|Xor)\b/i,
     operator: [
       /[+\-*/\\^<=>&#@$%!]/,
       {
@@ -39015,6 +40269,47 @@ function visualBasic(Prism) {
     punctuation: /[{}().,:?]/
   }
   Prism.languages.vb = Prism.languages['visual-basic']
+  Prism.languages.vba = Prism.languages['visual-basic']
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/refractor/lang/warpscript.js":
+/*!***************************************************!*\
+  !*** ./node_modules/refractor/lang/warpscript.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = warpscript
+warpscript.displayName = 'warpscript'
+warpscript.aliases = []
+function warpscript(Prism) {
+  Prism.languages.warpscript = {
+    comment: /#.*|\/\/.*|\/\*[\s\S]*?\*\//,
+    string: {
+      pattern: /"(?:[^"\\\r\n]|\\.)*"|'(?:[^'\\\r\n]|\\.)*'|<'(?:[^\\']|'(?!>)|\\.)*'>/,
+      greedy: true
+    },
+    variable: /\$\S+/,
+    macro: {
+      pattern: /@\S+/,
+      alias: 'property'
+    },
+    // WarpScript doesn't have any keywords, these are all functions under the control category
+    // https://www.warp10.io/tags/control
+    keyword: /\b(?:BREAK|CHECKMACRO|CONTINUE|CUDF|DEFINED|DEFINEDMACRO|EVAL|FAIL|FOR|FOREACH|FORSTEP|IFT|IFTE|MSGFAIL|NRETURN|RETHROW|RETURN|SWITCH|TRY|UDF|UNTIL|WHILE)\b/,
+    number: /[+-]?\b(?:NaN|Infinity|\d+(?:\.\d*)?(?:[Ee][+-]?\d+)?|0x[\da-fA-F]+|0b[01]+)\b/,
+    boolean: /\b(?:false|true|F|T)\b/,
+    punctuation: /<%|%>|[{}[\]()]/,
+    // Some operators from the "operators" category
+    // https://www.warp10.io/tags/operators
+    operator: /==|&&?|\|\|?|\*\*?|>>>?|<<|==|[<>!~]=?|[-/%^]|\+!?|\b(?:AND|NOT|OR)\b/
+  }
 }
 
 
@@ -39301,6 +40596,60 @@ function xeora(Prism) {
 
 /***/ }),
 
+/***/ "./node_modules/refractor/lang/xml-doc.js":
+/*!************************************************!*\
+  !*** ./node_modules/refractor/lang/xml-doc.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = xmlDoc
+xmlDoc.displayName = 'xmlDoc'
+xmlDoc.aliases = []
+function xmlDoc(Prism) {
+  ;(function (Prism) {
+    /**
+     * If the given language is present, it will insert the given doc comment grammar token into it.
+     *
+     * @param {string} lang
+     * @param {any} docComment
+     */
+    function insertDocComment(lang, docComment) {
+      if (Prism.languages[lang]) {
+        Prism.languages.insertBefore(lang, 'comment', {
+          'doc-comment': docComment
+        })
+      }
+    }
+    var tag = Prism.languages.markup.tag
+    var slashDocComment = {
+      pattern: /\/\/\/.*/,
+      greedy: true,
+      alias: 'comment',
+      inside: {
+        tag: tag
+      }
+    }
+    var tickDocComment = {
+      pattern: /'''.*/,
+      greedy: true,
+      alias: 'comment',
+      inside: {
+        tag: tag
+      }
+    }
+    insertDocComment('csharp', slashDocComment)
+    insertDocComment('fsharp', slashDocComment)
+    insertDocComment('vbnet', tickDocComment)
+  })(Prism)
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/refractor/lang/xojo.js":
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/xojo.js ***!
@@ -39406,16 +40755,16 @@ function xquery(Prism) {
       ],
       punctuation: /[[\](){},;:/]/
     })
-    Prism.languages.xquery.tag.pattern = /<\/?(?!\d)[^\s>\/=$<%]+(?:\s+[^\s>\/=]+(?:=(?:("|')(?:\\[\s\S]|{(?!{)(?:{(?:{[^}]*}|[^}])*}|[^}])+}|(?!\1)[^\\])*\1|[^\s'">=]+))?)*\s*\/?>/i
+    Prism.languages.xquery.tag.pattern = /<\/?(?!\d)[^\s>\/=$<%]+(?:\s+[^\s>\/=]+(?:=(?:("|')(?:\\[\s\S]|{(?!{)(?:{(?:{[^{}]*}|[^{}])*}|[^{}])+}|(?!\1)[^\\])*\1|[^\s'">=]+))?)*\s*\/?>/i
     Prism.languages.xquery['tag'].inside[
       'attr-value'
-    ].pattern = /=(?:("|')(?:\\[\s\S]|{(?!{)(?:{(?:{[^}]*}|[^}])*}|[^}])+}|(?!\1)[^\\])*\1|[^\s'">=]+)/i
+    ].pattern = /=(?:("|')(?:\\[\s\S]|{(?!{)(?:{(?:{[^{}]*}|[^{}])*}|[^{}])+}|(?!\1)[^\\])*\1|[^\s'">=]+)/i
     Prism.languages.xquery['tag'].inside['attr-value'].inside[
       'punctuation'
     ] = /^="|"$/
     Prism.languages.xquery['tag'].inside['attr-value'].inside['expression'] = {
       // Allow for two levels of nesting
-      pattern: /{(?!{)(?:{(?:{[^}]*}|[^}])*}|[^}])+}/,
+      pattern: /{(?!{)(?:{(?:{[^{}]*}|[^{}])*}|[^{}])+}/,
       inside: Prism.languages.xquery,
       alias: 'language-xquery'
     } // The following will handle plain text inside tags
@@ -39660,6 +41009,45 @@ function yaml(Prism) {
 
 /***/ }),
 
+/***/ "./node_modules/refractor/lang/yang.js":
+/*!*********************************************!*\
+  !*** ./node_modules/refractor/lang/yang.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = yang
+yang.displayName = 'yang'
+yang.aliases = []
+function yang(Prism) {
+  Prism.languages.yang = {
+    // https://tools.ietf.org/html/rfc6020#page-34
+    // http://www.yang-central.org/twiki/bin/view/Main/YangExamples
+    comment: /\/\*[\s\S]*?\*\/|\/\/.*/,
+    string: {
+      pattern: /"(?:[^\\"]|\\.)*"|'[^']*'/,
+      greedy: true
+    },
+    keyword: {
+      pattern: /(^|[{};\r\n][ \t]*)[a-z_][\w.-]*/i,
+      lookbehind: true
+    },
+    namespace: {
+      pattern: /(\s)[a-z_][\w.-]*(?=:)/i,
+      lookbehind: true
+    },
+    boolean: /\b(?:false|true)\b/,
+    operator: /\+/,
+    punctuation: /[{};:]/
+  }
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/refractor/lang/zig.js":
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/zig.js ***!
@@ -39896,6 +41284,12 @@ __webpack_require__.r(__webpack_exports__);
   ada: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("ada", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/ada.js */ "./node_modules/refractor/lang/ada.js", 7));
   }),
+  agda: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("agda", function () {
+    return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/agda.js */ "./node_modules/refractor/lang/agda.js", 7));
+  }),
+  al: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("al", function () {
+    return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/al.js */ "./node_modules/refractor/lang/al.js", 7));
+  }),
   antlr4: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("antlr4", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/antlr4.js */ "./node_modules/refractor/lang/antlr4.js", 7));
   }),
@@ -39998,6 +41392,9 @@ __webpack_require__.r(__webpack_exports__);
   css: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("css", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/css.js */ "./node_modules/refractor/lang/css.js", 7));
   }),
+  cypher: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("cypher", function () {
+    return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/cypher.js */ "./node_modules/refractor/lang/cypher.js", 7));
+  }),
   d: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("d", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/d.js */ "./node_modules/refractor/lang/d.js", 7));
   }),
@@ -40006,6 +41403,9 @@ __webpack_require__.r(__webpack_exports__);
   }),
   dax: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("dax", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/dax.js */ "./node_modules/refractor/lang/dax.js", 7));
+  }),
+  dhall: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("dhall", function () {
+    return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/dhall.js */ "./node_modules/refractor/lang/dhall.js", 7));
   }),
   diff: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("diff", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/diff.js */ "./node_modules/refractor/lang/diff.js", 7));
@@ -40021,6 +41421,9 @@ __webpack_require__.r(__webpack_exports__);
   }),
   ebnf: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("ebnf", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/ebnf.js */ "./node_modules/refractor/lang/ebnf.js", 7));
+  }),
+  editorconfig: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("editorconfig", function () {
+    return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/editorconfig.js */ "./node_modules/refractor/lang/editorconfig.js", 7));
   }),
   eiffel: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("eiffel", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/eiffel.js */ "./node_modules/refractor/lang/eiffel.js", 7));
@@ -40109,6 +41512,9 @@ __webpack_require__.r(__webpack_exports__);
   hcl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("hcl", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/hcl.js */ "./node_modules/refractor/lang/hcl.js", 7));
   }),
+  hlsl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("hlsl", function () {
+    return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/hlsl.js */ "./node_modules/refractor/lang/hlsl.js", 7));
+  }),
   hpkp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("hpkp", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/hpkp.js */ "./node_modules/refractor/lang/hpkp.js", 7));
   }),
@@ -40123,6 +41529,12 @@ __webpack_require__.r(__webpack_exports__);
   }),
   icon: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("icon", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/icon.js */ "./node_modules/refractor/lang/icon.js", 7));
+  }),
+  iecst: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("iecst", function () {
+    return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/iecst.js */ "./node_modules/refractor/lang/iecst.js", 7));
+  }),
+  ignore: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("ignore", function () {
+    return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/ignore.js */ "./node_modules/refractor/lang/ignore.js", 7));
   }),
   inform7: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("inform7", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/inform7.js */ "./node_modules/refractor/lang/inform7.js", 7));
@@ -40174,6 +41586,9 @@ __webpack_require__.r(__webpack_exports__);
   }),
   jsonp: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("jsonp", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/jsonp.js */ "./node_modules/refractor/lang/jsonp.js", 7));
+  }),
+  jsstacktrace: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("jsstacktrace", function () {
+    return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/jsstacktrace.js */ "./node_modules/refractor/lang/jsstacktrace.js", 7));
   }),
   jsx: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("jsx", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/jsx.js */ "./node_modules/refractor/lang/jsx.js", 7));
@@ -40298,6 +41713,9 @@ __webpack_require__.r(__webpack_exports__);
   pcaxis: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("pcaxis", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/pcaxis.js */ "./node_modules/refractor/lang/pcaxis.js", 7));
   }),
+  peoplecode: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("peoplecode", function () {
+    return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/peoplecode.js */ "./node_modules/refractor/lang/peoplecode.js", 7));
+  }),
   perl: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("perl", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/perl.js */ "./node_modules/refractor/lang/perl.js", 7));
   }),
@@ -40340,6 +41758,9 @@ __webpack_require__.r(__webpack_exports__);
   pure: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("pure", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/pure.js */ "./node_modules/refractor/lang/pure.js", 7));
   }),
+  purebasic: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("purebasic", function () {
+    return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/purebasic.js */ "./node_modules/refractor/lang/purebasic.js", 7));
+  }),
   python: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("python", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/python.js */ "./node_modules/refractor/lang/python.js", 7));
   }),
@@ -40354,6 +41775,9 @@ __webpack_require__.r(__webpack_exports__);
   }),
   r: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("r", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/r.js */ "./node_modules/refractor/lang/r.js", 7));
+  }),
+  racket: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("racket", function () {
+    return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/racket.js */ "./node_modules/refractor/lang/racket.js", 7));
   }),
   reason: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("reason", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/reason.js */ "./node_modules/refractor/lang/reason.js", 7));
@@ -40399,6 +41823,9 @@ __webpack_require__.r(__webpack_exports__);
   }),
   shellSession: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("shellSession", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/shell-session.js */ "./node_modules/refractor/lang/shell-session.js", 7));
+  }),
+  smali: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("smali", function () {
+    return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/smali.js */ "./node_modules/refractor/lang/smali.js", 7));
   }),
   smalltalk: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("smalltalk", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/smalltalk.js */ "./node_modules/refractor/lang/smalltalk.js", 7));
@@ -40469,6 +41896,9 @@ __webpack_require__.r(__webpack_exports__);
   typescript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("typescript", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/typescript.js */ "./node_modules/refractor/lang/typescript.js", 7));
   }),
+  unrealscript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("unrealscript", function () {
+    return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/unrealscript.js */ "./node_modules/refractor/lang/unrealscript.js", 7));
+  }),
   vala: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("vala", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/vala.js */ "./node_modules/refractor/lang/vala.js", 7));
   }),
@@ -40490,6 +41920,9 @@ __webpack_require__.r(__webpack_exports__);
   visualBasic: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("visualBasic", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/visual-basic.js */ "./node_modules/refractor/lang/visual-basic.js", 7));
   }),
+  warpscript: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("warpscript", function () {
+    return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/warpscript.js */ "./node_modules/refractor/lang/warpscript.js", 7));
+  }),
   wasm: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("wasm", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/wasm.js */ "./node_modules/refractor/lang/wasm.js", 7));
   }),
@@ -40499,6 +41932,9 @@ __webpack_require__.r(__webpack_exports__);
   xeora: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("xeora", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/xeora.js */ "./node_modules/refractor/lang/xeora.js", 7));
   }),
+  xmlDoc: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("xmlDoc", function () {
+    return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/xml-doc.js */ "./node_modules/refractor/lang/xml-doc.js", 7));
+  }),
   xojo: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("xojo", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/xojo.js */ "./node_modules/refractor/lang/xojo.js", 7));
   }),
@@ -40507,6 +41943,9 @@ __webpack_require__.r(__webpack_exports__);
   }),
   yaml: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("yaml", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/yaml.js */ "./node_modules/refractor/lang/yaml.js", 7));
+  }),
+  yang: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("yang", function () {
+    return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/yang.js */ "./node_modules/refractor/lang/yang.js", 7));
   }),
   zig: Object(_create_language_async_loader__WEBPACK_IMPORTED_MODULE_0__["default"])("zig", function () {
     return Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! refractor/lang/zig.js */ "./node_modules/refractor/lang/zig.js", 7));
@@ -41260,6 +42699,10 @@ var map = {
 	"./actionscript.js": "./src/languages/prism/actionscript.js",
 	"./ada": "./src/languages/prism/ada.js",
 	"./ada.js": "./src/languages/prism/ada.js",
+	"./agda": "./src/languages/prism/agda.js",
+	"./agda.js": "./src/languages/prism/agda.js",
+	"./al": "./src/languages/prism/al.js",
+	"./al.js": "./src/languages/prism/al.js",
 	"./antlr4": "./src/languages/prism/antlr4.js",
 	"./antlr4.js": "./src/languages/prism/antlr4.js",
 	"./apacheconf": "./src/languages/prism/apacheconf.js",
@@ -41330,12 +42773,16 @@ var map = {
 	"./css-extras": "./src/languages/prism/css-extras.js",
 	"./css-extras.js": "./src/languages/prism/css-extras.js",
 	"./css.js": "./src/languages/prism/css.js",
+	"./cypher": "./src/languages/prism/cypher.js",
+	"./cypher.js": "./src/languages/prism/cypher.js",
 	"./d": "./src/languages/prism/d.js",
 	"./d.js": "./src/languages/prism/d.js",
 	"./dart": "./src/languages/prism/dart.js",
 	"./dart.js": "./src/languages/prism/dart.js",
 	"./dax": "./src/languages/prism/dax.js",
 	"./dax.js": "./src/languages/prism/dax.js",
+	"./dhall": "./src/languages/prism/dhall.js",
+	"./dhall.js": "./src/languages/prism/dhall.js",
 	"./diff": "./src/languages/prism/diff.js",
 	"./diff.js": "./src/languages/prism/diff.js",
 	"./django": "./src/languages/prism/django.js",
@@ -41346,6 +42793,8 @@ var map = {
 	"./docker.js": "./src/languages/prism/docker.js",
 	"./ebnf": "./src/languages/prism/ebnf.js",
 	"./ebnf.js": "./src/languages/prism/ebnf.js",
+	"./editorconfig": "./src/languages/prism/editorconfig.js",
+	"./editorconfig.js": "./src/languages/prism/editorconfig.js",
 	"./eiffel": "./src/languages/prism/eiffel.js",
 	"./eiffel.js": "./src/languages/prism/eiffel.js",
 	"./ejs": "./src/languages/prism/ejs.js",
@@ -41404,6 +42853,8 @@ var map = {
 	"./haxe.js": "./src/languages/prism/haxe.js",
 	"./hcl": "./src/languages/prism/hcl.js",
 	"./hcl.js": "./src/languages/prism/hcl.js",
+	"./hlsl": "./src/languages/prism/hlsl.js",
+	"./hlsl.js": "./src/languages/prism/hlsl.js",
 	"./hpkp": "./src/languages/prism/hpkp.js",
 	"./hpkp.js": "./src/languages/prism/hpkp.js",
 	"./hsts": "./src/languages/prism/hsts.js",
@@ -41414,6 +42865,10 @@ var map = {
 	"./ichigojam.js": "./src/languages/prism/ichigojam.js",
 	"./icon": "./src/languages/prism/icon.js",
 	"./icon.js": "./src/languages/prism/icon.js",
+	"./iecst": "./src/languages/prism/iecst.js",
+	"./iecst.js": "./src/languages/prism/iecst.js",
+	"./ignore": "./src/languages/prism/ignore.js",
+	"./ignore.js": "./src/languages/prism/ignore.js",
 	"./index": "./src/languages/prism/index.js",
 	"./index.js": "./src/languages/prism/index.js",
 	"./inform7": "./src/languages/prism/inform7.js",
@@ -41450,6 +42905,8 @@ var map = {
 	"./json5.js": "./src/languages/prism/json5.js",
 	"./jsonp": "./src/languages/prism/jsonp.js",
 	"./jsonp.js": "./src/languages/prism/jsonp.js",
+	"./jsstacktrace": "./src/languages/prism/jsstacktrace.js",
+	"./jsstacktrace.js": "./src/languages/prism/jsstacktrace.js",
 	"./jsx": "./src/languages/prism/jsx.js",
 	"./jsx.js": "./src/languages/prism/jsx.js",
 	"./julia": "./src/languages/prism/julia.js",
@@ -41532,6 +42989,8 @@ var map = {
 	"./pascaligo.js": "./src/languages/prism/pascaligo.js",
 	"./pcaxis": "./src/languages/prism/pcaxis.js",
 	"./pcaxis.js": "./src/languages/prism/pcaxis.js",
+	"./peoplecode": "./src/languages/prism/peoplecode.js",
+	"./peoplecode.js": "./src/languages/prism/peoplecode.js",
 	"./perl": "./src/languages/prism/perl.js",
 	"./perl.js": "./src/languages/prism/perl.js",
 	"./php": "./src/languages/prism/php.js",
@@ -41560,6 +43019,8 @@ var map = {
 	"./puppet.js": "./src/languages/prism/puppet.js",
 	"./pure": "./src/languages/prism/pure.js",
 	"./pure.js": "./src/languages/prism/pure.js",
+	"./purebasic": "./src/languages/prism/purebasic.js",
+	"./purebasic.js": "./src/languages/prism/purebasic.js",
 	"./python": "./src/languages/prism/python.js",
 	"./python.js": "./src/languages/prism/python.js",
 	"./q": "./src/languages/prism/q.js",
@@ -41570,6 +43031,8 @@ var map = {
 	"./qore.js": "./src/languages/prism/qore.js",
 	"./r": "./src/languages/prism/r.js",
 	"./r.js": "./src/languages/prism/r.js",
+	"./racket": "./src/languages/prism/racket.js",
+	"./racket.js": "./src/languages/prism/racket.js",
 	"./reason": "./src/languages/prism/reason.js",
 	"./reason.js": "./src/languages/prism/reason.js",
 	"./regex": "./src/languages/prism/regex.js",
@@ -41600,6 +43063,8 @@ var map = {
 	"./scss.js": "./src/languages/prism/scss.js",
 	"./shell-session": "./src/languages/prism/shell-session.js",
 	"./shell-session.js": "./src/languages/prism/shell-session.js",
+	"./smali": "./src/languages/prism/smali.js",
+	"./smali.js": "./src/languages/prism/smali.js",
 	"./smalltalk": "./src/languages/prism/smalltalk.js",
 	"./smalltalk.js": "./src/languages/prism/smalltalk.js",
 	"./smarty": "./src/languages/prism/smarty.js",
@@ -41648,6 +43113,8 @@ var map = {
 	"./twig.js": "./src/languages/prism/twig.js",
 	"./typescript": "./src/languages/prism/typescript.js",
 	"./typescript.js": "./src/languages/prism/typescript.js",
+	"./unrealscript": "./src/languages/prism/unrealscript.js",
+	"./unrealscript.js": "./src/languages/prism/unrealscript.js",
 	"./vala": "./src/languages/prism/vala.js",
 	"./vala.js": "./src/languages/prism/vala.js",
 	"./vbnet": "./src/languages/prism/vbnet.js",
@@ -41662,18 +43129,24 @@ var map = {
 	"./vim.js": "./src/languages/prism/vim.js",
 	"./visual-basic": "./src/languages/prism/visual-basic.js",
 	"./visual-basic.js": "./src/languages/prism/visual-basic.js",
+	"./warpscript": "./src/languages/prism/warpscript.js",
+	"./warpscript.js": "./src/languages/prism/warpscript.js",
 	"./wasm": "./src/languages/prism/wasm.js",
 	"./wasm.js": "./src/languages/prism/wasm.js",
 	"./wiki": "./src/languages/prism/wiki.js",
 	"./wiki.js": "./src/languages/prism/wiki.js",
 	"./xeora": "./src/languages/prism/xeora.js",
 	"./xeora.js": "./src/languages/prism/xeora.js",
+	"./xml-doc": "./src/languages/prism/xml-doc.js",
+	"./xml-doc.js": "./src/languages/prism/xml-doc.js",
 	"./xojo": "./src/languages/prism/xojo.js",
 	"./xojo.js": "./src/languages/prism/xojo.js",
 	"./xquery": "./src/languages/prism/xquery.js",
 	"./xquery.js": "./src/languages/prism/xquery.js",
 	"./yaml": "./src/languages/prism/yaml.js",
 	"./yaml.js": "./src/languages/prism/yaml.js",
+	"./yang": "./src/languages/prism/yang.js",
+	"./yang.js": "./src/languages/prism/yang.js",
 	"./zig": "./src/languages/prism/zig.js",
 	"./zig.js": "./src/languages/prism/zig.js"
 };
@@ -41766,6 +43239,40 @@ __webpack_require__.r(__webpack_exports__);
 
 ;
 /* harmony default export */ __webpack_exports__["default"] = (refractor_lang_ada_js__WEBPACK_IMPORTED_MODULE_0___default.a);
+
+/***/ }),
+
+/***/ "./src/languages/prism/agda.js":
+/*!*************************************!*\
+  !*** ./src/languages/prism/agda.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var refractor_lang_agda_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! refractor/lang/agda.js */ "./node_modules/refractor/lang/agda.js");
+/* harmony import */ var refractor_lang_agda_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(refractor_lang_agda_js__WEBPACK_IMPORTED_MODULE_0__);
+
+;
+/* harmony default export */ __webpack_exports__["default"] = (refractor_lang_agda_js__WEBPACK_IMPORTED_MODULE_0___default.a);
+
+/***/ }),
+
+/***/ "./src/languages/prism/al.js":
+/*!***********************************!*\
+  !*** ./src/languages/prism/al.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var refractor_lang_al_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! refractor/lang/al.js */ "./node_modules/refractor/lang/al.js");
+/* harmony import */ var refractor_lang_al_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(refractor_lang_al_js__WEBPACK_IMPORTED_MODULE_0__);
+
+;
+/* harmony default export */ __webpack_exports__["default"] = (refractor_lang_al_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 
 /***/ }),
 
@@ -42363,6 +43870,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/languages/prism/cypher.js":
+/*!***************************************!*\
+  !*** ./src/languages/prism/cypher.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var refractor_lang_cypher_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! refractor/lang/cypher.js */ "./node_modules/refractor/lang/cypher.js");
+/* harmony import */ var refractor_lang_cypher_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(refractor_lang_cypher_js__WEBPACK_IMPORTED_MODULE_0__);
+
+;
+/* harmony default export */ __webpack_exports__["default"] = (refractor_lang_cypher_js__WEBPACK_IMPORTED_MODULE_0___default.a);
+
+/***/ }),
+
 /***/ "./src/languages/prism/d.js":
 /*!**********************************!*\
   !*** ./src/languages/prism/d.js ***!
@@ -42411,6 +43935,23 @@ __webpack_require__.r(__webpack_exports__);
 
 ;
 /* harmony default export */ __webpack_exports__["default"] = (refractor_lang_dax_js__WEBPACK_IMPORTED_MODULE_0___default.a);
+
+/***/ }),
+
+/***/ "./src/languages/prism/dhall.js":
+/*!**************************************!*\
+  !*** ./src/languages/prism/dhall.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var refractor_lang_dhall_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! refractor/lang/dhall.js */ "./node_modules/refractor/lang/dhall.js");
+/* harmony import */ var refractor_lang_dhall_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(refractor_lang_dhall_js__WEBPACK_IMPORTED_MODULE_0__);
+
+;
+/* harmony default export */ __webpack_exports__["default"] = (refractor_lang_dhall_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 
 /***/ }),
 
@@ -42496,6 +44037,23 @@ __webpack_require__.r(__webpack_exports__);
 
 ;
 /* harmony default export */ __webpack_exports__["default"] = (refractor_lang_ebnf_js__WEBPACK_IMPORTED_MODULE_0___default.a);
+
+/***/ }),
+
+/***/ "./src/languages/prism/editorconfig.js":
+/*!*********************************************!*\
+  !*** ./src/languages/prism/editorconfig.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var refractor_lang_editorconfig_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! refractor/lang/editorconfig.js */ "./node_modules/refractor/lang/editorconfig.js");
+/* harmony import */ var refractor_lang_editorconfig_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(refractor_lang_editorconfig_js__WEBPACK_IMPORTED_MODULE_0__);
+
+;
+/* harmony default export */ __webpack_exports__["default"] = (refractor_lang_editorconfig_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 
 /***/ }),
 
@@ -42992,6 +44550,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/languages/prism/hlsl.js":
+/*!*************************************!*\
+  !*** ./src/languages/prism/hlsl.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var refractor_lang_hlsl_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! refractor/lang/hlsl.js */ "./node_modules/refractor/lang/hlsl.js");
+/* harmony import */ var refractor_lang_hlsl_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(refractor_lang_hlsl_js__WEBPACK_IMPORTED_MODULE_0__);
+
+;
+/* harmony default export */ __webpack_exports__["default"] = (refractor_lang_hlsl_js__WEBPACK_IMPORTED_MODULE_0___default.a);
+
+/***/ }),
+
 /***/ "./src/languages/prism/hpkp.js":
 /*!*************************************!*\
   !*** ./src/languages/prism/hpkp.js ***!
@@ -43077,11 +44652,45 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/languages/prism/iecst.js":
+/*!**************************************!*\
+  !*** ./src/languages/prism/iecst.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var refractor_lang_iecst_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! refractor/lang/iecst.js */ "./node_modules/refractor/lang/iecst.js");
+/* harmony import */ var refractor_lang_iecst_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(refractor_lang_iecst_js__WEBPACK_IMPORTED_MODULE_0__);
+
+;
+/* harmony default export */ __webpack_exports__["default"] = (refractor_lang_iecst_js__WEBPACK_IMPORTED_MODULE_0___default.a);
+
+/***/ }),
+
+/***/ "./src/languages/prism/ignore.js":
+/*!***************************************!*\
+  !*** ./src/languages/prism/ignore.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var refractor_lang_ignore_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! refractor/lang/ignore.js */ "./node_modules/refractor/lang/ignore.js");
+/* harmony import */ var refractor_lang_ignore_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(refractor_lang_ignore_js__WEBPACK_IMPORTED_MODULE_0__);
+
+;
+/* harmony default export */ __webpack_exports__["default"] = (refractor_lang_ignore_js__WEBPACK_IMPORTED_MODULE_0___default.a);
+
+/***/ }),
+
 /***/ "./src/languages/prism/index.js":
 /*!**************************************!*\
   !*** ./src/languages/prism/index.js ***!
   \**************************************/
-/*! exports provided: abap, abnf, actionscript, ada, antlr4, apacheconf, apl, applescript, aql, arduino, arff, asciidoc, asm6502, aspnet, autohotkey, autoit, bash, basic, batch, bbcode, bison, bnf, brainfuck, brightscript, bro, c, cil, clike, clojure, cmake, coffeescript, concurnas, cpp, crystal, csharp, csp, cssExtras, css, d, dart, dax, diff, django, dnsZoneFile, docker, ebnf, eiffel, ejs, elixir, elm, erb, erlang, etlua, excelFormula, factor, firestoreSecurityRules, flow, fortran, fsharp, ftl, gcode, gdscript, gedcom, gherkin, git, glsl, gml, go, graphql, groovy, haml, handlebars, haskell, haxe, hcl, hpkp, hsts, http, ichigojam, icon, inform7, ini, io, j, java, javadoc, javadoclike, javascript, javastacktrace, jolie, jq, jsExtras, jsTemplates, jsdoc, json, json5, jsonp, jsx, julia, keyman, kotlin, latex, latte, less, lilypond, liquid, lisp, livescript, llvm, lolcode, lua, makefile, markdown, markupTemplating, markup, matlab, mel, mizar, monkey, moonscript, n1ql, n4js, nand2tetrisHdl, nasm, neon, nginx, nim, nix, nsis, objectivec, ocaml, opencl, oz, parigp, parser, pascal, pascaligo, pcaxis, perl, phpExtras, php, phpdoc, plsql, powerquery, powershell, processing, prolog, properties, protobuf, pug, puppet, pure, python, q, qml, qore, r, reason, regex, renpy, rest, rip, roboconf, robotframework, ruby, rust, sas, sass, scala, scheme, scss, shellSession, smalltalk, smarty, solidity, solutionFile, soy, sparql, splunkSpl, sqf, sql, stylus, swift, t4Cs, t4Templating, t4Vb, tap, tcl, textile, toml, tsx, tt2, turtle, twig, typescript, vala, vbnet, velocity, verilog, vhdl, vim, visualBasic, wasm, wiki, xeora, xojo, xquery, yaml, zig */
+/*! exports provided: abap, abnf, actionscript, ada, agda, al, antlr4, apacheconf, apl, applescript, aql, arduino, arff, asciidoc, asm6502, aspnet, autohotkey, autoit, bash, basic, batch, bbcode, bison, bnf, brainfuck, brightscript, bro, c, cil, clike, clojure, cmake, coffeescript, concurnas, cpp, crystal, csharp, csp, cssExtras, css, cypher, d, dart, dax, dhall, diff, django, dnsZoneFile, docker, ebnf, editorconfig, eiffel, ejs, elixir, elm, erb, erlang, etlua, excelFormula, factor, firestoreSecurityRules, flow, fortran, fsharp, ftl, gcode, gdscript, gedcom, gherkin, git, glsl, gml, go, graphql, groovy, haml, handlebars, haskell, haxe, hcl, hlsl, hpkp, hsts, http, ichigojam, icon, iecst, ignore, inform7, ini, io, j, java, javadoc, javadoclike, javascript, javastacktrace, jolie, jq, jsExtras, jsTemplates, jsdoc, json, json5, jsonp, jsstacktrace, jsx, julia, keyman, kotlin, latex, latte, less, lilypond, liquid, lisp, livescript, llvm, lolcode, lua, makefile, markdown, markupTemplating, markup, matlab, mel, mizar, monkey, moonscript, n1ql, n4js, nand2tetrisHdl, nasm, neon, nginx, nim, nix, nsis, objectivec, ocaml, opencl, oz, parigp, parser, pascal, pascaligo, pcaxis, peoplecode, perl, phpExtras, php, phpdoc, plsql, powerquery, powershell, processing, prolog, properties, protobuf, pug, puppet, pure, purebasic, python, q, qml, qore, r, racket, reason, regex, renpy, rest, rip, roboconf, robotframework, ruby, rust, sas, sass, scala, scheme, scss, shellSession, smali, smalltalk, smarty, solidity, solutionFile, soy, sparql, splunkSpl, sqf, sql, stylus, swift, t4Cs, t4Templating, t4Vb, tap, tcl, textile, toml, tsx, tt2, turtle, twig, typescript, unrealscript, vala, vbnet, velocity, verilog, vhdl, vim, visualBasic, warpscript, wasm, wiki, xeora, xmlDoc, xojo, xquery, yaml, yang, zig */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -43098,620 +44707,688 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ada__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ada */ "./src/languages/prism/ada.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ada", function() { return _ada__WEBPACK_IMPORTED_MODULE_3__["default"]; });
 
-/* harmony import */ var _antlr4__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./antlr4 */ "./src/languages/prism/antlr4.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "antlr4", function() { return _antlr4__WEBPACK_IMPORTED_MODULE_4__["default"]; });
+/* harmony import */ var _agda__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./agda */ "./src/languages/prism/agda.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "agda", function() { return _agda__WEBPACK_IMPORTED_MODULE_4__["default"]; });
 
-/* harmony import */ var _apacheconf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./apacheconf */ "./src/languages/prism/apacheconf.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "apacheconf", function() { return _apacheconf__WEBPACK_IMPORTED_MODULE_5__["default"]; });
+/* harmony import */ var _al__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./al */ "./src/languages/prism/al.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "al", function() { return _al__WEBPACK_IMPORTED_MODULE_5__["default"]; });
 
-/* harmony import */ var _apl__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./apl */ "./src/languages/prism/apl.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "apl", function() { return _apl__WEBPACK_IMPORTED_MODULE_6__["default"]; });
+/* harmony import */ var _antlr4__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./antlr4 */ "./src/languages/prism/antlr4.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "antlr4", function() { return _antlr4__WEBPACK_IMPORTED_MODULE_6__["default"]; });
 
-/* harmony import */ var _applescript__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./applescript */ "./src/languages/prism/applescript.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "applescript", function() { return _applescript__WEBPACK_IMPORTED_MODULE_7__["default"]; });
+/* harmony import */ var _apacheconf__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./apacheconf */ "./src/languages/prism/apacheconf.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "apacheconf", function() { return _apacheconf__WEBPACK_IMPORTED_MODULE_7__["default"]; });
 
-/* harmony import */ var _aql__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./aql */ "./src/languages/prism/aql.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "aql", function() { return _aql__WEBPACK_IMPORTED_MODULE_8__["default"]; });
+/* harmony import */ var _apl__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./apl */ "./src/languages/prism/apl.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "apl", function() { return _apl__WEBPACK_IMPORTED_MODULE_8__["default"]; });
 
-/* harmony import */ var _arduino__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./arduino */ "./src/languages/prism/arduino.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "arduino", function() { return _arduino__WEBPACK_IMPORTED_MODULE_9__["default"]; });
+/* harmony import */ var _applescript__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./applescript */ "./src/languages/prism/applescript.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "applescript", function() { return _applescript__WEBPACK_IMPORTED_MODULE_9__["default"]; });
 
-/* harmony import */ var _arff__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./arff */ "./src/languages/prism/arff.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "arff", function() { return _arff__WEBPACK_IMPORTED_MODULE_10__["default"]; });
+/* harmony import */ var _aql__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./aql */ "./src/languages/prism/aql.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "aql", function() { return _aql__WEBPACK_IMPORTED_MODULE_10__["default"]; });
 
-/* harmony import */ var _asciidoc__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./asciidoc */ "./src/languages/prism/asciidoc.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "asciidoc", function() { return _asciidoc__WEBPACK_IMPORTED_MODULE_11__["default"]; });
+/* harmony import */ var _arduino__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./arduino */ "./src/languages/prism/arduino.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "arduino", function() { return _arduino__WEBPACK_IMPORTED_MODULE_11__["default"]; });
 
-/* harmony import */ var _asm6502__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./asm6502 */ "./src/languages/prism/asm6502.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "asm6502", function() { return _asm6502__WEBPACK_IMPORTED_MODULE_12__["default"]; });
+/* harmony import */ var _arff__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./arff */ "./src/languages/prism/arff.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "arff", function() { return _arff__WEBPACK_IMPORTED_MODULE_12__["default"]; });
 
-/* harmony import */ var _aspnet__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./aspnet */ "./src/languages/prism/aspnet.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "aspnet", function() { return _aspnet__WEBPACK_IMPORTED_MODULE_13__["default"]; });
+/* harmony import */ var _asciidoc__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./asciidoc */ "./src/languages/prism/asciidoc.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "asciidoc", function() { return _asciidoc__WEBPACK_IMPORTED_MODULE_13__["default"]; });
 
-/* harmony import */ var _autohotkey__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./autohotkey */ "./src/languages/prism/autohotkey.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "autohotkey", function() { return _autohotkey__WEBPACK_IMPORTED_MODULE_14__["default"]; });
+/* harmony import */ var _asm6502__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./asm6502 */ "./src/languages/prism/asm6502.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "asm6502", function() { return _asm6502__WEBPACK_IMPORTED_MODULE_14__["default"]; });
 
-/* harmony import */ var _autoit__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./autoit */ "./src/languages/prism/autoit.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "autoit", function() { return _autoit__WEBPACK_IMPORTED_MODULE_15__["default"]; });
+/* harmony import */ var _aspnet__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./aspnet */ "./src/languages/prism/aspnet.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "aspnet", function() { return _aspnet__WEBPACK_IMPORTED_MODULE_15__["default"]; });
 
-/* harmony import */ var _bash__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./bash */ "./src/languages/prism/bash.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "bash", function() { return _bash__WEBPACK_IMPORTED_MODULE_16__["default"]; });
+/* harmony import */ var _autohotkey__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./autohotkey */ "./src/languages/prism/autohotkey.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "autohotkey", function() { return _autohotkey__WEBPACK_IMPORTED_MODULE_16__["default"]; });
 
-/* harmony import */ var _basic__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./basic */ "./src/languages/prism/basic.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "basic", function() { return _basic__WEBPACK_IMPORTED_MODULE_17__["default"]; });
+/* harmony import */ var _autoit__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./autoit */ "./src/languages/prism/autoit.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "autoit", function() { return _autoit__WEBPACK_IMPORTED_MODULE_17__["default"]; });
 
-/* harmony import */ var _batch__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./batch */ "./src/languages/prism/batch.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "batch", function() { return _batch__WEBPACK_IMPORTED_MODULE_18__["default"]; });
+/* harmony import */ var _bash__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./bash */ "./src/languages/prism/bash.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "bash", function() { return _bash__WEBPACK_IMPORTED_MODULE_18__["default"]; });
 
-/* harmony import */ var _bbcode__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./bbcode */ "./src/languages/prism/bbcode.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "bbcode", function() { return _bbcode__WEBPACK_IMPORTED_MODULE_19__["default"]; });
+/* harmony import */ var _basic__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./basic */ "./src/languages/prism/basic.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "basic", function() { return _basic__WEBPACK_IMPORTED_MODULE_19__["default"]; });
 
-/* harmony import */ var _bison__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./bison */ "./src/languages/prism/bison.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "bison", function() { return _bison__WEBPACK_IMPORTED_MODULE_20__["default"]; });
+/* harmony import */ var _batch__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./batch */ "./src/languages/prism/batch.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "batch", function() { return _batch__WEBPACK_IMPORTED_MODULE_20__["default"]; });
 
-/* harmony import */ var _bnf__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./bnf */ "./src/languages/prism/bnf.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "bnf", function() { return _bnf__WEBPACK_IMPORTED_MODULE_21__["default"]; });
+/* harmony import */ var _bbcode__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./bbcode */ "./src/languages/prism/bbcode.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "bbcode", function() { return _bbcode__WEBPACK_IMPORTED_MODULE_21__["default"]; });
 
-/* harmony import */ var _brainfuck__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./brainfuck */ "./src/languages/prism/brainfuck.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "brainfuck", function() { return _brainfuck__WEBPACK_IMPORTED_MODULE_22__["default"]; });
+/* harmony import */ var _bison__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./bison */ "./src/languages/prism/bison.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "bison", function() { return _bison__WEBPACK_IMPORTED_MODULE_22__["default"]; });
 
-/* harmony import */ var _brightscript__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./brightscript */ "./src/languages/prism/brightscript.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "brightscript", function() { return _brightscript__WEBPACK_IMPORTED_MODULE_23__["default"]; });
+/* harmony import */ var _bnf__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./bnf */ "./src/languages/prism/bnf.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "bnf", function() { return _bnf__WEBPACK_IMPORTED_MODULE_23__["default"]; });
 
-/* harmony import */ var _bro__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./bro */ "./src/languages/prism/bro.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "bro", function() { return _bro__WEBPACK_IMPORTED_MODULE_24__["default"]; });
+/* harmony import */ var _brainfuck__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./brainfuck */ "./src/languages/prism/brainfuck.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "brainfuck", function() { return _brainfuck__WEBPACK_IMPORTED_MODULE_24__["default"]; });
 
-/* harmony import */ var _c__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./c */ "./src/languages/prism/c.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "c", function() { return _c__WEBPACK_IMPORTED_MODULE_25__["default"]; });
+/* harmony import */ var _brightscript__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./brightscript */ "./src/languages/prism/brightscript.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "brightscript", function() { return _brightscript__WEBPACK_IMPORTED_MODULE_25__["default"]; });
 
-/* harmony import */ var _cil__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./cil */ "./src/languages/prism/cil.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "cil", function() { return _cil__WEBPACK_IMPORTED_MODULE_26__["default"]; });
+/* harmony import */ var _bro__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./bro */ "./src/languages/prism/bro.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "bro", function() { return _bro__WEBPACK_IMPORTED_MODULE_26__["default"]; });
 
-/* harmony import */ var _clike__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./clike */ "./src/languages/prism/clike.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "clike", function() { return _clike__WEBPACK_IMPORTED_MODULE_27__["default"]; });
+/* harmony import */ var _c__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./c */ "./src/languages/prism/c.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "c", function() { return _c__WEBPACK_IMPORTED_MODULE_27__["default"]; });
 
-/* harmony import */ var _clojure__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./clojure */ "./src/languages/prism/clojure.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "clojure", function() { return _clojure__WEBPACK_IMPORTED_MODULE_28__["default"]; });
+/* harmony import */ var _cil__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./cil */ "./src/languages/prism/cil.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "cil", function() { return _cil__WEBPACK_IMPORTED_MODULE_28__["default"]; });
 
-/* harmony import */ var _cmake__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./cmake */ "./src/languages/prism/cmake.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "cmake", function() { return _cmake__WEBPACK_IMPORTED_MODULE_29__["default"]; });
+/* harmony import */ var _clike__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./clike */ "./src/languages/prism/clike.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "clike", function() { return _clike__WEBPACK_IMPORTED_MODULE_29__["default"]; });
 
-/* harmony import */ var _coffeescript__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./coffeescript */ "./src/languages/prism/coffeescript.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "coffeescript", function() { return _coffeescript__WEBPACK_IMPORTED_MODULE_30__["default"]; });
+/* harmony import */ var _clojure__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./clojure */ "./src/languages/prism/clojure.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "clojure", function() { return _clojure__WEBPACK_IMPORTED_MODULE_30__["default"]; });
 
-/* harmony import */ var _concurnas__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./concurnas */ "./src/languages/prism/concurnas.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "concurnas", function() { return _concurnas__WEBPACK_IMPORTED_MODULE_31__["default"]; });
+/* harmony import */ var _cmake__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./cmake */ "./src/languages/prism/cmake.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "cmake", function() { return _cmake__WEBPACK_IMPORTED_MODULE_31__["default"]; });
 
-/* harmony import */ var _cpp__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./cpp */ "./src/languages/prism/cpp.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "cpp", function() { return _cpp__WEBPACK_IMPORTED_MODULE_32__["default"]; });
+/* harmony import */ var _coffeescript__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./coffeescript */ "./src/languages/prism/coffeescript.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "coffeescript", function() { return _coffeescript__WEBPACK_IMPORTED_MODULE_32__["default"]; });
 
-/* harmony import */ var _crystal__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./crystal */ "./src/languages/prism/crystal.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "crystal", function() { return _crystal__WEBPACK_IMPORTED_MODULE_33__["default"]; });
+/* harmony import */ var _concurnas__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./concurnas */ "./src/languages/prism/concurnas.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "concurnas", function() { return _concurnas__WEBPACK_IMPORTED_MODULE_33__["default"]; });
 
-/* harmony import */ var _csharp__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./csharp */ "./src/languages/prism/csharp.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "csharp", function() { return _csharp__WEBPACK_IMPORTED_MODULE_34__["default"]; });
+/* harmony import */ var _cpp__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./cpp */ "./src/languages/prism/cpp.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "cpp", function() { return _cpp__WEBPACK_IMPORTED_MODULE_34__["default"]; });
 
-/* harmony import */ var _csp__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./csp */ "./src/languages/prism/csp.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "csp", function() { return _csp__WEBPACK_IMPORTED_MODULE_35__["default"]; });
+/* harmony import */ var _crystal__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./crystal */ "./src/languages/prism/crystal.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "crystal", function() { return _crystal__WEBPACK_IMPORTED_MODULE_35__["default"]; });
 
-/* harmony import */ var _css_extras__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./css-extras */ "./src/languages/prism/css-extras.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "cssExtras", function() { return _css_extras__WEBPACK_IMPORTED_MODULE_36__["default"]; });
+/* harmony import */ var _csharp__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./csharp */ "./src/languages/prism/csharp.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "csharp", function() { return _csharp__WEBPACK_IMPORTED_MODULE_36__["default"]; });
 
-/* harmony import */ var _css__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./css */ "./src/languages/prism/css.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "css", function() { return _css__WEBPACK_IMPORTED_MODULE_37__["default"]; });
+/* harmony import */ var _csp__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./csp */ "./src/languages/prism/csp.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "csp", function() { return _csp__WEBPACK_IMPORTED_MODULE_37__["default"]; });
 
-/* harmony import */ var _d__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./d */ "./src/languages/prism/d.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "d", function() { return _d__WEBPACK_IMPORTED_MODULE_38__["default"]; });
+/* harmony import */ var _css_extras__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./css-extras */ "./src/languages/prism/css-extras.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "cssExtras", function() { return _css_extras__WEBPACK_IMPORTED_MODULE_38__["default"]; });
 
-/* harmony import */ var _dart__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./dart */ "./src/languages/prism/dart.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "dart", function() { return _dart__WEBPACK_IMPORTED_MODULE_39__["default"]; });
+/* harmony import */ var _css__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./css */ "./src/languages/prism/css.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "css", function() { return _css__WEBPACK_IMPORTED_MODULE_39__["default"]; });
 
-/* harmony import */ var _dax__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./dax */ "./src/languages/prism/dax.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "dax", function() { return _dax__WEBPACK_IMPORTED_MODULE_40__["default"]; });
+/* harmony import */ var _cypher__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./cypher */ "./src/languages/prism/cypher.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "cypher", function() { return _cypher__WEBPACK_IMPORTED_MODULE_40__["default"]; });
 
-/* harmony import */ var _diff__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./diff */ "./src/languages/prism/diff.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "diff", function() { return _diff__WEBPACK_IMPORTED_MODULE_41__["default"]; });
+/* harmony import */ var _d__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./d */ "./src/languages/prism/d.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "d", function() { return _d__WEBPACK_IMPORTED_MODULE_41__["default"]; });
 
-/* harmony import */ var _django__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./django */ "./src/languages/prism/django.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "django", function() { return _django__WEBPACK_IMPORTED_MODULE_42__["default"]; });
+/* harmony import */ var _dart__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./dart */ "./src/languages/prism/dart.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "dart", function() { return _dart__WEBPACK_IMPORTED_MODULE_42__["default"]; });
 
-/* harmony import */ var _dns_zone_file__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./dns-zone-file */ "./src/languages/prism/dns-zone-file.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "dnsZoneFile", function() { return _dns_zone_file__WEBPACK_IMPORTED_MODULE_43__["default"]; });
+/* harmony import */ var _dax__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./dax */ "./src/languages/prism/dax.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "dax", function() { return _dax__WEBPACK_IMPORTED_MODULE_43__["default"]; });
 
-/* harmony import */ var _docker__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./docker */ "./src/languages/prism/docker.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "docker", function() { return _docker__WEBPACK_IMPORTED_MODULE_44__["default"]; });
+/* harmony import */ var _dhall__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./dhall */ "./src/languages/prism/dhall.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "dhall", function() { return _dhall__WEBPACK_IMPORTED_MODULE_44__["default"]; });
 
-/* harmony import */ var _ebnf__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./ebnf */ "./src/languages/prism/ebnf.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ebnf", function() { return _ebnf__WEBPACK_IMPORTED_MODULE_45__["default"]; });
+/* harmony import */ var _diff__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./diff */ "./src/languages/prism/diff.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "diff", function() { return _diff__WEBPACK_IMPORTED_MODULE_45__["default"]; });
 
-/* harmony import */ var _eiffel__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./eiffel */ "./src/languages/prism/eiffel.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "eiffel", function() { return _eiffel__WEBPACK_IMPORTED_MODULE_46__["default"]; });
+/* harmony import */ var _django__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./django */ "./src/languages/prism/django.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "django", function() { return _django__WEBPACK_IMPORTED_MODULE_46__["default"]; });
 
-/* harmony import */ var _ejs__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./ejs */ "./src/languages/prism/ejs.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ejs", function() { return _ejs__WEBPACK_IMPORTED_MODULE_47__["default"]; });
+/* harmony import */ var _dns_zone_file__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./dns-zone-file */ "./src/languages/prism/dns-zone-file.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "dnsZoneFile", function() { return _dns_zone_file__WEBPACK_IMPORTED_MODULE_47__["default"]; });
 
-/* harmony import */ var _elixir__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./elixir */ "./src/languages/prism/elixir.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "elixir", function() { return _elixir__WEBPACK_IMPORTED_MODULE_48__["default"]; });
+/* harmony import */ var _docker__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./docker */ "./src/languages/prism/docker.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "docker", function() { return _docker__WEBPACK_IMPORTED_MODULE_48__["default"]; });
 
-/* harmony import */ var _elm__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./elm */ "./src/languages/prism/elm.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "elm", function() { return _elm__WEBPACK_IMPORTED_MODULE_49__["default"]; });
+/* harmony import */ var _ebnf__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./ebnf */ "./src/languages/prism/ebnf.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ebnf", function() { return _ebnf__WEBPACK_IMPORTED_MODULE_49__["default"]; });
 
-/* harmony import */ var _erb__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./erb */ "./src/languages/prism/erb.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "erb", function() { return _erb__WEBPACK_IMPORTED_MODULE_50__["default"]; });
+/* harmony import */ var _editorconfig__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./editorconfig */ "./src/languages/prism/editorconfig.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "editorconfig", function() { return _editorconfig__WEBPACK_IMPORTED_MODULE_50__["default"]; });
 
-/* harmony import */ var _erlang__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./erlang */ "./src/languages/prism/erlang.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "erlang", function() { return _erlang__WEBPACK_IMPORTED_MODULE_51__["default"]; });
+/* harmony import */ var _eiffel__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./eiffel */ "./src/languages/prism/eiffel.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "eiffel", function() { return _eiffel__WEBPACK_IMPORTED_MODULE_51__["default"]; });
 
-/* harmony import */ var _etlua__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! ./etlua */ "./src/languages/prism/etlua.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "etlua", function() { return _etlua__WEBPACK_IMPORTED_MODULE_52__["default"]; });
+/* harmony import */ var _ejs__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! ./ejs */ "./src/languages/prism/ejs.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ejs", function() { return _ejs__WEBPACK_IMPORTED_MODULE_52__["default"]; });
 
-/* harmony import */ var _excel_formula__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! ./excel-formula */ "./src/languages/prism/excel-formula.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "excelFormula", function() { return _excel_formula__WEBPACK_IMPORTED_MODULE_53__["default"]; });
+/* harmony import */ var _elixir__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! ./elixir */ "./src/languages/prism/elixir.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "elixir", function() { return _elixir__WEBPACK_IMPORTED_MODULE_53__["default"]; });
 
-/* harmony import */ var _factor__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! ./factor */ "./src/languages/prism/factor.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "factor", function() { return _factor__WEBPACK_IMPORTED_MODULE_54__["default"]; });
+/* harmony import */ var _elm__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! ./elm */ "./src/languages/prism/elm.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "elm", function() { return _elm__WEBPACK_IMPORTED_MODULE_54__["default"]; });
 
-/* harmony import */ var _firestore_security_rules__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! ./firestore-security-rules */ "./src/languages/prism/firestore-security-rules.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "firestoreSecurityRules", function() { return _firestore_security_rules__WEBPACK_IMPORTED_MODULE_55__["default"]; });
+/* harmony import */ var _erb__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! ./erb */ "./src/languages/prism/erb.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "erb", function() { return _erb__WEBPACK_IMPORTED_MODULE_55__["default"]; });
 
-/* harmony import */ var _flow__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(/*! ./flow */ "./src/languages/prism/flow.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "flow", function() { return _flow__WEBPACK_IMPORTED_MODULE_56__["default"]; });
+/* harmony import */ var _erlang__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(/*! ./erlang */ "./src/languages/prism/erlang.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "erlang", function() { return _erlang__WEBPACK_IMPORTED_MODULE_56__["default"]; });
 
-/* harmony import */ var _fortran__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(/*! ./fortran */ "./src/languages/prism/fortran.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "fortran", function() { return _fortran__WEBPACK_IMPORTED_MODULE_57__["default"]; });
+/* harmony import */ var _etlua__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(/*! ./etlua */ "./src/languages/prism/etlua.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "etlua", function() { return _etlua__WEBPACK_IMPORTED_MODULE_57__["default"]; });
 
-/* harmony import */ var _fsharp__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(/*! ./fsharp */ "./src/languages/prism/fsharp.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "fsharp", function() { return _fsharp__WEBPACK_IMPORTED_MODULE_58__["default"]; });
+/* harmony import */ var _excel_formula__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(/*! ./excel-formula */ "./src/languages/prism/excel-formula.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "excelFormula", function() { return _excel_formula__WEBPACK_IMPORTED_MODULE_58__["default"]; });
 
-/* harmony import */ var _ftl__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(/*! ./ftl */ "./src/languages/prism/ftl.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ftl", function() { return _ftl__WEBPACK_IMPORTED_MODULE_59__["default"]; });
+/* harmony import */ var _factor__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(/*! ./factor */ "./src/languages/prism/factor.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "factor", function() { return _factor__WEBPACK_IMPORTED_MODULE_59__["default"]; });
 
-/* harmony import */ var _gcode__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(/*! ./gcode */ "./src/languages/prism/gcode.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "gcode", function() { return _gcode__WEBPACK_IMPORTED_MODULE_60__["default"]; });
+/* harmony import */ var _firestore_security_rules__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(/*! ./firestore-security-rules */ "./src/languages/prism/firestore-security-rules.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "firestoreSecurityRules", function() { return _firestore_security_rules__WEBPACK_IMPORTED_MODULE_60__["default"]; });
 
-/* harmony import */ var _gdscript__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__(/*! ./gdscript */ "./src/languages/prism/gdscript.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "gdscript", function() { return _gdscript__WEBPACK_IMPORTED_MODULE_61__["default"]; });
+/* harmony import */ var _flow__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__(/*! ./flow */ "./src/languages/prism/flow.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "flow", function() { return _flow__WEBPACK_IMPORTED_MODULE_61__["default"]; });
 
-/* harmony import */ var _gedcom__WEBPACK_IMPORTED_MODULE_62__ = __webpack_require__(/*! ./gedcom */ "./src/languages/prism/gedcom.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "gedcom", function() { return _gedcom__WEBPACK_IMPORTED_MODULE_62__["default"]; });
+/* harmony import */ var _fortran__WEBPACK_IMPORTED_MODULE_62__ = __webpack_require__(/*! ./fortran */ "./src/languages/prism/fortran.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "fortran", function() { return _fortran__WEBPACK_IMPORTED_MODULE_62__["default"]; });
 
-/* harmony import */ var _gherkin__WEBPACK_IMPORTED_MODULE_63__ = __webpack_require__(/*! ./gherkin */ "./src/languages/prism/gherkin.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "gherkin", function() { return _gherkin__WEBPACK_IMPORTED_MODULE_63__["default"]; });
+/* harmony import */ var _fsharp__WEBPACK_IMPORTED_MODULE_63__ = __webpack_require__(/*! ./fsharp */ "./src/languages/prism/fsharp.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "fsharp", function() { return _fsharp__WEBPACK_IMPORTED_MODULE_63__["default"]; });
 
-/* harmony import */ var _git__WEBPACK_IMPORTED_MODULE_64__ = __webpack_require__(/*! ./git */ "./src/languages/prism/git.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "git", function() { return _git__WEBPACK_IMPORTED_MODULE_64__["default"]; });
+/* harmony import */ var _ftl__WEBPACK_IMPORTED_MODULE_64__ = __webpack_require__(/*! ./ftl */ "./src/languages/prism/ftl.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ftl", function() { return _ftl__WEBPACK_IMPORTED_MODULE_64__["default"]; });
 
-/* harmony import */ var _glsl__WEBPACK_IMPORTED_MODULE_65__ = __webpack_require__(/*! ./glsl */ "./src/languages/prism/glsl.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "glsl", function() { return _glsl__WEBPACK_IMPORTED_MODULE_65__["default"]; });
+/* harmony import */ var _gcode__WEBPACK_IMPORTED_MODULE_65__ = __webpack_require__(/*! ./gcode */ "./src/languages/prism/gcode.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "gcode", function() { return _gcode__WEBPACK_IMPORTED_MODULE_65__["default"]; });
 
-/* harmony import */ var _gml__WEBPACK_IMPORTED_MODULE_66__ = __webpack_require__(/*! ./gml */ "./src/languages/prism/gml.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "gml", function() { return _gml__WEBPACK_IMPORTED_MODULE_66__["default"]; });
+/* harmony import */ var _gdscript__WEBPACK_IMPORTED_MODULE_66__ = __webpack_require__(/*! ./gdscript */ "./src/languages/prism/gdscript.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "gdscript", function() { return _gdscript__WEBPACK_IMPORTED_MODULE_66__["default"]; });
 
-/* harmony import */ var _go__WEBPACK_IMPORTED_MODULE_67__ = __webpack_require__(/*! ./go */ "./src/languages/prism/go.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "go", function() { return _go__WEBPACK_IMPORTED_MODULE_67__["default"]; });
+/* harmony import */ var _gedcom__WEBPACK_IMPORTED_MODULE_67__ = __webpack_require__(/*! ./gedcom */ "./src/languages/prism/gedcom.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "gedcom", function() { return _gedcom__WEBPACK_IMPORTED_MODULE_67__["default"]; });
 
-/* harmony import */ var _graphql__WEBPACK_IMPORTED_MODULE_68__ = __webpack_require__(/*! ./graphql */ "./src/languages/prism/graphql.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "graphql", function() { return _graphql__WEBPACK_IMPORTED_MODULE_68__["default"]; });
+/* harmony import */ var _gherkin__WEBPACK_IMPORTED_MODULE_68__ = __webpack_require__(/*! ./gherkin */ "./src/languages/prism/gherkin.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "gherkin", function() { return _gherkin__WEBPACK_IMPORTED_MODULE_68__["default"]; });
 
-/* harmony import */ var _groovy__WEBPACK_IMPORTED_MODULE_69__ = __webpack_require__(/*! ./groovy */ "./src/languages/prism/groovy.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "groovy", function() { return _groovy__WEBPACK_IMPORTED_MODULE_69__["default"]; });
+/* harmony import */ var _git__WEBPACK_IMPORTED_MODULE_69__ = __webpack_require__(/*! ./git */ "./src/languages/prism/git.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "git", function() { return _git__WEBPACK_IMPORTED_MODULE_69__["default"]; });
 
-/* harmony import */ var _haml__WEBPACK_IMPORTED_MODULE_70__ = __webpack_require__(/*! ./haml */ "./src/languages/prism/haml.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "haml", function() { return _haml__WEBPACK_IMPORTED_MODULE_70__["default"]; });
+/* harmony import */ var _glsl__WEBPACK_IMPORTED_MODULE_70__ = __webpack_require__(/*! ./glsl */ "./src/languages/prism/glsl.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "glsl", function() { return _glsl__WEBPACK_IMPORTED_MODULE_70__["default"]; });
 
-/* harmony import */ var _handlebars__WEBPACK_IMPORTED_MODULE_71__ = __webpack_require__(/*! ./handlebars */ "./src/languages/prism/handlebars.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "handlebars", function() { return _handlebars__WEBPACK_IMPORTED_MODULE_71__["default"]; });
+/* harmony import */ var _gml__WEBPACK_IMPORTED_MODULE_71__ = __webpack_require__(/*! ./gml */ "./src/languages/prism/gml.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "gml", function() { return _gml__WEBPACK_IMPORTED_MODULE_71__["default"]; });
 
-/* harmony import */ var _haskell__WEBPACK_IMPORTED_MODULE_72__ = __webpack_require__(/*! ./haskell */ "./src/languages/prism/haskell.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "haskell", function() { return _haskell__WEBPACK_IMPORTED_MODULE_72__["default"]; });
+/* harmony import */ var _go__WEBPACK_IMPORTED_MODULE_72__ = __webpack_require__(/*! ./go */ "./src/languages/prism/go.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "go", function() { return _go__WEBPACK_IMPORTED_MODULE_72__["default"]; });
 
-/* harmony import */ var _haxe__WEBPACK_IMPORTED_MODULE_73__ = __webpack_require__(/*! ./haxe */ "./src/languages/prism/haxe.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "haxe", function() { return _haxe__WEBPACK_IMPORTED_MODULE_73__["default"]; });
+/* harmony import */ var _graphql__WEBPACK_IMPORTED_MODULE_73__ = __webpack_require__(/*! ./graphql */ "./src/languages/prism/graphql.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "graphql", function() { return _graphql__WEBPACK_IMPORTED_MODULE_73__["default"]; });
 
-/* harmony import */ var _hcl__WEBPACK_IMPORTED_MODULE_74__ = __webpack_require__(/*! ./hcl */ "./src/languages/prism/hcl.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "hcl", function() { return _hcl__WEBPACK_IMPORTED_MODULE_74__["default"]; });
+/* harmony import */ var _groovy__WEBPACK_IMPORTED_MODULE_74__ = __webpack_require__(/*! ./groovy */ "./src/languages/prism/groovy.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "groovy", function() { return _groovy__WEBPACK_IMPORTED_MODULE_74__["default"]; });
 
-/* harmony import */ var _hpkp__WEBPACK_IMPORTED_MODULE_75__ = __webpack_require__(/*! ./hpkp */ "./src/languages/prism/hpkp.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "hpkp", function() { return _hpkp__WEBPACK_IMPORTED_MODULE_75__["default"]; });
+/* harmony import */ var _haml__WEBPACK_IMPORTED_MODULE_75__ = __webpack_require__(/*! ./haml */ "./src/languages/prism/haml.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "haml", function() { return _haml__WEBPACK_IMPORTED_MODULE_75__["default"]; });
 
-/* harmony import */ var _hsts__WEBPACK_IMPORTED_MODULE_76__ = __webpack_require__(/*! ./hsts */ "./src/languages/prism/hsts.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "hsts", function() { return _hsts__WEBPACK_IMPORTED_MODULE_76__["default"]; });
+/* harmony import */ var _handlebars__WEBPACK_IMPORTED_MODULE_76__ = __webpack_require__(/*! ./handlebars */ "./src/languages/prism/handlebars.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "handlebars", function() { return _handlebars__WEBPACK_IMPORTED_MODULE_76__["default"]; });
 
-/* harmony import */ var _http__WEBPACK_IMPORTED_MODULE_77__ = __webpack_require__(/*! ./http */ "./src/languages/prism/http.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "http", function() { return _http__WEBPACK_IMPORTED_MODULE_77__["default"]; });
+/* harmony import */ var _haskell__WEBPACK_IMPORTED_MODULE_77__ = __webpack_require__(/*! ./haskell */ "./src/languages/prism/haskell.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "haskell", function() { return _haskell__WEBPACK_IMPORTED_MODULE_77__["default"]; });
 
-/* harmony import */ var _ichigojam__WEBPACK_IMPORTED_MODULE_78__ = __webpack_require__(/*! ./ichigojam */ "./src/languages/prism/ichigojam.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ichigojam", function() { return _ichigojam__WEBPACK_IMPORTED_MODULE_78__["default"]; });
+/* harmony import */ var _haxe__WEBPACK_IMPORTED_MODULE_78__ = __webpack_require__(/*! ./haxe */ "./src/languages/prism/haxe.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "haxe", function() { return _haxe__WEBPACK_IMPORTED_MODULE_78__["default"]; });
 
-/* harmony import */ var _icon__WEBPACK_IMPORTED_MODULE_79__ = __webpack_require__(/*! ./icon */ "./src/languages/prism/icon.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "icon", function() { return _icon__WEBPACK_IMPORTED_MODULE_79__["default"]; });
+/* harmony import */ var _hcl__WEBPACK_IMPORTED_MODULE_79__ = __webpack_require__(/*! ./hcl */ "./src/languages/prism/hcl.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "hcl", function() { return _hcl__WEBPACK_IMPORTED_MODULE_79__["default"]; });
 
-/* harmony import */ var _inform7__WEBPACK_IMPORTED_MODULE_80__ = __webpack_require__(/*! ./inform7 */ "./src/languages/prism/inform7.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "inform7", function() { return _inform7__WEBPACK_IMPORTED_MODULE_80__["default"]; });
+/* harmony import */ var _hlsl__WEBPACK_IMPORTED_MODULE_80__ = __webpack_require__(/*! ./hlsl */ "./src/languages/prism/hlsl.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "hlsl", function() { return _hlsl__WEBPACK_IMPORTED_MODULE_80__["default"]; });
 
-/* harmony import */ var _ini__WEBPACK_IMPORTED_MODULE_81__ = __webpack_require__(/*! ./ini */ "./src/languages/prism/ini.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ini", function() { return _ini__WEBPACK_IMPORTED_MODULE_81__["default"]; });
+/* harmony import */ var _hpkp__WEBPACK_IMPORTED_MODULE_81__ = __webpack_require__(/*! ./hpkp */ "./src/languages/prism/hpkp.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "hpkp", function() { return _hpkp__WEBPACK_IMPORTED_MODULE_81__["default"]; });
 
-/* harmony import */ var _io__WEBPACK_IMPORTED_MODULE_82__ = __webpack_require__(/*! ./io */ "./src/languages/prism/io.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "io", function() { return _io__WEBPACK_IMPORTED_MODULE_82__["default"]; });
+/* harmony import */ var _hsts__WEBPACK_IMPORTED_MODULE_82__ = __webpack_require__(/*! ./hsts */ "./src/languages/prism/hsts.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "hsts", function() { return _hsts__WEBPACK_IMPORTED_MODULE_82__["default"]; });
 
-/* harmony import */ var _j__WEBPACK_IMPORTED_MODULE_83__ = __webpack_require__(/*! ./j */ "./src/languages/prism/j.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "j", function() { return _j__WEBPACK_IMPORTED_MODULE_83__["default"]; });
+/* harmony import */ var _http__WEBPACK_IMPORTED_MODULE_83__ = __webpack_require__(/*! ./http */ "./src/languages/prism/http.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "http", function() { return _http__WEBPACK_IMPORTED_MODULE_83__["default"]; });
 
-/* harmony import */ var _java__WEBPACK_IMPORTED_MODULE_84__ = __webpack_require__(/*! ./java */ "./src/languages/prism/java.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "java", function() { return _java__WEBPACK_IMPORTED_MODULE_84__["default"]; });
+/* harmony import */ var _ichigojam__WEBPACK_IMPORTED_MODULE_84__ = __webpack_require__(/*! ./ichigojam */ "./src/languages/prism/ichigojam.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ichigojam", function() { return _ichigojam__WEBPACK_IMPORTED_MODULE_84__["default"]; });
 
-/* harmony import */ var _javadoc__WEBPACK_IMPORTED_MODULE_85__ = __webpack_require__(/*! ./javadoc */ "./src/languages/prism/javadoc.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "javadoc", function() { return _javadoc__WEBPACK_IMPORTED_MODULE_85__["default"]; });
+/* harmony import */ var _icon__WEBPACK_IMPORTED_MODULE_85__ = __webpack_require__(/*! ./icon */ "./src/languages/prism/icon.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "icon", function() { return _icon__WEBPACK_IMPORTED_MODULE_85__["default"]; });
 
-/* harmony import */ var _javadoclike__WEBPACK_IMPORTED_MODULE_86__ = __webpack_require__(/*! ./javadoclike */ "./src/languages/prism/javadoclike.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "javadoclike", function() { return _javadoclike__WEBPACK_IMPORTED_MODULE_86__["default"]; });
+/* harmony import */ var _iecst__WEBPACK_IMPORTED_MODULE_86__ = __webpack_require__(/*! ./iecst */ "./src/languages/prism/iecst.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "iecst", function() { return _iecst__WEBPACK_IMPORTED_MODULE_86__["default"]; });
 
-/* harmony import */ var _javascript__WEBPACK_IMPORTED_MODULE_87__ = __webpack_require__(/*! ./javascript */ "./src/languages/prism/javascript.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "javascript", function() { return _javascript__WEBPACK_IMPORTED_MODULE_87__["default"]; });
+/* harmony import */ var _ignore__WEBPACK_IMPORTED_MODULE_87__ = __webpack_require__(/*! ./ignore */ "./src/languages/prism/ignore.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ignore", function() { return _ignore__WEBPACK_IMPORTED_MODULE_87__["default"]; });
 
-/* harmony import */ var _javastacktrace__WEBPACK_IMPORTED_MODULE_88__ = __webpack_require__(/*! ./javastacktrace */ "./src/languages/prism/javastacktrace.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "javastacktrace", function() { return _javastacktrace__WEBPACK_IMPORTED_MODULE_88__["default"]; });
+/* harmony import */ var _inform7__WEBPACK_IMPORTED_MODULE_88__ = __webpack_require__(/*! ./inform7 */ "./src/languages/prism/inform7.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "inform7", function() { return _inform7__WEBPACK_IMPORTED_MODULE_88__["default"]; });
 
-/* harmony import */ var _jolie__WEBPACK_IMPORTED_MODULE_89__ = __webpack_require__(/*! ./jolie */ "./src/languages/prism/jolie.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "jolie", function() { return _jolie__WEBPACK_IMPORTED_MODULE_89__["default"]; });
+/* harmony import */ var _ini__WEBPACK_IMPORTED_MODULE_89__ = __webpack_require__(/*! ./ini */ "./src/languages/prism/ini.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ini", function() { return _ini__WEBPACK_IMPORTED_MODULE_89__["default"]; });
 
-/* harmony import */ var _jq__WEBPACK_IMPORTED_MODULE_90__ = __webpack_require__(/*! ./jq */ "./src/languages/prism/jq.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "jq", function() { return _jq__WEBPACK_IMPORTED_MODULE_90__["default"]; });
+/* harmony import */ var _io__WEBPACK_IMPORTED_MODULE_90__ = __webpack_require__(/*! ./io */ "./src/languages/prism/io.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "io", function() { return _io__WEBPACK_IMPORTED_MODULE_90__["default"]; });
 
-/* harmony import */ var _js_extras__WEBPACK_IMPORTED_MODULE_91__ = __webpack_require__(/*! ./js-extras */ "./src/languages/prism/js-extras.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "jsExtras", function() { return _js_extras__WEBPACK_IMPORTED_MODULE_91__["default"]; });
+/* harmony import */ var _j__WEBPACK_IMPORTED_MODULE_91__ = __webpack_require__(/*! ./j */ "./src/languages/prism/j.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "j", function() { return _j__WEBPACK_IMPORTED_MODULE_91__["default"]; });
 
-/* harmony import */ var _js_templates__WEBPACK_IMPORTED_MODULE_92__ = __webpack_require__(/*! ./js-templates */ "./src/languages/prism/js-templates.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "jsTemplates", function() { return _js_templates__WEBPACK_IMPORTED_MODULE_92__["default"]; });
+/* harmony import */ var _java__WEBPACK_IMPORTED_MODULE_92__ = __webpack_require__(/*! ./java */ "./src/languages/prism/java.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "java", function() { return _java__WEBPACK_IMPORTED_MODULE_92__["default"]; });
 
-/* harmony import */ var _jsdoc__WEBPACK_IMPORTED_MODULE_93__ = __webpack_require__(/*! ./jsdoc */ "./src/languages/prism/jsdoc.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "jsdoc", function() { return _jsdoc__WEBPACK_IMPORTED_MODULE_93__["default"]; });
+/* harmony import */ var _javadoc__WEBPACK_IMPORTED_MODULE_93__ = __webpack_require__(/*! ./javadoc */ "./src/languages/prism/javadoc.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "javadoc", function() { return _javadoc__WEBPACK_IMPORTED_MODULE_93__["default"]; });
 
-/* harmony import */ var _json__WEBPACK_IMPORTED_MODULE_94__ = __webpack_require__(/*! ./json */ "./src/languages/prism/json.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "json", function() { return _json__WEBPACK_IMPORTED_MODULE_94__["default"]; });
+/* harmony import */ var _javadoclike__WEBPACK_IMPORTED_MODULE_94__ = __webpack_require__(/*! ./javadoclike */ "./src/languages/prism/javadoclike.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "javadoclike", function() { return _javadoclike__WEBPACK_IMPORTED_MODULE_94__["default"]; });
 
-/* harmony import */ var _json5__WEBPACK_IMPORTED_MODULE_95__ = __webpack_require__(/*! ./json5 */ "./src/languages/prism/json5.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "json5", function() { return _json5__WEBPACK_IMPORTED_MODULE_95__["default"]; });
+/* harmony import */ var _javascript__WEBPACK_IMPORTED_MODULE_95__ = __webpack_require__(/*! ./javascript */ "./src/languages/prism/javascript.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "javascript", function() { return _javascript__WEBPACK_IMPORTED_MODULE_95__["default"]; });
 
-/* harmony import */ var _jsonp__WEBPACK_IMPORTED_MODULE_96__ = __webpack_require__(/*! ./jsonp */ "./src/languages/prism/jsonp.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "jsonp", function() { return _jsonp__WEBPACK_IMPORTED_MODULE_96__["default"]; });
+/* harmony import */ var _javastacktrace__WEBPACK_IMPORTED_MODULE_96__ = __webpack_require__(/*! ./javastacktrace */ "./src/languages/prism/javastacktrace.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "javastacktrace", function() { return _javastacktrace__WEBPACK_IMPORTED_MODULE_96__["default"]; });
 
-/* harmony import */ var _jsx__WEBPACK_IMPORTED_MODULE_97__ = __webpack_require__(/*! ./jsx */ "./src/languages/prism/jsx.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "jsx", function() { return _jsx__WEBPACK_IMPORTED_MODULE_97__["default"]; });
+/* harmony import */ var _jolie__WEBPACK_IMPORTED_MODULE_97__ = __webpack_require__(/*! ./jolie */ "./src/languages/prism/jolie.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "jolie", function() { return _jolie__WEBPACK_IMPORTED_MODULE_97__["default"]; });
 
-/* harmony import */ var _julia__WEBPACK_IMPORTED_MODULE_98__ = __webpack_require__(/*! ./julia */ "./src/languages/prism/julia.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "julia", function() { return _julia__WEBPACK_IMPORTED_MODULE_98__["default"]; });
+/* harmony import */ var _jq__WEBPACK_IMPORTED_MODULE_98__ = __webpack_require__(/*! ./jq */ "./src/languages/prism/jq.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "jq", function() { return _jq__WEBPACK_IMPORTED_MODULE_98__["default"]; });
 
-/* harmony import */ var _keyman__WEBPACK_IMPORTED_MODULE_99__ = __webpack_require__(/*! ./keyman */ "./src/languages/prism/keyman.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "keyman", function() { return _keyman__WEBPACK_IMPORTED_MODULE_99__["default"]; });
+/* harmony import */ var _js_extras__WEBPACK_IMPORTED_MODULE_99__ = __webpack_require__(/*! ./js-extras */ "./src/languages/prism/js-extras.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "jsExtras", function() { return _js_extras__WEBPACK_IMPORTED_MODULE_99__["default"]; });
 
-/* harmony import */ var _kotlin__WEBPACK_IMPORTED_MODULE_100__ = __webpack_require__(/*! ./kotlin */ "./src/languages/prism/kotlin.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "kotlin", function() { return _kotlin__WEBPACK_IMPORTED_MODULE_100__["default"]; });
+/* harmony import */ var _js_templates__WEBPACK_IMPORTED_MODULE_100__ = __webpack_require__(/*! ./js-templates */ "./src/languages/prism/js-templates.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "jsTemplates", function() { return _js_templates__WEBPACK_IMPORTED_MODULE_100__["default"]; });
 
-/* harmony import */ var _latex__WEBPACK_IMPORTED_MODULE_101__ = __webpack_require__(/*! ./latex */ "./src/languages/prism/latex.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "latex", function() { return _latex__WEBPACK_IMPORTED_MODULE_101__["default"]; });
+/* harmony import */ var _jsdoc__WEBPACK_IMPORTED_MODULE_101__ = __webpack_require__(/*! ./jsdoc */ "./src/languages/prism/jsdoc.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "jsdoc", function() { return _jsdoc__WEBPACK_IMPORTED_MODULE_101__["default"]; });
 
-/* harmony import */ var _latte__WEBPACK_IMPORTED_MODULE_102__ = __webpack_require__(/*! ./latte */ "./src/languages/prism/latte.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "latte", function() { return _latte__WEBPACK_IMPORTED_MODULE_102__["default"]; });
+/* harmony import */ var _json__WEBPACK_IMPORTED_MODULE_102__ = __webpack_require__(/*! ./json */ "./src/languages/prism/json.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "json", function() { return _json__WEBPACK_IMPORTED_MODULE_102__["default"]; });
 
-/* harmony import */ var _less__WEBPACK_IMPORTED_MODULE_103__ = __webpack_require__(/*! ./less */ "./src/languages/prism/less.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "less", function() { return _less__WEBPACK_IMPORTED_MODULE_103__["default"]; });
+/* harmony import */ var _json5__WEBPACK_IMPORTED_MODULE_103__ = __webpack_require__(/*! ./json5 */ "./src/languages/prism/json5.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "json5", function() { return _json5__WEBPACK_IMPORTED_MODULE_103__["default"]; });
 
-/* harmony import */ var _lilypond__WEBPACK_IMPORTED_MODULE_104__ = __webpack_require__(/*! ./lilypond */ "./src/languages/prism/lilypond.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "lilypond", function() { return _lilypond__WEBPACK_IMPORTED_MODULE_104__["default"]; });
+/* harmony import */ var _jsonp__WEBPACK_IMPORTED_MODULE_104__ = __webpack_require__(/*! ./jsonp */ "./src/languages/prism/jsonp.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "jsonp", function() { return _jsonp__WEBPACK_IMPORTED_MODULE_104__["default"]; });
 
-/* harmony import */ var _liquid__WEBPACK_IMPORTED_MODULE_105__ = __webpack_require__(/*! ./liquid */ "./src/languages/prism/liquid.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "liquid", function() { return _liquid__WEBPACK_IMPORTED_MODULE_105__["default"]; });
+/* harmony import */ var _jsstacktrace__WEBPACK_IMPORTED_MODULE_105__ = __webpack_require__(/*! ./jsstacktrace */ "./src/languages/prism/jsstacktrace.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "jsstacktrace", function() { return _jsstacktrace__WEBPACK_IMPORTED_MODULE_105__["default"]; });
 
-/* harmony import */ var _lisp__WEBPACK_IMPORTED_MODULE_106__ = __webpack_require__(/*! ./lisp */ "./src/languages/prism/lisp.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "lisp", function() { return _lisp__WEBPACK_IMPORTED_MODULE_106__["default"]; });
+/* harmony import */ var _jsx__WEBPACK_IMPORTED_MODULE_106__ = __webpack_require__(/*! ./jsx */ "./src/languages/prism/jsx.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "jsx", function() { return _jsx__WEBPACK_IMPORTED_MODULE_106__["default"]; });
 
-/* harmony import */ var _livescript__WEBPACK_IMPORTED_MODULE_107__ = __webpack_require__(/*! ./livescript */ "./src/languages/prism/livescript.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "livescript", function() { return _livescript__WEBPACK_IMPORTED_MODULE_107__["default"]; });
+/* harmony import */ var _julia__WEBPACK_IMPORTED_MODULE_107__ = __webpack_require__(/*! ./julia */ "./src/languages/prism/julia.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "julia", function() { return _julia__WEBPACK_IMPORTED_MODULE_107__["default"]; });
 
-/* harmony import */ var _llvm__WEBPACK_IMPORTED_MODULE_108__ = __webpack_require__(/*! ./llvm */ "./src/languages/prism/llvm.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "llvm", function() { return _llvm__WEBPACK_IMPORTED_MODULE_108__["default"]; });
+/* harmony import */ var _keyman__WEBPACK_IMPORTED_MODULE_108__ = __webpack_require__(/*! ./keyman */ "./src/languages/prism/keyman.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "keyman", function() { return _keyman__WEBPACK_IMPORTED_MODULE_108__["default"]; });
 
-/* harmony import */ var _lolcode__WEBPACK_IMPORTED_MODULE_109__ = __webpack_require__(/*! ./lolcode */ "./src/languages/prism/lolcode.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "lolcode", function() { return _lolcode__WEBPACK_IMPORTED_MODULE_109__["default"]; });
+/* harmony import */ var _kotlin__WEBPACK_IMPORTED_MODULE_109__ = __webpack_require__(/*! ./kotlin */ "./src/languages/prism/kotlin.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "kotlin", function() { return _kotlin__WEBPACK_IMPORTED_MODULE_109__["default"]; });
 
-/* harmony import */ var _lua__WEBPACK_IMPORTED_MODULE_110__ = __webpack_require__(/*! ./lua */ "./src/languages/prism/lua.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "lua", function() { return _lua__WEBPACK_IMPORTED_MODULE_110__["default"]; });
+/* harmony import */ var _latex__WEBPACK_IMPORTED_MODULE_110__ = __webpack_require__(/*! ./latex */ "./src/languages/prism/latex.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "latex", function() { return _latex__WEBPACK_IMPORTED_MODULE_110__["default"]; });
 
-/* harmony import */ var _makefile__WEBPACK_IMPORTED_MODULE_111__ = __webpack_require__(/*! ./makefile */ "./src/languages/prism/makefile.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "makefile", function() { return _makefile__WEBPACK_IMPORTED_MODULE_111__["default"]; });
+/* harmony import */ var _latte__WEBPACK_IMPORTED_MODULE_111__ = __webpack_require__(/*! ./latte */ "./src/languages/prism/latte.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "latte", function() { return _latte__WEBPACK_IMPORTED_MODULE_111__["default"]; });
 
-/* harmony import */ var _markdown__WEBPACK_IMPORTED_MODULE_112__ = __webpack_require__(/*! ./markdown */ "./src/languages/prism/markdown.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "markdown", function() { return _markdown__WEBPACK_IMPORTED_MODULE_112__["default"]; });
+/* harmony import */ var _less__WEBPACK_IMPORTED_MODULE_112__ = __webpack_require__(/*! ./less */ "./src/languages/prism/less.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "less", function() { return _less__WEBPACK_IMPORTED_MODULE_112__["default"]; });
 
-/* harmony import */ var _markup_templating__WEBPACK_IMPORTED_MODULE_113__ = __webpack_require__(/*! ./markup-templating */ "./src/languages/prism/markup-templating.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "markupTemplating", function() { return _markup_templating__WEBPACK_IMPORTED_MODULE_113__["default"]; });
+/* harmony import */ var _lilypond__WEBPACK_IMPORTED_MODULE_113__ = __webpack_require__(/*! ./lilypond */ "./src/languages/prism/lilypond.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "lilypond", function() { return _lilypond__WEBPACK_IMPORTED_MODULE_113__["default"]; });
 
-/* harmony import */ var _markup__WEBPACK_IMPORTED_MODULE_114__ = __webpack_require__(/*! ./markup */ "./src/languages/prism/markup.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "markup", function() { return _markup__WEBPACK_IMPORTED_MODULE_114__["default"]; });
+/* harmony import */ var _liquid__WEBPACK_IMPORTED_MODULE_114__ = __webpack_require__(/*! ./liquid */ "./src/languages/prism/liquid.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "liquid", function() { return _liquid__WEBPACK_IMPORTED_MODULE_114__["default"]; });
 
-/* harmony import */ var _matlab__WEBPACK_IMPORTED_MODULE_115__ = __webpack_require__(/*! ./matlab */ "./src/languages/prism/matlab.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "matlab", function() { return _matlab__WEBPACK_IMPORTED_MODULE_115__["default"]; });
+/* harmony import */ var _lisp__WEBPACK_IMPORTED_MODULE_115__ = __webpack_require__(/*! ./lisp */ "./src/languages/prism/lisp.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "lisp", function() { return _lisp__WEBPACK_IMPORTED_MODULE_115__["default"]; });
 
-/* harmony import */ var _mel__WEBPACK_IMPORTED_MODULE_116__ = __webpack_require__(/*! ./mel */ "./src/languages/prism/mel.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "mel", function() { return _mel__WEBPACK_IMPORTED_MODULE_116__["default"]; });
+/* harmony import */ var _livescript__WEBPACK_IMPORTED_MODULE_116__ = __webpack_require__(/*! ./livescript */ "./src/languages/prism/livescript.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "livescript", function() { return _livescript__WEBPACK_IMPORTED_MODULE_116__["default"]; });
 
-/* harmony import */ var _mizar__WEBPACK_IMPORTED_MODULE_117__ = __webpack_require__(/*! ./mizar */ "./src/languages/prism/mizar.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "mizar", function() { return _mizar__WEBPACK_IMPORTED_MODULE_117__["default"]; });
+/* harmony import */ var _llvm__WEBPACK_IMPORTED_MODULE_117__ = __webpack_require__(/*! ./llvm */ "./src/languages/prism/llvm.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "llvm", function() { return _llvm__WEBPACK_IMPORTED_MODULE_117__["default"]; });
 
-/* harmony import */ var _monkey__WEBPACK_IMPORTED_MODULE_118__ = __webpack_require__(/*! ./monkey */ "./src/languages/prism/monkey.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "monkey", function() { return _monkey__WEBPACK_IMPORTED_MODULE_118__["default"]; });
+/* harmony import */ var _lolcode__WEBPACK_IMPORTED_MODULE_118__ = __webpack_require__(/*! ./lolcode */ "./src/languages/prism/lolcode.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "lolcode", function() { return _lolcode__WEBPACK_IMPORTED_MODULE_118__["default"]; });
 
-/* harmony import */ var _moonscript__WEBPACK_IMPORTED_MODULE_119__ = __webpack_require__(/*! ./moonscript */ "./src/languages/prism/moonscript.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "moonscript", function() { return _moonscript__WEBPACK_IMPORTED_MODULE_119__["default"]; });
+/* harmony import */ var _lua__WEBPACK_IMPORTED_MODULE_119__ = __webpack_require__(/*! ./lua */ "./src/languages/prism/lua.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "lua", function() { return _lua__WEBPACK_IMPORTED_MODULE_119__["default"]; });
 
-/* harmony import */ var _n1ql__WEBPACK_IMPORTED_MODULE_120__ = __webpack_require__(/*! ./n1ql */ "./src/languages/prism/n1ql.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "n1ql", function() { return _n1ql__WEBPACK_IMPORTED_MODULE_120__["default"]; });
+/* harmony import */ var _makefile__WEBPACK_IMPORTED_MODULE_120__ = __webpack_require__(/*! ./makefile */ "./src/languages/prism/makefile.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "makefile", function() { return _makefile__WEBPACK_IMPORTED_MODULE_120__["default"]; });
 
-/* harmony import */ var _n4js__WEBPACK_IMPORTED_MODULE_121__ = __webpack_require__(/*! ./n4js */ "./src/languages/prism/n4js.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "n4js", function() { return _n4js__WEBPACK_IMPORTED_MODULE_121__["default"]; });
+/* harmony import */ var _markdown__WEBPACK_IMPORTED_MODULE_121__ = __webpack_require__(/*! ./markdown */ "./src/languages/prism/markdown.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "markdown", function() { return _markdown__WEBPACK_IMPORTED_MODULE_121__["default"]; });
 
-/* harmony import */ var _nand2tetris_hdl__WEBPACK_IMPORTED_MODULE_122__ = __webpack_require__(/*! ./nand2tetris-hdl */ "./src/languages/prism/nand2tetris-hdl.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "nand2tetrisHdl", function() { return _nand2tetris_hdl__WEBPACK_IMPORTED_MODULE_122__["default"]; });
+/* harmony import */ var _markup_templating__WEBPACK_IMPORTED_MODULE_122__ = __webpack_require__(/*! ./markup-templating */ "./src/languages/prism/markup-templating.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "markupTemplating", function() { return _markup_templating__WEBPACK_IMPORTED_MODULE_122__["default"]; });
 
-/* harmony import */ var _nasm__WEBPACK_IMPORTED_MODULE_123__ = __webpack_require__(/*! ./nasm */ "./src/languages/prism/nasm.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "nasm", function() { return _nasm__WEBPACK_IMPORTED_MODULE_123__["default"]; });
+/* harmony import */ var _markup__WEBPACK_IMPORTED_MODULE_123__ = __webpack_require__(/*! ./markup */ "./src/languages/prism/markup.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "markup", function() { return _markup__WEBPACK_IMPORTED_MODULE_123__["default"]; });
 
-/* harmony import */ var _neon__WEBPACK_IMPORTED_MODULE_124__ = __webpack_require__(/*! ./neon */ "./src/languages/prism/neon.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "neon", function() { return _neon__WEBPACK_IMPORTED_MODULE_124__["default"]; });
+/* harmony import */ var _matlab__WEBPACK_IMPORTED_MODULE_124__ = __webpack_require__(/*! ./matlab */ "./src/languages/prism/matlab.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "matlab", function() { return _matlab__WEBPACK_IMPORTED_MODULE_124__["default"]; });
 
-/* harmony import */ var _nginx__WEBPACK_IMPORTED_MODULE_125__ = __webpack_require__(/*! ./nginx */ "./src/languages/prism/nginx.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "nginx", function() { return _nginx__WEBPACK_IMPORTED_MODULE_125__["default"]; });
+/* harmony import */ var _mel__WEBPACK_IMPORTED_MODULE_125__ = __webpack_require__(/*! ./mel */ "./src/languages/prism/mel.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "mel", function() { return _mel__WEBPACK_IMPORTED_MODULE_125__["default"]; });
 
-/* harmony import */ var _nim__WEBPACK_IMPORTED_MODULE_126__ = __webpack_require__(/*! ./nim */ "./src/languages/prism/nim.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "nim", function() { return _nim__WEBPACK_IMPORTED_MODULE_126__["default"]; });
+/* harmony import */ var _mizar__WEBPACK_IMPORTED_MODULE_126__ = __webpack_require__(/*! ./mizar */ "./src/languages/prism/mizar.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "mizar", function() { return _mizar__WEBPACK_IMPORTED_MODULE_126__["default"]; });
 
-/* harmony import */ var _nix__WEBPACK_IMPORTED_MODULE_127__ = __webpack_require__(/*! ./nix */ "./src/languages/prism/nix.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "nix", function() { return _nix__WEBPACK_IMPORTED_MODULE_127__["default"]; });
+/* harmony import */ var _monkey__WEBPACK_IMPORTED_MODULE_127__ = __webpack_require__(/*! ./monkey */ "./src/languages/prism/monkey.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "monkey", function() { return _monkey__WEBPACK_IMPORTED_MODULE_127__["default"]; });
 
-/* harmony import */ var _nsis__WEBPACK_IMPORTED_MODULE_128__ = __webpack_require__(/*! ./nsis */ "./src/languages/prism/nsis.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "nsis", function() { return _nsis__WEBPACK_IMPORTED_MODULE_128__["default"]; });
+/* harmony import */ var _moonscript__WEBPACK_IMPORTED_MODULE_128__ = __webpack_require__(/*! ./moonscript */ "./src/languages/prism/moonscript.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "moonscript", function() { return _moonscript__WEBPACK_IMPORTED_MODULE_128__["default"]; });
 
-/* harmony import */ var _objectivec__WEBPACK_IMPORTED_MODULE_129__ = __webpack_require__(/*! ./objectivec */ "./src/languages/prism/objectivec.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "objectivec", function() { return _objectivec__WEBPACK_IMPORTED_MODULE_129__["default"]; });
+/* harmony import */ var _n1ql__WEBPACK_IMPORTED_MODULE_129__ = __webpack_require__(/*! ./n1ql */ "./src/languages/prism/n1ql.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "n1ql", function() { return _n1ql__WEBPACK_IMPORTED_MODULE_129__["default"]; });
 
-/* harmony import */ var _ocaml__WEBPACK_IMPORTED_MODULE_130__ = __webpack_require__(/*! ./ocaml */ "./src/languages/prism/ocaml.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ocaml", function() { return _ocaml__WEBPACK_IMPORTED_MODULE_130__["default"]; });
+/* harmony import */ var _n4js__WEBPACK_IMPORTED_MODULE_130__ = __webpack_require__(/*! ./n4js */ "./src/languages/prism/n4js.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "n4js", function() { return _n4js__WEBPACK_IMPORTED_MODULE_130__["default"]; });
 
-/* harmony import */ var _opencl__WEBPACK_IMPORTED_MODULE_131__ = __webpack_require__(/*! ./opencl */ "./src/languages/prism/opencl.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "opencl", function() { return _opencl__WEBPACK_IMPORTED_MODULE_131__["default"]; });
+/* harmony import */ var _nand2tetris_hdl__WEBPACK_IMPORTED_MODULE_131__ = __webpack_require__(/*! ./nand2tetris-hdl */ "./src/languages/prism/nand2tetris-hdl.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "nand2tetrisHdl", function() { return _nand2tetris_hdl__WEBPACK_IMPORTED_MODULE_131__["default"]; });
 
-/* harmony import */ var _oz__WEBPACK_IMPORTED_MODULE_132__ = __webpack_require__(/*! ./oz */ "./src/languages/prism/oz.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "oz", function() { return _oz__WEBPACK_IMPORTED_MODULE_132__["default"]; });
+/* harmony import */ var _nasm__WEBPACK_IMPORTED_MODULE_132__ = __webpack_require__(/*! ./nasm */ "./src/languages/prism/nasm.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "nasm", function() { return _nasm__WEBPACK_IMPORTED_MODULE_132__["default"]; });
 
-/* harmony import */ var _parigp__WEBPACK_IMPORTED_MODULE_133__ = __webpack_require__(/*! ./parigp */ "./src/languages/prism/parigp.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "parigp", function() { return _parigp__WEBPACK_IMPORTED_MODULE_133__["default"]; });
+/* harmony import */ var _neon__WEBPACK_IMPORTED_MODULE_133__ = __webpack_require__(/*! ./neon */ "./src/languages/prism/neon.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "neon", function() { return _neon__WEBPACK_IMPORTED_MODULE_133__["default"]; });
 
-/* harmony import */ var _parser__WEBPACK_IMPORTED_MODULE_134__ = __webpack_require__(/*! ./parser */ "./src/languages/prism/parser.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "parser", function() { return _parser__WEBPACK_IMPORTED_MODULE_134__["default"]; });
+/* harmony import */ var _nginx__WEBPACK_IMPORTED_MODULE_134__ = __webpack_require__(/*! ./nginx */ "./src/languages/prism/nginx.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "nginx", function() { return _nginx__WEBPACK_IMPORTED_MODULE_134__["default"]; });
 
-/* harmony import */ var _pascal__WEBPACK_IMPORTED_MODULE_135__ = __webpack_require__(/*! ./pascal */ "./src/languages/prism/pascal.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "pascal", function() { return _pascal__WEBPACK_IMPORTED_MODULE_135__["default"]; });
+/* harmony import */ var _nim__WEBPACK_IMPORTED_MODULE_135__ = __webpack_require__(/*! ./nim */ "./src/languages/prism/nim.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "nim", function() { return _nim__WEBPACK_IMPORTED_MODULE_135__["default"]; });
 
-/* harmony import */ var _pascaligo__WEBPACK_IMPORTED_MODULE_136__ = __webpack_require__(/*! ./pascaligo */ "./src/languages/prism/pascaligo.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "pascaligo", function() { return _pascaligo__WEBPACK_IMPORTED_MODULE_136__["default"]; });
+/* harmony import */ var _nix__WEBPACK_IMPORTED_MODULE_136__ = __webpack_require__(/*! ./nix */ "./src/languages/prism/nix.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "nix", function() { return _nix__WEBPACK_IMPORTED_MODULE_136__["default"]; });
 
-/* harmony import */ var _pcaxis__WEBPACK_IMPORTED_MODULE_137__ = __webpack_require__(/*! ./pcaxis */ "./src/languages/prism/pcaxis.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "pcaxis", function() { return _pcaxis__WEBPACK_IMPORTED_MODULE_137__["default"]; });
+/* harmony import */ var _nsis__WEBPACK_IMPORTED_MODULE_137__ = __webpack_require__(/*! ./nsis */ "./src/languages/prism/nsis.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "nsis", function() { return _nsis__WEBPACK_IMPORTED_MODULE_137__["default"]; });
 
-/* harmony import */ var _perl__WEBPACK_IMPORTED_MODULE_138__ = __webpack_require__(/*! ./perl */ "./src/languages/prism/perl.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "perl", function() { return _perl__WEBPACK_IMPORTED_MODULE_138__["default"]; });
+/* harmony import */ var _objectivec__WEBPACK_IMPORTED_MODULE_138__ = __webpack_require__(/*! ./objectivec */ "./src/languages/prism/objectivec.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "objectivec", function() { return _objectivec__WEBPACK_IMPORTED_MODULE_138__["default"]; });
 
-/* harmony import */ var _php_extras__WEBPACK_IMPORTED_MODULE_139__ = __webpack_require__(/*! ./php-extras */ "./src/languages/prism/php-extras.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "phpExtras", function() { return _php_extras__WEBPACK_IMPORTED_MODULE_139__["default"]; });
+/* harmony import */ var _ocaml__WEBPACK_IMPORTED_MODULE_139__ = __webpack_require__(/*! ./ocaml */ "./src/languages/prism/ocaml.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ocaml", function() { return _ocaml__WEBPACK_IMPORTED_MODULE_139__["default"]; });
 
-/* harmony import */ var _php__WEBPACK_IMPORTED_MODULE_140__ = __webpack_require__(/*! ./php */ "./src/languages/prism/php.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "php", function() { return _php__WEBPACK_IMPORTED_MODULE_140__["default"]; });
+/* harmony import */ var _opencl__WEBPACK_IMPORTED_MODULE_140__ = __webpack_require__(/*! ./opencl */ "./src/languages/prism/opencl.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "opencl", function() { return _opencl__WEBPACK_IMPORTED_MODULE_140__["default"]; });
 
-/* harmony import */ var _phpdoc__WEBPACK_IMPORTED_MODULE_141__ = __webpack_require__(/*! ./phpdoc */ "./src/languages/prism/phpdoc.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "phpdoc", function() { return _phpdoc__WEBPACK_IMPORTED_MODULE_141__["default"]; });
+/* harmony import */ var _oz__WEBPACK_IMPORTED_MODULE_141__ = __webpack_require__(/*! ./oz */ "./src/languages/prism/oz.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "oz", function() { return _oz__WEBPACK_IMPORTED_MODULE_141__["default"]; });
 
-/* harmony import */ var _plsql__WEBPACK_IMPORTED_MODULE_142__ = __webpack_require__(/*! ./plsql */ "./src/languages/prism/plsql.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "plsql", function() { return _plsql__WEBPACK_IMPORTED_MODULE_142__["default"]; });
+/* harmony import */ var _parigp__WEBPACK_IMPORTED_MODULE_142__ = __webpack_require__(/*! ./parigp */ "./src/languages/prism/parigp.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "parigp", function() { return _parigp__WEBPACK_IMPORTED_MODULE_142__["default"]; });
 
-/* harmony import */ var _powerquery__WEBPACK_IMPORTED_MODULE_143__ = __webpack_require__(/*! ./powerquery */ "./src/languages/prism/powerquery.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "powerquery", function() { return _powerquery__WEBPACK_IMPORTED_MODULE_143__["default"]; });
+/* harmony import */ var _parser__WEBPACK_IMPORTED_MODULE_143__ = __webpack_require__(/*! ./parser */ "./src/languages/prism/parser.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "parser", function() { return _parser__WEBPACK_IMPORTED_MODULE_143__["default"]; });
 
-/* harmony import */ var _powershell__WEBPACK_IMPORTED_MODULE_144__ = __webpack_require__(/*! ./powershell */ "./src/languages/prism/powershell.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "powershell", function() { return _powershell__WEBPACK_IMPORTED_MODULE_144__["default"]; });
+/* harmony import */ var _pascal__WEBPACK_IMPORTED_MODULE_144__ = __webpack_require__(/*! ./pascal */ "./src/languages/prism/pascal.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "pascal", function() { return _pascal__WEBPACK_IMPORTED_MODULE_144__["default"]; });
 
-/* harmony import */ var _processing__WEBPACK_IMPORTED_MODULE_145__ = __webpack_require__(/*! ./processing */ "./src/languages/prism/processing.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "processing", function() { return _processing__WEBPACK_IMPORTED_MODULE_145__["default"]; });
+/* harmony import */ var _pascaligo__WEBPACK_IMPORTED_MODULE_145__ = __webpack_require__(/*! ./pascaligo */ "./src/languages/prism/pascaligo.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "pascaligo", function() { return _pascaligo__WEBPACK_IMPORTED_MODULE_145__["default"]; });
 
-/* harmony import */ var _prolog__WEBPACK_IMPORTED_MODULE_146__ = __webpack_require__(/*! ./prolog */ "./src/languages/prism/prolog.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "prolog", function() { return _prolog__WEBPACK_IMPORTED_MODULE_146__["default"]; });
+/* harmony import */ var _pcaxis__WEBPACK_IMPORTED_MODULE_146__ = __webpack_require__(/*! ./pcaxis */ "./src/languages/prism/pcaxis.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "pcaxis", function() { return _pcaxis__WEBPACK_IMPORTED_MODULE_146__["default"]; });
 
-/* harmony import */ var _properties__WEBPACK_IMPORTED_MODULE_147__ = __webpack_require__(/*! ./properties */ "./src/languages/prism/properties.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "properties", function() { return _properties__WEBPACK_IMPORTED_MODULE_147__["default"]; });
+/* harmony import */ var _peoplecode__WEBPACK_IMPORTED_MODULE_147__ = __webpack_require__(/*! ./peoplecode */ "./src/languages/prism/peoplecode.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "peoplecode", function() { return _peoplecode__WEBPACK_IMPORTED_MODULE_147__["default"]; });
 
-/* harmony import */ var _protobuf__WEBPACK_IMPORTED_MODULE_148__ = __webpack_require__(/*! ./protobuf */ "./src/languages/prism/protobuf.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "protobuf", function() { return _protobuf__WEBPACK_IMPORTED_MODULE_148__["default"]; });
+/* harmony import */ var _perl__WEBPACK_IMPORTED_MODULE_148__ = __webpack_require__(/*! ./perl */ "./src/languages/prism/perl.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "perl", function() { return _perl__WEBPACK_IMPORTED_MODULE_148__["default"]; });
 
-/* harmony import */ var _pug__WEBPACK_IMPORTED_MODULE_149__ = __webpack_require__(/*! ./pug */ "./src/languages/prism/pug.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "pug", function() { return _pug__WEBPACK_IMPORTED_MODULE_149__["default"]; });
+/* harmony import */ var _php_extras__WEBPACK_IMPORTED_MODULE_149__ = __webpack_require__(/*! ./php-extras */ "./src/languages/prism/php-extras.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "phpExtras", function() { return _php_extras__WEBPACK_IMPORTED_MODULE_149__["default"]; });
 
-/* harmony import */ var _puppet__WEBPACK_IMPORTED_MODULE_150__ = __webpack_require__(/*! ./puppet */ "./src/languages/prism/puppet.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "puppet", function() { return _puppet__WEBPACK_IMPORTED_MODULE_150__["default"]; });
+/* harmony import */ var _php__WEBPACK_IMPORTED_MODULE_150__ = __webpack_require__(/*! ./php */ "./src/languages/prism/php.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "php", function() { return _php__WEBPACK_IMPORTED_MODULE_150__["default"]; });
 
-/* harmony import */ var _pure__WEBPACK_IMPORTED_MODULE_151__ = __webpack_require__(/*! ./pure */ "./src/languages/prism/pure.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "pure", function() { return _pure__WEBPACK_IMPORTED_MODULE_151__["default"]; });
+/* harmony import */ var _phpdoc__WEBPACK_IMPORTED_MODULE_151__ = __webpack_require__(/*! ./phpdoc */ "./src/languages/prism/phpdoc.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "phpdoc", function() { return _phpdoc__WEBPACK_IMPORTED_MODULE_151__["default"]; });
 
-/* harmony import */ var _python__WEBPACK_IMPORTED_MODULE_152__ = __webpack_require__(/*! ./python */ "./src/languages/prism/python.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "python", function() { return _python__WEBPACK_IMPORTED_MODULE_152__["default"]; });
+/* harmony import */ var _plsql__WEBPACK_IMPORTED_MODULE_152__ = __webpack_require__(/*! ./plsql */ "./src/languages/prism/plsql.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "plsql", function() { return _plsql__WEBPACK_IMPORTED_MODULE_152__["default"]; });
 
-/* harmony import */ var _q__WEBPACK_IMPORTED_MODULE_153__ = __webpack_require__(/*! ./q */ "./src/languages/prism/q.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "q", function() { return _q__WEBPACK_IMPORTED_MODULE_153__["default"]; });
+/* harmony import */ var _powerquery__WEBPACK_IMPORTED_MODULE_153__ = __webpack_require__(/*! ./powerquery */ "./src/languages/prism/powerquery.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "powerquery", function() { return _powerquery__WEBPACK_IMPORTED_MODULE_153__["default"]; });
 
-/* harmony import */ var _qml__WEBPACK_IMPORTED_MODULE_154__ = __webpack_require__(/*! ./qml */ "./src/languages/prism/qml.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "qml", function() { return _qml__WEBPACK_IMPORTED_MODULE_154__["default"]; });
+/* harmony import */ var _powershell__WEBPACK_IMPORTED_MODULE_154__ = __webpack_require__(/*! ./powershell */ "./src/languages/prism/powershell.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "powershell", function() { return _powershell__WEBPACK_IMPORTED_MODULE_154__["default"]; });
 
-/* harmony import */ var _qore__WEBPACK_IMPORTED_MODULE_155__ = __webpack_require__(/*! ./qore */ "./src/languages/prism/qore.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "qore", function() { return _qore__WEBPACK_IMPORTED_MODULE_155__["default"]; });
+/* harmony import */ var _processing__WEBPACK_IMPORTED_MODULE_155__ = __webpack_require__(/*! ./processing */ "./src/languages/prism/processing.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "processing", function() { return _processing__WEBPACK_IMPORTED_MODULE_155__["default"]; });
 
-/* harmony import */ var _r__WEBPACK_IMPORTED_MODULE_156__ = __webpack_require__(/*! ./r */ "./src/languages/prism/r.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "r", function() { return _r__WEBPACK_IMPORTED_MODULE_156__["default"]; });
+/* harmony import */ var _prolog__WEBPACK_IMPORTED_MODULE_156__ = __webpack_require__(/*! ./prolog */ "./src/languages/prism/prolog.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "prolog", function() { return _prolog__WEBPACK_IMPORTED_MODULE_156__["default"]; });
 
-/* harmony import */ var _reason__WEBPACK_IMPORTED_MODULE_157__ = __webpack_require__(/*! ./reason */ "./src/languages/prism/reason.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "reason", function() { return _reason__WEBPACK_IMPORTED_MODULE_157__["default"]; });
+/* harmony import */ var _properties__WEBPACK_IMPORTED_MODULE_157__ = __webpack_require__(/*! ./properties */ "./src/languages/prism/properties.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "properties", function() { return _properties__WEBPACK_IMPORTED_MODULE_157__["default"]; });
 
-/* harmony import */ var _regex__WEBPACK_IMPORTED_MODULE_158__ = __webpack_require__(/*! ./regex */ "./src/languages/prism/regex.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "regex", function() { return _regex__WEBPACK_IMPORTED_MODULE_158__["default"]; });
+/* harmony import */ var _protobuf__WEBPACK_IMPORTED_MODULE_158__ = __webpack_require__(/*! ./protobuf */ "./src/languages/prism/protobuf.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "protobuf", function() { return _protobuf__WEBPACK_IMPORTED_MODULE_158__["default"]; });
 
-/* harmony import */ var _renpy__WEBPACK_IMPORTED_MODULE_159__ = __webpack_require__(/*! ./renpy */ "./src/languages/prism/renpy.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "renpy", function() { return _renpy__WEBPACK_IMPORTED_MODULE_159__["default"]; });
+/* harmony import */ var _pug__WEBPACK_IMPORTED_MODULE_159__ = __webpack_require__(/*! ./pug */ "./src/languages/prism/pug.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "pug", function() { return _pug__WEBPACK_IMPORTED_MODULE_159__["default"]; });
 
-/* harmony import */ var _rest__WEBPACK_IMPORTED_MODULE_160__ = __webpack_require__(/*! ./rest */ "./src/languages/prism/rest.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "rest", function() { return _rest__WEBPACK_IMPORTED_MODULE_160__["default"]; });
+/* harmony import */ var _puppet__WEBPACK_IMPORTED_MODULE_160__ = __webpack_require__(/*! ./puppet */ "./src/languages/prism/puppet.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "puppet", function() { return _puppet__WEBPACK_IMPORTED_MODULE_160__["default"]; });
 
-/* harmony import */ var _rip__WEBPACK_IMPORTED_MODULE_161__ = __webpack_require__(/*! ./rip */ "./src/languages/prism/rip.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "rip", function() { return _rip__WEBPACK_IMPORTED_MODULE_161__["default"]; });
+/* harmony import */ var _pure__WEBPACK_IMPORTED_MODULE_161__ = __webpack_require__(/*! ./pure */ "./src/languages/prism/pure.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "pure", function() { return _pure__WEBPACK_IMPORTED_MODULE_161__["default"]; });
 
-/* harmony import */ var _roboconf__WEBPACK_IMPORTED_MODULE_162__ = __webpack_require__(/*! ./roboconf */ "./src/languages/prism/roboconf.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "roboconf", function() { return _roboconf__WEBPACK_IMPORTED_MODULE_162__["default"]; });
+/* harmony import */ var _purebasic__WEBPACK_IMPORTED_MODULE_162__ = __webpack_require__(/*! ./purebasic */ "./src/languages/prism/purebasic.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "purebasic", function() { return _purebasic__WEBPACK_IMPORTED_MODULE_162__["default"]; });
 
-/* harmony import */ var _robotframework__WEBPACK_IMPORTED_MODULE_163__ = __webpack_require__(/*! ./robotframework */ "./src/languages/prism/robotframework.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "robotframework", function() { return _robotframework__WEBPACK_IMPORTED_MODULE_163__["default"]; });
+/* harmony import */ var _python__WEBPACK_IMPORTED_MODULE_163__ = __webpack_require__(/*! ./python */ "./src/languages/prism/python.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "python", function() { return _python__WEBPACK_IMPORTED_MODULE_163__["default"]; });
 
-/* harmony import */ var _ruby__WEBPACK_IMPORTED_MODULE_164__ = __webpack_require__(/*! ./ruby */ "./src/languages/prism/ruby.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ruby", function() { return _ruby__WEBPACK_IMPORTED_MODULE_164__["default"]; });
+/* harmony import */ var _q__WEBPACK_IMPORTED_MODULE_164__ = __webpack_require__(/*! ./q */ "./src/languages/prism/q.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "q", function() { return _q__WEBPACK_IMPORTED_MODULE_164__["default"]; });
 
-/* harmony import */ var _rust__WEBPACK_IMPORTED_MODULE_165__ = __webpack_require__(/*! ./rust */ "./src/languages/prism/rust.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "rust", function() { return _rust__WEBPACK_IMPORTED_MODULE_165__["default"]; });
+/* harmony import */ var _qml__WEBPACK_IMPORTED_MODULE_165__ = __webpack_require__(/*! ./qml */ "./src/languages/prism/qml.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "qml", function() { return _qml__WEBPACK_IMPORTED_MODULE_165__["default"]; });
 
-/* harmony import */ var _sas__WEBPACK_IMPORTED_MODULE_166__ = __webpack_require__(/*! ./sas */ "./src/languages/prism/sas.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "sas", function() { return _sas__WEBPACK_IMPORTED_MODULE_166__["default"]; });
+/* harmony import */ var _qore__WEBPACK_IMPORTED_MODULE_166__ = __webpack_require__(/*! ./qore */ "./src/languages/prism/qore.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "qore", function() { return _qore__WEBPACK_IMPORTED_MODULE_166__["default"]; });
 
-/* harmony import */ var _sass__WEBPACK_IMPORTED_MODULE_167__ = __webpack_require__(/*! ./sass */ "./src/languages/prism/sass.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "sass", function() { return _sass__WEBPACK_IMPORTED_MODULE_167__["default"]; });
+/* harmony import */ var _r__WEBPACK_IMPORTED_MODULE_167__ = __webpack_require__(/*! ./r */ "./src/languages/prism/r.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "r", function() { return _r__WEBPACK_IMPORTED_MODULE_167__["default"]; });
 
-/* harmony import */ var _scala__WEBPACK_IMPORTED_MODULE_168__ = __webpack_require__(/*! ./scala */ "./src/languages/prism/scala.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "scala", function() { return _scala__WEBPACK_IMPORTED_MODULE_168__["default"]; });
+/* harmony import */ var _racket__WEBPACK_IMPORTED_MODULE_168__ = __webpack_require__(/*! ./racket */ "./src/languages/prism/racket.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "racket", function() { return _racket__WEBPACK_IMPORTED_MODULE_168__["default"]; });
 
-/* harmony import */ var _scheme__WEBPACK_IMPORTED_MODULE_169__ = __webpack_require__(/*! ./scheme */ "./src/languages/prism/scheme.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "scheme", function() { return _scheme__WEBPACK_IMPORTED_MODULE_169__["default"]; });
+/* harmony import */ var _reason__WEBPACK_IMPORTED_MODULE_169__ = __webpack_require__(/*! ./reason */ "./src/languages/prism/reason.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "reason", function() { return _reason__WEBPACK_IMPORTED_MODULE_169__["default"]; });
 
-/* harmony import */ var _scss__WEBPACK_IMPORTED_MODULE_170__ = __webpack_require__(/*! ./scss */ "./src/languages/prism/scss.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "scss", function() { return _scss__WEBPACK_IMPORTED_MODULE_170__["default"]; });
+/* harmony import */ var _regex__WEBPACK_IMPORTED_MODULE_170__ = __webpack_require__(/*! ./regex */ "./src/languages/prism/regex.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "regex", function() { return _regex__WEBPACK_IMPORTED_MODULE_170__["default"]; });
 
-/* harmony import */ var _shell_session__WEBPACK_IMPORTED_MODULE_171__ = __webpack_require__(/*! ./shell-session */ "./src/languages/prism/shell-session.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "shellSession", function() { return _shell_session__WEBPACK_IMPORTED_MODULE_171__["default"]; });
+/* harmony import */ var _renpy__WEBPACK_IMPORTED_MODULE_171__ = __webpack_require__(/*! ./renpy */ "./src/languages/prism/renpy.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "renpy", function() { return _renpy__WEBPACK_IMPORTED_MODULE_171__["default"]; });
 
-/* harmony import */ var _smalltalk__WEBPACK_IMPORTED_MODULE_172__ = __webpack_require__(/*! ./smalltalk */ "./src/languages/prism/smalltalk.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "smalltalk", function() { return _smalltalk__WEBPACK_IMPORTED_MODULE_172__["default"]; });
+/* harmony import */ var _rest__WEBPACK_IMPORTED_MODULE_172__ = __webpack_require__(/*! ./rest */ "./src/languages/prism/rest.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "rest", function() { return _rest__WEBPACK_IMPORTED_MODULE_172__["default"]; });
 
-/* harmony import */ var _smarty__WEBPACK_IMPORTED_MODULE_173__ = __webpack_require__(/*! ./smarty */ "./src/languages/prism/smarty.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "smarty", function() { return _smarty__WEBPACK_IMPORTED_MODULE_173__["default"]; });
+/* harmony import */ var _rip__WEBPACK_IMPORTED_MODULE_173__ = __webpack_require__(/*! ./rip */ "./src/languages/prism/rip.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "rip", function() { return _rip__WEBPACK_IMPORTED_MODULE_173__["default"]; });
 
-/* harmony import */ var _solidity__WEBPACK_IMPORTED_MODULE_174__ = __webpack_require__(/*! ./solidity */ "./src/languages/prism/solidity.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "solidity", function() { return _solidity__WEBPACK_IMPORTED_MODULE_174__["default"]; });
+/* harmony import */ var _roboconf__WEBPACK_IMPORTED_MODULE_174__ = __webpack_require__(/*! ./roboconf */ "./src/languages/prism/roboconf.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "roboconf", function() { return _roboconf__WEBPACK_IMPORTED_MODULE_174__["default"]; });
 
-/* harmony import */ var _solution_file__WEBPACK_IMPORTED_MODULE_175__ = __webpack_require__(/*! ./solution-file */ "./src/languages/prism/solution-file.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "solutionFile", function() { return _solution_file__WEBPACK_IMPORTED_MODULE_175__["default"]; });
+/* harmony import */ var _robotframework__WEBPACK_IMPORTED_MODULE_175__ = __webpack_require__(/*! ./robotframework */ "./src/languages/prism/robotframework.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "robotframework", function() { return _robotframework__WEBPACK_IMPORTED_MODULE_175__["default"]; });
 
-/* harmony import */ var _soy__WEBPACK_IMPORTED_MODULE_176__ = __webpack_require__(/*! ./soy */ "./src/languages/prism/soy.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "soy", function() { return _soy__WEBPACK_IMPORTED_MODULE_176__["default"]; });
+/* harmony import */ var _ruby__WEBPACK_IMPORTED_MODULE_176__ = __webpack_require__(/*! ./ruby */ "./src/languages/prism/ruby.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ruby", function() { return _ruby__WEBPACK_IMPORTED_MODULE_176__["default"]; });
 
-/* harmony import */ var _sparql__WEBPACK_IMPORTED_MODULE_177__ = __webpack_require__(/*! ./sparql */ "./src/languages/prism/sparql.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "sparql", function() { return _sparql__WEBPACK_IMPORTED_MODULE_177__["default"]; });
+/* harmony import */ var _rust__WEBPACK_IMPORTED_MODULE_177__ = __webpack_require__(/*! ./rust */ "./src/languages/prism/rust.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "rust", function() { return _rust__WEBPACK_IMPORTED_MODULE_177__["default"]; });
 
-/* harmony import */ var _splunk_spl__WEBPACK_IMPORTED_MODULE_178__ = __webpack_require__(/*! ./splunk-spl */ "./src/languages/prism/splunk-spl.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "splunkSpl", function() { return _splunk_spl__WEBPACK_IMPORTED_MODULE_178__["default"]; });
+/* harmony import */ var _sas__WEBPACK_IMPORTED_MODULE_178__ = __webpack_require__(/*! ./sas */ "./src/languages/prism/sas.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "sas", function() { return _sas__WEBPACK_IMPORTED_MODULE_178__["default"]; });
 
-/* harmony import */ var _sqf__WEBPACK_IMPORTED_MODULE_179__ = __webpack_require__(/*! ./sqf */ "./src/languages/prism/sqf.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "sqf", function() { return _sqf__WEBPACK_IMPORTED_MODULE_179__["default"]; });
+/* harmony import */ var _sass__WEBPACK_IMPORTED_MODULE_179__ = __webpack_require__(/*! ./sass */ "./src/languages/prism/sass.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "sass", function() { return _sass__WEBPACK_IMPORTED_MODULE_179__["default"]; });
 
-/* harmony import */ var _sql__WEBPACK_IMPORTED_MODULE_180__ = __webpack_require__(/*! ./sql */ "./src/languages/prism/sql.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "sql", function() { return _sql__WEBPACK_IMPORTED_MODULE_180__["default"]; });
+/* harmony import */ var _scala__WEBPACK_IMPORTED_MODULE_180__ = __webpack_require__(/*! ./scala */ "./src/languages/prism/scala.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "scala", function() { return _scala__WEBPACK_IMPORTED_MODULE_180__["default"]; });
 
-/* harmony import */ var _stylus__WEBPACK_IMPORTED_MODULE_181__ = __webpack_require__(/*! ./stylus */ "./src/languages/prism/stylus.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "stylus", function() { return _stylus__WEBPACK_IMPORTED_MODULE_181__["default"]; });
+/* harmony import */ var _scheme__WEBPACK_IMPORTED_MODULE_181__ = __webpack_require__(/*! ./scheme */ "./src/languages/prism/scheme.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "scheme", function() { return _scheme__WEBPACK_IMPORTED_MODULE_181__["default"]; });
 
-/* harmony import */ var _swift__WEBPACK_IMPORTED_MODULE_182__ = __webpack_require__(/*! ./swift */ "./src/languages/prism/swift.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "swift", function() { return _swift__WEBPACK_IMPORTED_MODULE_182__["default"]; });
+/* harmony import */ var _scss__WEBPACK_IMPORTED_MODULE_182__ = __webpack_require__(/*! ./scss */ "./src/languages/prism/scss.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "scss", function() { return _scss__WEBPACK_IMPORTED_MODULE_182__["default"]; });
 
-/* harmony import */ var _t4_cs__WEBPACK_IMPORTED_MODULE_183__ = __webpack_require__(/*! ./t4-cs */ "./src/languages/prism/t4-cs.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "t4Cs", function() { return _t4_cs__WEBPACK_IMPORTED_MODULE_183__["default"]; });
+/* harmony import */ var _shell_session__WEBPACK_IMPORTED_MODULE_183__ = __webpack_require__(/*! ./shell-session */ "./src/languages/prism/shell-session.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "shellSession", function() { return _shell_session__WEBPACK_IMPORTED_MODULE_183__["default"]; });
 
-/* harmony import */ var _t4_templating__WEBPACK_IMPORTED_MODULE_184__ = __webpack_require__(/*! ./t4-templating */ "./src/languages/prism/t4-templating.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "t4Templating", function() { return _t4_templating__WEBPACK_IMPORTED_MODULE_184__["default"]; });
+/* harmony import */ var _smali__WEBPACK_IMPORTED_MODULE_184__ = __webpack_require__(/*! ./smali */ "./src/languages/prism/smali.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "smali", function() { return _smali__WEBPACK_IMPORTED_MODULE_184__["default"]; });
 
-/* harmony import */ var _t4_vb__WEBPACK_IMPORTED_MODULE_185__ = __webpack_require__(/*! ./t4-vb */ "./src/languages/prism/t4-vb.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "t4Vb", function() { return _t4_vb__WEBPACK_IMPORTED_MODULE_185__["default"]; });
+/* harmony import */ var _smalltalk__WEBPACK_IMPORTED_MODULE_185__ = __webpack_require__(/*! ./smalltalk */ "./src/languages/prism/smalltalk.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "smalltalk", function() { return _smalltalk__WEBPACK_IMPORTED_MODULE_185__["default"]; });
 
-/* harmony import */ var _tap__WEBPACK_IMPORTED_MODULE_186__ = __webpack_require__(/*! ./tap */ "./src/languages/prism/tap.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "tap", function() { return _tap__WEBPACK_IMPORTED_MODULE_186__["default"]; });
+/* harmony import */ var _smarty__WEBPACK_IMPORTED_MODULE_186__ = __webpack_require__(/*! ./smarty */ "./src/languages/prism/smarty.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "smarty", function() { return _smarty__WEBPACK_IMPORTED_MODULE_186__["default"]; });
 
-/* harmony import */ var _tcl__WEBPACK_IMPORTED_MODULE_187__ = __webpack_require__(/*! ./tcl */ "./src/languages/prism/tcl.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "tcl", function() { return _tcl__WEBPACK_IMPORTED_MODULE_187__["default"]; });
+/* harmony import */ var _solidity__WEBPACK_IMPORTED_MODULE_187__ = __webpack_require__(/*! ./solidity */ "./src/languages/prism/solidity.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "solidity", function() { return _solidity__WEBPACK_IMPORTED_MODULE_187__["default"]; });
 
-/* harmony import */ var _textile__WEBPACK_IMPORTED_MODULE_188__ = __webpack_require__(/*! ./textile */ "./src/languages/prism/textile.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "textile", function() { return _textile__WEBPACK_IMPORTED_MODULE_188__["default"]; });
+/* harmony import */ var _solution_file__WEBPACK_IMPORTED_MODULE_188__ = __webpack_require__(/*! ./solution-file */ "./src/languages/prism/solution-file.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "solutionFile", function() { return _solution_file__WEBPACK_IMPORTED_MODULE_188__["default"]; });
 
-/* harmony import */ var _toml__WEBPACK_IMPORTED_MODULE_189__ = __webpack_require__(/*! ./toml */ "./src/languages/prism/toml.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "toml", function() { return _toml__WEBPACK_IMPORTED_MODULE_189__["default"]; });
+/* harmony import */ var _soy__WEBPACK_IMPORTED_MODULE_189__ = __webpack_require__(/*! ./soy */ "./src/languages/prism/soy.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "soy", function() { return _soy__WEBPACK_IMPORTED_MODULE_189__["default"]; });
 
-/* harmony import */ var _tsx__WEBPACK_IMPORTED_MODULE_190__ = __webpack_require__(/*! ./tsx */ "./src/languages/prism/tsx.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "tsx", function() { return _tsx__WEBPACK_IMPORTED_MODULE_190__["default"]; });
+/* harmony import */ var _sparql__WEBPACK_IMPORTED_MODULE_190__ = __webpack_require__(/*! ./sparql */ "./src/languages/prism/sparql.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "sparql", function() { return _sparql__WEBPACK_IMPORTED_MODULE_190__["default"]; });
 
-/* harmony import */ var _tt2__WEBPACK_IMPORTED_MODULE_191__ = __webpack_require__(/*! ./tt2 */ "./src/languages/prism/tt2.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "tt2", function() { return _tt2__WEBPACK_IMPORTED_MODULE_191__["default"]; });
+/* harmony import */ var _splunk_spl__WEBPACK_IMPORTED_MODULE_191__ = __webpack_require__(/*! ./splunk-spl */ "./src/languages/prism/splunk-spl.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "splunkSpl", function() { return _splunk_spl__WEBPACK_IMPORTED_MODULE_191__["default"]; });
 
-/* harmony import */ var _turtle__WEBPACK_IMPORTED_MODULE_192__ = __webpack_require__(/*! ./turtle */ "./src/languages/prism/turtle.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "turtle", function() { return _turtle__WEBPACK_IMPORTED_MODULE_192__["default"]; });
+/* harmony import */ var _sqf__WEBPACK_IMPORTED_MODULE_192__ = __webpack_require__(/*! ./sqf */ "./src/languages/prism/sqf.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "sqf", function() { return _sqf__WEBPACK_IMPORTED_MODULE_192__["default"]; });
 
-/* harmony import */ var _twig__WEBPACK_IMPORTED_MODULE_193__ = __webpack_require__(/*! ./twig */ "./src/languages/prism/twig.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "twig", function() { return _twig__WEBPACK_IMPORTED_MODULE_193__["default"]; });
+/* harmony import */ var _sql__WEBPACK_IMPORTED_MODULE_193__ = __webpack_require__(/*! ./sql */ "./src/languages/prism/sql.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "sql", function() { return _sql__WEBPACK_IMPORTED_MODULE_193__["default"]; });
 
-/* harmony import */ var _typescript__WEBPACK_IMPORTED_MODULE_194__ = __webpack_require__(/*! ./typescript */ "./src/languages/prism/typescript.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "typescript", function() { return _typescript__WEBPACK_IMPORTED_MODULE_194__["default"]; });
+/* harmony import */ var _stylus__WEBPACK_IMPORTED_MODULE_194__ = __webpack_require__(/*! ./stylus */ "./src/languages/prism/stylus.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "stylus", function() { return _stylus__WEBPACK_IMPORTED_MODULE_194__["default"]; });
 
-/* harmony import */ var _vala__WEBPACK_IMPORTED_MODULE_195__ = __webpack_require__(/*! ./vala */ "./src/languages/prism/vala.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "vala", function() { return _vala__WEBPACK_IMPORTED_MODULE_195__["default"]; });
+/* harmony import */ var _swift__WEBPACK_IMPORTED_MODULE_195__ = __webpack_require__(/*! ./swift */ "./src/languages/prism/swift.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "swift", function() { return _swift__WEBPACK_IMPORTED_MODULE_195__["default"]; });
 
-/* harmony import */ var _vbnet__WEBPACK_IMPORTED_MODULE_196__ = __webpack_require__(/*! ./vbnet */ "./src/languages/prism/vbnet.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "vbnet", function() { return _vbnet__WEBPACK_IMPORTED_MODULE_196__["default"]; });
+/* harmony import */ var _t4_cs__WEBPACK_IMPORTED_MODULE_196__ = __webpack_require__(/*! ./t4-cs */ "./src/languages/prism/t4-cs.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "t4Cs", function() { return _t4_cs__WEBPACK_IMPORTED_MODULE_196__["default"]; });
 
-/* harmony import */ var _velocity__WEBPACK_IMPORTED_MODULE_197__ = __webpack_require__(/*! ./velocity */ "./src/languages/prism/velocity.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "velocity", function() { return _velocity__WEBPACK_IMPORTED_MODULE_197__["default"]; });
+/* harmony import */ var _t4_templating__WEBPACK_IMPORTED_MODULE_197__ = __webpack_require__(/*! ./t4-templating */ "./src/languages/prism/t4-templating.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "t4Templating", function() { return _t4_templating__WEBPACK_IMPORTED_MODULE_197__["default"]; });
 
-/* harmony import */ var _verilog__WEBPACK_IMPORTED_MODULE_198__ = __webpack_require__(/*! ./verilog */ "./src/languages/prism/verilog.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "verilog", function() { return _verilog__WEBPACK_IMPORTED_MODULE_198__["default"]; });
+/* harmony import */ var _t4_vb__WEBPACK_IMPORTED_MODULE_198__ = __webpack_require__(/*! ./t4-vb */ "./src/languages/prism/t4-vb.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "t4Vb", function() { return _t4_vb__WEBPACK_IMPORTED_MODULE_198__["default"]; });
 
-/* harmony import */ var _vhdl__WEBPACK_IMPORTED_MODULE_199__ = __webpack_require__(/*! ./vhdl */ "./src/languages/prism/vhdl.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "vhdl", function() { return _vhdl__WEBPACK_IMPORTED_MODULE_199__["default"]; });
+/* harmony import */ var _tap__WEBPACK_IMPORTED_MODULE_199__ = __webpack_require__(/*! ./tap */ "./src/languages/prism/tap.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "tap", function() { return _tap__WEBPACK_IMPORTED_MODULE_199__["default"]; });
 
-/* harmony import */ var _vim__WEBPACK_IMPORTED_MODULE_200__ = __webpack_require__(/*! ./vim */ "./src/languages/prism/vim.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "vim", function() { return _vim__WEBPACK_IMPORTED_MODULE_200__["default"]; });
+/* harmony import */ var _tcl__WEBPACK_IMPORTED_MODULE_200__ = __webpack_require__(/*! ./tcl */ "./src/languages/prism/tcl.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "tcl", function() { return _tcl__WEBPACK_IMPORTED_MODULE_200__["default"]; });
 
-/* harmony import */ var _visual_basic__WEBPACK_IMPORTED_MODULE_201__ = __webpack_require__(/*! ./visual-basic */ "./src/languages/prism/visual-basic.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "visualBasic", function() { return _visual_basic__WEBPACK_IMPORTED_MODULE_201__["default"]; });
+/* harmony import */ var _textile__WEBPACK_IMPORTED_MODULE_201__ = __webpack_require__(/*! ./textile */ "./src/languages/prism/textile.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "textile", function() { return _textile__WEBPACK_IMPORTED_MODULE_201__["default"]; });
 
-/* harmony import */ var _wasm__WEBPACK_IMPORTED_MODULE_202__ = __webpack_require__(/*! ./wasm */ "./src/languages/prism/wasm.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "wasm", function() { return _wasm__WEBPACK_IMPORTED_MODULE_202__["default"]; });
+/* harmony import */ var _toml__WEBPACK_IMPORTED_MODULE_202__ = __webpack_require__(/*! ./toml */ "./src/languages/prism/toml.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "toml", function() { return _toml__WEBPACK_IMPORTED_MODULE_202__["default"]; });
 
-/* harmony import */ var _wiki__WEBPACK_IMPORTED_MODULE_203__ = __webpack_require__(/*! ./wiki */ "./src/languages/prism/wiki.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "wiki", function() { return _wiki__WEBPACK_IMPORTED_MODULE_203__["default"]; });
+/* harmony import */ var _tsx__WEBPACK_IMPORTED_MODULE_203__ = __webpack_require__(/*! ./tsx */ "./src/languages/prism/tsx.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "tsx", function() { return _tsx__WEBPACK_IMPORTED_MODULE_203__["default"]; });
 
-/* harmony import */ var _xeora__WEBPACK_IMPORTED_MODULE_204__ = __webpack_require__(/*! ./xeora */ "./src/languages/prism/xeora.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "xeora", function() { return _xeora__WEBPACK_IMPORTED_MODULE_204__["default"]; });
+/* harmony import */ var _tt2__WEBPACK_IMPORTED_MODULE_204__ = __webpack_require__(/*! ./tt2 */ "./src/languages/prism/tt2.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "tt2", function() { return _tt2__WEBPACK_IMPORTED_MODULE_204__["default"]; });
 
-/* harmony import */ var _xojo__WEBPACK_IMPORTED_MODULE_205__ = __webpack_require__(/*! ./xojo */ "./src/languages/prism/xojo.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "xojo", function() { return _xojo__WEBPACK_IMPORTED_MODULE_205__["default"]; });
+/* harmony import */ var _turtle__WEBPACK_IMPORTED_MODULE_205__ = __webpack_require__(/*! ./turtle */ "./src/languages/prism/turtle.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "turtle", function() { return _turtle__WEBPACK_IMPORTED_MODULE_205__["default"]; });
 
-/* harmony import */ var _xquery__WEBPACK_IMPORTED_MODULE_206__ = __webpack_require__(/*! ./xquery */ "./src/languages/prism/xquery.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "xquery", function() { return _xquery__WEBPACK_IMPORTED_MODULE_206__["default"]; });
+/* harmony import */ var _twig__WEBPACK_IMPORTED_MODULE_206__ = __webpack_require__(/*! ./twig */ "./src/languages/prism/twig.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "twig", function() { return _twig__WEBPACK_IMPORTED_MODULE_206__["default"]; });
 
-/* harmony import */ var _yaml__WEBPACK_IMPORTED_MODULE_207__ = __webpack_require__(/*! ./yaml */ "./src/languages/prism/yaml.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "yaml", function() { return _yaml__WEBPACK_IMPORTED_MODULE_207__["default"]; });
+/* harmony import */ var _typescript__WEBPACK_IMPORTED_MODULE_207__ = __webpack_require__(/*! ./typescript */ "./src/languages/prism/typescript.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "typescript", function() { return _typescript__WEBPACK_IMPORTED_MODULE_207__["default"]; });
 
-/* harmony import */ var _zig__WEBPACK_IMPORTED_MODULE_208__ = __webpack_require__(/*! ./zig */ "./src/languages/prism/zig.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "zig", function() { return _zig__WEBPACK_IMPORTED_MODULE_208__["default"]; });
+/* harmony import */ var _unrealscript__WEBPACK_IMPORTED_MODULE_208__ = __webpack_require__(/*! ./unrealscript */ "./src/languages/prism/unrealscript.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "unrealscript", function() { return _unrealscript__WEBPACK_IMPORTED_MODULE_208__["default"]; });
+
+/* harmony import */ var _vala__WEBPACK_IMPORTED_MODULE_209__ = __webpack_require__(/*! ./vala */ "./src/languages/prism/vala.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "vala", function() { return _vala__WEBPACK_IMPORTED_MODULE_209__["default"]; });
+
+/* harmony import */ var _vbnet__WEBPACK_IMPORTED_MODULE_210__ = __webpack_require__(/*! ./vbnet */ "./src/languages/prism/vbnet.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "vbnet", function() { return _vbnet__WEBPACK_IMPORTED_MODULE_210__["default"]; });
+
+/* harmony import */ var _velocity__WEBPACK_IMPORTED_MODULE_211__ = __webpack_require__(/*! ./velocity */ "./src/languages/prism/velocity.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "velocity", function() { return _velocity__WEBPACK_IMPORTED_MODULE_211__["default"]; });
+
+/* harmony import */ var _verilog__WEBPACK_IMPORTED_MODULE_212__ = __webpack_require__(/*! ./verilog */ "./src/languages/prism/verilog.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "verilog", function() { return _verilog__WEBPACK_IMPORTED_MODULE_212__["default"]; });
+
+/* harmony import */ var _vhdl__WEBPACK_IMPORTED_MODULE_213__ = __webpack_require__(/*! ./vhdl */ "./src/languages/prism/vhdl.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "vhdl", function() { return _vhdl__WEBPACK_IMPORTED_MODULE_213__["default"]; });
+
+/* harmony import */ var _vim__WEBPACK_IMPORTED_MODULE_214__ = __webpack_require__(/*! ./vim */ "./src/languages/prism/vim.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "vim", function() { return _vim__WEBPACK_IMPORTED_MODULE_214__["default"]; });
+
+/* harmony import */ var _visual_basic__WEBPACK_IMPORTED_MODULE_215__ = __webpack_require__(/*! ./visual-basic */ "./src/languages/prism/visual-basic.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "visualBasic", function() { return _visual_basic__WEBPACK_IMPORTED_MODULE_215__["default"]; });
+
+/* harmony import */ var _warpscript__WEBPACK_IMPORTED_MODULE_216__ = __webpack_require__(/*! ./warpscript */ "./src/languages/prism/warpscript.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "warpscript", function() { return _warpscript__WEBPACK_IMPORTED_MODULE_216__["default"]; });
+
+/* harmony import */ var _wasm__WEBPACK_IMPORTED_MODULE_217__ = __webpack_require__(/*! ./wasm */ "./src/languages/prism/wasm.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "wasm", function() { return _wasm__WEBPACK_IMPORTED_MODULE_217__["default"]; });
+
+/* harmony import */ var _wiki__WEBPACK_IMPORTED_MODULE_218__ = __webpack_require__(/*! ./wiki */ "./src/languages/prism/wiki.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "wiki", function() { return _wiki__WEBPACK_IMPORTED_MODULE_218__["default"]; });
+
+/* harmony import */ var _xeora__WEBPACK_IMPORTED_MODULE_219__ = __webpack_require__(/*! ./xeora */ "./src/languages/prism/xeora.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "xeora", function() { return _xeora__WEBPACK_IMPORTED_MODULE_219__["default"]; });
+
+/* harmony import */ var _xml_doc__WEBPACK_IMPORTED_MODULE_220__ = __webpack_require__(/*! ./xml-doc */ "./src/languages/prism/xml-doc.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "xmlDoc", function() { return _xml_doc__WEBPACK_IMPORTED_MODULE_220__["default"]; });
+
+/* harmony import */ var _xojo__WEBPACK_IMPORTED_MODULE_221__ = __webpack_require__(/*! ./xojo */ "./src/languages/prism/xojo.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "xojo", function() { return _xojo__WEBPACK_IMPORTED_MODULE_221__["default"]; });
+
+/* harmony import */ var _xquery__WEBPACK_IMPORTED_MODULE_222__ = __webpack_require__(/*! ./xquery */ "./src/languages/prism/xquery.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "xquery", function() { return _xquery__WEBPACK_IMPORTED_MODULE_222__["default"]; });
+
+/* harmony import */ var _yaml__WEBPACK_IMPORTED_MODULE_223__ = __webpack_require__(/*! ./yaml */ "./src/languages/prism/yaml.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "yaml", function() { return _yaml__WEBPACK_IMPORTED_MODULE_223__["default"]; });
+
+/* harmony import */ var _yang__WEBPACK_IMPORTED_MODULE_224__ = __webpack_require__(/*! ./yang */ "./src/languages/prism/yang.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "yang", function() { return _yang__WEBPACK_IMPORTED_MODULE_224__["default"]; });
+
+/* harmony import */ var _zig__WEBPACK_IMPORTED_MODULE_225__ = __webpack_require__(/*! ./zig */ "./src/languages/prism/zig.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "zig", function() { return _zig__WEBPACK_IMPORTED_MODULE_225__["default"]; });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -44211,6 +45888,23 @@ __webpack_require__.r(__webpack_exports__);
 
 ;
 /* harmony default export */ __webpack_exports__["default"] = (refractor_lang_jsonp_js__WEBPACK_IMPORTED_MODULE_0___default.a);
+
+/***/ }),
+
+/***/ "./src/languages/prism/jsstacktrace.js":
+/*!*********************************************!*\
+  !*** ./src/languages/prism/jsstacktrace.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var refractor_lang_jsstacktrace_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! refractor/lang/jsstacktrace.js */ "./node_modules/refractor/lang/jsstacktrace.js");
+/* harmony import */ var refractor_lang_jsstacktrace_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(refractor_lang_jsstacktrace_js__WEBPACK_IMPORTED_MODULE_0__);
+
+;
+/* harmony default export */ __webpack_exports__["default"] = (refractor_lang_jsstacktrace_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 
 /***/ }),
 
@@ -44911,6 +46605,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/languages/prism/peoplecode.js":
+/*!*******************************************!*\
+  !*** ./src/languages/prism/peoplecode.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var refractor_lang_peoplecode_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! refractor/lang/peoplecode.js */ "./node_modules/refractor/lang/peoplecode.js");
+/* harmony import */ var refractor_lang_peoplecode_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(refractor_lang_peoplecode_js__WEBPACK_IMPORTED_MODULE_0__);
+
+;
+/* harmony default export */ __webpack_exports__["default"] = (refractor_lang_peoplecode_js__WEBPACK_IMPORTED_MODULE_0___default.a);
+
+/***/ }),
+
 /***/ "./src/languages/prism/perl.js":
 /*!*************************************!*\
   !*** ./src/languages/prism/perl.js ***!
@@ -45149,6 +46860,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/languages/prism/purebasic.js":
+/*!******************************************!*\
+  !*** ./src/languages/prism/purebasic.js ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var refractor_lang_purebasic_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! refractor/lang/purebasic.js */ "./node_modules/refractor/lang/purebasic.js");
+/* harmony import */ var refractor_lang_purebasic_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(refractor_lang_purebasic_js__WEBPACK_IMPORTED_MODULE_0__);
+
+;
+/* harmony default export */ __webpack_exports__["default"] = (refractor_lang_purebasic_js__WEBPACK_IMPORTED_MODULE_0___default.a);
+
+/***/ }),
+
 /***/ "./src/languages/prism/python.js":
 /*!***************************************!*\
   !*** ./src/languages/prism/python.js ***!
@@ -45231,6 +46959,23 @@ __webpack_require__.r(__webpack_exports__);
 
 ;
 /* harmony default export */ __webpack_exports__["default"] = (refractor_lang_r_js__WEBPACK_IMPORTED_MODULE_0___default.a);
+
+/***/ }),
+
+/***/ "./src/languages/prism/racket.js":
+/*!***************************************!*\
+  !*** ./src/languages/prism/racket.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var refractor_lang_racket_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! refractor/lang/racket.js */ "./node_modules/refractor/lang/racket.js");
+/* harmony import */ var refractor_lang_racket_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(refractor_lang_racket_js__WEBPACK_IMPORTED_MODULE_0__);
+
+;
+/* harmony default export */ __webpack_exports__["default"] = (refractor_lang_racket_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 
 /***/ }),
 
@@ -45489,6 +47234,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/languages/prism/smali.js":
+/*!**************************************!*\
+  !*** ./src/languages/prism/smali.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var refractor_lang_smali_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! refractor/lang/smali.js */ "./node_modules/refractor/lang/smali.js");
+/* harmony import */ var refractor_lang_smali_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(refractor_lang_smali_js__WEBPACK_IMPORTED_MODULE_0__);
+
+;
+/* harmony default export */ __webpack_exports__["default"] = (refractor_lang_smali_js__WEBPACK_IMPORTED_MODULE_0___default.a);
+
+/***/ }),
+
 /***/ "./src/languages/prism/smalltalk.js":
 /*!******************************************!*\
   !*** ./src/languages/prism/smalltalk.js ***!
@@ -45671,7 +47433,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 // This file has been auto-generated by the `npm run build-languages-prism` task
 //
-/* harmony default export */ __webpack_exports__["default"] = (['abap', 'abnf', 'actionscript', 'ada', 'antlr4', 'apacheconf', 'apl', 'applescript', 'aql', 'arduino', 'arff', 'asciidoc', 'asm6502', 'aspnet', 'autohotkey', 'autoit', 'bash', 'basic', 'batch', 'bbcode', 'bison', 'bnf', 'brainfuck', 'brightscript', 'bro', 'c', 'cil', 'clike', 'clojure', 'cmake', 'coffeescript', 'concurnas', 'cpp', 'crystal', 'csharp', 'csp', 'css-extras', 'css', 'd', 'dart', 'dax', 'diff', 'django', 'dns-zone-file', 'docker', 'ebnf', 'eiffel', 'ejs', 'elixir', 'elm', 'erb', 'erlang', 'etlua', 'excel-formula', 'factor', 'firestore-security-rules', 'flow', 'fortran', 'fsharp', 'ftl', 'gcode', 'gdscript', 'gedcom', 'gherkin', 'git', 'glsl', 'gml', 'go', 'graphql', 'groovy', 'haml', 'handlebars', 'haskell', 'haxe', 'hcl', 'hpkp', 'hsts', 'http', 'ichigojam', 'icon', 'inform7', 'ini', 'io', 'j', 'java', 'javadoc', 'javadoclike', 'javascript', 'javastacktrace', 'jolie', 'jq', 'js-extras', 'js-templates', 'jsdoc', 'json', 'json5', 'jsonp', 'jsx', 'julia', 'keyman', 'kotlin', 'latex', 'latte', 'less', 'lilypond', 'liquid', 'lisp', 'livescript', 'llvm', 'lolcode', 'lua', 'makefile', 'markdown', 'markup-templating', 'markup', 'matlab', 'mel', 'mizar', 'monkey', 'moonscript', 'n1ql', 'n4js', 'nand2tetris-hdl', 'nasm', 'neon', 'nginx', 'nim', 'nix', 'nsis', 'objectivec', 'ocaml', 'opencl', 'oz', 'parigp', 'parser', 'pascal', 'pascaligo', 'pcaxis', 'perl', 'php-extras', 'php', 'phpdoc', 'plsql', 'powerquery', 'powershell', 'processing', 'prolog', 'properties', 'protobuf', 'pug', 'puppet', 'pure', 'python', 'q', 'qml', 'qore', 'r', 'reason', 'regex', 'renpy', 'rest', 'rip', 'roboconf', 'robotframework', 'ruby', 'rust', 'sas', 'sass', 'scala', 'scheme', 'scss', 'shell-session', 'smalltalk', 'smarty', 'solidity', 'solution-file', 'soy', 'sparql', 'splunk-spl', 'sqf', 'sql', 'stylus', 'swift', 't4-cs', 't4-templating', 't4-vb', 'tap', 'tcl', 'textile', 'toml', 'tsx', 'tt2', 'turtle', 'twig', 'typescript', 'vala', 'vbnet', 'velocity', 'verilog', 'vhdl', 'vim', 'visual-basic', 'wasm', 'wiki', 'xeora', 'xojo', 'xquery', 'yaml', 'zig']);
+/* harmony default export */ __webpack_exports__["default"] = (['abap', 'abnf', 'actionscript', 'ada', 'agda', 'al', 'antlr4', 'apacheconf', 'apl', 'applescript', 'aql', 'arduino', 'arff', 'asciidoc', 'asm6502', 'aspnet', 'autohotkey', 'autoit', 'bash', 'basic', 'batch', 'bbcode', 'bison', 'bnf', 'brainfuck', 'brightscript', 'bro', 'c', 'cil', 'clike', 'clojure', 'cmake', 'coffeescript', 'concurnas', 'cpp', 'crystal', 'csharp', 'csp', 'css-extras', 'css', 'cypher', 'd', 'dart', 'dax', 'dhall', 'diff', 'django', 'dns-zone-file', 'docker', 'ebnf', 'editorconfig', 'eiffel', 'ejs', 'elixir', 'elm', 'erb', 'erlang', 'etlua', 'excel-formula', 'factor', 'firestore-security-rules', 'flow', 'fortran', 'fsharp', 'ftl', 'gcode', 'gdscript', 'gedcom', 'gherkin', 'git', 'glsl', 'gml', 'go', 'graphql', 'groovy', 'haml', 'handlebars', 'haskell', 'haxe', 'hcl', 'hlsl', 'hpkp', 'hsts', 'http', 'ichigojam', 'icon', 'iecst', 'ignore', 'inform7', 'ini', 'io', 'j', 'java', 'javadoc', 'javadoclike', 'javascript', 'javastacktrace', 'jolie', 'jq', 'js-extras', 'js-templates', 'jsdoc', 'json', 'json5', 'jsonp', 'jsstacktrace', 'jsx', 'julia', 'keyman', 'kotlin', 'latex', 'latte', 'less', 'lilypond', 'liquid', 'lisp', 'livescript', 'llvm', 'lolcode', 'lua', 'makefile', 'markdown', 'markup-templating', 'markup', 'matlab', 'mel', 'mizar', 'monkey', 'moonscript', 'n1ql', 'n4js', 'nand2tetris-hdl', 'nasm', 'neon', 'nginx', 'nim', 'nix', 'nsis', 'objectivec', 'ocaml', 'opencl', 'oz', 'parigp', 'parser', 'pascal', 'pascaligo', 'pcaxis', 'peoplecode', 'perl', 'php-extras', 'php', 'phpdoc', 'plsql', 'powerquery', 'powershell', 'processing', 'prolog', 'properties', 'protobuf', 'pug', 'puppet', 'pure', 'purebasic', 'python', 'q', 'qml', 'qore', 'r', 'racket', 'reason', 'regex', 'renpy', 'rest', 'rip', 'roboconf', 'robotframework', 'ruby', 'rust', 'sas', 'sass', 'scala', 'scheme', 'scss', 'shell-session', 'smali', 'smalltalk', 'smarty', 'solidity', 'solution-file', 'soy', 'sparql', 'splunk-spl', 'sqf', 'sql', 'stylus', 'swift', 't4-cs', 't4-templating', 't4-vb', 'tap', 'tcl', 'textile', 'toml', 'tsx', 'tt2', 'turtle', 'twig', 'typescript', 'unrealscript', 'vala', 'vbnet', 'velocity', 'verilog', 'vhdl', 'vim', 'visual-basic', 'warpscript', 'wasm', 'wiki', 'xeora', 'xml-doc', 'xojo', 'xquery', 'yaml', 'yang', 'zig']);
 
 /***/ }),
 
@@ -45896,6 +47658,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/languages/prism/unrealscript.js":
+/*!*********************************************!*\
+  !*** ./src/languages/prism/unrealscript.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var refractor_lang_unrealscript_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! refractor/lang/unrealscript.js */ "./node_modules/refractor/lang/unrealscript.js");
+/* harmony import */ var refractor_lang_unrealscript_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(refractor_lang_unrealscript_js__WEBPACK_IMPORTED_MODULE_0__);
+
+;
+/* harmony default export */ __webpack_exports__["default"] = (refractor_lang_unrealscript_js__WEBPACK_IMPORTED_MODULE_0___default.a);
+
+/***/ }),
+
 /***/ "./src/languages/prism/vala.js":
 /*!*************************************!*\
   !*** ./src/languages/prism/vala.js ***!
@@ -46015,6 +47794,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/languages/prism/warpscript.js":
+/*!*******************************************!*\
+  !*** ./src/languages/prism/warpscript.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var refractor_lang_warpscript_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! refractor/lang/warpscript.js */ "./node_modules/refractor/lang/warpscript.js");
+/* harmony import */ var refractor_lang_warpscript_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(refractor_lang_warpscript_js__WEBPACK_IMPORTED_MODULE_0__);
+
+;
+/* harmony default export */ __webpack_exports__["default"] = (refractor_lang_warpscript_js__WEBPACK_IMPORTED_MODULE_0___default.a);
+
+/***/ }),
+
 /***/ "./src/languages/prism/wasm.js":
 /*!*************************************!*\
   !*** ./src/languages/prism/wasm.js ***!
@@ -46066,6 +47862,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/languages/prism/xml-doc.js":
+/*!****************************************!*\
+  !*** ./src/languages/prism/xml-doc.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var refractor_lang_xml_doc_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! refractor/lang/xml-doc.js */ "./node_modules/refractor/lang/xml-doc.js");
+/* harmony import */ var refractor_lang_xml_doc_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(refractor_lang_xml_doc_js__WEBPACK_IMPORTED_MODULE_0__);
+
+;
+/* harmony default export */ __webpack_exports__["default"] = (refractor_lang_xml_doc_js__WEBPACK_IMPORTED_MODULE_0___default.a);
+
+/***/ }),
+
 /***/ "./src/languages/prism/xojo.js":
 /*!*************************************!*\
   !*** ./src/languages/prism/xojo.js ***!
@@ -46114,6 +47927,23 @@ __webpack_require__.r(__webpack_exports__);
 
 ;
 /* harmony default export */ __webpack_exports__["default"] = (refractor_lang_yaml_js__WEBPACK_IMPORTED_MODULE_0___default.a);
+
+/***/ }),
+
+/***/ "./src/languages/prism/yang.js":
+/*!*************************************!*\
+  !*** ./src/languages/prism/yang.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var refractor_lang_yang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! refractor/lang/yang.js */ "./node_modules/refractor/lang/yang.js");
+/* harmony import */ var refractor_lang_yang_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(refractor_lang_yang_js__WEBPACK_IMPORTED_MODULE_0__);
+
+;
+/* harmony default export */ __webpack_exports__["default"] = (refractor_lang_yang_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 
 /***/ }),
 
@@ -49718,106 +51548,106 @@ __webpack_require__.r(__webpack_exports__);
 /*!***********************************!*\
   !*** ./src/styles/prism/index.js ***!
   \***********************************/
-/*! exports provided: coy, dark, funky, okaidia, solarizedlight, tomorrow, twilight, prism, a11yDark, atomDark, base16AteliersulphurpoolLight, cb, darcula, dracula, duotoneDark, duotoneEarth, duotoneForest, duotoneLight, duotoneSea, duotoneSpace, ghcolors, hopscotch, materialDark, materialLight, materialOceanic, nord, pojoaque, shadesOfPurple, synthwave84, vs, vscDarkPlus, xonokai */
+/*! exports provided: a11yDark, atomDark, base16AteliersulphurpoolLight, cb, darcula, dracula, duotoneDark, duotoneEarth, duotoneForest, duotoneLight, duotoneSea, duotoneSpace, ghcolors, hopscotch, materialDark, materialLight, materialOceanic, nord, pojoaque, shadesOfPurple, synthwave84, vs, vscDarkPlus, xonokai, coy, dark, funky, okaidia, solarizedlight, tomorrow, twilight, prism */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _coy__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./coy */ "./src/styles/prism/coy.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "coy", function() { return _coy__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+/* harmony import */ var _a11y_dark__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./a11y-dark */ "./src/styles/prism/a11y-dark.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "a11yDark", function() { return _a11y_dark__WEBPACK_IMPORTED_MODULE_0__["default"]; });
 
-/* harmony import */ var _dark__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dark */ "./src/styles/prism/dark.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "dark", function() { return _dark__WEBPACK_IMPORTED_MODULE_1__["default"]; });
+/* harmony import */ var _atom_dark__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./atom-dark */ "./src/styles/prism/atom-dark.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "atomDark", function() { return _atom_dark__WEBPACK_IMPORTED_MODULE_1__["default"]; });
 
-/* harmony import */ var _funky__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./funky */ "./src/styles/prism/funky.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "funky", function() { return _funky__WEBPACK_IMPORTED_MODULE_2__["default"]; });
+/* harmony import */ var _base16_ateliersulphurpool_light__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./base16-ateliersulphurpool.light */ "./src/styles/prism/base16-ateliersulphurpool.light.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "base16AteliersulphurpoolLight", function() { return _base16_ateliersulphurpool_light__WEBPACK_IMPORTED_MODULE_2__["default"]; });
 
-/* harmony import */ var _okaidia__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./okaidia */ "./src/styles/prism/okaidia.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "okaidia", function() { return _okaidia__WEBPACK_IMPORTED_MODULE_3__["default"]; });
+/* harmony import */ var _cb__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./cb */ "./src/styles/prism/cb.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "cb", function() { return _cb__WEBPACK_IMPORTED_MODULE_3__["default"]; });
 
-/* harmony import */ var _solarizedlight__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./solarizedlight */ "./src/styles/prism/solarizedlight.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "solarizedlight", function() { return _solarizedlight__WEBPACK_IMPORTED_MODULE_4__["default"]; });
+/* harmony import */ var _darcula__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./darcula */ "./src/styles/prism/darcula.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "darcula", function() { return _darcula__WEBPACK_IMPORTED_MODULE_4__["default"]; });
 
-/* harmony import */ var _tomorrow__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./tomorrow */ "./src/styles/prism/tomorrow.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "tomorrow", function() { return _tomorrow__WEBPACK_IMPORTED_MODULE_5__["default"]; });
+/* harmony import */ var _dracula__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./dracula */ "./src/styles/prism/dracula.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "dracula", function() { return _dracula__WEBPACK_IMPORTED_MODULE_5__["default"]; });
 
-/* harmony import */ var _twilight__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./twilight */ "./src/styles/prism/twilight.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "twilight", function() { return _twilight__WEBPACK_IMPORTED_MODULE_6__["default"]; });
+/* harmony import */ var _duotone_dark__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./duotone-dark */ "./src/styles/prism/duotone-dark.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "duotoneDark", function() { return _duotone_dark__WEBPACK_IMPORTED_MODULE_6__["default"]; });
 
-/* harmony import */ var _prism__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./prism */ "./src/styles/prism/prism.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "prism", function() { return _prism__WEBPACK_IMPORTED_MODULE_7__["default"]; });
+/* harmony import */ var _duotone_earth__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./duotone-earth */ "./src/styles/prism/duotone-earth.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "duotoneEarth", function() { return _duotone_earth__WEBPACK_IMPORTED_MODULE_7__["default"]; });
 
-/* harmony import */ var _a11y_dark__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./a11y-dark */ "./src/styles/prism/a11y-dark.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "a11yDark", function() { return _a11y_dark__WEBPACK_IMPORTED_MODULE_8__["default"]; });
+/* harmony import */ var _duotone_forest__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./duotone-forest */ "./src/styles/prism/duotone-forest.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "duotoneForest", function() { return _duotone_forest__WEBPACK_IMPORTED_MODULE_8__["default"]; });
 
-/* harmony import */ var _atom_dark__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./atom-dark */ "./src/styles/prism/atom-dark.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "atomDark", function() { return _atom_dark__WEBPACK_IMPORTED_MODULE_9__["default"]; });
+/* harmony import */ var _duotone_light__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./duotone-light */ "./src/styles/prism/duotone-light.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "duotoneLight", function() { return _duotone_light__WEBPACK_IMPORTED_MODULE_9__["default"]; });
 
-/* harmony import */ var _base16_ateliersulphurpool_light__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./base16-ateliersulphurpool.light */ "./src/styles/prism/base16-ateliersulphurpool.light.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "base16AteliersulphurpoolLight", function() { return _base16_ateliersulphurpool_light__WEBPACK_IMPORTED_MODULE_10__["default"]; });
+/* harmony import */ var _duotone_sea__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./duotone-sea */ "./src/styles/prism/duotone-sea.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "duotoneSea", function() { return _duotone_sea__WEBPACK_IMPORTED_MODULE_10__["default"]; });
 
-/* harmony import */ var _cb__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./cb */ "./src/styles/prism/cb.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "cb", function() { return _cb__WEBPACK_IMPORTED_MODULE_11__["default"]; });
+/* harmony import */ var _duotone_space__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./duotone-space */ "./src/styles/prism/duotone-space.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "duotoneSpace", function() { return _duotone_space__WEBPACK_IMPORTED_MODULE_11__["default"]; });
 
-/* harmony import */ var _darcula__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./darcula */ "./src/styles/prism/darcula.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "darcula", function() { return _darcula__WEBPACK_IMPORTED_MODULE_12__["default"]; });
+/* harmony import */ var _ghcolors__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./ghcolors */ "./src/styles/prism/ghcolors.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ghcolors", function() { return _ghcolors__WEBPACK_IMPORTED_MODULE_12__["default"]; });
 
-/* harmony import */ var _dracula__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./dracula */ "./src/styles/prism/dracula.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "dracula", function() { return _dracula__WEBPACK_IMPORTED_MODULE_13__["default"]; });
+/* harmony import */ var _hopscotch__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./hopscotch */ "./src/styles/prism/hopscotch.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "hopscotch", function() { return _hopscotch__WEBPACK_IMPORTED_MODULE_13__["default"]; });
 
-/* harmony import */ var _duotone_dark__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./duotone-dark */ "./src/styles/prism/duotone-dark.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "duotoneDark", function() { return _duotone_dark__WEBPACK_IMPORTED_MODULE_14__["default"]; });
+/* harmony import */ var _material_dark__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./material-dark */ "./src/styles/prism/material-dark.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "materialDark", function() { return _material_dark__WEBPACK_IMPORTED_MODULE_14__["default"]; });
 
-/* harmony import */ var _duotone_earth__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./duotone-earth */ "./src/styles/prism/duotone-earth.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "duotoneEarth", function() { return _duotone_earth__WEBPACK_IMPORTED_MODULE_15__["default"]; });
+/* harmony import */ var _material_light__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./material-light */ "./src/styles/prism/material-light.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "materialLight", function() { return _material_light__WEBPACK_IMPORTED_MODULE_15__["default"]; });
 
-/* harmony import */ var _duotone_forest__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./duotone-forest */ "./src/styles/prism/duotone-forest.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "duotoneForest", function() { return _duotone_forest__WEBPACK_IMPORTED_MODULE_16__["default"]; });
+/* harmony import */ var _material_oceanic__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./material-oceanic */ "./src/styles/prism/material-oceanic.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "materialOceanic", function() { return _material_oceanic__WEBPACK_IMPORTED_MODULE_16__["default"]; });
 
-/* harmony import */ var _duotone_light__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./duotone-light */ "./src/styles/prism/duotone-light.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "duotoneLight", function() { return _duotone_light__WEBPACK_IMPORTED_MODULE_17__["default"]; });
+/* harmony import */ var _nord__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./nord */ "./src/styles/prism/nord.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "nord", function() { return _nord__WEBPACK_IMPORTED_MODULE_17__["default"]; });
 
-/* harmony import */ var _duotone_sea__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./duotone-sea */ "./src/styles/prism/duotone-sea.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "duotoneSea", function() { return _duotone_sea__WEBPACK_IMPORTED_MODULE_18__["default"]; });
+/* harmony import */ var _pojoaque__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./pojoaque */ "./src/styles/prism/pojoaque.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "pojoaque", function() { return _pojoaque__WEBPACK_IMPORTED_MODULE_18__["default"]; });
 
-/* harmony import */ var _duotone_space__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./duotone-space */ "./src/styles/prism/duotone-space.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "duotoneSpace", function() { return _duotone_space__WEBPACK_IMPORTED_MODULE_19__["default"]; });
+/* harmony import */ var _shades_of_purple__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./shades-of-purple */ "./src/styles/prism/shades-of-purple.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "shadesOfPurple", function() { return _shades_of_purple__WEBPACK_IMPORTED_MODULE_19__["default"]; });
 
-/* harmony import */ var _ghcolors__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./ghcolors */ "./src/styles/prism/ghcolors.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ghcolors", function() { return _ghcolors__WEBPACK_IMPORTED_MODULE_20__["default"]; });
+/* harmony import */ var _synthwave84__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./synthwave84 */ "./src/styles/prism/synthwave84.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "synthwave84", function() { return _synthwave84__WEBPACK_IMPORTED_MODULE_20__["default"]; });
 
-/* harmony import */ var _hopscotch__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./hopscotch */ "./src/styles/prism/hopscotch.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "hopscotch", function() { return _hopscotch__WEBPACK_IMPORTED_MODULE_21__["default"]; });
+/* harmony import */ var _vs__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./vs */ "./src/styles/prism/vs.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "vs", function() { return _vs__WEBPACK_IMPORTED_MODULE_21__["default"]; });
 
-/* harmony import */ var _material_dark__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./material-dark */ "./src/styles/prism/material-dark.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "materialDark", function() { return _material_dark__WEBPACK_IMPORTED_MODULE_22__["default"]; });
+/* harmony import */ var _vsc_dark_plus__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./vsc-dark-plus */ "./src/styles/prism/vsc-dark-plus.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "vscDarkPlus", function() { return _vsc_dark_plus__WEBPACK_IMPORTED_MODULE_22__["default"]; });
 
-/* harmony import */ var _material_light__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./material-light */ "./src/styles/prism/material-light.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "materialLight", function() { return _material_light__WEBPACK_IMPORTED_MODULE_23__["default"]; });
+/* harmony import */ var _xonokai__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./xonokai */ "./src/styles/prism/xonokai.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "xonokai", function() { return _xonokai__WEBPACK_IMPORTED_MODULE_23__["default"]; });
 
-/* harmony import */ var _material_oceanic__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./material-oceanic */ "./src/styles/prism/material-oceanic.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "materialOceanic", function() { return _material_oceanic__WEBPACK_IMPORTED_MODULE_24__["default"]; });
+/* harmony import */ var _coy__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./coy */ "./src/styles/prism/coy.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "coy", function() { return _coy__WEBPACK_IMPORTED_MODULE_24__["default"]; });
 
-/* harmony import */ var _nord__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./nord */ "./src/styles/prism/nord.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "nord", function() { return _nord__WEBPACK_IMPORTED_MODULE_25__["default"]; });
+/* harmony import */ var _dark__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./dark */ "./src/styles/prism/dark.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "dark", function() { return _dark__WEBPACK_IMPORTED_MODULE_25__["default"]; });
 
-/* harmony import */ var _pojoaque__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./pojoaque */ "./src/styles/prism/pojoaque.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "pojoaque", function() { return _pojoaque__WEBPACK_IMPORTED_MODULE_26__["default"]; });
+/* harmony import */ var _funky__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./funky */ "./src/styles/prism/funky.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "funky", function() { return _funky__WEBPACK_IMPORTED_MODULE_26__["default"]; });
 
-/* harmony import */ var _shades_of_purple__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./shades-of-purple */ "./src/styles/prism/shades-of-purple.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "shadesOfPurple", function() { return _shades_of_purple__WEBPACK_IMPORTED_MODULE_27__["default"]; });
+/* harmony import */ var _okaidia__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./okaidia */ "./src/styles/prism/okaidia.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "okaidia", function() { return _okaidia__WEBPACK_IMPORTED_MODULE_27__["default"]; });
 
-/* harmony import */ var _synthwave84__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./synthwave84 */ "./src/styles/prism/synthwave84.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "synthwave84", function() { return _synthwave84__WEBPACK_IMPORTED_MODULE_28__["default"]; });
+/* harmony import */ var _solarizedlight__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./solarizedlight */ "./src/styles/prism/solarizedlight.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "solarizedlight", function() { return _solarizedlight__WEBPACK_IMPORTED_MODULE_28__["default"]; });
 
-/* harmony import */ var _vs__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./vs */ "./src/styles/prism/vs.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "vs", function() { return _vs__WEBPACK_IMPORTED_MODULE_29__["default"]; });
+/* harmony import */ var _tomorrow__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./tomorrow */ "./src/styles/prism/tomorrow.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "tomorrow", function() { return _tomorrow__WEBPACK_IMPORTED_MODULE_29__["default"]; });
 
-/* harmony import */ var _vsc_dark_plus__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./vsc-dark-plus */ "./src/styles/prism/vsc-dark-plus.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "vscDarkPlus", function() { return _vsc_dark_plus__WEBPACK_IMPORTED_MODULE_30__["default"]; });
+/* harmony import */ var _twilight__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./twilight */ "./src/styles/prism/twilight.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "twilight", function() { return _twilight__WEBPACK_IMPORTED_MODULE_30__["default"]; });
 
-/* harmony import */ var _xonokai__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./xonokai */ "./src/styles/prism/xonokai.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "xonokai", function() { return _xonokai__WEBPACK_IMPORTED_MODULE_31__["default"]; });
+/* harmony import */ var _prism__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./prism */ "./src/styles/prism/prism.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "prism", function() { return _prism__WEBPACK_IMPORTED_MODULE_31__["default"]; });
 
 
 
