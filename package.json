@@ -10,7 +10,7 @@
     "highlight.js": "^10.1.1",
     "lowlight": "^1.14.0",
     "prismjs": "^1.21.0",
-    "refractor": "^3.0.0"
+    "refractor": "^3.1.0"
   },
   "jest": {
     "coverageDirectory": "./coverage/",
@@ -42,7 +42,7 @@
     "jest": "^26.1.0",
     "lint-staged": "^8.0.5",
     "prettier": "^1.15.2",
-    "prism-themes": "https://github.com/PrismJS/prism-themes.git#3c08290e35b57628dccfaae10b951029c63b3977",
+    "prism-themes": "1.4.0",
     "react": "^15.2.0",
     "react-dom": "^15.2.0",
     "react-syntax-highlighter-virtualized-renderer": "^1.0.3",
