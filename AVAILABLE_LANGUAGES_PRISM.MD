@@ -3,6 +3,8 @@
 * abnf
 * actionscript
 * ada
+* agda
+* al
 * antlr4
 * apacheconf
 * apl
@@ -37,14 +39,17 @@
 * csp
 * cssExtras (css-extras)
 * css
+* cypher
 * d
 * dart
 * dax
+* dhall
 * diff
 * django
 * dnsZoneFile (dns-zone-file)
 * docker
 * ebnf
+* editorconfig
 * eiffel
 * ejs
 * elixir
@@ -74,11 +79,14 @@
 * haskell
 * haxe
 * hcl
+* hlsl
 * hpkp
 * hsts
 * http
 * ichigojam
 * icon
+* iecst
+* ignore
 * inform7
 * ini
 * io
@@ -96,6 +104,7 @@
 * json
 * json5
 * jsonp
+* jsstacktrace
 * jsx
 * julia
 * keyman
@@ -137,6 +146,7 @@
 * pascal
 * pascaligo
 * pcaxis
+* peoplecode
 * perl
 * phpExtras (php-extras)
 * php
@@ -151,11 +161,13 @@
 * pug
 * puppet
 * pure
+* purebasic
 * python
 * q
 * qml
 * qore
 * r
+* racket
 * reason
 * regex
 * renpy
@@ -171,6 +183,7 @@
 * scheme
 * scss
 * shellSession (shell-session)
+* smali
 * smalltalk
 * smarty
 * solidity
@@ -194,6 +207,7 @@
 * turtle
 * twig
 * typescript
+* unrealscript
 * vala
 * vbnet
 * velocity
@@ -201,10 +215,13 @@
 * vhdl
 * vim
 * visualBasic (visual-basic)
+* warpscript
 * wasm
 * wiki
 * xeora
+* xmlDoc (xml-doc)
 * xojo
 * xquery
 * yaml
+* yang
 * zig
