@@ -1,6 +1,6 @@
-import React from 'react';
-import createElement from './create-element';
+import { useMemo } from 'react';
 import checkForListedLanguage from './checkForListedLanguage';
+import createElement from './create-element';
 
 const newLineRegex = /\n/g;
 function getNewLines(str) {
@@ -370,12 +370,16 @@ export default function(defaultAstGenerator, defaultStyle) {
     wrapLines = renderer && wrapLines === undefined ? true : wrapLines;
     renderer = renderer || defaultRenderer;
     const defaultCodeValue = [{ type: 'text', value: code }];
-    const codeTree = getCodeTree({
-      astGenerator,
-      language,
-      code,
-      defaultCodeValue
-    });
+    const codeTree = useMemo(
+      () =>
+        getCodeTree({
+          astGenerator,
+          language,
+          code,
+          defaultCodeValue
+        }),
+      [astGenerator, language, code, defaultCodeValue]
+    );
     if (codeTree.language === null) {
       codeTree.value = defaultCodeValue;
     }
