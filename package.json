@@ -43,8 +43,8 @@
     "lint-staged": "^8.0.5",
     "prettier": "^1.15.2",
     "prism-themes": "1.4.0",
-    "react": "^15.2.0",
-    "react-dom": "^15.2.0",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
     "react-syntax-highlighter-virtualized-renderer": "^1.0.3",
     "react-test-renderer": "^15.3.2",
     "request": "^2.88.0",
@@ -55,7 +55,8 @@
     "webpack-dev-server": "^3.1.14"
   },
   "peerDependencies": {
-    "react": ">= 0.14.0"
+    "react": ">= 16.8.0",
+    "react-dom": ">= 16.8.0"
   },
   "scripts": {
     "dev": "webpack-dev-server --hot --inline",
