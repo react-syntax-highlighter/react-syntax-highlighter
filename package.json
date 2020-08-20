@@ -1,6 +1,6 @@
 {
   "name": "react-syntax-highlighter",
-  "version": "13.5.0",
+  "version": "13.5.1",
   "description": "syntax highlighting component for react with prismjs or highlightjs ast using inline styles",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
