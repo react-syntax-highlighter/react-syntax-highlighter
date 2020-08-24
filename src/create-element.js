@@ -1,9 +1,35 @@
 import React from 'react';
 
+const classSelectorClassNames = {};
+function classSelectorToClassNames(selector) {
+  if (!selector.includes(".")) return null;
+  if (!classSelectorClassNames[selector]) {
+    classSelectorClassNames[selector] = selector.split(".").filter(Boolean);
+  }
+  return classSelectorClassNames[selector];
+}
+
+// Is array1 a subset of array2
+function isSubset(array1, array2) {
+  if (!array1 || !array2) return false;
+  if (!Array.isArray(array1) || !Array.isArray(array2)) return false;
+  const intersection = array1.filter((element) => array2.includes(element));
+  return intersection.length === array1.length;
+}
+
 export function createStyleObject(classNames, elementStyle = {}, stylesheet) {
-  return classNames.reduce((styleObject, className) => {
-    return { ...styleObject, ...stylesheet[className] };
-  }, elementStyle);
+  const newStyles = Object.entries(stylesheet).reduce(
+    (newStyleObject, [selector, styles]) => {
+      if (classNames.includes(selector)) {
+        return { ...styles, ...newStyleObject };
+      } else if (isSubset(classSelectorToClassNames(selector), classNames)) {
+        return { ...newStyleObject, ...styles };
+      }
+      return newStyleObject;
+    },
+    {}
+  );
+  return { ...elementStyle, ...newStyles };
 }
 
 export function createClassNameString(classNames) {
