@@ -9,7 +9,7 @@ function classSelectorToClassNames(selector) {
   return classSelectorClassNames[selector];
 }
 
-// Is array1 a subset of array2
+/** Returns a boolean of whether array1 is a subset of array2 */
 function isSubset(array1, array2) {
   if (!array1 || !array2) return false;
   if (!Array.isArray(array1) || !Array.isArray(array2)) return false;
