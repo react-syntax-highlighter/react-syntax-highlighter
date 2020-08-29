@@ -130,7 +130,7 @@ function flattenCodeTree(tree, className = [], newTree = []) {
       newTree.push(
         createLineElement({
           children: [node],
-          className
+          className: [...new Set(className)]
         })
       );
     } else if (node.children) {
