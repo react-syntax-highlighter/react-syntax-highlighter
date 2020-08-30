@@ -107,8 +107,8 @@ export default function createElement({
       ];
       const className =
         properties.className &&
-        properties.className.filter(className =>
-          allStylesheetSelectors.includes(className)
+        properties.className.filter(
+          className => !allStylesheetSelectors.includes(className)
         );
 
       props = {
