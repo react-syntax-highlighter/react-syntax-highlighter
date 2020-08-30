@@ -1,33 +1,39 @@
 import React from 'react';
 
-function recursivePermute(arr, permutation = []) {
-  return arr.length === 0
-    ? [permutation]
-    : arr.flatMap((item, i, arr) =>
-        recursivePermute(
-          arr.filter((_, j) => j !== i),
-          [...permutation, item]
-        )
-      );
-}
-
-const permutations = {};
-function permute(arr) {
-  const key = arr.join('.');
-  if (!permutations[key]) {
-    permutations[key] = recursivePermute(arr);
+// Get all possible permutations of all power sets
+//
+// Super simple, non-algorithmic solution since the
+// number of class names will not be greater than 3
+function powerSetPermutations(arr) {
+  if (arr.length === 0) return [];
+  if (arr.length === 1) return arr;
+  if (arr.length === 2) {
+    return [
+      arr[0],
+      arr[1],
+      `${arr[0]}.${arr[1]}`,
+      `${arr[1]}.${arr[0]}`,
+    ]
   }
-  return permutations[key];
-}
-
-function getSubArrays(arr) {
-  if (arr.length === 1) return [arr];
-  else {
-    const subarr = getSubArrays(arr.slice(1));
-    return subarr.concat(
-      subarr.map(el => el.concat(arr[0])),
-      [[arr[0]]]
-    );
+  if (arr.length >= 3) {
+    // Currently does not support more than 3 class names
+    return [
+      arr[0],
+      arr[1],
+      arr[2],
+      `${arr[0]}.${arr[1]}`,
+      `${arr[0]}.${arr[2]}`,
+      `${arr[1]}.${arr[0]}`,
+      `${arr[1]}.${arr[2]}`,
+      `${arr[2]}.${arr[0]}`,
+      `${arr[2]}.${arr[1]}`,
+      `${arr[0]}.${arr[1]}.${arr[2]}`,
+      `${arr[0]}.${arr[2]}.${arr[1]}`,
+      `${arr[1]}.${arr[0]}.${arr[2]}`,
+      `${arr[1]}.${arr[2]}.${arr[0]}`,
+      `${arr[2]}.${arr[0]}.${arr[1]}`,
+      `${arr[2]}.${arr[1]}.${arr[0]}`,
+    ]
   }
 }
 
@@ -35,15 +41,9 @@ const classNameCombinations = {};
 function getClassNameCombinations(classNames) {
   if (classNames.length === 0) return [];
   if (classNames.length === 1) return classNames;
-  const key = classNames.join('.');
+  const key = classNames.join(".");
   if (!classNameCombinations[key]) {
-    classNameCombinations[key] = getSubArrays(classNames)
-      .flatMap(classNames =>
-        classNames.length > 1 ? permute(classNames) : [classNames]
-      )
-      // Less specific (fewer class names) to more specific (more class names)
-      .sort((a, b) => (a.length < b.length ? -1 : 1))
-      .map(arr => arr.join('.'));
+    classNameCombinations[key] = powerSetPermutations(classNames);
   }
   return classNameCombinations[key];
 }
