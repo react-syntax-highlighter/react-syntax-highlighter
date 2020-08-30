@@ -54,7 +54,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
     }
   >
     <span
-      className="token keyword"
+      className="module"
       style={
         Object {
           "color": "#07a",
@@ -69,7 +69,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
        
     </span>
     <span
-      className="token maybe-class-name"
       style={
         Object {
           "color": "#DD4A68",
@@ -84,7 +83,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
        
     </span>
     <span
-      className="token keyword"
+      className="module"
       style={
         Object {
           "color": "#07a",
@@ -99,7 +98,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
        
     </span>
     <span
-      className="token string"
       style={
         Object {
           "color": "#690",
@@ -109,7 +107,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       "react"
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -130,7 +127,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       
     </span>
     <span
-      className="token keyword"
+      className="module"
       style={
         Object {
           "color": "#07a",
@@ -145,7 +142,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
        uniquePropHOC 
     </span>
     <span
-      className="token keyword"
+      className="module"
       style={
         Object {
           "color": "#07a",
@@ -160,7 +157,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
        
     </span>
     <span
-      className="token string"
       style={
         Object {
           "color": "#690",
@@ -170,7 +166,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       "./lib/unique-prop-hoc"
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -193,7 +188,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       
     </span>
     <span
-      className="token keyword"
       style={
         Object {
           "color": "#07a",
@@ -208,7 +202,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
        
     </span>
     <span
-      className="token class-name"
       style={
         Object {
           "color": "#DD4A68",
@@ -223,7 +216,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
        
     </span>
     <span
-      className="token keyword"
       style={
         Object {
           "color": "#07a",
@@ -238,7 +230,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
        
     </span>
     <span
-      className="token class-name"
       style={
         Object {
           "color": "#DD4A68",
@@ -248,7 +239,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       React
     </span>
     <span
-      className="token class-name punctuation"
       style={
         Object {
           "color": "#999",
@@ -258,7 +248,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       .
     </span>
     <span
-      className="token class-name"
       style={
         Object {
           "color": "#DD4A68",
@@ -273,7 +262,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
        
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -294,7 +282,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
           
     </span>
     <span
-      className="token function"
       style={
         Object {
           "color": "#DD4A68",
@@ -304,7 +291,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       constructor
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -314,13 +300,12 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       (
     </span>
     <span
-      className="token"
+      className="parameter"
       style={Object {}}
     >
       props
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -335,7 +320,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
        
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -356,7 +340,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
               
     </span>
     <span
-      className="token keyword"
       style={
         Object {
           "color": "#07a",
@@ -366,7 +349,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       super
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -381,7 +363,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       props
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -391,7 +372,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       )
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -412,7 +392,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
               
     </span>
     <span
-      className="token keyword"
       style={
         Object {
           "color": "#07a",
@@ -422,7 +401,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       this
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -432,7 +410,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       .
     </span>
     <span
-      className="token property-access"
       style={
         Object {
           "color": "#690",
@@ -447,7 +424,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
        
     </span>
     <span
-      className="token operator"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -463,7 +439,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
        
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -478,7 +453,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
        component
     </span>
     <span
-      className="token operator"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -494,7 +468,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
        props
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -504,7 +477,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       .
     </span>
     <span
-      className="token property-access"
       style={
         Object {
           "color": "#690",
@@ -519,7 +491,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
        
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -540,7 +511,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
           
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -561,7 +531,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
           
     </span>
     <span
-      className="token function"
       style={
         Object {
           "color": "#DD4A68",
@@ -571,7 +540,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       componentDidMount
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -581,7 +549,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       (
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -596,7 +563,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
        
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -617,7 +583,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
               
     </span>
     <span
-      className="token function"
       style={
         Object {
           "color": "#DD4A68",
@@ -627,7 +592,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       setTimeout
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -637,7 +601,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       (
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -647,7 +610,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       (
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -662,7 +624,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
        
     </span>
     <span
-      className="token operator"
+      className="arrow"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -678,7 +640,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
        
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -699,7 +660,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
                   
     </span>
     <span
-      className="token keyword"
       style={
         Object {
           "color": "#07a",
@@ -709,7 +669,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       this
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -719,7 +678,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       .
     </span>
     <span
-      className="token function property-access"
+      className="method"
       style={
         Object {
           "color": "#690",
@@ -729,7 +688,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       setState
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -739,7 +697,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       (
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -760,7 +717,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
                       component
     </span>
     <span
-      className="token operator"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -776,7 +732,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
        
     </span>
     <span
-      className="token keyword null nil"
       style={
         Object {
           "color": "#555",
@@ -797,7 +752,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
                   
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -807,7 +761,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       }
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -817,7 +770,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       )
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -838,7 +790,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
               
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -848,7 +799,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       }
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -863,7 +813,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
        
     </span>
     <span
-      className="token keyword"
       style={
         Object {
           "color": "#07a",
@@ -873,7 +822,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       this
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -883,7 +831,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       .
     </span>
     <span
-      className="token property-access"
       style={
         Object {
           "color": "#690",
@@ -893,7 +840,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       props
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -903,7 +849,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       .
     </span>
     <span
-      className="token property-access"
       style={
         Object {
           "color": "#690",
@@ -918,7 +863,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
        
     </span>
     <span
-      className="token operator"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -934,7 +878,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
        
     </span>
     <span
-      className="token keyword"
       style={
         Object {
           "color": "#07a",
@@ -944,7 +887,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       this
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -954,7 +896,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       .
     </span>
     <span
-      className="token property-access"
       style={
         Object {
           "color": "#690",
@@ -964,7 +905,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       props
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -974,7 +914,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       .
     </span>
     <span
-      className="token property-access"
       style={
         Object {
           "color": "#690",
@@ -989,7 +928,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
        
     </span>
     <span
-      className="token operator"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -1005,7 +943,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
        
     </span>
     <span
-      className="token number"
       style={
         Object {
           "color": "#905",
@@ -1015,7 +952,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       1000
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -1025,7 +961,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       )
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -1046,7 +981,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
           
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -1067,7 +1001,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
           
     </span>
     <span
-      className="token function"
       style={
         Object {
           "color": "#DD4A68",
@@ -1077,7 +1010,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       render
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -1087,7 +1019,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       (
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -1102,7 +1033,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
        
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -1123,7 +1053,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
               
     </span>
     <span
-      className="token keyword"
       style={
         Object {
           "color": "#07a",
@@ -1138,7 +1067,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
        
     </span>
     <span
-      className="token keyword"
       style={
         Object {
           "color": "#07a",
@@ -1148,7 +1076,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       this
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -1158,7 +1085,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       .
     </span>
     <span
-      className="token property-access"
       style={
         Object {
           "color": "#690",
@@ -1168,7 +1094,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       state
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -1178,7 +1103,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       .
     </span>
     <span
-      className="token property-access"
       style={
         Object {
           "color": "#690",
@@ -1188,7 +1112,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       component
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -1209,7 +1132,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
           
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -1230,7 +1152,6 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -1297,7 +1218,6 @@ exports[`SyntaxHighlighter should just render text if syntax is not registered 1
     }
   >
     <span
-      className="token keyword"
       style={
         Object {
           "color": "#07a",
@@ -1307,7 +1227,6 @@ exports[`SyntaxHighlighter should just render text if syntax is not registered 1
       print
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
@@ -1317,7 +1236,6 @@ exports[`SyntaxHighlighter should just render text if syntax is not registered 1
       (
     </span>
     <span
-      className="token string"
       style={
         Object {
           "color": "#690",
@@ -1327,7 +1245,6 @@ exports[`SyntaxHighlighter should just render text if syntax is not registered 1
       'hello'
     </span>
     <span
-      className="token punctuation"
       style={
         Object {
           "color": "#999",
