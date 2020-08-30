@@ -95,11 +95,20 @@ export default {
     "punctuation": {
         "color": "#999"
     },
+    "null": {
+        "color": "#555"
+    },
+    "nil": {
+        "color": "#555"
+    },
     "namespace": {
         "Opacity": ".7"
     },
     "property": {
         "color": "#905"
+    },
+    "property-access": {
+        "color": "#690"
     },
     "tag": {
         "color": "#905"
@@ -171,6 +180,9 @@ export default {
         "color": "#DD4A68"
     },
     "class-name": {
+        "color": "#DD4A68"
+    },
+    "maybe-class-name": {
         "color": "#DD4A68"
     },
     "regex": {
