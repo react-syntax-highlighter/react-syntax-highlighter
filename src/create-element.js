@@ -107,9 +107,9 @@ export default function createElement({
       ];
       const className =
         properties.className &&
-        properties.className.filter(
-          className => !allStylesheetSelectors.includes(className)
-        );
+        properties.className
+          .filter(className => !allStylesheetSelectors.includes(className))
+          .concat(properties.className.includes('token') ? 'token' : []);
 
       props = {
         ...properties,
