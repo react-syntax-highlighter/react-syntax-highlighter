@@ -227,7 +227,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     }
   >
     <span
-      className="module token"
+      className="token module"
       style={
         Object {
           "color": "#07a",
@@ -242,12 +242,8 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
        
     </span>
     <span
-      className="token"
-      style={
-        Object {
-          "color": "#DD4A68",
-        }
-      }
+      className="token maybe-class-name"
+      style={Object {}}
     >
       React
     </span>
@@ -257,7 +253,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
        
     </span>
     <span
-      className="module token"
+      className="token module"
       style={
         Object {
           "color": "#07a",
@@ -303,7 +299,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
         
     </span>
     <span
-      className="module token"
+      className="token module"
       style={
         Object {
           "color": "#07a",
@@ -318,7 +314,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
        uniquePropHOC 
     </span>
     <span
-      className="module token"
+      className="token module"
       style={
         Object {
           "color": "#07a",
@@ -487,7 +483,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
       (
     </span>
     <span
-      className="parameter token"
+      className="token parameter"
       style={Object {}}
     >
       props
@@ -605,12 +601,8 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
       .
     </span>
     <span
-      className="token"
-      style={
-        Object {
-          "color": "#690",
-        }
-      }
+      className="token property-access"
+      style={Object {}}
     >
       state
     </span>
@@ -677,12 +669,8 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
       .
     </span>
     <span
-      className="token"
-      style={
-        Object {
-          "color": "#690",
-        }
-      }
+      className="token property-access"
+      style={Object {}}
     >
       children
     </span>
@@ -835,7 +823,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
        
     </span>
     <span
-      className="arrow token"
+      className="token arrow"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -892,10 +880,10 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
       .
     </span>
     <span
-      className="method token"
+      className="token method property-access"
       style={
         Object {
-          "color": "#690",
+          "color": "#DD4A68",
         }
       }
     >
@@ -949,10 +937,10 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
        
     </span>
     <span
-      className="token"
+      className="token null nil"
       style={
         Object {
-          "color": "#555",
+          "color": "#07a",
         }
       }
     >
@@ -1056,12 +1044,8 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
       .
     </span>
     <span
-      className="token"
-      style={
-        Object {
-          "color": "#690",
-        }
-      }
+      className="token property-access"
+      style={Object {}}
     >
       props
     </span>
@@ -1076,12 +1060,8 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
       .
     </span>
     <span
-      className="token"
-      style={
-        Object {
-          "color": "#690",
-        }
-      }
+      className="token property-access"
+      style={Object {}}
     >
       time
     </span>
@@ -1127,12 +1107,8 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
       .
     </span>
     <span
-      className="token"
-      style={
-        Object {
-          "color": "#690",
-        }
-      }
+      className="token property-access"
+      style={Object {}}
     >
       props
     </span>
@@ -1147,12 +1123,8 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
       .
     </span>
     <span
-      className="token"
-      style={
-        Object {
-          "color": "#690",
-        }
-      }
+      className="token property-access"
+      style={Object {}}
     >
       seconds
     </span>
@@ -1331,12 +1303,8 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
       .
     </span>
     <span
-      className="token"
-      style={
-        Object {
-          "color": "#690",
-        }
-      }
+      className="token property-access"
+      style={Object {}}
     >
       state
     </span>
@@ -1351,12 +1319,8 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
       .
     </span>
     <span
-      className="token"
-      style={
-        Object {
-          "color": "#690",
-        }
-      }
+      className="token property-access"
+      style={Object {}}
     >
       component
     </span>

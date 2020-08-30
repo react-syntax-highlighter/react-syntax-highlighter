@@ -69,7 +69,7 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
        
     </span>
     <span
-      className="function-variable token"
+      className="token function-variable"
       style={
         Object {
           "color": "#DD4A68",
@@ -100,7 +100,7 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
        
     </span>
     <span
-      className="parameter token"
+      className="token parameter"
       style={Object {}}
     >
       fun
@@ -111,7 +111,7 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
        
     </span>
     <span
-      className="arrow token"
+      className="token arrow"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -463,10 +463,10 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
       .
     </span>
     <span
-      className="method token"
+      className="token method property-access"
       style={
         Object {
-          "color": "#690",
+          "color": "#DD4A68",
         }
       }
     >
@@ -483,7 +483,7 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
       (
     </span>
     <span
-      className="parameter token"
+      className="token parameter"
       style={Object {}}
     >
       n
@@ -494,7 +494,7 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
        
     </span>
     <span
-      className="arrow token"
+      className="token arrow"
       style={
         Object {
           "background": "hsla(0, 0%, 100%, .5)",
@@ -556,10 +556,10 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
       .
     </span>
     <span
-      className="method token"
+      className="token method property-access"
       style={
         Object {
-          "color": "#690",
+          "color": "#DD4A68",
         }
       }
     >
@@ -659,7 +659,7 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
       
     </span>
     <span
-      className="console token"
+      className="token console"
       style={
         Object {
           "color": "#DD4A68",
@@ -679,10 +679,10 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
       .
     </span>
     <span
-      className="method token"
+      className="token method property-access"
       style={
         Object {
-          "color": "#690",
+          "color": "#DD4A68",
         }
       }
     >
