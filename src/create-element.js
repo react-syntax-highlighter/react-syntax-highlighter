@@ -8,12 +8,7 @@ function powerSetPermutations(arr) {
   if (arr.length === 0) return [];
   if (arr.length === 1) return arr;
   if (arr.length === 2) {
-    return [
-      arr[0],
-      arr[1],
-      `${arr[0]}.${arr[1]}`,
-      `${arr[1]}.${arr[0]}`,
-    ]
+    return [arr[0], arr[1], `${arr[0]}.${arr[1]}`, `${arr[1]}.${arr[0]}`];
   }
   if (arr.length >= 3) {
     // Currently does not support more than 3 class names
@@ -32,8 +27,8 @@ function powerSetPermutations(arr) {
       `${arr[1]}.${arr[0]}.${arr[2]}`,
       `${arr[1]}.${arr[2]}.${arr[0]}`,
       `${arr[2]}.${arr[0]}.${arr[1]}`,
-      `${arr[2]}.${arr[1]}.${arr[0]}`,
-    ]
+      `${arr[2]}.${arr[1]}.${arr[0]}`
+    ];
   }
 }
 
@@ -41,7 +36,7 @@ const classNameCombinations = {};
 function getClassNameCombinations(classNames) {
   if (classNames.length === 0) return [];
   if (classNames.length === 1) return classNames;
-  const key = classNames.join(".");
+  const key = classNames.join('.');
   if (!classNameCombinations[key]) {
     classNameCombinations[key] = powerSetPermutations(classNames);
   }
