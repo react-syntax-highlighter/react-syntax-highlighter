@@ -113,7 +113,7 @@ export default function createElement({
 
       props = {
         ...properties,
-        className: createClassNameString(className),
+        className: createClassNameString(className) || undefined,
         style: createStyleObject(
           properties.className,
           Object.assign({}, properties.style, style),
