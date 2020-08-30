@@ -16,7 +16,8 @@ function powerSetPermutations(arr) {
     ];
   }
   if (arr.length >= 3) {
-    // Currently does not support more than 3 class names
+    // Currently does not support more than 3 extra
+    // class names (after `.token` has been removed)
     return [
       arr[0],
       arr[1],
