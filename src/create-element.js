@@ -92,7 +92,12 @@ export default function createElement({
 
     let props;
 
-    if (useInlineStyles) {
+    if (!useInlineStyles) {
+      props = {
+        ...properties,
+        className: createClassNameString(properties.className)
+      };
+    } else {
       const allStylesheetSelectors = [
         ...new Set(
           Object.keys(stylesheet)
@@ -114,11 +119,6 @@ export default function createElement({
           Object.assign({}, properties.style, style),
           stylesheet
         )
-      };
-    } else {
-      props = {
-        ...properties,
-        className: createClassNameString(properties.className)
       };
     }
 
