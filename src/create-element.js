@@ -105,11 +105,20 @@ export default function createElement({
             .flat()
         )
       ];
+
+      // For compatibility with older versions of react-syntax-highlighter
+      const startingClassName =
+        properties.className && properties.className.includes('token')
+          ? ['token']
+          : [];
+
       const className =
         properties.className &&
-        properties.className
-          .filter(className => !allStylesheetSelectors.includes(className))
-          .concat(properties.className.includes('token') ? 'token' : []);
+        startingClassName.concat(
+          properties.className.filter(
+            className => !allStylesheetSelectors.includes(className)
+          )
+        );
 
       props = {
         ...properties,
