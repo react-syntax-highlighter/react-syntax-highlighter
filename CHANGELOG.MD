@@ -154,16 +154,20 @@ Highlight v10 introduced some breaking changes for us here which we've worked ar
 ## 12.0.0 / 2019-12-15
 
 ## 11.0.2 / 2019-07-13
+- updated `style` prop description in README
+- updated demo URL from `conor.rodeo` to `conorhastings.github.io`
+- updated `lodash` dep from 4.17.11 to 4.17.14
 
 ## 11.0.1 / 2019-06-27
+- version bump, no other changes
 
 ## 11.0.0 / 2019-06-27
-
-## 10.3.5 / 2019-06-27
-
-## 10.3.4 / 2019-06-27
+- version bump, no other changes
 
 ## 10.3.3 / 2019-06-27
+- build to update `async-languages` for highlight, picking up new languages added in 10.3.0
+
+> Historical note: `vs-dark` theme was automatically removed from `AVAILABLE_STYLES_PRISM.MD` in build process here
 
 ## 10.3.2 / 2019-06-27
 - version bump
