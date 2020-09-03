@@ -1,6 +1,99 @@
 # Changelog
 
 ##  [10.1.0]
+## 13.5.1 (2020-08-19)
+### Changed
+
+- https://github.com/react-syntax-highlighter/react-syntax-highlighter/issues/301: brought back `createElement` that went missing as of version 13.5.
+
+```js
+import createElement from "react-syntax-highlighter/create-element";
+```
+
+## 13.5.0 (2020-08-17)
+### Changed
+
+- https://github.com/react-syntax-highlighter/react-syntax-highlighter/pull/299: clean up old files in project root, add jest to eslint
+- https://github.com/react-syntax-highlighter/react-syntax-highlighter/pull/300: Updated to `refractor` 3.1.0, which brings in `prismjs` 1.21.0. We'd pinned `react-syntax-highlighter 13.3.1` to `prismjs 1.21.0`, but didn't realize that `refractor`'s dependency would keep us at 1.20.0
+
+## 13.4.0 (2020-08-14)
+### Changed
+
+## 13.3.1 (2020-08-08)
+### Changed
+
+## 13.2.1 (2020-07-30)
+### Changed
+
+## 13.2.0 (2020-07-30)
+### Changed
+
+## 13.1.1 (2020-07-30)
+### Changed
+
+## 13.1.0 (2020-07-23)
+### Changed
+
+## 13.0.0 (2020-07-23)
+### Changed
+
+## 12.2.1 (2019-12-16)
+### Changed
+
+## 12.2.0 (2019-12-16)
+### Changed
+
+## 12.1.0 (2019-12-16)
+### Changed
+
+## 12.0.2 (2019-12-15)
+### Changed
+
+## 12.0.1 (2019-12-15)
+### Changed
+
+## 12.0.0 (2019-12-15)
+### Changed
+
+## 11.0.2 (2019-07-13)
+### Changed
+
+## 11.0.1 (2019-06-27)
+### Changed
+
+## 11.0.0 (2019-06-27)
+### Changed
+
+## 10.3.5 (2019-06-27)
+### Changed
+
+## 10.3.4 (2019-06-27)
+### Changed
+
+## 10.3.3 (2019-06-27)
+### Changed
+
+## 10.3.2 (2019-06-27)
+### Changed
+
+## 10.3.1 (2019-06-27)
+### Changed
+
+## 10.3.0 (2019-05-22)
+### Changed
+
+## 10.2.1 (2019-03-21)
+### Changed
+
+## 10.2.0 (2019-03-10)
+### Changed
+
+## 10.1.3 (2019-02-16)
+### Changed
+
+## 10.1.2 (2018-12-06)
+### Changed
+
 ### Changed
 - All highlighters except for the old "-light" vareities, now have a supportedLanguges field which can be used to determine the supported languages
 
