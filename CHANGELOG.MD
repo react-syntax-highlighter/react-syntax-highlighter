@@ -194,28 +194,69 @@ Highlight v10 introduced some breaking changes for us here which we've worked ar
 
 ## 10.3.0 / 2019-05-22
 ### Changes
+- added projects to README
+- corrected README typos
+
+### New highlight.js languages
+- `angelscript`
+- `arcade`
+- `gml`
+- `isbl`
+- `pgsql`
+- `plaintext`
+- `properties`
+- `reasonml`
+- `sas`
+
+### New prism.js styles
+- `xonokai`
+- `vs-dark`
+
 
 ## 10.2.1 / 2019-03-21
 ### Changes
+- fixed `classNames` concatenation in `createElement`
+- updated test snapshots accordingly
 
 ## 10.2.0 / 2019-03-10
 ### Changes
+- updated license copyright date
+- updated `highlight` from 9.12.0 to 9.13.0
+- updated `lowlight` from 1.9.1 to 1.11.0
+
+### New highlight.js styles available
+- `a11yDark`
+- `a11yLight`
+- `anOldHope`
+- `atomOneDarkReasonable`
+- `gml`
+- `isblEditorDark`
+- `isblEditorLight`
+- `lightfair`
+- `nord`
+- `shadesOfPurple`
 
 ## 10.1.3 / 2019-02-16
 ### Changes
+- README corrections
+- updated deps: `@babel/runtime`, `babel-jest`, `codecov`, `jest`, `request`, `webpack-dev-server`
+- updated import paths in demos
 
 ## 10.1.2 / 2018-12-06
 ### Changes
+- fine-tuned `prettier` config
+- prettier cleanup of src and demo code
+- use `@babel/runtime` instead of `babel-runtime`
 
 ## 10.0.1 / 2018-11-09
 ### Changes
-- All highlighters except for the old "-light" vareities, now have a supportedLanguges field which can be used to determine the supported languages
+- All highlighters except for the old "-light" varieties now have a `supportedLanguages` field which can be used to determine the supported languages
 
 ## 10.0.0 / 2018-10-30
 ### Changes
-- registerLanguage is now a static method of the default export of highlighters that require registering of languages.
-- prism-async-light & light-async now ship with their own language loaders
-- Added a esm & cjs output, importing should now be done through import. OR the import should point into the dist directory.
+- `registerLanguage` is now a static method of the default export of highlighters that require registering of languages.
+- `prism-async-light` & `light-async` now ship with their own language loaders
+- Added `esm` & `cjs` outputs. Importing should now be done through import OR the import should point into the dist directory.
 ```
 import SyntaxHighlighter from "react-syntax-highlighter/prism";
 
@@ -227,13 +268,13 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter/dist/cjs/pr
 // OR
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter/dist/esm/prism";
 ```
-- styles have moved into the dist directory update your imports from
+- styles have moved into the `dist` directory. Update your imports from:
 
 ```
 import style from 'react-syntax-highlighter/styles/prism'
 ```
 
-To
+to:
 
 ```
 import style from 'react-syntax-highlighter/dist/styles/prism'
