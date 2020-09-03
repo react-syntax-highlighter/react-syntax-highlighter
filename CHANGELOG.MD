@@ -1,5 +1,11 @@
 # Changelog
 
+## 13.5.3 / 2020-09-03
+- don't forget to add current version to CHANGELOG at release time :)
+
+## 13.5.2 / 2020-09-03
+- filled in CHANGELOG for v10.x through v13.5.1
+
 ## 13.5.1 / 2020-08-19
 - Brought back `createElement` that went missing as of version 13.5.
 
