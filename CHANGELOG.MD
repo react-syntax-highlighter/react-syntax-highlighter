@@ -151,68 +151,68 @@ Highlight v10 introduced some breaking changes for us here which we've worked ar
 
 
 ## 12.2.1 / 2019-12-16
-### Changed
+### Changes
 
 ## 12.2.0 / 2019-12-16
-### Changed
+### Changes
 
 ## 12.1.0 / 2019-12-16
-### Changed
+### Changes
 
 ## 12.0.2 / 2019-12-15
-### Changed
+### Changes
 
 ## 12.0.1 / 2019-12-15
-### Changed
+### Changes
 
 ## 12.0.0 / 2019-12-15
-### Changed
+### Changes
 
 ## 11.0.2 / 2019-07-13
-### Changed
+### Changes
 
 ## 11.0.1 / 2019-06-27
-### Changed
+### Changes
 
 ## 11.0.0 / 2019-06-27
-### Changed
+### Changes
 
 ## 10.3.5 / 2019-06-27
-### Changed
+### Changes
 
 ## 10.3.4 / 2019-06-27
-### Changed
+### Changes
 
 ## 10.3.3 / 2019-06-27
-### Changed
+### Changes
 
 ## 10.3.2 / 2019-06-27
-### Changed
+### Changes
 
 ## 10.3.1 / 2019-06-27
-### Changed
+### Changes
 
 ## 10.3.0 / 2019-05-22
-### Changed
+### Changes
 
 ## 10.2.1 / 2019-03-21
-### Changed
+### Changes
 
 ## 10.2.0 / 2019-03-10
-### Changed
+### Changes
 
 ## 10.1.3 / 2019-02-16
-### Changed
+### Changes
 
 ## 10.1.2 / 2018-12-06
-### Changed
+### Changes
 
 ## 10.0.1 / 2018-11-09
-### Changed
+### Changes
 - All highlighters except for the old "-light" vareities, now have a supportedLanguges field which can be used to determine the supported languages
 
 ## 10.0.0 / 2018-10-30
-### Changed
+### Changes
 - registerLanguage is now a static method of the default export of highlighters that require registering of languages.
 - prism-async-light & light-async now ship with their own language loaders
 - Added a esm & cjs output, importing should now be done through import. OR the import should point into the dist directory.
@@ -240,7 +240,7 @@ import style from 'react-syntax-highlighter/dist/styles/prism'
 ```
 
 ## 9.0.1 / 2018-10-22
-### Changed
+### Changes
 - fixed code-splitting in webpack 3.
 
 ## 9.0.0 / 2018-10-07
@@ -253,15 +253,15 @@ import style from 'react-syntax-highlighter/dist/styles/prism'
 - properly propagate className argument to createLineElement when wrapLines=true
 
 ## 8.0.0 / 2018-07-03
-### Changed
+### Changes
 - pass along classNames that are not part of stylesheet (this allows passing in className in lineProps)
 
 ## 7.0.4 / 2018-05-02
-### Changed
+### Changes
 - update refractor version
 
 ## 7.0.3 / 2018-05-02
-### Changed
+### Changes
 - updated .npmignore to make it include less unneccsary files.
 - update example in readme to show proper path for require styles
 
@@ -271,42 +271,42 @@ import style from 'react-syntax-highlighter/dist/styles/prism'
 - fix link to refractor in README
 
 ## 7.0.1 / 2018-01-25
-### Changed
+### Changes
 - removed claims of sanity from README
 
 ## 7.0.0 / 2018-01-25
 ### Added
 - add lineProps prop which takes either an object or a function that returns an object that is then passed onto each line created when wrapLines=true
-### Changed
+### Changes
 - removed lineStyle prop the behavior of this prop can be replicated with lineProps passing a style object inside the props object. this is a breaking change
 
 ## 6.1.2 / 2018-01-17
-### Changed
+### Changes
 - add .babelrc to .npmignore for parcel support
 
 ## 6.1.1 / 2017-12-09
-### Changed
+### Changes
 - move prism-themes to dev dependencies
 
 ## 6.1.0 / 2017-12-09
 ### Added
-- added light version support for prism(refractor) based highlighting
+- added light version support for prism (refractor) based highlighting
 
 ## 6.0.4 / 2017-11-22
-### Changed
+### Changes
 - fixed vendor prefixing for prism styles
 
 ## 6.0.3 / 2017-11-17
-### Changed
+### Changes
 - add links to available languages in README (by @adamweeks)
 - fix line number display for prism highlighter
 
 ## 6.0.2 / 2017-11-16
-### Changed
+### Changes
 - fix git links in package.json
 
 ## 6.0.1 / 2017-11-16
-### Changed
+### Changes
 - update package main to be root instead of dist
 
 ## 6.0.0 / 2017-11-16
@@ -314,12 +314,12 @@ import style from 'react-syntax-highlighter/dist/styles/prism'
 - add support for alternative syntax highlighting using ast generated from prismjs via <a href="https://github.com/wooorm/refractor">refractor</a> (by @conorhastings and @maxmcd)
 
 ## 5.8.1 / 2017-10-26
-### Changed
+### Changes
 - avoid unneeded function calls if language is text
 - note text language in readme
 
 ## 5.8.0 / 2017-10-26
-### Changed
+### Changes
 - avoid unneeded function calls if language is text
 - note text language in readme
 
@@ -328,11 +328,11 @@ import style from 'react-syntax-highlighter/dist/styles/prism'
 - add support for text as valid language
 
 ## 5.7.1 / 2017-10-26
-### Changed
+### Changes
 - check if children is array and use children[0] if so.
 
 ## 5.7.0 / 2017-08-21
-### Changed
+### Changes
 - check if we have language before attempting to highlight.
 - add test for unknown language to avoid further issues with content not rendering
 
@@ -340,11 +340,11 @@ import style from 'react-syntax-highlighter/dist/styles/prism'
 ## 5.6.3 / 2017-08-12
 ### Added
 - added code of conduct
-### Changed
+### Changes
 - update dependency versions
 
 ## 5.6.2 / 2017-05-29
-### Changed
+### Changes
 - fix edge cases in line wrapping feature
 
 ## 5.6.0 / 2017-05-11
@@ -358,13 +358,13 @@ import style from 'react-syntax-highlighter/dist/styles/prism'
 ## 5.5.1 / 2017-05-05
 ### Added
 - add license file
-### Changed
+### Changes
 - update readme
 
 ## 5.50 / 2017-04-23
 ### Added
 - added test for useInlineStyles=false
-### Changed
+### Changes
 - export previously unexported functions from createElemeent
 
 ## 5.4.1 / 2017-04-23
@@ -385,14 +385,14 @@ import style from 'react-syntax-highlighter/dist/styles/prism'
 ### Added
 - flatten tree before using wrapLines function
 - allow using a custom renderer without wrapLines
-### Changed
+### Changes
 - update broken links in demo
 - handle some edge cases in wrapLines function
 - generalize function for finding text child
 
 
 ## 5.1.2 / 2017-03-21
-### Changed
+### Changes
 - update version of react-syntax-highlighter-virtualized-renderer for demo
 - handle some edge cases in wrapLines function
 
@@ -417,13 +417,13 @@ import style from 'react-syntax-highlighter/dist/styles/prism'
 - add support for IE and older android browsers (by @yahiousun)
 
 ## 3.0.1 / 2016-12-03
-### Changed
+### Changes
 - update dependencies
 
 ## 3.0.0 / 2016-10-29
 ### Added
 - wrap individual line numbers in span
-### Changed
+### Changes
 - removed envified light build in favor of only using seperate entry point
 
 ## 2.11.0 / 2016-10-27
@@ -433,14 +433,14 @@ import style from 'react-syntax-highlighter/dist/styles/prism'
 ## 2.10.0 / 2016-10-09
 ### Added
 - add section to readme showcasing projects built with react syntax highlighter
-### Changed
+### Changes
 - fix style assignment function to not end up with unexpected styles
 
 
 ## 2.9.0 / 2016-10-06
 ### Added
 - call highlightAuto if no language provided
-### Changed
+### Changes
 - unify quote style in code
 
 ## 2.8.0 / 2016-10-02
@@ -449,7 +449,7 @@ import style from 'react-syntax-highlighter/dist/styles/prism'
 
 
 ## 2.7.1 / 2016-10-02
-### Changed
+### Changes
 - fix require of default style
 
 ## 2.7.0 / 2016-09-24
@@ -458,7 +458,7 @@ import style from 'react-syntax-highlighter/dist/styles/prism'
 - add more available styles
 
 ## 2.6.1 / 2016-09-22
-### Changed
+### Changes
 - add new info on light build to readme
 - don't wrap text in spans
 
@@ -473,13 +473,13 @@ import style from 'react-syntax-highlighter/dist/styles/prism'
 ## 2.4.0 / 2016-09-11
 ### Added
 - allow optionally applying css classNames instead of inline styles
-### Changed
+### Changes
 - fix light build example
 
 ## 2.3.0 / 2016-08-27
 ### Added
 - add customStyle prop
-### Changed
+### Changes
 - update available styles
 
 
@@ -488,27 +488,27 @@ import style from 'react-syntax-highlighter/dist/styles/prism'
 - allow light build via env variable
 
 ## 2.1.1 / 2016-07-02
-### Changed
+### Changes
 - fix warning by not passing invalid non dom props to pre tag
 
 ## 2.1.0 / 2016-05-20
-### Changed
+### Changes
 - update depedndencies
 
 ## 2.0.4 / 2016-05-18
-### Changed
+### Changes
 - strict dependency on highlight
 
 ## 2.0.3 / 2016-05-07
-### Changed
+### Changes
 - update dependency and add new styles
 
 ## 2.0.2 / 2016-04-19
-### Changed
+### Changes
 - fix bad import in readme
 
 ## 2.0.1 / 2016-04-19
-### Changed
+### Changes
 - fix missing quotes around import location in readme example
 
 ## 2.0.0 / 2016-04-17
@@ -516,31 +516,31 @@ import style from 'react-syntax-highlighter/dist/styles/prism'
 - have user pass in style object instead of string of style name
 
 ## 1.3.0 / 2016-04-03
-### Changed
+### Changes
 - make peerDependency of react more liberal
 
 ## 1.2.0 / 2016-03-27
-### Changed
+### Changes
 - code style changes
 - add new highlight.js styles
 
 ## 1.1.2 / 2016-01-31
-### Changed
+### Changes
 - remove unused createTextElement function
 
 ## 1.1.1 / 2016-01-31
-### Changed
+### Changes
 - use a Text component instead of createTextElement function
 - explain js styles in readme
 
 ## 1.1.0 / 2016-01-30
 ### Added
 - use default top level style from highightjs
-### Changed
+### Changes
 - fix spelling of segment in code (by @winkler1)
 
 ## 1.0.2 / 2016-01-29
-### Changed
+### Changes
 - update package to allow any version of react 14
 
 ## 1.0.1 / 2016-01-29
@@ -551,14 +551,14 @@ import style from 'react-syntax-highlighter/dist/styles/prism'
 ### Added
 - add script to build javascript styles
 - write readme
-### Changed
+### Changes
 - allow changing style in demo
 
 ## 0.0.2 / 2016-01-28
 ### Added
 - add script to build javascript styles
 - write readme
-### Changed
+### Changes
 - update lowlight version
 - use pre not span
 - pass along optional props to pre tag
