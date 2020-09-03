@@ -6,3 +6,4 @@ demo/**/*.map
 .nvmrc
 .DS_Store
 npm-debug.log
+.history
