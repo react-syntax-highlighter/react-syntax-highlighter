@@ -67,13 +67,17 @@ Demo updates:
 ## 13.0.0 / 2020-07-23
 - latest `highlight ^10.1.1` and `lowlight ^1.14.0` dependencies
 - latest `refractor ^3.0.0` and `prism ^1.20.0` dependencies
+- updated codecov and lodash deps
+- corrected .gitignore
 - updated/fixed tests
-- updated demos
+- new Demos UI
 - CircleCi v2 config added
+- exposed `createElement()` in public API
+- change FUNDING platform from `liberapay` to `github`
+- added projects to "built with" section of README
+- updated `websocket-extensions` to 0.1.4
 
-### New API features
-
-#### showInlineLineNumbers prop
+### New prop: `showInlineLineNumbers`
 
 ```jsx
 <SyntaxHighlighter
@@ -92,12 +96,18 @@ When paired with `showLineNumbers={true}`, `showInlineLineNumbers={true}` inject
 Inline line numbers are styled so that they're not selected when drag-selecting multiple lines of highlighted text, preserving expected behavior.
 
 ### Breaking changes
+Highlight v10 introduced some breaking changes for us here which we've worked around (mainly that `getLanguage` was no longer exposed), but this shouldn't cause breakage for most people relying on `react-syntax-highlighter` and not consuming `highlight.js` directly.
+
+#### Theme rename
 
 - If you rely on the `darkula` theme from `highlight.js`, highlight v10 has renamed that style to `darcula`.
 
-Highlight v10 introduced some breaking changes for us here which we've worked around, but shouldn't cause breakage for most people relying on `react-syntax-highlighter` and not consuming `highlight.js` directly.
+#### Renamed/removed highlight.js languages
+- `cs` (renamed to `csharp`)
+- `nimrod` (renamed to `nim`)
+- `tex` (removed)
 
-### Supported languages
+### New languages
 
 > Note: `react-syntax-highlighter` provides an automated build wrapper around styles and languages provided by `highlight.js` (via `lowlight`) and `prism` (via `refractor`). Changes here are simply describing what's changed in those libraries. If you'd like to see another language or style added, please contribute to those libraries.
 
@@ -108,50 +118,80 @@ Highlight v10 introduced some breaking changes for us here which we've worked ar
 - `phpTemplate` (`php-template`)
 - `pythonRepl` (`python-repl`)
 
-#### Renamed/removed highlight.js languages
-- `cs` (renamed to `csharp`)
-- `nimrod` (renamed to `nim`)
-- `tex` (removed)
-
 #### New prism.js languages
+- `abnf`
 - `antlr4`
 - `aql`
 - `bbcode`
+- `bnf`
 - `brightscript`
+- `cil`
+- `cmake`
 - `concurnas`
 - `dax`
+- `dnsZoneFile` (`dns-zone-file`)
+- `ebnf`
+- `ejs`
 - `etlua`
 - `excelFormula` (`excel-formula`)
 - `factor`
 - `firestoreSecurityRules` (`firestore-security-rules`)
 - `ftl`
+- `gcode`
 - `gdscript`
+- `gml`
+- `hcl`
+- `javadoc`
+- `javadoclike`
+- `javastacktrace`
+- `jq`
+- `jsExtras` (`js-extras`)
+- `jsTemplates` (`js-templates`)
+- `jsdoc`
+- `json5`
+- `jsonp`
 - `latte`
+- `lilypond`
 - `llvm`
 - `moonscript`
+- `n1ql`
+- `nand2tetrisHdl` (`nand2tetris-hdl`)
 - `neon`
+- `pascaligo`
+- `pcaxis`
+- `phpdoc`
 - `powerquery`
 - `qml`
+- `regex`
 - `robotframework`
+- `shellSession` (`shell-session`)
 - `solidity`
 - `solutionFile` (`solution-file`)
 - `sparql`
+- `splunkSpl` (`splunk-spl`)
 - `sqf`
+- `t4Cs` (`t4-cs`)
+- `t4Templating` (`t4-templating`)
+- `t4Vb` (`t4-vb`)
+- `toml`
 - `turtle`
+- `vala`
 - `zig`
 
 
-## 12.2.1 / 2019-12-16
-
-## 12.2.0 / 2019-12-16
-
-## 12.1.0 / 2019-12-16
-
 ## 12.0.2 / 2019-12-15
+- version bump, no other changes
 
 ## 12.0.1 / 2019-12-15
+- version bump, no other changes
 
 ## 12.0.0 / 2019-12-15
+- added projects to README
+- updated Docker config: removed `/sbin/init` command
+- introduced Github Actions config
+- removed CircleCI config
+- updated `mixin-deep` and `handlebars` dependencies
+- updated "removed" code in diff demo
 
 ## 11.0.2 / 2019-07-13
 - updated `style` prop description in README
@@ -178,7 +218,7 @@ Highlight v10 introduced some breaking changes for us here which we've worked ar
 - minor README updates
 
 ## 10.3.0 / 2019-05-22
-- added projects to README
+- added projects to "built with" section of README
 - corrected README typos
 
 ### New highlight.js languages
