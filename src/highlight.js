@@ -315,7 +315,7 @@ export default function(defaultAstGenerator, defaultStyle) {
     },
     useInlineStyles = true,
     showLineNumbers = false,
-    showInlineLineNumbers = false,
+    showInlineLineNumbers = true,
     startingLineNumber = 1,
     lineNumberContainerStyle,
     lineNumberStyle = {},
