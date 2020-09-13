@@ -100,7 +100,9 @@ function createLineElement({
   largestLineNumber,
   showInlineLineNumbers,
   lineProps = {},
-  className = []
+  className = [],
+  showLineNumbers,
+  wrapLongLines
 }) {
   const properties =
     typeof lineProps === 'function' ? lineProps(lineNumber) : lineProps;
@@ -113,6 +115,12 @@ function createLineElement({
       largestLineNumber
     );
     children.unshift(getInlineLineNumber(lineNumber, inlineLineNumberStyle));
+  }
+
+  if (wrapLongLines & showLineNumbers) {
+    properties.style
+      ? (properties.style['display'] = 'flex')
+      : (properties.style = { display: 'flex' });
   }
 
   return {
@@ -149,7 +157,8 @@ function processLines(
   showInlineLineNumbers,
   startingLineNumber,
   largestLineNumber,
-  lineNumberStyle
+  lineNumberStyle,
+  wrapLongLines
 ) {
   const tree = flattenCodeTree(codeTree.value);
   const newTree = [];
@@ -164,7 +173,9 @@ function processLines(
       largestLineNumber,
       showInlineLineNumbers,
       lineProps,
-      className
+      className,
+      showLineNumbers,
+      wrapLongLines
     });
   }
 
@@ -392,7 +403,8 @@ export default function(defaultAstGenerator, defaultStyle) {
       showInlineLineNumbers,
       startingLineNumber,
       largestLineNumber,
-      lineNumberStyle
+      lineNumberStyle,
+      wrapLongLines
     );
 
     if (wrapLongLines) {
