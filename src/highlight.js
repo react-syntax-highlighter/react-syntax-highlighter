@@ -319,7 +319,7 @@ export default function(defaultAstGenerator, defaultStyle) {
     startingLineNumber = 1,
     lineNumberContainerStyle,
     lineNumberStyle = {},
-    wrapLines,
+    wrapLines = true,
     wrapLongLines = false,
     lineProps = {},
     renderer,
