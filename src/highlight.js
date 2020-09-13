@@ -118,9 +118,7 @@ function createLineElement({
   }
 
   if (wrapLongLines & showLineNumbers) {
-    properties.style
-      ? (properties.style['display'] = 'flex')
-      : (properties.style = { display: 'flex' });
+    properties.style = { ...properties.style, display: 'flex' };
   }
 
   return {
@@ -409,13 +407,9 @@ export default function(defaultAstGenerator, defaultStyle) {
     );
 
     if (wrapLongLines) {
-      codeTagProps.style
-        ? (codeTagProps.style.whiteSpace = 'pre-wrap')
-        : (codeTagProps.style = { whiteSpace: 'pre-wrap' });
+      codeTagProps.style = { ...codeTagProps.style, whiteSpace: 'pre-wrap' };
     } else {
-      codeTagProps.style
-        ? (codeTagProps.style.whiteSpace = 'pre')
-        : (codeTagProps.style = { whiteSpace: 'pre' });
+      codeTagProps.style = { ...codeTagProps.style, whiteSpace: 'pre' };
     }
 
     return (
