@@ -1897,7 +1897,8 @@ function createElement({ node, style, useInlineStyles, key }) {
       selectedStyle: availableStyles[0],
       style: require(`../src/styles/hljs/${availableStyles[0]}`).default,
       code: initialCodeString,
-      showLineNumbers: false
+      showLineNumbers: false,
+      wrapLongLines: false
     };
   }
   render() {
@@ -1947,6 +1948,24 @@ function createElement({ node, style, useInlineStyles, key }) {
                 <span className="label__text">Show line numbers</span>
               </label>
             </div>
+
+            <div className="options__option options__option--wrap-long-lines">
+              <label htmlFor="wrapLongLines" className="option__label">
+                <input
+                  type="checkbox"
+                  className="option__checkbox"
+                  checked={this.state.wrapLongLines}
+                  onChange={() =>
+                    this.setState({
+                      wrapLongLines: !this.state.wrapLongLines
+                    })
+                  }
+                  id="wrapLongLines"
+                />
+
+                <span className="label__text">Wrap long lines</span>
+              </label>
+            </div>
           </aside>
 
           <article className="example__container">
@@ -1955,6 +1974,7 @@ function createElement({ node, style, useInlineStyles, key }) {
               style={this.state.style}
               showLineNumbers={this.state.showLineNumbers}
               showInlineLineNumbers={true}
+              wrapLongLines={this.state.wrapLongLines}
               renderer={virtualizedRenderer({
                 rowHeight: 20
               })}
