@@ -399,6 +399,10 @@ export default function(defaultAstGenerator, defaultStyle) {
       codeTagProps.style
         ? (codeTagProps.style.whiteSpace = 'pre-wrap')
         : (codeTagProps.style = { whiteSpace: 'pre-wrap' });
+    } else {
+      codeTagProps.style
+        ? (codeTagProps.style.whiteSpace = 'pre')
+        : (codeTagProps.style = { whiteSpace: 'pre' });
     }
 
     return (
