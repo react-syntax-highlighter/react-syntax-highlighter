@@ -320,6 +320,7 @@ export default function(defaultAstGenerator, defaultStyle) {
     lineNumberContainerStyle,
     lineNumberStyle = {},
     wrapLines,
+    wrapLongLines = false,
     lineProps = {},
     renderer,
     PreTag = 'pre',
@@ -393,6 +394,12 @@ export default function(defaultAstGenerator, defaultStyle) {
       largestLineNumber,
       lineNumberStyle
     );
+
+    if (wrapLongLines) {
+      codeTagProps.style
+        ? (codeTagProps.style.whiteSpace = 'pre-wrap')
+        : (codeTagProps.style = { whiteSpace: 'pre-wrap' });
+    }
 
     return (
       <PreTag {...preProps}>
