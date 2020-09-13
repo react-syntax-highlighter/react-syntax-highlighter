@@ -12,7 +12,13 @@ exports[`SyntaxHighlighter component renders custom react component where code t
     }
   }
 >
-  <section>
+  <section
+    style={
+      Object {
+        "whiteSpace": "pre",
+      }
+    }
+  >
     <span
       style={
         Object {
@@ -406,7 +412,13 @@ exports[`SyntaxHighlighter renders div where code tag is by default 1`] = `
     }
   }
 >
-  <div>
+  <div
+    style={
+      Object {
+        "whiteSpace": "pre",
+      }
+    }
+  >
     <span
       style={
         Object {

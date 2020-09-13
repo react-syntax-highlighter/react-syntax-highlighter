@@ -54,6 +54,21 @@ exports[`SyntaxHighlighter render as text if language doesnt exist 1`] = `
     }
   >
     <span
+      className="linenumber react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "color": "slategray",
+          "display": "inline-block",
+          "minWidth": "1em",
+          "paddingRight": "1em",
+          "textAlign": "right",
+          "userSelect": "none",
+        }
+      }
+    >
+      1
+    </span>
+    <span
       style={Object {}}
     >
       print('hello')

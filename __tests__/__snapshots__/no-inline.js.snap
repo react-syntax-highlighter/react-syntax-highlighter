@@ -7,6 +7,11 @@ exports[`SyntaxHighlighter component renders correctly without inline styles whe
 >
   <code
     className="language-javascript"
+    style={
+      Object {
+        "whiteSpace": "pre",
+      }
+    }
   >
     <span
       className="hljs-keyword"

@@ -16,89 +16,24 @@ exports[`SyntaxHighlighter component passes along code style to LineNumbers 1`] 
     style={
       Object {
         "color": "blue",
+        "whiteSpace": "pre",
       }
     }
   >
-    <code
+    <span
+      className="comment linenumber react-syntax-highlighter-line-number"
       style={
         Object {
-          "color": "blue",
-          "float": "left",
-          "paddingRight": "10px",
+          "display": "inline-block",
+          "minWidth": "2em",
+          "paddingRight": "1em",
+          "textAlign": "right",
+          "userSelect": "none",
         }
       }
     >
-      <span
-        className="react-syntax-highlighter-line-number"
-        style={Object {}}
-      >
-        1
-
-      </span>
-      <span
-        className="react-syntax-highlighter-line-number"
-        style={Object {}}
-      >
-        2
-
-      </span>
-      <span
-        className="react-syntax-highlighter-line-number"
-        style={Object {}}
-      >
-        3
-
-      </span>
-      <span
-        className="react-syntax-highlighter-line-number"
-        style={Object {}}
-      >
-        4
-
-      </span>
-      <span
-        className="react-syntax-highlighter-line-number"
-        style={Object {}}
-      >
-        5
-
-      </span>
-      <span
-        className="react-syntax-highlighter-line-number"
-        style={Object {}}
-      >
-        6
-
-      </span>
-      <span
-        className="react-syntax-highlighter-line-number"
-        style={Object {}}
-      >
-        7
-
-      </span>
-      <span
-        className="react-syntax-highlighter-line-number"
-        style={Object {}}
-      >
-        8
-
-      </span>
-      <span
-        className="react-syntax-highlighter-line-number"
-        style={Object {}}
-      >
-        9
-
-      </span>
-      <span
-        className="react-syntax-highlighter-line-number"
-        style={Object {}}
-      >
-        10
-
-      </span>
-    </code>
+      1
+    </span>
     <span
       style={
         Object {
@@ -144,6 +79,20 @@ exports[`SyntaxHighlighter component passes along code style to LineNumbers 1`] 
     >
       ;
 
+    </span>
+    <span
+      className="comment linenumber react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "display": "inline-block",
+          "minWidth": "2em",
+          "paddingRight": "1em",
+          "textAlign": "right",
+          "userSelect": "none",
+        }
+      }
+    >
+      2
     </span>
     <span
       style={Object {}}
@@ -194,6 +143,20 @@ exports[`SyntaxHighlighter component passes along code style to LineNumbers 1`] 
 
     </span>
     <span
+      className="comment linenumber react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "display": "inline-block",
+          "minWidth": "2em",
+          "paddingRight": "1em",
+          "textAlign": "right",
+          "userSelect": "none",
+        }
+      }
+    >
+      3
+    </span>
+    <span
       style={Object {}}
     >
       
@@ -242,6 +205,20 @@ exports[`SyntaxHighlighter component passes along code style to LineNumbers 1`] 
     >
       {
 
+    </span>
+    <span
+      className="comment linenumber react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "display": "inline-block",
+          "minWidth": "2em",
+          "paddingRight": "1em",
+          "textAlign": "right",
+          "userSelect": "none",
+        }
+      }
+    >
+      4
     </span>
     <span
       style={Object {}}
@@ -350,8 +327,36 @@ exports[`SyntaxHighlighter component passes along code style to LineNumbers 1`] 
       );
 
     </span>
+    <span
+      className="comment linenumber react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "display": "inline-block",
+          "minWidth": "2em",
+          "paddingRight": "1em",
+          "textAlign": "right",
+          "userSelect": "none",
+        }
+      }
+    >
+      5
+    </span>
     }
 
+    <span
+      className="comment linenumber react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "display": "inline-block",
+          "minWidth": "2em",
+          "paddingRight": "1em",
+          "textAlign": "right",
+          "userSelect": "none",
+        }
+      }
+    >
+      6
+    </span>
     <span
       style={Object {}}
     >
@@ -386,8 +391,36 @@ exports[`SyntaxHighlighter component passes along code style to LineNumbers 1`] 
       );
 
     </span>
+    <span
+      className="comment linenumber react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "display": "inline-block",
+          "minWidth": "2em",
+          "paddingRight": "1em",
+          "textAlign": "right",
+          "userSelect": "none",
+        }
+      }
+    >
+      7
+    </span>
     
 
+    <span
+      className="comment linenumber react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "display": "inline-block",
+          "minWidth": "2em",
+          "paddingRight": "1em",
+          "textAlign": "right",
+          "userSelect": "none",
+        }
+      }
+    >
+      8
+    </span>
     <span
       style={Object {}}
     >
@@ -439,6 +472,20 @@ exports[`SyntaxHighlighter component passes along code style to LineNumbers 1`] 
 
     </span>
     <span
+      className="comment linenumber react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "display": "inline-block",
+          "minWidth": "2em",
+          "paddingRight": "1em",
+          "textAlign": "right",
+          "userSelect": "none",
+        }
+      }
+    >
+      9
+    </span>
+    <span
       style={Object {}}
     >
         
@@ -472,8 +519,36 @@ exports[`SyntaxHighlighter component passes along code style to LineNumbers 1`] 
       ;
 
     </span>
+    <span
+      className="comment linenumber react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "display": "inline-block",
+          "minWidth": "2em",
+          "paddingRight": "1em",
+          "textAlign": "right",
+          "userSelect": "none",
+        }
+      }
+    >
+      10
+    </span>
     }
 
+    <span
+      className="comment linenumber react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "display": "inline-block",
+          "minWidth": "2em",
+          "paddingRight": "1em",
+          "textAlign": "right",
+          "userSelect": "none",
+        }
+      }
+    >
+      11
+    </span>
     
 
   </code>
