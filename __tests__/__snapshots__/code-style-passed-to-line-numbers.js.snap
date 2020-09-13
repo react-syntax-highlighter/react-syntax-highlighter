@@ -26,7 +26,6 @@ exports[`SyntaxHighlighter component passes along code style to non-inline line 
           "color": "blue",
           "float": "left",
           "paddingRight": "10px",
-          "whiteSpace": "pre",
         }
       }
     >
