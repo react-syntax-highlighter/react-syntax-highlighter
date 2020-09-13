@@ -330,7 +330,7 @@ export default function(defaultAstGenerator, defaultStyle) {
     startingLineNumber = 1,
     lineNumberContainerStyle,
     lineNumberStyle = {},
-    wrapLines = true,
+    wrapLines,
     wrapLongLines = false,
     lineProps = {},
     renderer,
@@ -379,7 +379,8 @@ export default function(defaultAstGenerator, defaultStyle) {
      * some custom renderers rely on individual row elements so we need to turn wrapLines on
      * if renderer is provided and wrapLines is undefined
      */
-    wrapLines = renderer && wrapLines === undefined ? true : wrapLines;
+    wrapLines =
+      (renderer || wrapLongLines) && wrapLines === undefined ? true : wrapLines;
     renderer = renderer || defaultRenderer;
     const defaultCodeValue = [{ type: 'text', value: code }];
     const codeTree = getCodeTree({
