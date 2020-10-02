@@ -178,7 +178,7 @@ function processLines(
   }
 
   function createUnwrappedLine(children, lineNumber) {
-    if (lineNumber && showInlineLineNumbers) {
+    if (showLineNumbers && lineNumber && showInlineLineNumbers) {
       const inlineLineNumberStyle = assembleLineNumberStyles(
         lineNumberStyle,
         lineNumber,
