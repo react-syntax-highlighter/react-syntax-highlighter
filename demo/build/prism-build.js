@@ -192,13 +192,14 @@ function (_React$Component) {
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Component);
 
     _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(Component).call(this));
-    var initialCodeString = "import React from \"react\";\nimport uniquePropHOC from \"./lib/unique-prop-hoc\";\n\nclass Expire extends React.Component {\n    constructor(props) {\n        super(props);\n        this.state = { component: props.children }\n    }\n    componentDidMount() {\n        setTimeout(() => {\n            this.setState({\n                component: null\n            });\n        }, this.props.time || this.props.seconds * 1000);\n    }\n    render() {\n        return this.state.component;\n    }\n}\n\nexport default uniquePropHOC([\"time\", \"seconds\"])(Expire);";
+    var initialCodeString = "import React from \"react\";\nimport uniquePropHOC from \"./lib/unique-prop-hoc\";\n\n// this comment is here to demonstrate an extremely long line length, well beyond what you should probably allow in your own code, though sometimes you'll be highlighting code you can't refactor, which is unfortunate but should be handled gracefully\n\nclass Expire extends React.Component {\n    constructor(props) {\n        super(props);\n        this.state = { component: props.children }\n    }\n    componentDidMount() {\n        setTimeout(() => {\n            this.setState({\n                component: null\n            });\n        }, this.props.time || this.props.seconds * 1000);\n    }\n    render() {\n        return this.state.component;\n    }\n}\n\nexport default uniquePropHOC([\"time\", \"seconds\"])(Expire);\n";
     _this.state = {
       language: 'javascript',
       selectedStyle: availableStyles[0],
       style: __webpack_require__("./src/styles/prism sync recursive ^\\.\\/.*$")("./".concat(availableStyles[0])).default,
       code: initialCodeString,
-      showLineNumbers: false
+      showLineNumbers: false,
+      wrapLongLines: false
     };
     return _this;
   }
@@ -260,7 +261,24 @@ function (_React$Component) {
         id: "showLineNumbers"
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
         className: "label__text"
-      }, "Show line numbers")))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("article", {
+      }, "Show line numbers"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "options__option options__option--wrap-long-lines"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("label", {
+        htmlFor: "wrapLongLines",
+        className: "option__label"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
+        type: "checkbox",
+        className: "option__checkbox",
+        checked: this.state.wrapLongLines,
+        onChange: function onChange() {
+          return _this2.setState({
+            wrapLongLines: !_this2.state.wrapLongLines
+          });
+        },
+        id: "wrapLongLines"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
+        className: "label__text"
+      }, "Wrap long lines")))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("article", {
         className: "example__container"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "textarea__wrapper"
@@ -278,6 +296,7 @@ function (_React$Component) {
       })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_src_prism__WEBPACK_IMPORTED_MODULE_7__["default"], {
         style: this.state.style,
         showLineNumbers: this.state.showLineNumbers,
+        wrapLongLines: this.state.wrapLongLines,
         language: this.state.language
       }, this.state.code))));
     }
@@ -42386,13 +42405,21 @@ function createLineElement(_ref3) {
       _ref3$lineProps = _ref3.lineProps,
       lineProps = _ref3$lineProps === void 0 ? {} : _ref3$lineProps,
       _ref3$className = _ref3.className,
-      className = _ref3$className === void 0 ? [] : _ref3$className;
+      className = _ref3$className === void 0 ? [] : _ref3$className,
+      showLineNumbers = _ref3.showLineNumbers,
+      wrapLongLines = _ref3.wrapLongLines;
   var properties = typeof lineProps === 'function' ? lineProps(lineNumber) : lineProps;
   properties['className'] = className;
 
   if (lineNumber && showInlineLineNumbers) {
     var inlineLineNumberStyle = assembleLineNumberStyles(lineNumberStyle, lineNumber, largestLineNumber);
     children.unshift(getInlineLineNumber(lineNumber, inlineLineNumberStyle));
+  }
+
+  if (wrapLongLines & showLineNumbers) {
+    properties.style = _babel_runtime_helpers_objectSpread__WEBPACK_IMPORTED_MODULE_1___default()({}, properties.style, {
+      display: 'flex'
+    });
   }
 
   return {
@@ -42424,7 +42451,7 @@ function flattenCodeTree(tree) {
   return newTree;
 }
 
-function processLines(codeTree, wrapLines, lineProps, showLineNumbers, showInlineLineNumbers, startingLineNumber, largestLineNumber, lineNumberStyle) {
+function processLines(codeTree, wrapLines, lineProps, showLineNumbers, showInlineLineNumbers, startingLineNumber, largestLineNumber, lineNumberStyle, wrapLongLines) {
   var _ref4;
 
   var tree = flattenCodeTree(codeTree.value);
@@ -42441,7 +42468,9 @@ function processLines(codeTree, wrapLines, lineProps, showLineNumbers, showInlin
       largestLineNumber: largestLineNumber,
       showInlineLineNumbers: showInlineLineNumbers,
       lineProps: lineProps,
-      className: className
+      className: className,
+      showLineNumbers: showLineNumbers,
+      wrapLongLines: wrapLongLines
     });
   }
 
@@ -42609,13 +42638,15 @@ function getCodeTree(_ref6) {
         _ref7$showLineNumbers = _ref7.showLineNumbers,
         showLineNumbers = _ref7$showLineNumbers === void 0 ? false : _ref7$showLineNumbers,
         _ref7$showInlineLineN = _ref7.showInlineLineNumbers,
-        showInlineLineNumbers = _ref7$showInlineLineN === void 0 ? false : _ref7$showInlineLineN,
+        showInlineLineNumbers = _ref7$showInlineLineN === void 0 ? true : _ref7$showInlineLineN,
         _ref7$startingLineNum = _ref7.startingLineNumber,
         startingLineNumber = _ref7$startingLineNum === void 0 ? 1 : _ref7$startingLineNum,
         lineNumberContainerStyle = _ref7.lineNumberContainerStyle,
         _ref7$lineNumberStyle = _ref7.lineNumberStyle,
         lineNumberStyle = _ref7$lineNumberStyle === void 0 ? {} : _ref7$lineNumberStyle,
         wrapLines = _ref7.wrapLines,
+        _ref7$wrapLongLines = _ref7.wrapLongLines,
+        wrapLongLines = _ref7$wrapLongLines === void 0 ? false : _ref7$wrapLongLines,
         _ref7$lineProps = _ref7.lineProps,
         lineProps = _ref7$lineProps === void 0 ? {} : _ref7$lineProps,
         renderer = _ref7.renderer,
@@ -42626,7 +42657,7 @@ function getCodeTree(_ref6) {
         _ref7$code = _ref7.code,
         code = _ref7$code === void 0 ? Array.isArray(children) ? children[0] : children : _ref7$code,
         astGenerator = _ref7.astGenerator,
-        rest = _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0___default()(_ref7, ["language", "children", "style", "customStyle", "codeTagProps", "useInlineStyles", "showLineNumbers", "showInlineLineNumbers", "startingLineNumber", "lineNumberContainerStyle", "lineNumberStyle", "wrapLines", "lineProps", "renderer", "PreTag", "CodeTag", "code", "astGenerator"]);
+        rest = _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0___default()(_ref7, ["language", "children", "style", "customStyle", "codeTagProps", "useInlineStyles", "showLineNumbers", "showInlineLineNumbers", "startingLineNumber", "lineNumberContainerStyle", "lineNumberStyle", "wrapLines", "wrapLongLines", "lineProps", "renderer", "PreTag", "CodeTag", "code", "astGenerator"]);
 
     astGenerator = astGenerator || defaultAstGenerator;
     var allLineNumbers = showLineNumbers ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(AllLineNumbers, {
@@ -42651,12 +42682,12 @@ function getCodeTree(_ref6) {
       return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(PreTag, preProps, allLineNumbers, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(CodeTag, codeTagProps, code));
     }
     /*
-     * some custom renderers rely on individual row elements so we need to turn wrapLines on
-     * if renderer is provided and wrapLines is undefined
+     * Some custom renderers rely on individual row elements so we need to turn wrapLines on
+     * if renderer is provided and wrapLines is undefined.
      */
 
 
-    wrapLines = renderer && wrapLines === undefined ? true : wrapLines;
+    if (wrapLines === undefined && renderer || wrapLongLines) wrapLines = true;
     renderer = renderer || defaultRenderer;
     var defaultCodeValue = [{
       type: 'text',
@@ -42675,7 +42706,18 @@ function getCodeTree(_ref6) {
 
 
     var largestLineNumber = codeTree.value.length + startingLineNumber;
-    var rows = processLines(codeTree, wrapLines, lineProps, showLineNumbers, showInlineLineNumbers, startingLineNumber, largestLineNumber, lineNumberStyle);
+    var rows = processLines(codeTree, wrapLines, lineProps, showLineNumbers, showInlineLineNumbers, startingLineNumber, largestLineNumber, lineNumberStyle, wrapLongLines);
+
+    if (wrapLongLines) {
+      codeTagProps.style = _babel_runtime_helpers_objectSpread__WEBPACK_IMPORTED_MODULE_1___default()({}, codeTagProps.style, {
+        whiteSpace: 'pre-wrap'
+      });
+    } else {
+      codeTagProps.style = _babel_runtime_helpers_objectSpread__WEBPACK_IMPORTED_MODULE_1___default()({}, codeTagProps.style, {
+        whiteSpace: 'pre'
+      });
+    }
+
     return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(PreTag, preProps, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(CodeTag, codeTagProps, !showInlineLineNumbers && allLineNumbers, renderer({
       rows: rows,
       stylesheet: style,
