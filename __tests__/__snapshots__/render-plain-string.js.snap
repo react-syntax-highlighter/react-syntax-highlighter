@@ -8,7 +8,27 @@ exports[`SyntaxHighlighter renders childre unadultered when no language disocver
     }
   }
 >
-  <code>
+  <code
+    style={
+      Object {
+        "whiteSpace": "pre",
+      }
+    }
+  >
+    <span
+      className="comment linenumber react-syntax-highlighter-line-number"
+      style={
+        Object {
+          "display": "inline-block",
+          "minWidth": "1em",
+          "paddingRight": "1em",
+          "textAlign": "right",
+          "userSelect": "none",
+        }
+      }
+    >
+      1
+    </span>
     <span
       style={Object {}}
     >

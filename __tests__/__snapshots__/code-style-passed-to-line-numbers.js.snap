@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SyntaxHighlighter component passes along code style to LineNumbers 1`] = `
+exports[`SyntaxHighlighter component passes along code style to non-inline line numbers element 1`] = `
 <pre
   style={
     Object {
@@ -16,6 +16,7 @@ exports[`SyntaxHighlighter component passes along code style to LineNumbers 1`] 
     style={
       Object {
         "color": "blue",
+        "whiteSpace": "pre",
       }
     }
   >

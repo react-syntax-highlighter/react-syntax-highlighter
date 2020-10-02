@@ -14,6 +14,11 @@ exports[`SyntaxHighlighter allows lineProps as an object 1`] = `
 >
   <code
     className="language-javascript"
+    style={
+      Object {
+        "whiteSpace": "pre",
+      }
+    }
   >
     <span
       style={
@@ -498,6 +503,11 @@ exports[`SyntaxHighlighter allows lineProps as function 1`] = `
 >
   <code
     className="language-javascript"
+    style={
+      Object {
+        "whiteSpace": "pre",
+      }
+    }
   >
     <span
       style={
@@ -982,6 +992,11 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
 >
   <code
     className="language-javascript"
+    style={
+      Object {
+        "whiteSpace": "pre",
+      }
+    }
   >
     <span
       style={Object {}}
@@ -1422,6 +1437,11 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
 >
   <code
     className="language-java"
+    style={
+      Object {
+        "whiteSpace": "pre",
+      }
+    }
   >
     <span
       style={
@@ -2184,6 +2204,20 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
         }
       }
     >
+      <span
+        className="comment linenumber react-syntax-highlighter-line-number"
+        style={
+          Object {
+            "display": "inline-block",
+            "minWidth": "2em",
+            "paddingRight": "1em",
+            "textAlign": "right",
+            "userSelect": "none",
+          }
+        }
+      >
+        25
+      </span>
       <span
         style={Object {}}
       >

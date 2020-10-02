@@ -100,7 +100,9 @@ function createLineElement({
   largestLineNumber,
   showInlineLineNumbers,
   lineProps = {},
-  className = []
+  className = [],
+  showLineNumbers,
+  wrapLongLines
 }) {
   const properties =
     typeof lineProps === 'function' ? lineProps(lineNumber) : lineProps;
@@ -113,6 +115,10 @@ function createLineElement({
       largestLineNumber
     );
     children.unshift(getInlineLineNumber(lineNumber, inlineLineNumberStyle));
+  }
+
+  if (wrapLongLines & showLineNumbers) {
+    properties.style = { ...properties.style, display: 'flex' };
   }
 
   return {
@@ -149,7 +155,8 @@ function processLines(
   showInlineLineNumbers,
   startingLineNumber,
   largestLineNumber,
-  lineNumberStyle
+  lineNumberStyle,
+  wrapLongLines
 ) {
   const tree = flattenCodeTree(codeTree.value);
   const newTree = [];
@@ -164,7 +171,9 @@ function processLines(
       largestLineNumber,
       showInlineLineNumbers,
       lineProps,
-      className
+      className,
+      showLineNumbers,
+      wrapLongLines
     });
   }
 
@@ -315,11 +324,12 @@ export default function(defaultAstGenerator, defaultStyle) {
     },
     useInlineStyles = true,
     showLineNumbers = false,
-    showInlineLineNumbers = false,
+    showInlineLineNumbers = true,
     startingLineNumber = 1,
     lineNumberContainerStyle,
     lineNumberStyle = {},
     wrapLines,
+    wrapLongLines = false,
     lineProps = {},
     renderer,
     PreTag = 'pre',
@@ -364,10 +374,12 @@ export default function(defaultAstGenerator, defaultStyle) {
     }
 
     /*
-     * some custom renderers rely on individual row elements so we need to turn wrapLines on
-     * if renderer is provided and wrapLines is undefined
+     * Some custom renderers rely on individual row elements so we need to turn wrapLines on
+     * if renderer is provided and wrapLines is undefined.
      */
-    wrapLines = renderer && wrapLines === undefined ? true : wrapLines;
+    if ((wrapLines === undefined && renderer) || wrapLongLines)
+      wrapLines = true;
+
     renderer = renderer || defaultRenderer;
     const defaultCodeValue = [{ type: 'text', value: code }];
     const codeTree = getCodeTree({
@@ -391,8 +403,15 @@ export default function(defaultAstGenerator, defaultStyle) {
       showInlineLineNumbers,
       startingLineNumber,
       largestLineNumber,
-      lineNumberStyle
+      lineNumberStyle,
+      wrapLongLines
     );
+
+    if (wrapLongLines) {
+      codeTagProps.style = { ...codeTagProps.style, whiteSpace: 'pre-wrap' };
+    } else {
+      codeTagProps.style = { ...codeTagProps.style, whiteSpace: 'pre' };
+    }
 
     return (
       <PreTag {...preProps}>

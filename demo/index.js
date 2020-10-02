@@ -21,6 +21,8 @@ function createClassNameString(classNames) {
   return classNames.join(' ');
 }
 
+// this comment is here to demonstrate an extremely long line length, well beyond what you should probably allow in your own code, though sometimes you'll be highlighting code you can't refactor, which is unfortunate but should be handled gracefully
+
 function createChildren(style, useInlineStyles) {
   let childrenCount = 0;
   return children => {
@@ -43,10 +45,8 @@ function createElement({ node, style, useInlineStyles, key }) {
     const childrenCreator = createChildren(style, useInlineStyles);
     const props = (
       useInlineStyles
-      ?
-      { style: createStyleObject(properties.className, style) }
-      :
-      { className: createClassNameString(properties.className) }
+      ? { style: createStyleObject(properties.className, style) }
+      : { className: createClassNameString(properties.className) }
     );
     const children = childrenCreator(node.children);
     return <TagName key={key} {...props}>{children}</TagName>;
@@ -58,7 +58,8 @@ function createElement({ node, style, useInlineStyles, key }) {
       selectedStyle: availableStyles[0],
       style: require(`../src/styles/hljs/${availableStyles[0]}`).default,
       code: initialCodeString,
-      showLineNumbers: false
+      showLineNumbers: false,
+      wrapLongLines: false
     };
   }
   render() {
@@ -122,6 +123,24 @@ function createElement({ node, style, useInlineStyles, key }) {
                 <span className="label__text">Show line numbers</span>
               </label>
             </div>
+
+            <div className="options__option options__option--wrap-long-lines">
+              <label htmlFor="wrapLongLines" className="option__label">
+                <input
+                  type="checkbox"
+                  className="option__checkbox"
+                  checked={this.state.wrapLongLines}
+                  onChange={() =>
+                    this.setState({
+                      wrapLongLines: !this.state.wrapLongLines
+                    })
+                  }
+                  id="wrapLongLines"
+                />
+
+                <span className="label__text">Wrap long lines</span>
+              </label>
+            </div>
           </aside>
 
           <article className="example__container">
@@ -137,6 +156,7 @@ function createElement({ node, style, useInlineStyles, key }) {
               language={this.state.language}
               style={this.state.style}
               showLineNumbers={this.state.showLineNumbers}
+              wrapLongLines={this.state.wrapLongLines}
               wrapLines={true}
               lineProps={lineNumber => ({
                 style: { display: 'block', cursor: 'pointer' },

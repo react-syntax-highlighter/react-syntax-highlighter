@@ -14,6 +14,11 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
 >
   <code
     className="language-javascript"
+    style={
+      Object {
+        "whiteSpace": "pre",
+      }
+    }
   >
     <span
       style={

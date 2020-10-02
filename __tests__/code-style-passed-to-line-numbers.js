@@ -14,12 +14,13 @@ function itIs() {
 }
 `;
 
-test('SyntaxHighlighter component passes along code style to LineNumbers', () => {
+test('SyntaxHighlighter component passes along code style to non-inline line numbers element', () => {
   const tree = renderer
     .create(
       <SyntaxHighlighter
         codeTagProps={{ style: { color: 'blue' } }}
         showLineNumbers={true}
+        showInlineLineNumbers={false}
       >
         {code}
       </SyntaxHighlighter>

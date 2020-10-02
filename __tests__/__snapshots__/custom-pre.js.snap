@@ -12,7 +12,13 @@ exports[`SyntaxHighlighter component renders custom react component where pre ta
     }
   }
 >
-  <code>
+  <code
+    style={
+      Object {
+        "whiteSpace": "pre",
+      }
+    }
+  >
     <span
       style={
         Object {
@@ -406,7 +412,13 @@ exports[`SyntaxHighlighter renders div where pre tag is by default 1`] = `
     }
   }
 >
-  <code>
+  <code
+    style={
+      Object {
+        "whiteSpace": "pre",
+      }
+    }
+  >
     <span
       style={
         Object {

@@ -14,6 +14,11 @@ exports[`SyntaxHighlighter component renders correctly by falling back to highli
 >
   <code
     className="language-j"
+    style={
+      Object {
+        "whiteSpace": "pre",
+      }
+    }
   >
     <span
       style={

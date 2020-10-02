@@ -38,6 +38,8 @@ function createClassNameString(classNames) {
   return classNames.join(' ');
 }
 
+// this comment is here to demonstrate an extremely long line length, well beyond what you should probably allow in your own code, though sometimes you'll be highlighting code you can't refactor, which is unfortunate but should be handled gracefully
+
 function createChildren(style, useInlineStyles) {
   let childrenCount = 0;
   return children => {
@@ -73,6 +75,7 @@ function createElement({ node, style, useInlineStyles, key }) {
     this.state = {
       code: initialCodeString,
       showLineNumbers: false,
+      wrapLongLines: false,
       style: 'atom-dark',
       styleSrc: require('../src/styles/prism/atom-dark').default,
       language: 'jsx',
@@ -148,6 +151,24 @@ function createElement({ node, style, useInlineStyles, key }) {
                 <span className="label__text">Show line numbers</span>
               </label>
             </div>
+
+            <div className="options__option options__option--wrap-long-lines">
+              <label htmlFor="wrapLongLines" className="option__label">
+                <input
+                  type="checkbox"
+                  className="option__checkbox"
+                  checked={this.state.wrapLongLines}
+                  onChange={() =>
+                    this.setState({
+                      wrapLongLines: !this.state.wrapLongLines
+                    })
+                  }
+                  id="wrapLongLines"
+                />
+
+                <span className="label__text">Wrap long lines</span>
+              </label>
+            </div>
           </aside>
 
           <article className="example__container">
@@ -164,6 +185,7 @@ function createElement({ node, style, useInlineStyles, key }) {
               style={this.state.styleSrc}
               showLineNumbers={this.state.showLineNumbers}
               wrapLines={true}
+              wrapLongLines={this.state.wrapLongLines}
               lineProps={lineNumber => ({
                 style: { display: 'block', cursor: 'pointer' },
                 onClick() {
