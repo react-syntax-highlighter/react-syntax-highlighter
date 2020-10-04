@@ -325,6 +325,27 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime/helpers/arrayWithoutHoles.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/arrayWithoutHoles.js ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _arrayWithoutHoles(arr) {
+  if (Array.isArray(arr)) {
+    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {
+      arr2[i] = arr[i];
+    }
+
+    return arr2;
+  }
+}
+
+module.exports = _arrayWithoutHoles;
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js":
 /*!**********************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/assertThisInitialized.js ***!
@@ -489,6 +510,36 @@ module.exports = _inherits;
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime/helpers/iterableToArray.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/iterableToArray.js ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _iterableToArray(iter) {
+  if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
+}
+
+module.exports = _iterableToArray;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/nonIterableSpread.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/nonIterableSpread.js ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _nonIterableSpread() {
+  throw new TypeError("Invalid attempt to spread non-iterable instance");
+}
+
+module.exports = _nonIterableSpread;
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime/helpers/objectSpread.js":
 /*!*************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/objectSpread.js ***!
@@ -619,6 +670,27 @@ function _setPrototypeOf(o, p) {
 }
 
 module.exports = _setPrototypeOf;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/toConsumableArray.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/toConsumableArray.js ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var arrayWithoutHoles = __webpack_require__(/*! ./arrayWithoutHoles */ "./node_modules/@babel/runtime/helpers/arrayWithoutHoles.js");
+
+var iterableToArray = __webpack_require__(/*! ./iterableToArray */ "./node_modules/@babel/runtime/helpers/iterableToArray.js");
+
+var nonIterableSpread = __webpack_require__(/*! ./nonIterableSpread */ "./node_modules/@babel/runtime/helpers/nonIterableSpread.js");
+
+function _toConsumableArray(arr) {
+  return arrayWithoutHoles(arr) || iterableToArray(arr) || nonIterableSpread();
+}
+
+module.exports = _toConsumableArray;
 
 /***/ }),
 
@@ -42235,11 +42307,47 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
 
 
+ // Get all possible permutations of all power sets
+//
+// Super simple, non-algorithmic solution since the
+// number of class names will not be greater than 3
+
+function powerSetPermutations(arr) {
+  if (arr.length === 0 || arr.length === 1) return arr;
+
+  if (arr.length === 2) {
+    // prettier-ignore
+    return [arr[0], arr[1], "".concat(arr[0], ".").concat(arr[1]), "".concat(arr[1], ".").concat(arr[0])];
+  }
+
+  if (arr.length >= 3) {
+    // Currently does not support more than 3 extra
+    // class names (after `.token` has been removed)
+    return [arr[0], arr[1], arr[2], "".concat(arr[0], ".").concat(arr[1]), "".concat(arr[0], ".").concat(arr[2]), "".concat(arr[1], ".").concat(arr[0]), "".concat(arr[1], ".").concat(arr[2]), "".concat(arr[2], ".").concat(arr[0]), "".concat(arr[2], ".").concat(arr[1]), "".concat(arr[0], ".").concat(arr[1], ".").concat(arr[2]), "".concat(arr[0], ".").concat(arr[2], ".").concat(arr[1]), "".concat(arr[1], ".").concat(arr[0], ".").concat(arr[2]), "".concat(arr[1], ".").concat(arr[2], ".").concat(arr[0]), "".concat(arr[2], ".").concat(arr[0], ".").concat(arr[1]), "".concat(arr[2], ".").concat(arr[1], ".").concat(arr[0])];
+  }
+}
+
+var classNameCombinations = {};
+
+function getClassNameCombinations(classNames) {
+  if (classNames.length === 0 || classNames.length === 1) return classNames;
+  var key = classNames.join('.');
+
+  if (!classNameCombinations[key]) {
+    classNameCombinations[key] = powerSetPermutations(classNames);
+  }
+
+  return classNameCombinations[key];
+}
 
 function createStyleObject(classNames) {
   var elementStyle = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
   var stylesheet = arguments.length > 2 ? arguments[2] : undefined;
-  return classNames.reduce(function (styleObject, className) {
+  var nonTokenClassNames = classNames.filter(function (className) {
+    return className !== 'token';
+  });
+  var classNamesCombinations = getClassNameCombinations(nonTokenClassNames);
+  return classNamesCombinations.reduce(function (styleObject, className) {
     return _babel_runtime_helpers_objectSpread__WEBPACK_IMPORTED_MODULE_1___default()({}, styleObject, stylesheet[className]);
   }, elementStyle);
 }
@@ -42276,17 +42384,30 @@ function createElement(_ref) {
     return value;
   } else if (TagName) {
     var childrenCreator = createChildren(stylesheet, useInlineStyles);
-    var nonStylesheetClassNames = useInlineStyles && properties.className && properties.className.filter(function (className) {
-      return !stylesheet[className];
-    });
-    var className = nonStylesheetClassNames && nonStylesheetClassNames.length ? nonStylesheetClassNames : undefined;
-    var props = useInlineStyles ? _babel_runtime_helpers_objectSpread__WEBPACK_IMPORTED_MODULE_1___default()({}, properties, {
-      className: className && createClassNameString(className)
-    }, {
-      style: createStyleObject(properties.className, Object.assign({}, properties.style, style), stylesheet)
-    }) : _babel_runtime_helpers_objectSpread__WEBPACK_IMPORTED_MODULE_1___default()({}, properties, {
-      className: createClassNameString(properties.className)
-    });
+    var props;
+
+    if (!useInlineStyles) {
+      props = _babel_runtime_helpers_objectSpread__WEBPACK_IMPORTED_MODULE_1___default()({}, properties, {
+        className: createClassNameString(properties.className)
+      });
+    } else {
+      var allStylesheetSelectors = Object.keys(stylesheet).reduce(function (classes, selector) {
+        selector.split('.').forEach(function (className) {
+          if (!classes.includes(className)) classes.push(className);
+        });
+        return classes;
+      }, []); // For compatibility with older versions of react-syntax-highlighter
+
+      var startingClassName = properties.className && properties.className.includes('token') ? ['token'] : [];
+      var className = properties.className && startingClassName.concat(properties.className.filter(function (className) {
+        return !allStylesheetSelectors.includes(className);
+      }));
+      props = _babel_runtime_helpers_objectSpread__WEBPACK_IMPORTED_MODULE_1___default()({}, properties, {
+        className: createClassNameString(className) || undefined,
+        style: createStyleObject(properties.className, Object.assign({}, properties.style, style), stylesheet)
+      });
+    }
+
     var children = childrenCreator(node.children);
     return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(TagName, _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({
       key: key
@@ -42307,12 +42428,15 @@ function createElement(_ref) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/objectWithoutProperties.js");
 /* harmony import */ var _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_objectSpread__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/objectSpread */ "./node_modules/@babel/runtime/helpers/objectSpread.js");
-/* harmony import */ var _babel_runtime_helpers_objectSpread__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_objectSpread__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/react.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _create_element__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./create-element */ "./src/create-element.js");
-/* harmony import */ var _checkForListedLanguage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./checkForListedLanguage */ "./src/checkForListedLanguage.js");
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ "./node_modules/@babel/runtime/helpers/toConsumableArray.js");
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_objectSpread__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/objectSpread */ "./node_modules/@babel/runtime/helpers/objectSpread.js");
+/* harmony import */ var _babel_runtime_helpers_objectSpread__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_objectSpread__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/react.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _create_element__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./create-element */ "./src/create-element.js");
+/* harmony import */ var _checkForListedLanguage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./checkForListedLanguage */ "./src/checkForListedLanguage.js");
+
 
 
 
@@ -42330,7 +42454,7 @@ function getAllLineNumbers(_ref) {
       style = _ref.style;
   return lines.map(function (_, i) {
     var number = i + startingLineNumber;
-    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
       key: "line-".concat(i),
       className: "react-syntax-highlighter-line-number",
       style: typeof style === 'function' ? style(number) : style
@@ -42349,7 +42473,7 @@ function AllLineNumbers(_ref2) {
       _ref2$numberStyle = _ref2.numberStyle,
       numberStyle = _ref2$numberStyle === void 0 ? {} : _ref2$numberStyle,
       startingLineNumber = _ref2.startingLineNumber;
-  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("code", {
+  return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("code", {
     style: Object.assign({}, codeStyle, containerStyle)
   }, getAllLineNumbers({
     lines: codeString.replace(/\n$/, '').split('\n'),
@@ -42391,7 +42515,7 @@ function assembleLineNumberStyles(lineNumberStyle, lineNumber, largestLineNumber
 
   var customLineNumberStyle = typeof lineNumberStyle === 'function' ? lineNumberStyle(lineNumber) : lineNumberStyle; // combine
 
-  var assembledStyle = _babel_runtime_helpers_objectSpread__WEBPACK_IMPORTED_MODULE_1___default()({}, defaultLineNumberStyle, customLineNumberStyle);
+  var assembledStyle = _babel_runtime_helpers_objectSpread__WEBPACK_IMPORTED_MODULE_2___default()({}, defaultLineNumberStyle, customLineNumberStyle);
 
   return assembledStyle;
 }
@@ -42417,7 +42541,7 @@ function createLineElement(_ref3) {
   }
 
   if (wrapLongLines & showLineNumbers) {
-    properties.style = _babel_runtime_helpers_objectSpread__WEBPACK_IMPORTED_MODULE_1___default()({}, properties.style, {
+    properties.style = _babel_runtime_helpers_objectSpread__WEBPACK_IMPORTED_MODULE_2___default()({}, properties.style, {
       display: 'flex'
     });
   }
@@ -42440,7 +42564,7 @@ function flattenCodeTree(tree) {
     if (node.type === 'text') {
       newTree.push(createLineElement({
         children: [node],
-        className: className
+        className: _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1___default()(new Set(className))
       }));
     } else if (node.children) {
       var classNames = className.concat(node.properties.className);
@@ -42568,7 +42692,7 @@ function defaultRenderer(_ref5) {
       stylesheet = _ref5.stylesheet,
       useInlineStyles = _ref5.useInlineStyles;
   return rows.map(function (node, i) {
-    return Object(_create_element__WEBPACK_IMPORTED_MODULE_3__["default"])({
+    return Object(_create_element__WEBPACK_IMPORTED_MODULE_4__["default"])({
       node: node,
       stylesheet: stylesheet,
       useInlineStyles: useInlineStyles,
@@ -42592,7 +42716,7 @@ function getCodeTree(_ref6) {
   // then attempt highlighting accordingly
   // lowlight/highlight?
   if (isHighlightJs(astGenerator)) {
-    var hasLanguage = Object(_checkForListedLanguage__WEBPACK_IMPORTED_MODULE_4__["default"])(astGenerator, language);
+    var hasLanguage = Object(_checkForListedLanguage__WEBPACK_IMPORTED_MODULE_5__["default"])(astGenerator, language);
 
     if (language === 'text') {
       return {
@@ -42660,7 +42784,7 @@ function getCodeTree(_ref6) {
         rest = _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0___default()(_ref7, ["language", "children", "style", "customStyle", "codeTagProps", "useInlineStyles", "showLineNumbers", "showInlineLineNumbers", "startingLineNumber", "lineNumberContainerStyle", "lineNumberStyle", "wrapLines", "wrapLongLines", "lineProps", "renderer", "PreTag", "CodeTag", "code", "astGenerator"]);
 
     astGenerator = astGenerator || defaultAstGenerator;
-    var allLineNumbers = showLineNumbers ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(AllLineNumbers, {
+    var allLineNumbers = showLineNumbers ? react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(AllLineNumbers, {
       containerStyle: lineNumberContainerStyle,
       codeStyle: codeTagProps.style || {},
       numberStyle: lineNumberStyle,
@@ -42679,7 +42803,7 @@ function getCodeTree(_ref6) {
     });
 
     if (!astGenerator) {
-      return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(PreTag, preProps, allLineNumbers, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(CodeTag, codeTagProps, code));
+      return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(PreTag, preProps, allLineNumbers, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(CodeTag, codeTagProps, code));
     }
     /*
      * Some custom renderers rely on individual row elements so we need to turn wrapLines on
@@ -42709,16 +42833,16 @@ function getCodeTree(_ref6) {
     var rows = processLines(codeTree, wrapLines, lineProps, showLineNumbers, showInlineLineNumbers, startingLineNumber, largestLineNumber, lineNumberStyle, wrapLongLines);
 
     if (wrapLongLines) {
-      codeTagProps.style = _babel_runtime_helpers_objectSpread__WEBPACK_IMPORTED_MODULE_1___default()({}, codeTagProps.style, {
+      codeTagProps.style = _babel_runtime_helpers_objectSpread__WEBPACK_IMPORTED_MODULE_2___default()({}, codeTagProps.style, {
         whiteSpace: 'pre-wrap'
       });
     } else {
-      codeTagProps.style = _babel_runtime_helpers_objectSpread__WEBPACK_IMPORTED_MODULE_1___default()({}, codeTagProps.style, {
+      codeTagProps.style = _babel_runtime_helpers_objectSpread__WEBPACK_IMPORTED_MODULE_2___default()({}, codeTagProps.style, {
         whiteSpace: 'pre'
       });
     }
 
-    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(PreTag, preProps, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(CodeTag, codeTagProps, !showInlineLineNumbers && allLineNumbers, renderer({
+    return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(PreTag, preProps, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(CodeTag, codeTagProps, !showInlineLineNumbers && allLineNumbers, renderer({
       rows: rows,
       stylesheet: style,
       useInlineStyles: useInlineStyles
