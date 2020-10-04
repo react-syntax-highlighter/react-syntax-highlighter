@@ -130,21 +130,6 @@ exports[`SyntaxHighlighter should just render text if syntax is not registered 1
     }
   >
     <span
-      className="linenumber react-syntax-highlighter-line-number"
-      style={
-        Object {
-          "color": "slategray",
-          "display": "inline-block",
-          "minWidth": "1em",
-          "paddingRight": "1em",
-          "textAlign": "right",
-          "userSelect": "none",
-        }
-      }
-    >
-      1
-    </span>
-    <span
       className="token"
       style={
         Object {
@@ -1375,21 +1360,6 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     >
       
 
-    </span>
-    <span
-      className="linenumber react-syntax-highlighter-line-number"
-      style={
-        Object {
-          "color": "slategray",
-          "display": "inline-block",
-          "minWidth": "3em",
-          "paddingRight": "1em",
-          "textAlign": "right",
-          "userSelect": "none",
-        }
-      }
-    >
-      19
     </span>
     <span
       style={Object {}}

@@ -14,6 +14,35 @@ function itIs() {
 }
 `;
 
+test('SyntaxHighlighter component renders line numbers if showLineNumbers === true', () => {
+  const tree = renderer
+    .create(
+      <SyntaxHighlighter language="javascript" showLineNumbers>
+        {code}
+      </SyntaxHighlighter>
+    )
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
+test('SyntaxHighlighter component does not render line numbers if showLineNumbers === undefined', () => {
+  const tree = renderer
+    .create(<SyntaxHighlighter language="javascript">{code}</SyntaxHighlighter>)
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
+test('SyntaxHighlighter component does not render line numbers if showInlineNumbers === true && showLineNumbers === undefined', () => {
+  const tree = renderer
+    .create(
+      <SyntaxHighlighter language="javascript" showInlineLineNumbers={true}>
+        {code}
+      </SyntaxHighlighter>
+    )
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
 test('SyntaxHighlighter component renders correctly', () => {
   const tree = renderer
     .create(
