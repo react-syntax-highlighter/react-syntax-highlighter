@@ -1,5 +1,8 @@
 # Changelog
 
+## 15.0.0 / 2020-10-03
+- Breaking change: Allow styling nested tokens with classes in styles (probably not practically breaking for most, since this is a change that fixes a previously non-working feature)
+
 ## 14.0.2 / 2020-10-03
 - updated test snapshots after 14.0.1 fix
 - added tests for line number rendering behavior
