@@ -1,5 +1,8 @@
 # Changelog
 
+## 14.0.1 / 2020-10-03
+- Bugfix: Show line numbers only when `showLineNumbers == true`
+
 ## 14.0.0 / 2020-10-01
 - New prop: `wrapLongLines`, which removes the need to manually add `white-space: pre` styling
 - New default prop value: `showInlineLineNumbers = true`: when `showLineNumbers` is `true`, we now default to inline line numbers instead of putting them in a separate `<code>` block
