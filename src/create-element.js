@@ -1,7 +1,59 @@
 import React from 'react';
 
+// Get all possible permutations of all power sets
+//
+// Super simple, non-algorithmic solution since the
+// number of class names will not be greater than 3
+function powerSetPermutations(arr) {
+  if (arr.length === 0 || arr.length === 1) return arr;
+  if (arr.length === 2) {
+    // prettier-ignore
+    return [
+      arr[0],
+      arr[1],
+      `${arr[0]}.${arr[1]}`,
+      `${arr[1]}.${arr[0]}`
+    ];
+  }
+  if (arr.length >= 3) {
+    // Currently does not support more than 3 extra
+    // class names (after `.token` has been removed)
+    return [
+      arr[0],
+      arr[1],
+      arr[2],
+      `${arr[0]}.${arr[1]}`,
+      `${arr[0]}.${arr[2]}`,
+      `${arr[1]}.${arr[0]}`,
+      `${arr[1]}.${arr[2]}`,
+      `${arr[2]}.${arr[0]}`,
+      `${arr[2]}.${arr[1]}`,
+      `${arr[0]}.${arr[1]}.${arr[2]}`,
+      `${arr[0]}.${arr[2]}.${arr[1]}`,
+      `${arr[1]}.${arr[0]}.${arr[2]}`,
+      `${arr[1]}.${arr[2]}.${arr[0]}`,
+      `${arr[2]}.${arr[0]}.${arr[1]}`,
+      `${arr[2]}.${arr[1]}.${arr[0]}`
+    ];
+  }
+}
+
+const classNameCombinations = {};
+function getClassNameCombinations(classNames) {
+  if (classNames.length === 0 || classNames.length === 1) return classNames;
+  const key = classNames.join('.');
+  if (!classNameCombinations[key]) {
+    classNameCombinations[key] = powerSetPermutations(classNames);
+  }
+  return classNameCombinations[key];
+}
+
 export function createStyleObject(classNames, elementStyle = {}, stylesheet) {
-  return classNames.reduce((styleObject, className) => {
+  const nonTokenClassNames = classNames.filter(
+    className => className !== 'token'
+  );
+  const classNamesCombinations = getClassNameCombinations(nonTokenClassNames);
+  return classNamesCombinations.reduce((styleObject, className) => {
     return { ...styleObject, ...stylesheet[className] };
   }, elementStyle);
 }
@@ -37,28 +89,48 @@ export default function createElement({
     return value;
   } else if (TagName) {
     const childrenCreator = createChildren(stylesheet, useInlineStyles);
-    const nonStylesheetClassNames =
-      useInlineStyles &&
-      properties.className &&
-      properties.className.filter(className => !stylesheet[className]);
-    const className =
-      nonStylesheetClassNames && nonStylesheetClassNames.length
-        ? nonStylesheetClassNames
-        : undefined;
-    const props = useInlineStyles
-      ? {
-          ...properties,
-          ...{ className: className && createClassNameString(className) },
-          style: createStyleObject(
-            properties.className,
-            Object.assign({}, properties.style, style),
-            stylesheet
+
+    let props;
+
+    if (!useInlineStyles) {
+      props = {
+        ...properties,
+        className: createClassNameString(properties.className)
+      };
+    } else {
+      const allStylesheetSelectors = Object.keys(stylesheet)
+        .reduce((classes, selector) => {
+          selector.split('.').forEach(className => {
+            if (!classes.includes(className)) classes.push(className);
+          });
+          return classes;
+        }, []);
+
+      // For compatibility with older versions of react-syntax-highlighter
+      const startingClassName =
+        properties.className && properties.className.includes('token')
+          ? ['token']
+          : [];
+
+      const className =
+        properties.className &&
+        startingClassName.concat(
+          properties.className.filter(
+            className => !allStylesheetSelectors.includes(className)
           )
-        }
-      : {
-          ...properties,
-          className: createClassNameString(properties.className)
-        };
+        );
+
+      props = {
+        ...properties,
+        className: createClassNameString(className) || undefined,
+        style: createStyleObject(
+          properties.className,
+          Object.assign({}, properties.style, style),
+          stylesheet
+        )
+      };
+    }
+
     const children = childrenCreator(node.children);
     return (
       <TagName key={key} {...props}>

@@ -417,7 +417,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
       React
     </span>
     <span
-      className="token token"
+      className="token"
       style={
         Object {
           "color": "#999",

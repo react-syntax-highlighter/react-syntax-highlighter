@@ -107,6 +107,13 @@ function createJavascriptStyleSheet(file, directory) {
 
               if (selector.substring(0, 6) === '.token') {
                 selector = selector.substring(7);
+
+                // Regex to fix Prism theme selectors
+                // - Remove further `.token` classes
+                // - Remove the space (descendant combinator)
+                //   to allow for styling multiple classes
+                //   Ref: https://github.com/react-syntax-highlighter/react-syntax-highlighter/pull/305
+                selector = selector.replace(/(?<=\w) (\.token)?(?=\.)/g, '');
               }
               selectors[selector] = selectorObject;
               return selectors;
