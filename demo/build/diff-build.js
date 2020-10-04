@@ -75472,7 +75472,7 @@ function processLines(codeTree, wrapLines, lineProps, showLineNumbers, showInlin
   }
 
   function createUnwrappedLine(children, lineNumber) {
-    if (lineNumber && showInlineLineNumbers) {
+    if (showLineNumbers && lineNumber && showInlineLineNumbers) {
       var inlineLineNumberStyle = assembleLineNumberStyles(lineNumberStyle, lineNumber, largestLineNumber);
       children.unshift(getInlineLineNumber(lineNumber, inlineLineNumberStyle));
     }
