@@ -1,5 +1,9 @@
 # Changelog
 
+## 14.0.2 / 2020-10-03
+- updated test snapshots after 14.0.1 fix
+- added tests for line number rendering behavior
+
 ## 14.0.1 / 2020-10-03
 - Bugfix: Show line numbers only when `showLineNumbers == true`
 
