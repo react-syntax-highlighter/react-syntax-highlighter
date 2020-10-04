@@ -113,7 +113,7 @@ export default {
     "tag": {
         "color": "#e8bf6a"
     },
-    "tag .punctuation": {
+    "tag.punctuation": {
         "color": "#e8bf6a"
     },
     "doctype": {
@@ -149,10 +149,10 @@ export default {
     "attr-value": {
         "color": "#a5c261"
     },
-    "attr-value .punctuation": {
+    "attr-value.punctuation": {
         "color": "#a5c261"
     },
-    "attr-value .punctuation:first-child": {
+    "attr-value.punctuation:first-child": {
         "color": "#a9b7c6"
     },
     "url": {

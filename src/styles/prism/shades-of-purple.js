@@ -125,7 +125,7 @@ export default {
     "tag": {
         "color": "rgb(255, 157, 0)"
     },
-    "tag .punctuation": {
+    "tag.punctuation": {
         "color": "rgb(255, 157, 0)"
     },
     "doctype": {
@@ -162,10 +162,10 @@ export default {
     "attr-value": {
         "color": "#a5c261"
     },
-    "attr-value .punctuation": {
+    "attr-value.punctuation": {
         "color": "#a5c261"
     },
-    "attr-value .punctuation:first-child": {
+    "attr-value.punctuation:first-child": {
         "color": "#a9b7c6"
     },
     "url": {

@@ -189,7 +189,7 @@ export default {
     "entity": {
         "color": "#ff0000"
     },
-    "directive.tag .tag": {
+    "directive.tag.tag": {
         "background": "#ffff00",
         "color": "#393A34"
     },

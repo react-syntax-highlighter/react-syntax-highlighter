@@ -44117,7 +44117,7 @@ __webpack_require__.r(__webpack_exports__);
   "tag": {
     "color": "#e8bf6a"
   },
-  "tag .punctuation": {
+  "tag.punctuation": {
     "color": "#e8bf6a"
   },
   "doctype": {
@@ -44153,10 +44153,10 @@ __webpack_require__.r(__webpack_exports__);
   "attr-value": {
     "color": "#a5c261"
   },
-  "attr-value .punctuation": {
+  "attr-value.punctuation": {
     "color": "#a5c261"
   },
-  "attr-value .punctuation:first-child": {
+  "attr-value.punctuation:first-child": {
     "color": "#a9b7c6"
   },
   "url": {
@@ -48059,7 +48059,7 @@ __webpack_require__.r(__webpack_exports__);
   "tag": {
     "color": "rgb(255, 157, 0)"
   },
-  "tag .punctuation": {
+  "tag.punctuation": {
     "color": "rgb(255, 157, 0)"
   },
   "doctype": {
@@ -48096,10 +48096,10 @@ __webpack_require__.r(__webpack_exports__);
   "attr-value": {
     "color": "#a5c261"
   },
-  "attr-value .punctuation": {
+  "attr-value.punctuation": {
     "color": "#a5c261"
   },
-  "attr-value .punctuation:first-child": {
+  "attr-value.punctuation:first-child": {
     "color": "#a9b7c6"
   },
   "url": {
@@ -48479,7 +48479,7 @@ __webpack_require__.r(__webpack_exports__);
     "color": "#fdfdfd",
     "textShadow": "0 0 2px #001716, 0 0 3px #03edf975, 0 0 5px #03edf975, 0 0 8px #03edf975"
   },
-  "selector .token.id": {
+  "selector.id": {
     "color": "#fdfdfd",
     "textShadow": "0 0 2px #001716, 0 0 3px #03edf975, 0 0 5px #03edf975, 0 0 8px #03edf975"
   },
@@ -48512,7 +48512,7 @@ __webpack_require__.r(__webpack_exports__);
     "color": "#f4eee4",
     "textShadow": "0 0 2px #393a33, 0 0 8px #f39f0575, 0 0 2px #f39f0575"
   },
-  "selector .token.class": {
+  "selector.class": {
     "color": "#f4eee4",
     "textShadow": "0 0 2px #393a33, 0 0 8px #f39f0575, 0 0 2px #f39f0575"
   },
@@ -49352,7 +49352,7 @@ __webpack_require__.r(__webpack_exports__);
   "entity": {
     "color": "#ff0000"
   },
-  "directive.tag .tag": {
+  "directive.tag.tag": {
     "background": "#ffff00",
     "color": "#393A34"
   },

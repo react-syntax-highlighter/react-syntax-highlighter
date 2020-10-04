@@ -105,7 +105,7 @@ export default {
         "color": "#fdfdfd",
         "textShadow": "0 0 2px #001716, 0 0 3px #03edf975, 0 0 5px #03edf975, 0 0 8px #03edf975"
     },
-    "selector .token.id": {
+    "selector.id": {
         "color": "#fdfdfd",
         "textShadow": "0 0 2px #001716, 0 0 3px #03edf975, 0 0 5px #03edf975, 0 0 8px #03edf975"
     },
@@ -138,7 +138,7 @@ export default {
         "color": "#f4eee4",
         "textShadow": "0 0 2px #393a33, 0 0 8px #f39f0575, 0 0 2px #f39f0575"
     },
-    "selector .token.class": {
+    "selector.class": {
         "color": "#f4eee4",
         "textShadow": "0 0 2px #393a33, 0 0 8px #f39f0575, 0 0 2px #f39f0575"
     },
