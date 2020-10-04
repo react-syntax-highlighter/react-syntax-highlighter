@@ -1,5 +1,8 @@
 # Changelog
 
+## 15.0.1 / 2020-10-03
+- Regenerate Prism themes containing nested tokens
+
 ## 15.0.0 / 2020-10-03
 - Breaking change: Allow styling nested tokens with classes in styles (probably not practically breaking for most, since this is a change that fixes a previously non-working feature)
 
