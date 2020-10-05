@@ -1,5 +1,8 @@
 # Changelog
 
+## 15.1.0 / 2020-10-05
+- Updated to `prism-themes` 1.4.1
+
 ## 15.0.1 / 2020-10-03
 - Regenerate Prism themes containing nested tokens
 
