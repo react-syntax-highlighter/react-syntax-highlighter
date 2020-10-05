@@ -98,13 +98,15 @@ export default function createElement({
         className: createClassNameString(properties.className)
       };
     } else {
-      const allStylesheetSelectors = Object.keys(stylesheet)
-        .reduce((classes, selector) => {
+      const allStylesheetSelectors = Object.keys(stylesheet).reduce(
+        (classes, selector) => {
           selector.split('.').forEach(className => {
             if (!classes.includes(className)) classes.push(className);
           });
           return classes;
-        }, []);
+        },
+        []
+      );
 
       // For compatibility with older versions of react-syntax-highlighter
       const startingClassName =
