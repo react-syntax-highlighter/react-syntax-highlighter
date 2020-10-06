@@ -160,6 +160,7 @@
 * smali
 * smalltalk
 * sml
+* solidity
 * sqf
 * sql
 * stan
