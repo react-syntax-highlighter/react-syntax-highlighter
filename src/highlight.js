@@ -320,7 +320,10 @@ export default function(defaultAstGenerator, defaultStyle) {
     customStyle = {},
     codeTagProps = {
       className: language ? `language-${language}` : undefined,
-      style: style['code[class*="language-"]']
+      style: {
+        ...style['code[class*="language-"]'],
+        ...style['code[class*="language-${language}"]'],
+      },
     },
     useInlineStyles = true,
     showLineNumbers = false,
