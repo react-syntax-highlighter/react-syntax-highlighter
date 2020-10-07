@@ -42755,7 +42755,7 @@ function getCodeTree(_ref6) {
         _ref7$codeTagProps = _ref7.codeTagProps,
         codeTagProps = _ref7$codeTagProps === void 0 ? {
       className: language ? "language-".concat(language) : undefined,
-      style: style['code[class*="language-"]']
+      style: _babel_runtime_helpers_objectSpread__WEBPACK_IMPORTED_MODULE_2___default()({}, style['code[class*="language-"]'], style['code[class*="language-${language}"]'])
     } : _ref7$codeTagProps,
         _ref7$useInlineStyles = _ref7.useInlineStyles,
         useInlineStyles = _ref7$useInlineStyles === void 0 ? true : _ref7$useInlineStyles,

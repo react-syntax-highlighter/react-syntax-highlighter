@@ -1,5 +1,8 @@
 # Changelog
 
+## 15.2.0 / 2020-10-07
+- Allow language-specific theme styles to override default theme styles
+
 ## 15.1.0 / 2020-10-05
 - Updated to `prism-themes` 1.4.1
 
