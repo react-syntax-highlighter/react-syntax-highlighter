@@ -322,7 +322,7 @@ export default function(defaultAstGenerator, defaultStyle) {
       className: language ? `language-${language}` : undefined,
       style: {
         ...style['code[class*="language-"]'],
-        ...style['code[class*="language-${language}"]']
+        ...style[`code[class*="language-${language}"]`]
       }
     },
     useInlineStyles = true,
