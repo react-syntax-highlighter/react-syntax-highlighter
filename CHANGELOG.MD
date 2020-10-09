@@ -1,5 +1,8 @@
 # Changelog
 
+## 15.2.1 / 2020-10-08
+- Bugfix: use string templating in language-specific theming code
+
 ## 15.2.0 / 2020-10-07
 - Allow language-specific theme styles to override default theme styles
 
