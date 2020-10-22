@@ -368,7 +368,7 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
         
     </span>
     <span
-      className="token"
+      className="token control-flow"
       style={
         Object {
           "color": "#07a",
@@ -813,7 +813,7 @@ exports[`SyntaxHighlighter component renders correctly with refractor instead of
         
     </span>
     <span
-      className="token"
+      className="token control-flow"
       style={
         Object {
           "color": "#07a",

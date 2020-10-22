@@ -242,7 +242,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
        
     </span>
     <span
-      className="token maybe-class-name"
+      className="token imports maybe-class-name"
       style={Object {}}
     >
       React
@@ -311,7 +311,18 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     <span
       style={Object {}}
     >
-       uniquePropHOC 
+       
+    </span>
+    <span
+      className="token imports"
+      style={Object {}}
+    >
+      uniquePropHOC
+    </span>
+    <span
+      style={Object {}}
+    >
+       
     </span>
     <span
       className="token module"
@@ -1268,7 +1279,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
                 
     </span>
     <span
-      className="token"
+      className="token control-flow"
       style={
         Object {
           "color": "#07a",
