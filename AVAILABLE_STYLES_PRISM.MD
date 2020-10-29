@@ -11,6 +11,9 @@
 * atomDark
 * base16AteliersulphurpoolLight
 * cb
+* coldarkCold
+* coldarkDark
+* coyWithoutShadows
 * darcula
 * dracula
 * duotoneDark

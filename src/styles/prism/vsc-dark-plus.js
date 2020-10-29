@@ -105,7 +105,7 @@ export default {
     "symbol": {
         "color": "#b5cea8"
     },
-    "deleted": {
+    "inserted": {
         "color": "#b5cea8"
     },
     "unit": {
@@ -126,7 +126,7 @@ export default {
     "builtin": {
         "color": "#ce9178"
     },
-    "inserted": {
+    "deleted": {
         "color": "#ce9178"
     },
     ".language-css .token.string.url": {
