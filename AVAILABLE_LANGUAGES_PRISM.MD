@@ -21,11 +21,13 @@
 * basic
 * batch
 * bbcode
+* birb
 * bison
 * bnf
 * brainfuck
 * brightscript
 * bro
+* bsl
 * c
 * cil
 * clike
@@ -126,11 +128,13 @@
 * matlab
 * mel
 * mizar
+* mongodb
 * monkey
 * moonscript
 * n1ql
 * n4js
 * nand2tetrisHdl (nand2tetris-hdl)
+* naniscript
 * nasm
 * neon
 * nginx
@@ -162,6 +166,7 @@
 * puppet
 * pure
 * purebasic
+* purescript
 * python
 * q
 * qml
@@ -186,6 +191,7 @@
 * smali
 * smalltalk
 * smarty
+* sml
 * solidity
 * solutionFile (solution-file)
 * soy
@@ -193,6 +199,7 @@
 * splunkSpl (splunk-spl)
 * sqf
 * sql
+* stan
 * stylus
 * swift
 * t4Cs (t4-cs)
@@ -207,6 +214,7 @@
 * turtle
 * twig
 * typescript
+* typoscript
 * unrealscript
 * vala
 * vbnet
