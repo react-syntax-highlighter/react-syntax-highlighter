@@ -1,5 +1,10 @@
 # Changelog
 
+## 15.3.0 / 2020-10-29
+- Updated prismjs (1.22.0) and refractor (3.2.0)
+- Updated prism-themes (1.5.0)
+- Fixed a broken readme link
+
 ## 15.2.1 / 2020-10-08
 - Bugfix: use string templating in language-specific theming code
 
