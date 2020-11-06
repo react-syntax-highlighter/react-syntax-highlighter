@@ -3304,66 +3304,106 @@ exports[`SyntaxHighlighter component renders line numbers if showLineNumbers ===
       1
     </span>
     <span
+<<<<<<< HEAD
       style={Object {}}
+=======
+      className="react-syntax-highlighter-line-number"
+>>>>>>> 7db1efcc... Add lineNumberProps and lineNumberContainerProps
     >
       ,
     </span>
     <span
+<<<<<<< HEAD
       style={
         Object {
           "color": "#880000",
         }
       }
+=======
+      className="react-syntax-highlighter-line-number"
+>>>>>>> 7db1efcc... Add lineNumberProps and lineNumberContainerProps
     >
       2
     </span>
     <span
+<<<<<<< HEAD
       style={Object {}}
+=======
+      className="react-syntax-highlighter-line-number"
+>>>>>>> 7db1efcc... Add lineNumberProps and lineNumberContainerProps
     >
       ,
     </span>
     <span
+<<<<<<< HEAD
       style={
         Object {
           "color": "#880000",
         }
       }
+=======
+      className="react-syntax-highlighter-line-number"
+>>>>>>> 7db1efcc... Add lineNumberProps and lineNumberContainerProps
     >
       3
     </span>
     <span
+<<<<<<< HEAD
       style={Object {}}
+=======
+      className="react-syntax-highlighter-line-number"
+>>>>>>> 7db1efcc... Add lineNumberProps and lineNumberContainerProps
     >
       ].map(
     </span>
     <span
+<<<<<<< HEAD
       className="hljs-function hljs-params"
       style={Object {}}
+=======
+      className="react-syntax-highlighter-line-number"
+>>>>>>> 7db1efcc... Add lineNumberProps and lineNumberContainerProps
     >
       n
     </span>
     <span
+<<<<<<< HEAD
       className="hljs-function"
       style={Object {}}
+=======
+      className="react-syntax-highlighter-line-number"
+>>>>>>> 7db1efcc... Add lineNumberProps and lineNumberContainerProps
     >
        =&gt;
     </span>
     <span
+<<<<<<< HEAD
       style={Object {}}
+=======
+      className="react-syntax-highlighter-line-number"
+>>>>>>> 7db1efcc... Add lineNumberProps and lineNumberContainerProps
     >
        n + 
     </span>
     <span
+<<<<<<< HEAD
       style={
         Object {
           "color": "#880000",
         }
       }
+=======
+      className="react-syntax-highlighter-line-number"
+>>>>>>> 7db1efcc... Add lineNumberProps and lineNumberContainerProps
     >
       1
     </span>
     <span
+<<<<<<< HEAD
       style={Object {}}
+=======
+      className="react-syntax-highlighter-line-number"
+>>>>>>> 7db1efcc... Add lineNumberProps and lineNumberContainerProps
     >
       ).filter(n !== 
     </span>

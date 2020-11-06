@@ -20,6 +20,7 @@ exports[`SyntaxHighlighter component passes along code style to non-inline line 
       }
     }
   >
+<<<<<<< HEAD
     <code
       style={
         Object {
@@ -28,6 +29,10 @@ exports[`SyntaxHighlighter component passes along code style to non-inline line 
           "paddingRight": "10px",
         }
       }
+=======
+    <span
+      className="react-syntax-highlighter-line-number"
+>>>>>>> 7db1efcc... Add lineNumberProps and lineNumberContainerProps
     >
       <span
         className="react-syntax-highlighter-line-number"
@@ -35,12 +40,20 @@ exports[`SyntaxHighlighter component passes along code style to non-inline line 
       >
         1
 
+<<<<<<< HEAD
       </span>
       <span
         className="react-syntax-highlighter-line-number"
         style={Object {}}
       >
         2
+=======
+    </span>
+    <span
+      className="react-syntax-highlighter-line-number"
+    >
+      2
+>>>>>>> 7db1efcc... Add lineNumberProps and lineNumberContainerProps
 
       </span>
       <span
@@ -101,53 +114,85 @@ exports[`SyntaxHighlighter component passes along code style to non-inline line 
       </span>
     </code>
     <span
+<<<<<<< HEAD
       style={
         Object {
           "fontWeight": "bold",
         }
       }
+=======
+      className="react-syntax-highlighter-line-number"
+>>>>>>> 7db1efcc... Add lineNumberProps and lineNumberContainerProps
     >
       const
     </span>
     <span
+<<<<<<< HEAD
       style={Object {}}
+=======
+      className="react-syntax-highlighter-line-number"
+>>>>>>> 7db1efcc... Add lineNumberProps and lineNumberContainerProps
     >
        woah = 
     </span>
     <span
+<<<<<<< HEAD
       className="hljs-function hljs-params"
       style={Object {}}
+=======
+      className="react-syntax-highlighter-line-number"
+>>>>>>> 7db1efcc... Add lineNumberProps and lineNumberContainerProps
     >
       fun
     </span>
     <span
+<<<<<<< HEAD
       className="hljs-function"
       style={Object {}}
+=======
+      className="react-syntax-highlighter-line-number"
+>>>>>>> 7db1efcc... Add lineNumberProps and lineNumberContainerProps
     >
        =&gt;
     </span>
     <span
+<<<<<<< HEAD
       style={Object {}}
+=======
+      className="react-syntax-highlighter-line-number"
+>>>>>>> 7db1efcc... Add lineNumberProps and lineNumberContainerProps
     >
        fun + 
     </span>
     <span
+<<<<<<< HEAD
       style={
         Object {
           "color": "#880000",
         }
       }
+=======
+      className="react-syntax-highlighter-line-number"
+>>>>>>> 7db1efcc... Add lineNumberProps and lineNumberContainerProps
     >
       1
     </span>
     <span
+<<<<<<< HEAD
       style={Object {}}
+=======
+      className="react-syntax-highlighter-line-number"
+>>>>>>> 7db1efcc... Add lineNumberProps and lineNumberContainerProps
     >
       ;
 
     </span>
     <span
+<<<<<<< HEAD
       style={Object {}}
+=======
+      className="react-syntax-highlighter-line-number"
+>>>>>>> 7db1efcc... Add lineNumberProps and lineNumberContainerProps
     >
       
     </span>

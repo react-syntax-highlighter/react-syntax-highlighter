@@ -142,6 +142,7 @@ export default uniquePropHOC(["time", "seconds"])(Expire);
               showLineNumbers={this.state.showLineNumbers}
               wrapLongLines={this.state.wrapLongLines}
               language={this.state.language}
+              showInlineLineNumbers={false}
             >
               {this.state.code}
             </SyntaxHighlighter>

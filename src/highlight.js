@@ -7,14 +7,16 @@ function getNewLines(str) {
   return str.match(newLineRegex);
 }
 
-function getAllLineNumbers({ lines, startingLineNumber, style }) {
+function getLineNumbers({ lines, startingLineNumber, numberProps = {} }) {
   return lines.map((_, i) => {
     const number = i + startingLineNumber;
+    const properties =
+      typeof numberProps === 'function' ? numberProps(number) : numberProps;
     return (
       <span
         key={`line-${i}`}
         className="react-syntax-highlighter-line-number"
-        style={typeof style === 'function' ? style(number) : style}
+        {...properties}
       >
         {`${number}\n`}
       </span>
@@ -22,18 +24,26 @@ function getAllLineNumbers({ lines, startingLineNumber, style }) {
   });
 }
 
-function AllLineNumbers({
+function LineNumbers({
   codeString,
   codeStyle,
-  containerStyle = { float: 'left', paddingRight: '10px' },
-  numberStyle = {},
+  containerProps = {},
+  numberProps,
   startingLineNumber
 }) {
+  containerProps.style = containerProps.style || {
+    float: 'left',
+    paddingRight: '10px'
+  };
   return (
-    <code style={Object.assign({}, codeStyle, containerStyle)}>
-      {getAllLineNumbers({
+    <code
+      // order ensures `containerProps.style` is merged with `codeStyle`
+      {...containerProps}
+      style={Object.assign({}, codeStyle, containerProps.style)}
+    >
+      {getLineNumbers({
         lines: codeString.replace(/\n$/, '').split('\n'),
-        style: numberStyle,
+        numberProps,
         startingLineNumber
       })}
     </code>
@@ -45,18 +55,22 @@ function getEmWidthOfNumber(num) {
   return `${len}em`;
 }
 
-function getInlineLineNumber(lineNumber, inlineLineNumberStyle) {
+function getInlineLineNumber(lineNumber, lineProps) {
+  const defaultClassNames = [
+    'comment',
+    'linenumber',
+    'react-syntax-highlighter-line-number'
+  ];
+
   return {
     type: 'element',
     tagName: 'span',
     properties: {
-      key: `line-number--${lineNumber}`,
-      className: [
-        'comment',
-        'linenumber',
-        'react-syntax-highlighter-line-number'
-      ],
-      style: inlineLineNumberStyle
+      ...lineProps,
+      key: lineProps.key || `line-number--${lineNumber}`,
+      className: lineProps.className
+        ? [...defaultClassNames, ...lineProps.className]
+        : defaultClassNames
     },
     children: [
       {
@@ -96,25 +110,42 @@ function assembleLineNumberStyles(
 function createLineElement({
   children,
   lineNumber,
-  lineNumberStyle,
   largestLineNumber,
   showInlineLineNumbers,
-  lineProps = {},
+  lineProps,
+  lineNumberProps,
   className = [],
   showLineNumbers,
   wrapLongLines
 }) {
   const properties =
-    typeof lineProps === 'function' ? lineProps(lineNumber) : lineProps;
-  properties['className'] = className;
+    (typeof lineProps === 'function' ? lineProps(lineNumber) : lineProps) || {};
+  properties.className = properties.className
+    ? className.concat(properties.className)
+    : className;
+
+  const lineNumberProperties =
+    (typeof lineNumberProps === 'function'
+      ? lineNumberProps(lineNumber)
+      : lineNumberProps) || {};
+  lineNumberProperties.className = lineNumberProperties.className
+    ? className.concat(lineNumberProperties.className)
+    : className;
 
   if (lineNumber && showInlineLineNumbers) {
     const inlineLineNumberStyle = assembleLineNumberStyles(
-      lineNumberStyle,
+      lineNumberProperties.style,
       lineNumber,
       largestLineNumber
     );
-    children.unshift(getInlineLineNumber(lineNumber, inlineLineNumberStyle));
+    children.unshift(
+      getInlineLineNumber(lineNumber, {
+        ...lineNumberProperties,
+        ...{
+          style: inlineLineNumberStyle
+        }
+      })
+    );
   }
 
   if (wrapLongLines & showLineNumbers) {
@@ -155,7 +186,7 @@ function processLines(
   showInlineLineNumbers,
   startingLineNumber,
   largestLineNumber,
-  lineNumberStyle,
+  lineNumberProps,
   wrapLongLines
 ) {
   const tree = flattenCodeTree(codeTree.value);
@@ -167,7 +198,7 @@ function processLines(
     return createLineElement({
       children,
       lineNumber,
-      lineNumberStyle,
+      lineNumberProps,
       largestLineNumber,
       showInlineLineNumbers,
       lineProps,
@@ -178,13 +209,21 @@ function processLines(
   }
 
   function createUnwrappedLine(children, lineNumber) {
+    const lineNumberProperties = lineNumberProps || {};
     if (showLineNumbers && lineNumber && showInlineLineNumbers) {
       const inlineLineNumberStyle = assembleLineNumberStyles(
-        lineNumberStyle,
+        lineNumberProperties.style,
         lineNumber,
         largestLineNumber
       );
-      children.unshift(getInlineLineNumber(lineNumber, inlineLineNumberStyle));
+      children.unshift(
+        getInlineLineNumber(lineNumber, {
+          ...lineNumberProperties,
+          ...{
+            style: inlineLineNumberStyle
+          }
+        })
+      );
     }
     return children;
   }
@@ -329,8 +368,8 @@ export default function(defaultAstGenerator, defaultStyle) {
     showLineNumbers = false,
     showInlineLineNumbers = true,
     startingLineNumber = 1,
-    lineNumberContainerStyle,
-    lineNumberStyle = {},
+    lineNumberContainerProps,
+    lineNumberProps,
     wrapLines,
     wrapLongLines = false,
     lineProps = {},
@@ -343,11 +382,11 @@ export default function(defaultAstGenerator, defaultStyle) {
   }) {
     astGenerator = astGenerator || defaultAstGenerator;
 
-    const allLineNumbers = showLineNumbers ? (
-      <AllLineNumbers
-        containerStyle={lineNumberContainerStyle}
+    const lineNumbers = showLineNumbers ? (
+      <LineNumbers
+        containerProps={lineNumberContainerProps}
         codeStyle={codeTagProps.style || {}}
-        numberStyle={lineNumberStyle}
+        numberProps={lineNumberProps}
         startingLineNumber={startingLineNumber}
         codeString={code}
       />
@@ -370,7 +409,7 @@ export default function(defaultAstGenerator, defaultStyle) {
     if (!astGenerator) {
       return (
         <PreTag {...preProps}>
-          {allLineNumbers}
+          {lineNumbers}
           <CodeTag {...codeTagProps}>{code}</CodeTag>
         </PreTag>
       );
@@ -406,7 +445,7 @@ export default function(defaultAstGenerator, defaultStyle) {
       showInlineLineNumbers,
       startingLineNumber,
       largestLineNumber,
-      lineNumberStyle,
+      lineNumberProps,
       wrapLongLines
     );
 
@@ -419,7 +458,7 @@ export default function(defaultAstGenerator, defaultStyle) {
     return (
       <PreTag {...preProps}>
         <CodeTag {...codeTagProps}>
-          {!showInlineLineNumbers && allLineNumbers}
+          {!showInlineLineNumbers && lineNumbers}
           {renderer({ rows, stylesheet: style, useInlineStyles })}
         </CodeTag>
       </PreTag>
