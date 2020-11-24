@@ -1,5 +1,8 @@
 # Changelog
 
+## 15.3.1 / 2020-11-24
+- Bugfix: styling correctly applied to interpolation punctuation
+
 ## 15.3.0 / 2020-10-29
 - Updated prismjs (1.22.0) and refractor (3.2.0)
 - Updated prism-themes (1.5.0)
