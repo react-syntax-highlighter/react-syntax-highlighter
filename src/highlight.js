@@ -261,7 +261,7 @@ function processLines(
   if (lastLineBreakIndex !== tree.length - 1) {
     const children = tree.slice(lastLineBreakIndex + 1, tree.length);
     if (children && children.length) {
-      const lineNumber = newTree.length + startingLineNumber;
+      const lineNumber = showLineNumbers && newTree.length + startingLineNumber;
       const line = createLine(children, lineNumber);
       newTree.push(line);
     }
