@@ -41,8 +41,7 @@ function AllLineNumbers({
 }
 
 function getEmWidthOfNumber(num) {
-  const len = num.toString().length;
-  return `${len}em`;
+  return `${num.toString().length}.25em`;
 }
 
 function getInlineLineNumber(lineNumber, inlineLineNumberStyle) {
