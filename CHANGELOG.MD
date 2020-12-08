@@ -1,5 +1,8 @@
 # Changelog
 
+## 15.4.2 / 2020-12-07
+- Updated `lowlight` to 1.17.0 to match `highlight` dependency version
+
 ## 15.4.1 / 2020-12-07
 - Bugfix: increased minwidth to avoid unequal line number widths
 - Bugfix: prevent last line of file from rendering an unwanted line number
