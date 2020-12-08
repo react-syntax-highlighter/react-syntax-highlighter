@@ -1,5 +1,8 @@
 # Changelog
 
+## 15.4.0 / 2020-12-07
+- Security fix: updated highlight.js to 10.4.1
+
 ## 15.3.1 / 2020-11-24
 - Bugfix: styling correctly applied to interpolation punctuation
 
