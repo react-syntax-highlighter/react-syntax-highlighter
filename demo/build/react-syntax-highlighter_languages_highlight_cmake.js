@@ -60,7 +60,8 @@ function cmake(hljs) {
     contains: [
       {
         className: 'variable',
-        begin: '\\${', end: '}'
+        begin: /\$\{/,
+        end: /\}/
       },
       hljs.HASH_COMMENT_MODE,
       hljs.QUOTE_STRING_MODE,

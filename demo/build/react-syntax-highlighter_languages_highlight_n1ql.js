@@ -61,14 +61,12 @@ function n1ql(hljs) {
           {
             className: 'string',
             begin: '\'', end: '\'',
-            contains: [hljs.BACKSLASH_ESCAPE],
-            relevance: 0
+            contains: [hljs.BACKSLASH_ESCAPE]
           },
           {
             className: 'string',
             begin: '"', end: '"',
-            contains: [hljs.BACKSLASH_ESCAPE],
-            relevance: 0
+            contains: [hljs.BACKSLASH_ESCAPE]
           },
           {
             className: 'symbol',

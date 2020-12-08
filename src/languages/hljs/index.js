@@ -116,6 +116,7 @@ export { default as n1ql } from './n1ql';
 export { default as nginx } from './nginx';
 export { default as nim } from './nim';
 export { default as nix } from './nix';
+export { default as nodeRepl } from './node-repl';
 export { default as nsis } from './nsis';
 export { default as objectivec } from './objectivec';
 export { default as ocaml } from './ocaml';

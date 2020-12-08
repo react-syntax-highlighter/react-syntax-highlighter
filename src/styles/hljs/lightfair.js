@@ -3,6 +3,7 @@ export default {
         "display": "block",
         "overflowX": "auto",
         "padding": "0.5em",
+        "background": "#fff",
         "color": "#444"
     },
     "hljs-name": {

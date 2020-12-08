@@ -15,8 +15,8 @@ Website: http://inform7.com
 */
 
 function inform7(hljs) {
-  var START_BRACKET = '\\[';
-  var END_BRACKET = '\\]';
+  const START_BRACKET = '\\[';
+  const END_BRACKET = '\\]';
   return {
     name: 'Inform 7',
     aliases: ['i7'],
@@ -37,12 +37,14 @@ function inform7(hljs) {
     contains: [
       {
         className: 'string',
-        begin: '"', end: '"',
+        begin: '"',
+        end: '"',
         relevance: 0,
         contains: [
           {
             className: 'subst',
-            begin: START_BRACKET, end: END_BRACKET
+            begin: START_BRACKET,
+            end: END_BRACKET
           }
         ]
       },
@@ -58,14 +60,16 @@ function inform7(hljs) {
         end: ':',
         contains: [
           {
-            //Rule name
-            begin: '\\(This', end: '\\)'
+            // Rule name
+            begin: '\\(This',
+            end: '\\)'
           }
         ]
       },
       {
         className: 'comment',
-        begin: START_BRACKET, end: END_BRACKET,
+        begin: START_BRACKET,
+        end: END_BRACKET,
         contains: ['self']
       }
     ]

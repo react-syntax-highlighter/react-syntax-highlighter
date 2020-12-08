@@ -16,18 +16,19 @@ Category: config
 */
 
 function pf(hljs) {
-  var MACRO = {
+  const MACRO = {
     className: 'variable',
     begin: /\$[\w\d#@][\w\d_]*/
   };
-  var TABLE = {
+  const TABLE = {
     className: 'variable',
-    begin: /<(?!\/)/, end: />/
+    begin: /<(?!\/)/,
+    end: />/
   };
 
   return {
     name: 'Packet Filter config',
-    aliases: ['pf.conf'],
+    aliases: [ 'pf.conf' ],
     keywords: {
       $pattern: /[a-z0-9_<>-]+/,
       built_in: /* block match pass are "actions" in pf.conf(5), the rest are

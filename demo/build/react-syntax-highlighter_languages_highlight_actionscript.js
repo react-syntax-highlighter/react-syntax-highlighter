@@ -15,12 +15,13 @@ Category: scripting
 
 /** @type LanguageFn */
 function actionscript(hljs) {
-  var IDENT_RE = '[a-zA-Z_$][a-zA-Z0-9_$]*';
-  var IDENT_FUNC_RETURN_TYPE_RE = '([*]|[a-zA-Z_$][a-zA-Z0-9_$]*)';
+  const IDENT_RE = '[a-zA-Z_$][a-zA-Z0-9_$]*';
+  const IDENT_FUNC_RETURN_TYPE_RE = '([*]|[a-zA-Z_$][a-zA-Z0-9_$]*)';
 
-  var AS3_REST_ARG_MODE = {
+  const AS3_REST_ARG_MODE = {
     className: 'rest_arg',
-    begin: '[.]{3}', end: IDENT_RE,
+    begin: '[.]{3}',
+    end: IDENT_RE,
     relevance: 10
   };
 
@@ -43,33 +44,38 @@ function actionscript(hljs) {
       hljs.C_NUMBER_MODE,
       {
         className: 'class',
-        beginKeywords: 'package', end: '{',
+        beginKeywords: 'package',
+        end: /\{/,
         contains: [hljs.TITLE_MODE]
       },
       {
         className: 'class',
-        beginKeywords: 'class interface', end: '{', excludeEnd: true,
+        beginKeywords: 'class interface',
+        end: /\{/,
+        excludeEnd: true,
         contains: [
-          {
-            beginKeywords: 'extends implements'
-          },
+          { beginKeywords: 'extends implements' },
           hljs.TITLE_MODE
         ]
       },
       {
         className: 'meta',
-        beginKeywords: 'import include', end: ';',
-        keywords: {'meta-keyword': 'import include'}
+        beginKeywords: 'import include',
+        end: ';',
+        keywords: { 'meta-keyword': 'import include' }
       },
       {
         className: 'function',
-        beginKeywords: 'function', end: '[{;]', excludeEnd: true,
+        beginKeywords: 'function',
+        end: '[{;]',
+        excludeEnd: true,
         illegal: '\\S',
         contains: [
           hljs.TITLE_MODE,
           {
             className: 'params',
-            begin: '\\(', end: '\\)',
+            begin: '\\(',
+            end: '\\)',
             contains: [
               hljs.APOS_STRING_MODE,
               hljs.QUOTE_STRING_MODE,
@@ -78,9 +84,7 @@ function actionscript(hljs) {
               AS3_REST_ARG_MODE
             ]
           },
-          {
-            begin: ':\\s*' + IDENT_FUNC_RETURN_TYPE_RE
-          }
+          { begin: ':\\s*' + IDENT_FUNC_RETURN_TYPE_RE }
         ]
       },
       hljs.METHOD_GUARD

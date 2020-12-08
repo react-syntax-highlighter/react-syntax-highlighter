@@ -1866,15 +1866,33 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
             
     </span>
     <span
-      className="hljs-keyword"
+      className="hljs-function hljs-title"
       style={Object {}}
     >
       constructor
     </span>
     <span
+      className="hljs-function"
       style={Object {}}
     >
-      (props) {
+      (
+    </span>
+    <span
+      className="hljs-function hljs-params"
+      style={Object {}}
+    >
+      props
+    </span>
+    <span
+      className="hljs-function"
+      style={Object {}}
+    >
+      )
+    </span>
+    <span
+      style={Object {}}
+    >
+       {
 
     </span>
     <span
@@ -1924,8 +1942,35 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     </span>
           }
 
-          componentDidMount() {
+    <span
+      style={Object {}}
+    >
+            
+    </span>
+    <span
+      className="hljs-function hljs-title"
+      style={Object {}}
+    >
+      componentDidMount
+    </span>
+    <span
+      className="hljs-function"
+      style={Object {}}
+    >
+      (
+    </span>
+    <span
+      className="hljs-function"
+      style={Object {}}
+    >
+      )
+    </span>
+    <span
+      style={Object {}}
+    >
+       {
 
+    </span>
     <span
       style={Object {}}
     >
@@ -2042,8 +2087,35 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     </span>
           }
 
-          render() {
+    <span
+      style={Object {}}
+    >
+            
+    </span>
+    <span
+      className="hljs-function hljs-title"
+      style={Object {}}
+    >
+      render
+    </span>
+    <span
+      className="hljs-function"
+      style={Object {}}
+    >
+      (
+    </span>
+    <span
+      className="hljs-function"
+      style={Object {}}
+    >
+      )
+    </span>
+    <span
+      style={Object {}}
+    >
+       {
 
+    </span>
     <span
       style={Object {}}
     >

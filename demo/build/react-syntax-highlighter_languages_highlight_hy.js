@@ -95,8 +95,10 @@ function hy(hljs) {
     relevance: 0
   };
   var NAME = {
+    className: 'name',
+    relevance: 0,
     keywords: keywords,
-    className: 'name', begin: SYMBOL_RE,
+    begin: SYMBOL_RE,
     starts: BODY
   };
   var DEFAULT_CONTAINS = [LIST, STRING, HINT, HINT_COL, COMMENT, KEY, COLLECTION, NUMBER, LITERAL, SYMBOL];
@@ -110,7 +112,7 @@ function hy(hljs) {
     aliases: ['hylang'],
     illegal: /\S/,
     contains: [hljs.SHEBANG(), LIST, STRING, HINT, HINT_COL, COMMENT, KEY, COLLECTION, NUMBER, LITERAL]
-  }
+  };
 }
 
 module.exports = hy;

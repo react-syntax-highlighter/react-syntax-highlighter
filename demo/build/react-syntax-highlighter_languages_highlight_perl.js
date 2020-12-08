@@ -7,6 +7,31 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+/**
+ * @param {string} value
+ * @returns {RegExp}
+ * */
+
+/**
+ * @param {RegExp | string } re
+ * @returns {string}
+ */
+function source(re) {
+  if (!re) return null;
+  if (typeof re === "string") return re;
+
+  return re.source;
+}
+
+/**
+ * @param {...(RegExp | string) } args
+ * @returns {string}
+ */
+function concat(...args) {
+  const joined = args.map((x) => source(x)).join("");
+  return joined;
+}
+
 /*
 Language: Perl
 Author: Peter Leonov <gojpeg@yandex.ru>
@@ -14,8 +39,11 @@ Website: https://www.perl.org
 Category: common
 */
 
+/** @type LanguageFn */
 function perl(hljs) {
-  var PERL_KEYWORDS = {
+  // https://perldoc.perl.org/perlre#Modifiers
+  const REGEX_MODIFIERS = /[dualxmsipn]{0,12}/; // aa and xx are valid, making max length 12
+  const PERL_KEYWORDS = {
     $pattern: /[\w.]+/,
     keyword: 'getpwent getservent quotemeta msgrcv scalar kill dbmclose undef lc ' +
     'ma syswrite tr send umask sysopen shmwrite vec qx utime local oct semctl localtime ' +
@@ -37,29 +65,47 @@ function perl(hljs) {
     'ioctl socket readlink eval xor readline binmode setservent eof ord bind alarm pipe ' +
     'atan2 getgrent exp time push setgrent gt lt or ne m|0 break given say state when'
   };
-  var SUBST = {
+  const SUBST = {
     className: 'subst',
-    begin: '[$@]\\{', end: '\\}',
+    begin: '[$@]\\{',
+    end: '\\}',
     keywords: PERL_KEYWORDS
   };
-  var METHOD = {
-    begin: '->{', end: '}'
+  const METHOD = {
+    begin: /->\{/,
+    end: /\}/
     // contains defined later
   };
-  var VAR = {
+  const VAR = {
     variants: [
-      {begin: /\$\d/},
-      {begin: /[\$%@](\^\w\b|#\w+(::\w+)*|{\w+}|\w+(::\w*)*)/},
-      {begin: /[\$%@][^\s\w{]/, relevance: 0}
+      {
+        begin: /\$\d/
+      },
+      {
+        begin: concat(
+          /[$%@](\^\w\b|#\w+(::\w+)*|\{\w+\}|\w+(::\w*)*)/,
+          // negative look-ahead tries to avoid matching patterns that are not
+          // Perl at all like $ident$, @ident@, etc.
+          `(?![A-Za-z])(?![@$%])`
+        )
+      },
+      {
+        begin: /[$%@][^\s\w{]/,
+        relevance: 0
+      }
     ]
   };
-  var STRING_CONTAINS = [hljs.BACKSLASH_ESCAPE, SUBST, VAR];
-  var PERL_DEFAULT_CONTAINS = [
+  const STRING_CONTAINS = [
+    hljs.BACKSLASH_ESCAPE,
+    SUBST,
+    VAR
+  ];
+  const PERL_DEFAULT_CONTAINS = [
     VAR,
     hljs.HASH_COMMENT_MODE,
     hljs.COMMENT(
-      '^\\=\\w',
-      '\\=cut',
+      /^=\w/,
+      /=cut/,
       {
         endsWithParent: true
       }
@@ -70,47 +116,56 @@ function perl(hljs) {
       contains: STRING_CONTAINS,
       variants: [
         {
-          begin: 'q[qwxr]?\\s*\\(', end: '\\)',
+          begin: 'q[qwxr]?\\s*\\(',
+          end: '\\)',
           relevance: 5
         },
         {
-          begin: 'q[qwxr]?\\s*\\[', end: '\\]',
+          begin: 'q[qwxr]?\\s*\\[',
+          end: '\\]',
           relevance: 5
         },
         {
-          begin: 'q[qwxr]?\\s*\\{', end: '\\}',
+          begin: 'q[qwxr]?\\s*\\{',
+          end: '\\}',
           relevance: 5
         },
         {
-          begin: 'q[qwxr]?\\s*\\|', end: '\\|',
+          begin: 'q[qwxr]?\\s*\\|',
+          end: '\\|',
           relevance: 5
         },
         {
-          begin: 'q[qwxr]?\\s*\\<', end: '\\>',
+          begin: 'q[qwxr]?\\s*<',
+          end: '>',
           relevance: 5
         },
         {
-          begin: 'qw\\s+q', end: 'q',
+          begin: 'qw\\s+q',
+          end: 'q',
           relevance: 5
         },
         {
-          begin: '\'', end: '\'',
-          contains: [hljs.BACKSLASH_ESCAPE]
+          begin: '\'',
+          end: '\'',
+          contains: [ hljs.BACKSLASH_ESCAPE ]
         },
         {
-          begin: '"', end: '"'
+          begin: '"',
+          end: '"'
         },
         {
-          begin: '`', end: '`',
-          contains: [hljs.BACKSLASH_ESCAPE]
+          begin: '`',
+          end: '`',
+          contains: [ hljs.BACKSLASH_ESCAPE ]
         },
         {
-          begin: '{\\w+}',
+          begin: /\{\w+\}/,
           contains: [],
           relevance: 0
         },
         {
-          begin: '\-?\\w+\\s*\\=\\>',
+          begin: '-?\\w+\\s*=>',
           contains: [],
           relevance: 0
         }
@@ -129,22 +184,36 @@ function perl(hljs) {
         hljs.HASH_COMMENT_MODE,
         {
           className: 'regexp',
-          begin: '(s|tr|y)/(\\\\.|[^/])*/(\\\\.|[^/])*/[a-z]*',
+          begin: concat(
+            /(s|tr|y)/,
+            /\//,
+            /(\\.|[^\\\/])*/,
+            /\//,
+            /(\\.|[^\\\/])*/,
+            /\//,
+            REGEX_MODIFIERS,
+          ),
           relevance: 10
         },
         {
           className: 'regexp',
-          begin: '(m|qr)?/', end: '/[a-z]*',
-          contains: [hljs.BACKSLASH_ESCAPE],
+          begin: /(m|qr)?\//,
+          end: concat(
+            /\//,
+            REGEX_MODIFIERS
+          ),
+          contains: [ hljs.BACKSLASH_ESCAPE ],
           relevance: 0 // allows empty "//" which is a common comment delimiter in other languages
         }
       ]
     },
     {
       className: 'function',
-      beginKeywords: 'sub', end: '(\\s*\\(.*?\\))?[;{]', excludeEnd: true,
+      beginKeywords: 'sub',
+      end: '(\\s*\\(.*?\\))?[;{]',
+      excludeEnd: true,
       relevance: 5,
-      contains: [hljs.TITLE_MODE]
+      contains: [ hljs.TITLE_MODE ]
     },
     {
       begin: '-\\w\\b',
@@ -156,9 +225,9 @@ function perl(hljs) {
       subLanguage: 'mojolicious',
       contains: [
         {
-            begin: "^@@.*",
-            end: "$",
-            className: "comment"
+          begin: "^@@.*",
+          end: "$",
+          className: "comment"
         }
       ]
     }
@@ -168,7 +237,10 @@ function perl(hljs) {
 
   return {
     name: 'Perl',
-    aliases: ['pl', 'pm'],
+    aliases: [
+      'pl',
+      'pm'
+    ],
     keywords: PERL_KEYWORDS,
     contains: PERL_DEFAULT_CONTAINS
   };

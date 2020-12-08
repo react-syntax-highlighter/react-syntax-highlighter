@@ -45,9 +45,9 @@ function protobuf(hljs) {
         end: /[{;]/, excludeEnd: true,
         keywords: 'rpc returns'
       },
-      {
-        begin: /^\s*[A-Z_]+/,
-        end: /\s*=/, excludeEnd: true
+      { // match enum items (relevance)
+        // BLAH = ...;
+        begin: /^\s*[A-Z_]+(?=\s*=[^\n]+;$)/
       }
     ]
   };

@@ -16,7 +16,7 @@ Website: http://www.verilog.com
 */
 
 function verilog(hljs) {
-  var SV_KEYWORDS = {
+  const SV_KEYWORDS = {
     $pattern: /[\w\$]+/,
     keyword:
       'accept_on alias always always_comb always_ff always_latch and assert assign ' +
@@ -75,10 +75,15 @@ function verilog(hljs) {
       '$swriteo $fscanf $fread $fseek $fflush $feof $fopen $fwrite $fwriteb ' +
       '$fwriteh $fwriteo $fmonitor $fmonitorb $fmonitorh $fmonitoro $sformat ' +
       '$sformatf $fgetc $ungetc $fgets $sscanf $rewind $ftell $ferror'
-    };
+  };
+
   return {
     name: 'Verilog',
-    aliases: ['v', 'sv', 'svh'],
+    aliases: [
+      'v',
+      'sv',
+      'svh'
+    ],
     case_insensitive: false,
     keywords: SV_KEYWORDS,
     contains: [
@@ -87,33 +92,49 @@ function verilog(hljs) {
       hljs.QUOTE_STRING_MODE,
       {
         className: 'number',
-        contains: [hljs.BACKSLASH_ESCAPE],
+        contains: [ hljs.BACKSLASH_ESCAPE ],
         variants: [
-          {begin: '\\b((\\d+\'(b|h|o|d|B|H|O|D))[0-9xzXZa-fA-F_]+)'},
-          {begin: '\\B((\'(b|h|o|d|B|H|O|D))[0-9xzXZa-fA-F_]+)'},
-          {begin: '\\b([0-9_])+', relevance: 0}
+          {
+            begin: '\\b((\\d+\'(b|h|o|d|B|H|O|D))[0-9xzXZa-fA-F_]+)'
+          },
+          {
+            begin: '\\B((\'(b|h|o|d|B|H|O|D))[0-9xzXZa-fA-F_]+)'
+          },
+          {
+            begin: '\\b([0-9_])+',
+            relevance: 0
+          }
         ]
       },
       /* parameters to instances */
       {
         className: 'variable',
         variants: [
-          {begin: '#\\((?!parameter).+\\)'},
-          {begin: '\\.\\w+', relevance: 0},
+          {
+            begin: '#\\((?!parameter).+\\)'
+          },
+          {
+            begin: '\\.\\w+',
+            relevance: 0
+          }
         ]
       },
       {
         className: 'meta',
-        begin: '`', end: '$',
-        keywords: {'meta-keyword': 'define __FILE__ ' +
-          '__LINE__ begin_keywords celldefine default_nettype define ' +
-          'else elsif end_keywords endcelldefine endif ifdef ifndef ' +
-          'include line nounconnected_drive pragma resetall timescale ' +
-          'unconnected_drive undef undefineall'},
+        begin: '`',
+        end: '$',
+        keywords: {
+          'meta-keyword':
+            'define __FILE__ ' +
+            '__LINE__ begin_keywords celldefine default_nettype define ' +
+            'else elsif end_keywords endcelldefine endif ifdef ifndef ' +
+            'include line nounconnected_drive pragma resetall timescale ' +
+            'unconnected_drive undef undefineall'
+        },
         relevance: 0
       }
     ]
-  }; // return
+  };
 }
 
 module.exports = verilog;

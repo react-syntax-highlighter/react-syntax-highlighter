@@ -22,7 +22,8 @@ function vbscriptHtml(hljs) {
     subLanguage: 'xml',
     contains: [
       {
-        begin: '<%', end: '%>',
+        begin: '<%',
+        end: '%>',
         subLanguage: 'vbscript'
       }
     ]

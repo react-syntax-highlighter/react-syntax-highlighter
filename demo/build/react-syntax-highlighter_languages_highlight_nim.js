@@ -17,7 +17,7 @@ Category: system
 function nim(hljs) {
   return {
     name: 'Nim',
-    aliases: ['nim'],
+    aliases: [ 'nim' ],
     keywords: {
       keyword:
         'addr and as asm bind block break case cast const continue converter ' +
@@ -35,17 +35,24 @@ function nim(hljs) {
         'cschar cshort cint csize clonglong cfloat cdouble clongdouble ' +
         'cuchar cushort cuint culonglong cstringarray semistatic'
     },
-    contains: [ {
+    contains: [
+      {
         className: 'meta', // Actually pragma
-        begin: /{\./,
-        end: /\.}/,
+        begin: /\{\./,
+        end: /\.\}/,
         relevance: 10
-      }, {
+      },
+      {
         className: 'string',
         begin: /[a-zA-Z]\w*"/,
         end: /"/,
-        contains: [{begin: /""/}]
-      }, {
+        contains: [
+          {
+            begin: /""/
+          }
+        ]
+      },
+      {
         className: 'string',
         begin: /([a-zA-Z]\w*)?"""/,
         end: /"""/
@@ -55,19 +62,28 @@ function nim(hljs) {
         className: 'type',
         begin: /\b[A-Z]\w+\b/,
         relevance: 0
-      }, {
+      },
+      {
         className: 'number',
         relevance: 0,
         variants: [
-          {begin: /\b(0[xX][0-9a-fA-F][_0-9a-fA-F]*)('?[iIuU](8|16|32|64))?/},
-          {begin: /\b(0o[0-7][_0-7]*)('?[iIuUfF](8|16|32|64))?/},
-          {begin: /\b(0(b|B)[01][_01]*)('?[iIuUfF](8|16|32|64))?/},
-          {begin: /\b(\d[_\d]*)('?[iIuUfF](8|16|32|64))?/}
+          {
+            begin: /\b(0[xX][0-9a-fA-F][_0-9a-fA-F]*)('?[iIuU](8|16|32|64))?/
+          },
+          {
+            begin: /\b(0o[0-7][_0-7]*)('?[iIuUfF](8|16|32|64))?/
+          },
+          {
+            begin: /\b(0(b|B)[01][_01]*)('?[iIuUfF](8|16|32|64))?/
+          },
+          {
+            begin: /\b(\d[_\d]*)('?[iIuUfF](8|16|32|64))?/
+          }
         ]
       },
       hljs.HASH_COMMENT_MODE
     ]
-  }
+  };
 }
 
 module.exports = nim;

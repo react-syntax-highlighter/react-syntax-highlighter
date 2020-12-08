@@ -16,7 +16,7 @@ Category: common
 
 function pythonRepl(hljs) {
   return {
-    aliases: ['pycon'],
+    aliases: [ 'pycon' ],
     contains: [
       {
         className: 'meta',
@@ -25,16 +25,21 @@ function pythonRepl(hljs) {
           // this is purely for cleaner HTML output
           end: / |$/,
           starts: {
-            end: '$', subLanguage: 'python'
+            end: '$',
+            subLanguage: 'python'
           }
         },
         variants: [
-          { begin: /^>>>(?=[ ]|$)/ },
-          { begin: /^\.\.\.(?=[ ]|$)/ }
+          {
+            begin: /^>>>(?=[ ]|$)/
+          },
+          {
+            begin: /^\.\.\.(?=[ ]|$)/
+          }
         ]
-      },
+      }
     ]
-  }
+  };
 }
 
 module.exports = pythonRepl;

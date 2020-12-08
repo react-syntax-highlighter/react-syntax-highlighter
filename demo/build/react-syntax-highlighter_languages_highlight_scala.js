@@ -16,68 +16,82 @@ Website: https://www.scala-lang.org
 */
 
 function scala(hljs) {
-
-  var ANNOTATION = { className: 'meta', begin: '@[A-Za-z]+' };
+  const ANNOTATION = {
+    className: 'meta',
+    begin: '@[A-Za-z]+'
+  };
 
   // used in strings for escaping/interpolation/substitution
-  var SUBST = {
+  const SUBST = {
     className: 'subst',
     variants: [
-      {begin: '\\$[A-Za-z0-9_]+'},
-      {begin: '\\${', end: '}'}
+      {
+        begin: '\\$[A-Za-z0-9_]+'
+      },
+      {
+        begin: /\$\{/,
+        end: /\}/
+      }
     ]
   };
 
-  var STRING = {
+  const STRING = {
     className: 'string',
     variants: [
       {
-        begin: '"', end: '"',
+        begin: '"',
+        end: '"',
         illegal: '\\n',
-        contains: [hljs.BACKSLASH_ESCAPE]
+        contains: [ hljs.BACKSLASH_ESCAPE ]
       },
       {
-        begin: '"""', end: '"""',
+        begin: '"""',
+        end: '"""',
         relevance: 10
       },
       {
-        begin: '[a-z]+"', end: '"',
+        begin: '[a-z]+"',
+        end: '"',
         illegal: '\\n',
-        contains: [hljs.BACKSLASH_ESCAPE, SUBST]
+        contains: [ hljs.BACKSLASH_ESCAPE,
+          SUBST ]
       },
       {
         className: 'string',
-        begin: '[a-z]+"""', end: '"""',
-        contains: [SUBST],
+        begin: '[a-z]+"""',
+        end: '"""',
+        contains: [ SUBST ],
         relevance: 10
       }
     ]
 
   };
 
-  var SYMBOL = {
+  const SYMBOL = {
     className: 'symbol',
     begin: '\'\\w[\\w\\d_]*(?!\')'
   };
 
-  var TYPE = {
+  const TYPE = {
     className: 'type',
     begin: '\\b[A-Z][A-Za-z0-9_]*',
     relevance: 0
   };
 
-  var NAME = {
+  const NAME = {
     className: 'title',
     begin: /[^0-9\n\t "'(),.`{}\[\]:;][^\n\t "'(),.`{}\[\]:;]+|[^0-9\n\t "'(),.`{}\[\]:;=]/,
     relevance: 0
   };
 
-  var CLASS = {
+  const CLASS = {
     className: 'class',
     beginKeywords: 'class object trait type',
     end: /[:={\[\n;]/,
     excludeEnd: true,
     contains: [
+      hljs.C_LINE_COMMENT_MODE,
+      hljs.C_BLOCK_COMMENT_MODE,
       {
         beginKeywords: 'extends with',
         relevance: 10
@@ -88,7 +102,7 @@ function scala(hljs) {
         excludeBegin: true,
         excludeEnd: true,
         relevance: 0,
-        contains: [TYPE]
+        contains: [ TYPE ]
       },
       {
         className: 'params',
@@ -97,18 +111,18 @@ function scala(hljs) {
         excludeBegin: true,
         excludeEnd: true,
         relevance: 0,
-        contains: [TYPE]
+        contains: [ TYPE ]
       },
       NAME
     ]
   };
 
-  var METHOD = {
+  const METHOD = {
     className: 'function',
     beginKeywords: 'def',
     end: /[:={\[(\n;]/,
     excludeEnd: true,
-    contains: [NAME]
+    contains: [ NAME ]
   };
 
   return {

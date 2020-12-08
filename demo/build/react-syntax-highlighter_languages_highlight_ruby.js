@@ -7,6 +7,39 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+/**
+ * @param {string} value
+ * @returns {RegExp}
+ * */
+
+/**
+ * @param {RegExp | string } re
+ * @returns {string}
+ */
+function source(re) {
+  if (!re) return null;
+  if (typeof re === "string") return re;
+
+  return re.source;
+}
+
+/**
+ * @param {RegExp | string } re
+ * @returns {string}
+ */
+function lookahead(re) {
+  return concat('(?=', re, ')');
+}
+
+/**
+ * @param {...(RegExp | string) } args
+ * @returns {string}
+ */
+function concat(...args) {
+  const joined = args.map((x) => source(x)).join("");
+  return joined;
+}
+
 /*
 Language: Ruby
 Description: Ruby is a dynamic, open source programming language with a focus on simplicity and productivity.
@@ -17,12 +50,14 @@ Category: common
 */
 
 function ruby(hljs) {
-  var RUBY_METHOD_RE = '[a-zA-Z_]\\w*[!?=]?|[-+~]\\@|<<|>>|=~|===?|<=>|[<>]=?|\\*\\*|[-/+%^&*~`|]|\\[\\]=?';
+  var RUBY_METHOD_RE = '([a-zA-Z_]\\w*[!?=]?|[-+~]@|<<|>>|=~|===?|<=>|[<>]=?|\\*\\*|[-/+%^&*~`|]|\\[\\]=?)';
   var RUBY_KEYWORDS = {
     keyword:
       'and then defined module in return redo if BEGIN retry end for self when ' +
       'next until do begin unless END rescue else break undef not super class case ' +
-      'require yield alias while ensure elsif or include attr_reader attr_writer attr_accessor',
+      'require yield alias while ensure elsif or include attr_reader attr_writer attr_accessor ' +
+      '__FILE__',
+    built_in: 'proc lambda',
     literal:
       'true false nil'
   };
@@ -42,8 +77,8 @@ function ruby(hljs) {
       }
     ),
     hljs.COMMENT(
-      '^\\=begin',
-      '^\\=end',
+      '^=begin',
+      '^=end',
       {
         contains: [YARDOCTAG],
         relevance: 10
@@ -53,7 +88,7 @@ function ruby(hljs) {
   ];
   var SUBST = {
     className: 'subst',
-    begin: '#\\{', end: '}',
+    begin: /#\{/, end: /\}/,
     keywords: RUBY_KEYWORDS
   };
   var STRING = {
@@ -63,21 +98,21 @@ function ruby(hljs) {
       {begin: /'/, end: /'/},
       {begin: /"/, end: /"/},
       {begin: /`/, end: /`/},
-      {begin: '%[qQwWx]?\\(', end: '\\)'},
-      {begin: '%[qQwWx]?\\[', end: '\\]'},
-      {begin: '%[qQwWx]?{', end: '}'},
-      {begin: '%[qQwWx]?<', end: '>'},
-      {begin: '%[qQwWx]?/', end: '/'},
-      {begin: '%[qQwWx]?%', end: '%'},
-      {begin: '%[qQwWx]?-', end: '-'},
-      {begin: '%[qQwWx]?\\|', end: '\\|'},
+      {begin: /%[qQwWx]?\(/, end: /\)/},
+      {begin: /%[qQwWx]?\[/, end: /\]/},
+      {begin: /%[qQwWx]?\{/, end: /\}/},
+      {begin: /%[qQwWx]?</, end: />/},
+      {begin: /%[qQwWx]?\//, end: /\//},
+      {begin: /%[qQwWx]?%/, end: /%/},
+      {begin: /%[qQwWx]?-/, end: /-/},
+      {begin: /%[qQwWx]?\|/, end: /\|/},
       {
         // \B in the beginning suppresses recognition of ?-sequences where ?
         // is the last character of a preceding identifier, as in: `func?4`
         begin: /\B\?(\\\d{1,3}|\\x[A-Fa-f0-9]{1,2}|\\u[A-Fa-f0-9]{4}|\\?\S)\b/
       },
       { // heredocs
-        begin: /<<[-~]?'?(\w+)(?:.|\n)*?\n\s*\1\b/,
+        begin: /<<[-~]?'?(\w+)\n(?:[^\n]*\n)*?\s*\1\b/,
         returnBegin: true,
         contains: [
           { begin: /<<[-~]?'?/ },
@@ -89,6 +124,30 @@ function ruby(hljs) {
       }
     ]
   };
+
+  // Ruby syntax is underdocumented, but this grammar seems to be accurate
+  // as of version 2.7.2 (confirmed with (irb and `Ripper.sexp(...)`)
+  // https://docs.ruby-lang.org/en/2.7.0/doc/syntax/literals_rdoc.html#label-Numbers
+  var decimal = '[1-9](_?[0-9])*|0';
+  var digits = '[0-9](_?[0-9])*';
+  var NUMBER = {
+    className: 'number', relevance: 0,
+    variants: [
+      // decimal integer/float, optionally exponential or rational, optionally imaginary
+      { begin: `\\b(${decimal})(\\.(${digits}))?([eE][+-]?(${digits})|r)?i?\\b` },
+
+      // explicit decimal/binary/octal/hexadecimal integer,
+      // optionally rational and/or imaginary
+      { begin: "\\b0[dD][0-9](_?[0-9])*r?i?\\b" },
+      { begin: "\\b0[bB][0-1](_?[0-1])*r?i?\\b" },
+      { begin: "\\b0[oO][0-7](_?[0-7])*r?i?\\b" },
+      { begin: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*r?i?\\b" },
+
+      // 0-prefixed implicit octal integer, optionally rational and/or imaginary
+      { begin: "\\b0(_?[0-7])+r?i?\\b" },
+    ]
+  };
+
   var PARAMS = {
     className: 'params',
     begin: '\\(', end: '\\)', endsParent: true,
@@ -97,13 +156,12 @@ function ruby(hljs) {
 
   var RUBY_DEFAULT_CONTAINS = [
     STRING,
-    IRB_OBJECT,
     {
       className: 'class',
       beginKeywords: 'class module', end: '$|;',
       illegal: /=/,
       contains: [
-        hljs.inherit(hljs.TITLE_MODE, {begin: '[A-Za-z_]\\w*(::\\w+)*(\\?|\\!)?'}),
+        hljs.inherit(hljs.TITLE_MODE, {begin: '[A-Za-z_]\\w*(::\\w+)*(\\?|!)?'}),
         {
           begin: '<\\s*',
           contains: [{
@@ -114,7 +172,12 @@ function ruby(hljs) {
     },
     {
       className: 'function',
-      beginKeywords: 'def', end: '$|;',
+      // def method_name(
+      // def method_name;
+      // def method_name (end of line)
+      begin: concat(/def\s*/, lookahead(RUBY_METHOD_RE + "\\s*(\\(|;|$)")),
+      keywords: "def",
+      end: '$|;',
       contains: [
         hljs.inherit(hljs.TITLE_MODE, {begin: RUBY_METHOD_RE}),
         PARAMS
@@ -126,7 +189,7 @@ function ruby(hljs) {
     },
     {
       className: 'symbol',
-      begin: hljs.UNDERSCORE_IDENT_RE + '(\\!|\\?)?:',
+      begin: hljs.UNDERSCORE_IDENT_RE + '(!|\\?)?:',
       relevance: 0
     },
     {
@@ -135,47 +198,50 @@ function ruby(hljs) {
       contains: [STRING, {begin: RUBY_METHOD_RE}],
       relevance: 0
     },
+    NUMBER,
     {
-      className: 'number',
-      begin: '(\\b0[0-7_]+)|(\\b0x[0-9a-fA-F_]+)|(\\b[1-9][0-9_]*(\\.[0-9_]+)?)|[0_]\\b',
-      relevance: 0
-    },
-    {
-      begin: '(\\$\\W)|((\\$|\\@\\@?)(\\w+))' // variables
+      // negative-look forward attemps to prevent false matches like:
+      // @ident@ or $ident$ that might indicate this is not ruby at all
+      className: "variable",
+      begin: '(\\$\\W)|((\\$|@@?)(\\w+))(?=[^@$?])' + `(?![A-Za-z])(?![@$?'])`
     },
     {
       className: 'params',
-      begin: /\|/, end: /\|/,
+      begin: /\|/,
+      end: /\|/,
+      relevance:0, // this could be a lot of things (in other languages) other than params
       keywords: RUBY_KEYWORDS
     },
     { // regexp container
       begin: '(' + hljs.RE_STARTERS_RE + '|unless)\\s*',
       keywords: 'unless',
       contains: [
-        IRB_OBJECT,
         {
           className: 'regexp',
           contains: [hljs.BACKSLASH_ESCAPE, SUBST],
           illegal: /\n/,
           variants: [
             {begin: '/', end: '/[a-z]*'},
-            {begin: '%r{', end: '}[a-z]*'},
+            {begin: /%r\{/, end: /\}[a-z]*/},
             {begin: '%r\\(', end: '\\)[a-z]*'},
             {begin: '%r!', end: '![a-z]*'},
             {begin: '%r\\[', end: '\\][a-z]*'}
           ]
         }
-      ].concat(COMMENT_MODES),
+      ].concat(IRB_OBJECT, COMMENT_MODES),
       relevance: 0
     }
-  ].concat(COMMENT_MODES);
+  ].concat(IRB_OBJECT, COMMENT_MODES);
 
   SUBST.contains = RUBY_DEFAULT_CONTAINS;
   PARAMS.contains = RUBY_DEFAULT_CONTAINS;
 
+  // >>
+  // ?>
   var SIMPLE_PROMPT = "[>?]>";
+  // irb(main):001:0>
   var DEFAULT_PROMPT = "[\\w#]+\\(\\w+\\):\\d+:\\d+>";
-  var RVM_PROMPT = "(\\w+-)?\\d+\\.\\d+\\.\\d(p\\d+)?[^>]+>";
+  var RVM_PROMPT = "(\\w+-)?\\d+\\.\\d+\\.\\d+(p\\d+)?[^\\d][^>]+>";
 
   var IRB_DEFAULT = [
     {
@@ -186,19 +252,26 @@ function ruby(hljs) {
     },
     {
       className: 'meta',
-      begin: '^('+SIMPLE_PROMPT+"|"+DEFAULT_PROMPT+'|'+RVM_PROMPT+')',
+      begin: '^('+SIMPLE_PROMPT+"|"+DEFAULT_PROMPT+'|'+RVM_PROMPT+')(?=[ ])',
       starts: {
         end: '$', contains: RUBY_DEFAULT_CONTAINS
       }
     }
   ];
 
+  COMMENT_MODES.unshift(IRB_OBJECT);
+
   return {
     name: 'Ruby',
     aliases: ['rb', 'gemspec', 'podspec', 'thor', 'irb'],
     keywords: RUBY_KEYWORDS,
     illegal: /\/\*/,
-    contains: COMMENT_MODES.concat(IRB_DEFAULT).concat(RUBY_DEFAULT_CONTAINS)
+    contains: [
+        hljs.SHEBANG({binary:"ruby"}),
+      ]
+      .concat(IRB_DEFAULT)
+      .concat(COMMENT_MODES)
+      .concat(RUBY_DEFAULT_CONTAINS)
   };
 }
 
