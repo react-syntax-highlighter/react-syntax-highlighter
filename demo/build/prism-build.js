@@ -43454,8 +43454,7 @@ function AllLineNumbers(_ref2) {
 }
 
 function getEmWidthOfNumber(num) {
-  var len = num.toString().length;
-  return "".concat(len, "em");
+  return "".concat(num.toString().length, ".25em");
 }
 
 function getInlineLineNumber(lineNumber, inlineLineNumberStyle) {
@@ -43649,7 +43648,7 @@ function processLines(codeTree, wrapLines, lineProps, showLineNumbers, showInlin
     var children = tree.slice(lastLineBreakIndex + 1, tree.length);
 
     if (children && children.length) {
-      var lineNumber = newTree.length + startingLineNumber;
+      var lineNumber = showLineNumbers && newTree.length + startingLineNumber;
       var line = createLine(children, lineNumber);
       newTree.push(line);
     }
