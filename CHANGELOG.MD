@@ -1,5 +1,9 @@
 # Changelog
 
+## 15.4.1 / 2020-12-07
+- Bugfix: increased minwidth to avoid unequal line number widths
+- Bugfix: prevent last line of file from rendering an unwanted line number
+
 ## 15.4.0 / 2020-12-07
 - Security fix: updated highlight.js to 10.4.1
 
