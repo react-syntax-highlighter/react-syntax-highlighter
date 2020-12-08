@@ -7,6 +7,31 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+/**
+ * @param {string} value
+ * @returns {RegExp}
+ * */
+
+/**
+ * @param {RegExp | string } re
+ * @returns {string}
+ */
+function source(re) {
+  if (!re) return null;
+  if (typeof re === "string") return re;
+
+  return re.source;
+}
+
+/**
+ * @param {...(RegExp | string) } args
+ * @returns {string}
+ */
+function concat(...args) {
+  const joined = args.map((x) => source(x)).join("");
+  return joined;
+}
+
 /*
 Language: Fortran
 Author: Anthony Scemama <scemama@irsamc.ups-tlse.fr>
@@ -14,24 +39,45 @@ Website: https://en.wikipedia.org/wiki/Fortran
 Category: scientific
 */
 
+/** @type LanguageFn */
 function fortran(hljs) {
   const PARAMS = {
     className: 'params',
-    begin: '\\(', end: '\\)'
+    begin: '\\(',
+    end: '\\)'
   };
 
   const COMMENT = {
     variants: [
-      hljs.COMMENT('!', '$', {relevance: 0}),
-      // allow Fortran 77 style comments
-      hljs.COMMENT('^C', '$', {relevance: 0})
+      hljs.COMMENT('!', '$', {
+        relevance: 0
+      }),
+      // allow FORTRAN 77 style comments
+      hljs.COMMENT('^C[ ]', '$', {
+        relevance: 0
+      }),
+      hljs.COMMENT('^C$', '$', {
+        relevance: 0
+      })
     ]
   };
 
+  // regex in both fortran and irpf90 should match
+  const OPTIONAL_NUMBER_SUFFIX = /(_[a-z_\d]+)?/;
+  const OPTIONAL_NUMBER_EXP = /([de][+-]?\d+)?/;
   const NUMBER = {
     className: 'number',
-    // regex in both fortran and irpf90 should match
-    begin: '(?=\\b|\\+|\\-|\\.)(?:\\.|\\d+\\.?)\\d*([de][+-]?\\d+)?(_[a-z_\\d]+)?',
+    variants: [
+      {
+        begin: concat(/\b\d+/, /\.(\d*)/, OPTIONAL_NUMBER_EXP, OPTIONAL_NUMBER_SUFFIX)
+      },
+      {
+        begin: concat(/\b\d+/, OPTIONAL_NUMBER_EXP, OPTIONAL_NUMBER_SUFFIX)
+      },
+      {
+        begin: concat(/\.\d+/, OPTIONAL_NUMBER_EXP, OPTIONAL_NUMBER_SUFFIX)
+      }
+    ],
     relevance: 0
   };
 
@@ -39,7 +85,10 @@ function fortran(hljs) {
     className: 'function',
     beginKeywords: 'subroutine function program',
     illegal: '[${=\\n]',
-    contains: [hljs.UNDERSCORE_TITLE_MODE, PARAMS]
+    contains: [
+      hljs.UNDERSCORE_TITLE_MODE,
+      PARAMS
+    ]
   };
 
   const STRING = {
@@ -86,7 +135,7 @@ function fortran(hljs) {
       'set_exponent shape size spacing spread sum system_clock tiny transpose trim ubound unpack verify achar iachar transfer ' +
       'dble entry dprod cpu_time command_argument_count get_command get_command_argument get_environment_variable is_iostat_end ' +
       'ieee_arithmetic ieee_support_underflow_control ieee_get_underflow_mode ieee_set_underflow_mode ' +
-      'is_iostat_eor move_alloc new_line selected_char_kind same_type_as extends_type_of '  +
+      'is_iostat_eor move_alloc new_line selected_char_kind same_type_as extends_type_of ' +
       'acosh asinh atanh bessel_j0 bessel_j1 bessel_jn bessel_y0 bessel_y1 bessel_yn erf erfc erfc_scaled gamma log_gamma hypot norm2 ' +
       'atomic_define atomic_ref execute_command_line leadz trailz storage_size merge_bits ' +
       'bge bgt ble blt dshiftl dshiftr findloc iall iany iparity image_index lcobound ucobound maskl maskr ' +
@@ -95,7 +144,10 @@ function fortran(hljs) {
   return {
     name: 'Fortran',
     case_insensitive: true,
-    aliases: ['f90', 'f95'],
+    aliases: [
+      'f90',
+      'f95'
+    ],
     keywords: KEYWORDS,
     illegal: /\/\*/,
     contains: [
@@ -105,7 +157,7 @@ function fortran(hljs) {
       // as Fortran 77 style comments
       {
         begin: /^C\s*=(?!=)/,
-        relevance: 0,
+        relevance: 0
       },
       COMMENT,
       NUMBER

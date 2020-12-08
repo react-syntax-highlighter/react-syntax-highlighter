@@ -13,30 +13,31 @@ Author: Jay Strybis <jay.strybis@gmail.com>
 Description: FANUC TP programming language (TPP).
 */
 
-
 function tp(hljs) {
-  var TPID = {
+  const TPID = {
     className: 'number',
     begin: '[1-9][0-9]*', /* no leading zeros */
     relevance: 0
   };
-  var TPLABEL = {
+  const TPLABEL = {
     className: 'symbol',
     begin: ':[^\\]]+'
   };
-  var TPDATA = {
+  const TPDATA = {
     className: 'built_in',
     begin: '(AR|P|PAYLOAD|PR|R|SR|RSR|LBL|VR|UALM|MESSAGE|UTOOL|UFRAME|TIMER|' +
-    'TIMER_OVERFLOW|JOINT_MAX_SPEED|RESUME_PROG|DIAG_REC)\\[', end: '\\]',
+    'TIMER_OVERFLOW|JOINT_MAX_SPEED|RESUME_PROG|DIAG_REC)\\[',
+    end: '\\]',
     contains: [
       'self',
       TPID,
       TPLABEL
     ]
   };
-  var TPIO = {
+  const TPIO = {
     className: 'built_in',
-    begin: '(AI|AO|DI|DO|F|RI|RO|UI|UO|GI|GO|SI|SO)\\[', end: '\\]',
+    begin: '(AI|AO|DI|DO|F|RI|RO|UI|UO|GI|GO|SI|SO)\\[',
+    end: '\\]',
     contains: [
       'self',
       TPID,
@@ -88,7 +89,8 @@ function tp(hljs) {
       hljs.QUOTE_STRING_MODE,
       {
         className: 'string',
-        begin: '\'', end: '\''
+        begin: '\'',
+        end: '\''
       },
       hljs.C_NUMBER_MODE,
       {

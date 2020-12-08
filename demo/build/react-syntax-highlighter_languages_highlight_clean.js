@@ -18,7 +18,11 @@ Website: http://clean.cs.ru.nl
 function clean(hljs) {
   return {
     name: 'Clean',
-    aliases: ['clean','icl','dcl'],
+    aliases: [
+      'clean',
+      'icl',
+      'dcl'
+    ],
     keywords: {
       keyword:
         'if let in with where case of class instance otherwise ' +
@@ -31,14 +35,14 @@ function clean(hljs) {
         'True False'
     },
     contains: [
-
       hljs.C_LINE_COMMENT_MODE,
       hljs.C_BLOCK_COMMENT_MODE,
       hljs.APOS_STRING_MODE,
       hljs.QUOTE_STRING_MODE,
       hljs.C_NUMBER_MODE,
-
-      {begin: '->|<-[|:]?|#!?|>>=|\\{\\||\\|\\}|:==|=:|<>'} // relevance booster
+      { // relevance booster
+        begin: '->|<-[|:]?|#!?|>>=|\\{\\||\\|\\}|:==|=:|<>'
+      }
     ]
   };
 }

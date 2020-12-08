@@ -15,11 +15,14 @@ Category: common
 */
 
 function plaintext(hljs) {
-    return {
-        name: 'Plain text',
-        aliases: ['text', 'txt'],
-        disableAutodetect: true
-    };
+  return {
+    name: 'Plain text',
+    aliases: [
+      'text',
+      'txt'
+    ],
+    disableAutodetect: true
+  };
 }
 
 module.exports = plaintext;

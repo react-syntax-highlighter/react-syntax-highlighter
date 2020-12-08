@@ -14,13 +14,14 @@ Website: https://elm-lang.org
 Category: functional
 */
 
+/** @type LanguageFn */
 function elm(hljs) {
-  var COMMENT = {
+  const COMMENT = {
     variants: [
       hljs.COMMENT('--', '$'),
       hljs.COMMENT(
-        '{-',
-        '-}',
+        /\{-/,
+        /-\}/,
         {
           contains: ['self']
         }
@@ -28,29 +29,35 @@ function elm(hljs) {
     ]
   };
 
-  var CONSTRUCTOR = {
+  const CONSTRUCTOR = {
     className: 'type',
     begin: '\\b[A-Z][\\w\']*', // TODO: other constructors (built-in, infix).
     relevance: 0
   };
 
-  var LIST = {
-    begin: '\\(', end: '\\)',
+  const LIST = {
+    begin: '\\(',
+    end: '\\)',
     illegal: '"',
     contains: [
-      {className: 'type', begin: '\\b[A-Z][\\w]*(\\((\\.\\.|,|\\w+)\\))?'},
+      {
+        className: 'type',
+        begin: '\\b[A-Z][\\w]*(\\((\\.\\.|,|\\w+)\\))?'
+      },
       COMMENT
     ]
   };
 
-  var RECORD = {
-    begin: '{', end: '}',
+  const RECORD = {
+    begin: /\{/,
+    end: /\}/,
     contains: LIST.contains
   };
 
-  var CHARACTER = {
+  const CHARACTER = {
     className: 'string',
-    begin: '\'\\\\?.', end: '\'',
+    begin: '\'\\\\?.',
+    end: '\'',
     illegal: '.'
   };
 
@@ -64,28 +71,47 @@ function elm(hljs) {
       // Top-level constructions.
 
       {
-        beginKeywords: 'port effect module', end: 'exposing',
+        beginKeywords: 'port effect module',
+        end: 'exposing',
         keywords: 'port effect module where command subscription exposing',
-        contains: [LIST, COMMENT],
+        contains: [
+          LIST,
+          COMMENT
+        ],
         illegal: '\\W\\.|;'
       },
       {
-        begin: 'import', end: '$',
+        begin: 'import',
+        end: '$',
         keywords: 'import as exposing',
-        contains: [LIST, COMMENT],
+        contains: [
+          LIST,
+          COMMENT
+        ],
         illegal: '\\W\\.|;'
       },
       {
-        begin: 'type', end: '$',
+        begin: 'type',
+        end: '$',
         keywords: 'type alias',
-        contains: [CONSTRUCTOR, LIST, RECORD, COMMENT]
+        contains: [
+          CONSTRUCTOR,
+          LIST,
+          RECORD,
+          COMMENT
+        ]
       },
       {
-        beginKeywords: 'infix infixl infixr', end: '$',
-        contains: [hljs.C_NUMBER_MODE, COMMENT]
+        beginKeywords: 'infix infixl infixr',
+        end: '$',
+        contains: [
+          hljs.C_NUMBER_MODE,
+          COMMENT
+        ]
       },
       {
-        begin: 'port', end: '$',
+        begin: 'port',
+        end: '$',
         keywords: 'port',
         contains: [COMMENT]
       },
@@ -96,10 +122,14 @@ function elm(hljs) {
       hljs.QUOTE_STRING_MODE,
       hljs.C_NUMBER_MODE,
       CONSTRUCTOR,
-      hljs.inherit(hljs.TITLE_MODE, {begin: '^[_a-z][\\w\']*'}),
+      hljs.inherit(hljs.TITLE_MODE, {
+        begin: '^[_a-z][\\w\']*'
+      }),
       COMMENT,
 
-      {begin: '->|<-'} // No markup, relevance booster
+      {
+        begin: '->|<-'
+      } // No markup, relevance booster
     ],
     illegal: /;/
   };

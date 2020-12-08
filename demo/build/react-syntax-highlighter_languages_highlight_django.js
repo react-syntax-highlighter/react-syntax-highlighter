@@ -17,8 +17,9 @@ Website: https://www.djangoproject.com
 Category: template
 */
 
+/** @type LanguageFn */
 function django(hljs) {
-  var FILTER = {
+  const FILTER = {
     begin: /\|[A-Za-z]+:?/,
     keywords: {
       name:
@@ -43,17 +44,17 @@ function django(hljs) {
     case_insensitive: true,
     subLanguage: 'xml',
     contains: [
-      hljs.COMMENT(/\{%\s*comment\s*%}/, /\{%\s*endcomment\s*%}/),
-      hljs.COMMENT(/\{#/, /#}/),
+      hljs.COMMENT(/\{%\s*comment\s*%\}/, /\{%\s*endcomment\s*%\}/),
+      hljs.COMMENT(/\{#/, /#\}/),
       {
         className: 'template-tag',
-        begin: /\{%/, end: /%}/,
-        contains: [
-          {
-            className: 'name',
-            begin: /\w+/,
-            keywords: {
-              name:
+        begin: /\{%/,
+        end: /%\}/,
+        contains: [{
+          className: 'name',
+          begin: /\w+/,
+          keywords: {
+            name:
                 'comment endcomment load templatetag ifchanged endifchanged if endif firstof for ' +
                 'endfor ifnotequal endifnotequal widthratio extends include spaceless ' +
                 'endspaceless regroup ifequal endifequal ssi now with cycle url filter ' +
@@ -63,19 +64,19 @@ function django(hljs) {
                 'get_current_language_bidi get_language_info get_language_info_list localize ' +
                 'endlocalize localtime endlocaltime timezone endtimezone get_current_timezone ' +
                 'verbatim'
-            },
-            starts: {
-              endsWithParent: true,
-              keywords: 'in by as',
-              contains: [FILTER],
-              relevance: 0
-            }
+          },
+          starts: {
+            endsWithParent: true,
+            keywords: 'in by as',
+            contains: [FILTER],
+            relevance: 0
           }
-        ]
+        }]
       },
       {
         className: 'template-variable',
-        begin: /\{\{/, end: /}}/,
+        begin: /\{\{/,
+        end: /\}\}/,
         contains: [FILTER]
       }
     ]

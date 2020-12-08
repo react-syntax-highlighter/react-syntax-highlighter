@@ -16,26 +16,28 @@ Website: https://dart.dev
 Category: scripting
 */
 
+/** @type LanguageFn */
 function dart(hljs) {
   const SUBST = {
     className: 'subst',
     variants: [{
       begin: '\\$[A-Za-z0-9_]+'
-    }],
+    }]
   };
 
   const BRACED_SUBST = {
     className: 'subst',
     variants: [{
-      begin: '\\${',
-      end: '}'
+      begin: /\$\{/,
+      end: /\}/
     }],
-    keywords: 'true false null this is new super',
+    keywords: 'true false null this is new super'
   };
 
   const STRING = {
     className: 'string',
-    variants: [{
+    variants: [
+      {
         begin: 'r\'\'\'',
         end: '\'\'\''
       },
@@ -56,29 +58,46 @@ function dart(hljs) {
       {
         begin: '\'\'\'',
         end: '\'\'\'',
-        contains: [hljs.BACKSLASH_ESCAPE, SUBST, BRACED_SUBST]
+        contains: [
+          hljs.BACKSLASH_ESCAPE,
+          SUBST,
+          BRACED_SUBST
+        ]
       },
       {
         begin: '"""',
         end: '"""',
-        contains: [hljs.BACKSLASH_ESCAPE, SUBST, BRACED_SUBST]
+        contains: [
+          hljs.BACKSLASH_ESCAPE,
+          SUBST,
+          BRACED_SUBST
+        ]
       },
       {
         begin: '\'',
         end: '\'',
         illegal: '\\n',
-        contains: [hljs.BACKSLASH_ESCAPE, SUBST, BRACED_SUBST]
+        contains: [
+          hljs.BACKSLASH_ESCAPE,
+          SUBST,
+          BRACED_SUBST
+        ]
       },
       {
         begin: '"',
         end: '"',
         illegal: '\\n',
-        contains: [hljs.BACKSLASH_ESCAPE, SUBST, BRACED_SUBST]
+        contains: [
+          hljs.BACKSLASH_ESCAPE,
+          SUBST,
+          BRACED_SUBST
+        ]
       }
     ]
   };
   BRACED_SUBST.contains = [
-    hljs.C_NUMBER_MODE, STRING
+    hljs.C_NUMBER_MODE,
+    STRING
   ];
 
   const BUILT_IN_TYPES = [
@@ -109,7 +128,7 @@ function dart(hljs) {
     'num',
     // dart:html
     'Element',
-    'ElementList',
+    'ElementList'
   ];
   const NULLABLE_BUILT_IN_TYPES = BUILT_IN_TYPES.map((e) => `${e}?`);
 
@@ -131,8 +150,8 @@ function dart(hljs) {
           'document',
           'querySelector',
           'querySelectorAll',
-          'window',
-      ]).join(' '),
+          'window'
+        ]).join(' '),
     $pattern: /[A-Za-z][A-Za-z0-9_]*\??/
   };
 
@@ -145,7 +164,7 @@ function dart(hljs) {
         '/\\*\\*',
         '\\*/', {
           subLanguage: 'markdown',
-          relevance:0
+          relevance: 0
         }
       ),
       hljs.COMMENT(
@@ -155,7 +174,7 @@ function dart(hljs) {
             subLanguage: 'markdown',
             begin: '.',
             end: '$',
-            relevance:0
+            relevance: 0
           }]
         }
       ),
@@ -164,9 +183,10 @@ function dart(hljs) {
       {
         className: 'class',
         beginKeywords: 'class interface',
-        end: '{',
+        end: /\{/,
         excludeEnd: true,
-        contains: [{
+        contains: [
+          {
             beginKeywords: 'extends implements'
           },
           hljs.UNDERSCORE_TITLE_MODE

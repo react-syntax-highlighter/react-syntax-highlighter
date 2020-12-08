@@ -15,29 +15,39 @@ Author: Gidi Meir Morris <oss@gidi.io>
 Category: functional
 */
 function reasonml(hljs) {
-  function orReValues(ops){
+  function orReValues(ops) {
     return ops
-    .map(function(op) {
-      return op
-        .split('')
-        .map(function(char) {
-          return '\\' + char;
-        })
-        .join('');
-    })
-    .join('|');
+      .map(function(op) {
+        return op
+          .split('')
+          .map(function(char) {
+            return '\\' + char;
+          })
+          .join('');
+      })
+      .join('|');
   }
 
-  var RE_IDENT = '~?[a-z$_][0-9a-zA-Z$_]*';
-  var RE_MODULE_IDENT = '`?[A-Z$_][0-9a-zA-Z$_]*';
+  const RE_IDENT = '~?[a-z$_][0-9a-zA-Z$_]*';
+  const RE_MODULE_IDENT = '`?[A-Z$_][0-9a-zA-Z$_]*';
 
-  var RE_PARAM_TYPEPARAM = '\'?[a-z$_][0-9a-z$_]*';
-  var RE_PARAM_TYPE = '\s*:\s*[a-z$_][0-9a-z$_]*(\(\s*(' + RE_PARAM_TYPEPARAM + '\s*(,' + RE_PARAM_TYPEPARAM + ')*)?\s*\))?';
-  var RE_PARAM = RE_IDENT + '(' + RE_PARAM_TYPE + ')?(' + RE_PARAM_TYPE + ')?';
-  var RE_OPERATOR = "(" + orReValues(['||', '&&', '++', '**', '+.', '*', '/', '*.', '/.', '...', '|>']) + "|==|===)";
-  var RE_OPERATOR_SPACED = "\\s+" + RE_OPERATOR + "\\s+";
+  const RE_PARAM_TYPEPARAM = '\'?[a-z$_][0-9a-z$_]*';
+  const RE_PARAM_TYPE = '\\s*:\\s*[a-z$_][0-9a-z$_]*(\\(\\s*(' + RE_PARAM_TYPEPARAM + '\\s*(,' + RE_PARAM_TYPEPARAM + '\\s*)*)?\\))?';
+  const RE_PARAM = RE_IDENT + '(' + RE_PARAM_TYPE + '){0,2}';
+  const RE_OPERATOR = "(" + orReValues([
+    '||',
+    '++',
+    '**',
+    '+.',
+    '*',
+    '/',
+    '*.',
+    '/.',
+    '...'
+  ]) + "|\\|>|&&|==|===)";
+  const RE_OPERATOR_SPACED = "\\s+" + RE_OPERATOR + "\\s+";
 
-  var KEYWORDS = {
+  const KEYWORDS = {
     keyword:
       'and as asr assert begin class constraint do done downto else end exception external ' +
       'for fun function functor if in include inherit initializer ' +
@@ -49,12 +59,12 @@ function reasonml(hljs) {
       'true false'
   };
 
-  var RE_NUMBER = '\\b(0[xX][a-fA-F0-9_]+[Lln]?|' +
+  const RE_NUMBER = '\\b(0[xX][a-fA-F0-9_]+[Lln]?|' +
     '0[oO][0-7_]+[Lln]?|' +
     '0[bB][01_]+[Lln]?|' +
     '[0-9][0-9_]*([Lln]|(\\.[0-9_]*)?([eE][-+]?[0-9_]+)?)?)';
 
-  var NUMBER_MODE = {
+  const NUMBER_MODE = {
     className: 'number',
     relevance: 0,
     variants: [
@@ -62,17 +72,17 @@ function reasonml(hljs) {
         begin: RE_NUMBER
       },
       {
-        begin: '\\(\\-' + RE_NUMBER + '\\)'
+        begin: '\\(-' + RE_NUMBER + '\\)'
       }
     ]
   };
 
-  var OPERATOR_MODE = {
+  const OPERATOR_MODE = {
     className: 'operator',
     relevance: 0,
     begin: RE_OPERATOR
   };
-  var LIST_CONTENTS_MODES = [
+  const LIST_CONTENTS_MODES = [
     {
       className: 'identifier',
       relevance: 0,
@@ -82,12 +92,13 @@ function reasonml(hljs) {
     NUMBER_MODE
   ];
 
-  var MODULE_ACCESS_CONTENTS = [
+  const MODULE_ACCESS_CONTENTS = [
     hljs.QUOTE_STRING_MODE,
     OPERATOR_MODE,
     {
       className: 'module',
-      begin: "\\b" + RE_MODULE_IDENT, returnBegin: true,
+      begin: "\\b" + RE_MODULE_IDENT,
+      returnBegin: true,
       end: "\.",
       contains: [
         {
@@ -99,10 +110,11 @@ function reasonml(hljs) {
     }
   ];
 
-  var PARAMS_CONTENTS = [
+  const PARAMS_CONTENTS = [
     {
       className: 'module',
-      begin: "\\b" + RE_MODULE_IDENT, returnBegin: true,
+      begin: "\\b" + RE_MODULE_IDENT,
+      returnBegin: true,
       end: "\.",
       relevance: 0,
       contains: [
@@ -115,7 +127,7 @@ function reasonml(hljs) {
     }
   ];
 
-  var PARAMS_MODE = {
+  const PARAMS_MODE = {
     begin: RE_IDENT,
     end: '(,|\\n|\\))',
     relevance: 0,
@@ -132,7 +144,7 @@ function reasonml(hljs) {
     ]
   };
 
-  var FUNCTION_BLOCK_MODE = {
+  const FUNCTION_BLOCK_MODE = {
     className: 'function',
     relevance: 0,
     keywords: KEYWORDS,
@@ -153,7 +165,7 @@ function reasonml(hljs) {
                 begin: RE_PARAM
               },
               {
-                begin: /\(\s*\)/,
+                begin: /\(\s*\)/
               }
             ]
           }
@@ -168,9 +180,7 @@ function reasonml(hljs) {
           {
             className: 'params',
             relevance: 0,
-            variants: [
-              PARAMS_MODE
-            ]
+            variants: [ PARAMS_MODE ]
           }
         ]
       },
@@ -181,7 +191,7 @@ function reasonml(hljs) {
   };
   MODULE_ACCESS_CONTENTS.push(FUNCTION_BLOCK_MODE);
 
-  var CONSTRUCTOR_MODE = {
+  const CONSTRUCTOR_MODE = {
     className: 'constructor',
     begin: RE_MODULE_IDENT + '\\(',
     end: '\\)',
@@ -197,7 +207,7 @@ function reasonml(hljs) {
     ]
   };
 
-  var PATTERN_MATCH_BLOCK_MODE = {
+  const PATTERN_MATCH_BLOCK_MODE = {
     className: 'pattern-match',
     begin: '\\|',
     returnBegin: true,
@@ -215,7 +225,7 @@ function reasonml(hljs) {
     ]
   };
 
-  var MODULE_ACCESS_MODE = {
+  const MODULE_ACCESS_MODE = {
     className: 'module-access',
     keywords: KEYWORDS,
     returnBegin: true,
@@ -237,8 +247,8 @@ function reasonml(hljs) {
         ].concat(MODULE_ACCESS_CONTENTS)
       },
       {
-        begin: "\\b(" + RE_MODULE_IDENT + "\\.)+{",
-        end: "}"
+        begin: "\\b(" + RE_MODULE_IDENT + "\\.)+\\{",
+        end: /\}/
       }
     ],
     contains: MODULE_ACCESS_CONTENTS
@@ -248,11 +258,13 @@ function reasonml(hljs) {
 
   return {
     name: 'ReasonML',
-    aliases: ['re'],
+    aliases: [ 're' ],
     keywords: KEYWORDS,
-    illegal: '(:\\-|:=|\\${|\\+=)',
+    illegal: '(:-|:=|\\$\\{|\\+=)',
     contains: [
-      hljs.COMMENT('/\\*', '\\*/', { illegal: '^(\\#,\\/\\/)' }),
+      hljs.COMMENT('/\\*', '\\*/', {
+        illegal: '^(#,\\/\\/)'
+      }),
       {
         className: 'character',
         begin: '\'(\\\\[^\']+|[^\'])\'',
@@ -269,7 +281,7 @@ function reasonml(hljs) {
         className: 'literal',
         begin: '\\[\\|',
         end: '\\|\\]',
-        relevance:  0,
+        relevance: 0,
         contains: LIST_CONTENTS_MODES
       },
       {
@@ -283,7 +295,7 @@ function reasonml(hljs) {
       {
         className: 'operator',
         begin: RE_OPERATOR_SPACED,
-        illegal: '\\-\\->',
+        illegal: '-->',
         relevance: 0
       },
       NUMBER_MODE,
@@ -292,8 +304,8 @@ function reasonml(hljs) {
       FUNCTION_BLOCK_MODE,
       {
         className: 'module-def',
-        begin: "\\bmodule\\s+" + RE_IDENT + "\\s+" + RE_MODULE_IDENT + "\\s+=\\s+{",
-        end: "}",
+        begin: "\\bmodule\\s+" + RE_IDENT + "\\s+" + RE_MODULE_IDENT + "\\s+=\\s+\\{",
+        end: /\}/,
         returnBegin: true,
         keywords: KEYWORDS,
         relevance: 0,
@@ -304,8 +316,8 @@ function reasonml(hljs) {
             begin: RE_MODULE_IDENT
           },
           {
-            begin: '{',
-            end: '}',
+            begin: /\{/,
+            end: /\}/,
             skip: true
           }
         ].concat(MODULE_ACCESS_CONTENTS)

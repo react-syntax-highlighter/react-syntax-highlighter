@@ -19,18 +19,29 @@ function ldif(hljs) {
     contains: [
       {
         className: 'attribute',
-        begin: '^dn', end: ': ', excludeEnd: true,
-        starts: {end: '$', relevance: 0},
+        begin: '^dn',
+        end: ': ',
+        excludeEnd: true,
+        starts: {
+          end: '$',
+          relevance: 0
+        },
         relevance: 10
       },
       {
         className: 'attribute',
-        begin: '^\\w', end: ': ', excludeEnd: true,
-        starts: {end: '$', relevance: 0}
+        begin: '^\\w',
+        end: ': ',
+        excludeEnd: true,
+        starts: {
+          end: '$',
+          relevance: 0
+        }
       },
       {
         className: 'literal',
-        begin: '^-', end: '$'
+        begin: '^-',
+        end: '$'
       },
       hljs.HASH_COMMENT_MODE
     ]

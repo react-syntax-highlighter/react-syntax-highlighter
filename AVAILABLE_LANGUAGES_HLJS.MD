@@ -117,6 +117,7 @@
 * nginx
 * nim
 * nix
+* nodeRepl (node-repl)
 * nsis
 * objectivec
 * ocaml

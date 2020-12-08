@@ -17,7 +17,7 @@ Website: https://haxe.org
 
 function haxe(hljs) {
 
-  var HAXE_BASIC_TYPES = 'Int Float String Bool Dynamic Void Array ';
+  const HAXE_BASIC_TYPES = 'Int Float String Bool Dynamic Void Array ';
 
   return {
     name: 'Haxe',
@@ -33,15 +33,21 @@ function haxe(hljs) {
         'true false null _'
     },
     contains: [
-      { className: 'string', // interpolate-able strings
-        begin: '\'', end: '\'',
+      {
+        className: 'string', // interpolate-able strings
+        begin: '\'',
+        end: '\'',
         contains: [
           hljs.BACKSLASH_ESCAPE,
-          { className: 'subst', // interpolation
-            begin: '\\$\\{', end: '\\}'
+          {
+            className: 'subst', // interpolation
+            begin: '\\$\\{',
+            end: '\\}'
           },
-          { className: 'subst', // interpolation
-            begin: '\\$', end: '\\W}'
+          {
+            className: 'subst', // interpolation
+            begin: '\\$',
+            end: /\W\}/
           }
         ]
       },
@@ -49,46 +55,72 @@ function haxe(hljs) {
       hljs.C_LINE_COMMENT_MODE,
       hljs.C_BLOCK_COMMENT_MODE,
       hljs.C_NUMBER_MODE,
-      { className: 'meta', // compiler meta
-        begin: '@:', end: '$'
+      {
+        className: 'meta', // compiler meta
+        begin: '@:',
+        end: '$'
       },
-      { className: 'meta', // compiler conditionals
-        begin: '#', end: '$',
-        keywords: {'meta-keyword': 'if else elseif end error'}
+      {
+        className: 'meta', // compiler conditionals
+        begin: '#',
+        end: '$',
+        keywords: {
+          'meta-keyword': 'if else elseif end error'
+        }
       },
-      { className: 'type', // function types
-        begin: ':[ \t]*', end: '[^A-Za-z0-9_ \t\\->]',
-        excludeBegin: true, excludeEnd: true,
+      {
+        className: 'type', // function types
+        begin: ':[ \t]*',
+        end: '[^A-Za-z0-9_ \t\\->]',
+        excludeBegin: true,
+        excludeEnd: true,
         relevance: 0
       },
-      { className: 'type', // types
-        begin: ':[ \t]*', end: '\\W',
-        excludeBegin: true, excludeEnd: true
+      {
+        className: 'type', // types
+        begin: ':[ \t]*',
+        end: '\\W',
+        excludeBegin: true,
+        excludeEnd: true
       },
-      { className: 'type', // instantiation
-        begin: 'new *', end: '\\W',
-        excludeBegin: true, excludeEnd: true
+      {
+        className: 'type', // instantiation
+        begin: 'new *',
+        end: '\\W',
+        excludeBegin: true,
+        excludeEnd: true
       },
-      { className: 'class', // enums
-        beginKeywords: 'enum', end: '\\{',
+      {
+        className: 'class', // enums
+        beginKeywords: 'enum',
+        end: '\\{',
+        contains: [hljs.TITLE_MODE]
+      },
+      {
+        className: 'class', // abstracts
+        beginKeywords: 'abstract',
+        end: '[\\{$]',
         contains: [
-          hljs.TITLE_MODE
-        ]
-      },
-      { className: 'class', // abstracts
-        beginKeywords: 'abstract', end: '[\\{$]',
-        contains: [
-          { className: 'type',
-            begin: '\\(', end: '\\)',
-            excludeBegin: true, excludeEnd: true
+          {
+            className: 'type',
+            begin: '\\(',
+            end: '\\)',
+            excludeBegin: true,
+            excludeEnd: true
           },
-          { className: 'type',
-            begin: 'from +', end: '\\W',
-            excludeBegin: true, excludeEnd: true
+          {
+            className: 'type',
+            begin: 'from +',
+            end: '\\W',
+            excludeBegin: true,
+            excludeEnd: true
           },
-          { className: 'type',
-            begin: 'to +', end: '\\W',
-            excludeBegin: true, excludeEnd: true
+          {
+            className: 'type',
+            begin: 'to +',
+            end: '\\W',
+            excludeBegin: true,
+            excludeEnd: true
           },
           hljs.TITLE_MODE
         ],
@@ -96,11 +128,15 @@ function haxe(hljs) {
           keyword: 'abstract from to'
         }
       },
-      { className: 'class', // classes
-        begin: '\\b(class|interface) +', end: '[\\{$]',  excludeEnd: true,
+      {
+        className: 'class', // classes
+        begin: '\\b(class|interface) +',
+        end: '[\\{$]',
+        excludeEnd: true,
         keywords: 'class interface',
         contains: [
-          { className: 'keyword',
+          {
+            className: 'keyword',
             begin: '\\b(extends|implements) +',
             keywords: 'extends implements',
             contains: [
@@ -114,12 +150,13 @@ function haxe(hljs) {
           hljs.TITLE_MODE
         ]
       },
-      { className: 'function',
-        beginKeywords: 'function', end: '\\(', excludeEnd: true,
+      {
+        className: 'function',
+        beginKeywords: 'function',
+        end: '\\(',
+        excludeEnd: true,
         illegal: '\\S',
-        contains: [
-          hljs.TITLE_MODE
-        ]
+        contains: [hljs.TITLE_MODE]
       }
     ],
     illegal: /<\//

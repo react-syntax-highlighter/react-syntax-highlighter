@@ -15,18 +15,18 @@ Website: https://en.wikipedia.org/wiki/Smalltalk
 */
 
 function smalltalk(hljs) {
-  var VAR_IDENT_RE = '[a-z][a-zA-Z0-9_]*';
-  var CHAR = {
+  const VAR_IDENT_RE = '[a-z][a-zA-Z0-9_]*';
+  const CHAR = {
     className: 'string',
     begin: '\\$.{1}'
   };
-  var SYMBOL = {
+  const SYMBOL = {
     className: 'symbol',
     begin: '#' + hljs.UNDERSCORE_IDENT_RE
   };
   return {
     name: 'Smalltalk',
-    aliases: ['st'],
+    aliases: [ 'st' ],
     keywords: 'self super nil true false thisContext', // only 6
     contains: [
       hljs.COMMENT('"', '"'),
@@ -48,12 +48,16 @@ function smalltalk(hljs) {
         // explosion under V8. It effectively means `| var1 var2 ... |` with
         // whitespace adjacent to `|` being optional.
         begin: '\\|[ ]*' + VAR_IDENT_RE + '([ ]+' + VAR_IDENT_RE + ')*[ ]*\\|',
-        returnBegin: true, end: /\|/,
+        returnBegin: true,
+        end: /\|/,
         illegal: /\S/,
-        contains: [{begin: '(\\|[ ]*)?' + VAR_IDENT_RE}]
+        contains: [ {
+          begin: '(\\|[ ]*)?' + VAR_IDENT_RE
+        } ]
       },
       {
-        begin: '\\#\\(', end: '\\)',
+        begin: '#\\(',
+        end: '\\)',
         contains: [
           hljs.APOS_STRING_MODE,
           CHAR,

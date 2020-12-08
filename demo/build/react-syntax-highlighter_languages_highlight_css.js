@@ -54,10 +54,10 @@ function css(hljs) {
   };
   var AT_IDENTIFIER = '@[a-z-]+'; // @font-face
   var AT_MODIFIERS = "and or not only";
-  var AT_PROPERTY_RE = /@\-?\w[\w]*(\-\w+)*/; // @-webkit-keyframes
+  var AT_PROPERTY_RE = /@-?\w[\w]*(-\w+)*/; // @-webkit-keyframes
   var IDENT_RE = '[a-zA-Z-][a-zA-Z0-9_-]*';
   var RULE = {
-    begin: /(?:[A-Z\_\.\-]+|--[a-zA-Z0-9_-]+)\s*:/, returnBegin: true, end: ';', endsWithParent: true,
+    begin: /([*]\s?)?(?:[A-Z_.\-\\]+|--[a-zA-Z0-9_-]+)\s*(\/\*\*\/)?:/, returnBegin: true, end: ';', endsWithParent: true,
     contains: [
       ATTRIBUTE
     ]
@@ -66,14 +66,14 @@ function css(hljs) {
   return {
     name: 'CSS',
     case_insensitive: true,
-    illegal: /[=\/|'\$]/,
+    illegal: /[=|'\$]/,
     contains: [
       hljs.C_BLOCK_COMMENT_MODE,
       {
         className: 'selector-id', begin: /#[A-Za-z0-9_-]+/
       },
       {
-        className: 'selector-class', begin: /\.[A-Za-z0-9_-]+/
+        className: 'selector-class', begin: '\\.' + IDENT_RE
       },
       {
         className: 'selector-attr',
@@ -86,7 +86,7 @@ function css(hljs) {
       },
       {
         className: 'selector-pseudo',
-        begin: /:(:)?[a-zA-Z0-9\_\-\+\(\)"'.]+/
+        begin: /:(:)?[a-zA-Z0-9_+()"'.-]+/
       },
       // matching these here allows us to treat them more like regular CSS
       // rules so everything between the {} gets regular rule highlighting,
@@ -129,10 +129,11 @@ function css(hljs) {
         relevance: 0
       },
       {
-        begin: '{', end: '}',
+        begin: /\{/, end: /\}/,
         illegal: /\S/,
         contains: [
           hljs.C_BLOCK_COMMENT_MODE,
+          { begin: /;/ }, // empty ; rule
           RULE,
         ]
       }

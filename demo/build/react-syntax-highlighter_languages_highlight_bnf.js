@@ -21,7 +21,8 @@ function bnf(hljs) {
       // Attribute
       {
         className: 'attribute',
-        begin: /</, end: />/
+        begin: /</,
+        end: />/
       },
       // Specific
       {
@@ -29,7 +30,8 @@ function bnf(hljs) {
         end: /$/,
         contains: [
           {
-            begin: /</, end: />/
+            begin: /</,
+            end: />/
           },
           // Common
           hljs.C_LINE_COMMENT_MODE,

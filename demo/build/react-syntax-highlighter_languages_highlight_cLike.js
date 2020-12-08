@@ -7,73 +7,114 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+/**
+ * @param {string} value
+ * @returns {RegExp}
+ * */
+
+/**
+ * @param {RegExp | string } re
+ * @returns {string}
+ */
+function source(re) {
+  if (!re) return null;
+  if (typeof re === "string") return re;
+
+  return re.source;
+}
+
+/**
+ * @param {RegExp | string } re
+ * @returns {string}
+ */
+function optional(re) {
+  return concat('(', re, ')?');
+}
+
+/**
+ * @param {...(RegExp | string) } args
+ * @returns {string}
+ */
+function concat(...args) {
+  const joined = args.map((x) => source(x)).join("");
+  return joined;
+}
+
 /*
 Language: C-like foundation grammar for C/C++ grammars
 Author: Ivan Sagalaev <maniac@softwaremaniacs.org>
 Contributors: Evgeny Stepanischev <imbolk@gmail.com>, Zaven Muradyan <megalivoithos@gmail.com>, Roel Deckers <admin@codingcat.nl>, Sam Wu <samsam2310@gmail.com>, Jordi Petit <jordi.petit@gmail.com>, Pieter Vantorre <pietervantorre@gmail.com>, Google Inc. (David Benjamin) <davidben@google.com>
-Category: common, system
-*/
-
-/* In the future the intention is to split out the C/C++ grammars distinctly
-since they are separate languages.  They will likely share a common foundation
-though, and this file sets the groundwork for that - so that we get the breaking
-change in v10 and don't have to change the requirements again later.
-
-See: https://github.com/highlightjs/highlight.js/issues/2146
 */
 
 /** @type LanguageFn */
 function cLike(hljs) {
-  function optional(s) {
-    return '(?:' + s + ')?';
-  }
-  var DECLTYPE_AUTO_RE = 'decltype\\(auto\\)';
-  var NAMESPACE_RE = '[a-zA-Z_]\\w*::';
-  var TEMPLATE_ARGUMENT_RE = '<.*?>';
-  var FUNCTION_TYPE_RE = '(' +
+  // added for historic reasons because `hljs.C_LINE_COMMENT_MODE` does
+  // not include such support nor can we be sure all the grammars depending
+  // on it would desire this behavior
+  const C_LINE_COMMENT_MODE = hljs.COMMENT('//', '$', {
+    contains: [
+      {
+        begin: /\\\n/
+      }
+    ]
+  });
+  const DECLTYPE_AUTO_RE = 'decltype\\(auto\\)';
+  const NAMESPACE_RE = '[a-zA-Z_]\\w*::';
+  const TEMPLATE_ARGUMENT_RE = '<[^<>]+>';
+  const FUNCTION_TYPE_RE = '(' +
     DECLTYPE_AUTO_RE + '|' +
-    optional(NAMESPACE_RE) +'[a-zA-Z_]\\w*' + optional(TEMPLATE_ARGUMENT_RE) +
+    optional(NAMESPACE_RE) +
+    '[a-zA-Z_]\\w*' + optional(TEMPLATE_ARGUMENT_RE) +
   ')';
-  var CPP_PRIMITIVE_TYPES = {
+  const CPP_PRIMITIVE_TYPES = {
     className: 'keyword',
     begin: '\\b[a-z\\d_]*_t\\b'
   };
 
   // https://en.cppreference.com/w/cpp/language/escape
   // \\ \x \xFF \u2837 \u00323747 \374
-  var CHARACTER_ESCAPES = '\\\\(x[0-9A-Fa-f]{2}|u[0-9A-Fa-f]{4,8}|[0-7]{3}|\\S)';
-  var STRINGS = {
+  const CHARACTER_ESCAPES = '\\\\(x[0-9A-Fa-f]{2}|u[0-9A-Fa-f]{4,8}|[0-7]{3}|\\S)';
+  const STRINGS = {
     className: 'string',
     variants: [
       {
-        begin: '(u8?|U|L)?"', end: '"',
+        begin: '(u8?|U|L)?"',
+        end: '"',
         illegal: '\\n',
-        contains: [hljs.BACKSLASH_ESCAPE]
+        contains: [ hljs.BACKSLASH_ESCAPE ]
       },
       {
-        begin: '(u8?|U|L)?\'(' + CHARACTER_ESCAPES + "|.)", end: '\'',
+        begin: '(u8?|U|L)?\'(' + CHARACTER_ESCAPES + "|.)",
+        end: '\'',
         illegal: '.'
       },
       hljs.END_SAME_AS_BEGIN({
         begin: /(?:u8?|U|L)?R"([^()\\ ]{0,16})\(/,
-        end: /\)([^()\\ ]{0,16})"/,
+        end: /\)([^()\\ ]{0,16})"/
       })
     ]
   };
 
-  var NUMBERS = {
+  const NUMBERS = {
     className: 'number',
     variants: [
-      { begin: '\\b(0b[01\']+)' },
-      { begin: '(-?)\\b([\\d\']+(\\.[\\d\']*)?|\\.[\\d\']+)(u|U|l|L|ul|UL|f|F|b|B)' },
-      { begin: '(-?)(\\b0[xX][a-fA-F0-9\']+|(\\b[\\d\']+(\\.[\\d\']*)?|\\.[\\d\']+)([eE][-+]?[\\d\']+)?)' }
+      {
+        begin: '\\b(0b[01\']+)'
+      },
+      {
+        begin: '(-?)\\b([\\d\']+(\\.[\\d\']*)?|\\.[\\d\']+)(u|U|l|L|ul|UL|f|F|b|B)'
+      },
+      {
+        begin: '(-?)(\\b0[xX][a-fA-F0-9\']+|(\\b[\\d\']+(\\.[\\d\']*)?|\\.[\\d\']+)([eE][-+]?[\\d\']+)?)'
+      }
     ],
     relevance: 0
   };
 
-  var PREPROCESSOR =       {
+  const PREPROCESSOR = {
     className: 'meta',
-    begin: /#\s*[a-z]+\b/, end: /$/,
+    begin: /#\s*[a-z]+\b/,
+    end: /$/,
     keywords: {
       'meta-keyword':
         'if else elif endif define undef warning error line ' +
@@ -81,28 +122,32 @@ function cLike(hljs) {
     },
     contains: [
       {
-        begin: /\\\n/, relevance: 0
+        begin: /\\\n/,
+        relevance: 0
       },
-      hljs.inherit(STRINGS, {className: 'meta-string'}),
+      hljs.inherit(STRINGS, {
+        className: 'meta-string'
+      }),
       {
         className: 'meta-string',
-        begin: /<.*?>/, end: /$/,
-        illegal: '\\n',
+        begin: /<.*?>/,
+        end: /$/,
+        illegal: '\\n'
       },
-      hljs.C_LINE_COMMENT_MODE,
+      C_LINE_COMMENT_MODE,
       hljs.C_BLOCK_COMMENT_MODE
     ]
   };
 
-  var TITLE_MODE = {
+  const TITLE_MODE = {
     className: 'title',
     begin: optional(NAMESPACE_RE) + hljs.IDENT_RE,
     relevance: 0
   };
 
-  var FUNCTION_TITLE = optional(NAMESPACE_RE) + hljs.IDENT_RE + '\\s*\\(';
+  const FUNCTION_TITLE = optional(NAMESPACE_RE) + hljs.IDENT_RE + '\\s*\\(';
 
-  var CPP_KEYWORDS = {
+  const CPP_KEYWORDS = {
     keyword: 'int float while private char char8_t char16_t char32_t catch import module export virtual operator sizeof ' +
       'dynamic_cast|10 typedef const_cast|10 const for static_cast|10 union namespace ' +
       'unsigned long volatile static protected bool template mutable if public friend ' +
@@ -127,73 +172,87 @@ function cLike(hljs) {
     literal: 'true false nullptr NULL'
   };
 
-  var EXPRESSION_CONTAINS = [
+  const EXPRESSION_CONTAINS = [
+    PREPROCESSOR,
     CPP_PRIMITIVE_TYPES,
-    hljs.C_LINE_COMMENT_MODE,
+    C_LINE_COMMENT_MODE,
     hljs.C_BLOCK_COMMENT_MODE,
     NUMBERS,
     STRINGS
   ];
 
-  var EXPRESSION_CONTEXT = {
+  const EXPRESSION_CONTEXT = {
     // This mode covers expression context where we can't expect a function
     // definition and shouldn't highlight anything that looks like one:
     // `return some()`, `else if()`, `(x*sum(1, 2))`
     variants: [
-      {begin: /=/, end: /;/},
-      {begin: /\(/, end: /\)/},
-      {beginKeywords: 'new throw return else', end: /;/}
+      {
+        begin: /=/,
+        end: /;/
+      },
+      {
+        begin: /\(/,
+        end: /\)/
+      },
+      {
+        beginKeywords: 'new throw return else',
+        end: /;/
+      }
     ],
     keywords: CPP_KEYWORDS,
     contains: EXPRESSION_CONTAINS.concat([
       {
-        begin: /\(/, end: /\)/,
+        begin: /\(/,
+        end: /\)/,
         keywords: CPP_KEYWORDS,
-        contains: EXPRESSION_CONTAINS.concat(['self']),
+        contains: EXPRESSION_CONTAINS.concat([ 'self' ]),
         relevance: 0
       }
     ]),
     relevance: 0
   };
 
-  var FUNCTION_DECLARATION = {
+  const FUNCTION_DECLARATION = {
     className: 'function',
     begin: '(' + FUNCTION_TYPE_RE + '[\\*&\\s]+)+' + FUNCTION_TITLE,
-    returnBegin: true, end: /[{;=]/,
+    returnBegin: true,
+    end: /[{;=]/,
     excludeEnd: true,
     keywords: CPP_KEYWORDS,
     illegal: /[^\w\s\*&:<>]/,
     contains: [
-
       { // to prevent it from being confused as the function title
         begin: DECLTYPE_AUTO_RE,
         keywords: CPP_KEYWORDS,
-        relevance: 0,
+        relevance: 0
       },
       {
-        begin: FUNCTION_TITLE, returnBegin: true,
-        contains: [TITLE_MODE],
+        begin: FUNCTION_TITLE,
+        returnBegin: true,
+        contains: [ TITLE_MODE ],
         relevance: 0
       },
       {
         className: 'params',
-        begin: /\(/, end: /\)/,
+        begin: /\(/,
+        end: /\)/,
         keywords: CPP_KEYWORDS,
         relevance: 0,
         contains: [
-          hljs.C_LINE_COMMENT_MODE,
+          C_LINE_COMMENT_MODE,
           hljs.C_BLOCK_COMMENT_MODE,
           STRINGS,
           NUMBERS,
           CPP_PRIMITIVE_TYPES,
           // Count matching parentheses.
           {
-            begin: /\(/, end: /\)/,
+            begin: /\(/,
+            end: /\)/,
             keywords: CPP_KEYWORDS,
             relevance: 0,
             contains: [
               'self',
-              hljs.C_LINE_COMMENT_MODE,
+              C_LINE_COMMENT_MODE,
               hljs.C_BLOCK_COMMENT_MODE,
               STRINGS,
               NUMBERS,
@@ -203,14 +262,24 @@ function cLike(hljs) {
         ]
       },
       CPP_PRIMITIVE_TYPES,
-      hljs.C_LINE_COMMENT_MODE,
+      C_LINE_COMMENT_MODE,
       hljs.C_BLOCK_COMMENT_MODE,
       PREPROCESSOR
     ]
   };
 
   return {
-    aliases: ['c', 'cc', 'h', 'c++', 'h++', 'hpp', 'hh', 'hxx', 'cxx'],
+    aliases: [
+      'c',
+      'cc',
+      'h',
+      'c++',
+      'h++',
+      'hpp',
+      'hh',
+      'hxx',
+      'cxx'
+    ],
     keywords: CPP_KEYWORDS,
     // the base c-like language will NEVER be auto-detected, rather the
     // derivitives: c, c++, arduino turn auto-detect back on for themselves
@@ -221,25 +290,32 @@ function cLike(hljs) {
       FUNCTION_DECLARATION,
       EXPRESSION_CONTAINS,
       [
-      PREPROCESSOR,
-      { // containers: ie, `vector <int> rooms (9);`
-        begin: '\\b(deque|list|queue|priority_queue|pair|stack|vector|map|set|bitset|multiset|multimap|unordered_map|unordered_set|unordered_multiset|unordered_multimap|array)\\s*<', end: '>',
-        keywords: CPP_KEYWORDS,
-        contains: ['self', CPP_PRIMITIVE_TYPES]
-      },
-      {
-        begin: hljs.IDENT_RE + '::',
-        keywords: CPP_KEYWORDS
-      },
-      {
-        className: 'class',
-        beginKeywords: 'class struct', end: /[{;:]/,
-        contains: [
-          {begin: /</, end: />/, contains: ['self']}, // skip generic stuff
-          hljs.TITLE_MODE
-        ]
-      }
-    ]),
+        PREPROCESSOR,
+        { // containers: ie, `vector <int> rooms (9);`
+          begin: '\\b(deque|list|queue|priority_queue|pair|stack|vector|map|set|bitset|multiset|multimap|unordered_map|unordered_set|unordered_multiset|unordered_multimap|array)\\s*<',
+          end: '>',
+          keywords: CPP_KEYWORDS,
+          contains: [
+            'self',
+            CPP_PRIMITIVE_TYPES
+          ]
+        },
+        {
+          begin: hljs.IDENT_RE + '::',
+          keywords: CPP_KEYWORDS
+        },
+        {
+          className: 'class',
+          beginKeywords: 'enum class struct union',
+          end: /[{;:<>=]/,
+          contains: [
+            {
+              beginKeywords: "final class struct"
+            },
+            hljs.TITLE_MODE
+          ]
+        }
+      ]),
     exports: {
       preprocessor: PREPROCESSOR,
       strings: STRINGS,

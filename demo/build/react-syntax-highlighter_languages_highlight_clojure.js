@@ -25,7 +25,7 @@ function clojure(hljs) {
     'builtin-name':
       // Clojure keywords
       globals + ' ' +
-      'cond apply if-not if-let if not not= = < > <= >= == + / * - rem ' +
+      'cond apply if-not if-let if not not= =|0 <|0 >|0 <=|0 >=|0 ==|0 +|0 /|0 *|0 -|0 rem ' +
       'quot neg? pos? delay? symbol? keyword? true? false? integer? empty? coll? list? ' +
       'set? ifn? fn? associative? sequential? sorted? counted? reversible? number? decimal? ' +
       'class? distinct? isa? float? rational? reduced? ratio? odd? even? char? seq? vector? ' +
@@ -97,7 +97,9 @@ function clojure(hljs) {
   };
   var NAME = {
     keywords: keywords,
-    className: 'name', begin: SYMBOL_RE,
+    className: 'name',
+    begin: SYMBOL_RE,
+    relevance: 0,
     starts: BODY
   };
   var DEFAULT_CONTAINS = [LIST, STRING, HINT, HINT_COL, COMMENT, KEY, COLLECTION, NUMBER, LITERAL, SYMBOL];
@@ -105,7 +107,7 @@ function clojure(hljs) {
   var GLOBAL = {
     beginKeywords: globals,
     lexemes: SYMBOL_RE,
-    end: '(\\[|\\#|\\d|"|:|\\{|\\)|\\(|$)',
+    end: '(\\[|#|\\d|"|:|\\{|\\)|\\(|$)',
     contains: [
       {
         className: 'title',

@@ -82,7 +82,7 @@ function ocaml(hljs) {
         relevance: 0
       },
       {
-        begin: /[-=]>/ // relevance booster
+        begin: /->/ // relevance booster
       }
     ]
   }

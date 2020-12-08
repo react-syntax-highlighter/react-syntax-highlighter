@@ -121,6 +121,7 @@ export default [
   'nginx',
   'nim',
   'nix',
+  'node-repl',
   'nsis',
   'objectivec',
   'ocaml',

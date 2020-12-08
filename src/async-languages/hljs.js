@@ -118,6 +118,7 @@ export default {
   nginx: createLanguageAsyncLoader("nginx", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_nginx" */ "highlight.js/lib/languages/nginx")),
   nim: createLanguageAsyncLoader("nim", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_nim" */ "highlight.js/lib/languages/nim")),
   nix: createLanguageAsyncLoader("nix", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_nix" */ "highlight.js/lib/languages/nix")),
+  nodeRepl: createLanguageAsyncLoader("nodeRepl", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_nodeRepl" */ "highlight.js/lib/languages/node-repl")),
   nsis: createLanguageAsyncLoader("nsis", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_nsis" */ "highlight.js/lib/languages/nsis")),
   objectivec: createLanguageAsyncLoader("objectivec", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_objectivec" */ "highlight.js/lib/languages/objectivec")),
   ocaml: createLanguageAsyncLoader("ocaml", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_ocaml" */ "highlight.js/lib/languages/ocaml")),

@@ -15,8 +15,9 @@ Website: https://blitzresearch.itch.io/monkey2
 */
 
 function monkey(hljs) {
-  var NUMBER = {
-    className: 'number', relevance: 0,
+  const NUMBER = {
+    className: 'number',
+    relevance: 0,
     variants: [
       {
         begin: '[$][a-fA-F0-9]+'
@@ -51,15 +52,15 @@ function monkey(hljs) {
       ),
       {
         className: 'function',
-        beginKeywords: 'function method', end: '[(=:]|$',
+        beginKeywords: 'function method',
+        end: '[(=:]|$',
         illegal: /\n/,
-        contains: [
-          hljs.UNDERSCORE_TITLE_MODE
-        ]
+        contains: [ hljs.UNDERSCORE_TITLE_MODE ]
       },
       {
         className: 'class',
-        beginKeywords: 'class interface', end: '$',
+        beginKeywords: 'class interface',
+        end: '$',
         contains: [
           {
             beginKeywords: 'extends implements'
@@ -73,21 +74,25 @@ function monkey(hljs) {
       },
       {
         className: 'meta',
-        begin: '\\s*#', end: '$',
-        keywords: {'meta-keyword': 'if else elseif endif end then'}
+        begin: '\\s*#',
+        end: '$',
+        keywords: {
+          'meta-keyword': 'if else elseif endif end then'
+        }
       },
       {
         className: 'meta',
         begin: '^\\s*strict\\b'
       },
       {
-        beginKeywords: 'alias', end: '=',
-        contains: [hljs.UNDERSCORE_TITLE_MODE]
+        beginKeywords: 'alias',
+        end: '=',
+        contains: [ hljs.UNDERSCORE_TITLE_MODE ]
       },
       hljs.QUOTE_STRING_MODE,
       NUMBER
     ]
-  }
+  };
 }
 
 module.exports = monkey;

@@ -524,7 +524,7 @@ function _1c(hljs) {
       STRINGS,
       DATE
     ]
-  }
+  };
 }
 
 module.exports = _1c;

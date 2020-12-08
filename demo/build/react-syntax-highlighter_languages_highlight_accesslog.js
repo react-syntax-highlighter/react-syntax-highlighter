@@ -14,10 +14,10 @@
  Website: https://httpd.apache.org/docs/2.4/logs.html#accesslog
  */
 
- /** @type LanguageFn */
+/** @type LanguageFn */
 function accesslog(hljs) {
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
-  var HTTP_VERBS = [
+  const HTTP_VERBS = [
     "GET", "POST", "HEAD", "PUT", "DELETE", "CONNECT", "OPTIONS", "PATCH", "TRACE"
   ];
   return {
@@ -27,7 +27,7 @@ function accesslog(hljs) {
       {
         className: 'number',
         begin: '^\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}(:\\d{1,5})?\\b',
-        relevance:5
+        relevance: 5
       },
       // Other numbers
       {
@@ -38,13 +38,14 @@ function accesslog(hljs) {
       // Requests
       {
         className: 'string',
-        begin: '"(' + HTTP_VERBS.join("|") + ')', end: '"',
+        begin: '"(' + HTTP_VERBS.join("|") + ')',
+        end: '"',
         keywords: HTTP_VERBS.join(" "),
         illegal: '\\n',
         relevance: 5,
         contains: [{
           begin: 'HTTP/[12]\\.\\d',
-          relevance:5
+          relevance: 5
         }]
       },
       // Dates
@@ -59,21 +60,24 @@ function accesslog(hljs) {
       },
       {
         className: 'string',
-        begin: /\[/, end: /\]/,
+        begin: /\[/,
+        end: /\]/,
         illegal: '\\n',
         relevance: 0
       },
       // User agent / relevance boost
       {
         className: 'string',
-        begin: '"Mozilla/\\d\\.\\d \\\(', end: '"',
+        begin: '"Mozilla/\\d\\.\\d \\(',
+        end: '"',
         illegal: '\\n',
         relevance: 3
       },
       // Strings
       {
         className: 'string',
-        begin: '"', end: '"',
+        begin: '"',
+        end: '"',
         illegal: '\\n',
         relevance: 0
       }

@@ -45,6 +45,7 @@
 * gml
 * googlecode
 * gradientDark
+* gradientLight
 * grayscale
 * gruvboxDark
 * gruvboxLight
@@ -82,6 +83,8 @@
 * solarizedDark
 * solarizedLight
 * srcery
+* stackoverflowDark
+* stackoverflowLight
 * sunburst
 * tomorrowNightBlue
 * tomorrowNightBright

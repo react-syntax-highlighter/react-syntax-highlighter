@@ -16,12 +16,12 @@ Category: common
 */
 
 function objectivec(hljs) {
-  var API_CLASS = {
+  const API_CLASS = {
     className: 'built_in',
-    begin: '\\b(AV|CA|CF|CG|CI|CL|CM|CN|CT|MK|MP|MTK|MTL|NS|SCN|SK|UI|WK|XC)\\w+',
+    begin: '\\b(AV|CA|CF|CG|CI|CL|CM|CN|CT|MK|MP|MTK|MTL|NS|SCN|SK|UI|WK|XC)\\w+'
   };
-  var IDENTIFIER_RE = /[a-zA-Z@][a-zA-Z0-9_]*/;
-  var OBJC_KEYWORDS = {
+  const IDENTIFIER_RE = /[a-zA-Z@][a-zA-Z0-9_]*/;
+  const OBJC_KEYWORDS = {
     $pattern: IDENTIFIER_RE,
     keyword:
       'int float while char export sizeof typedef const struct for union ' +
@@ -51,13 +51,19 @@ function objectivec(hljs) {
     built_in:
       'BOOL dispatch_once_t dispatch_queue_t dispatch_sync dispatch_async dispatch_once'
   };
-  var CLASS_KEYWORDS = {
+  const CLASS_KEYWORDS = {
     $pattern: IDENTIFIER_RE,
     keyword: '@interface @class @protocol @implementation'
   };
   return {
     name: 'Objective-C',
-    aliases: ['mm', 'objc', 'obj-c'],
+    aliases: [
+      'mm',
+      'objc',
+      'obj-c',
+      'obj-c++',
+      'objective-c++'
+    ],
     keywords: OBJC_KEYWORDS,
     illegal: '</',
     contains: [
@@ -71,15 +77,17 @@ function objectivec(hljs) {
         className: 'string',
         variants: [
           {
-            begin: '@"', end: '"',
+            begin: '@"',
+            end: '"',
             illegal: '\\n',
-            contains: [hljs.BACKSLASH_ESCAPE]
+            contains: [ hljs.BACKSLASH_ESCAPE ]
           }
         ]
       },
       {
         className: 'meta',
-        begin: /#\s*[a-z]+\b/, end: /$/,
+        begin: /#\s*[a-z]+\b/,
+        end: /$/,
         keywords: {
           'meta-keyword':
             'if else elif endif define undef warning error line ' +
@@ -87,13 +95,17 @@ function objectivec(hljs) {
         },
         contains: [
           {
-            begin: /\\\n/, relevance: 0
+            begin: /\\\n/,
+            relevance: 0
           },
-          hljs.inherit(hljs.QUOTE_STRING_MODE, {className: 'meta-string'}),
+          hljs.inherit(hljs.QUOTE_STRING_MODE, {
+            className: 'meta-string'
+          }),
           {
             className: 'meta-string',
-            begin: /<.*?>/, end: /$/,
-            illegal: '\\n',
+            begin: /<.*?>/,
+            end: /$/,
+            illegal: '\\n'
           },
           hljs.C_LINE_COMMENT_MODE,
           hljs.C_BLOCK_COMMENT_MODE
@@ -101,14 +113,14 @@ function objectivec(hljs) {
       },
       {
         className: 'class',
-        begin: '(' + CLASS_KEYWORDS.keyword.split(' ').join('|') + ')\\b', end: '({|$)', excludeEnd: true,
+        begin: '(' + CLASS_KEYWORDS.keyword.split(' ').join('|') + ')\\b',
+        end: /(\{|$)/,
+        excludeEnd: true,
         keywords: CLASS_KEYWORDS,
-        contains: [
-          hljs.UNDERSCORE_TITLE_MODE
-        ]
+        contains: [ hljs.UNDERSCORE_TITLE_MODE ]
       },
       {
-        begin: '\\.'+hljs.UNDERSCORE_IDENT_RE,
+        begin: '\\.' + hljs.UNDERSCORE_IDENT_RE,
         relevance: 0
       }
     ]
