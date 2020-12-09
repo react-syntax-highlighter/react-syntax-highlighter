@@ -1,5 +1,8 @@
 # Changelog
 
+## 15.4.3 / 2020-12-07
+- Fixed `highlight` version regression
+
 ## 15.4.2 / 2020-12-07
 - Updated `lowlight` to 1.17.0 to match `highlight` dependency version
 
