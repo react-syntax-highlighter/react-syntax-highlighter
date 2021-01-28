@@ -44,17 +44,21 @@ I do realize that javascript styles are not for everyone, so you can optionally 
 - `wrapLongLines` - boolean to specify whether to style the `<code>` block with `white-space: pre-wrap` or `white-space: pre`. [Demo](https://react-syntax-highlighter.github.io/react-syntax-highlighter/demo/)
 - `lineProps` - props to be passed to the span wrapping each line if wrapLines is true. Can be either an object or a function that receives current line number as argument and returns props object.
 - `renderer` - an optional custom renderer for rendering lines of code. See <a href="https://github.com/conorhastings/react-syntax-highlighter-virtualized-renderer">here</a> for an example.
-- `lineNumberRenderer` an optional custom renderer for rendering line number. ({ number, style }) => JSX.Element, default renderer is
+- `lineNumberRenderer` an optional custom renderer for rendering line number. ({ number, style, showInlineLineNumbers }) => JSX.Element, default renderer is
 
 ```js
-function defaultLineNumberRenderer({ number, style }) {
+function defaultLineNumberRenderer({ number, style, showInlineLineNumbers }) {
   return (
     <span
       key={`line-${number}`}
-      className="react-syntax-highlighter-line-number"
-      style={typeof style === 'function' ? style(number) : style}
+      className={
+        showInlineLineNumbers
+          ? 'comment linenumber react-syntax-highlighter-line-number'
+          : 'react-syntax-highlighter-line-number'
+      }
+      style={style}
     >
-      {`${number}\n`}
+      {showInlineLineNumbers ? `${number}` : `${number}\n`}
     </span>
   );
 }
