@@ -136,14 +136,12 @@ export function createChildren(stylesheet, useInlineStyles) {
   return children => {
     childrenCount += 1;
     return children.map((child, i) =>
-      React.isValidElement(child)
-        ? child
-        : createElement({
-            node: child,
-            stylesheet,
-            useInlineStyles,
-            key: `code-segment-${childrenCount}-${i}`
-          })
+      createElement({
+        node: child,
+        stylesheet,
+        useInlineStyles,
+        key: `code-segment-${childrenCount}-${i}`
+      })
     );
   };
 }
@@ -210,5 +208,7 @@ export default function createElement({
         {children}
       </TagName>
     );
+  } else if (React.isValidElement(node)) {
+    return node;
   }
 }

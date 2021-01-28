@@ -7,14 +7,18 @@ function getNewLines(str) {
   return str.match(newLineRegex);
 }
 
-function defaultLineNumberRenderer({ number, style }) {
+function defaultLineNumberRenderer({ number, style, showInlineLineNumbers }) {
   return (
     <span
       key={`line-${number}`}
-      className="react-syntax-highlighter-line-number"
-      style={typeof style === 'function' ? style(number) : style}
+      className={
+        showInlineLineNumbers
+          ? 'comment linenumber react-syntax-highlighter-line-number'
+          : 'react-syntax-highlighter-line-number'
+      }
+      style={style}
     >
-      {`${number}\n`}
+      {showInlineLineNumbers ? `${number}` : `${number}\n`}
     </span>
   );
 }
@@ -23,7 +27,11 @@ function getAllLineNumbers({ lines, startingLineNumber, style, renderer }) {
   return lines.map((_, i) => {
     const number = i + startingLineNumber;
     const lineNumberRenderer = renderer || defaultLineNumberRenderer;
-    return lineNumberRenderer({ number, style });
+    return lineNumberRenderer({
+      number,
+      style: typeof style === 'function' ? style(number) : style,
+      showInlineLineNumbers: false
+    });
   });
 }
 
@@ -55,7 +63,8 @@ function getInlineLineNumber(lineNumber, inlineLineNumberStyle, renderer) {
   const lineNumberRenderer = renderer || defaultLineNumberRenderer;
   return lineNumberRenderer({
     number: lineNumber,
-    style: inlineLineNumberStyle
+    style: inlineLineNumberStyle,
+    showInlineLineNumbers: true
   });
 }
 
