@@ -174,7 +174,6 @@ exports[`SyntaxHighlighter renders fortran highlighted text 1`] = `
                     END
 
                        
-
   </code>
 </pre>
 `;
@@ -273,7 +272,6 @@ exports[`SyntaxHighlighter renders javascript highlighted text 1`] = `
         }
 
     }
-
   </code>
 </pre>
 `;
@@ -1022,7 +1020,6 @@ exports[`SyntaxHighlighter renders text while language loads 1`] = `
       style={Object {}}
     >
                          
-
     </span>
   </code>
 </pre>
@@ -1514,7 +1511,6 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
           }
 
       }
-
   </code>
 </pre>
 `;
