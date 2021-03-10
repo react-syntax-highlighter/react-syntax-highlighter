@@ -51,6 +51,7 @@ function getInlineLineNumber(lineNumber, inlineLineNumberStyle) {
     properties: {
       key: `line-number--${lineNumber}`,
       className: [
+        'token',
         'comment',
         'linenumber',
         'react-syntax-highlighter-line-number'
