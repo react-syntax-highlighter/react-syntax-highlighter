@@ -12,6 +12,7 @@ class Memoize {
     if (!this.cache.has(key)) {
       const value = valueFn();
       this.cache.set(key, { value, dependencies });
+      
       return this.cache.get(key).value;
     }
     const {
