@@ -46,6 +46,7 @@ test('AsyncSyntaxHighlighter isRegistered when registerLanguage is not defined',
   const SyntaxHighlighter = AsyncSyntaxHighlighter({});
 
   expect(() => {
+    console.log('here');
     SyntaxHighlighter.isRegistered('test', {});
   }).toThrowError();
 });

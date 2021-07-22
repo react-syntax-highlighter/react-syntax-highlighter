@@ -88,6 +88,7 @@ export default {
     },
     "hljs": {
         "display": "block",
+        "overflowX": "auto",
         "background": "#322931",
         "color": "#b9b5b8",
         "padding": "0.5em"

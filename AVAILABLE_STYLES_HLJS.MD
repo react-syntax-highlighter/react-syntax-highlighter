@@ -45,6 +45,7 @@
 * github
 * gml
 * googlecode
+* gradientDark
 * grayscale
 * gruvboxDark
 * gruvboxLight
@@ -61,6 +62,7 @@
 * monoBlue
 * monokaiSublime
 * monokai
+* nightOwl
 * nord
 * obsidian
 * ocean
