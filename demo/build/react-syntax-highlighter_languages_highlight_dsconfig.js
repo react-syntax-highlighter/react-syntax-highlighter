@@ -7,35 +7,23 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-/*
- Language: dsconfig
- Description: dsconfig batch configuration language for LDAP directory servers
- Contributors: Jacob Childress <jacobc@gmail.com>
- Category: enterprise, config
- */
-
- /** @type LanguageFn */
-function dsconfig(hljs) {
-  const QUOTED_PROPERTY = {
+module.exports = function(hljs) {
+  var QUOTED_PROPERTY = {
     className: 'string',
-    begin: /"/,
-    end: /"/
+    begin: /"/, end: /"/
   };
-  const APOS_PROPERTY = {
+  var APOS_PROPERTY = {
     className: 'string',
-    begin: /'/,
-    end: /'/
+    begin: /'/, end: /'/
   };
-  const UNQUOTED_PROPERTY = {
+  var UNQUOTED_PROPERTY = {
     className: 'string',
-    begin: /[\w\-?]+:\w+/,
-    end: /\W/,
+    begin: '[\\w-?]+:\\w+', end: '\\W',
     relevance: 0
   };
-  const VALUELESS_PROPERTY = {
+  var VALUELESS_PROPERTY = {
     className: 'string',
-    begin: /\w+(\-\w+)*/,
-    end: /(?=\W)/,
+    begin: '\\w+-?\\w+', end: '\\W',
     relevance: 0
   };
 
@@ -44,24 +32,18 @@ function dsconfig(hljs) {
     contains: [
       {
         className: 'keyword',
-        begin: '^dsconfig',
-        end: /\s/,
-        excludeEnd: true,
+        begin: '^dsconfig', end: '\\s', excludeEnd: true,
         relevance: 10
       },
       {
         className: 'built_in',
-        begin: /(list|create|get|set|delete)-(\w+)/,
-        end: /\s/,
-        excludeEnd: true,
+        begin: '(list|create|get|set|delete)-(\\w+)', end: '\\s', excludeEnd: true,
         illegal: '!@#$%^&*()',
         relevance: 10
       },
       {
         className: 'built_in',
-        begin: /--(\w+)/,
-        end: /\s/,
-        excludeEnd: true
+        begin: '--(\\w+)', end: '\\s', excludeEnd: true
       },
       QUOTED_PROPERTY,
       APOS_PROPERTY,
@@ -70,10 +52,7 @@ function dsconfig(hljs) {
       hljs.HASH_COMMENT_MODE
     ]
   };
-}
-
-module.exports = dsconfig;
-
+};
 
 /***/ })
 

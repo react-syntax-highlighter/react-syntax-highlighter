@@ -7,34 +7,27 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-/*
-Language: crmsh
-Author: Kristoffer Gronlund <kgronlund@suse.com>
-Website: http://crmsh.github.io
-Description: Syntax Highlighting for the crmsh DSL
-Category: config
-*/
+module.exports = function(hljs) {
+  var RESOURCES = 'primitive rsc_template';
 
-/** @type LanguageFn */
-function crmsh(hljs) {
-  const RESOURCES = 'primitive rsc_template';
-  const COMMANDS = 'group clone ms master location colocation order fencing_topology ' +
+  var COMMANDS = 'group clone ms master location colocation order fencing_topology ' +
       'rsc_ticket acl_target acl_group user role ' +
       'tag xml';
-  const PROPERTY_SETS = 'property rsc_defaults op_defaults';
-  const KEYWORDS = 'params meta operations op rule attributes utilization';
-  const OPERATORS = 'read write deny defined not_defined in_range date spec in ' +
+
+  var PROPERTY_SETS = 'property rsc_defaults op_defaults';
+
+  var KEYWORDS = 'params meta operations op rule attributes utilization';
+
+  var OPERATORS = 'read write deny defined not_defined in_range date spec in ' +
       'ref reference attribute type xpath version and or lt gt tag ' +
       'lte gte eq ne \\';
-  const TYPES = 'number string';
-  const LITERALS = 'Master Started Slave Stopped start promote demote stop monitor true false';
+
+  var TYPES = 'number string';
+
+  var LITERALS = 'Master Started Slave Stopped start promote demote stop monitor true false';
 
   return {
-    name: 'crmsh',
-    aliases: [
-      'crm',
-      'pcmk'
-    ],
+    aliases: ['crm', 'pcmk'],
     case_insensitive: true,
     keywords: {
       keyword: KEYWORDS + ' ' + OPERATORS + ' ' + TYPES,
@@ -95,7 +88,7 @@ function crmsh(hljs) {
       },
       {
         className: 'attr',
-        begin: /([A-Za-z$_#][\w_-]+)=/,
+        begin: /([A-Za-z\$_\#][\w_-]+)=/,
         relevance: 0
       },
       {
@@ -106,10 +99,7 @@ function crmsh(hljs) {
       }
     ]
   };
-}
-
-module.exports = crmsh;
-
+};
 
 /***/ })
 

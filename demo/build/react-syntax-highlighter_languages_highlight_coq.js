@@ -7,17 +7,8 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-/*
-Language: Coq
-Author: Stephan Boyer <stephan@stephanboyer.com>
-Category: functional
-Website: https://coq.inria.fr
-*/
-
-/** @type LanguageFn */
-function coq(hljs) {
+module.exports = function(hljs) {
   return {
-    name: 'Coq',
     keywords: {
       keyword:
         '_|0 as at cofix else end exists exists2 fix for forall fun if IF in let ' +
@@ -26,7 +17,7 @@ function coq(hljs) {
         'Backtrack Bind Blacklist Canonical Cd Check Class Classes Close Coercion ' +
         'Coercions CoFixpoint CoInductive Collection Combined Compute Conjecture ' +
         'Conjectures Constant constr Constraint Constructors Context Corollary ' +
-        'CreateHintDb Cut Declare Defined Definition Delimit Dependencies Dependent ' +
+        'CreateHintDb Cut Declare Defined Definition Delimit Dependencies Dependent' +
         'Derive Drop eauto End Equality Eval Example Existential Existentials ' +
         'Existing Export exporting Extern Extract Extraction Fact Field Fields File ' +
         'Fixpoint Focus for From Function Functional Generalizable Global Goal Grab ' +
@@ -78,15 +69,10 @@ function coq(hljs) {
         begin: '\\|\\s*',
         end: '\\w+'
       },
-      { // relevance booster
-        begin: /[-=]>/
-      }
+      {begin: /[-=]>/} // relevance booster
     ]
   };
-}
-
-module.exports = coq;
-
+};
 
 /***/ })
 

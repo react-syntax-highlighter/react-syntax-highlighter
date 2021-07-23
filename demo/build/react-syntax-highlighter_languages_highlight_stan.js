@@ -7,15 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-/*
-Language: Stan
-Description: The Stan probabilistic programming language
-Author: Jeffrey B. Arnold <jeffrey.arnold@gmail.com>
-Website: http://mc-stan.org/
-Category: scientific
-*/
-
-function stan(hljs) {
+module.exports = function(hljs) {
   // variable names cannot conflict with block identifiers
   var BLOCKS = [
     'functions',
@@ -160,14 +152,13 @@ function stan(hljs) {
   ];
 
   return {
-    name: 'Stan',
     aliases: ['stanfuncs'],
     keywords: {
-      $pattern: hljs.IDENT_RE,
-      title: BLOCKS.join(' '),
-      keyword: STATEMENTS.concat(VAR_TYPES).concat(SPECIAL_FUNCTIONS).join(' '),
-      built_in: FUNCTIONS.join(' ')
+      'title': BLOCKS.join(' '),
+      'keyword': STATEMENTS.concat(VAR_TYPES).concat(SPECIAL_FUNCTIONS).join(' '),
+      'built_in': FUNCTIONS.join(' ')
     },
+    lexemes: hljs.IDENT_RE,
     contains: [
       hljs.C_LINE_COMMENT_MODE,
       hljs.COMMENT(
@@ -202,7 +193,7 @@ function stan(hljs) {
       {
         // hack: in range constraints, upper must follow either , or <
         // <lower = ..., upper = ...> or <upper = ...>
-        begin: /[<,]\s*upper\s*=/,
+        begin: /[<,]*upper\s*=/,
         keywords: 'upper'
       },
       {
@@ -234,10 +225,7 @@ function stan(hljs) {
       }
     ]
   }
-}
-
-module.exports = stan;
-
+};
 
 /***/ })
 

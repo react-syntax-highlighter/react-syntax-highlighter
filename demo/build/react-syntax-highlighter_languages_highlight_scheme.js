@@ -7,23 +7,11 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-/*
-Language: Scheme
-Description: Scheme is a programming language in the Lisp family.
-             (keywords based on http://community.schemewiki.org/?scheme-keywords)
-Author: JP Verkamp <me@jverkamp.com>
-Contributors: Ivan Sagalaev <maniac@softwaremaniacs.org>
-Origin: clojure.js
-Website: http://community.schemewiki.org/?what-is-scheme
-Category: lisp
-*/
-
-function scheme(hljs) {
+module.exports = function(hljs) {
   var SCHEME_IDENT_RE = '[^\\(\\)\\[\\]\\{\\}",\'`;#|\\\\\\s]+';
-  var SCHEME_SIMPLE_NUMBER_RE = '(-|\\+)?\\d+([./]\\d+)?';
+  var SCHEME_SIMPLE_NUMBER_RE = '(\\-|\\+)?\\d+([./]\\d+)?';
   var SCHEME_COMPLEX_NUMBER_RE = SCHEME_SIMPLE_NUMBER_RE + '[+\\-]' + SCHEME_SIMPLE_NUMBER_RE + 'i';
-  var KEYWORDS = {
-    $pattern: SCHEME_IDENT_RE,
+  var BUILTINS = {
     'builtin-name':
       'case-lambda call/cc class define-class exit-handler field import ' +
       'inherit init-field interface let*-values let-values let/ec mixin ' +
@@ -60,6 +48,12 @@ function scheme(hljs) {
       'with-input-from-file with-output-to-file write write-char zero?'
   };
 
+  var SHEBANG = {
+    className: 'meta',
+    begin: '^#!',
+    end: '$'
+  };
+
   var LITERAL = {
     className: 'literal',
     begin: '(#t|#f|#\\\\' + SCHEME_IDENT_RE + '|#\\\\.)'
@@ -77,6 +71,12 @@ function scheme(hljs) {
   };
 
   var STRING = hljs.QUOTE_STRING_MODE;
+
+  var REGULAR_EXPRESSION = {
+    className: 'regexp',
+    begin: '#[pr]x"',
+    end: '[^\\\\]"'
+  };
 
   var COMMENT_MODES = [
     hljs.COMMENT(
@@ -119,9 +119,9 @@ function scheme(hljs) {
 
   var NAME = {
     className: 'name',
-    relevance: 0,
     begin: SCHEME_IDENT_RE,
-    keywords: KEYWORDS
+    lexemes: SCHEME_IDENT_RE,
+    keywords: BUILTINS
   };
 
   var LAMBDA = {
@@ -146,14 +146,10 @@ function scheme(hljs) {
   BODY.contains = [LITERAL, NUMBER, STRING, IDENT, QUOTED_IDENT, QUOTED_LIST, LIST].concat(COMMENT_MODES);
 
   return {
-    name: 'Scheme',
     illegal: /\S/,
-    contains: [hljs.SHEBANG(), NUMBER, STRING, QUOTED_IDENT, QUOTED_LIST, LIST].concat(COMMENT_MODES)
+    contains: [SHEBANG, NUMBER, STRING, QUOTED_IDENT, QUOTED_LIST, LIST].concat(COMMENT_MODES)
   };
-}
-
-module.exports = scheme;
-
+};
 
 /***/ })
 

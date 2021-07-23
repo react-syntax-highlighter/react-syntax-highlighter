@@ -7,19 +7,8 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-/*
-Language: AsciiDoc
-Requires: xml.js
-Author: Dan Allen <dan.j.allen@gmail.com>
-Website: http://asciidoc.org
-Description: A semantic, text-based document format that can be exported to HTML, DocBook and other backends.
-Category: markup
-*/
-
-/** @type LanguageFn */
-function asciidoc(hljs) {
+module.exports = function(hljs) {
   return {
-    name: 'AsciiDoc',
     aliases: ['adoc'],
     contains: [
       // block comment
@@ -27,8 +16,8 @@ function asciidoc(hljs) {
         '^/{4,}\\n',
         '\\n/{4,}$',
         // can also be done as...
-        // '^/{4,}$',
-        // '^/{4,}$',
+        //'^/{4,}$',
+        //'^/{4,}$',
         {
           relevance: 10
         }
@@ -57,12 +46,8 @@ function asciidoc(hljs) {
         className: 'section',
         relevance: 10,
         variants: [
-          {
-            begin: '^(={1,5}) .+?( \\1)?$'
-          },
-          {
-            begin: '^[^\\[\\]\\n]+?\\n[=\\-~\\^\\+]{2,}$'
-          }
+          {begin: '^(={1,5}) .+?( \\1)?$'},
+          {begin: '^[^\\[\\]\\n]+?\\n[=\\-~\\^\\+]{2,}$'},
         ]
       },
       // document attributes
@@ -97,18 +82,19 @@ function asciidoc(hljs) {
       {
         begin: '^\\+{4,}\\n',
         end: '\\n\\+{4,}$',
-        contains: [{
-          begin: '<',
-          end: '>',
-          subLanguage: 'xml',
-          relevance: 0
-        }],
+        contains: [
+          {
+            begin: '<', end: '>',
+            subLanguage: 'xml',
+            relevance: 0
+          }
+        ],
         relevance: 10
       },
       // lists (can only capture indicators)
       {
         className: 'bullet',
-        begin: '^(\\*+|-+|\\.+|[^\\n]+?::)\\s+'
+        begin: '^(\\*+|\\-+|\\.+|[^\\n]+?::)\\s+'
       },
       // admonition
       {
@@ -123,10 +109,12 @@ function asciidoc(hljs) {
         begin: '\\B\\*(?![\\*\\s])',
         end: '(\\n{2}|\\*)',
         // allow escaped asterisk followed by word char
-        contains: [{
-          begin: '\\\\*\\w',
-          relevance: 0
-        }]
+        contains: [
+          {
+            begin: '\\\\*\\w',
+            relevance: 0
+          }
+        ]
       },
       // inline emphasis
       {
@@ -135,10 +123,12 @@ function asciidoc(hljs) {
         begin: '\\B\'(?![\'\\s])',
         end: '(\\n{2}|\')',
         // allow escaped single quote followed by word char
-        contains: [{
-          begin: '\\\\\'\\w',
-          relevance: 0
-        }],
+        contains: [
+          {
+            begin: '\\\\\'\\w',
+            relevance: 0
+          }
+        ],
         relevance: 0
       },
       // inline emphasis (alt)
@@ -153,12 +143,8 @@ function asciidoc(hljs) {
       {
         className: 'string',
         variants: [
-          {
-            begin: "``.+?''"
-          },
-          {
-            begin: "`.+?'"
-          }
+          {begin: "``.+?''"},
+          {begin: "`.+?'"}
         ]
       },
       // inline code snippets (TODO should get same treatment as strong and emphasis)
@@ -181,7 +167,7 @@ function asciidoc(hljs) {
       },
       // images and links
       {
-        begin: '(link:)?(http|https|ftp|file|irc|image:?):\\S+?\\[[^[]*?\\]',
+        begin: '(link:)?(http|https|ftp|file|irc|image:?):\\S+\\[.*?\\]',
         returnBegin: true,
         contains: [
           {
@@ -207,10 +193,7 @@ function asciidoc(hljs) {
       }
     ]
   };
-}
-
-module.exports = asciidoc;
-
+};
 
 /***/ })
 

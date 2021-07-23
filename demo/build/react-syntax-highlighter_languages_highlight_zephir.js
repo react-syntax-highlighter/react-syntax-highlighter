@@ -7,66 +7,38 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-/*
- Language: Zephir
- Description: Zephir, an open source, high-level language designed to ease the creation and maintainability of extensions for PHP with a focus on type and memory safety.
- Author: Oleg Efimov <efimovov@gmail.com>
- Website: https://zephir-lang.com/en
- */
-
-function zephir(hljs) {
-  const STRING = {
+module.exports = function(hljs) {
+  var STRING = {
     className: 'string',
-    contains: [ hljs.BACKSLASH_ESCAPE ],
+    contains: [hljs.BACKSLASH_ESCAPE],
     variants: [
-      hljs.inherit(hljs.APOS_STRING_MODE, {
-        illegal: null
-      }),
-      hljs.inherit(hljs.QUOTE_STRING_MODE, {
-        illegal: null
-      })
+      {
+        begin: 'b"', end: '"'
+      },
+      {
+        begin: 'b\'', end: '\''
+      },
+      hljs.inherit(hljs.APOS_STRING_MODE, {illegal: null}),
+      hljs.inherit(hljs.QUOTE_STRING_MODE, {illegal: null})
     ]
   };
-  const TITLE_MODE = hljs.UNDERSCORE_TITLE_MODE;
-  const NUMBER = {
-    variants: [
-      hljs.BINARY_NUMBER_MODE,
-      hljs.C_NUMBER_MODE
-    ]
-  };
-  const KEYWORDS =
-    // classes and objects
-    'namespace class interface use extends ' +
-    'function return ' +
-    'abstract final public protected private static deprecated ' +
-    // error handling
-    'throw try catch Exception ' +
-    // keyword-ish things their website does NOT seem to highlight (in their own snippets)
-    // 'typeof fetch in ' +
-    // operators/helpers
-    'echo empty isset instanceof unset ' +
-    // assignment/variables
-    'let var new const self ' +
-    // control
-    'require ' +
-    'if else elseif switch case default ' +
-    'do while loop for continue break ' +
-    'likely unlikely ' +
-    // magic constants
-    // https://github.com/phalcon/zephir/blob/master/Library/Expression/Constants.php
-    '__LINE__ __FILE__ __DIR__ __FUNCTION__ __CLASS__ __TRAIT__ __METHOD__ __NAMESPACE__ ' +
-    // types - https://docs.zephir-lang.com/0.12/en/types
-    'array boolean float double integer object resource string ' +
-    'char long unsigned bool int uint ulong uchar ' +
-    // built-ins
-    'true false null undefined';
-
+  var NUMBER = {variants: [hljs.BINARY_NUMBER_MODE, hljs.C_NUMBER_MODE]};
   return {
-    name: 'Zephir',
-    aliases: [ 'zep' ],
-    keywords: KEYWORDS,
+    aliases: ['zep'],
+    case_insensitive: true,
+    keywords:
+      'and include_once list abstract global private echo interface as static endswitch ' +
+      'array null if endwhile or const for endforeach self var let while isset public ' +
+      'protected exit foreach throw elseif include __FILE__ empty require_once do xor ' +
+      'return parent clone use __CLASS__ __LINE__ else break print eval new ' +
+      'catch __METHOD__ case exception default die require __FUNCTION__ ' +
+      'enddeclare final try switch continue endfor endif declare unset true false ' +
+      'trait goto instanceof insteadof __DIR__ __NAMESPACE__ ' +
+      'yield finally int uint long ulong char uchar double float bool boolean string' +
+      'likely unlikely',
     contains: [
       hljs.C_LINE_COMMENT_MODE,
+      hljs.HASH_COMMENT_MODE,
       hljs.COMMENT(
         '/\\*',
         '\\*/',
@@ -79,11 +51,19 @@ function zephir(hljs) {
           ]
         }
       ),
+      hljs.COMMENT(
+        '__halt_compiler.+?;',
+        false,
+        {
+          endsWithParent: true,
+          keywords: '__halt_compiler',
+          lexemes: hljs.UNDERSCORE_IDENT_RE
+        }
+      ),
       {
         className: 'string',
-        begin: '<<<[\'"]?\\w+[\'"]?$',
-        end: '^\\w+;',
-        contains: [ hljs.BACKSLASH_ESCAPE ]
+        begin: '<<<[\'"]?\\w+[\'"]?$', end: '^\\w+;',
+        contains: [hljs.BACKSLASH_ESCAPE]
       },
       {
         // swallow composed identifiers to avoid parsing them as keywords
@@ -91,17 +71,13 @@ function zephir(hljs) {
       },
       {
         className: 'function',
-        beginKeywords: 'function fn',
-        end: /[;{]/,
-        excludeEnd: true,
+        beginKeywords: 'function', end: /[;{]/, excludeEnd: true,
         illegal: '\\$|\\[|%',
         contains: [
-          TITLE_MODE,
+          hljs.UNDERSCORE_TITLE_MODE,
           {
             className: 'params',
-            begin: '\\(',
-            end: '\\)',
-            keywords: KEYWORDS,
+            begin: '\\(', end: '\\)',
             contains: [
               'self',
               hljs.C_BLOCK_COMMENT_MODE,
@@ -113,27 +89,21 @@ function zephir(hljs) {
       },
       {
         className: 'class',
-        beginKeywords: 'class interface',
-        end: /\{/,
-        excludeEnd: true,
+        beginKeywords: 'class interface', end: '{', excludeEnd: true,
         illegal: /[:\(\$"]/,
         contains: [
-          {
-            beginKeywords: 'extends implements'
-          },
-          TITLE_MODE
+          {beginKeywords: 'extends implements'},
+          hljs.UNDERSCORE_TITLE_MODE
         ]
       },
       {
-        beginKeywords: 'namespace',
-        end: ';',
+        beginKeywords: 'namespace', end: ';',
         illegal: /[\.']/,
-        contains: [ TITLE_MODE ]
+        contains: [hljs.UNDERSCORE_TITLE_MODE]
       },
       {
-        beginKeywords: 'use',
-        end: ';',
-        contains: [ TITLE_MODE ]
+        beginKeywords: 'use', end: ';',
+        contains: [hljs.UNDERSCORE_TITLE_MODE]
       },
       {
         begin: '=>' // No markup, just a relevance booster
@@ -142,10 +112,7 @@ function zephir(hljs) {
       NUMBER
     ]
   };
-}
-
-module.exports = zephir;
-
+};
 
 /***/ })
 

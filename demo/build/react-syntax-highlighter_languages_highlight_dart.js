@@ -7,37 +7,26 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-/*
-Language: Dart
-Requires: markdown.js
-Author: Maxim Dikun <dikmax@gmail.com>
-Description: Dart a modern, object-oriented language developed by Google. For more information see https://www.dartlang.org/
-Website: https://dart.dev
-Category: scripting
-*/
-
-/** @type LanguageFn */
-function dart(hljs) {
-  const SUBST = {
+module.exports = function(hljs) {
+  var SUBST = {
     className: 'subst',
     variants: [{
       begin: '\\$[A-Za-z0-9_]+'
-    }]
+    }],
   };
 
-  const BRACED_SUBST = {
+  var BRACED_SUBST = {
     className: 'subst',
     variants: [{
-      begin: /\$\{/,
-      end: /\}/
-    }],
-    keywords: 'true false null this is new super'
+      begin: '\\${',
+      end: '}'
+    }, ],
+    keywords: 'true false null this is new super',
   };
 
-  const STRING = {
+  var STRING = {
     className: 'string',
-    variants: [
-      {
+    variants: [{
         begin: 'r\'\'\'',
         end: '\'\'\''
       },
@@ -58,113 +47,52 @@ function dart(hljs) {
       {
         begin: '\'\'\'',
         end: '\'\'\'',
-        contains: [
-          hljs.BACKSLASH_ESCAPE,
-          SUBST,
-          BRACED_SUBST
-        ]
+        contains: [hljs.BACKSLASH_ESCAPE, SUBST, BRACED_SUBST]
       },
       {
         begin: '"""',
         end: '"""',
-        contains: [
-          hljs.BACKSLASH_ESCAPE,
-          SUBST,
-          BRACED_SUBST
-        ]
+        contains: [hljs.BACKSLASH_ESCAPE, SUBST, BRACED_SUBST]
       },
       {
         begin: '\'',
         end: '\'',
         illegal: '\\n',
-        contains: [
-          hljs.BACKSLASH_ESCAPE,
-          SUBST,
-          BRACED_SUBST
-        ]
+        contains: [hljs.BACKSLASH_ESCAPE, SUBST, BRACED_SUBST]
       },
       {
         begin: '"',
         end: '"',
         illegal: '\\n',
-        contains: [
-          hljs.BACKSLASH_ESCAPE,
-          SUBST,
-          BRACED_SUBST
-        ]
+        contains: [hljs.BACKSLASH_ESCAPE, SUBST, BRACED_SUBST]
       }
     ]
   };
   BRACED_SUBST.contains = [
-    hljs.C_NUMBER_MODE,
-    STRING
+    hljs.C_NUMBER_MODE, STRING
   ];
 
-  const BUILT_IN_TYPES = [
-    // dart:core
-    'Comparable',
-    'DateTime',
-    'Duration',
-    'Function',
-    'Iterable',
-    'Iterator',
-    'List',
-    'Map',
-    'Match',
-    'Object',
-    'Pattern',
-    'RegExp',
-    'Set',
-    'Stopwatch',
-    'String',
-    'StringBuffer',
-    'StringSink',
-    'Symbol',
-    'Type',
-    'Uri',
-    'bool',
-    'double',
-    'int',
-    'num',
-    // dart:html
-    'Element',
-    'ElementList'
-  ];
-  const NULLABLE_BUILT_IN_TYPES = BUILT_IN_TYPES.map((e) => `${e}?`);
-
-  const KEYWORDS = {
+  var KEYWORDS = {
     keyword: 'abstract as assert async await break case catch class const continue covariant default deferred do ' +
       'dynamic else enum export extends extension external factory false final finally for Function get hide if ' +
-      'implements import in inferface is late library mixin new null on operator part required rethrow return set ' +
-      'show static super switch sync this throw true try typedef var void while with yield',
+      'implements import in inferface is library mixin new null on operator part rethrow return set show static ' +
+      'super switch sync this throw true try typedef var void while with yield',
     built_in:
-      BUILT_IN_TYPES
-        .concat(NULLABLE_BUILT_IN_TYPES)
-        .concat([
-          // dart:core
-          'Never',
-          'Null',
-          'dynamic',
-          'print',
-          // dart:html
-          'document',
-          'querySelector',
-          'querySelectorAll',
-          'window'
-        ]).join(' '),
-    $pattern: /[A-Za-z][A-Za-z0-9_]*\??/
+      // dart:core
+      'Comparable DateTime Duration Function Iterable Iterator List Map Match Null Object Pattern RegExp Set ' +
+      'Stopwatch String StringBuffer StringSink Symbol Type Uri bool double dynamic int num print ' +
+      // dart:html
+      'Element ElementList document querySelector querySelectorAll window'
   };
 
   return {
-    name: 'Dart',
     keywords: KEYWORDS,
     contains: [
       STRING,
       hljs.COMMENT(
         '/\\*\\*',
         '\\*/', {
-          subLanguage: 'markdown',
-          relevance: 0
+          subLanguage: 'markdown'
         }
       ),
       hljs.COMMENT(
@@ -174,7 +102,6 @@ function dart(hljs) {
             subLanguage: 'markdown',
             begin: '.',
             end: '$',
-            relevance: 0
           }]
         }
       ),
@@ -183,10 +110,9 @@ function dart(hljs) {
       {
         className: 'class',
         beginKeywords: 'class interface',
-        end: /\{/,
+        end: '{',
         excludeEnd: true,
-        contains: [
-          {
+        contains: [{
             beginKeywords: 'extends implements'
           },
           hljs.UNDERSCORE_TITLE_MODE
@@ -201,11 +127,8 @@ function dart(hljs) {
         begin: '=>' // No markup, just a relevance booster
       }
     ]
-  };
-}
-
-module.exports = dart;
-
+  }
+};
 
 /***/ })
 

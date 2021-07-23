@@ -7,19 +7,8 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-/*
-Language: Dockerfile
-Requires: bash.js
-Author: Alexis Hénaut <alexis@henaut.net>
-Description: language definition for Dockerfile files
-Website: https://docs.docker.com/engine/reference/builder/
-Category: config
-*/
-
-/** @type LanguageFn */
-function dockerfile(hljs) {
+module.exports = function(hljs) {
   return {
-    name: 'Dockerfile',
     aliases: ['docker'],
     case_insensitive: true,
     keywords: 'from maintainer expose env arg user onbuild stopsignal',
@@ -37,11 +26,8 @@ function dockerfile(hljs) {
       }
     ],
     illegal: '</'
-  };
-}
-
-module.exports = dockerfile;
-
+  }
+};
 
 /***/ })
 

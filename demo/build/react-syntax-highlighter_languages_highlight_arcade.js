@@ -7,18 +7,9 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-/*
- Language: ArcGIS Arcade
- Category: scripting
- Author: John Foster <jfoster@esri.com>
- Website: https://developers.arcgis.com/arcade/
- Description: ArcGIS Arcade is an expression language used in many Esri ArcGIS products such as Pro, Online, Server, Runtime, JavaScript, and Python
-*/
-
-/** @type LanguageFn */
-function arcade(hljs) {
-  const IDENT_RE = '[A-Za-z_][0-9A-Za-z_]*';
-  const KEYWORDS = {
+module.exports = function(hljs) {
+  var IDENT_RE = '[A-Za-z_][0-9A-Za-z_]*';
+  var KEYWORDS = {
     keyword:
       'if for while var new function do return void else break',
     literal:
@@ -36,36 +27,29 @@ function arcade(hljs) {
       'TrackGeometryWindow TrackIndex TrackStartTime TrackWindow TypeOf Union UrlEncode Variance ' +
       'Weekday When Within Year '
   };
-  const SYMBOL = {
+  var EXPRESSIONS;
+  var SYMBOL = {
     className: 'symbol',
     begin: '\\$[datastore|feature|layer|map|measure|sourcefeature|sourcelayer|targetfeature|targetlayer|value|view]+'
   };
-  const NUMBER = {
+  var NUMBER = {
     className: 'number',
     variants: [
-      {
-        begin: '\\b(0[bB][01]+)'
-      },
-      {
-        begin: '\\b(0[oO][0-7]+)'
-      },
-      {
-        begin: hljs.C_NUMBER_RE
-      }
+      { begin: '\\b(0[bB][01]+)' },
+      { begin: '\\b(0[oO][0-7]+)' },
+      { begin: hljs.C_NUMBER_RE }
     ],
     relevance: 0
   };
-  const SUBST = {
+  var SUBST = {
     className: 'subst',
-    begin: '\\$\\{',
-    end: '\\}',
+    begin: '\\$\\{', end: '\\}',
     keywords: KEYWORDS,
-    contains: [] // defined later
+    contains: []  // defined later
   };
-  const TEMPLATE_STRING = {
+  var TEMPLATE_STRING = {
     className: 'string',
-    begin: '`',
-    end: '`',
+    begin: '`', end: '`',
     contains: [
       hljs.BACKSLASH_ESCAPE,
       SUBST
@@ -78,13 +62,12 @@ function arcade(hljs) {
     NUMBER,
     hljs.REGEXP_MODE
   ];
-  const PARAMS_CONTAINS = SUBST.contains.concat([
+  var PARAMS_CONTAINS = SUBST.contains.concat([
     hljs.C_BLOCK_COMMENT_MODE,
     hljs.C_LINE_COMMENT_MODE
   ]);
 
   return {
-    name: 'ArcGIS Arcade',
     aliases: ['arcade'],
     keywords: KEYWORDS,
     contains: [
@@ -96,18 +79,14 @@ function arcade(hljs) {
       SYMBOL,
       NUMBER,
       { // object attr container
-        begin: /[{,]\s*/,
-        relevance: 0,
-        contains: [{
-          begin: IDENT_RE + '\\s*:',
-          returnBegin: true,
-          relevance: 0,
-          contains: [{
-            className: 'attr',
-            begin: IDENT_RE,
-            relevance: 0
-          }]
-        }]
+        begin: /[{,]\s*/, relevance: 0,
+        contains: [
+          {
+            begin: IDENT_RE + '\\s*:', returnBegin: true,
+            relevance: 0,
+            contains: [{className: 'attr', begin: IDENT_RE, relevance: 0}]
+          }
+        ]
       },
       { // "value" container
         begin: '(' + hljs.RE_STARTERS_RE + '|\\b(return)\\b)\\s*',
@@ -118,45 +97,39 @@ function arcade(hljs) {
           hljs.REGEXP_MODE,
           {
             className: 'function',
-            begin: '(\\(.*?\\)|' + IDENT_RE + ')\\s*=>',
-            returnBegin: true,
+            begin: '(\\(.*?\\)|' + IDENT_RE + ')\\s*=>', returnBegin: true,
             end: '\\s*=>',
-            contains: [{
-              className: 'params',
-              variants: [
-                {
-                  begin: IDENT_RE
-                },
-                {
-                  begin: /\(\s*\)/
-                },
-                {
-                  begin: /\(/,
-                  end: /\)/,
-                  excludeBegin: true,
-                  excludeEnd: true,
-                  keywords: KEYWORDS,
-                  contains: PARAMS_CONTAINS
-                }
-              ]
-            }]
+            contains: [
+              {
+                className: 'params',
+                variants: [
+                  {
+                    begin: IDENT_RE
+                  },
+                  {
+                    begin: /\(\s*\)/,
+                  },
+                  {
+                    begin: /\(/, end: /\)/,
+                    excludeBegin: true, excludeEnd: true,
+                    keywords: KEYWORDS,
+                    contains: PARAMS_CONTAINS
+                  }
+                ]
+              }
+            ]
           }
         ],
         relevance: 0
       },
       {
         className: 'function',
-        beginKeywords: 'function',
-        end: /\{/,
-        excludeEnd: true,
+        beginKeywords: 'function', end: /\{/, excludeEnd: true,
         contains: [
-          hljs.inherit(hljs.TITLE_MODE, {
-            begin: IDENT_RE
-          }),
+          hljs.inherit(hljs.TITLE_MODE, {begin: IDENT_RE}),
           {
             className: 'params',
-            begin: /\(/,
-            end: /\)/,
+            begin: /\(/, end: /\)/,
             excludeBegin: true,
             excludeEnd: true,
             contains: PARAMS_CONTAINS
@@ -170,10 +143,7 @@ function arcade(hljs) {
     ],
     illegal: /#(?!!)/
   };
-}
-
-module.exports = arcade;
-
+};
 
 /***/ })
 

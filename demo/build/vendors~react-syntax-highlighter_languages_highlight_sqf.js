@@ -7,76 +7,56 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-/*
-Language: SQF
-Author: Søren Enevoldsen <senevoldsen90@gmail.com>
-Contributors: Marvin Saignat <contact@zgmrvn.com>, Dedmen Miller <dedmen@dedmen.de>
-Description: Scripting language for the Arma game series
-Website: https://community.bistudio.com/wiki/SQF_syntax
-Category: scripting
-*/
-
-function sqf(hljs) {
+module.exports = function(hljs) {
   // In SQF, a variable start with _
-  const VARIABLE = {
+  var VARIABLE = {
     className: 'variable',
-    begin: /\b_+[a-zA-Z]\w*/
+    begin: /\b_+[a-zA-Z_]\w*/
   };
 
   // In SQF, a function should fit myTag_fnc_myFunction pattern
   // https://community.bistudio.com/wiki/Functions_Library_(Arma_3)#Adding_a_Function
-  const FUNCTION = {
+  var FUNCTION = {
     className: 'title',
     begin: /[a-zA-Z][a-zA-Z0-9]+_fnc_\w*/
   };
 
   // In SQF strings, quotes matching the start are escaped by adding a consecutive.
   // Example of single escaped quotes: " "" " and  ' '' '.
-  const STRINGS = {
+  var STRINGS = {
     className: 'string',
     variants: [
       {
         begin: '"',
         end: '"',
-        contains: [ {
-          begin: '""',
-          relevance: 0
-        } ]
+        contains: [{begin: '""', relevance: 0}]
       },
       {
         begin: '\'',
         end: '\'',
-        contains: [ {
-          begin: '\'\'',
-          relevance: 0
-        } ]
+        contains: [{begin: '\'\'', relevance: 0}]
       }
     ]
   };
 
   // list of keywords from:
   // https://community.bistudio.com/wiki/PreProcessor_Commands
-  const PREPROCESSOR = {
+  var PREPROCESSOR = {
     className: 'meta',
-    begin: /#\s*[a-z]+\b/,
-    end: /$/,
+    begin: /#\s*[a-z]+\b/, end: /$/,
     keywords: {
       'meta-keyword':
         'define undef ifdef ifndef else endif include'
     },
     contains: [
       {
-        begin: /\\\n/,
-        relevance: 0
+        begin: /\\\n/, relevance: 0
       },
-      hljs.inherit(STRINGS, {
-        className: 'meta-string'
-      }),
+      hljs.inherit(STRINGS, {className: 'meta-string'}),
       {
         className: 'meta-string',
-        begin: /<[^\n>]*>/,
-        end: /$/,
-        illegal: '\\n'
+        begin: /<[^\n>]*>/, end: /$/,
+        illegal: '\\n',
       },
       hljs.C_LINE_COMMENT_MODE,
       hljs.C_BLOCK_COMMENT_MODE
@@ -84,8 +64,7 @@ function sqf(hljs) {
   };
 
   return {
-    name: 'SQF',
-    aliases: [ 'sqf' ],
+    aliases: ['sqf'],
     case_insensitive: true,
     keywords: {
       keyword:
@@ -440,7 +419,7 @@ function sqf(hljs) {
       literal:
         'blufor civilian configNull controlNull displayNull east endl false grpNull independent lineBreak ' +
         'locationNull nil objNull opfor pi resistance scriptNull sideAmbientLife sideEmpty sideLogic ' +
-        'sideUnknown taskNull teamMemberNull true west'
+        'sideUnknown taskNull teamMemberNull true west',
     },
     contains: [
       hljs.C_LINE_COMMENT_MODE,
@@ -453,10 +432,7 @@ function sqf(hljs) {
     ],
     illegal: /#|^\$ /
   };
-}
-
-module.exports = sqf;
-
+};
 
 /***/ })
 

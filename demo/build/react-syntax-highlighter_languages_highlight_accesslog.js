@@ -7,27 +7,18 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-/*
- Language: Apache Access Log
- Author: Oleg Efimov <efimovov@gmail.com>
- Description: Apache/Nginx Access Logs
- Website: https://httpd.apache.org/docs/2.4/logs.html#accesslog
- */
-
-/** @type LanguageFn */
-function accesslog(hljs) {
+module.exports = function(hljs) {
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
-  const HTTP_VERBS = [
+  var HTTP_VERBS = [
     "GET", "POST", "HEAD", "PUT", "DELETE", "CONNECT", "OPTIONS", "PATCH", "TRACE"
-  ];
+  ]
   return {
-    name: 'Apache Access Log',
     contains: [
       // IP
       {
         className: 'number',
         begin: '^\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}(:\\d{1,5})?\\b',
-        relevance: 5
+        relevance:5
       },
       // Other numbers
       {
@@ -38,14 +29,13 @@ function accesslog(hljs) {
       // Requests
       {
         className: 'string',
-        begin: '"(' + HTTP_VERBS.join("|") + ')',
-        end: '"',
+        begin: '"(' + HTTP_VERBS.join("|") + ')', end: '"',
         keywords: HTTP_VERBS.join(" "),
         illegal: '\\n',
         relevance: 5,
         contains: [{
           begin: 'HTTP/[12]\\.\\d',
-          relevance: 5
+          relevance:5
         }]
       },
       // Dates
@@ -60,33 +50,27 @@ function accesslog(hljs) {
       },
       {
         className: 'string',
-        begin: /\[/,
-        end: /\]/,
+        begin: /\[/, end: /\]/,
         illegal: '\\n',
         relevance: 0
       },
       // User agent / relevance boost
       {
         className: 'string',
-        begin: '"Mozilla/\\d\\.\\d \\(',
-        end: '"',
+        begin: '"Mozilla/\\d\\.\\d \\\(', end: '"',
         illegal: '\\n',
         relevance: 3
       },
       // Strings
       {
         className: 'string',
-        begin: '"',
-        end: '"',
+        begin: '"', end: '"',
         illegal: '\\n',
         relevance: 0
       }
     ]
   };
-}
-
-module.exports = accesslog;
-
+};
 
 /***/ })
 

@@ -7,23 +7,16 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-/*
-Language: Leaf
-Author: Hale Chan <halechan@qq.com>
-Description: Based on the Leaf reference from https://vapor.github.io/documentation/guide/leaf.html.
-*/
-
-function leaf(hljs) {
+module.exports = function (hljs) {
   return {
-    name: 'Leaf',
     contains: [
       {
         className: 'function',
         begin: '#+' + '[A-Za-z_0-9]*' + '\\(',
-        end: / \{/,
+        end:' {',
         returnBegin: true,
         excludeEnd: true,
-        contains: [
+        contains : [
           {
             className: 'keyword',
             begin: '#+'
@@ -34,8 +27,7 @@ function leaf(hljs) {
           },
           {
             className: 'params',
-            begin: '\\(',
-            end: '\\)',
+            begin: '\\(', end: '\\)',
             endsParent: true,
             contains: [
               {
@@ -53,10 +45,7 @@ function leaf(hljs) {
       }
     ]
   };
-}
-
-module.exports = leaf;
-
+};
 
 /***/ })
 

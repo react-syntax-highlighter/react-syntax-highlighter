@@ -7,16 +7,8 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-/*
-Language: Tcl
-Description: Tcl is a very simple programming language.
-Author: Radek Liska <radekliska@gmail.com>
-Website: https://www.tcl.tk/about/language.html
-*/
-
-function tcl(hljs) {
+module.exports = function(hljs) {
   return {
-    name: 'Tcl',
     aliases: ['tk'],
     keywords: 'after append apply array auto_execok auto_import auto_load auto_mkindex ' +
       'auto_mkindex_old auto_qualify auto_reset bgerror binary break catch cd chan clock ' +
@@ -73,10 +65,7 @@ function tcl(hljs) {
       }
     ]
   }
-}
-
-module.exports = tcl;
-
+};
 
 /***/ })
 

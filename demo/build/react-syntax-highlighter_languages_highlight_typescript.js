@@ -7,187 +7,57 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-const IDENT_RE = '[A-Za-z$_][0-9A-Za-z$_]*';
-const KEYWORDS = [
-  "as", // for exports
-  "in",
-  "of",
-  "if",
-  "for",
-  "while",
-  "finally",
-  "var",
-  "new",
-  "function",
-  "do",
-  "return",
-  "void",
-  "else",
-  "break",
-  "catch",
-  "instanceof",
-  "with",
-  "throw",
-  "case",
-  "default",
-  "try",
-  "switch",
-  "continue",
-  "typeof",
-  "delete",
-  "let",
-  "yield",
-  "const",
-  "class",
-  // JS handles these with a special rule
-  // "get",
-  // "set",
-  "debugger",
-  "async",
-  "await",
-  "static",
-  "import",
-  "from",
-  "export",
-  "extends"
-];
-const LITERALS = [
-  "true",
-  "false",
-  "null",
-  "undefined",
-  "NaN",
-  "Infinity"
-];
-
-const TYPES = [
-  "Intl",
-  "DataView",
-  "Number",
-  "Math",
-  "Date",
-  "String",
-  "RegExp",
-  "Object",
-  "Function",
-  "Boolean",
-  "Error",
-  "Symbol",
-  "Set",
-  "Map",
-  "WeakSet",
-  "WeakMap",
-  "Proxy",
-  "Reflect",
-  "JSON",
-  "Promise",
-  "Float64Array",
-  "Int16Array",
-  "Int32Array",
-  "Int8Array",
-  "Uint16Array",
-  "Uint32Array",
-  "Float32Array",
-  "Array",
-  "Uint8Array",
-  "Uint8ClampedArray",
-  "ArrayBuffer"
-];
-
-const ERROR_TYPES = [
-  "EvalError",
-  "InternalError",
-  "RangeError",
-  "ReferenceError",
-  "SyntaxError",
-  "TypeError",
-  "URIError"
-];
-
-const BUILT_IN_GLOBALS = [
-  "setInterval",
-  "setTimeout",
-  "clearInterval",
-  "clearTimeout",
-
-  "require",
-  "exports",
-
-  "eval",
-  "isFinite",
-  "isNaN",
-  "parseFloat",
-  "parseInt",
-  "decodeURI",
-  "decodeURIComponent",
-  "encodeURI",
-  "encodeURIComponent",
-  "escape",
-  "unescape"
-];
-
-const BUILT_IN_VARIABLES = [
-  "arguments",
-  "this",
-  "super",
-  "console",
-  "window",
-  "document",
-  "localStorage",
-  "module",
-  "global" // Node.js
-];
-
-const BUILT_INS = [].concat(
-  BUILT_IN_GLOBALS,
-  BUILT_IN_VARIABLES,
-  TYPES,
-  ERROR_TYPES
-);
-
-/*
-Language: TypeScript
-Author: Panu Horsmalahti <panu.horsmalahti@iki.fi>
-Contributors: Ike Ku <dempfi@yahoo.com>
-Description: TypeScript is a strict superset of JavaScript
-Website: https://www.typescriptlang.org
-Category: common, scripting
-*/
-
-function typescript(hljs) {
-  var IDENT_RE$1 = IDENT_RE;
-  var TYPES = [
-    "any",
-    "void",
-    "number",
-    "boolean",
-    "string",
-    "object",
-    "never",
-    "enum"
-  ];
-  var TS_SPECIFIC_KEYWORDS = [
-    "type",
-    "namespace",
-    "typedef",
-    "interface",
-    "public",
-    "private",
-    "protected",
-    "implements",
-    "declare",
-    "abstract",
-    "readonly"
-  ];
-  var KEYWORDS$1 = {
-    $pattern: IDENT_RE,
-    keyword: KEYWORDS.concat(TS_SPECIFIC_KEYWORDS).join(" "),
-    literal: LITERALS.join(" "),
-    built_in: BUILT_INS.concat(TYPES).join(" ")
+module.exports = function(hljs) {
+  var JS_IDENT_RE = '[A-Za-z$_][0-9A-Za-z$_]*';
+  var KEYWORDS = {
+    keyword:
+      'in if for while finally var new function do return void else break catch ' +
+      'instanceof with throw case default try this switch continue typeof delete ' +
+      'let yield const class public private protected get set super ' +
+      'static implements enum export import declare type namespace abstract ' +
+      'as from extends async await',
+    literal:
+      'true false null undefined NaN Infinity',
+    built_in:
+      'eval isFinite isNaN parseFloat parseInt decodeURI decodeURIComponent ' +
+      'encodeURI encodeURIComponent escape unescape Object Function Boolean Error ' +
+      'EvalError InternalError RangeError ReferenceError StopIteration SyntaxError ' +
+      'TypeError URIError Number Math Date String RegExp Array Float32Array ' +
+      'Float64Array Int16Array Int32Array Int8Array Uint16Array Uint32Array ' +
+      'Uint8Array Uint8ClampedArray ArrayBuffer DataView JSON Intl arguments require ' +
+      'module console window document any number boolean string void Promise'
   };
+
   var DECORATOR = {
     className: 'meta',
-    begin: '@' + IDENT_RE$1,
+    begin: '@' + JS_IDENT_RE,
+  };
+
+  var ARGS =
+  {
+    begin: '\\(',
+    end: /\)/,
+    keywords: KEYWORDS,
+    contains: [
+      'self',
+      hljs.QUOTE_STRING_MODE,
+      hljs.APOS_STRING_MODE,
+      hljs.NUMBER_MODE
+    ]
+  };
+
+  var PARAMS = {
+    className: 'params',
+    begin: /\(/, end: /\)/,
+    excludeBegin: true,
+    excludeEnd: true,
+    keywords: KEYWORDS,
+    contains: [
+      hljs.C_LINE_COMMENT_MODE,
+      hljs.C_BLOCK_COMMENT_MODE,
+      DECORATOR,
+      ARGS
+    ]
   };
   var NUMBER = {
     className: 'number',
@@ -201,8 +71,8 @@ function typescript(hljs) {
   var SUBST = {
     className: 'subst',
     begin: '\\$\\{', end: '\\}',
-    keywords: KEYWORDS$1,
-    contains: [] // defined later
+    keywords: KEYWORDS,
+    contains: []  // defined later
   };
   var HTML_TEMPLATE = {
     begin: 'html`', end: '',
@@ -243,38 +113,13 @@ function typescript(hljs) {
     NUMBER,
     hljs.REGEXP_MODE
   ];
-  var ARGUMENTS =
-  {
-    begin: '\\(',
-    end: /\)/,
-    keywords: KEYWORDS$1,
-    contains: [
-      'self',
-      hljs.QUOTE_STRING_MODE,
-      hljs.APOS_STRING_MODE,
-      hljs.NUMBER_MODE
-    ]
-  };
-  var PARAMS = {
-    className: 'params',
-    begin: /\(/, end: /\)/,
-    excludeBegin: true,
-    excludeEnd: true,
-    keywords: KEYWORDS$1,
-    contains: [
-      hljs.C_LINE_COMMENT_MODE,
-      hljs.C_BLOCK_COMMENT_MODE,
-      DECORATOR,
-      ARGUMENTS
-    ]
-  };
+
+
 
   return {
-    name: 'TypeScript',
     aliases: ['ts'],
-    keywords: KEYWORDS$1,
+    keywords: KEYWORDS,
     contains: [
-      hljs.SHEBANG(),
       {
         className: 'meta',
         begin: /^\s*['"]use strict['"]/
@@ -296,33 +141,27 @@ function typescript(hljs) {
           hljs.REGEXP_MODE,
           {
             className: 'function',
-            // we have to count the parens to make sure we actually have the
-            // correct bounding ( ) before the =>.  There could be any number of
-            // sub-expressions inside also surrounded by parens.
-            begin: '(\\([^(]*' +
-              '(\\([^(]*' +
-                '(\\([^(]*' +
-                '\\))?' +
-              '\\))?' +
-            '\\)|' + hljs.UNDERSCORE_IDENT_RE + ')\\s*=>', returnBegin: true,
+            begin: '(\\(.*?\\)|' + hljs.IDENT_RE + ')\\s*=>', returnBegin: true,
             end: '\\s*=>',
             contains: [
               {
                 className: 'params',
                 variants: [
                   {
-                    begin: hljs.UNDERSCORE_IDENT_RE
+                    begin: hljs.IDENT_RE
                   },
                   {
-                    className: null,
                     begin: /\(\s*\)/,
-                    skip: true
                   },
                   {
                     begin: /\(/, end: /\)/,
                     excludeBegin: true, excludeEnd: true,
-                    keywords: KEYWORDS$1,
-                    contains: ARGUMENTS.contains
+                    keywords: KEYWORDS,
+                    contains: [
+                      'self',
+                      hljs.C_LINE_COMMENT_MODE,
+                      hljs.C_BLOCK_COMMENT_MODE
+                    ]
                   }
                 ]
               }
@@ -334,10 +173,10 @@ function typescript(hljs) {
       {
         className: 'function',
         beginKeywords: 'function', end: /[\{;]/, excludeEnd: true,
-        keywords: KEYWORDS$1,
+        keywords: KEYWORDS,
         contains: [
           'self',
-          hljs.inherit(hljs.TITLE_MODE, { begin: IDENT_RE$1 }),
+          hljs.inherit(hljs.TITLE_MODE, { begin: JS_IDENT_RE }),
           PARAMS
         ],
         illegal: /%/,
@@ -369,13 +208,10 @@ function typescript(hljs) {
         begin: '\\.' + hljs.IDENT_RE, relevance: 0 // hack: prevents detection of keywords after dots
       },
       DECORATOR,
-      ARGUMENTS
+      ARGS
     ]
   };
-}
-
-module.exports = typescript;
-
+};
 
 /***/ })
 

@@ -7,47 +7,28 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-/*
-Language: AppleScript
-Authors: Nathan Grigg <nathan@nathanamy.org>, Dr. Drang <drdrang@gmail.com>
-Category: scripting
-Website: https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html
-*/
-
-/** @type LanguageFn */
-function applescript(hljs) {
-  const STRING = hljs.inherit(hljs.QUOTE_STRING_MODE, {
-    illegal: ''
-  });
-  const PARAMS = {
+module.exports = function(hljs) {
+  var STRING = hljs.inherit(hljs.QUOTE_STRING_MODE, {illegal: ''});
+  var PARAMS = {
     className: 'params',
-    begin: '\\(',
-    end: '\\)',
-    contains: [
-      'self',
-      hljs.C_NUMBER_MODE,
-      STRING
-    ]
+    begin: '\\(', end: '\\)',
+    contains: ['self', hljs.C_NUMBER_MODE, STRING]
   };
-  const COMMENT_MODE_1 = hljs.COMMENT('--', '$');
-  const COMMENT_MODE_2 = hljs.COMMENT(
+  var COMMENT_MODE_1 = hljs.COMMENT('--', '$');
+  var COMMENT_MODE_2 = hljs.COMMENT(
     '\\(\\*',
     '\\*\\)',
     {
-      contains: [
-        'self', // allow nesting
-        COMMENT_MODE_1
-      ]
+      contains: ['self', COMMENT_MODE_1] //allow nesting
     }
   );
-  const COMMENTS = [
+  var COMMENTS = [
     COMMENT_MODE_1,
     COMMENT_MODE_2,
     hljs.HASH_COMMENT_MODE
   ];
 
   return {
-    name: 'AppleScript',
     aliases: ['osascript'],
     keywords: {
       keyword:
@@ -105,18 +86,12 @@ function applescript(hljs) {
       {
         beginKeywords: 'on',
         illegal: '[${=;\\n]',
-        contains: [
-          hljs.UNDERSCORE_TITLE_MODE,
-          PARAMS
-        ]
+        contains: [hljs.UNDERSCORE_TITLE_MODE, PARAMS]
       }
     ].concat(COMMENTS),
     illegal: '//|->|=>|\\[\\['
   };
-}
-
-module.exports = applescript;
-
+};
 
 /***/ })
 

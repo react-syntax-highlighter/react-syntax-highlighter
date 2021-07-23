@@ -7,254 +7,92 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-/*
-Language: Python
-Description: Python is an interpreted, object-oriented, high-level programming language with dynamic semantics.
-Website: https://www.python.org
-Category: common
-*/
-
-function python(hljs) {
-  const RESERVED_WORDS = [
-    'and',
-    'as',
-    'assert',
-    'async',
-    'await',
-    'break',
-    'class',
-    'continue',
-    'def',
-    'del',
-    'elif',
-    'else',
-    'except',
-    'finally',
-    'for',
-    '',
-    'from',
-    'global',
-    'if',
-    'import',
-    'in',
-    'is',
-    'lambda',
-    'nonlocal|10',
-    'not',
-    'or',
-    'pass',
-    'raise',
-    'return',
-    'try',
-    'while',
-    'with',
-    'yield',
-  ];
-
-  const BUILT_INS = [
-    '__import__',
-    'abs',
-    'all',
-    'any',
-    'ascii',
-    'bin',
-    'bool',
-    'breakpoint',
-    'bytearray',
-    'bytes',
-    'callable',
-    'chr',
-    'classmethod',
-    'compile',
-    'complex',
-    'delattr',
-    'dict',
-    'dir',
-    'divmod',
-    'enumerate',
-    'eval',
-    'exec',
-    'filter',
-    'float',
-    'format',
-    'frozenset',
-    'getattr',
-    'globals',
-    'hasattr',
-    'hash',
-    'help',
-    'hex',
-    'id',
-    'input',
-    'int',
-    'isinstance',
-    'issubclass',
-    'iter',
-    'len',
-    'list',
-    'locals',
-    'map',
-    'max',
-    'memoryview',
-    'min',
-    'next',
-    'object',
-    'oct',
-    'open',
-    'ord',
-    'pow',
-    'print',
-    'property',
-    'range',
-    'repr',
-    'reversed',
-    'round',
-    'set',
-    'setattr',
-    'slice',
-    'sorted',
-    'staticmethod',
-    'str',
-    'sum',
-    'super',
-    'tuple',
-    'type',
-    'vars',
-    'zip',
-  ];
-
-  const LITERALS = [
-    '__debug__',
-    'Ellipsis',
-    'False',
-    'None',
-    'NotImplemented',
-    'True',
-  ];
-
-  const KEYWORDS = {
-    keyword: RESERVED_WORDS.join(' '),
-    built_in: BUILT_INS.join(' '),
-    literal: LITERALS.join(' ')
+module.exports = function(hljs) {
+  var KEYWORDS = {
+    keyword:
+      'and elif is global as in if from raise for except finally print import pass return ' +
+      'exec else break not with class assert yield try while continue del or def lambda ' +
+      'async await nonlocal|10',
+    built_in:
+      'Ellipsis NotImplemented',
+    literal: 'False None True'
   };
-
-  const PROMPT = {
+  var PROMPT = {
     className: 'meta',  begin: /^(>>>|\.\.\.) /
   };
-
-  const SUBST = {
+  var SUBST = {
     className: 'subst',
     begin: /\{/, end: /\}/,
     keywords: KEYWORDS,
     illegal: /#/
   };
-
-  const LITERAL_BRACKET = {
+  var LITERAL_BRACKET = {
     begin: /\{\{/,
     relevance: 0
   };
-
-  const STRING = {
+  var STRING = {
     className: 'string',
     contains: [hljs.BACKSLASH_ESCAPE],
     variants: [
       {
-        begin: /([uU]|[bB]|[rR]|[bB][rR]|[rR][bB])?'''/, end: /'''/,
+        begin: /(u|b)?r?'''/, end: /'''/,
         contains: [hljs.BACKSLASH_ESCAPE, PROMPT],
         relevance: 10
       },
       {
-        begin: /([uU]|[bB]|[rR]|[bB][rR]|[rR][bB])?"""/, end: /"""/,
+        begin: /(u|b)?r?"""/, end: /"""/,
         contains: [hljs.BACKSLASH_ESCAPE, PROMPT],
         relevance: 10
       },
       {
-        begin: /([fF][rR]|[rR][fF]|[fF])'''/, end: /'''/,
+        begin: /(fr|rf|f)'''/, end: /'''/,
         contains: [hljs.BACKSLASH_ESCAPE, PROMPT, LITERAL_BRACKET, SUBST]
       },
       {
-        begin: /([fF][rR]|[rR][fF]|[fF])"""/, end: /"""/,
+        begin: /(fr|rf|f)"""/, end: /"""/,
         contains: [hljs.BACKSLASH_ESCAPE, PROMPT, LITERAL_BRACKET, SUBST]
       },
       {
-        begin: /([uU]|[rR])'/, end: /'/,
+        begin: /(u|r|ur)'/, end: /'/,
         relevance: 10
       },
       {
-        begin: /([uU]|[rR])"/, end: /"/,
+        begin: /(u|r|ur)"/, end: /"/,
         relevance: 10
       },
       {
-        begin: /([bB]|[bB][rR]|[rR][bB])'/, end: /'/
+        begin: /(b|br)'/, end: /'/
       },
       {
-        begin: /([bB]|[bB][rR]|[rR][bB])"/, end: /"/
+        begin: /(b|br)"/, end: /"/
       },
       {
-        begin: /([fF][rR]|[rR][fF]|[fF])'/, end: /'/,
+        begin: /(fr|rf|f)'/, end: /'/,
         contains: [hljs.BACKSLASH_ESCAPE, LITERAL_BRACKET, SUBST]
       },
       {
-        begin: /([fF][rR]|[rR][fF]|[fF])"/, end: /"/,
+        begin: /(fr|rf|f)"/, end: /"/,
         contains: [hljs.BACKSLASH_ESCAPE, LITERAL_BRACKET, SUBST]
       },
       hljs.APOS_STRING_MODE,
       hljs.QUOTE_STRING_MODE
     ]
   };
-
-  // https://docs.python.org/3.9/reference/lexical_analysis.html#numeric-literals
-  const digitpart = '[0-9](_?[0-9])*';
-  const pointfloat = `(\\b(${digitpart}))?\\.(${digitpart})|\\b(${digitpart})\\.`;
-  const NUMBER = {
+  var NUMBER = {
     className: 'number', relevance: 0,
     variants: [
-      // exponentfloat, pointfloat
-      // https://docs.python.org/3.9/reference/lexical_analysis.html#floating-point-literals
-      // optionally imaginary
-      // https://docs.python.org/3.9/reference/lexical_analysis.html#imaginary-literals
-      // Note: no leading \b because floats can start with a decimal point
-      // and we don't want to mishandle e.g. `fn(.5)`,
-      // no trailing \b for pointfloat because it can end with a decimal point
-      // and we don't want to mishandle e.g. `0..hex()`; this should be safe
-      // because both MUST contain a decimal point and so cannot be confused with
-      // the interior part of an identifier
-      { begin: `(\\b(${digitpart})|(${pointfloat}))[eE][+-]?(${digitpart})[jJ]?\\b` },
-      { begin: `(${pointfloat})[jJ]?` },
-
-      // decinteger, bininteger, octinteger, hexinteger
-      // https://docs.python.org/3.9/reference/lexical_analysis.html#integer-literals
-      // optionally "long" in Python 2
-      // https://docs.python.org/2.7/reference/lexical_analysis.html#integer-and-long-integer-literals
-      // decinteger is optionally imaginary
-      // https://docs.python.org/3.9/reference/lexical_analysis.html#imaginary-literals
-      { begin: '\\b([1-9](_?[0-9])*|0+(_?0)*)[lLjJ]?\\b' },
-      { begin: '\\b0[bB](_?[01])+[lL]?\\b' },
-      { begin: '\\b0[oO](_?[0-7])+[lL]?\\b' },
-      { begin: '\\b0[xX](_?[0-9a-fA-F])+[lL]?\\b' },
-
-      // imagnumber (digitpart-based)
-      // https://docs.python.org/3.9/reference/lexical_analysis.html#imaginary-literals
-      { begin: `\\b(${digitpart})[jJ]\\b` },
+      {begin: hljs.BINARY_NUMBER_RE + '[lLjJ]?'},
+      {begin: '\\b(0o[0-7]+)[lLjJ]?'},
+      {begin: hljs.C_NUMBER_RE + '[lLjJ]?'}
     ]
   };
-
-  const PARAMS = {
+  var PARAMS = {
     className: 'params',
-    variants: [
-      // Exclude params at functions without params
-      {begin: /\(\s*\)/, skip: true, className: null },
-      {
-        begin: /\(/, end: /\)/, excludeBegin: true, excludeEnd: true,
-        keywords: KEYWORDS,
-        contains: ['self', PROMPT, NUMBER, STRING, hljs.HASH_COMMENT_MODE],
-      },
-    ],
+    begin: /\(/, end: /\)/,
+    contains: ['self', PROMPT, NUMBER, STRING, hljs.HASH_COMMENT_MODE]
   };
   SUBST.contains = [STRING, NUMBER, PROMPT];
-
   return {
-    name: 'Python',
     aliases: ['py', 'gyp', 'ipython'],
     keywords: KEYWORDS,
     illegal: /(<\/|->|\?)|=>/,
@@ -263,7 +101,6 @@ function python(hljs) {
       NUMBER,
       // eat "if" prior to string so that it won't accidentally be
       // labeled as an f-string as in:
-      { begin: /\bself\b/, }, // very common convention
       { beginKeywords: "if", relevance: 0 },
       STRING,
       hljs.HASH_COMMENT_MODE,
@@ -285,18 +122,14 @@ function python(hljs) {
       },
       {
         className: 'meta',
-        begin: /^[\t ]*@/, end: /(?=#)|$/,
-        contains: [NUMBER, PARAMS, STRING]
+        begin: /^[\t ]*@/, end: /$/
       },
       {
         begin: /\b(print|exec)\(/ // don’t highlight keywords-turned-functions in Python 3
       }
     ]
   };
-}
-
-module.exports = python;
-
+};
 
 /***/ })
 

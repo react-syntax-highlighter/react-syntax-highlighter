@@ -7,17 +7,8 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-/*
-Language: Go
-Author: Stephan Kountso aka StepLg <steplg@gmail.com>
-Contributors: Evgeny Stepanischev <imbolk@gmail.com>
-Description: Google go language (golang). For info about language
-Website: http://golang.org/
-Category: common, system
-*/
-
-function go(hljs) {
-  const GO_KEYWORDS = {
+module.exports = function(hljs) {
+  var GO_KEYWORDS = {
     keyword:
       'break default func interface select case map struct chan else goto package switch ' +
       'const fallthrough if range type continue for import return var go defer ' +
@@ -29,7 +20,6 @@ function go(hljs) {
       'append cap close complex copy imag len make new panic print println real recover delete'
   };
   return {
-    name: 'Go',
     aliases: ['golang'],
     keywords: GO_KEYWORDS,
     illegal: '</',
@@ -41,19 +31,13 @@ function go(hljs) {
         variants: [
           hljs.QUOTE_STRING_MODE,
           hljs.APOS_STRING_MODE,
-          {
-            begin: '`',
-            end: '`'
-          }
+          {begin: '`', end: '`'},
         ]
       },
       {
         className: 'number',
         variants: [
-          {
-            begin: hljs.C_NUMBER_RE + '[i]',
-            relevance: 1
-          },
+          {begin: hljs.C_NUMBER_RE + '[i]', relevance: 1},
           hljs.C_NUMBER_MODE
         ]
       },
@@ -62,15 +46,12 @@ function go(hljs) {
       },
       {
         className: 'function',
-        beginKeywords: 'func',
-        end: '\\s*(\\{|$)',
-        excludeEnd: true,
+        beginKeywords: 'func', end: '\\s*(\\{|$)', excludeEnd: true,
         contains: [
           hljs.TITLE_MODE,
           {
             className: 'params',
-            begin: /\(/,
-            end: /\)/,
+            begin: /\(/, end: /\)/,
             keywords: GO_KEYWORDS,
             illegal: /["']/
           }
@@ -78,10 +59,7 @@ function go(hljs) {
       }
     ]
   };
-}
-
-module.exports = go;
-
+};
 
 /***/ })
 

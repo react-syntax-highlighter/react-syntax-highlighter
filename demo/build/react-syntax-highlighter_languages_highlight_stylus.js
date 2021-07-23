@@ -7,15 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-/*
-Language: Stylus
-Author: Bryant Williams <b.n.williams@gmail.com>
-Description: Stylus is an expressive, robust, feature-rich CSS language built for nodejs.
-Website: https://github.com/stylus/stylus
-Category: css
-*/
-
-function stylus(hljs) {
+module.exports = function(hljs) {
 
   var VARIABLE = {
     className: 'variable',
@@ -131,7 +123,7 @@ function stylus(hljs) {
     'video'
   ];
 
-  var LOOKAHEAD_TAG_END = '(?=[.\\s\\n[:,])';
+  var LOOKAHEAD_TAG_END = '(?=[\\.\\s\\n\\[\\:,])';
 
   var ATTRIBUTES = [
     'align-content',
@@ -355,7 +347,6 @@ function stylus(hljs) {
   ];
 
   return {
-    name: 'Stylus',
     aliases: ['styl'],
     case_insensitive: false,
     keywords: 'if else for in',
@@ -381,7 +372,7 @@ function stylus(hljs) {
 
       // id tag
       {
-        begin: '#[a-zA-Z][a-zA-Z0-9_-]*' + LOOKAHEAD_TAG_END,
+        begin: '\\#[a-zA-Z][a-zA-Z0-9_-]*' + LOOKAHEAD_TAG_END,
         className: 'selector-id'
       },
 
@@ -459,10 +450,7 @@ function stylus(hljs) {
       }
     ]
   };
-}
-
-module.exports = stylus;
-
+};
 
 /***/ })
 

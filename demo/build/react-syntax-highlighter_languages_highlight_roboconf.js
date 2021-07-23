@@ -7,22 +7,12 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-/*
-Language: Roboconf
-Author: Vincent Zurczak <vzurczak@linagora.com>
-Description: Syntax highlighting for Roboconf's DSL
-Website: http://roboconf.net
-Category: config
-*/
+module.exports = function(hljs) {
+  var IDENTIFIER = '[a-zA-Z-_][^\\n{]+\\{';
 
-function roboconf(hljs) {
-  const IDENTIFIER = '[a-zA-Z-_][^\\n{]+\\{';
-
-  const PROPERTY = {
+  var PROPERTY = {
     className: 'attribute',
-    begin: /[a-zA-Z-_]+/,
-    end: /\s*:/,
-    excludeEnd: true,
+    begin: /[a-zA-Z-_]+/, end: /\s*:/, excludeEnd: true,
     starts: {
       end: ';',
       relevance: 0,
@@ -40,18 +30,14 @@ function roboconf(hljs) {
   };
 
   return {
-    name: 'Roboconf',
-    aliases: [
-      'graph',
-      'instances'
-    ],
+    aliases: ['graph', 'instances'],
     case_insensitive: true,
     keywords: 'import',
     contains: [
       // Facet sections
       {
         begin: '^facet ' + IDENTIFIER,
-        end: /\}/,
+        end: '}',
         keywords: 'facet',
         contains: [
           PROPERTY,
@@ -62,7 +48,7 @@ function roboconf(hljs) {
       // Instance sections
       {
         begin: '^\\s*instance of ' + IDENTIFIER,
-        end: /\}/,
+        end: '}',
         keywords: 'name count channels instance-data instance-state instance of',
         illegal: /\S/,
         contains: [
@@ -75,7 +61,7 @@ function roboconf(hljs) {
       // Component sections
       {
         begin: '^' + IDENTIFIER,
-        end: /\}/,
+        end: '}',
         contains: [
           PROPERTY,
           hljs.HASH_COMMENT_MODE
@@ -86,10 +72,7 @@ function roboconf(hljs) {
       hljs.HASH_COMMENT_MODE
     ]
   };
-}
-
-module.exports = roboconf;
-
+};
 
 /***/ })
 

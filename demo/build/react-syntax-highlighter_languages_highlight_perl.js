@@ -7,49 +7,12 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-/**
- * @param {string} value
- * @returns {RegExp}
- * */
-
-/**
- * @param {RegExp | string } re
- * @returns {string}
- */
-function source(re) {
-  if (!re) return null;
-  if (typeof re === "string") return re;
-
-  return re.source;
-}
-
-/**
- * @param {...(RegExp | string) } args
- * @returns {string}
- */
-function concat(...args) {
-  const joined = args.map((x) => source(x)).join("");
-  return joined;
-}
-
-/*
-Language: Perl
-Author: Peter Leonov <gojpeg@yandex.ru>
-Website: https://www.perl.org
-Category: common
-*/
-
-/** @type LanguageFn */
-function perl(hljs) {
-  // https://perldoc.perl.org/perlre#Modifiers
-  const REGEX_MODIFIERS = /[dualxmsipn]{0,12}/; // aa and xx are valid, making max length 12
-  const PERL_KEYWORDS = {
-    $pattern: /[\w.]+/,
-    keyword: 'getpwent getservent quotemeta msgrcv scalar kill dbmclose undef lc ' +
+module.exports = function(hljs) {
+  var PERL_KEYWORDS = 'getpwent getservent quotemeta msgrcv scalar kill dbmclose undef lc ' +
     'ma syswrite tr send umask sysopen shmwrite vec qx utime local oct semctl localtime ' +
-    'readpipe do return format read sprintf dbmopen pop getpgrp not getpwnam rewinddir qq ' +
+    'readpipe do return format read sprintf dbmopen pop getpgrp not getpwnam rewinddir qq' +
     'fileno qw endprotoent wait sethostent bless s|0 opendir continue each sleep endgrent ' +
-    'shutdown dump chomp connect getsockname die socketpair close flock exists index shmget ' +
+    'shutdown dump chomp connect getsockname die socketpair close flock exists index shmget' +
     'sub for endpwent redo lstat msgctl setpgrp abs exit select print ref gethostbyaddr ' +
     'unshift fcntl syscall goto getnetbyaddr join gmtime symlink semget splice x|0 ' +
     'getpeername recv log setsockopt cos last reverse gethostbyname getgrnam study formline ' +
@@ -61,51 +24,32 @@ function perl(hljs) {
     'lcfirst until warn while values shift telldir getpwuid my getprotobynumber delete and ' +
     'sort uc defined srand accept package seekdir getprotobyname semop our rename seek if q|0 ' +
     'chroot sysread setpwent no crypt getc chown sqrt write setnetent setpriority foreach ' +
-    'tie sin msgget map stat getlogin unless elsif truncate exec keys glob tied closedir ' +
+    'tie sin msgget map stat getlogin unless elsif truncate exec keys glob tied closedir' +
     'ioctl socket readlink eval xor readline binmode setservent eof ord bind alarm pipe ' +
-    'atan2 getgrent exp time push setgrent gt lt or ne m|0 break given say state when'
-  };
-  const SUBST = {
+    'atan2 getgrent exp time push setgrent gt lt or ne m|0 break given say state when';
+  var SUBST = {
     className: 'subst',
-    begin: '[$@]\\{',
-    end: '\\}',
+    begin: '[$@]\\{', end: '\\}',
     keywords: PERL_KEYWORDS
   };
-  const METHOD = {
-    begin: /->\{/,
-    end: /\}/
+  var METHOD = {
+    begin: '->{', end: '}'
     // contains defined later
   };
-  const VAR = {
+  var VAR = {
     variants: [
-      {
-        begin: /\$\d/
-      },
-      {
-        begin: concat(
-          /[$%@](\^\w\b|#\w+(::\w+)*|\{\w+\}|\w+(::\w*)*)/,
-          // negative look-ahead tries to avoid matching patterns that are not
-          // Perl at all like $ident$, @ident@, etc.
-          `(?![A-Za-z])(?![@$%])`
-        )
-      },
-      {
-        begin: /[$%@][^\s\w{]/,
-        relevance: 0
-      }
+      {begin: /\$\d/},
+      {begin: /[\$%@](\^\w\b|#\w+(::\w+)*|{\w+}|\w+(::\w*)*)/},
+      {begin: /[\$%@][^\s\w{]/, relevance: 0}
     ]
   };
-  const STRING_CONTAINS = [
-    hljs.BACKSLASH_ESCAPE,
-    SUBST,
-    VAR
-  ];
-  const PERL_DEFAULT_CONTAINS = [
+  var STRING_CONTAINS = [hljs.BACKSLASH_ESCAPE, SUBST, VAR];
+  var PERL_DEFAULT_CONTAINS = [
     VAR,
     hljs.HASH_COMMENT_MODE,
     hljs.COMMENT(
-      /^=\w/,
-      /=cut/,
+      '^\\=\\w',
+      '\\=cut',
       {
         endsWithParent: true
       }
@@ -116,56 +60,47 @@ function perl(hljs) {
       contains: STRING_CONTAINS,
       variants: [
         {
-          begin: 'q[qwxr]?\\s*\\(',
-          end: '\\)',
+          begin: 'q[qwxr]?\\s*\\(', end: '\\)',
           relevance: 5
         },
         {
-          begin: 'q[qwxr]?\\s*\\[',
-          end: '\\]',
+          begin: 'q[qwxr]?\\s*\\[', end: '\\]',
           relevance: 5
         },
         {
-          begin: 'q[qwxr]?\\s*\\{',
-          end: '\\}',
+          begin: 'q[qwxr]?\\s*\\{', end: '\\}',
           relevance: 5
         },
         {
-          begin: 'q[qwxr]?\\s*\\|',
-          end: '\\|',
+          begin: 'q[qwxr]?\\s*\\|', end: '\\|',
           relevance: 5
         },
         {
-          begin: 'q[qwxr]?\\s*<',
-          end: '>',
+          begin: 'q[qwxr]?\\s*\\<', end: '\\>',
           relevance: 5
         },
         {
-          begin: 'qw\\s+q',
-          end: 'q',
+          begin: 'qw\\s+q', end: 'q',
           relevance: 5
         },
         {
-          begin: '\'',
-          end: '\'',
-          contains: [ hljs.BACKSLASH_ESCAPE ]
+          begin: '\'', end: '\'',
+          contains: [hljs.BACKSLASH_ESCAPE]
         },
         {
-          begin: '"',
-          end: '"'
+          begin: '"', end: '"'
         },
         {
-          begin: '`',
-          end: '`',
-          contains: [ hljs.BACKSLASH_ESCAPE ]
+          begin: '`', end: '`',
+          contains: [hljs.BACKSLASH_ESCAPE]
         },
         {
-          begin: /\{\w+\}/,
+          begin: '{\\w+}',
           contains: [],
           relevance: 0
         },
         {
-          begin: '-?\\w+\\s*=>',
+          begin: '\-?\\w+\\s*\\=\\>',
           contains: [],
           relevance: 0
         }
@@ -184,36 +119,22 @@ function perl(hljs) {
         hljs.HASH_COMMENT_MODE,
         {
           className: 'regexp',
-          begin: concat(
-            /(s|tr|y)/,
-            /\//,
-            /(\\.|[^\\\/])*/,
-            /\//,
-            /(\\.|[^\\\/])*/,
-            /\//,
-            REGEX_MODIFIERS,
-          ),
+          begin: '(s|tr|y)/(\\\\.|[^/])*/(\\\\.|[^/])*/[a-z]*',
           relevance: 10
         },
         {
           className: 'regexp',
-          begin: /(m|qr)?\//,
-          end: concat(
-            /\//,
-            REGEX_MODIFIERS
-          ),
-          contains: [ hljs.BACKSLASH_ESCAPE ],
+          begin: '(m|qr)?/', end: '/[a-z]*',
+          contains: [hljs.BACKSLASH_ESCAPE],
           relevance: 0 // allows empty "//" which is a common comment delimiter in other languages
         }
       ]
     },
     {
       className: 'function',
-      beginKeywords: 'sub',
-      end: '(\\s*\\(.*?\\))?[;{]',
-      excludeEnd: true,
+      beginKeywords: 'sub', end: '(\\s*\\(.*?\\))?[;{]', excludeEnd: true,
       relevance: 5,
-      contains: [ hljs.TITLE_MODE ]
+      contains: [hljs.TITLE_MODE]
     },
     {
       begin: '-\\w\\b',
@@ -225,9 +146,9 @@ function perl(hljs) {
       subLanguage: 'mojolicious',
       contains: [
         {
-          begin: "^@@.*",
-          end: "$",
-          className: "comment"
+            begin: "^@@.*",
+            end: "$",
+            className: "comment"
         }
       ]
     }
@@ -236,18 +157,12 @@ function perl(hljs) {
   METHOD.contains = PERL_DEFAULT_CONTAINS;
 
   return {
-    name: 'Perl',
-    aliases: [
-      'pl',
-      'pm'
-    ],
+    aliases: ['pl', 'pm'],
+    lexemes: /[\w\.]+/,
     keywords: PERL_KEYWORDS,
     contains: PERL_DEFAULT_CONTAINS
   };
-}
-
-module.exports = perl;
-
+};
 
 /***/ })
 

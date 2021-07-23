@@ -7,16 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-/*
-Language: D
-Author: Aleksandar Ruzicic <aleksandar@ruzicic.info>
-Description: D is a language with C-like syntax and static typing. It pragmatically combines efficiency, control, and modeling power, with safety and programmer productivity.
-Version: 1.0a
-Website: https://dlang.org
-Date: 2012-04-08
-*/
-
-/**
+module.exports = /**
  * Known issues:
  *
  * - invalid hex string literals will be recognized as a double quoted strings
@@ -32,15 +23,13 @@ Date: 2012-04-08
  *   up to the end of line is matched as special token sequence)
  */
 
-/** @type LanguageFn */
-function d(hljs) {
+function(hljs) {
   /**
    * Language keywords
    *
    * @type {Object}
    */
-  const D_KEYWORDS = {
-    $pattern: hljs.UNDERSCORE_IDENT_RE,
+  var D_KEYWORDS = {
     keyword:
       'abstract alias align asm assert auto body break byte case cast catch class ' +
       'const continue debug default delete deprecated do else enum export extern final ' +
@@ -63,31 +52,31 @@ function d(hljs) {
    *
    * @type {String}
    */
-  const decimal_integer_re = '(0|[1-9][\\d_]*)';
-  const decimal_integer_nosus_re = '(0|[1-9][\\d_]*|\\d[\\d_]*|[\\d_]+?\\d)';
-  const binary_integer_re = '0[bB][01_]+';
-  const hexadecimal_digits_re = '([\\da-fA-F][\\da-fA-F_]*|_[\\da-fA-F][\\da-fA-F_]*)';
-  const hexadecimal_integer_re = '0[xX]' + hexadecimal_digits_re;
+  var decimal_integer_re = '(0|[1-9][\\d_]*)',
+    decimal_integer_nosus_re = '(0|[1-9][\\d_]*|\\d[\\d_]*|[\\d_]+?\\d)',
+    binary_integer_re = '0[bB][01_]+',
+    hexadecimal_digits_re = '([\\da-fA-F][\\da-fA-F_]*|_[\\da-fA-F][\\da-fA-F_]*)',
+    hexadecimal_integer_re = '0[xX]' + hexadecimal_digits_re,
 
-  const decimal_exponent_re = '([eE][+-]?' + decimal_integer_nosus_re + ')';
-  const decimal_float_re = '(' + decimal_integer_nosus_re + '(\\.\\d*|' + decimal_exponent_re + ')|' +
-                '\\d+\\.' + decimal_integer_nosus_re + '|' +
+    decimal_exponent_re = '([eE][+-]?' + decimal_integer_nosus_re + ')',
+    decimal_float_re = '(' + decimal_integer_nosus_re + '(\\.\\d*|' + decimal_exponent_re + ')|' +
+                '\\d+\\.' + decimal_integer_nosus_re + decimal_integer_nosus_re + '|' +
                 '\\.' + decimal_integer_re + decimal_exponent_re + '?' +
-              ')';
-  const hexadecimal_float_re = '(0[xX](' +
-                  hexadecimal_digits_re + '\\.' + hexadecimal_digits_re + '|' +
+              ')',
+    hexadecimal_float_re = '(0[xX](' +
+                  hexadecimal_digits_re + '\\.' + hexadecimal_digits_re + '|'+
                   '\\.?' + hexadecimal_digits_re +
-                 ')[pP][+-]?' + decimal_integer_nosus_re + ')';
+                 ')[pP][+-]?' + decimal_integer_nosus_re + ')',
 
-  const integer_re = '(' +
+    integer_re = '(' +
       decimal_integer_re + '|' +
-      binary_integer_re + '|' +
-       hexadecimal_integer_re +
-    ')';
+      binary_integer_re  + '|' +
+       hexadecimal_integer_re   +
+    ')',
 
-  const float_re = '(' +
+    float_re = '(' +
       hexadecimal_float_re + '|' +
-      decimal_float_re +
+      decimal_float_re  +
     ')';
 
   /**
@@ -95,31 +84,31 @@ function d(hljs) {
    *
    * @type {String}
    */
-  const escape_sequence_re = '\\\\(' +
-              '[\'"\\?\\\\abfnrtv]|' + // common escapes
-              'u[\\dA-Fa-f]{4}|' + // four hex digit unicode codepoint
-              '[0-7]{1,3}|' + // one to three octal digit ascii char code
-              'x[\\dA-Fa-f]{2}|' + // two hex digit ascii char code
-              'U[\\dA-Fa-f]{8}' + // eight hex digit unicode codepoint
+  var escape_sequence_re = '\\\\(' +
+              '[\'"\\?\\\\abfnrtv]|' +  // common escapes
+              'u[\\dA-Fa-f]{4}|' +     // four hex digit unicode codepoint
+              '[0-7]{1,3}|' +       // one to three octal digit ascii char code
+              'x[\\dA-Fa-f]{2}|' +    // two hex digit ascii char code
+              'U[\\dA-Fa-f]{8}' +      // eight hex digit unicode codepoint
               ')|' +
-              '&[a-zA-Z\\d]{2,};'; // named character entity
+              '&[a-zA-Z\\d]{2,};';      // named character entity
 
   /**
    * D integer number literals
    *
    * @type {Object}
    */
-  const D_INTEGER_MODE = {
+  var D_INTEGER_MODE = {
     className: 'number',
-    begin: '\\b' + integer_re + '(L|u|U|Lu|LU|uL|UL)?',
-    relevance: 0
+      begin: '\\b' + integer_re + '(L|u|U|Lu|LU|uL|UL)?',
+      relevance: 0
   };
 
   /**
    * [D_FLOAT_MODE description]
    * @type {Object}
    */
-  const D_FLOAT_MODE = {
+  var D_FLOAT_MODE = {
     className: 'number',
     begin: '\\b(' +
         float_re + '([fF]|L|i|[fF]i|Li)?|' +
@@ -133,10 +122,9 @@ function d(hljs) {
    *
    * @type {Object}
    */
-  const D_CHARACTER_MODE = {
+  var D_CHARACTER_MODE = {
     className: 'string',
-    begin: '\'(' + escape_sequence_re + '|.)',
-    end: '\'',
+    begin: '\'(' + escape_sequence_re + '|.)', end: '\'',
     illegal: '.'
   };
 
@@ -145,7 +133,7 @@ function d(hljs) {
    *
    * @type {Object}
    */
-  const D_ESCAPE_SEQUENCE = {
+  var D_ESCAPE_SEQUENCE = {
     begin: escape_sequence_re,
     relevance: 0
   };
@@ -155,7 +143,7 @@ function d(hljs) {
    *
    * @type {Object}
    */
-  const D_STRING_MODE = {
+  var D_STRING_MODE = {
     className: 'string',
     begin: '"',
     contains: [D_ESCAPE_SEQUENCE],
@@ -167,7 +155,7 @@ function d(hljs) {
    *
    * @type {Object}
    */
-  const D_WYSIWYG_DELIMITED_STRING_MODE = {
+  var D_WYSIWYG_DELIMITED_STRING_MODE = {
     className: 'string',
     begin: '[rq]"',
     end: '"[cwd]?',
@@ -179,7 +167,7 @@ function d(hljs) {
    *
    * @type {Object}
    */
-  const D_ALTERNATE_WYSIWYG_STRING_MODE = {
+  var D_ALTERNATE_WYSIWYG_STRING_MODE = {
     className: 'string',
     begin: '`',
     end: '`[cwd]?'
@@ -190,7 +178,7 @@ function d(hljs) {
    *
    * @type {Object}
    */
-  const D_HEX_STRING_MODE = {
+  var D_HEX_STRING_MODE = {
     className: 'string',
     begin: 'x"[\\da-fA-F\\s\\n\\r]*"[cwd]?',
     relevance: 10
@@ -201,7 +189,7 @@ function d(hljs) {
    *
    * @type {Object}
    */
-  const D_TOKEN_STRING_MODE = {
+  var D_TOKEN_STRING_MODE = {
     className: 'string',
     begin: 'q"\\{',
     end: '\\}"'
@@ -212,7 +200,7 @@ function d(hljs) {
    *
    * @type {Object}
    */
-  const D_HASHBANG_MODE = {
+  var D_HASHBANG_MODE = {
     className: 'meta',
     begin: '^#!',
     end: '$',
@@ -224,7 +212,7 @@ function d(hljs) {
    *
    * @type {Object}
    */
-  const D_SPECIAL_TOKEN_SEQUENCE_MODE = {
+  var D_SPECIAL_TOKEN_SEQUENCE_MODE = {
     className: 'meta',
     begin: '#(line)',
     end: '$',
@@ -236,7 +224,7 @@ function d(hljs) {
    *
    * @type {Object}
    */
-  const D_ATTRIBUTE_MODE = {
+  var D_ATTRIBUTE_MODE = {
     className: 'keyword',
     begin: '@[a-zA-Z_][a-zA-Z_\\d]*'
   };
@@ -246,7 +234,7 @@ function d(hljs) {
    *
    * @type {Object}
    */
-  const D_NESTING_COMMENT_MODE = hljs.COMMENT(
+  var D_NESTING_COMMENT_MODE = hljs.COMMENT(
     '\\/\\+',
     '\\+\\/',
     {
@@ -256,29 +244,26 @@ function d(hljs) {
   );
 
   return {
-    name: 'D',
+    lexemes: hljs.UNDERSCORE_IDENT_RE,
     keywords: D_KEYWORDS,
     contains: [
       hljs.C_LINE_COMMENT_MODE,
-      hljs.C_BLOCK_COMMENT_MODE,
-      D_NESTING_COMMENT_MODE,
-      D_HEX_STRING_MODE,
-      D_STRING_MODE,
-      D_WYSIWYG_DELIMITED_STRING_MODE,
-      D_ALTERNATE_WYSIWYG_STRING_MODE,
-      D_TOKEN_STRING_MODE,
-      D_FLOAT_MODE,
-      D_INTEGER_MODE,
-      D_CHARACTER_MODE,
-      D_HASHBANG_MODE,
-      D_SPECIAL_TOKEN_SEQUENCE_MODE,
-      D_ATTRIBUTE_MODE
+        hljs.C_BLOCK_COMMENT_MODE,
+        D_NESTING_COMMENT_MODE,
+        D_HEX_STRING_MODE,
+        D_STRING_MODE,
+        D_WYSIWYG_DELIMITED_STRING_MODE,
+        D_ALTERNATE_WYSIWYG_STRING_MODE,
+        D_TOKEN_STRING_MODE,
+        D_FLOAT_MODE,
+        D_INTEGER_MODE,
+        D_CHARACTER_MODE,
+        D_HASHBANG_MODE,
+        D_SPECIAL_TOKEN_SEQUENCE_MODE,
+        D_ATTRIBUTE_MODE
     ]
   };
-}
-
-module.exports = d;
-
+};
 
 /***/ })
 

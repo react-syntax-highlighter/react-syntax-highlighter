@@ -7,16 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-/*
-Language: Twig
-Requires: xml.js
-Author: Luke Holder <lukemh@gmail.com>
-Description: Twig is a templating language for PHP
-Website: https://twig.symfony.com
-Category: template
-*/
-
-function twig(hljs) {
+module.exports = function(hljs) {
   var PARAMS = {
     className: 'params',
     begin: '\\(', end: '\\)'
@@ -52,15 +43,14 @@ function twig(hljs) {
   TAGS = TAGS + ' ' + TAGS.split(' ').map(function(t){return 'end' + t}).join(' ');
 
   return {
-    name: 'Twig',
     aliases: ['craftcms'],
     case_insensitive: true,
     subLanguage: 'xml',
     contains: [
-      hljs.COMMENT(/\{#/, /#\}/),
+      hljs.COMMENT(/\{#/, /#}/),
       {
         className: 'template-tag',
-        begin: /\{%/, end: /%\}/,
+        begin: /\{%/, end: /%}/,
         contains: [
           {
             className: 'name',
@@ -76,15 +66,12 @@ function twig(hljs) {
       },
       {
         className: 'template-variable',
-        begin: /\{\{/, end: /\}\}/,
+        begin: /\{\{/, end: /}}/,
         contains: ['self', FILTER, FUNCTIONS]
       }
     ]
   };
-}
-
-module.exports = twig;
-
+};
 
 /***/ })
 

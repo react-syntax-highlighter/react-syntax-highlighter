@@ -7,22 +7,12 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-/*
-Language: Objective-C
-Author: Valerii Hiora <valerii.hiora@gmail.com>
-Contributors: Angel G. Olloqui <angelgarcia.mail@gmail.com>, Matt Diephouse <matt@diephouse.com>, Andrew Farmer <ahfarmer@gmail.com>, Minh Nguyễn <mxn@1ec5.org>
-Website: https://developer.apple.com/documentation/objectivec
-Category: common
-*/
-
-function objectivec(hljs) {
-  const API_CLASS = {
+module.exports = function(hljs) {
+  var API_CLASS = {
     className: 'built_in',
-    begin: '\\b(AV|CA|CF|CG|CI|CL|CM|CN|CT|MK|MP|MTK|MTL|NS|SCN|SK|UI|WK|XC)\\w+'
+    begin: '\\b(AV|CA|CF|CG|CI|CL|CM|CN|CT|MK|MP|MTK|MTL|NS|SCN|SK|UI|WK|XC)\\w+',
   };
-  const IDENTIFIER_RE = /[a-zA-Z@][a-zA-Z0-9_]*/;
-  const OBJC_KEYWORDS = {
-    $pattern: IDENTIFIER_RE,
+  var OBJC_KEYWORDS = {
     keyword:
       'int float while char export sizeof typedef const struct for union ' +
       'unsigned long volatile static bool mutable if do return goto void ' +
@@ -51,20 +41,12 @@ function objectivec(hljs) {
     built_in:
       'BOOL dispatch_once_t dispatch_queue_t dispatch_sync dispatch_async dispatch_once'
   };
-  const CLASS_KEYWORDS = {
-    $pattern: IDENTIFIER_RE,
-    keyword: '@interface @class @protocol @implementation'
-  };
+  var LEXEMES = /[a-zA-Z@][a-zA-Z0-9_]*/;
+  var CLASS_KEYWORDS = '@interface @class @protocol @implementation';
   return {
-    name: 'Objective-C',
-    aliases: [
-      'mm',
-      'objc',
-      'obj-c',
-      'obj-c++',
-      'objective-c++'
-    ],
+    aliases: ['mm', 'objc', 'obj-c'],
     keywords: OBJC_KEYWORDS,
+    lexemes: LEXEMES,
     illegal: '</',
     contains: [
       API_CLASS,
@@ -77,17 +59,15 @@ function objectivec(hljs) {
         className: 'string',
         variants: [
           {
-            begin: '@"',
-            end: '"',
+            begin: '@"', end: '"',
             illegal: '\\n',
-            contains: [ hljs.BACKSLASH_ESCAPE ]
+            contains: [hljs.BACKSLASH_ESCAPE]
           }
         ]
       },
       {
         className: 'meta',
-        begin: /#\s*[a-z]+\b/,
-        end: /$/,
+        begin: /#\s*[a-z]+\b/, end: /$/,
         keywords: {
           'meta-keyword':
             'if else elif endif define undef warning error line ' +
@@ -95,17 +75,13 @@ function objectivec(hljs) {
         },
         contains: [
           {
-            begin: /\\\n/,
-            relevance: 0
+            begin: /\\\n/, relevance: 0
           },
-          hljs.inherit(hljs.QUOTE_STRING_MODE, {
-            className: 'meta-string'
-          }),
+          hljs.inherit(hljs.QUOTE_STRING_MODE, {className: 'meta-string'}),
           {
             className: 'meta-string',
-            begin: /<.*?>/,
-            end: /$/,
-            illegal: '\\n'
+            begin: /<.*?>/, end: /$/,
+            illegal: '\\n',
           },
           hljs.C_LINE_COMMENT_MODE,
           hljs.C_BLOCK_COMMENT_MODE
@@ -113,22 +89,19 @@ function objectivec(hljs) {
       },
       {
         className: 'class',
-        begin: '(' + CLASS_KEYWORDS.keyword.split(' ').join('|') + ')\\b',
-        end: /(\{|$)/,
-        excludeEnd: true,
-        keywords: CLASS_KEYWORDS,
-        contains: [ hljs.UNDERSCORE_TITLE_MODE ]
+        begin: '(' + CLASS_KEYWORDS.split(' ').join('|') + ')\\b', end: '({|$)', excludeEnd: true,
+        keywords: CLASS_KEYWORDS, lexemes: LEXEMES,
+        contains: [
+          hljs.UNDERSCORE_TITLE_MODE
+        ]
       },
       {
-        begin: '\\.' + hljs.UNDERSCORE_IDENT_RE,
+        begin: '\\.'+hljs.UNDERSCORE_IDENT_RE,
         relevance: 0
       }
     ]
   };
-}
-
-module.exports = objectivec;
-
+};
 
 /***/ })
 

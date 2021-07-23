@@ -7,17 +7,8 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-/*
-Language: Mizar
-Description: The Mizar Language is a formal language derived from the mathematical vernacular.
-Author: Kelley van Evert <kelleyvanevert@gmail.com>
-Website: http://mizar.org/language/
-Category: scientific
-*/
-
-function mizar(hljs) {
+module.exports = function(hljs) {
   return {
-    name: 'Mizar',
     keywords:
       'environ vocabularies notations constructors definitions ' +
       'registrations theorems schemes requirements begin end definition ' +
@@ -33,10 +24,7 @@ function mizar(hljs) {
       hljs.COMMENT('::', '$')
     ]
   };
-}
-
-module.exports = mizar;
-
+};
 
 /***/ })
 

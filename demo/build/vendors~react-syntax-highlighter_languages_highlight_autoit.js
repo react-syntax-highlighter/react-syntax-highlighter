@@ -7,15 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-/*
-Language: AutoIt
-Author: Manh Tuan <junookyo@gmail.com>
-Description: AutoIt language definition
-Category: scripting
-*/
-
-/** @type LanguageFn */
-function autoit(hljs) {
+module.exports = function(hljs) {
     var KEYWORDS = 'ByRef Case Const ContinueCase ContinueLoop ' +
         'Default Dim Do Else ElseIf EndFunc EndIf EndSelect ' +
         'EndSwitch EndWith Enum Exit ExitLoop For Func ' +
@@ -132,7 +124,6 @@ function autoit(hljs) {
         };
 
     return {
-        name: 'AutoIt',
         case_insensitive: true,
         illegal: /\/\*/,
         keywords: {
@@ -150,10 +141,7 @@ function autoit(hljs) {
             FUNCTION
         ]
     }
-}
-
-module.exports = autoit;
-
+};
 
 /***/ })
 

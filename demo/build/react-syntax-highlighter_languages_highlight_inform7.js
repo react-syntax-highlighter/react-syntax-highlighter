@@ -7,18 +7,10 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-/*
-Language: Inform 7
-Author: Bruno Dias <bruno.r.dias@gmail.com>
-Description: Language definition for Inform 7, a DSL for writing parser interactive fiction.
-Website: http://inform7.com
-*/
-
-function inform7(hljs) {
-  const START_BRACKET = '\\[';
-  const END_BRACKET = '\\]';
+module.exports = function(hljs) {
+  var START_BRACKET = '\\[';
+  var END_BRACKET = '\\]';
   return {
-    name: 'Inform 7',
     aliases: ['i7'],
     case_insensitive: true,
     keywords: {
@@ -37,14 +29,12 @@ function inform7(hljs) {
     contains: [
       {
         className: 'string',
-        begin: '"',
-        end: '"',
+        begin: '"', end: '"',
         relevance: 0,
         contains: [
           {
             className: 'subst',
-            begin: START_BRACKET,
-            end: END_BRACKET
+            begin: START_BRACKET, end: END_BRACKET
           }
         ]
       },
@@ -60,24 +50,19 @@ function inform7(hljs) {
         end: ':',
         contains: [
           {
-            // Rule name
-            begin: '\\(This',
-            end: '\\)'
+            //Rule name
+            begin: '\\(This', end: '\\)'
           }
         ]
       },
       {
         className: 'comment',
-        begin: START_BRACKET,
-        end: END_BRACKET,
+        begin: START_BRACKET, end: END_BRACKET,
         contains: ['self']
       }
     ]
   };
-}
-
-module.exports = inform7;
-
+};
 
 /***/ })
 

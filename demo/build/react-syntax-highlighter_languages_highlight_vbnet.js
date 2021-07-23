@@ -7,17 +7,9 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-/*
-Language: Visual Basic .NET
-Description: Visual Basic .NET (VB.NET) is a multi-paradigm, object-oriented programming language, implemented on the .NET Framework.
-Author: Poren Chiang <ren.chiang@gmail.com>
-Website: https://docs.microsoft.com/en-us/dotnet/visual-basic/getting-started/
-*/
-
-function vbnet(hljs) {
+module.exports = function(hljs) {
   return {
-    name: 'Visual Basic .NET',
-    aliases: [ 'vb' ],
+    aliases: ['vb'],
     case_insensitive: true,
     keywords: {
       keyword:
@@ -33,21 +25,15 @@ function vbnet(hljs) {
         'select set shadows shared skip static step stop structure strict sub synclock ' + /* s */
         'take text then throw to try unicode until using when where while widening with withevents writeonly xor yield', /* t-y */
       built_in:
-        'boolean byte cbool cbyte cchar cdate cdec cdbl char cint clng cobj csbyte cshort csng cstr ctype ' + /* b-c */
+        'boolean byte cbool cbyte cchar cdate cdec cdbl char cint clng cobj csbyte cshort csng cstr ctype ' +  /* b-c */
         'date decimal directcast double gettype getxmlnamespace iif integer long object ' + /* d-o */
         'sbyte short single string trycast typeof uinteger ulong ushort', /* s-u */
       literal:
         'true false nothing'
     },
-    illegal: '//|\\{|\\}|endif|gosub|variant|wend|^\\$ ', /* reserved deprecated keywords */
+    illegal: '//|{|}|endif|gosub|variant|wend|^\\$ ', /* reserved deprecated keywords */
     contains: [
-      hljs.inherit(hljs.QUOTE_STRING_MODE, {
-        contains: [
-          {
-            begin: '""'
-          }
-        ]
-      }),
+      hljs.inherit(hljs.QUOTE_STRING_MODE, {contains: [{begin: '""'}]}),
       hljs.COMMENT(
         '\'',
         '$',
@@ -57,13 +43,12 @@ function vbnet(hljs) {
             {
               className: 'doctag',
               begin: '\'\'\'|<!--|-->',
-              contains: [ hljs.PHRASAL_WORDS_MODE ]
+              contains: [hljs.PHRASAL_WORDS_MODE]
             },
             {
               className: 'doctag',
-              begin: '</?',
-              end: '>',
-              contains: [ hljs.PHRASAL_WORDS_MODE ]
+              begin: '</?', end: '>',
+              contains: [hljs.PHRASAL_WORDS_MODE]
             }
           ]
         }
@@ -71,18 +56,12 @@ function vbnet(hljs) {
       hljs.C_NUMBER_MODE,
       {
         className: 'meta',
-        begin: '#',
-        end: '$',
-        keywords: {
-          'meta-keyword': 'if else elseif end region externalsource'
-        }
+        begin: '#', end: '$',
+        keywords: {'meta-keyword': 'if else elseif end region externalsource'}
       }
     ]
   };
-}
-
-module.exports = vbnet;
-
+};
 
 /***/ })
 
