@@ -85,11 +85,10 @@ function assembleLineNumberStyles(
       ? lineNumberStyle(lineNumber)
       : lineNumberStyle;
   // combine
-  const assembledStyle = {
+  return {
     ...defaultLineNumberStyle,
     ...customLineNumberStyle
   };
-  return assembledStyle;
 }
 
 function createLineElement({
@@ -105,7 +104,10 @@ function createLineElement({
 }) {
   const properties =
     typeof lineProps === 'function' ? lineProps(lineNumber) : lineProps;
-  properties['className'] = className;
+  properties.className = [properties.className, className]
+    .flat()
+    .filter(Boolean)
+    .filter((value, i, self) => self.indexOf(value) === i);
 
   if (lineNumber && showInlineLineNumbers) {
     const inlineLineNumberStyle = assembleLineNumberStyles(
@@ -116,7 +118,7 @@ function createLineElement({
     children.unshift(getInlineLineNumber(lineNumber, inlineLineNumberStyle));
   }
 
-  if (wrapLongLines & showLineNumbers) {
+  if (wrapLongLines && showLineNumbers) {
     properties.style = { ...properties.style, display: 'flex' };
   }
 

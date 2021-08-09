@@ -88972,14 +88972,14 @@ function createLineElement(_ref3) {
       showLineNumbers = _ref3.showLineNumbers,
       wrapLongLines = _ref3.wrapLongLines;
   var properties = typeof lineProps === 'function' ? lineProps(lineNumber) : lineProps;
-  properties['className'] = className;
+  properties.className = [properties.className, className].filter(Boolean).join(' ');
 
   if (lineNumber && showInlineLineNumbers) {
     var inlineLineNumberStyle = assembleLineNumberStyles(lineNumberStyle, lineNumber, largestLineNumber);
     children.unshift(getInlineLineNumber(lineNumber, inlineLineNumberStyle));
   }
 
-  if (wrapLongLines & showLineNumbers) {
+  if (wrapLongLines && showLineNumbers) {
     properties.style = _babel_runtime_helpers_objectSpread__WEBPACK_IMPORTED_MODULE_2___default()({}, properties.style, {
       display: 'flex'
     });
