@@ -104,10 +104,9 @@ function createLineElement({
 }) {
   const properties =
     typeof lineProps === 'function' ? lineProps(lineNumber) : lineProps;
-  properties.className = [properties.className, className]
-    .flat()
-    .filter(Boolean)
-    .filter((value, i, self) => self.indexOf(value) === i);
+  properties.className = [
+    ...new Set([properties.className, className].flat().filter(Boolean))
+  ];
 
   if (lineNumber && showLineNumbers && showInlineLineNumbers) {
     const inlineLineNumberStyle = assembleLineNumberStyles(
