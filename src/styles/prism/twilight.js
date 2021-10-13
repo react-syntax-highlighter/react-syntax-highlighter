@@ -183,10 +183,6 @@ export default {
     "italic": {
         "fontStyle": "italic"
     },
-    "pre[data-line]": {
-        "padding": "1em 0 1em 3em",
-        "position": "relative"
-    },
     ".language-markup .token.tag": {
         "color": "hsl(33, 33%, 52%)"
     },
@@ -200,51 +196,19 @@ export default {
         "position": "relative",
         "zIndex": "1"
     },
-    ".line-highlight": {
+    ".line-highlight.line-highlight": {
         "background": "linear-gradient(to right, hsla(0, 0%, 33%, .1) 70%, hsla(0, 0%, 33%, 0))",
         "borderBottom": "1px dashed hsl(0, 0%, 33%)",
         "borderTop": "1px dashed hsl(0, 0%, 33%)",
-        "left": "0",
-        "lineHeight": "inherit",
         "marginTop": "0.75em",
-        "padding": "inherit 0",
-        "pointerEvents": "none",
-        "position": "absolute",
-        "right": "0",
-        "whiteSpace": "pre",
         "zIndex": "0"
     },
-    ".line-highlight:before": {
+    ".line-highlight.line-highlight:before": {
         "backgroundColor": "hsl(215, 15%, 59%)",
-        "borderRadius": "999px",
-        "boxShadow": "0 1px white",
-        "color": "hsl(24, 20%, 95%)",
-        "content": "attr(data-start)",
-        "font": "bold 65%/1.5 sans-serif",
-        "left": ".6em",
-        "minWidth": "1em",
-        "padding": "0 .5em",
-        "position": "absolute",
-        "textAlign": "center",
-        "textShadow": "none",
-        "top": ".4em",
-        "verticalAlign": ".3em"
+        "color": "hsl(24, 20%, 95%)"
     },
-    ".line-highlight[data-end]:after": {
+    ".line-highlight.line-highlight[data-end]:after": {
         "backgroundColor": "hsl(215, 15%, 59%)",
-        "borderRadius": "999px",
-        "boxShadow": "0 1px white",
-        "color": "hsl(24, 20%, 95%)",
-        "content": "attr(data-end)",
-        "font": "bold 65%/1.5 sans-serif",
-        "left": ".6em",
-        "minWidth": "1em",
-        "padding": "0 .5em",
-        "position": "absolute",
-        "textAlign": "center",
-        "textShadow": "none",
-        "top": "auto",
-        "verticalAlign": ".3em",
-        "bottom": ".4em"
+        "color": "hsl(24, 20%, 95%)"
     }
 }
