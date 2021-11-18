@@ -1569,7 +1569,7 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "#A9DBB8",
+          "backgroundColor": "#EDE4AF",
           "color": "#888888",
           "display": "block",
         }
@@ -1581,7 +1581,7 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "#A9DBB8",
+          "backgroundColor": "#EDE4AF",
           "display": "block",
         }
       }
@@ -1605,7 +1605,7 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "#A9DBB8",
+          "backgroundColor": "#EDE4AF",
           "display": "block",
         }
       }
@@ -1696,7 +1696,7 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "#A9DBB8",
+          "backgroundColor": "#EDE4AF",
           "display": "block",
         }
       }
@@ -1707,7 +1707,7 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "#A9DBB8",
+          "backgroundColor": "#EDE4AF",
           "display": "block",
         }
       }
@@ -1718,7 +1718,7 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "#A9DBB8",
+          "backgroundColor": "#BA2D0B",
           "display": "block",
         }
       }
@@ -1789,7 +1789,7 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "#A9DBB8",
+          "backgroundColor": "#BA2D0B",
           "display": "block",
         }
       }
@@ -1832,7 +1832,7 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "#A9DBB8",
+          "backgroundColor": "#BA2D0B",
           "display": "block",
         }
       }
@@ -1875,7 +1875,7 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "#A9DBB8",
+          "backgroundColor": "#BA2D0B",
           "display": "block",
         }
       }
@@ -1886,7 +1886,7 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "#A9DBB8",
+          "backgroundColor": "#BA2D0B",
           "display": "block",
         }
       }
@@ -1897,7 +1897,7 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "#A9DBB8",
+          "backgroundColor": "#BA2D0B",
           "display": "block",
         }
       }
@@ -1908,7 +1908,7 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "#A9DBB8",
+          "backgroundColor": "#BA2D0B",
           "display": "block",
         }
       }
@@ -1951,7 +1951,7 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "#A9DBB8",
+          "backgroundColor": "#BA2D0B",
           "display": "block",
         }
       }
@@ -1962,7 +1962,7 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "#A9DBB8",
+          "backgroundColor": "#BA2D0B",
           "display": "block",
         }
       }
@@ -1973,7 +1973,7 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "#A9DBB8",
+          "backgroundColor": "#BA2D0B",
           "display": "block",
         }
       }
@@ -1997,9 +1997,9 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "#A9DBB8",
+          "backgroundColor": "",
           "color": "#888888",
-          "display": "block",
+          "display": "",
         }
       }
     >
@@ -2009,8 +2009,8 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "#A9DBB8",
-          "display": "block",
+          "backgroundColor": "",
+          "display": "",
         }
       }
     >
@@ -2033,8 +2033,8 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "#A9DBB8",
-          "display": "block",
+          "backgroundColor": "",
+          "display": "",
         }
       }
     >
@@ -2124,8 +2124,8 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "#A9DBB8",
-          "display": "block",
+          "backgroundColor": "",
+          "display": "",
         }
       }
     >
@@ -2153,8 +2153,8 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "#A9DBB8",
-          "display": "block",
+          "backgroundColor": "",
+          "display": "",
         }
       }
     >
@@ -2196,8 +2196,8 @@ exports[`SyntaxHighlighter renders java code correctly with wrapLines 1`] = `
     <span
       style={
         Object {
-          "backgroundColor": "#A9DBB8",
-          "display": "block",
+          "backgroundColor": "",
+          "display": "",
         }
       }
     >
