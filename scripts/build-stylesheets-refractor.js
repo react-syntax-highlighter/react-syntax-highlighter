@@ -22,6 +22,13 @@ directories.map(directory => {
   });
 });
 
+function getSimpleFilename(filename) {
+  let nameWithoutExtension = filename.split('.css')[0].split('prism-')[1];
+  if (filename === 'prism.css') nameWithoutExtension = 'prism';
+  if (filename === 'prism.min.css') nameWithoutExtension = 'prism.min';
+  return nameWithoutExtension;
+}
+
 let allFiles = [];
 let callCount = 0;
 function updateDocs(files) {
@@ -32,9 +39,7 @@ function updateDocs(files) {
     return;
   }
   const onlyCSSFiles = allFiles.filter(file => file.includes('.css'));
-  const availableStyleNames = onlyCSSFiles.map(file =>
-    file === 'prism.css' ? 'prism' : file.split('.css')[0].split('prism-')[1]
-  );
+  const availableStyleNames = onlyCSSFiles.map(file => getSimpleFilename(file));
   const styles = availableStyleNames.map(name => `\n* ${camel(name)}`);
   const defaultExports = availableStyleNames.map(
     name => `export { default as ${camel(name)} } from './${name}';\n`
@@ -66,9 +71,9 @@ function updateDocs(files) {
 }
 
 function createJavascriptStyleSheet(file, directory) {
-  const fileWithoutCSS =
-    file === 'prism.css' ? 'prism' : file.split('.css')[0].split('prism-')[1];
+  let fileWithoutCSS = getSimpleFilename(file);
   console.log(fileWithoutCSS);
+
   fs.readFile(
     path.join(__dirname, `${directory}/${file}`),
     'utf-8',
