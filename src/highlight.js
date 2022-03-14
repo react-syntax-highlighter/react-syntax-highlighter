@@ -401,7 +401,12 @@ export default function(defaultAstGenerator, defaultStyle) {
     }
 
     // determine largest line number so that we can force minWidth on all linenumber elements
-    const largestLineNumber = codeTree.value.length + startingLineNumber;
+    let lineCount = codeTree.value.length;
+    if (lineCount === 1 && codeTree.value[0].type === 'text') {
+      // Since codeTree for an unparsable text (e.g. 'a\na\na') is [{ type: 'text', value: 'a\na\na' }]
+      lineCount = codeTree.value[0].value.split('\n').length;
+    }
+    const largestLineNumber = lineCount + startingLineNumber;
 
     const rows = processLines(
       codeTree,
