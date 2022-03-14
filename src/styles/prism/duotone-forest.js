@@ -206,13 +206,13 @@ export default {
         "Outline": ".4em solid #5c705c",
         "OutlineOffset": ".4em"
     },
-    ".line-numbers .line-numbers-rows": {
+    ".line-numbers.line-numbers .line-numbers-rows": {
         "borderRightColor": "#2c302c"
     },
-    ".line-numbers-rows > span:before": {
+    ".line-numbers .line-numbers-rows > span:before": {
         "color": "#3b423b"
     },
-    ".line-highlight": {
+    ".line-highlight.line-highlight": {
         "background": "linear-gradient(to right, rgba(162, 179, 77, 0.2) 70%, rgba(162, 179, 77, 0))"
     }
 }

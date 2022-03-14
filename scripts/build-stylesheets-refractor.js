@@ -14,13 +14,20 @@ let directories = [
 directories.map(directory => {
   fs.readdir(path.join(__dirname, directory), (err, files) => {
     files.forEach(file => {
-      if (file.includes('.css')) {
+      if (file.includes('.css') && !file.includes('.min')) {
         createJavascriptStyleSheet(file, directory);
       }
     });
     updateDocs(files);
   });
 });
+
+function getSimpleFilename(filename) {
+  let nameWithoutExtension = filename.split('.css')[0].split('prism-')[1];
+  if (filename === 'prism.css') nameWithoutExtension = 'prism';
+  if (filename === 'prism.min.css') nameWithoutExtension = 'prism.min';
+  return nameWithoutExtension;
+}
 
 let allFiles = [];
 let callCount = 0;
@@ -32,8 +39,11 @@ function updateDocs(files) {
     return;
   }
   const onlyCSSFiles = allFiles.filter(file => file.includes('.css'));
-  const availableStyleNames = onlyCSSFiles.map(file =>
-    file === 'prism.css' ? 'prism' : file.split('.css')[0].split('prism-')[1]
+  const onlyNonMinifiedCSS = onlyCSSFiles.filter(
+    file => !file.includes('.min')
+  );
+  const availableStyleNames = onlyNonMinifiedCSS.map(file =>
+    getSimpleFilename(file)
   );
   const styles = availableStyleNames.map(name => `\n* ${camel(name)}`);
   const defaultExports = availableStyleNames.map(
@@ -66,9 +76,9 @@ function updateDocs(files) {
 }
 
 function createJavascriptStyleSheet(file, directory) {
-  const fileWithoutCSS =
-    file === 'prism.css' ? 'prism' : file.split('.css')[0].split('prism-')[1];
+  let fileWithoutCSS = getSimpleFilename(file);
   console.log(fileWithoutCSS);
+
   fs.readFile(
     path.join(__dirname, `${directory}/${file}`),
     'utf-8',

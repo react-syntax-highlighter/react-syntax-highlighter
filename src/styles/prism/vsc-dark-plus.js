@@ -43,25 +43,25 @@ export default {
     },
     "pre[class*=\"language-\"]::selection": {
         "textShadow": "none",
-        "background": "#75a7ca"
+        "background": "#264F78"
     },
     "code[class*=\"language-\"]::selection": {
         "textShadow": "none",
-        "background": "#75a7ca"
+        "background": "#264F78"
     },
     "pre[class*=\"language-\"] *::selection": {
         "textShadow": "none",
-        "background": "#75a7ca"
+        "background": "#264F78"
     },
     "code[class*=\"language-\"] *::selection": {
         "textShadow": "none",
-        "background": "#75a7ca"
+        "background": "#264F78"
     },
     ":not(pre) > code[class*=\"language-\"]": {
         "padding": ".1em .3em",
         "borderRadius": ".3em",
         "color": "#db4c69",
-        "background": "#f9f2f4"
+        "background": "#1e1e1e"
     },
     ".namespace": {
         "Opacity": ".7"
@@ -270,24 +270,13 @@ export default {
     ".language-html .token.punctuation": {
         "color": "#808080"
     },
-    "pre[data-line]": {
-        "position": "relative"
-    },
     "pre[class*=\"language-\"] > code[class*=\"language-\"]": {
         "position": "relative",
         "zIndex": "1"
     },
-    ".line-highlight": {
-        "position": "absolute",
-        "left": "0",
-        "right": "0",
-        "padding": "inherit 0",
-        "marginTop": "1em",
+    ".line-highlight.line-highlight": {
         "background": "#f7ebc6",
         "boxShadow": "inset 5px 0 0 #f7d87c",
-        "zIndex": "0",
-        "pointerEvents": "none",
-        "lineHeight": "inherit",
-        "whiteSpace": "pre"
+        "zIndex": "0"
     }
 }

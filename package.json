@@ -9,8 +9,8 @@
     "@babel/runtime": "^7.3.1",
     "highlight.js": "^10.4.1",
     "lowlight": "^1.17.0",
-    "prismjs": "^1.25.0",
-    "refractor": "^3.2.0"
+    "prismjs": "^1.27.0",
+    "refractor": "^3.6.0"
   },
   "jest": {
     "coverageDirectory": "./coverage/",
@@ -42,7 +42,7 @@
     "jest": "^26.1.0",
     "lint-staged": "^8.0.5",
     "prettier": "^1.15.2",
-    "prism-themes": "1.5.0",
+    "prism-themes": "1.9.0",
     "react": "^15.2.0",
     "react-dom": "^15.2.0",
     "react-syntax-highlighter-virtualized-renderer": "^1.0.3",

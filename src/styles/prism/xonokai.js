@@ -157,54 +157,24 @@ export default {
     "code.language-markup .token.script .token.keyword": {
         "color": "#76d9e6"
     },
-    "pre[class*=\"language-\"][data-line]": {
-        "position": "relative",
-        "padding": "1em 0 1em 3em"
-    },
-    "pre[data-line] .line-highlight": {
-        "position": "absolute",
-        "left": "0",
-        "right": "0",
+    ".line-highlight.line-highlight": {
         "padding": "0",
-        "marginTop": "1em",
-        "background": "rgba(255, 255, 255, 0.08)",
-        "pointerEvents": "none",
-        "lineHeight": "inherit",
-        "whiteSpace": "pre"
+        "background": "rgba(255, 255, 255, 0.08)"
     },
-    "pre[data-line] .line-highlight:before": {
-        "content": "attr(data-start)",
-        "position": "absolute",
-        "top": ".4em",
-        "left": ".6em",
-        "minWidth": "1em",
+    ".line-highlight.line-highlight:before": {
         "padding": "0.2em 0.5em",
         "backgroundColor": "rgba(255, 255, 255, 0.4)",
         "color": "black",
-        "font": "bold 65%/1 sans-serif",
         "height": "1em",
         "lineHeight": "1em",
-        "textAlign": "center",
-        "borderRadius": "999px",
-        "textShadow": "none",
         "boxShadow": "0 1px 1px rgba(255, 255, 255, 0.7)"
     },
-    "pre[data-line] .line-highlight[data-end]:after": {
-        "content": "attr(data-end)",
-        "position": "absolute",
-        "top": "auto",
-        "left": ".6em",
-        "minWidth": "1em",
+    ".line-highlight.line-highlight[data-end]:after": {
         "padding": "0.2em 0.5em",
         "backgroundColor": "rgba(255, 255, 255, 0.4)",
         "color": "black",
-        "font": "bold 65%/1 sans-serif",
         "height": "1em",
         "lineHeight": "1em",
-        "textAlign": "center",
-        "borderRadius": "999px",
-        "textShadow": "none",
-        "boxShadow": "0 1px 1px rgba(255, 255, 255, 0.7)",
-        "bottom": ".4em"
+        "boxShadow": "0 1px 1px rgba(255, 255, 255, 0.7)"
     }
 }

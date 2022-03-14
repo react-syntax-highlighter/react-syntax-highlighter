@@ -115,8 +115,12 @@ exports[`SyntaxHighlighter component passes along code style to non-inline line 
        woah = 
     </span>
     <span
-      className="hljs-function hljs-params"
-      style={Object {}}
+      className="hljs-function"
+      style={
+        Object {
+          "fontWeight": "bold",
+        }
+      }
     >
       fun
     </span>
@@ -124,26 +128,28 @@ exports[`SyntaxHighlighter component passes along code style to non-inline line 
       className="hljs-function"
       style={Object {}}
     >
-       =&gt;
+       =&gt; 
     </span>
     <span
-      style={Object {}}
-    >
-       fun + 
-    </span>
-    <span
+      className="hljs-function"
       style={
         Object {
-          "color": "#880000",
+          "fontWeight": "bold",
         }
       }
     >
-      1
+      fun
+    </span>
+    <span
+      className="hljs-function"
+      style={Object {}}
+    >
+       + 1;
     </span>
     <span
       style={Object {}}
     >
-      ;
+      
 
     </span>
     <span
@@ -194,56 +200,8 @@ exports[`SyntaxHighlighter component passes along code style to non-inline line 
       ;
 
     </span>
-    <span
-      style={Object {}}
-    >
-      
-    </span>
-    <span
-      className="hljs-function"
-      style={
-        Object {
-          "fontWeight": "bold",
-        }
-      }
-    >
-      function
-    </span>
-    <span
-      className="hljs-function"
-      style={Object {}}
-    >
-       
-    </span>
-    <span
-      className="hljs-function"
-      style={
-        Object {
-          "color": "#880000",
-          "fontWeight": "bold",
-        }
-      }
-    >
-      thisIsAFunction
-    </span>
-    <span
-      className="hljs-function"
-      style={Object {}}
-    >
-      (
-    </span>
-    <span
-      className="hljs-function"
-      style={Object {}}
-    >
-      ) 
-    </span>
-    <span
-      style={Object {}}
-    >
-      {
+    function thisIsAFunction() {
 
-    </span>
     <span
       style={Object {}}
     >
@@ -303,24 +261,7 @@ exports[`SyntaxHighlighter component passes along code style to non-inline line 
     <span
       style={Object {}}
     >
-      ].map(
-    </span>
-    <span
-      className="hljs-function hljs-params"
-      style={Object {}}
-    >
-      n
-    </span>
-    <span
-      className="hljs-function"
-      style={Object {}}
-    >
-       =&gt;
-    </span>
-    <span
-      style={Object {}}
-    >
-       n + 
+      ].map(n =&gt; n + 
     </span>
     <span
       style={
@@ -356,21 +297,7 @@ exports[`SyntaxHighlighter component passes along code style to non-inline line 
     <span
       style={Object {}}
     >
-      
-    </span>
-    <span
-      style={
-        Object {
-          "color": "#397300",
-        }
-      }
-    >
-      console
-    </span>
-    <span
-      style={Object {}}
-    >
-      .log(
+      console.log(
     </span>
     <span
       style={
@@ -389,56 +316,8 @@ exports[`SyntaxHighlighter component passes along code style to non-inline line 
     </span>
     
 
-    <span
-      style={Object {}}
-    >
-      
-    </span>
-    <span
-      className="hljs-function"
-      style={
-        Object {
-          "fontWeight": "bold",
-        }
-      }
-    >
-      function
-    </span>
-    <span
-      className="hljs-function"
-      style={Object {}}
-    >
-       
-    </span>
-    <span
-      className="hljs-function"
-      style={
-        Object {
-          "color": "#880000",
-          "fontWeight": "bold",
-        }
-      }
-    >
-      itIs
-    </span>
-    <span
-      className="hljs-function"
-      style={Object {}}
-    >
-      (
-    </span>
-    <span
-      className="hljs-function"
-      style={Object {}}
-    >
-      ) 
-    </span>
-    <span
-      style={Object {}}
-    >
-      {
+    function itIs() {
 
-    </span>
     <span
       style={Object {}}
     >

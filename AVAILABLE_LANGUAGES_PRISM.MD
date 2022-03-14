@@ -7,6 +7,7 @@
 * al
 * antlr4
 * apacheconf
+* apex
 * apl
 * applescript
 * aql
@@ -14,13 +15,17 @@
 * arff
 * asciidoc
 * asm6502
+* asmatmel
 * aspnet
 * autohotkey
 * autoit
+* avisynth
+* avroIdl (avro-idl)
 * bash
 * basic
 * batch
 * bbcode
+* bicep
 * birb
 * bison
 * bnf
@@ -29,27 +34,35 @@
 * bro
 * bsl
 * c
+* cfscript
+* chaiscript
 * cil
 * clike
 * clojure
 * cmake
+* cobol
 * coffeescript
 * concurnas
+* coq
 * cpp
 * crystal
 * csharp
+* cshtml
 * csp
 * cssExtras (css-extras)
 * css
+* csv
 * cypher
 * d
 * dart
+* dataweave
 * dax
 * dhall
 * diff
 * django
 * dnsZoneFile (dns-zone-file)
 * docker
+* dot
 * ebnf
 * editorconfig
 * eiffel
@@ -61,11 +74,13 @@
 * etlua
 * excelFormula (excel-formula)
 * factor
+* falselang (false)
 * firestoreSecurityRules (firestore-security-rules)
 * flow
 * fortran
 * fsharp
 * ftl
+* gap
 * gcode
 * gdscript
 * gedcom
@@ -73,6 +88,8 @@
 * git
 * glsl
 * gml
+* gn
+* goModule (go-module)
 * go
 * graphql
 * groovy
@@ -82,11 +99,14 @@
 * haxe
 * hcl
 * hlsl
+* hoon
 * hpkp
 * hsts
 * http
 * ichigojam
 * icon
+* icuMessageFormat (icu-message-format)
+* idris
 * iecst
 * ignore
 * inform7
@@ -98,6 +118,7 @@
 * javadoclike
 * javascript
 * javastacktrace
+* jexl
 * jolie
 * jq
 * jsExtras (js-extras)
@@ -109,8 +130,11 @@
 * jsstacktrace
 * jsx
 * julia
+* keepalived
 * keyman
 * kotlin
+* kumir
+* kusto
 * latex
 * latte
 * less
@@ -119,14 +143,18 @@
 * lisp
 * livescript
 * llvm
+* log
 * lolcode
 * lua
+* magma
 * makefile
 * markdown
 * markupTemplating (markup-templating)
 * markup
 * matlab
+* maxscript
 * mel
+* mermaid
 * mizar
 * mongodb
 * monkey
@@ -137,6 +165,7 @@
 * naniscript
 * nasm
 * neon
+* nevod
 * nginx
 * nim
 * nix
@@ -144,6 +173,7 @@
 * objectivec
 * ocaml
 * opencl
+* openqasm
 * oz
 * parigp
 * parser
@@ -160,8 +190,10 @@
 * powershell
 * processing
 * prolog
+* promql
 * properties
 * protobuf
+* psl
 * pug
 * puppet
 * pure
@@ -171,10 +203,12 @@
 * q
 * qml
 * qore
+* qsharp
 * r
 * racket
 * reason
 * regex
+* rego
 * renpy
 * rest
 * rip
@@ -199,9 +233,11 @@
 * splunkSpl (splunk-spl)
 * sqf
 * sql
+* squirrel
 * stan
 * stylus
 * swift
+* systemd
 * t4Cs (t4-cs)
 * t4Templating (t4-templating)
 * t4Vb (t4-vb)
@@ -209,6 +245,7 @@
 * tcl
 * textile
 * toml
+* tremor
 * tsx
 * tt2
 * turtle
@@ -216,6 +253,9 @@
 * typescript
 * typoscript
 * unrealscript
+* uorazor
+* uri
+* v
 * vala
 * vbnet
 * velocity
@@ -225,7 +265,10 @@
 * visualBasic (visual-basic)
 * warpscript
 * wasm
+* webIdl (web-idl)
 * wiki
+* wolfram
+* wren
 * xeora
 * xmlDoc (xml-doc)
 * xojo

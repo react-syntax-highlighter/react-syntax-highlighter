@@ -221,28 +221,14 @@ export default {
     ".style .token.string": {
         "background": "none"
     },
-    "pre .line-highlight": {
+    ".line-highlight.line-highlight": {
         "marginTop": "36px",
         "background": "linear-gradient(to right, rgba(179, 98, 255, 0.17), transparent)"
     },
-    "pre .line-highlight.line-highlight": {
-        "marginTop": "36px",
-        "background": "linear-gradient(to right, rgba(179, 98, 255, 0.17), transparent)"
-    },
-    "pre > code.line-highlight": {
-        "marginTop": "36px",
-        "background": "linear-gradient(to right, rgba(179, 98, 255, 0.17), transparent)"
-    },
-    "pre .line-highlight:before": {
+    ".line-highlight.line-highlight:before": {
         "content": "''"
     },
-    "pre > code.line-highlight:before": {
-        "content": "''"
-    },
-    "pre .line-highlight[data-end]:after": {
-        "content": "''"
-    },
-    "pre > code.line-highlight[data-end]:after": {
+    ".line-highlight.line-highlight[data-end]:after": {
         "content": "''"
     }
 }

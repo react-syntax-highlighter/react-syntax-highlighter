@@ -185,13 +185,13 @@ export default {
         "Outline": "0.4em solid #c94922",
         "OutlineOffset": ".4em"
     },
-    ".line-numbers .line-numbers-rows": {
+    ".line-numbers.line-numbers .line-numbers-rows": {
         "borderRightColor": "#dfe2f1"
     },
-    ".line-numbers-rows > span:before": {
+    ".line-numbers .line-numbers-rows > span:before": {
         "color": "#979db4"
     },
-    ".line-highlight": {
+    ".line-highlight.line-highlight": {
         "background": "linear-gradient(to right, rgba(107, 115, 148, 0.2) 70%, rgba(107, 115, 148, 0))"
     }
 }

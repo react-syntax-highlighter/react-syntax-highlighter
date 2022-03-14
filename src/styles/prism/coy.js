@@ -44,15 +44,16 @@ export default {
         "position": "relative",
         "margin": ".5em 0",
         "overflow": "visible",
-        "padding": "0",
+        "padding": "1px",
         "backgroundColor": "#fdfdfd",
         "WebkitBoxSizing": "border-box",
         "MozBoxSizing": "border-box",
         "boxSizing": "border-box",
         "marginBottom": "1em"
     },
-    "pre[class*=\"language-\"]>code": {
+    "pre[class*=\"language-\"] > code": {
         "position": "relative",
+        "zIndex": "1",
         "borderLeft": "10px solid #358ccb",
         "boxShadow": "-1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf",
         "backgroundColor": "#fdfdfd",
@@ -77,7 +78,6 @@ export default {
     },
     "pre[class*=\"language-\"]:before": {
         "content": "''",
-        "zIndex": "-2",
         "display": "block",
         "position": "absolute",
         "bottom": "0.75em",
@@ -94,7 +94,6 @@ export default {
     },
     "pre[class*=\"language-\"]:after": {
         "content": "''",
-        "zIndex": "-2",
         "display": "block",
         "position": "absolute",
         "bottom": "0.75em",
