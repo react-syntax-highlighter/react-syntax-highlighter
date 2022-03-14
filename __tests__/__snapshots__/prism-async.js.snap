@@ -651,7 +651,17 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     <span
       style={Object {}}
     >
-       component
+       
+    </span>
+    <span
+      className="token literal-property"
+      style={
+        Object {
+          "color": "#905",
+        }
+      }
+    >
+      component
     </span>
     <span
       className="token"
@@ -929,7 +939,17 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     <span
       style={Object {}}
     >
-                        component
+                        
+    </span>
+    <span
+      className="token literal-property"
+      style={
+        Object {
+          "color": "#905",
+        }
+      }
+    >
+      component
     </span>
     <span
       className="token"
