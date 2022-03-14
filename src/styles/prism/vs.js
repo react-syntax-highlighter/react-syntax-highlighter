@@ -160,6 +160,7 @@ export default {
         "color": "#00009f"
     },
     "important": {
+        "color": "#e90",
         "fontWeight": "bold"
     },
     "bold": {
@@ -193,13 +194,13 @@ export default {
         "background": "#ffff00",
         "color": "#393A34"
     },
-    ".line-numbers .line-numbers-rows": {
+    ".line-numbers.line-numbers .line-numbers-rows": {
         "borderRightColor": "#a5a5a5"
     },
-    ".line-numbers-rows > span:before": {
+    ".line-numbers .line-numbers-rows > span:before": {
         "color": "#2B91AF"
     },
-    ".line-highlight": {
+    ".line-highlight.line-highlight": {
         "background": "linear-gradient(to right, rgba(193, 222, 241, 0.2) 70%, rgba(221, 222, 241, 0))"
     }
 }
