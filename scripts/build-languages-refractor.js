@@ -12,6 +12,9 @@ function makeImportName(name) {
   if (name === '1c') {
     return 'oneC';
   }
+  if (name === 'false') {
+    return 'falselang';
+  }
   return camel(name);
 }
 
