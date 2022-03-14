@@ -162,6 +162,7 @@ export { default as smalltalk } from './smalltalk';
 export { default as sml } from './sml';
 export { default as sqf } from './sqf';
 export { default as sql } from './sql';
+export { default as sqlMore } from './sql_more';
 export { default as stan } from './stan';
 export { default as stata } from './stata';
 export { default as step21 } from './step21';

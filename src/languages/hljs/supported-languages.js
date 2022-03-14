@@ -167,6 +167,7 @@ export default [
   'sml',
   'sqf',
   'sql',
+  'sql_more',
   'stan',
   'stata',
   'step21',

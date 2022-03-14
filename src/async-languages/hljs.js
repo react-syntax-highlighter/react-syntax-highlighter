@@ -164,6 +164,7 @@ export default {
   sml: createLanguageAsyncLoader("sml", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_sml" */ "highlight.js/lib/languages/sml")),
   sqf: createLanguageAsyncLoader("sqf", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_sqf" */ "highlight.js/lib/languages/sqf")),
   sql: createLanguageAsyncLoader("sql", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_sql" */ "highlight.js/lib/languages/sql")),
+  sqlMore: createLanguageAsyncLoader("sqlMore", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_sqlMore" */ "highlight.js/lib/languages/sql_more")),
   stan: createLanguageAsyncLoader("stan", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_stan" */ "highlight.js/lib/languages/stan")),
   stata: createLanguageAsyncLoader("stata", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_stata" */ "highlight.js/lib/languages/stata")),
   step21: createLanguageAsyncLoader("step21", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_step21" */ "highlight.js/lib/languages/step21")),

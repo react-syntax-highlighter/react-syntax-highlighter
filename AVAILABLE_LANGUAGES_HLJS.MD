@@ -163,6 +163,7 @@
 * sml
 * sqf
 * sql
+* sqlMore (sql_more)
 * stan
 * stata
 * step21
