@@ -14,7 +14,7 @@ let directories = [
 directories.map(directory => {
   fs.readdir(path.join(__dirname, directory), (err, files) => {
     files.forEach(file => {
-      if (file.includes('.css')) {
+      if (file.includes('.css') && !file.includes('.min')) {
         createJavascriptStyleSheet(file, directory);
       }
     });
@@ -39,7 +39,12 @@ function updateDocs(files) {
     return;
   }
   const onlyCSSFiles = allFiles.filter(file => file.includes('.css'));
-  const availableStyleNames = onlyCSSFiles.map(file => getSimpleFilename(file));
+  const onlyNonMinifiedCSS = onlyCSSFiles.filter(
+    file => !file.includes('.min')
+  );
+  const availableStyleNames = onlyNonMinifiedCSS.map(file =>
+    getSimpleFilename(file)
+  );
   const styles = availableStyleNames.map(name => `\n* ${camel(name)}`);
   const defaultExports = availableStyleNames.map(
     name => `export { default as ${camel(name)} } from './${name}';\n`
