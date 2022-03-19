@@ -14,7 +14,6 @@
 * coldarkCold
 * coldarkDark
 * coyWithoutShadows
-* darcula
 * dracula
 * duotoneDark
 * duotoneEarth
