@@ -77,7 +77,9 @@ function assembleLineNumberStyles(
     minWidth: getEmWidthOfNumber(largestLineNumber),
     paddingRight: '1em',
     textAlign: 'right',
-    userSelect: 'none'
+    userSelect: 'none',
+    WebkitUserSelect: 'none',
+    MozUserSelect: 'none'
   };
   // prep custom styling
   const customLineNumberStyle =

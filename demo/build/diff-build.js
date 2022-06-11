@@ -100609,7 +100609,9 @@ function assembleLineNumberStyles(lineNumberStyle, lineNumber, largestLineNumber
     minWidth: getEmWidthOfNumber(largestLineNumber),
     paddingRight: '1em',
     textAlign: 'right',
-    userSelect: 'none'
+    userSelect: 'none',
+    WebkitUserSelect: 'none',
+    MozUserSelect: 'none'
   }; // prep custom styling
 
   var customLineNumberStyle = typeof lineNumberStyle === 'function' ? lineNumberStyle(lineNumber) : lineNumberStyle; // combine
@@ -100940,7 +100942,14 @@ function getCodeTree(_ref6) {
     } // determine largest line number so that we can force minWidth on all linenumber elements
 
 
-    var largestLineNumber = codeTree.value.length + startingLineNumber;
+    var lineCount = codeTree.value.length;
+
+    if (lineCount === 1 && codeTree.value[0].type === 'text') {
+      // Since codeTree for an unparsable text (e.g. 'a\na\na') is [{ type: 'text', value: 'a\na\na' }]
+      lineCount = codeTree.value[0].value.split('\n').length;
+    }
+
+    var largestLineNumber = lineCount + startingLineNumber;
     var rows = processLines(codeTree, wrapLines, lineProps, showLineNumbers, showInlineLineNumbers, startingLineNumber, largestLineNumber, lineNumberStyle, wrapLongLines);
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(PreTag, preProps, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(CodeTag, codeTagProps, !showInlineLineNumbers && allLineNumbers, renderer({
       rows: rows,
