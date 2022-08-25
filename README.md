@@ -155,7 +155,7 @@ SyntaxHighlighter.supportedLanguages;
 - [grape-ui](https://www.grapeui.com) - Component library using styled-system and other open source components.
 - [✅ Good Arduino Code](https://goodarduinocode.com) - A curated library of Arduino Coding examples
 - [marmota.app](https://marmota.app) - A desktop app to create simple markdown presentations
- 
+- [dapaste](https://dapaste.com) - Share text and code anonymously 
 If your project uses react-syntax-highlighter please send a pr to add!
 
 ### License
