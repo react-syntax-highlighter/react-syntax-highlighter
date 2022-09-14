@@ -367,7 +367,11 @@ export default function(defaultAstGenerator, defaultStyle) {
         });
 
     if (wrapLongLines) {
-      codeTagProps.style = { ...codeTagProps.style, whiteSpace: 'pre-wrap' };
+      codeTagProps.style = {
+        ...codeTagProps.style,
+        whiteSpace: 'pre-wrap',
+        wordBreak: 'break-word'
+      };
     } else {
       codeTagProps.style = { ...codeTagProps.style, whiteSpace: 'pre' };
     }
