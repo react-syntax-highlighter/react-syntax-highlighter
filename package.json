@@ -32,7 +32,7 @@
     "babel-plugin-transform-dynamic-import": "^2.1.0",
     "codecov": "^3.2.0",
     "css": "^2.2.1",
-    "css-loader": "^3.6.0",
+    "css-loader": "^6.7.3",
     "eslint": "^7.7.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-jest": "^23.20.0",
@@ -48,10 +48,10 @@
     "react-syntax-highlighter-virtualized-renderer": "^1.0.3",
     "react-test-renderer": "^15.3.2",
     "request": "^2.88.0",
-    "style-loader": "^0.13.0",
+    "style-loader": "^3.3.1",
     "to-camel-case": "^1.0.0",
-    "webpack": "^4.22.0",
-    "webpack-cli": "^3.1.2",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^3.1.14"
   },
   "peerDependencies": {
