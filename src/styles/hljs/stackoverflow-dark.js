@@ -37,7 +37,7 @@ export default {
         "color": "#88aece"
     },
     "hljs-attribute": {
-        "color": "v#c59bc1"
+        "color": "#c59bc1"
     },
     "hljs-name": {
         "color": "#f08d49"
