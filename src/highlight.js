@@ -106,6 +106,7 @@ function createLineElement({
   const properties =
     typeof lineProps === 'function' ? lineProps(lineNumber) : lineProps;
   properties['className'] = className;
+  let currentChildren = children;
 
   if (lineNumber && showInlineLineNumbers) {
     const inlineLineNumberStyle = assembleLineNumberStyles(
@@ -113,7 +114,22 @@ function createLineElement({
       lineNumber,
       largestLineNumber
     );
-    children.unshift(getInlineLineNumber(lineNumber, inlineLineNumberStyle));
+
+    // if children only contains one value, keep the structure flat
+    if (currentChildren.length === 1) {
+      currentChildren = [
+        getInlineLineNumber(lineNumber, inlineLineNumberStyle),
+        ...currentChildren
+      ];
+    } else {
+      currentChildren = [
+        getInlineLineNumber(lineNumber, inlineLineNumberStyle),
+        createLineElement({
+          children: currentChildren,
+          className: [...new Set(className)]
+        })
+      ];
+    }
   }
 
   if (wrapLongLines & showLineNumbers) {
@@ -124,7 +140,7 @@ function createLineElement({
     type: 'element',
     tagName: 'span',
     properties,
-    children
+    children: currentChildren
   };
 }
 
@@ -367,7 +383,11 @@ export default function(defaultAstGenerator, defaultStyle) {
         });
 
     if (wrapLongLines) {
-      codeTagProps.style = { ...codeTagProps.style, whiteSpace: 'pre-wrap' };
+      codeTagProps.style = {
+        ...codeTagProps.style,
+        whiteSpace: 'pre-wrap',
+        wordBreak: 'break-word'
+      };
     } else {
       codeTagProps.style = { ...codeTagProps.style, whiteSpace: 'pre' };
     }

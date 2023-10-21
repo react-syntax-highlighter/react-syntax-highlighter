@@ -12,7 +12,7 @@ class Component extends React.Component {
   constructor() {
     super();
     const initialCodeString = `import React from "react";
-import uniquePropHOC from "./lib/unique-prop-hoc";
+import uniquePropHOC from "./lib/the-name-of-an-extremely-long-path-that-is-meant-to-force-a-wrap-so-we-can-see-that-it-is-working-properly/unique-prop-hoc";
 
 // this comment is here to demonstrate an extremely long line length, well beyond what you should probably allow in your own code, though sometimes you'll be highlighting code you can't refactor, which is unfortunate but should be handled gracefully
 
