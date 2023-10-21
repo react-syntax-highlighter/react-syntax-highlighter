@@ -35,6 +35,7 @@
 * nord
 * oneDark
 * oneLight
+* a11yOneLight
 * pojoaque
 * shadesOfPurple
 * solarizedDarkAtom
