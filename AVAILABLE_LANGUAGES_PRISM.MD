@@ -13,6 +13,8 @@
 * aql
 * arduino
 * arff
+* armasm
+* arturo
 * asciidoc
 * asm6502
 * asmatmel
@@ -21,14 +23,17 @@
 * autoit
 * avisynth
 * avroIdl (avro-idl)
+* awk
 * bash
 * basic
 * batch
 * bbcode
+* bbj
 * bicep
 * birb
 * bison
 * bnf
+* bqn
 * brainfuck
 * brightscript
 * bro
@@ -37,12 +42,15 @@
 * cfscript
 * chaiscript
 * cil
+* cilkc
+* cilkcpp
 * clike
 * clojure
 * cmake
 * cobol
 * coffeescript
 * concurnas
+* cooklang
 * coq
 * cpp
 * crystal
@@ -52,6 +60,7 @@
 * cssExtras (css-extras)
 * css
 * csv
+* cue
 * cypher
 * d
 * dart
@@ -84,6 +93,7 @@
 * gcode
 * gdscript
 * gedcom
+* gettext
 * gherkin
 * git
 * glsl
@@ -91,6 +101,7 @@
 * gn
 * goModule (go-module)
 * go
+* gradle
 * graphql
 * groovy
 * haml
@@ -139,6 +150,7 @@
 * latte
 * less
 * lilypond
+* linkerScript (linker-script)
 * liquid
 * lisp
 * livescript
@@ -151,10 +163,12 @@
 * markdown
 * markupTemplating (markup-templating)
 * markup
+* mata
 * matlab
 * maxscript
 * mel
 * mermaid
+* metafont
 * mizar
 * mongodb
 * monkey
@@ -172,6 +186,7 @@
 * nsis
 * objectivec
 * ocaml
+* odin
 * opencl
 * openqasm
 * oz
@@ -185,6 +200,7 @@
 * phpExtras (php-extras)
 * php
 * phpdoc
+* plantUml (plant-uml)
 * plsql
 * powerquery
 * powershell
@@ -210,6 +226,7 @@
 * regex
 * rego
 * renpy
+* rescript
 * rest
 * rip
 * roboconf
@@ -235,7 +252,9 @@
 * sql
 * squirrel
 * stan
+* stata
 * stylus
+* supercollider
 * swift
 * systemd
 * t4Cs (t4-cs)
@@ -266,6 +285,7 @@
 * warpscript
 * wasm
 * webIdl (web-idl)
+* wgsl
 * wiki
 * wolfram
 * wren

@@ -83,10 +83,11 @@ function createAsyncLanguageLoadersIndex(files) {
 fs.readdir(
   path.join(__dirname, '../node_modules/refractor/lang'),
   (err, files) => {
-    console.log(files);
     if (err) {
       process.exit(1);
     }
+    console.log(files);
+    files = files.filter(f => f.endsWith('.js'));
     files.forEach(createLanguagePassthroughModule);
 
     createAsyncLanguageLoadersIndex(files);
