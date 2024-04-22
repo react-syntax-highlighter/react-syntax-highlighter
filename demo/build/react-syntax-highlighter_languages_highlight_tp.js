@@ -1,35 +1,47 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_highlight_tp"],{
+"use strict";
+(self["webpackChunkreact_syntax_highlighter"] = self["webpackChunkreact_syntax_highlighter"] || []).push([["react-syntax-highlighter_languages_highlight_tp"],{
 
-/***/ "./node_modules/highlight.js/lib/languages/tp.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/highlight.js/lib/languages/tp.js ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/highlight.js/es/languages/tp.js":
+/*!******************************************************!*\
+  !*** ./node_modules/highlight.js/es/languages/tp.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-module.exports = function(hljs) {
-  var TPID = {
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ tp)
+/* harmony export */ });
+/*
+Language: TP
+Author: Jay Strybis <jay.strybis@gmail.com>
+Description: FANUC TP programming language (TPP).
+*/
+
+function tp(hljs) {
+  const TPID = {
     className: 'number',
     begin: '[1-9][0-9]*', /* no leading zeros */
     relevance: 0
   };
-  var TPLABEL = {
+  const TPLABEL = {
     className: 'symbol',
     begin: ':[^\\]]+'
   };
-  var TPDATA = {
+  const TPDATA = {
     className: 'built_in',
-    begin: '(AR|P|PAYLOAD|PR|R|SR|RSR|LBL|VR|UALM|MESSAGE|UTOOL|UFRAME|TIMER|' +
-    'TIMER_OVERFLOW|JOINT_MAX_SPEED|RESUME_PROG|DIAG_REC)\\[', end: '\\]',
+    begin: '(AR|P|PAYLOAD|PR|R|SR|RSR|LBL|VR|UALM|MESSAGE|UTOOL|UFRAME|TIMER|'
+    + 'TIMER_OVERFLOW|JOINT_MAX_SPEED|RESUME_PROG|DIAG_REC)\\[',
+    end: '\\]',
     contains: [
       'self',
       TPID,
       TPLABEL
     ]
   };
-  var TPIO = {
+  const TPIO = {
     className: 'built_in',
-    begin: '(AI|AO|DI|DO|F|RI|RO|UI|UO|GI|GO|SI|SO)\\[', end: '\\]',
+    begin: '(AI|AO|DI|DO|F|RI|RO|UI|UO|GI|GO|SI|SO)\\[',
+    end: '\\]',
     contains: [
       'self',
       TPID,
@@ -38,17 +50,94 @@ module.exports = function(hljs) {
     ]
   };
 
+  const KEYWORDS = [
+    "ABORT",
+    "ACC",
+    "ADJUST",
+    "AND",
+    "AP_LD",
+    "BREAK",
+    "CALL",
+    "CNT",
+    "COL",
+    "CONDITION",
+    "CONFIG",
+    "DA",
+    "DB",
+    "DIV",
+    "DETECT",
+    "ELSE",
+    "END",
+    "ENDFOR",
+    "ERR_NUM",
+    "ERROR_PROG",
+    "FINE",
+    "FOR",
+    "GP",
+    "GUARD",
+    "INC",
+    "IF",
+    "JMP",
+    "LINEAR_MAX_SPEED",
+    "LOCK",
+    "MOD",
+    "MONITOR",
+    "OFFSET",
+    "Offset",
+    "OR",
+    "OVERRIDE",
+    "PAUSE",
+    "PREG",
+    "PTH",
+    "RT_LD",
+    "RUN",
+    "SELECT",
+    "SKIP",
+    "Skip",
+    "TA",
+    "TB",
+    "TO",
+    "TOOL_OFFSET",
+    "Tool_Offset",
+    "UF",
+    "UT",
+    "UFRAME_NUM",
+    "UTOOL_NUM",
+    "UNLOCK",
+    "WAIT",
+    "X",
+    "Y",
+    "Z",
+    "W",
+    "P",
+    "R",
+    "STRLEN",
+    "SUBSTR",
+    "FINDSTR",
+    "VOFFSET",
+    "PROG",
+    "ATTR",
+    "MN",
+    "POS"
+  ];
+  const LITERALS = [
+    "ON",
+    "OFF",
+    "max_speed",
+    "LPOS",
+    "JPOS",
+    "ENABLE",
+    "DISABLE",
+    "START",
+    "STOP",
+    "RESET"
+  ];
+
   return {
+    name: 'TP',
     keywords: {
-      keyword:
-        'ABORT ACC ADJUST AND AP_LD BREAK CALL CNT COL CONDITION CONFIG DA DB ' +
-        'DIV DETECT ELSE END ENDFOR ERR_NUM ERROR_PROG FINE FOR GP GUARD INC ' +
-        'IF JMP LINEAR_MAX_SPEED LOCK MOD MONITOR OFFSET Offset OR OVERRIDE ' +
-        'PAUSE PREG PTH RT_LD RUN SELECT SKIP Skip TA TB TO TOOL_OFFSET ' +
-        'Tool_Offset UF UT UFRAME_NUM UTOOL_NUM UNLOCK WAIT X Y Z W P R STRLEN ' +
-        'SUBSTR FINDSTR VOFFSET PROG ATTR MN POS',
-      literal:
-        'ON OFF max_speed LPOS JPOS ENABLE DISABLE START STOP RESET'
+      keyword: KEYWORDS,
+      literal: LITERALS
     },
     contains: [
       TPDATA,
@@ -80,7 +169,8 @@ module.exports = function(hljs) {
       hljs.QUOTE_STRING_MODE,
       {
         className: 'string',
-        begin: '\'', end: '\''
+        begin: '\'',
+        end: '\''
       },
       hljs.C_NUMBER_MODE,
       {
@@ -89,7 +179,10 @@ module.exports = function(hljs) {
       }
     ]
   };
-};
+}
+
+
+
 
 /***/ })
 

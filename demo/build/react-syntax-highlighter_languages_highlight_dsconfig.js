@@ -1,29 +1,45 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_highlight_dsconfig"],{
+"use strict";
+(self["webpackChunkreact_syntax_highlighter"] = self["webpackChunkreact_syntax_highlighter"] || []).push([["react-syntax-highlighter_languages_highlight_dsconfig"],{
 
-/***/ "./node_modules/highlight.js/lib/languages/dsconfig.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/highlight.js/lib/languages/dsconfig.js ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/highlight.js/es/languages/dsconfig.js":
+/*!************************************************************!*\
+  !*** ./node_modules/highlight.js/es/languages/dsconfig.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-module.exports = function(hljs) {
-  var QUOTED_PROPERTY = {
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ dsconfig)
+/* harmony export */ });
+/*
+ Language: dsconfig
+ Description: dsconfig batch configuration language for LDAP directory servers
+ Contributors: Jacob Childress <jacobc@gmail.com>
+ Category: enterprise, config
+ */
+
+/** @type LanguageFn */
+function dsconfig(hljs) {
+  const QUOTED_PROPERTY = {
     className: 'string',
-    begin: /"/, end: /"/
+    begin: /"/,
+    end: /"/
   };
-  var APOS_PROPERTY = {
+  const APOS_PROPERTY = {
     className: 'string',
-    begin: /'/, end: /'/
+    begin: /'/,
+    end: /'/
   };
-  var UNQUOTED_PROPERTY = {
+  const UNQUOTED_PROPERTY = {
     className: 'string',
-    begin: '[\\w-?]+:\\w+', end: '\\W',
+    begin: /[\w\-?]+:\w+/,
+    end: /\W/,
     relevance: 0
   };
-  var VALUELESS_PROPERTY = {
+  const VALUELESS_PROPERTY = {
     className: 'string',
-    begin: '\\w+-?\\w+', end: '\\W',
+    begin: /\w+(\-\w+)*/,
+    end: /(?=\W)/,
     relevance: 0
   };
 
@@ -32,18 +48,24 @@ module.exports = function(hljs) {
     contains: [
       {
         className: 'keyword',
-        begin: '^dsconfig', end: '\\s', excludeEnd: true,
+        begin: '^dsconfig',
+        end: /\s/,
+        excludeEnd: true,
         relevance: 10
       },
       {
         className: 'built_in',
-        begin: '(list|create|get|set|delete)-(\\w+)', end: '\\s', excludeEnd: true,
+        begin: /(list|create|get|set|delete)-(\w+)/,
+        end: /\s/,
+        excludeEnd: true,
         illegal: '!@#$%^&*()',
         relevance: 10
       },
       {
         className: 'built_in',
-        begin: '--(\\w+)', end: '\\s', excludeEnd: true
+        begin: /--(\w+)/,
+        end: /\s/,
+        excludeEnd: true
       },
       QUOTED_PROPERTY,
       APOS_PROPERTY,
@@ -52,7 +74,10 @@ module.exports = function(hljs) {
       hljs.HASH_COMMENT_MODE
     ]
   };
-};
+}
+
+
+
 
 /***/ })
 

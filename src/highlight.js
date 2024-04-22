@@ -1,6 +1,6 @@
 import React from 'react';
-import createElement from './create-element';
-import checkForListedLanguage from './checkForListedLanguage';
+import createElement from './create-element.js';
+import checkForListedLanguage from './checkForListedLanguage.js';
 
 const newLineRegex = /\n/g;
 function getNewLines(str) {
@@ -27,14 +27,14 @@ function AllLineNumbers({
   codeStyle,
   containerStyle = { float: 'left', paddingRight: '10px' },
   numberStyle = {},
-  startingLineNumber
+  startingLineNumber,
 }) {
   return (
     <code style={Object.assign({}, codeStyle, containerStyle)}>
       {getAllLineNumbers({
         lines: codeString.replace(/\n$/, '').split('\n'),
         style: numberStyle,
-        startingLineNumber
+        startingLineNumber,
       })}
     </code>
   );
@@ -53,23 +53,23 @@ function getInlineLineNumber(lineNumber, inlineLineNumberStyle) {
       className: [
         'comment',
         'linenumber',
-        'react-syntax-highlighter-line-number'
+        'react-syntax-highlighter-line-number',
       ],
-      style: inlineLineNumberStyle
+      style: inlineLineNumberStyle,
     },
     children: [
       {
         type: 'text',
-        value: lineNumber
-      }
-    ]
+        value: lineNumber,
+      },
+    ],
   };
 }
 
 function assembleLineNumberStyles(
   lineNumberStyle,
   lineNumber,
-  largestLineNumber
+  largestLineNumber,
 ) {
   // minimally necessary styling for line numbers
   const defaultLineNumberStyle = {
@@ -77,7 +77,7 @@ function assembleLineNumberStyles(
     minWidth: getEmWidthOfNumber(largestLineNumber),
     paddingRight: '1em',
     textAlign: 'right',
-    userSelect: 'none'
+    userSelect: 'none',
   };
   // prep custom styling
   const customLineNumberStyle =
@@ -87,7 +87,7 @@ function assembleLineNumberStyles(
   // combine
   const assembledStyle = {
     ...defaultLineNumberStyle,
-    ...customLineNumberStyle
+    ...customLineNumberStyle,
   };
   return assembledStyle;
 }
@@ -101,7 +101,7 @@ function createLineElement({
   lineProps = {},
   className = [],
   showLineNumbers,
-  wrapLongLines
+  wrapLongLines,
 }) {
   const properties =
     typeof lineProps === 'function' ? lineProps(lineNumber) : lineProps;
@@ -111,7 +111,7 @@ function createLineElement({
     const inlineLineNumberStyle = assembleLineNumberStyles(
       lineNumberStyle,
       lineNumber,
-      largestLineNumber
+      largestLineNumber,
     );
     children.unshift(getInlineLineNumber(lineNumber, inlineLineNumberStyle));
   }
@@ -124,23 +124,29 @@ function createLineElement({
     type: 'element',
     tagName: 'span',
     properties,
-    children
+    children,
   };
 }
 
 function flattenCodeTree(tree, className = [], newTree = []) {
+  if (tree.type === 'root') {
+    return flattenCodeTree(tree.children, className, newTree);
+  }
+
   for (let i = 0; i < tree.length; i++) {
     const node = tree[i];
     if (node.type === 'text') {
       newTree.push(
         createLineElement({
           children: [node],
-          className: [...new Set(className)]
-        })
+          className: [...new Set(className)],
+        }),
       );
     } else if (node.children) {
       const classNames = className.concat(node.properties.className);
-      flattenCodeTree(node.children, classNames).forEach(i => newTree.push(i));
+      flattenCodeTree(node.children, classNames).forEach((i) =>
+        newTree.push(i),
+      );
     }
   }
   return newTree;
@@ -155,7 +161,7 @@ function processLines(
   startingLineNumber,
   largestLineNumber,
   lineNumberStyle,
-  wrapLongLines
+  wrapLongLines,
 ) {
   const tree = flattenCodeTree(codeTree.value);
   const newTree = [];
@@ -172,7 +178,7 @@ function processLines(
       lineProps,
       className,
       showLineNumbers,
-      wrapLongLines
+      wrapLongLines,
     });
   }
 
@@ -181,7 +187,7 @@ function processLines(
       const inlineLineNumberStyle = assembleLineNumberStyles(
         lineNumberStyle,
         lineNumber,
-        largestLineNumber
+        largestLineNumber,
       );
       children.unshift(getInlineLineNumber(lineNumber, inlineLineNumberStyle));
     }
@@ -211,8 +217,8 @@ function processLines(
           const children = tree.slice(lastLineBreakIndex + 1, index).concat(
             createLineElement({
               children: [newChild],
-              className: node.properties.className
-            })
+              className: node.properties.className,
+            }),
           );
 
           const line = createLine(children, lineNumber);
@@ -228,7 +234,7 @@ function processLines(
           if (stringChild) {
             const newElem = createLineElement({
               children: [lastLineInPreviousSpan],
-              className: node.properties.className
+              className: node.properties.className,
             });
             tree.splice(index + 1, 0, newElem);
           } else {
@@ -236,7 +242,7 @@ function processLines(
             const line = createLine(
               children,
               lineNumber,
-              node.properties.className
+              node.properties.className,
             );
             newTree.push(line);
           }
@@ -247,7 +253,7 @@ function processLines(
           const line = createLine(
             children,
             lineNumber,
-            node.properties.className
+            node.properties.className,
           );
           newTree.push(line);
         }
@@ -275,8 +281,8 @@ function defaultRenderer({ rows, stylesheet, useInlineStyles }) {
       node,
       stylesheet,
       useInlineStyles,
-      key: `code-segement${i}`
-    })
+      key: `code-segement${i}`,
+    }),
   );
 }
 
@@ -311,7 +317,7 @@ function getCodeTree({ astGenerator, language, code, defaultCodeValue }) {
   }
 }
 
-export default function(defaultAstGenerator, defaultStyle) {
+export default function (defaultAstGenerator, defaultStyle) {
   return function SyntaxHighlighter({
     language,
     children,
@@ -321,8 +327,8 @@ export default function(defaultAstGenerator, defaultStyle) {
       className: language ? `language-${language}` : undefined,
       style: {
         ...style['code[class*="language-"]'],
-        ...style[`code[class*="language-${language}"]`]
-      }
+        ...style[`code[class*="language-${language}"]`],
+      },
     },
     useInlineStyles = true,
     showLineNumbers = false,
@@ -357,13 +363,13 @@ export default function(defaultAstGenerator, defaultStyle) {
     const generatorClassName = isHighlightJs(astGenerator) ? 'hljs' : 'prismjs';
     const preProps = useInlineStyles
       ? Object.assign({}, rest, {
-          style: Object.assign({}, defaultPreStyle, customStyle)
+          style: Object.assign({}, defaultPreStyle, customStyle),
         })
       : Object.assign({}, rest, {
           className: rest.className
             ? `${generatorClassName} ${rest.className}`
             : generatorClassName,
-          style: Object.assign({}, customStyle)
+          style: Object.assign({}, customStyle),
         });
 
     if (wrapLongLines) {
@@ -394,10 +400,15 @@ export default function(defaultAstGenerator, defaultStyle) {
       astGenerator,
       language,
       code,
-      defaultCodeValue
+      defaultCodeValue,
     });
+
     if (codeTree.language === null) {
       codeTree.value = defaultCodeValue;
+    }
+
+    if ((codeTree?.value?.type ?? codeTree?.type) === 'root') {
+      codeTree.value = codeTree?.value?.children ?? codeTree?.children;
     }
 
     // determine largest line number so that we can force minWidth on all linenumber elements
@@ -417,7 +428,7 @@ export default function(defaultAstGenerator, defaultStyle) {
       startingLineNumber,
       largestLineNumber,
       lineNumberStyle,
-      wrapLongLines
+      wrapLongLines,
     );
 
     return (

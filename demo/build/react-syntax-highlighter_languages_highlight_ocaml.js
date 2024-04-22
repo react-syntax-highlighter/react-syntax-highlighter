@@ -1,35 +1,49 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_highlight_ocaml"],{
+"use strict";
+(self["webpackChunkreact_syntax_highlighter"] = self["webpackChunkreact_syntax_highlighter"] || []).push([["react-syntax-highlighter_languages_highlight_ocaml"],{
 
-/***/ "./node_modules/highlight.js/lib/languages/ocaml.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/highlight.js/lib/languages/ocaml.js ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/highlight.js/es/languages/ocaml.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/highlight.js/es/languages/ocaml.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-module.exports = function(hljs) {
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ ocaml)
+/* harmony export */ });
+/*
+Language: OCaml
+Author: Mehdi Dogguy <mehdi@dogguy.org>
+Contributors: Nicolas Braud-Santoni <nicolas.braud-santoni@ens-cachan.fr>, Mickael Delahaye <mickael.delahaye@gmail.com>
+Description: OCaml language definition.
+Website: https://ocaml.org
+Category: functional
+*/
+
+function ocaml(hljs) {
   /* missing support for heredoc-like string (OCaml 4.0.2+) */
   return {
-    aliases: ['ml'],
+    name: 'OCaml',
+    aliases: [ 'ml' ],
     keywords: {
+      $pattern: '[a-z_]\\w*!?',
       keyword:
-        'and as assert asr begin class constraint do done downto else end ' +
-        'exception external for fun function functor if in include ' +
-        'inherit! inherit initializer land lazy let lor lsl lsr lxor match method!|10 method ' +
-        'mod module mutable new object of open! open or private rec sig struct ' +
-        'then to try type val! val virtual when while with ' +
+        'and as assert asr begin class constraint do done downto else end '
+        + 'exception external for fun function functor if in include '
+        + 'inherit! inherit initializer land lazy let lor lsl lsr lxor match method!|10 method '
+        + 'mod module mutable new object of open! open or private rec sig struct '
+        + 'then to try type val! val virtual when while with '
         /* camlp4 */
-        'parser value',
+        + 'parser value',
       built_in:
         /* built-in types */
-        'array bool bytes char exn|5 float int int32 int64 list lazy_t|5 nativeint|5 string unit ' +
+        'array bool bytes char exn|5 float int int32 int64 list lazy_t|5 nativeint|5 string unit '
         /* (some) types in Pervasives */
-        'in_channel out_channel ref',
+        + 'in_channel out_channel ref',
       literal:
         'true false'
     },
     illegal: /\/\/|>>/,
-    lexemes: '[a-z_]\\w*!?',
     contains: [
       {
         className: 'literal',
@@ -39,9 +53,7 @@ module.exports = function(hljs) {
       hljs.COMMENT(
         '\\(\\*',
         '\\*\\)',
-        {
-          contains: ['self']
-        }
+        { contains: [ 'self' ] }
       ),
       { /* type variable */
         className: 'symbol',
@@ -57,26 +69,32 @@ module.exports = function(hljs) {
         begin: '\\b[A-Z][\\w\']*',
         relevance: 0
       },
-      { /* don't color identifiers, but safely catch all identifiers with '*/
-        begin: '[a-z_]\\w*\'[\\w\']*', relevance: 0
+      { /* don't color identifiers, but safely catch all identifiers with ' */
+        begin: '[a-z_]\\w*\'[\\w\']*',
+        relevance: 0
       },
-      hljs.inherit(hljs.APOS_STRING_MODE, {className: 'string', relevance: 0}),
-      hljs.inherit(hljs.QUOTE_STRING_MODE, {illegal: null}),
+      hljs.inherit(hljs.APOS_STRING_MODE, {
+        className: 'string',
+        relevance: 0
+      }),
+      hljs.inherit(hljs.QUOTE_STRING_MODE, { illegal: null }),
       {
         className: 'number',
         begin:
-          '\\b(0[xX][a-fA-F0-9_]+[Lln]?|' +
-          '0[oO][0-7_]+[Lln]?|' +
-          '0[bB][01_]+[Lln]?|' +
-          '[0-9][0-9_]*([Lln]|(\\.[0-9_]*)?([eE][-+]?[0-9_]+)?)?)',
+          '\\b(0[xX][a-fA-F0-9_]+[Lln]?|'
+          + '0[oO][0-7_]+[Lln]?|'
+          + '0[bB][01_]+[Lln]?|'
+          + '[0-9][0-9_]*([Lln]|(\\.[0-9_]*)?([eE][-+]?[0-9_]+)?)?)',
         relevance: 0
       },
-      {
-        begin: /[-=]>/ // relevance booster
+      { begin: /->/ // relevance booster
       }
     ]
-  }
-};
+  };
+}
+
+
+
 
 /***/ })
 

@@ -1,40 +1,129 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_highlight_aspectj"],{
+"use strict";
+(self["webpackChunkreact_syntax_highlighter"] = self["webpackChunkreact_syntax_highlighter"] || []).push([["react-syntax-highlighter_languages_highlight_aspectj"],{
 
-/***/ "./node_modules/highlight.js/lib/languages/aspectj.js":
-/*!************************************************************!*\
-  !*** ./node_modules/highlight.js/lib/languages/aspectj.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/highlight.js/es/languages/aspectj.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/highlight.js/es/languages/aspectj.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-module.exports = function (hljs) {
-  var KEYWORDS =
-    'false synchronized int abstract float private char boolean static null if const ' +
-    'for true while long throw strictfp finally protected import native final return void ' +
-    'enum else extends implements break transient new catch instanceof byte super volatile case ' +
-    'assert short package default double public try this switch continue throws privileged ' +
-    'aspectOf adviceexecution proceed cflowbelow cflow initialization preinitialization ' +
-    'staticinitialization withincode target within execution getWithinTypeName handler ' +
-    'thisJoinPoint thisJoinPointStaticPart thisEnclosingJoinPointStaticPart declare parents '+
-    'warning error soft precedence thisAspectInstance';
-  var SHORTKEYS = 'get set args call';
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ aspectj)
+/* harmony export */ });
+/*
+Language: AspectJ
+Author: Hakan Ozler <ozler.hakan@gmail.com>
+Website: https://www.eclipse.org/aspectj/
+Description: Syntax Highlighting for the AspectJ Language which is a general-purpose aspect-oriented extension to the Java programming language.
+Audit: 2020
+*/
+
+/** @type LanguageFn */
+function aspectj(hljs) {
+  const regex = hljs.regex;
+  const KEYWORDS = [
+    "false",
+    "synchronized",
+    "int",
+    "abstract",
+    "float",
+    "private",
+    "char",
+    "boolean",
+    "static",
+    "null",
+    "if",
+    "const",
+    "for",
+    "true",
+    "while",
+    "long",
+    "throw",
+    "strictfp",
+    "finally",
+    "protected",
+    "import",
+    "native",
+    "final",
+    "return",
+    "void",
+    "enum",
+    "else",
+    "extends",
+    "implements",
+    "break",
+    "transient",
+    "new",
+    "catch",
+    "instanceof",
+    "byte",
+    "super",
+    "volatile",
+    "case",
+    "assert",
+    "short",
+    "package",
+    "default",
+    "double",
+    "public",
+    "try",
+    "this",
+    "switch",
+    "continue",
+    "throws",
+    "privileged",
+    "aspectOf",
+    "adviceexecution",
+    "proceed",
+    "cflowbelow",
+    "cflow",
+    "initialization",
+    "preinitialization",
+    "staticinitialization",
+    "withincode",
+    "target",
+    "within",
+    "execution",
+    "getWithinTypeName",
+    "handler",
+    "thisJoinPoint",
+    "thisJoinPointStaticPart",
+    "thisEnclosingJoinPointStaticPart",
+    "declare",
+    "parents",
+    "warning",
+    "error",
+    "soft",
+    "precedence",
+    "thisAspectInstance"
+  ];
+  const SHORTKEYS = [
+    "get",
+    "set",
+    "args",
+    "call"
+  ];
+
   return {
-    keywords : KEYWORDS,
-    illegal : /<\/|#/,
-    contains : [
+    name: 'AspectJ',
+    keywords: KEYWORDS,
+    illegal: /<\/|#/,
+    contains: [
       hljs.COMMENT(
-        '/\\*\\*',
-        '\\*/',
+        /\/\*\*/,
+        /\*\//,
         {
-          relevance : 0,
-          contains : [
+          relevance: 0,
+          contains: [
             {
               // eat up @'s in emails to prevent them to be recognized as doctags
-              begin: /\w+@/, relevance: 0
+              begin: /\w+@/,
+              relevance: 0
             },
             {
-              className : 'doctag',
-              begin : '@[A-Za-z]+'
+              className: 'doctag',
+              begin: /@[A-Za-z]+/
             }
           ]
         }
@@ -44,63 +133,61 @@ module.exports = function (hljs) {
       hljs.APOS_STRING_MODE,
       hljs.QUOTE_STRING_MODE,
       {
-        className : 'class',
-        beginKeywords : 'aspect',
-        end : /[{;=]/,
-        excludeEnd : true,
-        illegal : /[:;"\[\]]/,
-        contains : [
-          {
-            beginKeywords : 'extends implements pertypewithin perthis pertarget percflowbelow percflow issingleton'
-          },
+        className: 'class',
+        beginKeywords: 'aspect',
+        end: /[{;=]/,
+        excludeEnd: true,
+        illegal: /[:;"\[\]]/,
+        contains: [
+          { beginKeywords: 'extends implements pertypewithin perthis pertarget percflowbelow percflow issingleton' },
           hljs.UNDERSCORE_TITLE_MODE,
           {
-            begin : /\([^\)]*/,
-            end : /[)]+/,
-            keywords : KEYWORDS + ' ' + SHORTKEYS,
-            excludeEnd : false
+            begin: /\([^\)]*/,
+            end: /[)]+/,
+            keywords: KEYWORDS.concat(SHORTKEYS),
+            excludeEnd: false
           }
         ]
       },
       {
-        className : 'class',
-        beginKeywords : 'class interface',
-        end : /[{;=]/,
-        excludeEnd : true,
+        className: 'class',
+        beginKeywords: 'class interface',
+        end: /[{;=]/,
+        excludeEnd: true,
         relevance: 0,
-        keywords : 'class interface',
-        illegal : /[:"\[\]]/,
-        contains : [
-          {beginKeywords : 'extends implements'},
+        keywords: 'class interface',
+        illegal: /[:"\[\]]/,
+        contains: [
+          { beginKeywords: 'extends implements' },
           hljs.UNDERSCORE_TITLE_MODE
         ]
       },
       {
         // AspectJ Constructs
-        beginKeywords : 'pointcut after before around throwing returning',
-        end : /[)]/,
-        excludeEnd : false,
-        illegal : /["\[\]]/,
-        contains : [
+        beginKeywords: 'pointcut after before around throwing returning',
+        end: /[)]/,
+        excludeEnd: false,
+        illegal: /["\[\]]/,
+        contains: [
           {
-            begin : hljs.UNDERSCORE_IDENT_RE + '\\s*\\(',
-            returnBegin : true,
-            contains : [hljs.UNDERSCORE_TITLE_MODE]
+            begin: regex.concat(hljs.UNDERSCORE_IDENT_RE, /\s*\(/),
+            returnBegin: true,
+            contains: [ hljs.UNDERSCORE_TITLE_MODE ]
           }
         ]
       },
       {
-        begin : /[:]/,
-        returnBegin : true,
-        end : /[{;]/,
+        begin: /[:]/,
+        returnBegin: true,
+        end: /[{;]/,
         relevance: 0,
-        excludeEnd : false,
-        keywords : KEYWORDS,
-        illegal : /["\[\]]/,
-        contains : [
+        excludeEnd: false,
+        keywords: KEYWORDS,
+        illegal: /["\[\]]/,
+        contains: [
           {
-            begin : hljs.UNDERSCORE_IDENT_RE + '\\s*\\(',
-            keywords : KEYWORDS + ' ' + SHORTKEYS,
+            begin: regex.concat(hljs.UNDERSCORE_IDENT_RE, /\s*\(/),
+            keywords: KEYWORDS.concat(SHORTKEYS),
             relevance: 0
           },
           hljs.QUOTE_STRING_MODE
@@ -108,30 +195,31 @@ module.exports = function (hljs) {
       },
       {
         // this prevents 'new Name(...), or throw ...' from being recognized as a function definition
-        beginKeywords : 'new throw',
-        relevance : 0
+        beginKeywords: 'new throw',
+        relevance: 0
       },
       {
         // the function class is a bit different for AspectJ compared to the Java language
-        className : 'function',
-        begin : /\w+ +\w+(\.)?\w+\s*\([^\)]*\)\s*((throws)[\w\s,]+)?[\{;]/,
-        returnBegin : true,
-        end : /[{;=]/,
-        keywords : KEYWORDS,
-        excludeEnd : true,
-        contains : [
+        className: 'function',
+        begin: /\w+ +\w+(\.\w+)?\s*\([^\)]*\)\s*((throws)[\w\s,]+)?[\{;]/,
+        returnBegin: true,
+        end: /[{;=]/,
+        keywords: KEYWORDS,
+        excludeEnd: true,
+        contains: [
           {
-            begin : hljs.UNDERSCORE_IDENT_RE + '\\s*\\(',
-            returnBegin : true,
+            begin: regex.concat(hljs.UNDERSCORE_IDENT_RE, /\s*\(/),
+            returnBegin: true,
             relevance: 0,
-            contains : [hljs.UNDERSCORE_TITLE_MODE]
+            contains: [ hljs.UNDERSCORE_TITLE_MODE ]
           },
           {
-            className : 'params',
-            begin : /\(/, end : /\)/,
+            className: 'params',
+            begin: /\(/,
+            end: /\)/,
             relevance: 0,
-            keywords : KEYWORDS,
-            contains : [
+            keywords: KEYWORDS,
+            contains: [
               hljs.APOS_STRING_MODE,
               hljs.QUOTE_STRING_MODE,
               hljs.C_NUMBER_MODE,
@@ -145,12 +233,15 @@ module.exports = function (hljs) {
       hljs.C_NUMBER_MODE,
       {
         // annotation is also used in this language
-        className : 'meta',
-        begin : '@[A-Za-z]+'
+        className: 'meta',
+        begin: /@[A-Za-z]+/
       }
     ]
   };
-};
+}
+
+
+
 
 /***/ })
 

@@ -1,48 +1,65 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_highlight_purebasic"],{
+"use strict";
+(self["webpackChunkreact_syntax_highlighter"] = self["webpackChunkreact_syntax_highlighter"] || []).push([["react-syntax-highlighter_languages_highlight_purebasic"],{
 
-/***/ "./node_modules/highlight.js/lib/languages/purebasic.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/highlight.js/lib/languages/purebasic.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/highlight.js/es/languages/purebasic.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/highlight.js/es/languages/purebasic.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-module.exports = // Base deafult colors in PB IDE: background: #FFFFDF; foreground: #000000;
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ purebasic)
+/* harmony export */ });
+/*
+Language: PureBASIC
+Author: Tristano Ajmone <tajmone@gmail.com>
+Description: Syntax highlighting for PureBASIC (v.5.00-5.60). No inline ASM highlighting. (v.1.2, May 2017)
+Credits: I've taken inspiration from the PureBasic language file for GeSHi, created by Gustavo Julio Fiorenza (GuShH).
+Website: https://www.purebasic.com
+*/
 
-function(hljs) {
-  var STRINGS = { // PB IDE color: #0080FF (Azure Radiance)
+// Base deafult colors in PB IDE: background: #FFFFDF; foreground: #000000;
+
+function purebasic(hljs) {
+  const STRINGS = { // PB IDE color: #0080FF (Azure Radiance)
     className: 'string',
-    begin: '(~)?"', end: '"',
+    begin: '(~)?"',
+    end: '"',
     illegal: '\\n'
   };
-  var CONSTANTS = { // PB IDE color: #924B72 (Cannon Pink)
+  const CONSTANTS = { // PB IDE color: #924B72 (Cannon Pink)
     //  "#" + a letter or underscore + letters, digits or underscores + (optional) "$"
     className: 'symbol',
     begin: '#[a-zA-Z_]\\w*\\$?'
   };
 
   return {
-    aliases: ['pb', 'pbi'],
+    name: 'PureBASIC',
+    aliases: [
+      'pb',
+      'pbi'
+    ],
     keywords: // PB IDE color: #006666 (Blue Stone) + Bold
       // Keywords from all version of PureBASIC 5.00 upward ...
-      'Align And Array As Break CallDebugger Case CompilerCase CompilerDefault ' +
-      'CompilerElse CompilerElseIf CompilerEndIf CompilerEndSelect CompilerError ' +
-      'CompilerIf CompilerSelect CompilerWarning Continue Data DataSection Debug ' +
-      'DebugLevel Declare DeclareC DeclareCDLL DeclareDLL DeclareModule Default ' +
-      'Define Dim DisableASM DisableDebugger DisableExplicit Else ElseIf EnableASM ' +
-      'EnableDebugger EnableExplicit End EndDataSection EndDeclareModule EndEnumeration ' +
-      'EndIf EndImport EndInterface EndMacro EndModule EndProcedure EndSelect ' +
-      'EndStructure EndStructureUnion EndWith Enumeration EnumerationBinary Extends ' +
-      'FakeReturn For ForEach ForEver Global Gosub Goto If Import ImportC ' +
-      'IncludeBinary IncludeFile IncludePath Interface List Macro MacroExpandedCount ' +
-      'Map Module NewList NewMap Next Not Or Procedure ProcedureC ' +
-      'ProcedureCDLL ProcedureDLL ProcedureReturn Protected Prototype PrototypeC ReDim ' +
-      'Read Repeat Restore Return Runtime Select Shared Static Step Structure ' +
-      'StructureUnion Swap Threaded To UndefineMacro Until Until  UnuseModule ' +
-      'UseModule Wend While With XIncludeFile XOr',
+      'Align And Array As Break CallDebugger Case CompilerCase CompilerDefault '
+      + 'CompilerElse CompilerElseIf CompilerEndIf CompilerEndSelect CompilerError '
+      + 'CompilerIf CompilerSelect CompilerWarning Continue Data DataSection Debug '
+      + 'DebugLevel Declare DeclareC DeclareCDLL DeclareDLL DeclareModule Default '
+      + 'Define Dim DisableASM DisableDebugger DisableExplicit Else ElseIf EnableASM '
+      + 'EnableDebugger EnableExplicit End EndDataSection EndDeclareModule EndEnumeration '
+      + 'EndIf EndImport EndInterface EndMacro EndModule EndProcedure EndSelect '
+      + 'EndStructure EndStructureUnion EndWith Enumeration EnumerationBinary Extends '
+      + 'FakeReturn For ForEach ForEver Global Gosub Goto If Import ImportC '
+      + 'IncludeBinary IncludeFile IncludePath Interface List Macro MacroExpandedCount '
+      + 'Map Module NewList NewMap Next Not Or Procedure ProcedureC '
+      + 'ProcedureCDLL ProcedureDLL ProcedureReturn Protected Prototype PrototypeC ReDim '
+      + 'Read Repeat Restore Return Runtime Select Shared Static Step Structure '
+      + 'StructureUnion Swap Threaded To UndefineMacro Until Until  UnuseModule '
+      + 'UseModule Wend While With XIncludeFile XOr',
     contains: [
       // COMMENTS | PB IDE color: #00AAAA (Persian Green)
-      hljs.COMMENT(';', '$', {relevance: 0}),
+      hljs.COMMENT(';', '$', { relevance: 0 }),
 
       { // PROCEDURES DEFINITIONS
         className: 'function',
@@ -90,7 +107,10 @@ function(hljs) {
         -- Keywords list taken and adapted from GuShH's (Gustavo Julio Fiorenza)
            PureBasic language file for GeSHi:
            -- https://github.com/easybook/geshi/blob/master/geshi/purebasic.php
-*/;
+*/
+
+
+
 
 /***/ })
 

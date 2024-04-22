@@ -21,7 +21,6 @@
 * basic
 * bnf
 * brainfuck
-* cLike (c-like)
 * c
 * cal
 * capnproto
@@ -70,13 +69,13 @@
 * go
 * golo
 * gradle
+* graphql
 * groovy
 * haml
 * handlebars
 * haskell
 * haxe
 * hsp
-* htmlbars
 * http
 * hy
 * inform7
@@ -114,6 +113,7 @@
 * monkey
 * moonscript
 * n1ql
+* nestedtext
 * nginx
 * nim
 * nix
@@ -163,7 +163,6 @@
 * sml
 * sqf
 * sql
-* sqlMore (sql_more)
 * stan
 * stata
 * step21
@@ -184,6 +183,8 @@
 * verilog
 * vhdl
 * vim
+* wasm
+* wren
 * x86asm
 * xl
 * xml

@@ -1,12 +1,22 @@
 export default {
-    "hljs": {
+    "re code.hljs": {
         "display": "block",
         "overflowX": "auto",
-        "padding": "0.5em",
+        "padding": "1em"
+    },
+    "ode.hljs": {
+        "padding": "3px 5px"
+    },
+    "hljs": {
         "background": "#333",
         "color": "#fff"
     },
-    "xml .hljs-meta": {
+    "language-xml .hljs-meta": {
+        "fontWeight": "bold",
+        "fontStyle": "italic",
+        "color": "#69f"
+    },
+    "language-xml .hljs-meta-string": {
         "fontWeight": "bold",
         "fontStyle": "italic",
         "color": "#69f"
@@ -26,6 +36,9 @@ export default {
     "hljs-keyword": {
         "color": "#a7a"
     },
+    "hljs-built_in": {
+        "color": "#a7a"
+    },
     "hljs-attr": {
         "fontWeight": "bold",
         "color": "#fff"
@@ -34,16 +47,10 @@ export default {
         "fontWeight": "normal",
         "color": "#bce"
     },
-    "hljs-variable": {
-        "color": "#588"
-    },
-    "hljs-template-variable": {
-        "color": "#588"
-    },
     "hljs-code": {
         "color": "#bce"
     },
-    "hljs-meta-string": {
+    "hljs-meta .hljs-string": {
         "color": "#bce"
     },
     "hljs-number": {
@@ -64,28 +71,34 @@ export default {
     "hljs-bullet": {
         "color": "#d40"
     },
-    "hljs-built_in": {
+    "hljs-variable": {
         "color": "#d40"
     },
-    "hljs-builtin-name": {
+    "hljs-template-variable": {
         "color": "#d40"
     },
-    "hljs-section": {
-        "color": "#a85"
-    },
-    "hljs-meta": {
-        "color": "#a85"
+    "hljs-title.class_": {
+        "fontWeight": "bold",
+        "color": "#96c"
     },
     "hljs-class .hljs-title": {
+        "fontWeight": "bold",
         "color": "#96c"
     },
     "hljs-type": {
+        "fontWeight": "bold",
         "color": "#96c"
+    },
+    "hljs-title.function_": {
+        "color": "#fff"
     },
     "hljs-function .hljs-title": {
         "color": "#fff"
     },
     "hljs-subst": {
+        "color": "#fff"
+    },
+    "hljs-tag": {
         "color": "#fff"
     },
     "hljs-formula": {
@@ -98,11 +111,29 @@ export default {
     "hljs-deletion": {
         "backgroundColor": "#c99"
     },
+    "hljs-meta": {
+        "color": "#69f"
+    },
+    "hljs-section": {
+        "fontWeight": "bold",
+        "color": "#69f"
+    },
     "hljs-selector-id": {
-        "color": "#964"
+        "fontWeight": "bold",
+        "color": "#69f"
     },
     "hljs-selector-class": {
-        "color": "#964"
+        "fontWeight": "bold",
+        "color": "#69f"
+    },
+    "hljs-selector-pseudo": {
+        "fontWeight": "bold",
+        "color": "#69f",
+        "fontStyle": "italic"
+    },
+    "hljs-selector-tag": {
+        "fontWeight": "bold",
+        "color": "#69f"
     },
     "hljs-doctag": {
         "fontWeight": "bold"

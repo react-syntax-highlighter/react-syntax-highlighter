@@ -1,2 +1,2 @@
-import qsharp from "refractor/lang/qsharp.js";;
+import qsharp from "refractor/lang/qsharp.js";
 export default qsharp;

@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { render } from 'react-dom';
-import SyntaxHighlighter from '../src/prism-async-light';
-import prismStyles from './styles/prism';
-import ExamplesLinks from './examples-links';
+import SyntaxHighlighter from '../src/prism-async-light.js';
+import prismStyles from './styles/prism.js';
+import ExamplesLinks from './examples-links.js';
 
-import clike from '../src/languages/prism/clike';
-import javascript from '../src/languages/prism/javascript';
-import jsx from '../src/languages/prism/jsx';
-import markup from '../src/languages/prism/markup';
-import markupTemplating from '../src/languages/prism/markup-templating';
+import clike from '../src/languages/prism/clike.js';
+import javascript from '../src/languages/prism/javascript.js';
+import jsx from '../src/languages/prism/jsx.js';
+import markup from '../src/languages/prism/markup.js';
+import markupTemplating from '../src/languages/prism/markup-templating.js';
+
+import defaultStyleSrc from '../src/styles/prism/atom-dark.js';
+import defaultLanguageSrc from '../src/languages/prism/jsx.js';
 
 SyntaxHighlighter.registerLanguage('clike', clike);
 SyntaxHighlighter.registerLanguage('javascript', javascript);
@@ -22,13 +25,10 @@ const availableLanguages = [
   'javascript',
   'jsx',
   'markup',
-  'markup-templating'
+  'markup-templating',
 ];
 
-class Component extends React.Component {
-  constructor() {
-    super();
-    const initialCodeString = `function createStyleObject(classNames, style) {
+const initialCodeString = `function createStyleObject(classNames, style) {
   return classNames.reduce((styleObject, className) => {
     return {...styleObject, ...style[className]};
   }, {});
@@ -72,135 +72,131 @@ function createElement({ node, style, useInlineStyles, key }) {
   }
 }
   `;
-    this.state = {
-      code: initialCodeString,
-      showLineNumbers: false,
-      wrapLongLines: false,
-      style: 'atom-dark',
-      styleSrc: require('../src/styles/prism/atom-dark').default,
-      language: 'jsx',
-      languageSrc: require(`../src/languages/prism/jsx`).default
-    };
-  }
 
-  render() {
-    return (
-      <div className="demo__root demo__root--prism-async-light">
-        <header>
-          <h1>React Syntax Highlighter Demo</h1>
-          <ExamplesLinks />
-        </header>
+const Component = (props) => {
+  const [state, setState] = useState({
+    code: initialCodeString,
+    showLineNumbers: false,
+    wrapLongLines: false,
+    style: 'atom-dark',
+    styleSrc: defaultStyleSrc,
+    language: 'jsx',
+    languageSrc: defaultLanguageSrc,
+  });
 
-        <main>
-          <aside className="options__container">
-            <div className="options__option options__option--language">
-              <select
-                className="select"
-                value={this.state.language}
-                onChange={e =>
-                  this.setState({
-                    languageSrc: require(`../src/languages/prism/${
-                      e.target.value
-                    }`).default,
-                    language: e.target.value
-                  })
-                }
-              >
-                {availableLanguages.map(l => (
-                  <option key={l} value={l}>
-                    {l}
-                  </option>
-                ))}
-              </select>
-            </div>
+  return (
+    <div className="demo__root demo__root--prism-async-light">
+      <header>
+        <h1>React Syntax Highlighter Demo</h1>
+        <ExamplesLinks />
+      </header>
 
-            <div className="options__option options__option--theme">
-              <select
-                className="select"
-                value={this.state.selectedStyle}
-                onChange={e =>
-                  this.setState({
-                    styleSrc: require(`../src/styles/prism/${e.target.value}`)
-                      .default,
-                    style: e.target.value
-                  })
-                }
-              >
-                {availableStyles.map(s => (
-                  <option key={s} value={s}>
-                    {s}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            <div className="options__option options__option--line-numbers">
-              <label htmlFor="showLineNumbers" className="option__label">
-                <input
-                  type="checkbox"
-                  className="option__checkbox"
-                  checked={this.state.showLineNumbers}
-                  onChange={() =>
-                    this.setState({
-                      showLineNumbers: !this.state.showLineNumbers
-                    })
-                  }
-                  id="showLineNumbers"
-                />
-
-                <span className="label__text">Show line numbers</span>
-              </label>
-            </div>
-
-            <div className="options__option options__option--wrap-long-lines">
-              <label htmlFor="wrapLongLines" className="option__label">
-                <input
-                  type="checkbox"
-                  className="option__checkbox"
-                  checked={this.state.wrapLongLines}
-                  onChange={() =>
-                    this.setState({
-                      wrapLongLines: !this.state.wrapLongLines
-                    })
-                  }
-                  id="wrapLongLines"
-                />
-
-                <span className="label__text">Wrap long lines</span>
-              </label>
-            </div>
-          </aside>
-
-          <article className="example__container">
-            <div className="textarea__wrapper">
-              <textarea
-                style={{ flex: 1, marginTop: 11 }}
-                rows={40}
-                value={this.state.code}
-                onChange={e => this.setState({ code: e.target.value })}
-              />
-            </div>
-
-            <SyntaxHighlighter
-              style={this.state.styleSrc}
-              showLineNumbers={this.state.showLineNumbers}
-              wrapLines={true}
-              wrapLongLines={this.state.wrapLongLines}
-              lineProps={lineNumber => ({
-                style: { display: 'block', cursor: 'pointer' },
-                onClick() {
-                  alert(`Line Number Clicked: ${lineNumber}`);
-                }
-              })}
-              language={this.state.language}
+      <main>
+        <aside className="options__container">
+          <div className="options__option options__option--language">
+            <select
+              className="select"
+              value={state.language}
+              onChange={async e => {
+                const {value: language} = e.target;
+                const languageSrc = await import(`../src/languages/prism/${language}.js`).then(x => x?.default ?? x);
+                setState(s => ({...s, languageSrc, language}));
+              }}
             >
-              {this.state.code}
-            </SyntaxHighlighter>
-          </article>
-        </main>
-      </div>
-    );
-  }
-}
+              {availableLanguages.map((l) => (
+                <option key={l} value={l}>
+                  {l}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div className="options__option options__option--theme">
+            <select
+              className="select"
+              value={state.selectedStyle}
+              onChange={async e => {
+                const {value: style} = e.target;
+                const styleSrc = await import(`../src/styles/prism/${style}.js`).then(x => x?.default ?? x);
+                setState(s => ({...s, styleSrc, style}));
+              }}
+            >
+              {availableStyles.map((s) => (
+                <option key={s} value={s}>
+                  {s}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div className="options__option options__option--line-numbers">
+            <label htmlFor="showLineNumbers" className="option__label">
+              <input
+                type="checkbox"
+                className="option__checkbox"
+                checked={state.showLineNumbers}
+                onChange={() =>
+                  setState(s => ({
+                    ...s,
+                    showLineNumbers: !s.showLineNumbers,
+                  }))
+                }
+                id="showLineNumbers"
+              />
+
+              <span className="label__text">Show line numbers</span>
+            </label>
+          </div>
+
+          <div className="options__option options__option--wrap-long-lines">
+            <label htmlFor="wrapLongLines" className="option__label">
+              <input
+                type="checkbox"
+                className="option__checkbox"
+                checked={state.wrapLongLines}
+                onChange={() =>
+                  setState(s => ({
+                    ...s,
+                    wrapLongLines: !s.wrapLongLines,
+                  }))
+                }
+                id="wrapLongLines"
+              />
+
+              <span className="label__text">Wrap long lines</span>
+            </label>
+          </div>
+        </aside>
+
+        <article className="example__container">
+          <div className="textarea__wrapper">
+            <textarea
+              style={{ flex: 1, marginTop: 11 }}
+              rows={40}
+              value={state.code}
+              onChange={e => setState(s => ({...s, code: e.target.value}))}
+            />
+          </div>
+
+          <SyntaxHighlighter
+            style={state.styleSrc}
+            showLineNumbers={state.showLineNumbers}
+            wrapLines={true}
+            wrapLongLines={state.wrapLongLines}
+            lineProps={(lineNumber) => ({
+              style: { display: 'block', cursor: 'pointer' },
+              onClick() {
+                alert(`Line Number Clicked: ${lineNumber}`);
+              },
+            })}
+            language={state.language}
+          >
+            {state.code}
+          </SyntaxHighlighter>
+        </article>
+      </main>
+    </div>
+  );
+};
 
 render(<Component />, document.getElementById('app'));

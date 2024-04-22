@@ -22,7 +22,7 @@ test('SyntaxHighlighter component renders correctly', () => {
     .create(
       <SyntaxHighlighter language="javascript" wrapLines={true}>
         {code}
-      </SyntaxHighlighter>
+      </SyntaxHighlighter>,
     )
     .toJSON();
   expect(tree).toMatchSnapshot();
@@ -37,7 +37,7 @@ test('SyntaxHighlighter allows lineProps as an object', () => {
         lineProps={{ style: { color: 'red' } }}
       >
         {code}
-      </SyntaxHighlighter>
+      </SyntaxHighlighter>,
     )
     .toJSON();
   expect(tree).toMatchSnapshot();
@@ -52,7 +52,7 @@ test('SyntaxHighlighter allows lineProps as function', () => {
         lineProps={() => ({ style: { color: 'red' } })}
       >
         {code}
-      </SyntaxHighlighter>
+      </SyntaxHighlighter>,
     )
     .toJSON();
   expect(tree).toMatchSnapshot();
@@ -63,7 +63,7 @@ test('SyntaxHighlighter renders java code correctly with wrapLines', () => {
     <SyntaxHighlighter
       language="java"
       wrapLines={true}
-      lineProps={lineNumber => {
+      lineProps={(lineNumber) => {
         const style = { display: '', backgroundColor: '' };
         if (lineNumber < 5) {
           style.display = 'block';
@@ -79,7 +79,7 @@ test('SyntaxHighlighter renders java code correctly with wrapLines', () => {
       }}
     >
       {javaCode}
-    </SyntaxHighlighter>
+    </SyntaxHighlighter>,
   );
   expect(tree).toMatchSnapshot();
 });

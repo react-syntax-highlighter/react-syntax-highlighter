@@ -1,34 +1,54 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_highlight_q"],{
+"use strict";
+(self["webpackChunkreact_syntax_highlighter"] = self["webpackChunkreact_syntax_highlighter"] || []).push([["react-syntax-highlighter_languages_highlight_q"],{
 
-/***/ "./node_modules/highlight.js/lib/languages/q.js":
-/*!******************************************************!*\
-  !*** ./node_modules/highlight.js/lib/languages/q.js ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/highlight.js/es/languages/q.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/highlight.js/es/languages/q.js ***!
+  \*****************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-module.exports = function(hljs) {
-  var Q_KEYWORDS = {
-  keyword:
-    'do while select delete by update from',
-  literal:
-    '0b 1b',
-  built_in:
-    'neg not null string reciprocal floor ceiling signum mod xbar xlog and or each scan over prior mmu lsq inv md5 ltime gtime count first var dev med cov cor all any rand sums prds mins maxs fills deltas ratios avgs differ prev next rank reverse iasc idesc asc desc msum mcount mavg mdev xrank mmin mmax xprev rotate distinct group where flip type key til get value attr cut set upsert raze union inter except cross sv vs sublist enlist read0 read1 hopen hclose hdel hsym hcount peach system ltrim rtrim trim lower upper ssr view tables views cols xcols keys xkey xcol xasc xdesc fkeys meta lj aj aj0 ij pj asof uj ww wj wj1 fby xgroup ungroup ej save load rsave rload show csv parse eval min max avg wavg wsum sin cos tan sum',
-  type:
-    '`float `double int `timestamp `timespan `datetime `time `boolean `symbol `char `byte `short `long `real `month `date `minute `second `guid'
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ q)
+/* harmony export */ });
+/*
+Language: Q
+Description: Q is a vector-based functional paradigm programming language built into the kdb+ database.
+             (K/Q/Kdb+ from Kx Systems)
+Author: Sergey Vidyuk <svidyuk@gmail.com>
+Website: https://kx.com/connect-with-us/developers/
+*/
+
+function q(hljs) {
+  const KEYWORDS = {
+    $pattern: /(`?)[A-Za-z0-9_]+\b/,
+    keyword:
+      'do while select delete by update from',
+    literal:
+      '0b 1b',
+    built_in:
+      'neg not null string reciprocal floor ceiling signum mod xbar xlog and or each scan over prior mmu lsq inv md5 ltime gtime count first var dev med cov cor all any rand sums prds mins maxs fills deltas ratios avgs differ prev next rank reverse iasc idesc asc desc msum mcount mavg mdev xrank mmin mmax xprev rotate distinct group where flip type key til get value attr cut set upsert raze union inter except cross sv vs sublist enlist read0 read1 hopen hclose hdel hsym hcount peach system ltrim rtrim trim lower upper ssr view tables views cols xcols keys xkey xcol xasc xdesc fkeys meta lj aj aj0 ij pj asof uj ww wj wj1 fby xgroup ungroup ej save load rsave rload show csv parse eval min max avg wavg wsum sin cos tan sum',
+    type:
+      '`float `double int `timestamp `timespan `datetime `time `boolean `symbol `char `byte `short `long `real `month `date `minute `second `guid'
   };
+
   return {
-  aliases:['k', 'kdb'],
-  keywords: Q_KEYWORDS,
-  lexemes: /(`?)[A-Za-z0-9_]+\b/,
-  contains: [
-  hljs.C_LINE_COMMENT_MODE,
-    hljs.QUOTE_STRING_MODE,
-    hljs.C_NUMBER_MODE
-     ]
+    name: 'Q',
+    aliases: [
+      'k',
+      'kdb'
+    ],
+    keywords: KEYWORDS,
+    contains: [
+      hljs.C_LINE_COMMENT_MODE,
+      hljs.QUOTE_STRING_MODE,
+      hljs.C_NUMBER_MODE
+    ]
   };
-};
+}
+
+
+
 
 /***/ })
 

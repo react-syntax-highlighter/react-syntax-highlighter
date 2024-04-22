@@ -1,2 +1,2 @@
-import jsstacktrace from "refractor/lang/jsstacktrace.js";;
+import jsstacktrace from "refractor/lang/jsstacktrace.js";
 export default jsstacktrace;

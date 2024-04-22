@@ -1,26 +1,37 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_highlight_subunit"],{
+"use strict";
+(self["webpackChunkreact_syntax_highlighter"] = self["webpackChunkreact_syntax_highlighter"] || []).push([["react-syntax-highlighter_languages_highlight_subunit"],{
 
-/***/ "./node_modules/highlight.js/lib/languages/subunit.js":
-/*!************************************************************!*\
-  !*** ./node_modules/highlight.js/lib/languages/subunit.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/highlight.js/es/languages/subunit.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/highlight.js/es/languages/subunit.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-module.exports = function(hljs) {
-  var DETAILS = {
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ subunit)
+/* harmony export */ });
+/*
+Language: SubUnit
+Author: Sergey Bronnikov <sergeyb@bronevichok.ru>
+Website: https://pypi.org/project/python-subunit/
+*/
+
+function subunit(hljs) {
+  const DETAILS = {
     className: 'string',
-    begin: '\\[\n(multipart)?', end: '\\]\n'
+    begin: '\\[\n(multipart)?',
+    end: '\\]\n'
   };
-  var TIME = {
+  const TIME = {
     className: 'string',
     begin: '\\d{4}-\\d{2}-\\d{2}(\\s+)\\d{2}:\\d{2}:\\d{2}\.\\d+Z'
   };
-  var PROGRESSVALUE = {
+  const PROGRESSVALUE = {
     className: 'string',
     begin: '(\\+|-)\\d+'
   };
-  var KEYWORDS = {
+  const KEYWORDS = {
     className: 'keyword',
     relevance: 10,
     variants: [
@@ -28,9 +39,10 @@ module.exports = function(hljs) {
       { begin: '^progress(:?)(\\s+)?(pop|push)?' },
       { begin: '^tags:' },
       { begin: '^time:' }
-    ],
+    ]
   };
   return {
+    name: 'SubUnit',
     case_insensitive: true,
     contains: [
       DETAILS,
@@ -39,7 +51,10 @@ module.exports = function(hljs) {
       KEYWORDS
     ]
   };
-};
+}
+
+
+
 
 /***/ })
 

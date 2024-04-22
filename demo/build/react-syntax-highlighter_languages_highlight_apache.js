@@ -1,48 +1,106 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_highlight_apache"],{
+"use strict";
+(self["webpackChunkreact_syntax_highlighter"] = self["webpackChunkreact_syntax_highlighter"] || []).push([["react-syntax-highlighter_languages_highlight_apache"],{
 
-/***/ "./node_modules/highlight.js/lib/languages/apache.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/highlight.js/lib/languages/apache.js ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/highlight.js/es/languages/apache.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/highlight.js/es/languages/apache.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-module.exports = function(hljs) {
-  var NUMBER = {className: 'number', begin: '[\\$%]\\d+'};
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ apache)
+/* harmony export */ });
+/*
+Language: Apache config
+Author: Ruslan Keba <rukeba@gmail.com>
+Contributors: Ivan Sagalaev <maniac@softwaremaniacs.org>
+Website: https://httpd.apache.org
+Description: language definition for Apache configuration files (httpd.conf & .htaccess)
+Category: config, web
+Audit: 2020
+*/
+
+/** @type LanguageFn */
+function apache(hljs) {
+  const NUMBER_REF = {
+    className: 'number',
+    begin: /[$%]\d+/
+  };
+  const NUMBER = {
+    className: 'number',
+    begin: /\b\d+/
+  };
+  const IP_ADDRESS = {
+    className: "number",
+    begin: /\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}(:\d{1,5})?/
+  };
+  const PORT_NUMBER = {
+    className: "number",
+    begin: /:\d{1,5}/
+  };
   return {
-    aliases: ['apacheconf'],
+    name: 'Apache config',
+    aliases: [ 'apacheconf' ],
     case_insensitive: true,
     contains: [
       hljs.HASH_COMMENT_MODE,
-      {className: 'section', begin: '</?', end: '>'},
+      {
+        className: 'section',
+        begin: /<\/?/,
+        end: />/,
+        contains: [
+          IP_ADDRESS,
+          PORT_NUMBER,
+          // low relevance prevents us from claming XML/HTML where this rule would
+          // match strings inside of XML tags
+          hljs.inherit(hljs.QUOTE_STRING_MODE, { relevance: 0 })
+        ]
+      },
       {
         className: 'attribute',
         begin: /\w+/,
         relevance: 0,
         // keywords aren’t needed for highlighting per se, they only boost relevance
         // for a very generally defined mode (starts with a word, ends with line-end
-        keywords: {
-          nomarkup:
-            'order deny allow setenv rewriterule rewriteengine rewritecond documentroot ' +
-            'sethandler errordocument loadmodule options header listen serverroot ' +
-            'servername'
-        },
+        keywords: { _: [
+          "order",
+          "deny",
+          "allow",
+          "setenv",
+          "rewriterule",
+          "rewriteengine",
+          "rewritecond",
+          "documentroot",
+          "sethandler",
+          "errordocument",
+          "loadmodule",
+          "options",
+          "header",
+          "listen",
+          "serverroot",
+          "servername"
+        ] },
         starts: {
           end: /$/,
           relevance: 0,
-          keywords: {
-            literal: 'on off all'
-          },
+          keywords: { literal: 'on off all deny allow' },
           contains: [
             {
               className: 'meta',
-              begin: '\\s\\[', end: '\\]$'
+              begin: /\s\[/,
+              end: /\]$/
             },
             {
               className: 'variable',
-              begin: '[\\$%]\\{', end: '\\}',
-              contains: ['self', NUMBER]
+              begin: /[\$%]\{/,
+              end: /\}/,
+              contains: [
+                'self',
+                NUMBER_REF
+              ]
             },
+            IP_ADDRESS,
             NUMBER,
             hljs.QUOTE_STRING_MODE
           ]
@@ -51,7 +109,10 @@ module.exports = function(hljs) {
     ],
     illegal: /\S/
   };
-};
+}
+
+
+
 
 /***/ })
 

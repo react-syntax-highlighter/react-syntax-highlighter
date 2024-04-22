@@ -1,2 +1,2 @@
-import haml from "refractor/lang/haml.js";;
+import haml from "refractor/lang/haml.js";
 export default haml;

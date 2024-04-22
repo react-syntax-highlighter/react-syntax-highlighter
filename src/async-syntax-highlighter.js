@@ -1,13 +1,13 @@
 import React from 'react';
-import highlight from './highlight';
+import highlight from './highlight.js';
 
-export default options => {
+export default (options) => {
   const {
     loader,
     isLanguageRegistered,
     registerLanguage,
     languageLoaders,
-    noAsyncLoadingLanguages
+    noAsyncLoadingLanguages,
   } = options;
 
   class ReactAsyncHighlighter extends React.PureComponent {
@@ -39,14 +39,14 @@ export default options => {
       );
     }
 
-    static isRegistered = language => {
+    static isRegistered = (language) => {
       if (noAsyncLoadingLanguages) {
         return true;
       }
 
       if (!registerLanguage) {
         throw new Error(
-          "Current syntax highlighter doesn't support registration of languages"
+          "Current syntax highlighter doesn't support registration of languages",
         );
       }
 
@@ -61,7 +61,7 @@ export default options => {
     static registerLanguage = (name, language) => {
       if (!registerLanguage) {
         throw new Error(
-          "Current syntax highlighter doesn't support registration of languages"
+          "Current syntax highlighter doesn't support registration of languages",
         );
       }
 
@@ -69,7 +69,7 @@ export default options => {
         return registerLanguage(
           ReactAsyncHighlighter.astGenerator,
           name,
-          language
+          language,
         );
       } else {
         ReactAsyncHighlighter.languages.set(name, language);
@@ -78,15 +78,15 @@ export default options => {
 
     static loadAstGenerator() {
       ReactAsyncHighlighter.astGeneratorPromise = loader().then(
-        astGenerator => {
+        (astGenerator) => {
           ReactAsyncHighlighter.astGenerator = astGenerator;
 
           if (registerLanguage) {
             ReactAsyncHighlighter.languages.forEach((language, name) =>
-              registerLanguage(astGenerator, name, language)
+              registerLanguage(astGenerator, name, language),
             );
           }
-        }
+        },
       );
 
       return ReactAsyncHighlighter.astGeneratorPromise;

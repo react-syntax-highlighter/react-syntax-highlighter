@@ -1,2 +1,2 @@
-import asciidoc from "refractor/lang/asciidoc.js";;
+import asciidoc from "refractor/lang/asciidoc.js";
 export default asciidoc;

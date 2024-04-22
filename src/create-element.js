@@ -32,7 +32,7 @@ function powerSetPermutations(arr) {
       `${arr[1]}.${arr[0]}.${arr[2]}`,
       `${arr[1]}.${arr[2]}.${arr[0]}`,
       `${arr[2]}.${arr[0]}.${arr[1]}`,
-      `${arr[2]}.${arr[1]}.${arr[0]}`
+      `${arr[2]}.${arr[1]}.${arr[0]}`,
     ];
   }
   if (arrLength >= 4) {
@@ -102,7 +102,7 @@ function powerSetPermutations(arr) {
       `${arr[3]}.${arr[1]}.${arr[0]}.${arr[2]}`,
       `${arr[3]}.${arr[1]}.${arr[2]}.${arr[0]}`,
       `${arr[3]}.${arr[2]}.${arr[0]}.${arr[1]}`,
-      `${arr[3]}.${arr[2]}.${arr[1]}.${arr[0]}`
+      `${arr[3]}.${arr[2]}.${arr[1]}.${arr[0]}`,
     ];
   }
 }
@@ -119,7 +119,7 @@ function getClassNameCombinations(classNames) {
 
 export function createStyleObject(classNames, elementStyle = {}, stylesheet) {
   const nonTokenClassNames = classNames.filter(
-    className => className !== 'token'
+    (className) => className !== 'token',
   );
   const classNamesCombinations = getClassNameCombinations(nonTokenClassNames);
   return classNamesCombinations.reduce((styleObject, className) => {
@@ -133,15 +133,15 @@ export function createClassNameString(classNames) {
 
 export function createChildren(stylesheet, useInlineStyles) {
   let childrenCount = 0;
-  return children => {
+  return (children) => {
     childrenCount += 1;
     return children.map((child, i) =>
       createElement({
         node: child,
         stylesheet,
         useInlineStyles,
-        key: `code-segment-${childrenCount}-${i}`
-      })
+        key: `code-segment-${childrenCount}-${i}`,
+      }),
     );
   };
 }
@@ -151,7 +151,7 @@ export default function createElement({
   stylesheet,
   style = {},
   useInlineStyles,
-  key
+  key,
 }) {
   const { properties, type, tagName: TagName, value } = node;
   if (type === 'text') {
@@ -164,17 +164,17 @@ export default function createElement({
     if (!useInlineStyles) {
       props = {
         ...properties,
-        className: createClassNameString(properties.className)
+        className: createClassNameString(properties.className),
       };
     } else {
       const allStylesheetSelectors = Object.keys(stylesheet).reduce(
         (classes, selector) => {
-          selector.split('.').forEach(className => {
+          selector.split('.').forEach((className) => {
             if (!classes.includes(className)) classes.push(className);
           });
           return classes;
         },
-        []
+        [],
       );
 
       // For compatibility with older versions of react-syntax-highlighter
@@ -187,8 +187,8 @@ export default function createElement({
         properties.className &&
         startingClassName.concat(
           properties.className.filter(
-            className => !allStylesheetSelectors.includes(className)
-          )
+            (className) => !allStylesheetSelectors.includes(className),
+          ),
         );
 
       props = {
@@ -197,8 +197,8 @@ export default function createElement({
         style: createStyleObject(
           properties.className,
           Object.assign({}, properties.style, style),
-          stylesheet
-        )
+          stylesheet,
+        ),
       };
     }
 

@@ -19,7 +19,7 @@ test('SyntaxHighlighter component renders correctly without inline styles when u
     .create(
       <SyntaxHighlighter language="javascript" useInlineStyles={false}>
         {code}
-      </SyntaxHighlighter>
+      </SyntaxHighlighter>,
     )
     .toJSON();
   expect(tree).toMatchSnapshot();

@@ -1,2 +1,2 @@
-import sqf from "refractor/lang/sqf.js";;
+import sqf from "refractor/lang/sqf.js";
 export default sqf;

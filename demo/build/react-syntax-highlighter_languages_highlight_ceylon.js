@@ -1,33 +1,106 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_highlight_ceylon"],{
+"use strict";
+(self["webpackChunkreact_syntax_highlighter"] = self["webpackChunkreact_syntax_highlighter"] || []).push([["react-syntax-highlighter_languages_highlight_ceylon"],{
 
-/***/ "./node_modules/highlight.js/lib/languages/ceylon.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/highlight.js/lib/languages/ceylon.js ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/highlight.js/es/languages/ceylon.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/highlight.js/es/languages/ceylon.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-module.exports = function(hljs) {
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ ceylon)
+/* harmony export */ });
+/*
+Language: Ceylon
+Author: Lucas Werkmeister <mail@lucaswerkmeister.de>
+Website: https://ceylon-lang.org
+*/
+
+/** @type LanguageFn */
+function ceylon(hljs) {
   // 2.3. Identifiers and keywords
-  var KEYWORDS =
-    'assembly module package import alias class interface object given value ' +
-    'assign void function new of extends satisfies abstracts in out return ' +
-    'break continue throw assert dynamic if else switch case for while try ' +
-    'catch finally then let this outer super is exists nonempty';
+  const KEYWORDS = [
+    "assembly",
+    "module",
+    "package",
+    "import",
+    "alias",
+    "class",
+    "interface",
+    "object",
+    "given",
+    "value",
+    "assign",
+    "void",
+    "function",
+    "new",
+    "of",
+    "extends",
+    "satisfies",
+    "abstracts",
+    "in",
+    "out",
+    "return",
+    "break",
+    "continue",
+    "throw",
+    "assert",
+    "dynamic",
+    "if",
+    "else",
+    "switch",
+    "case",
+    "for",
+    "while",
+    "try",
+    "catch",
+    "finally",
+    "then",
+    "let",
+    "this",
+    "outer",
+    "super",
+    "is",
+    "exists",
+    "nonempty"
+  ];
   // 7.4.1 Declaration Modifiers
-  var DECLARATION_MODIFIERS =
-    'shared abstract formal default actual variable late native deprecated' +
-    'final sealed annotation suppressWarnings small';
+  const DECLARATION_MODIFIERS = [
+    "shared",
+    "abstract",
+    "formal",
+    "default",
+    "actual",
+    "variable",
+    "late",
+    "native",
+    "deprecated",
+    "final",
+    "sealed",
+    "annotation",
+    "suppressWarnings",
+    "small"
+  ];
   // 7.4.2 Documentation
-  var DOCUMENTATION =
-    'doc by license see throws tagged';
-  var SUBST = {
-    className: 'subst', excludeBegin: true, excludeEnd: true,
-    begin: /``/, end: /``/,
+  const DOCUMENTATION = [
+    "doc",
+    "by",
+    "license",
+    "see",
+    "throws",
+    "tagged"
+  ];
+  const SUBST = {
+    className: 'subst',
+    excludeBegin: true,
+    excludeEnd: true,
+    begin: /``/,
+    end: /``/,
     keywords: KEYWORDS,
     relevance: 10
   };
-  var EXPRESSIONS = [
+  const EXPRESSIONS = [
     {
       // verbatim string
       className: 'string',
@@ -38,8 +111,9 @@ module.exports = function(hljs) {
     {
       // string literal or template
       className: 'string',
-      begin: '"', end: '"',
-      contains: [SUBST]
+      begin: '"',
+      end: '"',
+      contains: [ SUBST ]
     },
     {
       // character literal
@@ -57,22 +131,26 @@ module.exports = function(hljs) {
   SUBST.contains = EXPRESSIONS;
 
   return {
+    name: 'Ceylon',
     keywords: {
-      keyword: KEYWORDS + ' ' + DECLARATION_MODIFIERS,
+      keyword: KEYWORDS.concat(DECLARATION_MODIFIERS),
       meta: DOCUMENTATION
     },
     illegal: '\\$[^01]|#[^0-9a-fA-F]',
     contains: [
       hljs.C_LINE_COMMENT_MODE,
-      hljs.COMMENT('/\\*', '\\*/', {contains: ['self']}),
+      hljs.COMMENT('/\\*', '\\*/', { contains: [ 'self' ] }),
       {
         // compiler annotation
         className: 'meta',
-        begin: '@[a-z]\\w*(?:\\:\"[^\"]*\")?'
+        begin: '@[a-z]\\w*(?::"[^"]*")?'
       }
     ].concat(EXPRESSIONS)
   };
-};
+}
+
+
+
 
 /***/ })
 

@@ -1,25 +1,43 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_highlight_brainfuck"],{
+"use strict";
+(self["webpackChunkreact_syntax_highlighter"] = self["webpackChunkreact_syntax_highlighter"] || []).push([["react-syntax-highlighter_languages_highlight_brainfuck"],{
 
-/***/ "./node_modules/highlight.js/lib/languages/brainfuck.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/highlight.js/lib/languages/brainfuck.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/highlight.js/es/languages/brainfuck.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/highlight.js/es/languages/brainfuck.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-module.exports = function(hljs){
-  var LITERAL = {
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ brainfuck)
+/* harmony export */ });
+/*
+Language: Brainfuck
+Author: Evgeny Stepanischev <imbolk@gmail.com>
+Website: https://esolangs.org/wiki/Brainfuck
+*/
+
+/** @type LanguageFn */
+function brainfuck(hljs) {
+  const LITERAL = {
     className: 'literal',
-    begin: '[\\+\\-]',
+    begin: /[+-]+/,
     relevance: 0
   };
   return {
-    aliases: ['bf'],
+    name: 'Brainfuck',
+    aliases: [ 'bf' ],
     contains: [
       hljs.COMMENT(
-        '[^\\[\\]\\.,\\+\\-<> \r\n]',
-        '[\\[\\]\\.,\\+\\-<> \r\n]',
+        /[^\[\]\.,\+\-<> \r\n]/,
+        /[\[\]\.,\+\-<> \r\n]/,
         {
+          contains: [
+            {
+              match: /[ ]+[^\[\]\.,\+\-<> \r\n]/,
+              relevance: 0
+            }
+          ],
           returnEnd: true,
           relevance: 0
         }
@@ -36,13 +54,18 @@ module.exports = function(hljs){
       },
       {
         // this mode works as the only relevance counter
-        begin: /(?:\+\+|\-\-)/,
-        contains: [LITERAL]
+        // it looks ahead to find the start of a run of literals
+        // so only the runs are counted as relevant
+        begin: /(?=\+\+|--)/,
+        contains: [ LITERAL ]
       },
       LITERAL
     ]
   };
-};
+}
+
+
+
 
 /***/ })
 

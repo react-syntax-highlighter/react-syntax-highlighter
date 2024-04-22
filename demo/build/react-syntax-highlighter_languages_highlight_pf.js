@@ -1,51 +1,62 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_highlight_pf"],{
+"use strict";
+(self["webpackChunkreact_syntax_highlighter"] = self["webpackChunkreact_syntax_highlighter"] || []).push([["react-syntax-highlighter_languages_highlight_pf"],{
 
-/***/ "./node_modules/highlight.js/lib/languages/pf.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/highlight.js/lib/languages/pf.js ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/highlight.js/es/languages/pf.js":
+/*!******************************************************!*\
+  !*** ./node_modules/highlight.js/es/languages/pf.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-module.exports = function(hljs) {
-  var MACRO = {
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ pf)
+/* harmony export */ });
+/*
+Language: Packet Filter config
+Description: pf.conf — packet filter configuration file (OpenBSD)
+Author: Peter Piwowarski <oldlaptop654@aol.com>
+Website: http://man.openbsd.org/pf.conf
+Category: config
+*/
+
+function pf(hljs) {
+  const MACRO = {
     className: 'variable',
-    begin: /\$[\w\d#@][\w\d_]*/
+    begin: /\$[\w\d#@][\w\d_]*/,
+    relevance: 0
   };
-  var TABLE = {
+  const TABLE = {
     className: 'variable',
-    begin: /<(?!\/)/, end: />/
-  };
-  var QUOTE_STRING = {
-    className: 'string',
-    begin: /"/, end: /"/
+    begin: /<(?!\/)/,
+    end: />/
   };
 
   return {
-    aliases: ['pf.conf'],
-    lexemes: /[a-z0-9_<>-]+/,
+    name: 'Packet Filter config',
+    aliases: [ 'pf.conf' ],
     keywords: {
+      $pattern: /[a-z0-9_<>-]+/,
       built_in: /* block match pass are "actions" in pf.conf(5), the rest are
                  * lexically similar top-level commands.
                  */
         'block match pass load anchor|5 antispoof|10 set table',
       keyword:
-        'in out log quick on rdomain inet inet6 proto from port os to route' +
-        'allow-opts divert-packet divert-reply divert-to flags group icmp-type' +
-        'icmp6-type label once probability recieved-on rtable prio queue' +
-        'tos tag tagged user keep fragment for os drop' +
-        'af-to|10 binat-to|10 nat-to|10 rdr-to|10 bitmask least-stats random round-robin' +
-        'source-hash static-port' +
-        'dup-to reply-to route-to' +
-        'parent bandwidth default min max qlimit' +
-        'block-policy debug fingerprints hostid limit loginterface optimization' +
-        'reassemble ruleset-optimization basic none profile skip state-defaults' +
-        'state-policy timeout' +
-        'const counters persist' +
-        'no modulate synproxy state|5 floating if-bound no-sync pflow|10 sloppy' +
-        'source-track global rule max-src-nodes max-src-states max-src-conn' +
-        'max-src-conn-rate overload flush' +
-        'scrub|5 max-mss min-ttl no-df|10 random-id',
+        'in out log quick on rdomain inet inet6 proto from port os to route '
+        + 'allow-opts divert-packet divert-reply divert-to flags group icmp-type '
+        + 'icmp6-type label once probability recieved-on rtable prio queue '
+        + 'tos tag tagged user keep fragment for os drop '
+        + 'af-to|10 binat-to|10 nat-to|10 rdr-to|10 bitmask least-stats random round-robin '
+        + 'source-hash static-port '
+        + 'dup-to reply-to route-to '
+        + 'parent bandwidth default min max qlimit '
+        + 'block-policy debug fingerprints hostid limit loginterface optimization '
+        + 'reassemble ruleset-optimization basic none profile skip state-defaults '
+        + 'state-policy timeout '
+        + 'const counters persist '
+        + 'no modulate synproxy state|5 floating if-bound no-sync pflow|10 sloppy '
+        + 'source-track global rule max-src-nodes max-src-states max-src-conn '
+        + 'max-src-conn-rate overload flush '
+        + 'scrub|5 max-mss min-ttl no-df|10 random-id',
       literal:
         'all any no-route self urpf-failed egress|5 unknown'
     },
@@ -57,7 +68,10 @@ module.exports = function(hljs) {
       TABLE
     ]
   };
-};
+}
+
+
+
 
 /***/ })
 

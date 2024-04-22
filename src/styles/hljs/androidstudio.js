@@ -1,10 +1,15 @@
 export default {
-    "hljs": {
-        "color": "#a9b7c6",
-        "background": "#282b2e",
+    "re code.hljs": {
         "display": "block",
         "overflowX": "auto",
-        "padding": "0.5em"
+        "padding": "1em"
+    },
+    "ode.hljs": {
+        "padding": "3px 5px"
+    },
+    "hljs": {
+        "color": "#a9b7c6",
+        "background": "#282b2e"
     },
     "hljs-number": {
         "color": "#6897BB"

@@ -1,34 +1,48 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_highlight_ldif"],{
+"use strict";
+(self["webpackChunkreact_syntax_highlighter"] = self["webpackChunkreact_syntax_highlighter"] || []).push([["react-syntax-highlighter_languages_highlight_ldif"],{
 
-/***/ "./node_modules/highlight.js/lib/languages/ldif.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/highlight.js/lib/languages/ldif.js ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/highlight.js/es/languages/ldif.js":
+/*!********************************************************!*\
+  !*** ./node_modules/highlight.js/es/languages/ldif.js ***!
+  \********************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-module.exports = function(hljs) {
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ ldif)
+/* harmony export */ });
+/*
+Language: LDIF
+Contributors: Jacob Childress <jacobc@gmail.com>
+Category: enterprise, config
+Website: https://en.wikipedia.org/wiki/LDAP_Data_Interchange_Format
+*/
+
+/** @type LanguageFn */
+function ldif(hljs) {
   return {
+    name: 'LDIF',
     contains: [
       {
         className: 'attribute',
-        begin: '^dn', end: ': ', excludeEnd: true,
-        starts: {end: '$', relevance: 0},
+        match: '^dn(?=:)',
         relevance: 10
       },
       {
         className: 'attribute',
-        begin: '^\\w', end: ': ', excludeEnd: true,
-        starts: {end: '$', relevance: 0}
+        match: '^\\w+(?=:)'
       },
       {
         className: 'literal',
-        begin: '^-', end: '$'
+        match: '^-'
       },
       hljs.HASH_COMMENT_MODE
     ]
   };
-};
+}
+
+
+
 
 /***/ })
 

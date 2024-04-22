@@ -1,25 +1,44 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_highlight_smalltalk"],{
+"use strict";
+(self["webpackChunkreact_syntax_highlighter"] = self["webpackChunkreact_syntax_highlighter"] || []).push([["react-syntax-highlighter_languages_highlight_smalltalk"],{
 
-/***/ "./node_modules/highlight.js/lib/languages/smalltalk.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/highlight.js/lib/languages/smalltalk.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/highlight.js/es/languages/smalltalk.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/highlight.js/es/languages/smalltalk.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-module.exports = function(hljs) {
-  var VAR_IDENT_RE = '[a-z][a-zA-Z0-9_]*';
-  var CHAR = {
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ smalltalk)
+/* harmony export */ });
+/*
+Language: Smalltalk
+Description: Smalltalk is an object-oriented, dynamically typed reflective programming language.
+Author: Vladimir Gubarkov <xonixx@gmail.com>
+Website: https://en.wikipedia.org/wiki/Smalltalk
+*/
+
+function smalltalk(hljs) {
+  const VAR_IDENT_RE = '[a-z][a-zA-Z0-9_]*';
+  const CHAR = {
     className: 'string',
     begin: '\\$.{1}'
   };
-  var SYMBOL = {
+  const SYMBOL = {
     className: 'symbol',
     begin: '#' + hljs.UNDERSCORE_IDENT_RE
   };
   return {
-    aliases: ['st'],
-    keywords: 'self super nil true false thisContext', // only 6
+    name: 'Smalltalk',
+    aliases: [ 'st' ],
+    keywords: [
+      "self",
+      "super",
+      "nil",
+      "true",
+      "false",
+      "thisContext"
+    ],
     contains: [
       hljs.COMMENT('"', '"'),
       hljs.APOS_STRING_MODE,
@@ -40,12 +59,14 @@ module.exports = function(hljs) {
         // explosion under V8. It effectively means `| var1 var2 ... |` with
         // whitespace adjacent to `|` being optional.
         begin: '\\|[ ]*' + VAR_IDENT_RE + '([ ]+' + VAR_IDENT_RE + ')*[ ]*\\|',
-        returnBegin: true, end: /\|/,
+        returnBegin: true,
+        end: /\|/,
         illegal: /\S/,
-        contains: [{begin: '(\\|[ ]*)?' + VAR_IDENT_RE}]
+        contains: [ { begin: '(\\|[ ]*)?' + VAR_IDENT_RE } ]
       },
       {
-        begin: '\\#\\(', end: '\\)',
+        begin: '#\\(',
+        end: '\\)',
         contains: [
           hljs.APOS_STRING_MODE,
           CHAR,
@@ -55,7 +76,10 @@ module.exports = function(hljs) {
       }
     ]
   };
-};
+}
+
+
+
 
 /***/ })
 

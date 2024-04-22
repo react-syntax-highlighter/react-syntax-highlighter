@@ -1,23 +1,95 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_highlight_capnproto"],{
+"use strict";
+(self["webpackChunkreact_syntax_highlighter"] = self["webpackChunkreact_syntax_highlighter"] || []).push([["react-syntax-highlighter_languages_highlight_capnproto"],{
 
-/***/ "./node_modules/highlight.js/lib/languages/capnproto.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/highlight.js/lib/languages/capnproto.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/highlight.js/es/languages/capnproto.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/highlight.js/es/languages/capnproto.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-module.exports = function(hljs) {
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ capnproto)
+/* harmony export */ });
+/*
+Language: Cap’n Proto
+Author: Oleg Efimov <efimovov@gmail.com>
+Description: Cap’n Proto message definition format
+Website: https://capnproto.org/capnp-tool.html
+Category: protocols
+*/
+
+/** @type LanguageFn */
+function capnproto(hljs) {
+  const KEYWORDS = [
+    "struct",
+    "enum",
+    "interface",
+    "union",
+    "group",
+    "import",
+    "using",
+    "const",
+    "annotation",
+    "extends",
+    "in",
+    "of",
+    "on",
+    "as",
+    "with",
+    "from",
+    "fixed"
+  ];
+  const TYPES = [
+    "Void",
+    "Bool",
+    "Int8",
+    "Int16",
+    "Int32",
+    "Int64",
+    "UInt8",
+    "UInt16",
+    "UInt32",
+    "UInt64",
+    "Float32",
+    "Float64",
+    "Text",
+    "Data",
+    "AnyPointer",
+    "AnyStruct",
+    "Capability",
+    "List"
+  ];
+  const LITERALS = [
+    "true",
+    "false"
+  ];
+  const CLASS_DEFINITION = {
+    variants: [
+      { match: [
+        /(struct|enum|interface)/,
+        /\s+/,
+        hljs.IDENT_RE
+      ] },
+      { match: [
+        /extends/,
+        /\s*\(/,
+        hljs.IDENT_RE,
+        /\s*\)/
+      ] }
+    ],
+    scope: {
+      1: "keyword",
+      3: "title.class"
+    }
+  };
   return {
-    aliases: ['capnp'],
+    name: 'Cap’n Proto',
+    aliases: [ 'capnp' ],
     keywords: {
-      keyword:
-        'struct enum interface union group import using const annotation extends in of on as with from fixed',
-      built_in:
-        'Void Bool Int8 Int16 Int32 Int64 UInt8 UInt16 UInt32 UInt64 Float32 Float64 ' +
-        'Text Data AnyPointer AnyStruct Capability List',
-      literal:
-        'true false'
+      keyword: KEYWORDS,
+      type: TYPES,
+      literal: LITERALS
     },
     contains: [
       hljs.QUOTE_STRING_MODE,
@@ -32,29 +104,13 @@ module.exports = function(hljs) {
         className: 'symbol',
         begin: /@\d+\b/
       },
-      {
-        className: 'class',
-        beginKeywords: 'struct enum', end: /\{/,
-        illegal: /\n/,
-        contains: [
-          hljs.inherit(hljs.TITLE_MODE, {
-            starts: {endsWithParent: true, excludeEnd: true} // hack: eating everything after the first title
-          })
-        ]
-      },
-      {
-        className: 'class',
-        beginKeywords: 'interface', end: /\{/,
-        illegal: /\n/,
-        contains: [
-          hljs.inherit(hljs.TITLE_MODE, {
-            starts: {endsWithParent: true, excludeEnd: true} // hack: eating everything after the first title
-          })
-        ]
-      }
+      CLASS_DEFINITION
     ]
   };
-};
+}
+
+
+
 
 /***/ })
 

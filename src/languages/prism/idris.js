@@ -1,2 +1,2 @@
-import idris from "refractor/lang/idris.js";;
+import idris from "refractor/lang/idris.js";
 export default idris;

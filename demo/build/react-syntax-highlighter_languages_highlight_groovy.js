@@ -1,105 +1,206 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_highlight_groovy"],{
+"use strict";
+(self["webpackChunkreact_syntax_highlighter"] = self["webpackChunkreact_syntax_highlighter"] || []).push([["react-syntax-highlighter_languages_highlight_groovy"],{
 
-/***/ "./node_modules/highlight.js/lib/languages/groovy.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/highlight.js/lib/languages/groovy.js ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/highlight.js/es/languages/groovy.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/highlight.js/es/languages/groovy.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-module.exports = function(hljs) {
-    return {
-        keywords: {
-            literal : 'true false null',
-            keyword:
-            'byte short char int long boolean float double void ' +
-            // groovy specific keywords
-            'def as in assert trait ' +
-            // common keywords with Java
-            'super this abstract static volatile transient public private protected synchronized final ' +
-            'class interface enum if else for while switch case break default continue ' +
-            'throw throws try catch finally implements extends new import package return instanceof'
-        },
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ groovy)
+/* harmony export */ });
+/*
+ Language: Groovy
+ Author: Guillaume Laforge <glaforge@gmail.com>
+ Description: Groovy programming language implementation inspired from Vsevolod's Java mode
+ Website: https://groovy-lang.org
+ */
 
+function variants(variants, obj = {}) {
+  obj.variants = variants;
+  return obj;
+}
+
+function groovy(hljs) {
+  const regex = hljs.regex;
+  const IDENT_RE = '[A-Za-z0-9_$]+';
+  const COMMENT = variants([
+    hljs.C_LINE_COMMENT_MODE,
+    hljs.C_BLOCK_COMMENT_MODE,
+    hljs.COMMENT(
+      '/\\*\\*',
+      '\\*/',
+      {
+        relevance: 0,
         contains: [
-            hljs.COMMENT(
-                '/\\*\\*',
-                '\\*/',
-                {
-                    relevance : 0,
-                    contains : [
-                      {
-                          // eat up @'s in emails to prevent them to be recognized as doctags
-                          begin: /\w+@/, relevance: 0
-                      },
-                      {
-                          className : 'doctag',
-                          begin : '@[A-Za-z]+'
-                      }
-                    ]
-                }
-            ),
-            hljs.C_LINE_COMMENT_MODE,
-            hljs.C_BLOCK_COMMENT_MODE,
-            {
-                className: 'string',
-                begin: '"""', end: '"""'
-            },
-            {
-                className: 'string',
-                begin: "'''", end: "'''"
-            },
-            {
-                className: 'string',
-                begin: "\\$/", end: "/\\$",
-                relevance: 10
-            },
-            hljs.APOS_STRING_MODE,
-            {
-                className: 'regexp',
-                begin: /~?\/[^\/\n]+\//,
-                contains: [
-                    hljs.BACKSLASH_ESCAPE
-                ]
-            },
-            hljs.QUOTE_STRING_MODE,
-            {
-                className: 'meta',
-                begin: "^#!/usr/bin/env", end: '$',
-                illegal: '\n'
-            },
-            hljs.BINARY_NUMBER_MODE,
-            {
-                className: 'class',
-                beginKeywords: 'class interface trait enum', end: '{',
-                illegal: ':',
-                contains: [
-                    {beginKeywords: 'extends implements'},
-                    hljs.UNDERSCORE_TITLE_MODE
-                ]
-            },
-            hljs.C_NUMBER_MODE,
-            {
-                className: 'meta', begin: '@[A-Za-z]+'
-            },
-            {
-                // highlight map keys and named parameters as strings
-                className: 'string', begin: /[^\?]{0}[A-Za-z0-9_$]+ *:/
-            },
-            {
-                // catch middle element of the ternary operator
-                // to avoid highlight it as a label, named parameter, or map key
-                begin: /\?/, end: /\:/
-            },
-            {
-                // highlight labeled statements
-                className: 'symbol', begin: '^\\s*[A-Za-z0-9_$]+:',
-                relevance: 0
-            }
-        ],
-        illegal: /#|<\//
+          {
+            // eat up @'s in emails to prevent them to be recognized as doctags
+            begin: /\w+@/,
+            relevance: 0
+          },
+          {
+            className: 'doctag',
+            begin: '@[A-Za-z]+'
+          }
+        ]
+      }
+    )
+  ]);
+  const REGEXP = {
+    className: 'regexp',
+    begin: /~?\/[^\/\n]+\//,
+    contains: [ hljs.BACKSLASH_ESCAPE ]
+  };
+  const NUMBER = variants([
+    hljs.BINARY_NUMBER_MODE,
+    hljs.C_NUMBER_MODE
+  ]);
+  const STRING = variants([
+    {
+      begin: /"""/,
+      end: /"""/
+    },
+    {
+      begin: /'''/,
+      end: /'''/
+    },
+    {
+      begin: "\\$/",
+      end: "/\\$",
+      relevance: 10
+    },
+    hljs.APOS_STRING_MODE,
+    hljs.QUOTE_STRING_MODE
+  ],
+  { className: "string" }
+  );
+
+  const CLASS_DEFINITION = {
+    match: [
+      /(class|interface|trait|enum|record|extends|implements)/,
+      /\s+/,
+      hljs.UNDERSCORE_IDENT_RE
+    ],
+    scope: {
+      1: "keyword",
+      3: "title.class",
     }
-};
+  };
+  const TYPES = [
+    "byte",
+    "short",
+    "char",
+    "int",
+    "long",
+    "boolean",
+    "float",
+    "double",
+    "void"
+  ];
+  const KEYWORDS = [
+    // groovy specific keywords
+    "def",
+    "as",
+    "in",
+    "assert",
+    "trait",
+    // common keywords with Java
+    "abstract",
+    "static",
+    "volatile",
+    "transient",
+    "public",
+    "private",
+    "protected",
+    "synchronized",
+    "final",
+    "class",
+    "interface",
+    "enum",
+    "if",
+    "else",
+    "for",
+    "while",
+    "switch",
+    "case",
+    "break",
+    "default",
+    "continue",
+    "throw",
+    "throws",
+    "try",
+    "catch",
+    "finally",
+    "implements",
+    "extends",
+    "new",
+    "import",
+    "package",
+    "return",
+    "instanceof",
+    "var"
+  ];
+
+  return {
+    name: 'Groovy',
+    keywords: {
+      "variable.language": 'this super',
+      literal: 'true false null',
+      type: TYPES,
+      keyword: KEYWORDS
+    },
+    contains: [
+      hljs.SHEBANG({
+        binary: "groovy",
+        relevance: 10
+      }),
+      COMMENT,
+      STRING,
+      REGEXP,
+      NUMBER,
+      CLASS_DEFINITION,
+      {
+        className: 'meta',
+        begin: '@[A-Za-z]+',
+        relevance: 0
+      },
+      {
+        // highlight map keys and named parameters as attrs
+        className: 'attr',
+        begin: IDENT_RE + '[ \t]*:',
+        relevance: 0
+      },
+      {
+        // catch middle element of the ternary operator
+        // to avoid highlight it as a label, named parameter, or map key
+        begin: /\?/,
+        end: /:/,
+        relevance: 0,
+        contains: [
+          COMMENT,
+          STRING,
+          REGEXP,
+          NUMBER,
+          'self'
+        ]
+      },
+      {
+        // highlight labeled statements
+        className: 'symbol',
+        begin: '^[ \t]*' + regex.lookahead(IDENT_RE + ':'),
+        excludeBegin: true,
+        end: IDENT_RE + ':',
+        relevance: 0
+      }
+    ],
+    illegal: /#|<\//
+  };
+}
+
+
+
 
 /***/ })
 

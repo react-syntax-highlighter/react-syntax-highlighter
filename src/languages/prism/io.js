@@ -1,2 +1,2 @@
-import io from "refractor/lang/io.js";;
+import io from "refractor/lang/io.js";
 export default io;

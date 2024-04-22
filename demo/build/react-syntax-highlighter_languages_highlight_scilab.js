@@ -1,65 +1,90 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_highlight_scilab"],{
+"use strict";
+(self["webpackChunkreact_syntax_highlighter"] = self["webpackChunkreact_syntax_highlighter"] || []).push([["react-syntax-highlighter_languages_highlight_scilab"],{
 
-/***/ "./node_modules/highlight.js/lib/languages/scilab.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/highlight.js/lib/languages/scilab.js ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/highlight.js/es/languages/scilab.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/highlight.js/es/languages/scilab.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-module.exports = function(hljs) {
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ scilab)
+/* harmony export */ });
+/*
+Language: Scilab
+Author: Sylvestre Ledru <sylvestre.ledru@scilab-enterprises.com>
+Origin: matlab.js
+Description: Scilab is a port from Matlab
+Website: https://www.scilab.org
+Category: scientific
+*/
 
-  var COMMON_CONTAINS = [
+function scilab(hljs) {
+  const COMMON_CONTAINS = [
     hljs.C_NUMBER_MODE,
     {
       className: 'string',
-      begin: '\'|\"', end: '\'|\"',
-      contains: [hljs.BACKSLASH_ESCAPE, {begin: '\'\''}]
+      begin: '\'|\"',
+      end: '\'|\"',
+      contains: [
+        hljs.BACKSLASH_ESCAPE,
+        { begin: '\'\'' }
+      ]
     }
   ];
 
   return {
-    aliases: ['sci'],
-    lexemes: /%?\w+/,
+    name: 'Scilab',
+    aliases: [ 'sci' ],
     keywords: {
-      keyword: 'abort break case clear catch continue do elseif else endfunction end for function '+
-        'global if pause return resume select try then while',
+      $pattern: /%?\w+/,
+      keyword: 'abort break case clear catch continue do elseif else endfunction end for function '
+        + 'global if pause return resume select try then while',
       literal:
         '%f %F %t %T %pi %eps %inf %nan %e %i %z %s',
       built_in: // Scilab has more than 2000 functions. Just list the most commons
-       'abs and acos asin atan ceil cd chdir clearglobal cosh cos cumprod deff disp error '+
-       'exec execstr exists exp eye gettext floor fprintf fread fsolve imag isdef isempty '+
-       'isinfisnan isvector lasterror length load linspace list listfiles log10 log2 log '+
-       'max min msprintf mclose mopen ones or pathconvert poly printf prod pwd rand real '+
-       'round sinh sin size gsort sprintf sqrt strcat strcmps tring sum system tanh tan '+
-       'type typename warning zeros matrix'
+       'abs and acos asin atan ceil cd chdir clearglobal cosh cos cumprod deff disp error '
+       + 'exec execstr exists exp eye gettext floor fprintf fread fsolve imag isdef isempty '
+       + 'isinfisnan isvector lasterror length load linspace list listfiles log10 log2 log '
+       + 'max min msprintf mclose mopen ones or pathconvert poly printf prod pwd rand real '
+       + 'round sinh sin size gsort sprintf sqrt strcat strcmps tring sum system tanh tan '
+       + 'type typename warning zeros matrix'
     },
     illegal: '("|#|/\\*|\\s+/\\w+)',
     contains: [
       {
         className: 'function',
-        beginKeywords: 'function', end: '$',
+        beginKeywords: 'function',
+        end: '$',
         contains: [
           hljs.UNDERSCORE_TITLE_MODE,
           {
             className: 'params',
-            begin: '\\(', end: '\\)'
+            begin: '\\(',
+            end: '\\)'
           }
         ]
       },
+      // seems to be a guard against [ident]' or [ident].
+      // perhaps to prevent attributes from flagging as keywords?
       {
-        begin: '[a-zA-Z_][a-zA-Z_0-9]*(\'+[\\.\']*|[\\.\']+)', end: '',
+        begin: '[a-zA-Z_][a-zA-Z_0-9]*[\\.\']+',
         relevance: 0
       },
       {
-        begin: '\\[', end: '\\]\'*[\\.\']*',
+        begin: '\\[',
+        end: '\\][\\.\']*',
         relevance: 0,
         contains: COMMON_CONTAINS
       },
       hljs.COMMENT('//', '$')
     ].concat(COMMON_CONTAINS)
   };
-};
+}
+
+
+
 
 /***/ })
 

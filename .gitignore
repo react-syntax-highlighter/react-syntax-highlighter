@@ -7,3 +7,4 @@ demo/**/*.map
 .DS_Store
 npm-debug.log
 .history
+demo/build

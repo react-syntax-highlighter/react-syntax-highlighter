@@ -1,8 +1,13 @@
 export default {
-    "hljs": {
+    "re code.hljs": {
         "display": "block",
         "overflowX": "auto",
-        "padding": "0.5em",
+        "padding": "1em"
+    },
+    "ode.hljs": {
+        "padding": "3px 5px"
+    },
+    "hljs": {
         "background": "#fff",
         "color": "black"
     },
@@ -45,7 +50,7 @@ export default {
     "hljs-string": {
         "color": "#c41a16"
     },
-    "hljs-meta-string": {
+    "hljs-meta .hljs-string": {
         "color": "#c41a16"
     },
     "hljs-regexp": {
@@ -72,6 +77,9 @@ export default {
     "hljs-meta": {
         "color": "#643820"
     },
+    "hljs-title.class_": {
+        "color": "#5c2699"
+    },
     "hljs-class .hljs-title": {
         "color": "#5c2699"
     },
@@ -79,9 +87,6 @@ export default {
         "color": "#5c2699"
     },
     "hljs-built_in": {
-        "color": "#5c2699"
-    },
-    "hljs-builtin-name": {
         "color": "#5c2699"
     },
     "hljs-params": {

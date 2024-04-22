@@ -1,15 +1,28 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_highlight_haml"],{
+"use strict";
+(self["webpackChunkreact_syntax_highlighter"] = self["webpackChunkreact_syntax_highlighter"] || []).push([["react-syntax-highlighter_languages_highlight_haml"],{
 
-/***/ "./node_modules/highlight.js/lib/languages/haml.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/highlight.js/lib/languages/haml.js ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/highlight.js/es/languages/haml.js":
+/*!********************************************************!*\
+  !*** ./node_modules/highlight.js/es/languages/haml.js ***!
+  \********************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-module.exports = // TODO support filter tags like :javascript, support inline HTML
-function(hljs) {
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ haml)
+/* harmony export */ });
+/*
+Language: HAML
+Requires: ruby.js
+Author: Dan Allen <dan.j.allen@gmail.com>
+Website: http://haml.info
+Category: template
+*/
+
+// TODO support filter tags like :javascript, support inline HTML
+function haml(hljs) {
   return {
+    name: 'HAML',
     case_insensitive: true,
     contains: [
       {
@@ -20,17 +33,15 @@ function(hljs) {
       // FIXME these comments should be allowed to span indented lines
       hljs.COMMENT(
         '^\\s*(!=#|=#|-#|/).*$',
-        false,
-        {
-          relevance: 0
-        }
+        null,
+        { relevance: 0 }
       ),
       {
         begin: '^\\s*(-|=|!=)(?!#)',
-        starts: {
-          end: '\\n',
-          subLanguage: 'ruby'
-        }
+        end: /$/,
+        subLanguage: 'ruby',
+        excludeBegin: true,
+        excludeEnd: true
       },
       {
         className: 'tag',
@@ -49,8 +60,8 @@ function(hljs) {
             begin: '\\.[\\w-]+'
           },
           {
-            begin: '{\\s*',
-            end: '\\s*}',
+            begin: /\{\s*/,
+            end: /\s*\}/,
             contains: [
               {
                 begin: ':\\w+\\s*=>',
@@ -100,19 +111,20 @@ function(hljs) {
           }
         ]
       },
+      { begin: '^\\s*[=~]\\s*' },
       {
-        begin: '^\\s*[=~]\\s*'
-      },
-      {
-        begin: '#{',
-        starts: {
-          end: '}',
-          subLanguage: 'ruby'
-        }
+        begin: /#\{/,
+        end: /\}/,
+        subLanguage: 'ruby',
+        excludeBegin: true,
+        excludeEnd: true
       }
     ]
   };
-};
+}
+
+
+
 
 /***/ })
 

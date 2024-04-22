@@ -1,32 +1,47 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_highlight_dart"],{
+"use strict";
+(self["webpackChunkreact_syntax_highlighter"] = self["webpackChunkreact_syntax_highlighter"] || []).push([["react-syntax-highlighter_languages_highlight_dart"],{
 
-/***/ "./node_modules/highlight.js/lib/languages/dart.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/highlight.js/lib/languages/dart.js ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/highlight.js/es/languages/dart.js":
+/*!********************************************************!*\
+  !*** ./node_modules/highlight.js/es/languages/dart.js ***!
+  \********************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-module.exports = function(hljs) {
-  var SUBST = {
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ dart)
+/* harmony export */ });
+/*
+Language: Dart
+Requires: markdown.js
+Author: Maxim Dikun <dikmax@gmail.com>
+Description: Dart a modern, object-oriented language developed by Google. For more information see https://www.dartlang.org/
+Website: https://dart.dev
+Category: scripting
+*/
+
+/** @type LanguageFn */
+function dart(hljs) {
+  const SUBST = {
     className: 'subst',
-    variants: [{
-      begin: '\\$[A-Za-z0-9_]+'
-    }],
+    variants: [ { begin: '\\$[A-Za-z0-9_]+' } ]
   };
 
-  var BRACED_SUBST = {
+  const BRACED_SUBST = {
     className: 'subst',
-    variants: [{
-      begin: '\\${',
-      end: '}'
-    }, ],
-    keywords: 'true false null this is new super',
+    variants: [
+      {
+        begin: /\$\{/,
+        end: /\}/
+      }
+    ],
+    keywords: 'true false null this is new super'
   };
 
-  var STRING = {
+  const STRING = {
     className: 'string',
-    variants: [{
+    variants: [
+      {
         begin: 'r\'\'\'',
         end: '\'\'\''
       },
@@ -47,74 +62,202 @@ module.exports = function(hljs) {
       {
         begin: '\'\'\'',
         end: '\'\'\'',
-        contains: [hljs.BACKSLASH_ESCAPE, SUBST, BRACED_SUBST]
+        contains: [
+          hljs.BACKSLASH_ESCAPE,
+          SUBST,
+          BRACED_SUBST
+        ]
       },
       {
         begin: '"""',
         end: '"""',
-        contains: [hljs.BACKSLASH_ESCAPE, SUBST, BRACED_SUBST]
+        contains: [
+          hljs.BACKSLASH_ESCAPE,
+          SUBST,
+          BRACED_SUBST
+        ]
       },
       {
         begin: '\'',
         end: '\'',
         illegal: '\\n',
-        contains: [hljs.BACKSLASH_ESCAPE, SUBST, BRACED_SUBST]
+        contains: [
+          hljs.BACKSLASH_ESCAPE,
+          SUBST,
+          BRACED_SUBST
+        ]
       },
       {
         begin: '"',
         end: '"',
         illegal: '\\n',
-        contains: [hljs.BACKSLASH_ESCAPE, SUBST, BRACED_SUBST]
+        contains: [
+          hljs.BACKSLASH_ESCAPE,
+          SUBST,
+          BRACED_SUBST
+        ]
       }
     ]
   };
   BRACED_SUBST.contains = [
-    hljs.C_NUMBER_MODE, STRING
+    hljs.C_NUMBER_MODE,
+    STRING
   ];
 
-  var KEYWORDS = {
-    keyword: 'abstract as assert async await break case catch class const continue covariant default deferred do ' +
-      'dynamic else enum export extends extension external factory false final finally for Function get hide if ' +
-      'implements import in inferface is library mixin new null on operator part rethrow return set show static ' +
-      'super switch sync this throw true try typedef var void while with yield',
+  const BUILT_IN_TYPES = [
+    // dart:core
+    'Comparable',
+    'DateTime',
+    'Duration',
+    'Function',
+    'Iterable',
+    'Iterator',
+    'List',
+    'Map',
+    'Match',
+    'Object',
+    'Pattern',
+    'RegExp',
+    'Set',
+    'Stopwatch',
+    'String',
+    'StringBuffer',
+    'StringSink',
+    'Symbol',
+    'Type',
+    'Uri',
+    'bool',
+    'double',
+    'int',
+    'num',
+    // dart:html
+    'Element',
+    'ElementList'
+  ];
+  const NULLABLE_BUILT_IN_TYPES = BUILT_IN_TYPES.map((e) => `${e}?`);
+
+  const BASIC_KEYWORDS = [
+    "abstract",
+    "as",
+    "assert",
+    "async",
+    "await",
+    "base",
+    "break",
+    "case",
+    "catch",
+    "class",
+    "const",
+    "continue",
+    "covariant",
+    "default",
+    "deferred",
+    "do",
+    "dynamic",
+    "else",
+    "enum",
+    "export",
+    "extends",
+    "extension",
+    "external",
+    "factory",
+    "false",
+    "final",
+    "finally",
+    "for",
+    "Function",
+    "get",
+    "hide",
+    "if",
+    "implements",
+    "import",
+    "in",
+    "interface",
+    "is",
+    "late",
+    "library",
+    "mixin",
+    "new",
+    "null",
+    "on",
+    "operator",
+    "part",
+    "required",
+    "rethrow",
+    "return",
+    "sealed",
+    "set",
+    "show",
+    "static",
+    "super",
+    "switch",
+    "sync",
+    "this",
+    "throw",
+    "true",
+    "try",
+    "typedef",
+    "var",
+    "void",
+    "when",
+    "while",
+    "with",
+    "yield"
+  ];
+
+  const KEYWORDS = {
+    keyword: BASIC_KEYWORDS,
     built_in:
-      // dart:core
-      'Comparable DateTime Duration Function Iterable Iterator List Map Match Null Object Pattern RegExp Set ' +
-      'Stopwatch String StringBuffer StringSink Symbol Type Uri bool double dynamic int num print ' +
-      // dart:html
-      'Element ElementList document querySelector querySelectorAll window'
+      BUILT_IN_TYPES
+        .concat(NULLABLE_BUILT_IN_TYPES)
+        .concat([
+          // dart:core
+          'Never',
+          'Null',
+          'dynamic',
+          'print',
+          // dart:html
+          'document',
+          'querySelector',
+          'querySelectorAll',
+          'window'
+        ]),
+    $pattern: /[A-Za-z][A-Za-z0-9_]*\??/
   };
 
   return {
+    name: 'Dart',
     keywords: KEYWORDS,
     contains: [
       STRING,
       hljs.COMMENT(
-        '/\\*\\*',
-        '\\*/', {
-          subLanguage: 'markdown'
+        /\/\*\*(?!\/)/,
+        /\*\//,
+        {
+          subLanguage: 'markdown',
+          relevance: 0
         }
       ),
       hljs.COMMENT(
-        '///+\\s*',
-        '$', {
-          contains: [{
+        /\/{3,} ?/,
+        /$/, { contains: [
+          {
             subLanguage: 'markdown',
             begin: '.',
             end: '$',
-          }]
-        }
+            relevance: 0
+          }
+        ] }
       ),
       hljs.C_LINE_COMMENT_MODE,
       hljs.C_BLOCK_COMMENT_MODE,
       {
         className: 'class',
         beginKeywords: 'class interface',
-        end: '{',
+        end: /\{/,
         excludeEnd: true,
-        contains: [{
-            beginKeywords: 'extends implements'
-          },
+        contains: [
+          { beginKeywords: 'extends implements' },
           hljs.UNDERSCORE_TITLE_MODE
         ]
       },
@@ -123,12 +266,14 @@ module.exports = function(hljs) {
         className: 'meta',
         begin: '@[A-Za-z]+'
       },
-      {
-        begin: '=>' // No markup, just a relevance booster
+      { begin: '=>' // No markup, just a relevance booster
       }
     ]
-  }
-};
+  };
+}
+
+
+
 
 /***/ })
 

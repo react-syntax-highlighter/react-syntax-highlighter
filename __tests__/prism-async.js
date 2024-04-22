@@ -26,7 +26,7 @@ class Expire extends React.Component {
         return this.state.component;
     }
 }`}
-      </SyntaxHighlighter>
+      </SyntaxHighlighter>,
     )
     .toJSON();
   expect(tree).toMatchSnapshot();
@@ -37,7 +37,7 @@ test('SyntaxHighlighter should just render text if syntax is not registered', ()
     .create(
       <SyntaxHighlighter language="python" style={prism}>
         {"print('hello')"}
-      </SyntaxHighlighter>
+      </SyntaxHighlighter>,
     )
     .toJSON();
   expect(tree).toMatchSnapshot();
@@ -68,7 +68,7 @@ test('When the code split is loaded - SyntaxHighlighter renders jsx highlighted 
           return this.state.component;
       }
   }`}
-      </SyntaxHighlighter>
+      </SyntaxHighlighter>,
     )
     .toJSON();
 

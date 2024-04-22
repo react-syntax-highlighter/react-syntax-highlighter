@@ -1,29 +1,40 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_highlight_autohotkey"],{
+"use strict";
+(self["webpackChunkreact_syntax_highlighter"] = self["webpackChunkreact_syntax_highlighter"] || []).push([["react-syntax-highlighter_languages_highlight_autohotkey"],{
 
-/***/ "./node_modules/highlight.js/lib/languages/autohotkey.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/highlight.js/lib/languages/autohotkey.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/highlight.js/es/languages/autohotkey.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/highlight.js/es/languages/autohotkey.js ***!
+  \**************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-module.exports = function(hljs) {
-  var BACKTICK_ESCAPE = {
-    begin: '`[\\s\\S]'
-  };
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ autohotkey)
+/* harmony export */ });
+/*
+Language: AutoHotkey
+Author: Seongwon Lee <dlimpid@gmail.com>
+Description: AutoHotkey language definition
+Category: scripting
+*/
+
+/** @type LanguageFn */
+function autohotkey(hljs) {
+  const BACKTICK_ESCAPE = { begin: '`[\\s\\S]' };
 
   return {
+    name: 'AutoHotkey',
     case_insensitive: true,
     aliases: [ 'ahk' ],
     keywords: {
       keyword: 'Break Continue Critical Exit ExitApp Gosub Goto New OnExit Pause return SetBatchLines SetTimer Suspend Thread Throw Until ahk_id ahk_class ahk_pid ahk_exe ahk_group',
       literal: 'true false NOT AND OR',
-      built_in: 'ComSpec Clipboard ClipboardAll ErrorLevel',
+      built_in: 'ComSpec Clipboard ClipboardAll ErrorLevel'
     },
     contains: [
       BACKTICK_ESCAPE,
-      hljs.inherit(hljs.QUOTE_STRING_MODE, {contains: [BACKTICK_ESCAPE]}),
-      hljs.COMMENT(';', '$', {relevance: 0}),
+      hljs.inherit(hljs.QUOTE_STRING_MODE, { contains: [ BACKTICK_ESCAPE ] }),
+      hljs.COMMENT(';', '$', { relevance: 0 }),
       hljs.C_BLOCK_COMMENT_MODE,
       {
         className: 'number',
@@ -31,39 +42,51 @@ module.exports = function(hljs) {
         relevance: 0
       },
       {
-        className: 'variable', //subst would be the most accurate however fails the point of highlighting. variable is comparably the most accurate that actually has some effect
+        // subst would be the most accurate however fails the point of
+        // highlighting. variable is comparably the most accurate that actually
+        // has some effect
+        className: 'variable',
         begin: '%[a-zA-Z0-9#_$@]+%'
       },
       {
         className: 'built_in',
         begin: '^\\s*\\w+\\s*(,|%)'
-        //I don't really know if this is totally relevant
+        // I don't really know if this is totally relevant
       },
       {
-        className: 'title', //symbol would be most accurate however is higlighted just like built_in and that makes up a lot of AutoHotkey code
-		                        //meaning that it would fail to highlight anything
+        // symbol would be most accurate however is highlighted just like
+        // built_in and that makes up a lot of AutoHotkey code meaning that it
+        // would fail to highlight anything
+        className: 'title',
         variants: [
-          {begin: '^[^\\n";]+::(?!=)'},
-          {begin: '^[^\\n";]+:(?!=)', relevance: 0} // zero relevance as it catches a lot of things
-                                                    // followed by a single ':' in many languages
+          { begin: '^[^\\n";]+::(?!=)' },
+          {
+            begin: '^[^\\n";]+:(?!=)',
+            // zero relevance as it catches a lot of things
+            // followed by a single ':' in many languages
+            relevance: 0
+          }
         ]
       },
       {
-        className: 'meta', 
-        begin: '^\\s*#\\w+', end:'$',
+        className: 'meta',
+        begin: '^\\s*#\\w+',
+        end: '$',
         relevance: 0
       },
-	    {
+      {
         className: 'built_in',
         begin: 'A_[a-zA-Z0-9]+'
       },
       {
         // consecutive commas, not for highlighting but just for relevance
-        begin: ',\\s*,'
-      }
+        begin: ',\\s*,' }
     ]
-  }
-};
+  };
+}
+
+
+
 
 /***/ })
 
