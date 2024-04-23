@@ -6,6 +6,9 @@
   "module": "dist/esm/index.js",
   "type": "module",
   "sideEffects": false,
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "dependencies": {
     "@babel/runtime": "^7.24.4",
     "highlight.js": "^11.9.0",
