@@ -10,23 +10,21 @@ import jsx from '../src/languages/prism/jsx.js';
 import markup from '../src/languages/prism/markup.js';
 import markupTemplating from '../src/languages/prism/markup-templating.js';
 
+import prismLanguages from '../src/languages/prism/supported-languages.js';
+
 import defaultStyleSrc from '../src/styles/prism/atom-dark.js';
 import defaultLanguageSrc from '../src/languages/prism/jsx.js';
 
+/*
 SyntaxHighlighter.registerLanguage('clike', clike);
 SyntaxHighlighter.registerLanguage('javascript', javascript);
 SyntaxHighlighter.registerLanguage('jsx', jsx);
 SyntaxHighlighter.registerLanguage('markup', markup);
 SyntaxHighlighter.registerLanguage('markup-templating', markupTemplating);
+*/
 
 const availableStyles = prismStyles;
-const availableLanguages = [
-  'clike',
-  'javascript',
-  'jsx',
-  'markup',
-  'markup-templating',
-];
+const availableLanguages = prismLanguages;
 
 const initialCodeString = `function createStyleObject(classNames, style) {
   return classNames.reduce((styleObject, className) => {

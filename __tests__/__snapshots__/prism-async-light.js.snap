@@ -3,7 +3,7 @@
 exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
 <pre
   style={
-    Object {
+    {
       "MozHyphens": "none",
       "MozTabSize": "4",
       "OTabSize": "4",
@@ -31,7 +31,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
   <code
     className="language-jsx"
     style={
-      Object {
+      {
         "MozHyphens": "none",
         "MozTabSize": "4",
         "OTabSize": "4",
@@ -79,7 +79,7 @@ class Expire extends React.Component {
 exports[`SyntaxHighlighter should just render text if syntax is not registered 1`] = `
 <pre
   style={
-    Object {
+    {
       "MozHyphens": "none",
       "MozTabSize": "4",
       "OTabSize": "4",
@@ -107,7 +107,7 @@ exports[`SyntaxHighlighter should just render text if syntax is not registered 1
   <code
     className="language-text"
     style={
-      Object {
+      {
         "MozHyphens": "none",
         "MozTabSize": "4",
         "OTabSize": "4",
@@ -129,11 +129,7 @@ exports[`SyntaxHighlighter should just render text if syntax is not registered 1
       }
     }
   >
-    <span
-      style={Object {}}
-    >
-      print('hello')
-    </span>
+    print('hello')
   </code>
 </pre>
 `;
@@ -141,7 +137,7 @@ exports[`SyntaxHighlighter should just render text if syntax is not registered 1
 exports[`When the code split is loaded - SyntaxHighlighter renders python highlighted text after async loading python 1`] = `
 <pre
   style={
-    Object {
+    {
       "MozHyphens": "none",
       "MozTabSize": "4",
       "OTabSize": "4",
@@ -169,7 +165,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
   <code
     className="language-python"
     style={
-      Object {
+      {
         "MozHyphens": "none",
         "MozTabSize": "4",
         "OTabSize": "4",
@@ -192,7 +188,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders python highli
     }
   >
     <span
-      style={Object {}}
+      style={{}}
     >
       
 

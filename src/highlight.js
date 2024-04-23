@@ -298,6 +298,7 @@ function getCodeTree({ astGenerator, language, code, defaultCodeValue }) {
   // lowlight/highlight?
   if (isHighlightJs(astGenerator)) {
     const hasLanguage = checkForListedLanguage(astGenerator, language);
+
     if (language === 'text') {
       return { value: defaultCodeValue, language: 'text' };
     } else if (hasLanguage) {

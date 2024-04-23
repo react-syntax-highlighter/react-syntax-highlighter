@@ -1,19 +1,13 @@
 import React, { useState } from 'react';
 import { render } from 'react-dom';
 import SyntaxHighlighter from '../src/index.js';
-import virtualizedRendererImport from 'react-syntax-highlighter-virtualized-renderer';
+import virtualizedRendererImpl from 'react-syntax-highlighter-virtualized-renderer';
 import ExamplesLinks from './examples-links.js';
 import hljsStyles from './styles/hljs.js';
 
-const virtualizedRenderer = virtualizedRendererImport.default;
-
-console.log(
-  'VIRTUALIZED RENDERER:',
-  virtualizedRenderer,
-  virtualizedRendererImport,
-);
-
 const availableStyles = hljsStyles;
+
+const {default: virtualizedRenderer} = virtualizedRendererImpl;
 
 const initialCodeString = `function createStyleObject(classNames, style) {
   return classNames.reduce((styleObject, className) => {
@@ -61,12 +55,12 @@ function createElement({ node, style, useInlineStyles, key }) {
 
 `.repeat(50);
 
+const defaultStyle = await import(`../src/styles/hljs/${availableStyles[0]}.js`);
+
 const Component = (props) => {
   const [state, setState] = useState({
     selectedStyle: availableStyles[0],
-    style: import(`../src/styles/hljs/${availableStyles[0]}.js`).then(
-      (x) => x?.default ?? x,
-    ),
+    style: defaultStyle,
     code: initialCodeString,
     showLineNumbers: false,
   });

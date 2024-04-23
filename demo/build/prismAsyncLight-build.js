@@ -662,7 +662,8 @@ var map = {
 		"src_languages_prism_cilkcpp_js"
 	],
 	"./clike.js": [
-		"./src/languages/prism/clike.js"
+		"./src/languages/prism/clike.js",
+		"src_languages_prism_clike_js"
 	],
 	"./clojure.js": [
 		"./src/languages/prism/clojure.js",
@@ -978,7 +979,7 @@ var map = {
 	"./index.js": [
 		"./src/languages/prism/index.js",
 		"vendors-node_modules_refractor_lang_csharp_js",
-		"react-syntax-highlighter_languages_refractor_php",
+		"vendors-node_modules_refractor_lang_php_js",
 		"react-syntax-highlighter_languages_refractor_bash",
 		"vendors-node_modules_refractor_lang_sqf_js",
 		"react-syntax-highlighter_languages_refractor_factor",
@@ -1024,7 +1025,8 @@ var map = {
 		"src_languages_prism_javadoclike_js"
 	],
 	"./javascript.js": [
-		"./src/languages/prism/javascript.js"
+		"./src/languages/prism/javascript.js",
+		"src_languages_prism_javascript_js"
 	],
 	"./javastacktrace.js": [
 		"./src/languages/prism/javastacktrace.js",
@@ -1104,7 +1106,7 @@ var map = {
 	],
 	"./latte.js": [
 		"./src/languages/prism/latte.js",
-		"react-syntax-highlighter_languages_refractor_php",
+		"vendors-node_modules_refractor_lang_php_js",
 		"src_languages_prism_latte_js"
 	],
 	"./less.js": [
@@ -1161,10 +1163,12 @@ var map = {
 		"src_languages_prism_markdown_js"
 	],
 	"./markup-templating.js": [
-		"./src/languages/prism/markup-templating.js"
+		"./src/languages/prism/markup-templating.js",
+		"src_languages_prism_markup-templating_js"
 	],
 	"./markup.js": [
-		"./src/languages/prism/markup.js"
+		"./src/languages/prism/markup.js",
+		"src_languages_prism_markup_js"
 	],
 	"./mata.js": [
 		"./src/languages/prism/mata.js",
@@ -1305,17 +1309,17 @@ var map = {
 	],
 	"./php-extras.js": [
 		"./src/languages/prism/php-extras.js",
-		"react-syntax-highlighter_languages_refractor_php",
+		"vendors-node_modules_refractor_lang_php_js",
 		"src_languages_prism_php-extras_js"
 	],
 	"./php.js": [
 		"./src/languages/prism/php.js",
-		"react-syntax-highlighter_languages_refractor_php",
+		"vendors-node_modules_refractor_lang_php_js",
 		"src_languages_prism_php_js"
 	],
 	"./phpdoc.js": [
 		"./src/languages/prism/phpdoc.js",
-		"react-syntax-highlighter_languages_refractor_php",
+		"vendors-node_modules_refractor_lang_php_js",
 		"src_languages_prism_phpdoc_js"
 	],
 	"./plant-uml.js": [
@@ -1543,8 +1547,7 @@ var map = {
 		"src_languages_prism_supercollider_js"
 	],
 	"./supported-languages.js": [
-		"./src/languages/prism/supported-languages.js",
-		"src_languages_prism_supported-languages_js"
+		"./src/languages/prism/supported-languages.js"
 	],
 	"./swift.js": [
 		"./src/languages/prism/swift.js",
@@ -3262,7 +3265,7 @@ __webpack_require__.r(__webpack_exports__);
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_diff */ "react-syntax-highlighter_languages_refractor_diff").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/diff.js */ "./node_modules/refractor/lang/diff.js"));
   }),
   django: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("django", function () {
-    return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_django */[__webpack_require__.e("react-syntax-highlighter_languages_refractor_markupTemplating"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_django")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/django.js */ "./node_modules/refractor/lang/django.js"));
+    return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_django */ "react-syntax-highlighter_languages_refractor_django").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/django.js */ "./node_modules/refractor/lang/django.js"));
   }),
   dnsZoneFile: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("dnsZoneFile", function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_dnsZoneFile */ "react-syntax-highlighter_languages_refractor_dnsZoneFile").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/dns-zone-file.js */ "./node_modules/refractor/lang/dns-zone-file.js"));
@@ -3283,7 +3286,7 @@ __webpack_require__.r(__webpack_exports__);
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_eiffel */ "react-syntax-highlighter_languages_refractor_eiffel").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/eiffel.js */ "./node_modules/refractor/lang/eiffel.js"));
   }),
   ejs: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("ejs", function () {
-    return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_ejs */[__webpack_require__.e("react-syntax-highlighter_languages_refractor_markupTemplating"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_ejs")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/ejs.js */ "./node_modules/refractor/lang/ejs.js"));
+    return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_ejs */ "react-syntax-highlighter_languages_refractor_ejs").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/ejs.js */ "./node_modules/refractor/lang/ejs.js"));
   }),
   elixir: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("elixir", function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_elixir */ "react-syntax-highlighter_languages_refractor_elixir").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/elixir.js */ "./node_modules/refractor/lang/elixir.js"));
@@ -3292,13 +3295,13 @@ __webpack_require__.r(__webpack_exports__);
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_elm */ "react-syntax-highlighter_languages_refractor_elm").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/elm.js */ "./node_modules/refractor/lang/elm.js"));
   }),
   erb: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("erb", function () {
-    return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_erb */[__webpack_require__.e("react-syntax-highlighter_languages_refractor_markupTemplating"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_erb")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/erb.js */ "./node_modules/refractor/lang/erb.js"));
+    return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_erb */ "react-syntax-highlighter_languages_refractor_erb").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/erb.js */ "./node_modules/refractor/lang/erb.js"));
   }),
   erlang: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("erlang", function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_erlang */ "react-syntax-highlighter_languages_refractor_erlang").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/erlang.js */ "./node_modules/refractor/lang/erlang.js"));
   }),
   etlua: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("etlua", function () {
-    return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_etlua */[__webpack_require__.e("react-syntax-highlighter_languages_refractor_markupTemplating"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_etlua")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/etlua.js */ "./node_modules/refractor/lang/etlua.js"));
+    return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_etlua */ "react-syntax-highlighter_languages_refractor_etlua").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/etlua.js */ "./node_modules/refractor/lang/etlua.js"));
   }),
   excelFormula: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("excelFormula", function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_excelFormula */ "react-syntax-highlighter_languages_refractor_excelFormula").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/excel-formula.js */ "./node_modules/refractor/lang/excel-formula.js"));
@@ -3322,7 +3325,7 @@ __webpack_require__.r(__webpack_exports__);
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_fsharp */ "react-syntax-highlighter_languages_refractor_fsharp").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/fsharp.js */ "./node_modules/refractor/lang/fsharp.js"));
   }),
   ftl: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("ftl", function () {
-    return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_ftl */[__webpack_require__.e("react-syntax-highlighter_languages_refractor_markupTemplating"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_ftl")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/ftl.js */ "./node_modules/refractor/lang/ftl.js"));
+    return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_ftl */ "react-syntax-highlighter_languages_refractor_ftl").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/ftl.js */ "./node_modules/refractor/lang/ftl.js"));
   }),
   gap: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("gap", function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_gap */ "react-syntax-highlighter_languages_refractor_gap").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/gap.js */ "./node_modules/refractor/lang/gap.js"));
@@ -3373,7 +3376,7 @@ __webpack_require__.r(__webpack_exports__);
     return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_haml */[__webpack_require__.e("vendors-node_modules_refractor_lang_haml_js"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_haml")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/haml.js */ "./node_modules/refractor/lang/haml.js"));
   }),
   handlebars: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("handlebars", function () {
-    return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_handlebars */[__webpack_require__.e("react-syntax-highlighter_languages_refractor_markupTemplating"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_handlebars")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/handlebars.js */ "./node_modules/refractor/lang/handlebars.js"));
+    return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_handlebars */ "react-syntax-highlighter_languages_refractor_handlebars").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/handlebars.js */ "./node_modules/refractor/lang/handlebars.js"));
   }),
   haskell: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("haskell", function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_haskell */ "react-syntax-highlighter_languages_refractor_haskell").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/haskell.js */ "./node_modules/refractor/lang/haskell.js"));
@@ -3499,7 +3502,7 @@ __webpack_require__.r(__webpack_exports__);
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_latex */ "react-syntax-highlighter_languages_refractor_latex").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/latex.js */ "./node_modules/refractor/lang/latex.js"));
   }),
   latte: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("latte", function () {
-    return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_latte */[__webpack_require__.e("react-syntax-highlighter_languages_refractor_markupTemplating"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_php"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_latte")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/latte.js */ "./node_modules/refractor/lang/latte.js"));
+    return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_latte */[__webpack_require__.e("vendors-node_modules_refractor_lang_php_js"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_latte")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/latte.js */ "./node_modules/refractor/lang/latte.js"));
   }),
   less: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("less", function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_less */ "react-syntax-highlighter_languages_refractor_less").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/less.js */ "./node_modules/refractor/lang/less.js"));
@@ -3511,7 +3514,7 @@ __webpack_require__.r(__webpack_exports__);
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_linkerScript */ "react-syntax-highlighter_languages_refractor_linkerScript").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/linker-script.js */ "./node_modules/refractor/lang/linker-script.js"));
   }),
   liquid: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("liquid", function () {
-    return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_liquid */[__webpack_require__.e("react-syntax-highlighter_languages_refractor_markupTemplating"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_liquid")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/liquid.js */ "./node_modules/refractor/lang/liquid.js"));
+    return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_liquid */ "react-syntax-highlighter_languages_refractor_liquid").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/liquid.js */ "./node_modules/refractor/lang/liquid.js"));
   }),
   lisp: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("lisp", function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_lisp */ "react-syntax-highlighter_languages_refractor_lisp").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/lisp.js */ "./node_modules/refractor/lang/lisp.js"));
@@ -3649,13 +3652,13 @@ __webpack_require__.r(__webpack_exports__);
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_perl */ "react-syntax-highlighter_languages_refractor_perl").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/perl.js */ "./node_modules/refractor/lang/perl.js"));
   }),
   phpExtras: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("phpExtras", function () {
-    return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_phpExtras */[__webpack_require__.e("react-syntax-highlighter_languages_refractor_markupTemplating"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_php"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_phpExtras")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/php-extras.js */ "./node_modules/refractor/lang/php-extras.js"));
+    return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_phpExtras */[__webpack_require__.e("vendors-node_modules_refractor_lang_php_js"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_phpExtras")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/php-extras.js */ "./node_modules/refractor/lang/php-extras.js"));
   }),
   php: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("php", function () {
-    return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_php */[__webpack_require__.e("react-syntax-highlighter_languages_refractor_markupTemplating"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_php")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/php.js */ "./node_modules/refractor/lang/php.js"));
+    return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_php */[__webpack_require__.e("vendors-node_modules_refractor_lang_php_js"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_php")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/php.js */ "./node_modules/refractor/lang/php.js"));
   }),
   phpdoc: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("phpdoc", function () {
-    return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_phpdoc */[__webpack_require__.e("react-syntax-highlighter_languages_refractor_markupTemplating"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_php"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_phpdoc")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/phpdoc.js */ "./node_modules/refractor/lang/phpdoc.js"));
+    return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_phpdoc */[__webpack_require__.e("vendors-node_modules_refractor_lang_php_js"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_phpdoc")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/phpdoc.js */ "./node_modules/refractor/lang/phpdoc.js"));
   }),
   plantUml: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("plantUml", function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_plantUml */ "react-syntax-highlighter_languages_refractor_plantUml").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/plant-uml.js */ "./node_modules/refractor/lang/plant-uml.js"));
@@ -3781,7 +3784,7 @@ __webpack_require__.r(__webpack_exports__);
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_smalltalk */ "react-syntax-highlighter_languages_refractor_smalltalk").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/smalltalk.js */ "./node_modules/refractor/lang/smalltalk.js"));
   }),
   smarty: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("smarty", function () {
-    return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_smarty */[__webpack_require__.e("react-syntax-highlighter_languages_refractor_markupTemplating"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_smarty")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/smarty.js */ "./node_modules/refractor/lang/smarty.js"));
+    return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_smarty */ "react-syntax-highlighter_languages_refractor_smarty").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/smarty.js */ "./node_modules/refractor/lang/smarty.js"));
   }),
   sml: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("sml", function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_sml */ "react-syntax-highlighter_languages_refractor_sml").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/sml.js */ "./node_modules/refractor/lang/sml.js"));
@@ -3793,7 +3796,7 @@ __webpack_require__.r(__webpack_exports__);
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_solutionFile */ "react-syntax-highlighter_languages_refractor_solutionFile").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/solution-file.js */ "./node_modules/refractor/lang/solution-file.js"));
   }),
   soy: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("soy", function () {
-    return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_soy */[__webpack_require__.e("react-syntax-highlighter_languages_refractor_markupTemplating"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_soy")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/soy.js */ "./node_modules/refractor/lang/soy.js"));
+    return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_soy */ "react-syntax-highlighter_languages_refractor_soy").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/soy.js */ "./node_modules/refractor/lang/soy.js"));
   }),
   sparql: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("sparql", function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_sparql */ "react-syntax-highlighter_languages_refractor_sparql").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/sparql.js */ "./node_modules/refractor/lang/sparql.js"));
@@ -3856,13 +3859,13 @@ __webpack_require__.r(__webpack_exports__);
     return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_tsx */[__webpack_require__.e("react-syntax-highlighter_languages_refractor_jsx"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_tsx")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/tsx.js */ "./node_modules/refractor/lang/tsx.js"));
   }),
   tt2: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("tt2", function () {
-    return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_tt2 */[__webpack_require__.e("react-syntax-highlighter_languages_refractor_markupTemplating"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_tt2")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/tt2.js */ "./node_modules/refractor/lang/tt2.js"));
+    return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_tt2 */ "react-syntax-highlighter_languages_refractor_tt2").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/tt2.js */ "./node_modules/refractor/lang/tt2.js"));
   }),
   turtle: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("turtle", function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_turtle */ "react-syntax-highlighter_languages_refractor_turtle").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/turtle.js */ "./node_modules/refractor/lang/turtle.js"));
   }),
   twig: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("twig", function () {
-    return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_twig */[__webpack_require__.e("react-syntax-highlighter_languages_refractor_markupTemplating"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_twig")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/twig.js */ "./node_modules/refractor/lang/twig.js"));
+    return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_twig */ "react-syntax-highlighter_languages_refractor_twig").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/twig.js */ "./node_modules/refractor/lang/twig.js"));
   }),
   typescript: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("typescript", function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_typescript */ "react-syntax-highlighter_languages_refractor_typescript").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/typescript.js */ "./node_modules/refractor/lang/typescript.js"));
@@ -4685,40 +4688,6 @@ function getCodeTree(_ref6) {
 
 /***/ }),
 
-/***/ "./src/languages/prism/clike.js":
-/*!**************************************!*\
-  !*** ./src/languages/prism/clike.js ***!
-  \**************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var refractor_lang_clike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! refractor/lang/clike.js */ "./node_modules/refractor/lang/clike.js");
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (refractor_lang_clike_js__WEBPACK_IMPORTED_MODULE_0__["default"]);
-
-/***/ }),
-
-/***/ "./src/languages/prism/javascript.js":
-/*!*******************************************!*\
-  !*** ./src/languages/prism/javascript.js ***!
-  \*******************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var refractor_lang_javascript_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! refractor/lang/javascript.js */ "./node_modules/refractor/lang/javascript.js");
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (refractor_lang_javascript_js__WEBPACK_IMPORTED_MODULE_0__["default"]);
-
-/***/ }),
-
 /***/ "./src/languages/prism/jsx.js":
 /*!************************************!*\
   !*** ./src/languages/prism/jsx.js ***!
@@ -4736,10 +4705,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/languages/prism/markup-templating.js":
-/*!**************************************************!*\
-  !*** ./src/languages/prism/markup-templating.js ***!
-  \**************************************************/
+/***/ "./src/languages/prism/supported-languages.js":
+/*!****************************************************!*\
+  !*** ./src/languages/prism/supported-languages.js ***!
+  \****************************************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -4747,26 +4716,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var refractor_lang_markup_templating_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! refractor/lang/markup-templating.js */ "./node_modules/refractor/lang/markup-templating.js");
+//
+// This file has been auto-generated by the `npm run build-languages-prism` task
+//
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (refractor_lang_markup_templating_js__WEBPACK_IMPORTED_MODULE_0__["default"]);
-
-/***/ }),
-
-/***/ "./src/languages/prism/markup.js":
-/*!***************************************!*\
-  !*** ./src/languages/prism/markup.js ***!
-  \***************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var refractor_lang_markup_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! refractor/lang/markup.js */ "./node_modules/refractor/lang/markup.js");
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (refractor_lang_markup_js__WEBPACK_IMPORTED_MODULE_0__["default"]);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (['abap', 'abnf', 'actionscript', 'ada', 'agda', 'al', 'antlr4', 'apacheconf', 'apex', 'apl', 'applescript', 'aql', 'arduino', 'arff', 'armasm', 'arturo', 'asciidoc', 'asm6502', 'asmatmel', 'aspnet', 'autohotkey', 'autoit', 'avisynth', 'avro-idl', 'awk', 'bash', 'basic', 'batch', 'bbcode', 'bbj', 'bicep', 'birb', 'bison', 'bnf', 'bqn', 'brainfuck', 'brightscript', 'bro', 'bsl', 'c', 'cfscript', 'chaiscript', 'cil', 'cilkc', 'cilkcpp', 'clike', 'clojure', 'cmake', 'cobol', 'coffeescript', 'concurnas', 'cooklang', 'coq', 'cpp', 'crystal', 'csharp', 'cshtml', 'csp', 'css-extras', 'css', 'csv', 'cue', 'cypher', 'd', 'dart', 'dataweave', 'dax', 'dhall', 'diff', 'django', 'dns-zone-file', 'docker', 'dot', 'ebnf', 'editorconfig', 'eiffel', 'ejs', 'elixir', 'elm', 'erb', 'erlang', 'etlua', 'excel-formula', 'factor', 'false', 'firestore-security-rules', 'flow', 'fortran', 'fsharp', 'ftl', 'gap', 'gcode', 'gdscript', 'gedcom', 'gettext', 'gherkin', 'git', 'glsl', 'gml', 'gn', 'go-module', 'go', 'gradle', 'graphql', 'groovy', 'haml', 'handlebars', 'haskell', 'haxe', 'hcl', 'hlsl', 'hoon', 'hpkp', 'hsts', 'http', 'ichigojam', 'icon', 'icu-message-format', 'idris', 'iecst', 'ignore', 'inform7', 'ini', 'io', 'j', 'java', 'javadoc', 'javadoclike', 'javascript', 'javastacktrace', 'jexl', 'jolie', 'jq', 'js-extras', 'js-templates', 'jsdoc', 'json', 'json5', 'jsonp', 'jsstacktrace', 'jsx', 'julia', 'keepalived', 'keyman', 'kotlin', 'kumir', 'kusto', 'latex', 'latte', 'less', 'lilypond', 'linker-script', 'liquid', 'lisp', 'livescript', 'llvm', 'log', 'lolcode', 'lua', 'magma', 'makefile', 'markdown', 'markup-templating', 'markup', 'mata', 'matlab', 'maxscript', 'mel', 'mermaid', 'metafont', 'mizar', 'mongodb', 'monkey', 'moonscript', 'n1ql', 'n4js', 'nand2tetris-hdl', 'naniscript', 'nasm', 'neon', 'nevod', 'nginx', 'nim', 'nix', 'nsis', 'objectivec', 'ocaml', 'odin', 'opencl', 'openqasm', 'oz', 'parigp', 'parser', 'pascal', 'pascaligo', 'pcaxis', 'peoplecode', 'perl', 'php-extras', 'php', 'phpdoc', 'plant-uml', 'plsql', 'powerquery', 'powershell', 'processing', 'prolog', 'promql', 'properties', 'protobuf', 'psl', 'pug', 'puppet', 'pure', 'purebasic', 'purescript', 'python', 'q', 'qml', 'qore', 'qsharp', 'r', 'racket', 'reason', 'regex', 'rego', 'renpy', 'rescript', 'rest', 'rip', 'roboconf', 'robotframework', 'ruby', 'rust', 'sas', 'sass', 'scala', 'scheme', 'scss', 'shell-session', 'smali', 'smalltalk', 'smarty', 'sml', 'solidity', 'solution-file', 'soy', 'sparql', 'splunk-spl', 'sqf', 'sql', 'squirrel', 'stan', 'stata', 'stylus', 'supercollider', 'swift', 'systemd', 't4-cs', 't4-templating', 't4-vb', 'tap', 'tcl', 'textile', 'toml', 'tremor', 'tsx', 'tt2', 'turtle', 'twig', 'typescript', 'typoscript', 'unrealscript', 'uorazor', 'uri', 'v', 'vala', 'vbnet', 'velocity', 'verilog', 'vhdl', 'vim', 'visual-basic', 'warpscript', 'wasm', 'web-idl', 'wgsl', 'wiki', 'wolfram', 'wren', 'xeora', 'xml-doc', 'xojo', 'xquery', 'yaml', 'yang', 'zig']);
 
 /***/ }),
 
@@ -5440,153 +5394,6 @@ function jsx(Prism) {
 
 /***/ }),
 
-/***/ "./node_modules/refractor/lang/markup-templating.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/refractor/lang/markup-templating.js ***!
-  \**********************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ markupTemplating)
-/* harmony export */ });
-/* harmony import */ var _markup_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./markup.js */ "./node_modules/refractor/lang/markup.js");
-// @ts-nocheck
-
-markupTemplating.displayName = 'markup-templating'
-markupTemplating.aliases = []
-
-/** @type {import('../core.js').Syntax} */
-function markupTemplating(Prism) {
-  Prism.register(_markup_js__WEBPACK_IMPORTED_MODULE_0__["default"])
-  ;(function (Prism) {
-    /**
-     * Returns the placeholder for the given language id and index.
-     *
-     * @param {string} language
-     * @param {string|number} index
-     * @returns {string}
-     */
-    function getPlaceholder(language, index) {
-      return '___' + language.toUpperCase() + index + '___'
-    }
-    Object.defineProperties((Prism.languages['markup-templating'] = {}), {
-      buildPlaceholders: {
-        /**
-         * Tokenize all inline templating expressions matching `placeholderPattern`.
-         *
-         * If `replaceFilter` is provided, only matches of `placeholderPattern` for which `replaceFilter` returns
-         * `true` will be replaced.
-         *
-         * @param {object} env The environment of the `before-tokenize` hook.
-         * @param {string} language The language id.
-         * @param {RegExp} placeholderPattern The matches of this pattern will be replaced by placeholders.
-         * @param {(match: string) => boolean} [replaceFilter]
-         */
-        value: function (env, language, placeholderPattern, replaceFilter) {
-          if (env.language !== language) {
-            return
-          }
-          var tokenStack = (env.tokenStack = [])
-          env.code = env.code.replace(placeholderPattern, function (match) {
-            if (typeof replaceFilter === 'function' && !replaceFilter(match)) {
-              return match
-            }
-            var i = tokenStack.length
-            var placeholder
-
-            // Check for existing strings
-            while (
-              env.code.indexOf((placeholder = getPlaceholder(language, i))) !==
-              -1
-            ) {
-              ++i
-            }
-
-            // Create a sparse array
-            tokenStack[i] = match
-            return placeholder
-          })
-
-          // Switch the grammar to markup
-          env.grammar = Prism.languages.markup
-        }
-      },
-      tokenizePlaceholders: {
-        /**
-         * Replace placeholders with proper tokens after tokenizing.
-         *
-         * @param {object} env The environment of the `after-tokenize` hook.
-         * @param {string} language The language id.
-         */
-        value: function (env, language) {
-          if (env.language !== language || !env.tokenStack) {
-            return
-          }
-
-          // Switch the grammar back
-          env.grammar = Prism.languages[language]
-          var j = 0
-          var keys = Object.keys(env.tokenStack)
-          function walkTokens(tokens) {
-            for (var i = 0; i < tokens.length; i++) {
-              // all placeholders are replaced already
-              if (j >= keys.length) {
-                break
-              }
-              var token = tokens[i]
-              if (
-                typeof token === 'string' ||
-                (token.content && typeof token.content === 'string')
-              ) {
-                var k = keys[j]
-                var t = env.tokenStack[k]
-                var s = typeof token === 'string' ? token : token.content
-                var placeholder = getPlaceholder(language, k)
-                var index = s.indexOf(placeholder)
-                if (index > -1) {
-                  ++j
-                  var before = s.substring(0, index)
-                  var middle = new Prism.Token(
-                    language,
-                    Prism.tokenize(t, env.grammar),
-                    'language-' + language,
-                    t
-                  )
-                  var after = s.substring(index + placeholder.length)
-                  var replacement = []
-                  if (before) {
-                    replacement.push.apply(replacement, walkTokens([before]))
-                  }
-                  replacement.push(middle)
-                  if (after) {
-                    replacement.push.apply(replacement, walkTokens([after]))
-                  }
-                  if (typeof token === 'string') {
-                    tokens.splice.apply(tokens, [i, 1].concat(replacement))
-                  } else {
-                    token.content = replacement
-                  }
-                }
-              } else if (
-                token.content /* && typeof token.content !== 'string' */
-              ) {
-                walkTokens(token.content)
-              }
-            }
-            return tokens
-          }
-          walkTokens(env.tokens)
-        }
-      }
-    })
-  })(Prism)
-}
-
-
-/***/ }),
-
 /***/ "./node_modules/refractor/lang/markup.js":
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/markup.js ***!
@@ -6050,15 +5857,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var _src_prism_async_light_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../src/prism-async-light.js */ "./src/prism-async-light.js");
-/* harmony import */ var _styles_prism_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./styles/prism.js */ "./demo/styles/prism.js");
-/* harmony import */ var _examples_links_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./examples-links.js */ "./demo/examples-links.js");
-/* harmony import */ var _src_languages_prism_clike_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../src/languages/prism/clike.js */ "./src/languages/prism/clike.js");
-/* harmony import */ var _src_languages_prism_javascript_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../src/languages/prism/javascript.js */ "./src/languages/prism/javascript.js");
+/* harmony import */ var _src_prism_async_light_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../src/prism-async-light.js */ "./src/prism-async-light.js");
+/* harmony import */ var _styles_prism_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./styles/prism.js */ "./demo/styles/prism.js");
+/* harmony import */ var _examples_links_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./examples-links.js */ "./demo/examples-links.js");
+/* harmony import */ var _src_languages_prism_supported_languages_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../src/languages/prism/supported-languages.js */ "./src/languages/prism/supported-languages.js");
+/* harmony import */ var _src_styles_prism_atom_dark_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../src/styles/prism/atom-dark.js */ "./src/styles/prism/atom-dark.js");
 /* harmony import */ var _src_languages_prism_jsx_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../src/languages/prism/jsx.js */ "./src/languages/prism/jsx.js");
-/* harmony import */ var _src_languages_prism_markup_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../src/languages/prism/markup.js */ "./src/languages/prism/markup.js");
-/* harmony import */ var _src_languages_prism_markup_templating_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../src/languages/prism/markup-templating.js */ "./src/languages/prism/markup-templating.js");
-/* harmony import */ var _src_styles_prism_atom_dark_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../src/styles/prism/atom-dark.js */ "./src/styles/prism/atom-dark.js");
 
 
 
@@ -6077,13 +5881,18 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
 
 
 
-_src_prism_async_light_js__WEBPACK_IMPORTED_MODULE_6__["default"].registerLanguage('clike', _src_languages_prism_clike_js__WEBPACK_IMPORTED_MODULE_7__["default"]);
-_src_prism_async_light_js__WEBPACK_IMPORTED_MODULE_6__["default"].registerLanguage('javascript', _src_languages_prism_javascript_js__WEBPACK_IMPORTED_MODULE_8__["default"]);
-_src_prism_async_light_js__WEBPACK_IMPORTED_MODULE_6__["default"].registerLanguage('jsx', _src_languages_prism_jsx_js__WEBPACK_IMPORTED_MODULE_9__["default"]);
-_src_prism_async_light_js__WEBPACK_IMPORTED_MODULE_6__["default"].registerLanguage('markup', _src_languages_prism_markup_js__WEBPACK_IMPORTED_MODULE_10__["default"]);
-_src_prism_async_light_js__WEBPACK_IMPORTED_MODULE_6__["default"].registerLanguage('markup-templating', _src_languages_prism_markup_templating_js__WEBPACK_IMPORTED_MODULE_11__["default"]);
-var availableStyles = _styles_prism_js__WEBPACK_IMPORTED_MODULE_12__["default"];
-var availableLanguages = ['clike', 'javascript', 'jsx', 'markup', 'markup-templating'];
+
+
+/*
+SyntaxHighlighter.registerLanguage('clike', clike);
+SyntaxHighlighter.registerLanguage('javascript', javascript);
+SyntaxHighlighter.registerLanguage('jsx', jsx);
+SyntaxHighlighter.registerLanguage('markup', markup);
+SyntaxHighlighter.registerLanguage('markup-templating', markupTemplating);
+*/
+
+var availableStyles = _styles_prism_js__WEBPACK_IMPORTED_MODULE_6__["default"];
+var availableLanguages = _src_languages_prism_supported_languages_js__WEBPACK_IMPORTED_MODULE_7__["default"];
 var initialCodeString = "function createStyleObject(classNames, style) {\n  return classNames.reduce((styleObject, className) => {\n    return {...styleObject, ...style[className]};\n  }, {});\n}\n\nfunction createClassNameString(classNames) {\n  return classNames.join(' ');\n}\n\n// this comment is here to demonstrate an extremely long line length, well beyond what you should probably allow in your own code, though sometimes you'll be highlighting code you can't refactor, which is unfortunate but should be handled gracefully\n\nfunction createChildren(style, useInlineStyles) {\n  let childrenCount = 0;\n  return children => {\n    childrenCount += 1;\n    return children.map((child, i) => createElement({\n      node: child,\n      style,\n      useInlineStyles,\n      key:`code-segment-${childrenCount}-${i}`\n    }));\n  }\n}\n\nfunction createElement({ node, style, useInlineStyles, key }) {\n  const { properties, type, tagName, value } = node;\n  if (type === \"text\") {\n    return value;\n  } else if (tagName) {\n    const TagName = tagName;\n    const childrenCreator = createChildren(style, useInlineStyles);\n    const props = (\n      useInlineStyles\n      ?\n      { style: createStyleObject(properties.className, style) }\n      :\n      { className: createClassNameString(properties.className) }\n    );\n    const children = childrenCreator(node.children);\n    return <TagName key={key} {...props}>{children}</TagName>;\n  }\n}\n  ";
 var Component = function Component(props) {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_4__.useState)({
@@ -6091,7 +5900,7 @@ var Component = function Component(props) {
       showLineNumbers: false,
       wrapLongLines: false,
       style: 'atom-dark',
-      styleSrc: _src_styles_prism_atom_dark_js__WEBPACK_IMPORTED_MODULE_13__["default"],
+      styleSrc: _src_styles_prism_atom_dark_js__WEBPACK_IMPORTED_MODULE_8__["default"],
       language: 'jsx',
       languageSrc: _src_languages_prism_jsx_js__WEBPACK_IMPORTED_MODULE_9__["default"]
     }),
@@ -6100,7 +5909,7 @@ var Component = function Component(props) {
     setState = _useState2[1];
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4__.createElement("div", {
     className: "demo__root demo__root--prism-async-light"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4__.createElement("h1", null, "React Syntax Highlighter Demo"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4__.createElement(_examples_links_js__WEBPACK_IMPORTED_MODULE_14__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4__.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4__.createElement("aside", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4__.createElement("h1", null, "React Syntax Highlighter Demo"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4__.createElement(_examples_links_js__WEBPACK_IMPORTED_MODULE_10__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4__.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4__.createElement("aside", {
     className: "options__container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4__.createElement("div", {
     className: "options__option options__option--language"
@@ -6238,7 +6047,7 @@ var Component = function Component(props) {
         });
       });
     }
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4__.createElement(_src_prism_async_light_js__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4__.createElement(_src_prism_async_light_js__WEBPACK_IMPORTED_MODULE_11__["default"], {
     style: state.styleSrc,
     showLineNumbers: state.showLineNumbers,
     wrapLines: true,

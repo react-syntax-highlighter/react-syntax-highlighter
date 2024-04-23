@@ -16,14 +16,14 @@ fs.readdir(path.resolve('node_modules/highlight.js/styles'), (err, files) => {
     throw err;
   }
 
-  files = files.filter((f) => !f.endsWith('min.js'));
+  files = files.filter(f => !f.endsWith('.min.js') && !f.endsWith('.min.css'));
 
   files.forEach((file) => {
     if (file.includes('.css')) {
       createJavascriptStyleSheet(file);
     }
   });
-  const onlyCSSFiles = files.filter((file) => file.includes('.css'));
+  const onlyCSSFiles = files.filter(file => file.includes('.css'));
   const availableStyleNames = onlyCSSFiles.map((file) =>
     file.split('.css')[0] === 'default'
       ? 'default-style'

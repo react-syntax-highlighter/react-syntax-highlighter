@@ -92,7 +92,6 @@ fs.readdir(
       (f) =>
         !f.endsWith('.ts') && !f.endsWith('.js.js') && !f.endsWith('.min.js'),
     );
-    console.log('FILES:', files);
 
     files.forEach(createLanguagePassthroughModule);
 

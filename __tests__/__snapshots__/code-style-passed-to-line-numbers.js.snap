@@ -3,18 +3,15 @@
 exports[`SyntaxHighlighter component passes along code style to non-inline line numbers element 1`] = `
 <pre
   style={
-    Object {
-      "background": "#F0F0F0",
+    {
+      "background": "#F3F3F3",
       "color": "#444",
-      "display": "block",
-      "overflowX": "auto",
-      "padding": "0.5em",
     }
   }
 >
   <code
     style={
-      Object {
+      {
         "color": "blue",
         "whiteSpace": "pre",
       }
@@ -22,7 +19,7 @@ exports[`SyntaxHighlighter component passes along code style to non-inline line 
   >
     <code
       style={
-        Object {
+        {
           "color": "blue",
           "float": "left",
           "paddingRight": "10px",
@@ -31,149 +28,120 @@ exports[`SyntaxHighlighter component passes along code style to non-inline line 
     >
       <span
         className="react-syntax-highlighter-line-number"
-        style={Object {}}
+        style={{}}
       >
         1
 
       </span>
       <span
         className="react-syntax-highlighter-line-number"
-        style={Object {}}
+        style={{}}
       >
         2
 
       </span>
       <span
         className="react-syntax-highlighter-line-number"
-        style={Object {}}
+        style={{}}
       >
         3
 
       </span>
       <span
         className="react-syntax-highlighter-line-number"
-        style={Object {}}
+        style={{}}
       >
         4
 
       </span>
       <span
         className="react-syntax-highlighter-line-number"
-        style={Object {}}
+        style={{}}
       >
         5
 
       </span>
       <span
         className="react-syntax-highlighter-line-number"
-        style={Object {}}
+        style={{}}
       >
         6
 
       </span>
       <span
         className="react-syntax-highlighter-line-number"
-        style={Object {}}
+        style={{}}
       >
         7
 
       </span>
       <span
         className="react-syntax-highlighter-line-number"
-        style={Object {}}
+        style={{}}
       >
         8
 
       </span>
       <span
         className="react-syntax-highlighter-line-number"
-        style={Object {}}
+        style={{}}
       >
         9
 
       </span>
       <span
         className="react-syntax-highlighter-line-number"
-        style={Object {}}
+        style={{}}
       >
         10
 
       </span>
     </code>
     <span
-      style={
-        Object {
-          "fontWeight": "bold",
-        }
-      }
+      style={{}}
     >
-      const
-    </span>
-    <span
-      style={Object {}}
-    >
-       woah = 
+      const woah = 
     </span>
     <span
       className="hljs-function"
-      style={
-        Object {
-          "fontWeight": "bold",
-        }
-      }
+      style={{}}
     >
       fun
     </span>
     <span
       className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
-       =&gt; 
+       =&gt;
     </span>
     <span
-      className="hljs-function"
+      style={{}}
+    >
+       fun + 
+    </span>
+    <span
       style={
-        Object {
-          "fontWeight": "bold",
+        {
+          "color": "#880000",
         }
       }
     >
-      fun
+      1
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
-       + 1;
-    </span>
-    <span
-      style={Object {}}
-    >
-      
+      ;
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-      
+      const dude = woah(
     </span>
     <span
       style={
-        Object {
-          "fontWeight": "bold",
-        }
-      }
-    >
-      const
-    </span>
-    <span
-      style={Object {}}
-    >
-       dude = woah(
-    </span>
-    <span
-      style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -181,13 +149,13 @@ exports[`SyntaxHighlighter component passes along code style to non-inline line 
       2
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ) + 
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -195,21 +163,58 @@ exports[`SyntaxHighlighter component passes along code style to non-inline line 
       3
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ;
 
     </span>
-    function thisIsAFunction() {
-
     <span
-      style={Object {}}
+      style={{}}
+    />
+    <span
+      style={
+        {
+          "fontWeight": "bold",
+        }
+      }
+    >
+      function
+    </span>
+    <span
+      style={{}}
+    >
+       
+    </span>
+    <span
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      thisIsAFunction
+    </span>
+    <span
+      style={{}}
+    >
+      (
+    </span>
+    <span
+      style={{}}
+    >
+      ) {
+
+    </span>
+    <span
+      style={{}}
     >
         
     </span>
     <span
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -217,13 +222,13 @@ exports[`SyntaxHighlighter component passes along code style to non-inline line 
       return
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        [
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -231,13 +236,13 @@ exports[`SyntaxHighlighter component passes along code style to non-inline line 
       1
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ,
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -245,13 +250,13 @@ exports[`SyntaxHighlighter component passes along code style to non-inline line 
       2
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ,
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -259,13 +264,44 @@ exports[`SyntaxHighlighter component passes along code style to non-inline line 
       3
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-      ].map(n =&gt; n + 
+      ].
     </span>
     <span
       style={
-        Object {
+        {
+          "color": "#397300",
+        }
+      }
+    >
+      map
+    </span>
+    <span
+      style={{}}
+    >
+      (
+    </span>
+    <span
+      className="hljs-function"
+      style={{}}
+    >
+      n
+    </span>
+    <span
+      className="hljs-function"
+      style={{}}
+    >
+       =&gt;
+    </span>
+    <span
+      style={{}}
+    >
+       n + 
+    </span>
+    <span
+      style={
+        {
           "color": "#880000",
         }
       }
@@ -273,13 +309,27 @@ exports[`SyntaxHighlighter component passes along code style to non-inline line 
       1
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-      ).filter(n !== 
+      ).
     </span>
     <span
       style={
-        Object {
+        {
+          "color": "#397300",
+        }
+      }
+    >
+      filter
+    </span>
+    <span
+      style={{}}
+    >
+      (n !== 
+    </span>
+    <span
+      style={
+        {
           "color": "#880000",
         }
       }
@@ -287,7 +337,7 @@ exports[`SyntaxHighlighter component passes along code style to non-inline line 
       3
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       );
 
@@ -295,13 +345,39 @@ exports[`SyntaxHighlighter component passes along code style to non-inline line 
     }
 
     <span
-      style={Object {}}
+      style={{}}
+    />
+    <span
+      style={
+        {
+          "color": "#397300",
+        }
+      }
     >
-      console.log(
+      console
+    </span>
+    <span
+      style={{}}
+    >
+      .
     </span>
     <span
       style={
-        Object {
+        {
+          "color": "#397300",
+        }
+      }
+    >
+      log
+    </span>
+    <span
+      style={{}}
+    >
+      (
+    </span>
+    <span
+      style={
+        {
           "color": "#880000",
         }
       }
@@ -309,23 +385,60 @@ exports[`SyntaxHighlighter component passes along code style to non-inline line 
       'making up fake code is really hard'
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       );
 
     </span>
     
 
-    function itIs() {
-
     <span
-      style={Object {}}
+      style={{}}
+    />
+    <span
+      style={
+        {
+          "fontWeight": "bold",
+        }
+      }
+    >
+      function
+    </span>
+    <span
+      style={{}}
+    >
+       
+    </span>
+    <span
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      itIs
+    </span>
+    <span
+      style={{}}
+    >
+      (
+    </span>
+    <span
+      style={{}}
+    >
+      ) {
+
+    </span>
+    <span
+      style={{}}
     >
         
     </span>
     <span
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -333,13 +446,13 @@ exports[`SyntaxHighlighter component passes along code style to non-inline line 
       return
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -347,14 +460,13 @@ exports[`SyntaxHighlighter component passes along code style to non-inline line 
       'no seriously really it is'
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ;
 
     </span>
     }
 
-    
   </code>
 </pre>
 `;

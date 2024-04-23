@@ -1667,7 +1667,7 @@ __webpack_require__.r(__webpack_exports__);
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_diff */ "react-syntax-highlighter_languages_refractor_diff").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/diff.js */ "./node_modules/refractor/lang/diff.js"));
   }),
   django: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("django", function () {
-    return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_django */[__webpack_require__.e("react-syntax-highlighter_languages_refractor_markupTemplating"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_django")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/django.js */ "./node_modules/refractor/lang/django.js"));
+    return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_django */ "react-syntax-highlighter_languages_refractor_django").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/django.js */ "./node_modules/refractor/lang/django.js"));
   }),
   dnsZoneFile: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("dnsZoneFile", function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_dnsZoneFile */ "react-syntax-highlighter_languages_refractor_dnsZoneFile").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/dns-zone-file.js */ "./node_modules/refractor/lang/dns-zone-file.js"));
@@ -1688,7 +1688,7 @@ __webpack_require__.r(__webpack_exports__);
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_eiffel */ "react-syntax-highlighter_languages_refractor_eiffel").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/eiffel.js */ "./node_modules/refractor/lang/eiffel.js"));
   }),
   ejs: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("ejs", function () {
-    return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_ejs */[__webpack_require__.e("react-syntax-highlighter_languages_refractor_markupTemplating"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_ejs")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/ejs.js */ "./node_modules/refractor/lang/ejs.js"));
+    return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_ejs */ "react-syntax-highlighter_languages_refractor_ejs").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/ejs.js */ "./node_modules/refractor/lang/ejs.js"));
   }),
   elixir: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("elixir", function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_elixir */ "react-syntax-highlighter_languages_refractor_elixir").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/elixir.js */ "./node_modules/refractor/lang/elixir.js"));
@@ -1697,13 +1697,13 @@ __webpack_require__.r(__webpack_exports__);
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_elm */ "react-syntax-highlighter_languages_refractor_elm").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/elm.js */ "./node_modules/refractor/lang/elm.js"));
   }),
   erb: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("erb", function () {
-    return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_erb */[__webpack_require__.e("react-syntax-highlighter_languages_refractor_markupTemplating"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_erb")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/erb.js */ "./node_modules/refractor/lang/erb.js"));
+    return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_erb */ "react-syntax-highlighter_languages_refractor_erb").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/erb.js */ "./node_modules/refractor/lang/erb.js"));
   }),
   erlang: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("erlang", function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_erlang */ "react-syntax-highlighter_languages_refractor_erlang").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/erlang.js */ "./node_modules/refractor/lang/erlang.js"));
   }),
   etlua: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("etlua", function () {
-    return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_etlua */[__webpack_require__.e("react-syntax-highlighter_languages_refractor_markupTemplating"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_etlua")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/etlua.js */ "./node_modules/refractor/lang/etlua.js"));
+    return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_etlua */ "react-syntax-highlighter_languages_refractor_etlua").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/etlua.js */ "./node_modules/refractor/lang/etlua.js"));
   }),
   excelFormula: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("excelFormula", function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_excelFormula */ "react-syntax-highlighter_languages_refractor_excelFormula").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/excel-formula.js */ "./node_modules/refractor/lang/excel-formula.js"));
@@ -1727,7 +1727,7 @@ __webpack_require__.r(__webpack_exports__);
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_fsharp */ "react-syntax-highlighter_languages_refractor_fsharp").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/fsharp.js */ "./node_modules/refractor/lang/fsharp.js"));
   }),
   ftl: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("ftl", function () {
-    return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_ftl */[__webpack_require__.e("react-syntax-highlighter_languages_refractor_markupTemplating"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_ftl")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/ftl.js */ "./node_modules/refractor/lang/ftl.js"));
+    return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_ftl */ "react-syntax-highlighter_languages_refractor_ftl").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/ftl.js */ "./node_modules/refractor/lang/ftl.js"));
   }),
   gap: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("gap", function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_gap */ "react-syntax-highlighter_languages_refractor_gap").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/gap.js */ "./node_modules/refractor/lang/gap.js"));
@@ -1778,7 +1778,7 @@ __webpack_require__.r(__webpack_exports__);
     return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_haml */[__webpack_require__.e("vendors-node_modules_refractor_lang_haml_js"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_haml")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/haml.js */ "./node_modules/refractor/lang/haml.js"));
   }),
   handlebars: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("handlebars", function () {
-    return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_handlebars */[__webpack_require__.e("react-syntax-highlighter_languages_refractor_markupTemplating"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_handlebars")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/handlebars.js */ "./node_modules/refractor/lang/handlebars.js"));
+    return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_handlebars */ "react-syntax-highlighter_languages_refractor_handlebars").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/handlebars.js */ "./node_modules/refractor/lang/handlebars.js"));
   }),
   haskell: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("haskell", function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_haskell */ "react-syntax-highlighter_languages_refractor_haskell").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/haskell.js */ "./node_modules/refractor/lang/haskell.js"));
@@ -1904,7 +1904,7 @@ __webpack_require__.r(__webpack_exports__);
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_latex */ "react-syntax-highlighter_languages_refractor_latex").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/latex.js */ "./node_modules/refractor/lang/latex.js"));
   }),
   latte: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("latte", function () {
-    return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_latte */[__webpack_require__.e("react-syntax-highlighter_languages_refractor_markupTemplating"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_php"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_latte")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/latte.js */ "./node_modules/refractor/lang/latte.js"));
+    return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_latte */[__webpack_require__.e("vendors-node_modules_refractor_lang_php_js"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_latte")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/latte.js */ "./node_modules/refractor/lang/latte.js"));
   }),
   less: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("less", function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_less */ "react-syntax-highlighter_languages_refractor_less").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/less.js */ "./node_modules/refractor/lang/less.js"));
@@ -1916,7 +1916,7 @@ __webpack_require__.r(__webpack_exports__);
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_linkerScript */ "react-syntax-highlighter_languages_refractor_linkerScript").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/linker-script.js */ "./node_modules/refractor/lang/linker-script.js"));
   }),
   liquid: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("liquid", function () {
-    return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_liquid */[__webpack_require__.e("react-syntax-highlighter_languages_refractor_markupTemplating"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_liquid")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/liquid.js */ "./node_modules/refractor/lang/liquid.js"));
+    return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_liquid */ "react-syntax-highlighter_languages_refractor_liquid").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/liquid.js */ "./node_modules/refractor/lang/liquid.js"));
   }),
   lisp: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("lisp", function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_lisp */ "react-syntax-highlighter_languages_refractor_lisp").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/lisp.js */ "./node_modules/refractor/lang/lisp.js"));
@@ -2054,13 +2054,13 @@ __webpack_require__.r(__webpack_exports__);
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_perl */ "react-syntax-highlighter_languages_refractor_perl").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/perl.js */ "./node_modules/refractor/lang/perl.js"));
   }),
   phpExtras: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("phpExtras", function () {
-    return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_phpExtras */[__webpack_require__.e("react-syntax-highlighter_languages_refractor_markupTemplating"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_php"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_phpExtras")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/php-extras.js */ "./node_modules/refractor/lang/php-extras.js"));
+    return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_phpExtras */[__webpack_require__.e("vendors-node_modules_refractor_lang_php_js"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_phpExtras")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/php-extras.js */ "./node_modules/refractor/lang/php-extras.js"));
   }),
   php: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("php", function () {
-    return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_php */[__webpack_require__.e("react-syntax-highlighter_languages_refractor_markupTemplating"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_php")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/php.js */ "./node_modules/refractor/lang/php.js"));
+    return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_php */[__webpack_require__.e("vendors-node_modules_refractor_lang_php_js"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_php")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/php.js */ "./node_modules/refractor/lang/php.js"));
   }),
   phpdoc: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("phpdoc", function () {
-    return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_phpdoc */[__webpack_require__.e("react-syntax-highlighter_languages_refractor_markupTemplating"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_php"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_phpdoc")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/phpdoc.js */ "./node_modules/refractor/lang/phpdoc.js"));
+    return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_phpdoc */[__webpack_require__.e("vendors-node_modules_refractor_lang_php_js"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_phpdoc")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/phpdoc.js */ "./node_modules/refractor/lang/phpdoc.js"));
   }),
   plantUml: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("plantUml", function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_plantUml */ "react-syntax-highlighter_languages_refractor_plantUml").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/plant-uml.js */ "./node_modules/refractor/lang/plant-uml.js"));
@@ -2186,7 +2186,7 @@ __webpack_require__.r(__webpack_exports__);
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_smalltalk */ "react-syntax-highlighter_languages_refractor_smalltalk").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/smalltalk.js */ "./node_modules/refractor/lang/smalltalk.js"));
   }),
   smarty: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("smarty", function () {
-    return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_smarty */[__webpack_require__.e("react-syntax-highlighter_languages_refractor_markupTemplating"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_smarty")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/smarty.js */ "./node_modules/refractor/lang/smarty.js"));
+    return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_smarty */ "react-syntax-highlighter_languages_refractor_smarty").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/smarty.js */ "./node_modules/refractor/lang/smarty.js"));
   }),
   sml: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("sml", function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_sml */ "react-syntax-highlighter_languages_refractor_sml").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/sml.js */ "./node_modules/refractor/lang/sml.js"));
@@ -2198,7 +2198,7 @@ __webpack_require__.r(__webpack_exports__);
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_solutionFile */ "react-syntax-highlighter_languages_refractor_solutionFile").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/solution-file.js */ "./node_modules/refractor/lang/solution-file.js"));
   }),
   soy: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("soy", function () {
-    return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_soy */[__webpack_require__.e("react-syntax-highlighter_languages_refractor_markupTemplating"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_soy")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/soy.js */ "./node_modules/refractor/lang/soy.js"));
+    return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_soy */ "react-syntax-highlighter_languages_refractor_soy").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/soy.js */ "./node_modules/refractor/lang/soy.js"));
   }),
   sparql: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("sparql", function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_sparql */ "react-syntax-highlighter_languages_refractor_sparql").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/sparql.js */ "./node_modules/refractor/lang/sparql.js"));
@@ -2261,13 +2261,13 @@ __webpack_require__.r(__webpack_exports__);
     return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_tsx */[__webpack_require__.e("react-syntax-highlighter_languages_refractor_jsx"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_tsx")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/tsx.js */ "./node_modules/refractor/lang/tsx.js"));
   }),
   tt2: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("tt2", function () {
-    return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_tt2 */[__webpack_require__.e("react-syntax-highlighter_languages_refractor_markupTemplating"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_tt2")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/tt2.js */ "./node_modules/refractor/lang/tt2.js"));
+    return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_tt2 */ "react-syntax-highlighter_languages_refractor_tt2").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/tt2.js */ "./node_modules/refractor/lang/tt2.js"));
   }),
   turtle: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("turtle", function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_turtle */ "react-syntax-highlighter_languages_refractor_turtle").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/turtle.js */ "./node_modules/refractor/lang/turtle.js"));
   }),
   twig: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("twig", function () {
-    return Promise.all(/*! import() | react-syntax-highlighter_languages_refractor_twig */[__webpack_require__.e("react-syntax-highlighter_languages_refractor_markupTemplating"), __webpack_require__.e("react-syntax-highlighter_languages_refractor_twig")]).then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/twig.js */ "./node_modules/refractor/lang/twig.js"));
+    return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_twig */ "react-syntax-highlighter_languages_refractor_twig").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/twig.js */ "./node_modules/refractor/lang/twig.js"));
   }),
   typescript: (0,_create_language_async_loader_js__WEBPACK_IMPORTED_MODULE_0__["default"])("typescript", function () {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter_languages_refractor_typescript */ "react-syntax-highlighter_languages_refractor_typescript").then(__webpack_require__.bind(__webpack_require__, /*! refractor/lang/typescript.js */ "./node_modules/refractor/lang/typescript.js"));

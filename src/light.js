@@ -1,5 +1,5 @@
 import highlight from './highlight.js';
-import { createLowlight } from 'lowlight';
+import {createLowlight} from 'lowlight';
 
 const lowlight = createLowlight();
 

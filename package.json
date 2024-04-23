@@ -1,6 +1,6 @@
 {
   "name": "react-syntax-highlighter",
-  "version": "15.5.0",
+  "version": "16.0.0",
   "description": "syntax highlighting component for react with prismjs or highlightjs ast using inline styles",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -69,7 +69,8 @@
     "build-styles-prism": "node ./scripts/build-stylesheets-refractor.js",
     "build-languages-prism": "node ./scripts/build-languages-refractor.js",
     "prepare": "npm run build-styles-hljs && npm run build-languages-hljs && npm run build-styles-prism && npm run build-languages-prism && npm run build",
-    "test": "jest",
+    "test": "NODE_OPTIONS='--experimental-vm-modules' jest --no-silent",
+    "snapshot": "NODE_OPTIONS='--experimental-vm-modules' jest --updateSnapshot",
     "test-ci": "jest && codecov",
     "publish-coverage": "codecov",
     "format": "npm run prettier",
