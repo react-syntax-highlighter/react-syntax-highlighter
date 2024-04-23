@@ -1,22 +1,36 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_highlight_sml"],{
+"use strict";
+(self["webpackChunkreact_syntax_highlighter"] = self["webpackChunkreact_syntax_highlighter"] || []).push([["react-syntax-highlighter_languages_highlight_sml"],{
 
-/***/ "./node_modules/highlight.js/lib/languages/sml.js":
-/*!********************************************************!*\
-  !*** ./node_modules/highlight.js/lib/languages/sml.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/highlight.js/es/languages/sml.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/highlight.js/es/languages/sml.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-module.exports = function(hljs) {
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ sml)
+/* harmony export */ });
+/*
+Language: SML (Standard ML)
+Author: Edwin Dalorzo <edwin@dalorzo.org>
+Description: SML language definition.
+Website: https://www.smlnj.org
+Origin: ocaml.js
+Category: functional
+*/
+function sml(hljs) {
   return {
-    aliases: ['ml'],
+    name: 'SML (Standard ML)',
+    aliases: [ 'ml' ],
     keywords: {
+      $pattern: '[a-z_]\\w*!?',
       keyword:
         /* according to Definition of Standard ML 97  */
-        'abstype and andalso as case datatype do else end eqtype ' +
-        'exception fn fun functor handle if in include infix infixr ' +
-        'let local nonfix of op open orelse raise rec sharing sig ' +
-        'signature struct structure then type val with withtype where while',
+        'abstype and andalso as case datatype do else end eqtype '
+        + 'exception fn fun functor handle if in include infix infixr '
+        + 'let local nonfix of op open orelse raise rec sharing sig '
+        + 'signature struct structure then type val with withtype where while',
       built_in:
         /* built-in types according to basis library */
         'array bool char exn int list option order real ref string substring vector unit word',
@@ -24,7 +38,6 @@ module.exports = function(hljs) {
         'true false NONE SOME LESS EQUAL GREATER nil'
     },
     illegal: /\/\/|>>/,
-    lexemes: '[a-z_]\\w*!?',
     contains: [
       {
         className: 'literal',
@@ -34,9 +47,7 @@ module.exports = function(hljs) {
       hljs.COMMENT(
         '\\(\\*',
         '\\*\\)',
-        {
-          contains: ['self']
-        }
+        { contains: [ 'self' ] }
       ),
       { /* type variable */
         className: 'symbol',
@@ -52,26 +63,30 @@ module.exports = function(hljs) {
         begin: '\\b[A-Z][\\w\']*',
         relevance: 0
       },
-      { /* don't color identifiers, but safely catch all identifiers with '*/
-        begin: '[a-z_]\\w*\'[\\w\']*'
-      },
-      hljs.inherit(hljs.APOS_STRING_MODE, {className: 'string', relevance: 0}),
-      hljs.inherit(hljs.QUOTE_STRING_MODE, {illegal: null}),
+      { /* don't color identifiers, but safely catch all identifiers with ' */
+        begin: '[a-z_]\\w*\'[\\w\']*' },
+      hljs.inherit(hljs.APOS_STRING_MODE, {
+        className: 'string',
+        relevance: 0
+      }),
+      hljs.inherit(hljs.QUOTE_STRING_MODE, { illegal: null }),
       {
         className: 'number',
         begin:
-          '\\b(0[xX][a-fA-F0-9_]+[Lln]?|' +
-          '0[oO][0-7_]+[Lln]?|' +
-          '0[bB][01_]+[Lln]?|' +
-          '[0-9][0-9_]*([Lln]|(\\.[0-9_]*)?([eE][-+]?[0-9_]+)?)?)',
+          '\\b(0[xX][a-fA-F0-9_]+[Lln]?|'
+          + '0[oO][0-7_]+[Lln]?|'
+          + '0[bB][01_]+[Lln]?|'
+          + '[0-9][0-9_]*([Lln]|(\\.[0-9_]*)?([eE][-+]?[0-9_]+)?)?)',
         relevance: 0
       },
-      {
-        begin: /[-=]>/ // relevance booster
+      { begin: /[-=]>/ // relevance booster
       }
     ]
   };
-};
+}
+
+
+
 
 /***/ })
 

@@ -3,7 +3,7 @@
 exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
 <pre
   style={
-    Object {
+    {
       "MozHyphens": "none",
       "MozTabSize": "4",
       "OTabSize": "4",
@@ -31,7 +31,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
   <code
     className="language-jsx"
     style={
-      Object {
+      {
         "MozHyphens": "none",
         "MozTabSize": "4",
         "OTabSize": "4",
@@ -54,9 +54,9 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
     }
   >
     <span
-      className="token module"
+      className="token"
       style={
-        Object {
+        {
           "color": "#07a",
         }
       }
@@ -64,25 +64,14 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       import
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-       
+       React 
     </span>
     <span
-      className="token imports maybe-class-name"
-      style={Object {}}
-    >
-      React
-    </span>
-    <span
-      style={Object {}}
-    >
-       
-    </span>
-    <span
-      className="token module"
+      className="token"
       style={
-        Object {
+        {
           "color": "#07a",
         }
       }
@@ -90,14 +79,14 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       from
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#690",
         }
       }
@@ -107,7 +96,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -115,20 +104,18 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       ;
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       
 
     </span>
     <span
-      style={Object {}}
-    >
-      
-    </span>
+      style={{}}
+    />
     <span
-      className="token module"
+      className="token"
       style={
-        Object {
+        {
           "color": "#07a",
         }
       }
@@ -136,25 +123,14 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       import
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-       
+       uniquePropHOC 
     </span>
     <span
-      className="token imports"
-      style={Object {}}
-    >
-      uniquePropHOC
-    </span>
-    <span
-      style={Object {}}
-    >
-       
-    </span>
-    <span
-      className="token module"
+      className="token"
       style={
-        Object {
+        {
           "color": "#07a",
         }
       }
@@ -162,14 +138,14 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       from
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#690",
         }
       }
@@ -179,7 +155,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -187,7 +163,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       ;
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       
 
@@ -195,14 +171,12 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
     
 
     <span
-      style={Object {}}
-    >
-      
-    </span>
+      style={{}}
+    />
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#07a",
         }
       }
@@ -210,14 +184,14 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       class
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#DD4A68",
         }
       }
@@ -225,14 +199,14 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       Expire
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#07a",
         }
       }
@@ -240,14 +214,14 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       extends
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#DD4A68",
         }
       }
@@ -257,7 +231,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -267,7 +241,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#DD4A68",
         }
       }
@@ -275,14 +249,14 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       Component
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -290,20 +264,20 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       {
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
           
     </span>
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#DD4A68",
         }
       }
@@ -313,7 +287,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -322,14 +296,14 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
     </span>
     <span
       className="token parameter"
-      style={Object {}}
+      style={{}}
     >
       props
     </span>
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -337,14 +311,14 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       )
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -352,20 +326,20 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       {
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
               
     </span>
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#07a",
         }
       }
@@ -375,7 +349,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -383,14 +357,14 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       (
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       props
     </span>
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -400,7 +374,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -408,20 +382,20 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       ;
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
               
     </span>
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#07a",
         }
       }
@@ -431,7 +405,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -439,20 +413,14 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       .
     </span>
     <span
-      className="token property-access"
-      style={Object {}}
+      style={{}}
     >
-      state
-    </span>
-    <span
-      style={Object {}}
-    >
-       
+      state 
     </span>
     <span
       className="token"
       style={
-        Object {
+        {
           "background": "hsla(0, 0%, 100%, .5)",
           "color": "#9a6e3a",
         }
@@ -461,14 +429,14 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       =
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -476,14 +444,14 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       {
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
       className="token literal-property"
       style={
-        Object {
+        {
           "color": "#905",
         }
       }
@@ -493,7 +461,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
     <span
       className="token"
       style={
-        Object {
+        {
           "background": "hsla(0, 0%, 100%, .5)",
           "color": "#9a6e3a",
         }
@@ -502,14 +470,14 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       :
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        props
     </span>
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -517,20 +485,14 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       .
     </span>
     <span
-      className="token property-access"
-      style={Object {}}
+      style={{}}
     >
-      children
-    </span>
-    <span
-      style={Object {}}
-    >
-       
+      children 
     </span>
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -538,20 +500,20 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       }
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
           
     </span>
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -559,20 +521,20 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       }
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
           
     </span>
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#DD4A68",
         }
       }
@@ -582,7 +544,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -592,7 +554,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -600,14 +562,14 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       )
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -615,20 +577,20 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       {
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
               
     </span>
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#DD4A68",
         }
       }
@@ -638,7 +600,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -648,7 +610,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -658,7 +620,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -666,14 +628,14 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       )
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
-      className="token arrow"
+      className="token"
       style={
-        Object {
+        {
           "background": "hsla(0, 0%, 100%, .5)",
           "color": "#9a6e3a",
         }
@@ -682,14 +644,14 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       =&gt;
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -697,20 +659,20 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       {
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
                   
     </span>
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#07a",
         }
       }
@@ -720,7 +682,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -728,9 +690,9 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       .
     </span>
     <span
-      className="token method property-access"
+      className="token"
       style={
-        Object {
+        {
           "color": "#DD4A68",
         }
       }
@@ -740,7 +702,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -750,7 +712,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -758,20 +720,20 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       {
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
                       
     </span>
     <span
       className="token literal-property"
       style={
-        Object {
+        {
           "color": "#905",
         }
       }
@@ -781,7 +743,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
     <span
       className="token"
       style={
-        Object {
+        {
           "background": "hsla(0, 0%, 100%, .5)",
           "color": "#9a6e3a",
         }
@@ -790,14 +752,14 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       :
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
-      className="token null nil"
+      className="token"
       style={
-        Object {
+        {
           "color": "#07a",
         }
       }
@@ -805,20 +767,20 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       null
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
                   
     </span>
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -828,7 +790,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -838,7 +800,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -846,20 +808,20 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       ;
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
               
     </span>
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -869,7 +831,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -877,14 +839,14 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       ,
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#07a",
         }
       }
@@ -894,7 +856,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -902,15 +864,14 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       .
     </span>
     <span
-      className="token property-access"
-      style={Object {}}
+      style={{}}
     >
       props
     </span>
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -918,20 +879,14 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       .
     </span>
     <span
-      className="token property-access"
-      style={Object {}}
+      style={{}}
     >
-      time
-    </span>
-    <span
-      style={Object {}}
-    >
-       
+      time 
     </span>
     <span
       className="token"
       style={
-        Object {
+        {
           "background": "hsla(0, 0%, 100%, .5)",
           "color": "#9a6e3a",
         }
@@ -940,14 +895,14 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       ||
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#07a",
         }
       }
@@ -957,7 +912,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -965,15 +920,14 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       .
     </span>
     <span
-      className="token property-access"
-      style={Object {}}
+      style={{}}
     >
       props
     </span>
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -981,20 +935,14 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       .
     </span>
     <span
-      className="token property-access"
-      style={Object {}}
+      style={{}}
     >
-      seconds
-    </span>
-    <span
-      style={Object {}}
-    >
-       
+      seconds 
     </span>
     <span
       className="token"
       style={
-        Object {
+        {
           "background": "hsla(0, 0%, 100%, .5)",
           "color": "#9a6e3a",
         }
@@ -1003,14 +951,14 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       *
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#905",
         }
       }
@@ -1020,7 +968,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -1030,7 +978,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -1038,20 +986,20 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       ;
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
           
     </span>
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -1059,20 +1007,20 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       }
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
           
     </span>
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#DD4A68",
         }
       }
@@ -1082,7 +1030,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -1092,7 +1040,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -1100,14 +1048,14 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       )
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -1115,20 +1063,20 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       {
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
               
     </span>
     <span
-      className="token control-flow"
+      className="token"
       style={
-        Object {
+        {
           "color": "#07a",
         }
       }
@@ -1136,14 +1084,14 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       return
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#07a",
         }
       }
@@ -1153,7 +1101,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -1161,15 +1109,14 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       .
     </span>
     <span
-      className="token property-access"
-      style={Object {}}
+      style={{}}
     >
       state
     </span>
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -1177,15 +1124,14 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       .
     </span>
     <span
-      className="token property-access"
-      style={Object {}}
+      style={{}}
     >
       component
     </span>
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -1193,20 +1139,20 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       ;
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
           
     </span>
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -1214,20 +1160,18 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
       }
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       
 
     </span>
     <span
-      style={Object {}}
-    >
-      
-    </span>
+      style={{}}
+    />
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -1241,7 +1185,7 @@ exports[`SyntaxHighlighter renders jsx highlighted text 1`] = `
 exports[`SyntaxHighlighter should just render text if syntax is not registered 1`] = `
 <pre
   style={
-    Object {
+    {
       "MozHyphens": "none",
       "MozTabSize": "4",
       "OTabSize": "4",
@@ -1269,7 +1213,7 @@ exports[`SyntaxHighlighter should just render text if syntax is not registered 1
   <code
     className="language-python"
     style={
-      Object {
+      {
         "MozHyphens": "none",
         "MozTabSize": "4",
         "OTabSize": "4",
@@ -1294,7 +1238,7 @@ exports[`SyntaxHighlighter should just render text if syntax is not registered 1
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#07a",
         }
       }
@@ -1304,7 +1248,7 @@ exports[`SyntaxHighlighter should just render text if syntax is not registered 1
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }
@@ -1314,7 +1258,7 @@ exports[`SyntaxHighlighter should just render text if syntax is not registered 1
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#690",
         }
       }
@@ -1324,7 +1268,7 @@ exports[`SyntaxHighlighter should just render text if syntax is not registered 1
     <span
       className="token"
       style={
-        Object {
+        {
           "color": "#999",
         }
       }

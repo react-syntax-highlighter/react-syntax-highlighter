@@ -19,7 +19,7 @@ test('SyntaxHighlighter component renders line numbers if showLineNumbers === tr
     .create(
       <SyntaxHighlighter language="javascript" showLineNumbers>
         {code}
-      </SyntaxHighlighter>
+      </SyntaxHighlighter>,
     )
     .toJSON();
   expect(tree).toMatchSnapshot();
@@ -37,7 +37,7 @@ test('SyntaxHighlighter component does not render line numbers if showInlineNumb
     .create(
       <SyntaxHighlighter language="javascript" showInlineLineNumbers={true}>
         {code}
-      </SyntaxHighlighter>
+      </SyntaxHighlighter>,
     )
     .toJSON();
   expect(tree).toMatchSnapshot();
@@ -48,7 +48,7 @@ test('SyntaxHighlighter component renders correctly', () => {
     .create(
       <SyntaxHighlighter language="javascript" showLineNumbers>
         {code}
-      </SyntaxHighlighter>
+      </SyntaxHighlighter>,
     )
     .toJSON();
   expect(tree).toMatchSnapshot();
@@ -63,7 +63,7 @@ test('SyntaxHighlighter allows lineNumberStyle as object', () => {
         lineNumberStyle={{ color: 'red' }}
       >
         {code}
-      </SyntaxHighlighter>
+      </SyntaxHighlighter>,
     )
     .toJSON();
   expect(tree).toMatchSnapshot();
@@ -78,7 +78,7 @@ test('SyntaxHighlighter allows lineNumberStyle as function', () => {
         lineNumberStyle={() => ({ color: 'red' })}
       >
         {code}
-      </SyntaxHighlighter>
+      </SyntaxHighlighter>,
     )
     .toJSON();
   expect(tree).toMatchSnapshot();
@@ -94,7 +94,7 @@ test('SyntaxHighlighter allows lineNumberStyle as function for inline line numbe
         lineNumberStyle={() => ({ color: 'red' })}
       >
         {code}
-      </SyntaxHighlighter>
+      </SyntaxHighlighter>,
     )
     .toJSON();
   expect(tree).toMatchSnapshot();

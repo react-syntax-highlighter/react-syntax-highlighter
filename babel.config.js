@@ -1,4 +1,4 @@
-module.exports = {
+const config = {
   plugins: [
     '@babel/plugin-proposal-class-properties',
     '@babel/plugin-proposal-object-rest-spread',
@@ -23,9 +23,9 @@ module.exports = {
       ]
     },
     test: {
-      presets: [['@babel/env', { targets: { node: true } }]],
-      // There is no @babel/ scoped transform for this plugin
-      plugins: ['transform-dynamic-import']
+      presets: [['@babel/env', { modules: false, targets: { node: true } }]]
     }
   }
 };
+
+export default config;

@@ -1,8 +1,13 @@
 export default {
-    "hljs": {
+    "re code.hljs": {
         "display": "block",
         "overflowX": "auto",
-        "padding": "0.5em",
+        "padding": "1em"
+    },
+    "ode.hljs": {
+        "padding": "3px 5px"
+    },
+    "hljs": {
         "background": "#eee",
         "color": "black"
     },
@@ -44,6 +49,9 @@ export default {
         "color": "#900"
     },
     "hljs-class .hljs-title": {
+        "color": "#458"
+    },
+    "hljs-title.class_": {
         "color": "#458"
     },
     "hljs-type": {

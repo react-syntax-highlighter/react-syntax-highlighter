@@ -11,7 +11,7 @@ test('SyntaxHighlighter renders childre unadultered when no language disocvered 
     .create(
       <SyntaxHighlighter>
         {`Contacts* contacts = [[Contacts alloc]init];`}
-      </SyntaxHighlighter>
+      </SyntaxHighlighter>,
     )
     .toJSON();
   expect(tree).toMatchSnapshot();

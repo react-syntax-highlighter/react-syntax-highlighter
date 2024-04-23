@@ -1,12 +1,16 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_highlight_phpTemplate"],{
+"use strict";
+(self["webpackChunkreact_syntax_highlighter"] = self["webpackChunkreact_syntax_highlighter"] || []).push([["react-syntax-highlighter_languages_highlight_phpTemplate"],{
 
-/***/ "./node_modules/highlight.js/lib/languages/php-template.js":
-/*!*****************************************************************!*\
-  !*** ./node_modules/highlight.js/lib/languages/php-template.js ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/highlight.js/es/languages/php-template.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/highlight.js/es/languages/php-template.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ phpTemplate)
+/* harmony export */ });
 /*
 Language: PHP Template
 Requires: xml.js, php.js
@@ -60,7 +64,7 @@ function phpTemplate(hljs) {
   };
 }
 
-module.exports = phpTemplate;
+
 
 
 /***/ })

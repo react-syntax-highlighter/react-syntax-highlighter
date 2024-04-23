@@ -1,18 +1,32 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_highlight_roboconf"],{
+"use strict";
+(self["webpackChunkreact_syntax_highlighter"] = self["webpackChunkreact_syntax_highlighter"] || []).push([["react-syntax-highlighter_languages_highlight_roboconf"],{
 
-/***/ "./node_modules/highlight.js/lib/languages/roboconf.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/highlight.js/lib/languages/roboconf.js ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/highlight.js/es/languages/roboconf.js":
+/*!************************************************************!*\
+  !*** ./node_modules/highlight.js/es/languages/roboconf.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-module.exports = function(hljs) {
-  var IDENTIFIER = '[a-zA-Z-_][^\\n{]+\\{';
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ roboconf)
+/* harmony export */ });
+/*
+Language: Roboconf
+Author: Vincent Zurczak <vzurczak@linagora.com>
+Description: Syntax highlighting for Roboconf's DSL
+Website: http://roboconf.net
+Category: config
+*/
 
-  var PROPERTY = {
+function roboconf(hljs) {
+  const IDENTIFIER = '[a-zA-Z-_][^\\n{]+\\{';
+
+  const PROPERTY = {
     className: 'attribute',
-    begin: /[a-zA-Z-_]+/, end: /\s*:/, excludeEnd: true,
+    begin: /[a-zA-Z-_]+/,
+    end: /\s*:/,
+    excludeEnd: true,
     starts: {
       end: ';',
       relevance: 0,
@@ -30,14 +44,18 @@ module.exports = function(hljs) {
   };
 
   return {
-    aliases: ['graph', 'instances'],
+    name: 'Roboconf',
+    aliases: [
+      'graph',
+      'instances'
+    ],
     case_insensitive: true,
     keywords: 'import',
     contains: [
       // Facet sections
       {
         begin: '^facet ' + IDENTIFIER,
-        end: '}',
+        end: /\}/,
         keywords: 'facet',
         contains: [
           PROPERTY,
@@ -48,7 +66,7 @@ module.exports = function(hljs) {
       // Instance sections
       {
         begin: '^\\s*instance of ' + IDENTIFIER,
-        end: '}',
+        end: /\}/,
         keywords: 'name count channels instance-data instance-state instance of',
         illegal: /\S/,
         contains: [
@@ -61,7 +79,7 @@ module.exports = function(hljs) {
       // Component sections
       {
         begin: '^' + IDENTIFIER,
-        end: '}',
+        end: /\}/,
         contains: [
           PROPERTY,
           hljs.HASH_COMMENT_MODE
@@ -72,7 +90,10 @@ module.exports = function(hljs) {
       hljs.HASH_COMMENT_MODE
     ]
   };
-};
+}
+
+
+
 
 /***/ })
 

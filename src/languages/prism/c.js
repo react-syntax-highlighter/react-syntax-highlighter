@@ -1,2 +1,2 @@
-import c from "refractor/lang/c.js";;
+import c from "refractor/lang/c.js";
 export default c;

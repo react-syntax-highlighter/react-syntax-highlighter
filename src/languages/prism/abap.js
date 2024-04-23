@@ -1,2 +1,2 @@
-import abap from "refractor/lang/abap.js";;
+import abap from "refractor/lang/abap.js";
 export default abap;

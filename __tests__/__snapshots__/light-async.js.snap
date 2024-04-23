@@ -3,7 +3,7 @@
 exports[`SyntaxHighlighter render as text if language doesnt exist 1`] = `
 <pre
   style={
-    Object {
+    {
       "MozHyphens": "none",
       "MozTabSize": "4",
       "OTabSize": "4",
@@ -31,7 +31,7 @@ exports[`SyntaxHighlighter render as text if language doesnt exist 1`] = `
   <code
     className="language-text"
     style={
-      Object {
+      {
         "MozHyphens": "none",
         "MozTabSize": "4",
         "OTabSize": "4",
@@ -54,7 +54,7 @@ exports[`SyntaxHighlighter render as text if language doesnt exist 1`] = `
     }
   >
     <span
-      style={Object {}}
+      style={{}}
     >
       print('hello')
     </span>
@@ -65,7 +65,7 @@ exports[`SyntaxHighlighter render as text if language doesnt exist 1`] = `
 exports[`SyntaxHighlighter renders fortran highlighted text 1`] = `
 <pre
   style={
-    Object {
+    {
       "MozHyphens": "none",
       "MozTabSize": "4",
       "OTabSize": "4",
@@ -93,7 +93,7 @@ exports[`SyntaxHighlighter renders fortran highlighted text 1`] = `
   <code
     className="language-fortran"
     style={
-      Object {
+      {
         "MozHyphens": "none",
         "MozTabSize": "4",
         "OTabSize": "4",
@@ -116,64 +116,697 @@ exports[`SyntaxHighlighter renders fortran highlighted text 1`] = `
     }
   >
     <span
-      style={Object {}}
+      style={{}}
     >
       
 
     </span>
-                C AREA OF A TRIANGLE WITH A STANDARD SQUARE ROOT FUNCTION
+    <span
+      style={{}}
+    >
+                  C AREA OF A TRIANGLE WITH A STANDARD SQUARE ROOT 
+    </span>
+    <span
+      className="hljs-function hljs-keyword"
+      style={{}}
+    >
+      FUNCTION
+    </span>
+    <span
+      style={{}}
+    >
+      
 
-                C INPUT - TAPE READER UNIT 5, INTEGER INPUT
+    </span>
+    <span
+      style={{}}
+    >
+                  C INPUT - TAPE READER 
+    </span>
+    <span
+      className="hljs-keyword"
+      style={{}}
+    >
+      UNIT
+    </span>
+    <span
+      style={{}}
+    >
+       
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      5
+    </span>
+    <span
+      style={{}}
+    >
+      , 
+    </span>
+    <span
+      className="hljs-keyword"
+      style={{}}
+    >
+      INTEGER
+    </span>
+    <span
+      style={{}}
+    >
+       INPUT
 
-                C OUTPUT - LINE PRINTER UNIT 6, REAL OUTPUT
+    </span>
+    <span
+      style={{}}
+    >
+                  C OUTPUT - LINE PRINTER 
+    </span>
+    <span
+      className="hljs-keyword"
+      style={{}}
+    >
+      UNIT
+    </span>
+    <span
+      style={{}}
+    >
+       
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      6
+    </span>
+    <span
+      style={{}}
+    >
+      , 
+    </span>
+    <span
+      className="hljs-keyword"
+      style={{}}
+    >
+      REAL
+    </span>
+    <span
+      style={{}}
+    >
+       OUTPUT
 
-                C INPUT ERROR DISPLAY ERROR OUTPUT CODE 1 IN JOB CONTROL LISTING
+    </span>
+    <span
+      style={{}}
+    >
+                  C INPUT ERROR DISPLAY ERROR OUTPUT CODE 
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      1
+    </span>
+    <span
+      style={{}}
+    >
+       
+    </span>
+    <span
+      className="hljs-keyword"
+      style={{}}
+    >
+      IN
+    </span>
+    <span
+      style={{}}
+    >
+       JOB CONTROL LISTING
 
-                    READ INPUT TAPE 5, 501, IA, IB, IC
+    </span>
+    <span
+      style={{}}
+    >
+                      READ INPUT TAPE 
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      5
+    </span>
+    <span
+      style={{}}
+    >
+      , 
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      501
+    </span>
+    <span
+      style={{}}
+    >
+      , IA, IB, IC
 
-                501 FORMAT (3I5)
+    </span>
+    <span
+      style={{}}
+    >
+                  
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      501
+    </span>
+    <span
+      style={{}}
+    >
+       
+    </span>
+    <span
+      className="hljs-keyword"
+      style={{}}
+    >
+      FORMAT
+    </span>
+    <span
+      style={{}}
+    >
+       (
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      3
+    </span>
+    <span
+      style={{}}
+    >
+      I5)
 
+    </span>
                 C IA, IB, AND IC MAY NOT BE NEGATIVE OR ZERO
 
-                C FURTHERMORE, THE SUM OF TWO SIDES OF A TRIANGLE
+    <span
+      style={{}}
+    >
+                  C FURTHERMORE, THE 
+    </span>
+    <span
+      className="hljs-built_in"
+      style={{}}
+    >
+      SUM
+    </span>
+    <span
+      style={{}}
+    >
+       OF TWO SIDES OF A TRIANGLE
 
+    </span>
                 C MUST BE GREATER THAN THE THIRD SIDE, SO WE CHECK FOR THAT, TOO
 
-                    IF (IA) 777, 777, 701
+    <span
+      style={{}}
+    >
+                      
+    </span>
+    <span
+      className="hljs-keyword"
+      style={{}}
+    >
+      IF
+    </span>
+    <span
+      style={{}}
+    >
+       (IA) 
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      777
+    </span>
+    <span
+      style={{}}
+    >
+      , 
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      777
+    </span>
+    <span
+      style={{}}
+    >
+      , 
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      701
+    </span>
+    <span
+      style={{}}
+    >
+      
 
-                701 IF (IB) 777, 777, 702
+    </span>
+    <span
+      style={{}}
+    >
+                  
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      701
+    </span>
+    <span
+      style={{}}
+    >
+       
+    </span>
+    <span
+      className="hljs-keyword"
+      style={{}}
+    >
+      IF
+    </span>
+    <span
+      style={{}}
+    >
+       (IB) 
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      777
+    </span>
+    <span
+      style={{}}
+    >
+      , 
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      777
+    </span>
+    <span
+      style={{}}
+    >
+      , 
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      702
+    </span>
+    <span
+      style={{}}
+    >
+      
 
-                702 IF (IC) 777, 777, 703
+    </span>
+    <span
+      style={{}}
+    >
+                  
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      702
+    </span>
+    <span
+      style={{}}
+    >
+       
+    </span>
+    <span
+      className="hljs-keyword"
+      style={{}}
+    >
+      IF
+    </span>
+    <span
+      style={{}}
+    >
+       (IC) 
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      777
+    </span>
+    <span
+      style={{}}
+    >
+      , 
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      777
+    </span>
+    <span
+      style={{}}
+    >
+      , 
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      703
+    </span>
+    <span
+      style={{}}
+    >
+      
 
-                703 IF (IA+IB-IC) 777, 777, 704
+    </span>
+    <span
+      style={{}}
+    >
+                  
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      703
+    </span>
+    <span
+      style={{}}
+    >
+       
+    </span>
+    <span
+      className="hljs-keyword"
+      style={{}}
+    >
+      IF
+    </span>
+    <span
+      style={{}}
+    >
+       (IA+IB-IC) 
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      777
+    </span>
+    <span
+      style={{}}
+    >
+      , 
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      777
+    </span>
+    <span
+      style={{}}
+    >
+      , 
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      704
+    </span>
+    <span
+      style={{}}
+    >
+      
 
-                704 IF (IA+IC-IB) 777, 777, 705
+    </span>
+    <span
+      style={{}}
+    >
+                  
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      704
+    </span>
+    <span
+      style={{}}
+    >
+       
+    </span>
+    <span
+      className="hljs-keyword"
+      style={{}}
+    >
+      IF
+    </span>
+    <span
+      style={{}}
+    >
+       (IA+IC-IB) 
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      777
+    </span>
+    <span
+      style={{}}
+    >
+      , 
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      777
+    </span>
+    <span
+      style={{}}
+    >
+      , 
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      705
+    </span>
+    <span
+      style={{}}
+    >
+      
 
-                705 IF (IB+IC-IA) 777, 777, 799
+    </span>
+    <span
+      style={{}}
+    >
+                  
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      705
+    </span>
+    <span
+      style={{}}
+    >
+       
+    </span>
+    <span
+      className="hljs-keyword"
+      style={{}}
+    >
+      IF
+    </span>
+    <span
+      style={{}}
+    >
+       (IB+IC-IA) 
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      777
+    </span>
+    <span
+      style={{}}
+    >
+      , 
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      777
+    </span>
+    <span
+      style={{}}
+    >
+      , 
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      799
+    </span>
+    <span
+      style={{}}
+    >
+      
 
-                777 STOP 1
+    </span>
+    <span
+      style={{}}
+    >
+                  
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      777
+    </span>
+    <span
+      style={{}}
+    >
+       
+    </span>
+    <span
+      className="hljs-keyword"
+      style={{}}
+    >
+      STOP
+    </span>
+    <span
+      style={{}}
+    >
+       
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      1
+    </span>
+    <span
+      style={{}}
+    >
+      
 
-                C USING HERON'S FORMULA WE CALCULATE THE
+    </span>
+    <span
+      style={{}}
+    >
+                  C USING HERON
+    </span>
+    <span
+      className="hljs-string"
+      style={{}}
+    >
+      'S FORMULA WE CALCULATE THE
 
-                C AREA OF THE TRIANGLE
+    </span>
+    <span
+      className="hljs-string"
+      style={{}}
+    >
+                  C AREA OF THE TRIANGLE
 
-                799 S = FLOATF (IA + IB + IC) / 2.0
+    </span>
+    <span
+      className="hljs-string"
+      style={{}}
+    >
+                  799 S = FLOATF (IA + IB + IC) / 2.0
 
-                    AREA = SQRTF( S * (S - FLOATF(IA)) * (S - FLOATF(IB)) *
+    </span>
+    <span
+      className="hljs-string"
+      style={{}}
+    >
+                      AREA = SQRTF( S * (S - FLOATF(IA)) * (S - FLOATF(IB)) *
 
-                    +     (S - FLOATF(IC)))
+    </span>
+    <span
+      className="hljs-string"
+      style={{}}
+    >
+                      +     (S - FLOATF(IC)))
 
-                    WRITE OUTPUT TAPE 6, 601, IA, IB, IC, AREA
+    </span>
+    <span
+      className="hljs-string"
+      style={{}}
+    >
+                      WRITE OUTPUT TAPE 6, 601, IA, IB, IC, AREA
 
-                601 FORMAT (4H A= ,I5,5H  B= ,I5,5H  C= ,I5,8H  AREA= ,F10.2,
+    </span>
+    <span
+      className="hljs-string"
+      style={{}}
+    >
+                  601 FORMAT (4H A= ,I5,5H  B= ,I5,5H  C= ,I5,8H  AREA= ,F10.2,
 
-                    +        13H SQUARE UNITS)
+    </span>
+    <span
+      className="hljs-string"
+      style={{}}
+    >
+                      +        13H SQUARE UNITS)
 
-                    STOP
+    </span>
+    <span
+      className="hljs-string"
+      style={{}}
+    >
+                      STOP
 
-                    END
+    </span>
+    <span
+      className="hljs-string"
+      style={{}}
+    >
+                      END
 
-                       
+    </span>
+    <span
+      className="hljs-string"
+      style={{}}
+    >
+                         
+    </span>
   </code>
 </pre>
 `;
@@ -181,7 +814,7 @@ exports[`SyntaxHighlighter renders fortran highlighted text 1`] = `
 exports[`SyntaxHighlighter renders javascript highlighted text 1`] = `
 <pre
   style={
-    Object {
+    {
       "MozHyphens": "none",
       "MozTabSize": "4",
       "OTabSize": "4",
@@ -209,7 +842,7 @@ exports[`SyntaxHighlighter renders javascript highlighted text 1`] = `
   <code
     className="language-javascript"
     style={
-      Object {
+      {
         "MozHyphens": "none",
         "MozTabSize": "4",
         "OTabSize": "4",
@@ -232,43 +865,499 @@ exports[`SyntaxHighlighter renders javascript highlighted text 1`] = `
     }
   >
     <span
-      style={Object {}}
+      className="hljs-keyword"
+      style={{}}
     >
-      import React from "react";
+      import
+    </span>
+    <span
+      style={{}}
+    >
+       
+    </span>
+    <span
+      className="hljs-title class_"
+      style={{}}
+    >
+      React
+    </span>
+    <span
+      style={{}}
+    >
+       
+    </span>
+    <span
+      className="hljs-keyword"
+      style={{}}
+    >
+      from
+    </span>
+    <span
+      style={{}}
+    >
+       
+    </span>
+    <span
+      className="hljs-string"
+      style={{}}
+    >
+      "react"
+    </span>
+    <span
+      style={{}}
+    >
+      ;
 
     </span>
-    import uniquePropHOC from "./lib/unique-prop-hoc";
+    <span
+      style={{}}
+    />
+    <span
+      className="hljs-keyword"
+      style={{}}
+    >
+      import
+    </span>
+    <span
+      style={{}}
+    >
+       uniquePropHOC 
+    </span>
+    <span
+      className="hljs-keyword"
+      style={{}}
+    >
+      from
+    </span>
+    <span
+      style={{}}
+    >
+       
+    </span>
+    <span
+      className="hljs-string"
+      style={{}}
+    >
+      "./lib/unique-prop-hoc"
+    </span>
+    <span
+      style={{}}
+    >
+      ;
 
+    </span>
     
 
-    class Expire extends React.Component {
+    <span
+      style={{}}
+    />
+    <span
+      className="hljs-keyword"
+      style={{}}
+    >
+      class
+    </span>
+    <span
+      style={{}}
+    >
+       
+    </span>
+    <span
+      className="hljs-title class_"
+      style={{}}
+    >
+      Expire
+    </span>
+    <span
+      style={{}}
+    >
+       
+    </span>
+    <span
+      className="hljs-keyword"
+      style={{}}
+    >
+      extends
+    </span>
+    <span
+      style={{}}
+    >
+       
+    </span>
+    <span
+      className="hljs-title class_ inherited__"
+      style={{}}
+    >
+      React.Component
+    </span>
+    <span
+      style={{}}
+    >
+       {
 
-        constructor(props) {
+    </span>
+    <span
+      style={{}}
+    >
+          
+    </span>
+    <span
+      className="hljs-title function_"
+      style={{}}
+    >
+      constructor
+    </span>
+    <span
+      style={{}}
+    >
+      (
+    </span>
+    <span
+      className="hljs-params"
+      style={{}}
+    >
+      props
+    </span>
+    <span
+      style={{}}
+    >
+      ) {
 
-            super(props);
+    </span>
+    <span
+      style={{}}
+    >
+              
+    </span>
+    <span
+      className="hljs-variable language_"
+      style={{}}
+    >
+      super
+    </span>
+    <span
+      style={{}}
+    >
+      (props);
 
-            this.state = { component: props.children }
+    </span>
+    <span
+      style={{}}
+    >
+              
+    </span>
+    <span
+      className="hljs-variable language_"
+      style={{}}
+    >
+      this
+    </span>
+    <span
+      style={{}}
+    >
+      .
+    </span>
+    <span
+      className="hljs-property"
+      style={{}}
+    >
+      state
+    </span>
+    <span
+      style={{}}
+    >
+       = { 
+    </span>
+    <span
+      className="hljs-attr"
+      style={{}}
+    >
+      component
+    </span>
+    <span
+      style={{}}
+    >
+      : props.
+    </span>
+    <span
+      className="hljs-property"
+      style={{}}
+    >
+      children
+    </span>
+    <span
+      style={{}}
+    >
+       }
 
+    </span>
         }
 
-        componentDidMount() {
+    <span
+      style={{}}
+    >
+          
+    </span>
+    <span
+      className="hljs-title function_"
+      style={{}}
+    >
+      componentDidMount
+    </span>
+    <span
+      style={{}}
+    >
+      (
+    </span>
+    <span
+      style={{}}
+    >
+      ) {
 
-            setTimeout(() =&gt; {
+    </span>
+    <span
+      style={{}}
+    >
+              
+    </span>
+    <span
+      className="hljs-built_in"
+      style={{}}
+    >
+      setTimeout
+    </span>
+    <span
+      style={{}}
+    >
+      (
+    </span>
+    <span
+      className="hljs-function"
+      style={{}}
+    >
+      () =&gt;
+    </span>
+    <span
+      style={{}}
+    >
+       {
 
-                this.setState({
+    </span>
+    <span
+      style={{}}
+    >
+                  
+    </span>
+    <span
+      className="hljs-variable language_"
+      style={{}}
+    >
+      this
+    </span>
+    <span
+      style={{}}
+    >
+      .
+    </span>
+    <span
+      className="hljs-title function_"
+      style={{}}
+    >
+      setState
+    </span>
+    <span
+      style={{}}
+    >
+      ({
 
-                    component: null
+    </span>
+    <span
+      style={{}}
+    >
+                      
+    </span>
+    <span
+      className="hljs-attr"
+      style={{}}
+    >
+      component
+    </span>
+    <span
+      style={{}}
+    >
+      : 
+    </span>
+    <span
+      className="hljs-literal"
+      style={{}}
+    >
+      null
+    </span>
+    <span
+      style={{}}
+    >
+      
 
+    </span>
                 });
 
-            }, this.props.time || this.props.seconds * 1000);
+    <span
+      style={{}}
+    >
+              }, 
+    </span>
+    <span
+      className="hljs-variable language_"
+      style={{}}
+    >
+      this
+    </span>
+    <span
+      style={{}}
+    >
+      .
+    </span>
+    <span
+      className="hljs-property"
+      style={{}}
+    >
+      props
+    </span>
+    <span
+      style={{}}
+    >
+      .
+    </span>
+    <span
+      className="hljs-property"
+      style={{}}
+    >
+      time
+    </span>
+    <span
+      style={{}}
+    >
+       || 
+    </span>
+    <span
+      className="hljs-variable language_"
+      style={{}}
+    >
+      this
+    </span>
+    <span
+      style={{}}
+    >
+      .
+    </span>
+    <span
+      className="hljs-property"
+      style={{}}
+    >
+      props
+    </span>
+    <span
+      style={{}}
+    >
+      .
+    </span>
+    <span
+      className="hljs-property"
+      style={{}}
+    >
+      seconds
+    </span>
+    <span
+      style={{}}
+    >
+       * 
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      1000
+    </span>
+    <span
+      style={{}}
+    >
+      );
 
+    </span>
         }
 
-        render() {
+    <span
+      style={{}}
+    >
+          
+    </span>
+    <span
+      className="hljs-title function_"
+      style={{}}
+    >
+      render
+    </span>
+    <span
+      style={{}}
+    >
+      (
+    </span>
+    <span
+      style={{}}
+    >
+      ) {
 
-            return this.state.component;
+    </span>
+    <span
+      style={{}}
+    >
+              
+    </span>
+    <span
+      className="hljs-keyword"
+      style={{}}
+    >
+      return
+    </span>
+    <span
+      style={{}}
+    >
+       
+    </span>
+    <span
+      className="hljs-variable language_"
+      style={{}}
+    >
+      this
+    </span>
+    <span
+      style={{}}
+    >
+      .
+    </span>
+    <span
+      className="hljs-property"
+      style={{}}
+    >
+      state
+    </span>
+    <span
+      style={{}}
+    >
+      .
+    </span>
+    <span
+      className="hljs-property"
+      style={{}}
+    >
+      component
+    </span>
+    <span
+      style={{}}
+    >
+      ;
 
+    </span>
         }
 
     }
@@ -279,7 +1368,7 @@ exports[`SyntaxHighlighter renders javascript highlighted text 1`] = `
 exports[`SyntaxHighlighter renders text while language loads 1`] = `
 <pre
   style={
-    Object {
+    {
       "MozHyphens": "none",
       "MozTabSize": "4",
       "OTabSize": "4",
@@ -307,7 +1396,7 @@ exports[`SyntaxHighlighter renders text while language loads 1`] = `
   <code
     className="language-gherkin"
     style={
-      Object {
+      {
         "MozHyphens": "none",
         "MozTabSize": "4",
         "OTabSize": "4",
@@ -330,197 +1419,208 @@ exports[`SyntaxHighlighter renders text while language loads 1`] = `
     }
   >
     <span
-      style={Object {}}
+      style={{}}
     >
       
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-                  C AREA OF A TRIANGLE WITH A STANDARD SQUARE ROOT 
+                  C AREA OF 
     </span>
     <span
-      className="hljs-function hljs-keyword"
-      style={Object {}}
+      className="hljs-selector-tag"
+      style={{}}
     >
-      FUNCTION
+      A
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-      
+       TRIANGLE WITH 
+    </span>
+    <span
+      className="hljs-selector-tag"
+      style={{}}
+    >
+      A
+    </span>
+    <span
+      style={{}}
+    >
+       STANDARD SQUARE ROOT FUNCTION
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-                  C INPUT - TAPE READER 
+                  C 
     </span>
     <span
-      className="hljs-keyword"
-      style={Object {}}
+      className="hljs-selector-tag"
+      style={{}}
     >
-      UNIT
+      INPUT
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-       
+       - TAPE READER UNIT 
     </span>
     <span
       className="hljs-number"
-      style={Object {}}
+      style={{}}
     >
       5
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-      , 
+      , INTEGER 
     </span>
     <span
-      className="hljs-keyword"
-      style={Object {}}
+      className="hljs-selector-tag"
+      style={{}}
     >
-      INTEGER
+      INPUT
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-       INPUT
+      
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-                  C OUTPUT - LINE PRINTER 
-    </span>
-    <span
-      className="hljs-keyword"
-      style={Object {}}
-    >
-      UNIT
-    </span>
-    <span
-      style={Object {}}
-    >
-       
+                  C OUTPUT - LINE PRINTER UNIT 
     </span>
     <span
       className="hljs-number"
-      style={Object {}}
+      style={{}}
     >
       6
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-      , 
-    </span>
-    <span
-      className="hljs-keyword"
-      style={Object {}}
-    >
-      REAL
-    </span>
-    <span
-      style={Object {}}
-    >
-       OUTPUT
+      , REAL OUTPUT
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-                  C INPUT ERROR DISPLAY ERROR OUTPUT CODE 
+                  C 
     </span>
     <span
-      className="hljs-number"
-      style={Object {}}
+      className="hljs-selector-tag"
+      style={{}}
     >
-      1
+      INPUT
     </span>
     <span
-      style={Object {}}
+      style={{}}
+    >
+       ERROR 
+    </span>
+    <span
+      className="hljs-attribute"
+      style={{}}
+    >
+      DISPLAY
+    </span>
+    <span
+      style={{}}
+    >
+       ERROR OUTPUT 
+    </span>
+    <span
+      className="hljs-selector-tag"
+      style={{}}
+    >
+      CODE
+    </span>
+    <span
+      style={{}}
     >
        
     </span>
     <span
-      className="hljs-keyword"
-      style={Object {}}
+      className="hljs-number"
+      style={{}}
     >
-      IN
+      1
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-       JOB CONTROL LISTING
+       IN JOB CONTROL LISTING
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-                      READ INPUT TAPE 
+                      READ 
+    </span>
+    <span
+      className="hljs-selector-tag"
+      style={{}}
+    >
+      INPUT
+    </span>
+    <span
+      style={{}}
+    >
+       TAPE 
     </span>
     <span
       className="hljs-number"
-      style={Object {}}
+      style={{}}
     >
       5
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       , 
     </span>
     <span
       className="hljs-number"
-      style={Object {}}
+      style={{}}
     >
       501
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       , IA, IB, IC
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
                   
     </span>
     <span
       className="hljs-number"
-      style={Object {}}
+      style={{}}
     >
       501
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-       
-    </span>
-    <span
-      className="hljs-keyword"
-      style={Object {}}
-    >
-      FORMAT
-    </span>
-    <span
-      style={Object {}}
-    >
-       (
+       FORMAT (
     </span>
     <span
       className="hljs-number"
-      style={Object {}}
+      style={{}}
     >
       3
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       I5)
 
@@ -528,499 +1628,514 @@ exports[`SyntaxHighlighter renders text while language loads 1`] = `
                 C IA, IB, AND IC MAY NOT BE NEGATIVE OR ZERO
 
     <span
-      style={Object {}}
+      style={{}}
     >
-                  C FURTHERMORE, THE 
+                  C FURTHERMORE, THE SUM OF TWO SIDES OF 
     </span>
     <span
-      className="hljs-built_in"
-      style={Object {}}
+      className="hljs-selector-tag"
+      style={{}}
     >
-      SUM
+      A
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-       OF TWO SIDES OF A TRIANGLE
+       TRIANGLE
 
     </span>
                 C MUST BE GREATER THAN THE THIRD SIDE, SO WE CHECK FOR THAT, TOO
 
     <span
-      style={Object {}}
+      style={{}}
     >
-                      
-    </span>
-    <span
-      className="hljs-keyword"
-      style={Object {}}
-    >
-      IF
-    </span>
-    <span
-      style={Object {}}
-    >
-       (IA) 
+                      IF (IA) 
     </span>
     <span
       className="hljs-number"
-      style={Object {}}
+      style={{}}
     >
       777
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       , 
     </span>
     <span
       className="hljs-number"
-      style={Object {}}
+      style={{}}
     >
       777
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       , 
     </span>
     <span
       className="hljs-number"
-      style={Object {}}
+      style={{}}
     >
       701
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
                   
     </span>
     <span
       className="hljs-number"
-      style={Object {}}
+      style={{}}
     >
       701
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-       
-    </span>
-    <span
-      className="hljs-keyword"
-      style={Object {}}
-    >
-      IF
-    </span>
-    <span
-      style={Object {}}
-    >
-       (IB) 
+       IF (IB) 
     </span>
     <span
       className="hljs-number"
-      style={Object {}}
+      style={{}}
     >
       777
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       , 
     </span>
     <span
       className="hljs-number"
-      style={Object {}}
+      style={{}}
     >
       777
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       , 
     </span>
     <span
       className="hljs-number"
-      style={Object {}}
+      style={{}}
     >
       702
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
                   
     </span>
     <span
       className="hljs-number"
-      style={Object {}}
+      style={{}}
     >
       702
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-       
-    </span>
-    <span
-      className="hljs-keyword"
-      style={Object {}}
-    >
-      IF
-    </span>
-    <span
-      style={Object {}}
-    >
-       (IC) 
+       IF (IC) 
     </span>
     <span
       className="hljs-number"
-      style={Object {}}
+      style={{}}
     >
       777
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       , 
     </span>
     <span
       className="hljs-number"
-      style={Object {}}
+      style={{}}
     >
       777
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       , 
     </span>
     <span
       className="hljs-number"
-      style={Object {}}
+      style={{}}
     >
       703
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
                   
     </span>
     <span
       className="hljs-number"
-      style={Object {}}
+      style={{}}
     >
       703
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-       
-    </span>
-    <span
-      className="hljs-keyword"
-      style={Object {}}
-    >
-      IF
-    </span>
-    <span
-      style={Object {}}
-    >
-       (IA+IB-IC) 
+       IF (IA+IB-IC) 
     </span>
     <span
       className="hljs-number"
-      style={Object {}}
+      style={{}}
     >
       777
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       , 
     </span>
     <span
       className="hljs-number"
-      style={Object {}}
+      style={{}}
     >
       777
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       , 
     </span>
     <span
       className="hljs-number"
-      style={Object {}}
+      style={{}}
     >
       704
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
                   
     </span>
     <span
       className="hljs-number"
-      style={Object {}}
+      style={{}}
     >
       704
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-       
-    </span>
-    <span
-      className="hljs-keyword"
-      style={Object {}}
-    >
-      IF
-    </span>
-    <span
-      style={Object {}}
-    >
-       (IA+IC-IB) 
+       IF (IA+IC-IB) 
     </span>
     <span
       className="hljs-number"
-      style={Object {}}
+      style={{}}
     >
       777
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       , 
     </span>
     <span
       className="hljs-number"
-      style={Object {}}
+      style={{}}
     >
       777
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       , 
     </span>
     <span
       className="hljs-number"
-      style={Object {}}
+      style={{}}
     >
       705
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
                   
     </span>
     <span
       className="hljs-number"
-      style={Object {}}
+      style={{}}
     >
       705
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-       
-    </span>
-    <span
-      className="hljs-keyword"
-      style={Object {}}
-    >
-      IF
-    </span>
-    <span
-      style={Object {}}
-    >
-       (IB+IC-IA) 
+       IF (IB+IC-IA) 
     </span>
     <span
       className="hljs-number"
-      style={Object {}}
+      style={{}}
     >
       777
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       , 
     </span>
     <span
       className="hljs-number"
-      style={Object {}}
+      style={{}}
     >
       777
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       , 
     </span>
     <span
       className="hljs-number"
-      style={Object {}}
+      style={{}}
     >
       799
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
                   
     </span>
     <span
       className="hljs-number"
-      style={Object {}}
+      style={{}}
     >
       777
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-       
-    </span>
-    <span
-      className="hljs-keyword"
-      style={Object {}}
-    >
-      STOP
-    </span>
-    <span
-      style={Object {}}
-    >
-       
+       STOP 
     </span>
     <span
       className="hljs-number"
-      style={Object {}}
+      style={{}}
     >
       1
     </span>
     <span
-      style={Object {}}
+      style={{}}
+    >
+      
+
+    </span>
+                C USING HERON'S FORMULA WE CALCULATE THE
+
+                C AREA OF THE TRIANGLE
+
+    <span
+      style={{}}
+    >
+                  
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      799
+    </span>
+    <span
+      style={{}}
+    >
+       S = FLOATF (IA + IB + IC) / 
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      2.0
+    </span>
+    <span
+      style={{}}
     >
       
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-                  C USING HERON
+                      AREA = 
     </span>
     <span
-      className="hljs-string"
-      style={Object {}}
+      className="hljs-built_in"
+      style={{}}
     >
-      'S FORMULA WE CALCULATE THE
+      SQRTF
+    </span>
+    <span
+      style={{}}
+    >
+      ( S * (S - FLOATF(IA)) * (S - FLOATF(IB)) *
+
+    </span>
+                    +     (S - FLOATF(IC)))
+
+    <span
+      style={{}}
+    >
+                      WRITE OUTPUT TAPE 
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      6
+    </span>
+    <span
+      style={{}}
+    >
+      , 
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      601
+    </span>
+    <span
+      style={{}}
+    >
+      , IA, IB, IC, AREA
 
     </span>
     <span
-      className="hljs-string"
-      style={Object {}}
+      style={{}}
     >
-                  C AREA OF THE TRIANGLE
+                  
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      601
+    </span>
+    <span
+      style={{}}
+    >
+       FORMAT (
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      4
+    </span>
+    <span
+      style={{}}
+    >
+      H A= ,I5,
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      5
+    </span>
+    <span
+      style={{}}
+    >
+      H  B= ,I5,
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      5
+    </span>
+    <span
+      style={{}}
+    >
+      H  C= ,I5,
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      8
+    </span>
+    <span
+      style={{}}
+    >
+      H  AREA= ,F10.
+    </span>
+    <span
+      className="hljs-number"
+      style={{}}
+    >
+      2
+    </span>
+    <span
+      style={{}}
+    >
+      ,
 
     </span>
     <span
-      className="hljs-string"
-      style={Object {}}
+      style={{}}
     >
-                  799 S = FLOATF (IA + IB + IC) / 2.0
-
+                      +        
     </span>
     <span
-      className="hljs-string"
-      style={Object {}}
+      className="hljs-number"
+      style={{}}
     >
-                      AREA = SQRTF( S * (S - FLOATF(IA)) * (S - FLOATF(IB)) *
-
+      13
     </span>
     <span
-      className="hljs-string"
-      style={Object {}}
+      style={{}}
     >
-                      +     (S - FLOATF(IC)))
+      H SQUARE UNITS)
 
     </span>
-    <span
-      className="hljs-string"
-      style={Object {}}
-    >
-                      WRITE OUTPUT TAPE 6, 601, IA, IB, IC, AREA
+                    STOP
 
-    </span>
-    <span
-      className="hljs-string"
-      style={Object {}}
-    >
-                  601 FORMAT (4H A= ,I5,5H  B= ,I5,5H  C= ,I5,8H  AREA= ,F10.2,
+                    END
 
-    </span>
-    <span
-      className="hljs-string"
-      style={Object {}}
-    >
-                      +        13H SQUARE UNITS)
-
-    </span>
-    <span
-      className="hljs-string"
-      style={Object {}}
-    >
-                      STOP
-
-    </span>
-    <span
-      className="hljs-string"
-      style={Object {}}
-    >
-                      END
-
-    </span>
-    <span
-      className="hljs-string"
-      style={Object {}}
-    >
-                         
-    </span>
+                       
   </code>
 </pre>
 `;
@@ -1028,7 +2143,7 @@ exports[`SyntaxHighlighter renders text while language loads 1`] = `
 exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlighted text 1`] = `
 <pre
   style={
-    Object {
+    {
       "MozHyphens": "none",
       "MozTabSize": "4",
       "OTabSize": "4",
@@ -1056,7 +2171,7 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
   <code
     className="language-javascript"
     style={
-      Object {
+      {
         "MozHyphens": "none",
         "MozTabSize": "4",
         "OTabSize": "4",
@@ -1080,73 +2195,84 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
   >
     <span
       className="hljs-keyword"
-      style={Object {}}
+      style={{}}
     >
       import
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-       React 
+       
+    </span>
+    <span
+      className="hljs-title class_"
+      style={{}}
+    >
+      React
+    </span>
+    <span
+      style={{}}
+    >
+       
     </span>
     <span
       className="hljs-keyword"
-      style={Object {}}
+      style={{}}
     >
       from
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
       className="hljs-string"
-      style={Object {}}
+      style={{}}
     >
       "react"
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ;
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
         
     </span>
     <span
       className="hljs-keyword"
-      style={Object {}}
+      style={{}}
     >
       import
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        uniquePropHOC 
     </span>
     <span
       className="hljs-keyword"
-      style={Object {}}
+      style={{}}
     >
       from
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
       className="hljs-string"
-      style={Object {}}
+      style={{}}
     >
       "./lib/unique-prop-hoc"
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ;
 
@@ -1154,256 +2280,254 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
     
 
     <span
-      style={Object {}}
+      style={{}}
     >
         
     </span>
     <span
-      className="hljs-class hljs-keyword"
-      style={Object {}}
+      className="hljs-keyword"
+      style={{}}
     >
       class
     </span>
     <span
-      className="hljs-class"
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
-      className="hljs-class hljs-title"
-      style={Object {}}
+      className="hljs-title class_"
+      style={{}}
     >
       Expire
     </span>
     <span
-      className="hljs-class"
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
-      className="hljs-class hljs-keyword"
-      style={Object {}}
+      className="hljs-keyword"
+      style={{}}
     >
       extends
     </span>
     <span
-      className="hljs-class"
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
-      className="hljs-class hljs-title"
-      style={Object {}}
+      className="hljs-title class_ inherited__"
+      style={{}}
     >
-      React
+      React.Component
     </span>
     <span
-      className="hljs-class"
-      style={Object {}}
-    >
-      .
-    </span>
-    <span
-      className="hljs-class hljs-title"
-      style={Object {}}
-    >
-      Component
-    </span>
-    <span
-      className="hljs-class"
-      style={Object {}}
-    >
-       
-    </span>
-    <span
-      style={Object {}}
-    >
-      {
-
-    </span>
-    <span
-      style={Object {}}
-    >
-            
-    </span>
-    <span
-      className="hljs-function hljs-title"
-      style={Object {}}
-    >
-      constructor
-    </span>
-    <span
-      className="hljs-function"
-      style={Object {}}
-    >
-      (
-    </span>
-    <span
-      className="hljs-function hljs-params"
-      style={Object {}}
-    >
-      props
-    </span>
-    <span
-      className="hljs-function"
-      style={Object {}}
-    >
-      )
-    </span>
-    <span
-      style={Object {}}
+      style={{}}
     >
        {
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
+    >
+            
+    </span>
+    <span
+      className="hljs-title function_"
+      style={{}}
+    >
+      constructor
+    </span>
+    <span
+      style={{}}
+    >
+      (
+    </span>
+    <span
+      className="hljs-params"
+      style={{}}
+    >
+      props
+    </span>
+    <span
+      style={{}}
+    >
+      ) {
+
+    </span>
+    <span
+      style={{}}
     >
                 
     </span>
     <span
-      className="hljs-built_in"
-      style={Object {}}
+      className="hljs-variable language_"
+      style={{}}
     >
       super
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       (props);
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
                 
     </span>
     <span
-      className="hljs-built_in"
-      style={Object {}}
+      className="hljs-variable language_"
+      style={{}}
     >
       this
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-      .state = { 
+      .
+    </span>
+    <span
+      className="hljs-property"
+      style={{}}
+    >
+      state
+    </span>
+    <span
+      style={{}}
+    >
+       = { 
     </span>
     <span
       className="hljs-attr"
-      style={Object {}}
+      style={{}}
     >
       component
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-      : props.children }
+      : props.
+    </span>
+    <span
+      className="hljs-property"
+      style={{}}
+    >
+      children
+    </span>
+    <span
+      style={{}}
+    >
+       }
 
     </span>
           }
 
     <span
-      style={Object {}}
+      style={{}}
     >
             
     </span>
     <span
-      className="hljs-function hljs-title"
-      style={Object {}}
+      className="hljs-title function_"
+      style={{}}
     >
       componentDidMount
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
       (
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
-      )
-    </span>
-    <span
-      style={Object {}}
-    >
-       {
+      ) {
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
                 
     </span>
     <span
       className="hljs-built_in"
-      style={Object {}}
+      style={{}}
     >
       setTimeout
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       (
     </span>
     <span
       className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
       () =&gt;
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        {
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
                     
     </span>
     <span
-      className="hljs-built_in"
-      style={Object {}}
+      className="hljs-variable language_"
+      style={{}}
     >
       this
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-      .setState({
+      .
+    </span>
+    <span
+      className="hljs-title function_"
+      style={{}}
+    >
+      setState
+    </span>
+    <span
+      style={{}}
+    >
+      ({
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
                         
     </span>
     <span
       className="hljs-attr"
-      style={Object {}}
+      style={{}}
     >
       component
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       : 
     </span>
     <span
       className="hljs-literal"
-      style={Object {}}
+      style={{}}
     >
       null
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       
 
@@ -1411,40 +2535,84 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
                   });
 
     <span
-      style={Object {}}
+      style={{}}
     >
                 }, 
     </span>
     <span
-      className="hljs-built_in"
-      style={Object {}}
+      className="hljs-variable language_"
+      style={{}}
     >
       this
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-      .props.time || 
+      .
     </span>
     <span
-      className="hljs-built_in"
-      style={Object {}}
+      className="hljs-property"
+      style={{}}
+    >
+      props
+    </span>
+    <span
+      style={{}}
+    >
+      .
+    </span>
+    <span
+      className="hljs-property"
+      style={{}}
+    >
+      time
+    </span>
+    <span
+      style={{}}
+    >
+       || 
+    </span>
+    <span
+      className="hljs-variable language_"
+      style={{}}
     >
       this
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-      .props.seconds * 
+      .
+    </span>
+    <span
+      className="hljs-property"
+      style={{}}
+    >
+      props
+    </span>
+    <span
+      style={{}}
+    >
+      .
+    </span>
+    <span
+      className="hljs-property"
+      style={{}}
+    >
+      seconds
+    </span>
+    <span
+      style={{}}
+    >
+       * 
     </span>
     <span
       className="hljs-number"
-      style={Object {}}
+      style={{}}
     >
       1000
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       );
 
@@ -1452,60 +2620,75 @@ exports[`When the code split is loaded - SyntaxHighlighter renders jsx highlight
           }
 
     <span
-      style={Object {}}
+      style={{}}
     >
             
     </span>
     <span
-      className="hljs-function hljs-title"
-      style={Object {}}
+      className="hljs-title function_"
+      style={{}}
     >
       render
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
       (
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
-      )
-    </span>
-    <span
-      style={Object {}}
-    >
-       {
+      ) {
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
                 
     </span>
     <span
       className="hljs-keyword"
-      style={Object {}}
+      style={{}}
     >
       return
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
-      className="hljs-built_in"
-      style={Object {}}
+      className="hljs-variable language_"
+      style={{}}
     >
       this
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-      .state.component;
+      .
+    </span>
+    <span
+      className="hljs-property"
+      style={{}}
+    >
+      state
+    </span>
+    <span
+      style={{}}
+    >
+      .
+    </span>
+    <span
+      className="hljs-property"
+      style={{}}
+    >
+      component
+    </span>
+    <span
+      style={{}}
+    >
+      ;
 
     </span>
           }

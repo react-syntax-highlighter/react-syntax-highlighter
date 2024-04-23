@@ -1,8 +1,13 @@
 export default {
-    "hljs": {
+    "re code.hljs": {
         "display": "block",
         "overflowX": "auto",
-        "padding": "0.5em",
+        "padding": "1em"
+    },
+    "ode.hljs": {
+        "padding": "3px 5px"
+    },
+    "hljs": {
         "background": "#272822",
         "color": "#ddd"
     },
@@ -29,9 +34,6 @@ export default {
     },
     "hljs-code": {
         "color": "#66d9ef"
-    },
-    "hljs-class .hljs-title": {
-        "color": "white"
     },
     "hljs-attribute": {
         "color": "#bf79db"
@@ -72,9 +74,6 @@ export default {
     "hljs-built_in": {
         "color": "#a6e22e"
     },
-    "hljs-builtin-name": {
-        "color": "#a6e22e"
-    },
     "hljs-selector-attr": {
         "color": "#a6e22e"
     },
@@ -92,6 +91,12 @@ export default {
     },
     "hljs-template-variable": {
         "color": "#a6e22e"
+    },
+    "hljs-title.class_": {
+        "color": "white"
+    },
+    "hljs-class .hljs-title": {
+        "color": "white"
     },
     "hljs-comment": {
         "color": "#75715e"

@@ -1,2 +1,2 @@
-import flow from "refractor/lang/flow.js";;
+import flow from "refractor/lang/flow.js";
 export default flow;

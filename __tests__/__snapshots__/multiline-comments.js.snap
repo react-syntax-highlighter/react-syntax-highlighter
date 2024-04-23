@@ -3,38 +3,33 @@
 exports[`Syntaxhighliter correctly renders multi-line comments in arduino language 1`] = `
 <pre
   style={
-    Object {
-      "background": "#F0F0F0",
+    {
+      "background": "#F3F3F3",
       "color": "#444",
-      "display": "block",
-      "overflowX": "auto",
-      "padding": "0.5em",
     }
   }
 >
   <code
     className="language-arduino"
     style={
-      Object {
+      {
         "whiteSpace": "pre",
       }
     }
   >
     <span
-      style={Object {}}
+      style={{}}
     >
       
 
     </span>
     <span
-      style={Object {}}
-    >
-      
-    </span>
+      style={{}}
+    />
     <span
       style={
-        Object {
-          "color": "#888888",
+        {
+          "color": "#697070",
         }
       }
     >
@@ -43,8 +38,8 @@ exports[`Syntaxhighliter correctly renders multi-line comments in arduino langua
     </span>
     <span
       style={
-        Object {
-          "color": "#888888",
+        {
+          "color": "#697070",
         }
       }
     >
@@ -53,15 +48,15 @@ exports[`Syntaxhighliter correctly renders multi-line comments in arduino langua
     </span>
     <span
       style={
-        Object {
-          "color": "#888888",
+        {
+          "color": "#697070",
         }
       }
     >
       */
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       
 
@@ -69,15 +64,13 @@ exports[`Syntaxhighliter correctly renders multi-line comments in arduino langua
     
 
     <span
-      style={Object {}}
-    >
-      
-    </span>
+      style={{}}
+    />
     <span
       className="hljs-function"
       style={
-        Object {
-          "fontWeight": "bold",
+        {
+          "color": "#880000",
         }
       }
     >
@@ -85,14 +78,14 @@ exports[`Syntaxhighliter correctly renders multi-line comments in arduino langua
     </span>
     <span
       className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
       className="hljs-function"
       style={
-        Object {
+        {
           "color": "#880000",
           "fontWeight": "bold",
         }
@@ -101,19 +94,19 @@ exports[`Syntaxhighliter correctly renders multi-line comments in arduino langua
       setup
     </span>
     <span
-      className="hljs-function hljs-params"
-      style={Object {}}
+      className="hljs-function"
+      style={{}}
     >
       ()
     </span>
     <span
       className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       {
 
@@ -123,15 +116,13 @@ exports[`Syntaxhighliter correctly renders multi-line comments in arduino langua
     
 
     <span
-      style={Object {}}
-    >
-      
-    </span>
+      style={{}}
+    />
     <span
       className="hljs-function"
       style={
-        Object {
-          "fontWeight": "bold",
+        {
+          "color": "#880000",
         }
       }
     >
@@ -139,14 +130,14 @@ exports[`Syntaxhighliter correctly renders multi-line comments in arduino langua
     </span>
     <span
       className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
       className="hljs-function"
       style={
-        Object {
+        {
           "color": "#880000",
           "fontWeight": "bold",
         }
@@ -155,26 +146,25 @@ exports[`Syntaxhighliter correctly renders multi-line comments in arduino langua
       loop
     </span>
     <span
-      className="hljs-function hljs-params"
-      style={Object {}}
+      className="hljs-function"
+      style={{}}
     >
       ()
     </span>
     <span
       className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       {
 
     </span>
     }
 
-    
   </code>
 </pre>
 `;

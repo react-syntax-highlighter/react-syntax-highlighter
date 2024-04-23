@@ -1,26 +1,40 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_highlight_mojolicious"],{
+"use strict";
+(self["webpackChunkreact_syntax_highlighter"] = self["webpackChunkreact_syntax_highlighter"] || []).push([["react-syntax-highlighter_languages_highlight_mojolicious"],{
 
-/***/ "./node_modules/highlight.js/lib/languages/mojolicious.js":
-/*!****************************************************************!*\
-  !*** ./node_modules/highlight.js/lib/languages/mojolicious.js ***!
-  \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/highlight.js/es/languages/mojolicious.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/highlight.js/es/languages/mojolicious.js ***!
+  \***************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-module.exports = function(hljs) {
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ mojolicious)
+/* harmony export */ });
+/*
+Language: Mojolicious
+Requires: xml.js, perl.js
+Author: Dotan Dimet <dotan@corky.net>
+Description: Mojolicious .ep (Embedded Perl) templates
+Website: https://mojolicious.org
+Category: template
+*/
+function mojolicious(hljs) {
   return {
+    name: 'Mojolicious',
     subLanguage: 'xml',
     contains: [
       {
         className: 'meta',
         begin: '^__(END|DATA)__$'
       },
-    // mojolicious line
+      // mojolicious line
       {
-        begin: "^\\s*%{1,2}={0,2}", end: '$',
+        begin: "^\\s*%{1,2}={0,2}",
+        end: '$',
         subLanguage: 'perl'
       },
-    // mojolicious block
+      // mojolicious block
       {
         begin: "<%{1,2}={0,2}",
         end: "={0,1}%>",
@@ -30,7 +44,10 @@ module.exports = function(hljs) {
       }
     ]
   };
-};
+}
+
+
+
 
 /***/ })
 

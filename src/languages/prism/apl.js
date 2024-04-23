@@ -1,2 +1,2 @@
-import apl from "refractor/lang/apl.js";;
+import apl from "refractor/lang/apl.js";
 export default apl;

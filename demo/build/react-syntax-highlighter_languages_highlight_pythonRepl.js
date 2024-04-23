@@ -1,12 +1,16 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_highlight_pythonRepl"],{
+"use strict";
+(self["webpackChunkreact_syntax_highlighter"] = self["webpackChunkreact_syntax_highlighter"] || []).push([["react-syntax-highlighter_languages_highlight_pythonRepl"],{
 
-/***/ "./node_modules/highlight.js/lib/languages/python-repl.js":
-/*!****************************************************************!*\
-  !*** ./node_modules/highlight.js/lib/languages/python-repl.js ***!
-  \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/highlight.js/es/languages/python-repl.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/highlight.js/es/languages/python-repl.js ***!
+  \***************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ pythonRepl)
+/* harmony export */ });
 /*
 Language: Python REPL
 Requires: python.js
@@ -19,7 +23,7 @@ function pythonRepl(hljs) {
     aliases: [ 'pycon' ],
     contains: [
       {
-        className: 'meta',
+        className: 'meta.prompt',
         starts: {
           // a space separates the REPL prefix from the actual code
           // this is purely for cleaner HTML output
@@ -30,19 +34,15 @@ function pythonRepl(hljs) {
           }
         },
         variants: [
-          {
-            begin: /^>>>(?=[ ]|$)/
-          },
-          {
-            begin: /^\.\.\.(?=[ ]|$)/
-          }
+          { begin: /^>>>(?=[ ]|$)/ },
+          { begin: /^\.\.\.(?=[ ]|$)/ }
         ]
       }
     ]
   };
 }
 
-module.exports = pythonRepl;
+
 
 
 /***/ })

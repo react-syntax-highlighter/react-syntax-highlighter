@@ -1,10 +1,15 @@
 export default {
-    "hljs": {
+    "re code.hljs": {
         "display": "block",
         "overflowX": "auto",
-        "padding": "0.5em",
-        "background": "#b7a68e url(./brown-papersq.png)",
-        "color": "#363c69"
+        "padding": "1em"
+    },
+    "ode.hljs": {
+        "padding": "3px 5px"
+    },
+    "hljs": {
+        "color": "#363c69",
+        "background": "#b7a68e url(./brown-papersq.png)"
     },
     "hljs-keyword": {
         "color": "#005599",
@@ -18,9 +23,7 @@ export default {
         "color": "#005599",
         "fontWeight": "bold"
     },
-    "hljs-subst": {
-        "color": "#363c69"
-    },
+    "hljs-subst": {},
     "hljs-string": {
         "color": "#2c009f"
     },

@@ -1,5 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { jest } from '@jest/globals';
 
 // Tree-shaking doesn't work in testing and loads all the languages
 import SyntaxHighlighter from '../src/prism-async-light';
@@ -29,7 +30,7 @@ class Expire extends React.Component {
         return this.state.component;
     }
 }`}
-      </SyntaxHighlighter>
+      </SyntaxHighlighter>,
     )
     .toJSON();
   expect(tree).toMatchSnapshot();
@@ -40,7 +41,7 @@ test('SyntaxHighlighter should just render text if syntax is not registered', ()
     .create(
       <SyntaxHighlighter language="nonExistingLanguage" style={prism}>
         {"print('hello')"}
-      </SyntaxHighlighter>
+      </SyntaxHighlighter>,
     )
     .toJSON();
   expect(tree).toMatchSnapshot();
@@ -90,7 +91,7 @@ while ans:
     elif answers == 8:
         print "My sources say no"
              `}
-    </SyntaxHighlighter>
+    </SyntaxHighlighter>,
   );
 
   await languageLoaders.python(jest.fn());

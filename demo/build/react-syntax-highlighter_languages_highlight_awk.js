@@ -1,55 +1,72 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_highlight_awk"],{
+"use strict";
+(self["webpackChunkreact_syntax_highlighter"] = self["webpackChunkreact_syntax_highlighter"] || []).push([["react-syntax-highlighter_languages_highlight_awk"],{
 
-/***/ "./node_modules/highlight.js/lib/languages/awk.js":
-/*!********************************************************!*\
-  !*** ./node_modules/highlight.js/lib/languages/awk.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/highlight.js/es/languages/awk.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/highlight.js/es/languages/awk.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-module.exports = function(hljs) {
-  var VARIABLE = {
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ awk)
+/* harmony export */ });
+/*
+Language: Awk
+Author: Matthew Daly <matthewbdaly@gmail.com>
+Website: https://www.gnu.org/software/gawk/manual/gawk.html
+Description: language definition for Awk scripts
+*/
+
+/** @type LanguageFn */
+function awk(hljs) {
+  const VARIABLE = {
     className: 'variable',
     variants: [
-      {begin: /\$[\w\d#@][\w\d_]*/},
-      {begin: /\$\{(.*?)}/}
+      { begin: /\$[\w\d#@][\w\d_]*/ },
+      { begin: /\$\{(.*?)\}/ }
     ]
   };
-  var KEYWORDS = 'BEGIN END if else while do for in break continue delete next nextfile function func exit|10';
-  var STRING = {
+  const KEYWORDS = 'BEGIN END if else while do for in break continue delete next nextfile function func exit|10';
+  const STRING = {
     className: 'string',
-    contains: [hljs.BACKSLASH_ESCAPE],
+    contains: [ hljs.BACKSLASH_ESCAPE ],
     variants: [
       {
-        begin: /(u|b)?r?'''/, end: /'''/,
+        begin: /(u|b)?r?'''/,
+        end: /'''/,
         relevance: 10
       },
       {
-        begin: /(u|b)?r?"""/, end: /"""/,
+        begin: /(u|b)?r?"""/,
+        end: /"""/,
         relevance: 10
       },
       {
-        begin: /(u|r|ur)'/, end: /'/,
+        begin: /(u|r|ur)'/,
+        end: /'/,
         relevance: 10
       },
       {
-        begin: /(u|r|ur)"/, end: /"/,
+        begin: /(u|r|ur)"/,
+        end: /"/,
         relevance: 10
       },
       {
-        begin: /(b|br)'/, end: /'/
+        begin: /(b|br)'/,
+        end: /'/
       },
       {
-        begin: /(b|br)"/, end: /"/
+        begin: /(b|br)"/,
+        end: /"/
       },
       hljs.APOS_STRING_MODE,
       hljs.QUOTE_STRING_MODE
     ]
   };
   return {
-	 keywords: {
-	   keyword: KEYWORDS
-    },
+    name: 'Awk',
+    keywords: { keyword: KEYWORDS },
     contains: [
       VARIABLE,
       STRING,
@@ -57,8 +74,11 @@ module.exports = function(hljs) {
       hljs.HASH_COMMENT_MODE,
       hljs.NUMBER_MODE
     ]
-  }
-};
+  };
+}
+
+
+
 
 /***/ })
 

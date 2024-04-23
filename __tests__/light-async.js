@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import languageLoaders from '../src/async-languages/prism';
+import { jest } from '@jest/globals';
 
 // Tree-shaking doesn't work in testing and loads all the languages
 import SyntaxHighlighter from '../src/light-async';
@@ -30,7 +31,7 @@ class Expire extends React.Component {
         return this.state.component;
     }
 }`}
-    </SyntaxHighlighter>
+    </SyntaxHighlighter>,
   );
 
   expect(tree.toJSON()).toMatchSnapshot();
@@ -40,7 +41,7 @@ test('SyntaxHighlighter render as text if language doesnt exist', () => {
   const tree = renderer.create(
     <SyntaxHighlighter language="nonexistinglanguage" style={prism}>
       {"print('hello')"}
-    </SyntaxHighlighter>
+    </SyntaxHighlighter>,
   );
   expect(tree.toJSON()).toMatchSnapshot();
 });
@@ -69,7 +70,7 @@ test('When the code split is loaded - SyntaxHighlighter renders jsx highlighted 
           return this.state.component;
       }
   }`}
-    </SyntaxHighlighter>
+    </SyntaxHighlighter>,
   );
 
   await languageLoaders.javascript(jest.fn());
@@ -109,7 +110,7 @@ test('SyntaxHighlighter renders fortran highlighted text', async () => {
                 STOP
                 END
                    `}
-    </SyntaxHighlighter>
+    </SyntaxHighlighter>,
   );
 
   await languageLoaders.fortran(jest.fn());
@@ -149,7 +150,7 @@ test('SyntaxHighlighter renders text while language loads', async () => {
                 STOP
                 END
                    `}
-    </SyntaxHighlighter>
+    </SyntaxHighlighter>,
   );
 
   expect(tree.toJSON()).toMatchSnapshot();

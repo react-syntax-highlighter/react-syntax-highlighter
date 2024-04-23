@@ -1,2 +1,2 @@
-import groovy from "refractor/lang/groovy.js";;
+import groovy from "refractor/lang/groovy.js";
 export default groovy;

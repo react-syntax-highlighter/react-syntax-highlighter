@@ -1,40 +1,53 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_highlight_inform7"],{
+"use strict";
+(self["webpackChunkreact_syntax_highlighter"] = self["webpackChunkreact_syntax_highlighter"] || []).push([["react-syntax-highlighter_languages_highlight_inform7"],{
 
-/***/ "./node_modules/highlight.js/lib/languages/inform7.js":
-/*!************************************************************!*\
-  !*** ./node_modules/highlight.js/lib/languages/inform7.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/highlight.js/es/languages/inform7.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/highlight.js/es/languages/inform7.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-module.exports = function(hljs) {
-  var START_BRACKET = '\\[';
-  var END_BRACKET = '\\]';
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ inform7)
+/* harmony export */ });
+/*
+Language: Inform 7
+Author: Bruno Dias <bruno.r.dias@gmail.com>
+Description: Language definition for Inform 7, a DSL for writing parser interactive fiction.
+Website: http://inform7.com
+*/
+
+function inform7(hljs) {
+  const START_BRACKET = '\\[';
+  const END_BRACKET = '\\]';
   return {
-    aliases: ['i7'],
+    name: 'Inform 7',
+    aliases: [ 'i7' ],
     case_insensitive: true,
     keywords: {
       // Some keywords more or less unique to I7, for relevance.
       keyword:
         // kind:
-        'thing room person man woman animal container ' +
-        'supporter backdrop door ' +
+        'thing room person man woman animal container '
+        + 'supporter backdrop door '
         // characteristic:
-        'scenery open closed locked inside gender ' +
+        + 'scenery open closed locked inside gender '
         // verb:
-        'is are say understand ' +
+        + 'is are say understand '
         // misc keyword:
-        'kind of rule'
-    },
+        + 'kind of rule' },
     contains: [
       {
         className: 'string',
-        begin: '"', end: '"',
+        begin: '"',
+        end: '"',
         relevance: 0,
         contains: [
           {
             className: 'subst',
-            begin: START_BRACKET, end: END_BRACKET
+            begin: START_BRACKET,
+            end: END_BRACKET
           }
         ]
       },
@@ -50,19 +63,24 @@ module.exports = function(hljs) {
         end: ':',
         contains: [
           {
-            //Rule name
-            begin: '\\(This', end: '\\)'
+            // Rule name
+            begin: '\\(This',
+            end: '\\)'
           }
         ]
       },
       {
         className: 'comment',
-        begin: START_BRACKET, end: END_BRACKET,
-        contains: ['self']
+        begin: START_BRACKET,
+        end: END_BRACKET,
+        contains: [ 'self' ]
       }
     ]
   };
-};
+}
+
+
+
 
 /***/ })
 

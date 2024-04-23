@@ -1,77 +1,92 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_highlight_qml"],{
+"use strict";
+(self["webpackChunkreact_syntax_highlighter"] = self["webpackChunkreact_syntax_highlighter"] || []).push([["react-syntax-highlighter_languages_highlight_qml"],{
 
-/***/ "./node_modules/highlight.js/lib/languages/qml.js":
-/*!********************************************************!*\
-  !*** ./node_modules/highlight.js/lib/languages/qml.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/highlight.js/es/languages/qml.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/highlight.js/es/languages/qml.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-module.exports = function(hljs) {
-  var KEYWORDS = {
-      keyword:
-        'in of on if for while finally var new function do return void else break catch ' +
-        'instanceof with throw case default try this switch continue typeof delete ' +
-        'let yield const export super debugger as async await import',
-      literal:
-        'true false null undefined NaN Infinity',
-      built_in:
-        'eval isFinite isNaN parseFloat parseInt decodeURI decodeURIComponent ' +
-        'encodeURI encodeURIComponent escape unescape Object Function Boolean Error ' +
-        'EvalError InternalError RangeError ReferenceError StopIteration SyntaxError ' +
-        'TypeError URIError Number Math Date String RegExp Array Float32Array ' +
-        'Float64Array Int16Array Int32Array Int8Array Uint16Array Uint32Array ' +
-        'Uint8Array Uint8ClampedArray ArrayBuffer DataView JSON Intl arguments require ' +
-        'module console window document Symbol Set Map WeakSet WeakMap Proxy Reflect ' +
-        'Behavior bool color coordinate date double enumeration font geocircle georectangle ' +
-        'geoshape int list matrix4x4 parent point quaternion real rect ' +
-        'size string url variant vector2d vector3d vector4d' +
-        'Promise'
-    };
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ qml)
+/* harmony export */ });
+/*
+Language: QML
+Requires: javascript.js, xml.js
+Author: John Foster <jfoster@esri.com>
+Description: Syntax highlighting for the Qt Quick QML scripting language, based mostly off
+             the JavaScript parser.
+Website: https://doc.qt.io/qt-5/qmlapplications.html
+Category: scripting
+*/
 
-  var QML_IDENT_RE = '[a-zA-Z_][a-zA-Z0-9\\._]*';
+function qml(hljs) {
+  const regex = hljs.regex;
+  const KEYWORDS = {
+    keyword:
+      'in of on if for while finally var new function do return void else break catch '
+      + 'instanceof with throw case default try this switch continue typeof delete '
+      + 'let yield const export super debugger as async await import',
+    literal:
+      'true false null undefined NaN Infinity',
+    built_in:
+      'eval isFinite isNaN parseFloat parseInt decodeURI decodeURIComponent '
+      + 'encodeURI encodeURIComponent escape unescape Object Function Boolean Error '
+      + 'EvalError InternalError RangeError ReferenceError StopIteration SyntaxError '
+      + 'TypeError URIError Number Math Date String RegExp Array Float32Array '
+      + 'Float64Array Int16Array Int32Array Int8Array Uint16Array Uint32Array '
+      + 'Uint8Array Uint8ClampedArray ArrayBuffer DataView JSON Intl arguments require '
+      + 'module console window document Symbol Set Map WeakSet WeakMap Proxy Reflect '
+      + 'Behavior bool color coordinate date double enumeration font geocircle georectangle '
+      + 'geoshape int list matrix4x4 parent point quaternion real rect '
+      + 'size string url variant vector2d vector3d vector4d '
+      + 'Promise'
+  };
+
+  const QML_IDENT_RE = '[a-zA-Z_][a-zA-Z0-9\\._]*';
 
   // Isolate property statements. Ends at a :, =, ;, ,, a comment or end of line.
   // Use property class.
-  var PROPERTY = {
-      className: 'keyword',
-      begin: '\\bproperty\\b',
-      starts: {
-        className: 'string',
-        end: '(:|=|;|,|//|/\\*|$)',
-        returnEnd: true
-      }
+  const PROPERTY = {
+    className: 'keyword',
+    begin: '\\bproperty\\b',
+    starts: {
+      className: 'string',
+      end: '(:|=|;|,|//|/\\*|$)',
+      returnEnd: true
+    }
   };
 
   // Isolate signal statements. Ends at a ) a comment or end of line.
   // Use property class.
-  var SIGNAL = {
-      className: 'keyword',
-      begin: '\\bsignal\\b',
-      starts: {
-        className: 'string',
-        end: '(\\(|:|=|;|,|//|/\\*|$)',
-        returnEnd: true
-      }
+  const SIGNAL = {
+    className: 'keyword',
+    begin: '\\bsignal\\b',
+    starts: {
+      className: 'string',
+      end: '(\\(|:|=|;|,|//|/\\*|$)',
+      returnEnd: true
+    }
   };
 
   // id: is special in QML. When we see id: we want to mark the id: as attribute and
   // emphasize the token following.
-  var ID_ID = {
-      className: 'attribute',
-      begin: '\\bid\\s*:',
-      starts: {
-        className: 'string',
-        end: QML_IDENT_RE,
-        returnEnd: false
-      }
+  const ID_ID = {
+    className: 'attribute',
+    begin: '\\bid\\s*:',
+    starts: {
+      className: 'string',
+      end: QML_IDENT_RE,
+      returnEnd: false
+    }
   };
 
   // Find QML object attribute. An attribute is a QML identifier followed by :.
   // Unfortunately it's hard to know where it ends, as it may contain scalars,
   // objects, object definitions, or javascript. The true end is either when the parent
   // ends or the next attribute is detected.
-  var QML_ATTRIBUTE = {
+  const QML_ATTRIBUTE = {
     begin: QML_IDENT_RE + '\\s*:',
     returnBegin: true,
     contains: [
@@ -88,17 +103,17 @@ module.exports = function(hljs) {
 
   // Find QML object. A QML object is a QML identifier followed by { and ends at the matching }.
   // All we really care about is finding IDENT followed by { and just mark up the IDENT and ignore the {.
-  var QML_OBJECT = {
-    begin: QML_IDENT_RE + '\\s*{', end: '{',
+  const QML_OBJECT = {
+    begin: regex.concat(QML_IDENT_RE, /\s*\{/),
+    end: /\{/,
     returnBegin: true,
     relevance: 0,
-    contains: [
-      hljs.inherit(hljs.TITLE_MODE, {begin: QML_IDENT_RE})
-    ]
+    contains: [ hljs.inherit(hljs.TITLE_MODE, { begin: QML_IDENT_RE }) ]
   };
 
   return {
-    aliases: ['qt'],
+    name: 'QML',
+    aliases: [ 'qt' ],
     case_insensitive: false,
     keywords: KEYWORDS,
     contains: [
@@ -110,12 +125,14 @@ module.exports = function(hljs) {
       hljs.QUOTE_STRING_MODE,
       { // template string
         className: 'string',
-        begin: '`', end: '`',
+        begin: '`',
+        end: '`',
         contains: [
           hljs.BACKSLASH_ESCAPE,
           {
             className: 'subst',
-            begin: '\\$\\{', end: '\\}'
+            begin: '\\$\\{',
+            end: '\\}'
           }
         ]
       },
@@ -138,7 +155,8 @@ module.exports = function(hljs) {
           hljs.C_BLOCK_COMMENT_MODE,
           hljs.REGEXP_MODE,
           { // E4X / JSX
-            begin: /</, end: />\s*[);\]]/,
+            begin: /</,
+            end: />\s*[);\]]/,
             relevance: 0,
             subLanguage: 'xml'
           }
@@ -149,12 +167,15 @@ module.exports = function(hljs) {
       PROPERTY,
       {
         className: 'function',
-        beginKeywords: 'function', end: /\{/, excludeEnd: true,
+        beginKeywords: 'function',
+        end: /\{/,
+        excludeEnd: true,
         contains: [
-          hljs.inherit(hljs.TITLE_MODE, {begin: /[A-Za-z$_][0-9A-Za-z$_]*/}),
+          hljs.inherit(hljs.TITLE_MODE, { begin: /[A-Za-z$_][0-9A-Za-z$_]*/ }),
           {
             className: 'params',
-            begin: /\(/, end: /\)/,
+            begin: /\(/,
+            end: /\)/,
             excludeBegin: true,
             excludeEnd: true,
             contains: [
@@ -166,7 +187,9 @@ module.exports = function(hljs) {
         illegal: /\[|%/
       },
       {
-        begin: '\\.' + hljs.IDENT_RE, relevance: 0 // hack: prevents detection of keywords after dots
+        // hack: prevents detection of keywords after dots
+        begin: '\\.' + hljs.IDENT_RE,
+        relevance: 0
       },
       ID_ID,
       QML_ATTRIBUTE,
@@ -174,7 +197,10 @@ module.exports = function(hljs) {
     ],
     illegal: /#/
   };
-};
+}
+
+
+
 
 /***/ })
 

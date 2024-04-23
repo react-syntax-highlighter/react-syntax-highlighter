@@ -1,2 +1,2 @@
-import racket from "refractor/lang/racket.js";;
+import racket from "refractor/lang/racket.js";
 export default racket;

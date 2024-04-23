@@ -1,45 +1,67 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_highlight_moonscript"],{
+"use strict";
+(self["webpackChunkreact_syntax_highlighter"] = self["webpackChunkreact_syntax_highlighter"] || []).push([["react-syntax-highlighter_languages_highlight_moonscript"],{
 
-/***/ "./node_modules/highlight.js/lib/languages/moonscript.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/highlight.js/lib/languages/moonscript.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/highlight.js/es/languages/moonscript.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/highlight.js/es/languages/moonscript.js ***!
+  \**************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-module.exports = function(hljs) {
-  var KEYWORDS = {
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ moonscript)
+/* harmony export */ });
+/*
+Language: MoonScript
+Author: Billy Quith <chinbillybilbo@gmail.com>
+Description: MoonScript is a programming language that transcompiles to Lua.
+Origin: coffeescript.js
+Website: http://moonscript.org/
+Category: scripting
+*/
+
+function moonscript(hljs) {
+  const KEYWORDS = {
     keyword:
       // Moonscript keywords
-      'if then not for in while do return else elseif break continue switch and or ' +
-      'unless when class extends super local import export from using',
+      'if then not for in while do return else elseif break continue switch and or '
+      + 'unless when class extends super local import export from using',
     literal:
       'true false nil',
     built_in:
-      '_G _VERSION assert collectgarbage dofile error getfenv getmetatable ipairs load ' +
-      'loadfile loadstring module next pairs pcall print rawequal rawget rawset require ' +
-      'select setfenv setmetatable tonumber tostring type unpack xpcall coroutine debug ' +
-      'io math os package string table'
+      '_G _VERSION assert collectgarbage dofile error getfenv getmetatable ipairs load '
+      + 'loadfile loadstring module next pairs pcall print rawequal rawget rawset require '
+      + 'select setfenv setmetatable tonumber tostring type unpack xpcall coroutine debug '
+      + 'io math os package string table'
   };
-  var JS_IDENT_RE = '[A-Za-z$_][0-9A-Za-z$_]*';
-  var SUBST = {
+  const JS_IDENT_RE = '[A-Za-z$_][0-9A-Za-z$_]*';
+  const SUBST = {
     className: 'subst',
-    begin: /#\{/, end: /}/,
+    begin: /#\{/,
+    end: /\}/,
     keywords: KEYWORDS
   };
-  var EXPRESSIONS = [
+  const EXPRESSIONS = [
     hljs.inherit(hljs.C_NUMBER_MODE,
-      {starts: {end: '(\\s*/)?', relevance: 0}}), // a number tries to eat the following slash to prevent treating it as a regexp
+      { starts: {
+        end: '(\\s*/)?',
+        relevance: 0
+      } }), // a number tries to eat the following slash to prevent treating it as a regexp
     {
       className: 'string',
       variants: [
         {
-          begin: /'/, end: /'/,
-          contains: [hljs.BACKSLASH_ESCAPE]
+          begin: /'/,
+          end: /'/,
+          contains: [ hljs.BACKSLASH_ESCAPE ]
         },
         {
-          begin: /"/, end: /"/,
-          contains: [hljs.BACKSLASH_ESCAPE, SUBST]
+          begin: /"/,
+          end: /"/,
+          contains: [
+            hljs.BACKSLASH_ESCAPE,
+            SUBST
+          ]
         }
       ]
     },
@@ -47,40 +69,47 @@ module.exports = function(hljs) {
       className: 'built_in',
       begin: '@__' + hljs.IDENT_RE
     },
-    {
-      begin: '@' + hljs.IDENT_RE // relevance booster on par with CoffeeScript
+    { begin: '@' + hljs.IDENT_RE // relevance booster on par with CoffeeScript
     },
-    {
-      begin: hljs.IDENT_RE + '\\\\' + hljs.IDENT_RE // inst\method
+    { begin: hljs.IDENT_RE + '\\\\' + hljs.IDENT_RE // inst\method
     }
   ];
   SUBST.contains = EXPRESSIONS;
 
-  var TITLE = hljs.inherit(hljs.TITLE_MODE, {begin: JS_IDENT_RE});
-  var PARAMS_RE = '(\\(.*\\))?\\s*\\B[-=]>';
-  var PARAMS = {
+  const TITLE = hljs.inherit(hljs.TITLE_MODE, { begin: JS_IDENT_RE });
+  const POSSIBLE_PARAMS_RE = '(\\(.*\\)\\s*)?\\B[-=]>';
+  const PARAMS = {
     className: 'params',
-    begin: '\\([^\\(]', returnBegin: true,
+    begin: '\\([^\\(]',
+    returnBegin: true,
     /* We need another contained nameless mode to not have every nested
     pair of parens to be called "params" */
-    contains: [{
-      begin: /\(/, end: /\)/,
-      keywords: KEYWORDS,
-      contains: ['self'].concat(EXPRESSIONS)
-    }]
+    contains: [
+      {
+        begin: /\(/,
+        end: /\)/,
+        keywords: KEYWORDS,
+        contains: [ 'self' ].concat(EXPRESSIONS)
+      }
+    ]
   };
 
   return {
-    aliases: ['moon'],
+    name: 'MoonScript',
+    aliases: [ 'moon' ],
     keywords: KEYWORDS,
     illegal: /\/\*/,
     contains: EXPRESSIONS.concat([
       hljs.COMMENT('--', '$'),
       {
-        className: 'function',  // function: -> =>
-        begin: '^\\s*' + JS_IDENT_RE + '\\s*=\\s*' + PARAMS_RE, end: '[-=]>',
+        className: 'function', // function: -> =>
+        begin: '^\\s*' + JS_IDENT_RE + '\\s*=\\s*' + POSSIBLE_PARAMS_RE,
+        end: '[-=]>',
         returnBegin: true,
-        contains: [TITLE, PARAMS]
+        contains: [
+          TITLE,
+          PARAMS
+        ]
       },
       {
         begin: /[\(,:=]\s*/, // anonymous function start
@@ -88,9 +117,10 @@ module.exports = function(hljs) {
         contains: [
           {
             className: 'function',
-            begin: PARAMS_RE, end: '[-=]>',
+            begin: POSSIBLE_PARAMS_RE,
+            end: '[-=]>',
             returnBegin: true,
-            contains: [PARAMS]
+            contains: [ PARAMS ]
           }
         ]
       },
@@ -104,20 +134,25 @@ module.exports = function(hljs) {
             beginKeywords: 'extends',
             endsWithParent: true,
             illegal: /[:="\[\]]/,
-            contains: [TITLE]
+            contains: [ TITLE ]
           },
           TITLE
         ]
       },
       {
-        className: 'name',    // table
-        begin: JS_IDENT_RE + ':', end: ':',
-        returnBegin: true, returnEnd: true,
+        className: 'name', // table
+        begin: JS_IDENT_RE + ':',
+        end: ':',
+        returnBegin: true,
+        returnEnd: true,
         relevance: 0
       }
     ])
   };
-};
+}
+
+
+
 
 /***/ })
 

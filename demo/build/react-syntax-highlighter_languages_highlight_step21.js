@@ -1,32 +1,52 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_highlight_step21"],{
+"use strict";
+(self["webpackChunkreact_syntax_highlighter"] = self["webpackChunkreact_syntax_highlighter"] || []).push([["react-syntax-highlighter_languages_highlight_step21"],{
 
-/***/ "./node_modules/highlight.js/lib/languages/step21.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/highlight.js/lib/languages/step21.js ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/highlight.js/es/languages/step21.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/highlight.js/es/languages/step21.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-module.exports = function(hljs) {
-  var STEP21_IDENT_RE = '[A-Z_][A-Z0-9_.]*';
-  var STEP21_KEYWORDS = {
-    keyword: 'HEADER ENDSEC DATA'
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ step21)
+/* harmony export */ });
+/*
+Language: STEP Part 21
+Contributors: Adam Joseph Cook <adam.joseph.cook@gmail.com>
+Description: Syntax highlighter for STEP Part 21 files (ISO 10303-21).
+Website: https://en.wikipedia.org/wiki/ISO_10303-21
+*/
+
+function step21(hljs) {
+  const STEP21_IDENT_RE = '[A-Z_][A-Z0-9_.]*';
+  const STEP21_KEYWORDS = {
+    $pattern: STEP21_IDENT_RE,
+    keyword: [
+      "HEADER",
+      "ENDSEC",
+      "DATA"
+    ]
   };
-  var STEP21_START = {
+  const STEP21_START = {
     className: 'meta',
     begin: 'ISO-10303-21;',
     relevance: 10
   };
-  var STEP21_CLOSE = {
+  const STEP21_CLOSE = {
     className: 'meta',
     begin: 'END-ISO-10303-21;',
     relevance: 10
   };
 
   return {
-    aliases: ['p21', 'step', 'stp'],
+    name: 'STEP Part 21',
+    aliases: [
+      'p21',
+      'step',
+      'stp'
+    ],
     case_insensitive: true, // STEP 21 is case insensitive in theory, in practice all non-comments are capitalized.
-    lexemes: STEP21_IDENT_RE,
     keywords: STEP21_KEYWORDS,
     contains: [
       STEP21_START,
@@ -35,24 +55,29 @@ module.exports = function(hljs) {
       hljs.C_BLOCK_COMMENT_MODE,
       hljs.COMMENT('/\\*\\*!', '\\*/'),
       hljs.C_NUMBER_MODE,
-      hljs.inherit(hljs.APOS_STRING_MODE, {illegal: null}),
-      hljs.inherit(hljs.QUOTE_STRING_MODE, {illegal: null}),
+      hljs.inherit(hljs.APOS_STRING_MODE, { illegal: null }),
+      hljs.inherit(hljs.QUOTE_STRING_MODE, { illegal: null }),
       {
         className: 'string',
-        begin: "'", end: "'"
+        begin: "'",
+        end: "'"
       },
       {
         className: 'symbol',
         variants: [
           {
-            begin: '#', end: '\\d+',
+            begin: '#',
+            end: '\\d+',
             illegal: '\\W'
           }
         ]
       }
     ]
   };
-};
+}
+
+
+
 
 /***/ })
 

@@ -1,2 +1,2 @@
-import jexl from "refractor/lang/jexl.js";;
+import jexl from "refractor/lang/jexl.js";
 export default jexl;

@@ -3,12 +3,12 @@
 exports[`SyntaxHighlighter component renders correctly without inline styles when useInlineStyles=false 1`] = `
 <pre
   className="hljs"
-  style={Object {}}
+  style={{}}
 >
   <code
     className="language-javascript"
     style={
-      Object {
+      {
         "whiteSpace": "pre",
       }
     }
@@ -21,22 +21,17 @@ exports[`SyntaxHighlighter component renders correctly without inline styles whe
     <span
       className=""
     >
-       woah = 
+       
     </span>
     <span
-      className="hljs-function hljs-params"
+      className="hljs-title function_"
     >
-      fun
-    </span>
-    <span
-      className="hljs-function"
-    >
-       =&gt;
+      woah
     </span>
     <span
       className=""
     >
-       fun + 
+       = fun =&gt; fun + 
     </span>
     <span
       className="hljs-number"
@@ -51,9 +46,7 @@ exports[`SyntaxHighlighter component renders correctly without inline styles whe
     </span>
     <span
       className=""
-    >
-      
-    </span>
+    />
     <span
       className="hljs-keyword"
     >
@@ -62,7 +55,17 @@ exports[`SyntaxHighlighter component renders correctly without inline styles whe
     <span
       className=""
     >
-       dude = woah(
+       dude = 
+    </span>
+    <span
+      className="hljs-title function_"
+    >
+      woah
+    </span>
+    <span
+      className=""
+    >
+      (
     </span>
     <span
       className="hljs-number"
@@ -87,38 +90,31 @@ exports[`SyntaxHighlighter component renders correctly without inline styles whe
     </span>
     <span
       className=""
-    >
-      
-    </span>
+    />
     <span
-      className="hljs-function hljs-keyword"
+      className="hljs-keyword"
     >
       function
     </span>
     <span
-      className="hljs-function"
+      className=""
     >
        
     </span>
     <span
-      className="hljs-function hljs-title"
+      className="hljs-title function_"
     >
       thisIsAFunction
     </span>
     <span
-      className="hljs-function"
+      className=""
     >
       (
     </span>
     <span
-      className="hljs-function"
-    >
-      ) 
-    </span>
-    <span
       className=""
     >
-      {
+      ) {
 
     </span>
     <span
@@ -164,7 +160,17 @@ exports[`SyntaxHighlighter component renders correctly without inline styles whe
     <span
       className=""
     >
-      ].map(
+      ].
+    </span>
+    <span
+      className="hljs-title function_"
+    >
+      map
+    </span>
+    <span
+      className=""
+    >
+      (
     </span>
     <span
       className="hljs-function hljs-params"
@@ -189,7 +195,17 @@ exports[`SyntaxHighlighter component renders correctly without inline styles whe
     <span
       className=""
     >
-      ).filter(n !== 
+      ).
+    </span>
+    <span
+      className="hljs-title function_"
+    >
+      filter
+    </span>
+    <span
+      className=""
+    >
+      (n !== 
     </span>
     <span
       className="hljs-number"
@@ -206,18 +222,26 @@ exports[`SyntaxHighlighter component renders correctly without inline styles whe
 
     <span
       className=""
-    >
-      
-    </span>
+    />
     <span
-      className="hljs-built_in"
+      className="hljs-variable language_"
     >
       console
     </span>
     <span
       className=""
     >
-      .log(
+      .
+    </span>
+    <span
+      className="hljs-title function_"
+    >
+      log
+    </span>
+    <span
+      className=""
+    >
+      (
     </span>
     <span
       className="hljs-string"
@@ -234,38 +258,31 @@ exports[`SyntaxHighlighter component renders correctly without inline styles whe
 
     <span
       className=""
-    >
-      
-    </span>
+    />
     <span
-      className="hljs-function hljs-keyword"
+      className="hljs-keyword"
     >
       function
     </span>
     <span
-      className="hljs-function"
+      className=""
     >
        
     </span>
     <span
-      className="hljs-function hljs-title"
+      className="hljs-title function_"
     >
       itIs
     </span>
     <span
-      className="hljs-function"
+      className=""
     >
       (
     </span>
     <span
-      className="hljs-function"
-    >
-      ) 
-    </span>
-    <span
       className=""
     >
-      {
+      ) {
 
     </span>
     <span
@@ -296,7 +313,6 @@ exports[`SyntaxHighlighter component renders correctly without inline styles whe
     </span>
     }
 
-    
   </code>
 </pre>
 `;

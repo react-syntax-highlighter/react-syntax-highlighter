@@ -1,26 +1,50 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_highlight_shell"],{
+"use strict";
+(self["webpackChunkreact_syntax_highlighter"] = self["webpackChunkreact_syntax_highlighter"] || []).push([["react-syntax-highlighter_languages_highlight_shell"],{
 
-/***/ "./node_modules/highlight.js/lib/languages/shell.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/highlight.js/lib/languages/shell.js ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/highlight.js/es/languages/shell.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/highlight.js/es/languages/shell.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-module.exports = function(hljs) {
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ shell)
+/* harmony export */ });
+/*
+Language: Shell Session
+Requires: bash.js
+Author: TSUYUSATO Kitsune <make.just.on@gmail.com>
+Category: common
+Audit: 2020
+*/
+
+/** @type LanguageFn */
+function shell(hljs) {
   return {
-    aliases: ['console'],
+    name: 'Shell Session',
+    aliases: [
+      'console',
+      'shellsession'
+    ],
     contains: [
       {
-        className: 'meta',
-        begin: '^\\s{0,3}[/\\w\\d\\[\\]()@-]*[>%$#]',
+        className: 'meta.prompt',
+        // We cannot add \s (spaces) in the regular expression otherwise it will be too broad and produce unexpected result.
+        // For instance, in the following example, it would match "echo /path/to/home >" as a prompt:
+        // echo /path/to/home > t.exe
+        begin: /^\s{0,3}[/~\w\d[\]()@-]*[>%$#][ ]?/,
         starts: {
-          end: '$', subLanguage: 'bash'
+          end: /[^\\](?=\s*$)/,
+          subLanguage: 'bash'
         }
       }
     ]
-  }
-};
+  };
+}
+
+
+
 
 /***/ })
 

@@ -1,4 +1,5 @@
 import AsyncSyntaxHighlighter from '../src/async-syntax-highlighter';
+import { jest } from '@jest/globals';
 
 test('AsyncSyntaxHighlighter registerLanguage when registerLanguage is undefined', () => {
   const SyntaxHighlighter = AsyncSyntaxHighlighter({});
@@ -15,7 +16,7 @@ test("AsyncSyntaxHighlighter registerLanguage when registerLanguage is defined b
   const SyntaxHighlighter = AsyncSyntaxHighlighter({ registerLanguage });
 
   const language = {
-    123: 456
+    123: 456,
   };
 
   SyntaxHighlighter.registerLanguage('test', language);
@@ -31,12 +32,12 @@ test('AsyncSyntaxHighlighter registerLanguage when registerLanguage & astGenerat
 
   SyntaxHighlighter.registerLanguage('test', {});
   expect(SyntaxHighlighter.languages).not.toEqual([
-    { name: 'test', language: {} }
+    { name: 'test', language: {} },
   ]);
   expect(registerLanguage).toBeCalledWith(
     SyntaxHighlighter.astGenerator,
     'test',
-    {}
+    {},
   );
 });
 
@@ -69,7 +70,7 @@ test('AsyncSyntaxHighlighter isRegistered when astGenerator is defined it should
 test('AsyncSyntaxHighlighter loadAstGenerator should return the promise of the loader', () => {
   const testValue = 'test';
   const loader = jest.fn().mockReturnValue({
-    then: jest.fn().mockReturnValue(testValue)
+    then: jest.fn().mockReturnValue(testValue),
   });
 
   const SyntaxHighlighter = AsyncSyntaxHighlighter({ loader });
@@ -92,7 +93,7 @@ test('AsyncSyntaxHighlighter loadAstGenerator when astGenerator resolves and it 
 
   const SyntaxHighlighter = AsyncSyntaxHighlighter({
     loader,
-    registerLanguage
+    registerLanguage,
   });
   const testLanguage = { name: 'cpp', language: {} };
 
@@ -102,7 +103,7 @@ test('AsyncSyntaxHighlighter loadAstGenerator when astGenerator resolves and it 
   expect(registerLanguage).toBeCalledWith(
     astGenerator,
     testLanguage.name,
-    testLanguage.language
+    testLanguage.language,
   );
 });
 
@@ -110,7 +111,7 @@ test('AsyncSyntaxHighlighter when a supportedLanguages array is passed in it sho
   const supportedLanguages = ['test'];
   const registerLanguage = jest.fn();
   const languageLoaders = {
-    foo: () => 'bar'
+    foo: () => 'bar',
   };
   const astGenerator = 'test';
   const loader = jest.fn().mockResolvedValue(astGenerator);
@@ -119,7 +120,7 @@ test('AsyncSyntaxHighlighter when a supportedLanguages array is passed in it sho
     loader,
     registerLanguage,
     languageLoaders,
-    supportedLanguages
+    supportedLanguages,
   });
 
   expect(SyntaxHighlighter.supportedLanguages).toEqual(supportedLanguages);
@@ -128,7 +129,7 @@ test('AsyncSyntaxHighlighter when a supportedLanguages array is passed in it sho
 test('AsyncSyntaxHighlighter when language loaders are passed in, it should set the keys to the supported languages static field', () => {
   const registerLanguage = jest.fn();
   const languageLoaders = {
-    foo: () => 'bar'
+    foo: () => 'bar',
   };
   const astGenerator = 'test';
   const loader = jest.fn().mockResolvedValue(astGenerator);
@@ -136,7 +137,7 @@ test('AsyncSyntaxHighlighter when language loaders are passed in, it should set 
   const SyntaxHighlighter = AsyncSyntaxHighlighter({
     loader,
     registerLanguage,
-    languageLoaders
+    languageLoaders,
   });
 
   expect(SyntaxHighlighter.supportedLanguages).toEqual(['foo']);

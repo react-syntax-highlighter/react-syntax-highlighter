@@ -1,33 +1,44 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_highlight_crmsh"],{
+"use strict";
+(self["webpackChunkreact_syntax_highlighter"] = self["webpackChunkreact_syntax_highlighter"] || []).push([["react-syntax-highlighter_languages_highlight_crmsh"],{
 
-/***/ "./node_modules/highlight.js/lib/languages/crmsh.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/highlight.js/lib/languages/crmsh.js ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/highlight.js/es/languages/crmsh.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/highlight.js/es/languages/crmsh.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-module.exports = function(hljs) {
-  var RESOURCES = 'primitive rsc_template';
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ crmsh)
+/* harmony export */ });
+/*
+Language: crmsh
+Author: Kristoffer Gronlund <kgronlund@suse.com>
+Website: http://crmsh.github.io
+Description: Syntax Highlighting for the crmsh DSL
+Category: config
+*/
 
-  var COMMANDS = 'group clone ms master location colocation order fencing_topology ' +
-      'rsc_ticket acl_target acl_group user role ' +
-      'tag xml';
-
-  var PROPERTY_SETS = 'property rsc_defaults op_defaults';
-
-  var KEYWORDS = 'params meta operations op rule attributes utilization';
-
-  var OPERATORS = 'read write deny defined not_defined in_range date spec in ' +
-      'ref reference attribute type xpath version and or lt gt tag ' +
-      'lte gte eq ne \\';
-
-  var TYPES = 'number string';
-
-  var LITERALS = 'Master Started Slave Stopped start promote demote stop monitor true false';
+/** @type LanguageFn */
+function crmsh(hljs) {
+  const RESOURCES = 'primitive rsc_template';
+  const COMMANDS = 'group clone ms master location colocation order fencing_topology '
+      + 'rsc_ticket acl_target acl_group user role '
+      + 'tag xml';
+  const PROPERTY_SETS = 'property rsc_defaults op_defaults';
+  const KEYWORDS = 'params meta operations op rule attributes utilization';
+  const OPERATORS = 'read write deny defined not_defined in_range date spec in '
+      + 'ref reference attribute type xpath version and or lt gt tag '
+      + 'lte gte eq ne \\';
+  const TYPES = 'number string';
+  const LITERALS = 'Master Started Slave Stopped start promote demote stop monitor true false';
 
   return {
-    aliases: ['crm', 'pcmk'],
+    name: 'crmsh',
+    aliases: [
+      'crm',
+      'pcmk'
+    ],
     case_insensitive: true,
     keywords: {
       keyword: KEYWORDS + ' ' + OPERATORS + ' ' + TYPES,
@@ -50,9 +61,7 @@ module.exports = function(hljs) {
         starts: {
           className: 'title',
           end: '\\s*[\\$\\w_][\\w_-]*',
-          starts: {
-            end: '\\s*@?[\\w_][\\w_\\.:-]*'
-          }
+          starts: { end: '\\s*@?[\\w_][\\w_\\.:-]*' }
         }
       },
       {
@@ -88,7 +97,7 @@ module.exports = function(hljs) {
       },
       {
         className: 'attr',
-        begin: /([A-Za-z\$_\#][\w_-]+)=/,
+        begin: /([A-Za-z$_#][\w_-]+)=/,
         relevance: 0
       },
       {
@@ -99,7 +108,10 @@ module.exports = function(hljs) {
       }
     ]
   };
-};
+}
+
+
+
 
 /***/ })
 

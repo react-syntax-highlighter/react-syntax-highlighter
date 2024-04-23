@@ -1,10 +1,15 @@
 export default {
-    "hljs": {
+    "re code.hljs": {
         "display": "block",
         "overflowX": "auto",
+        "padding": "1em"
+    },
+    "ode.hljs": {
+        "padding": "3px 5px"
+    },
+    "hljs": {
         "color": "#eaeaea",
-        "background": "#000",
-        "padding": "0.5em"
+        "background": "#000"
     },
     "hljs-subst": {
         "color": "#eaeaea"
@@ -14,9 +19,6 @@ export default {
     },
     "hljs-strong": {
         "fontWeight": "bold"
-    },
-    "hljs-builtin-name": {
-        "color": "#eaeaea"
     },
     "hljs-type": {
         "color": "#eaeaea"

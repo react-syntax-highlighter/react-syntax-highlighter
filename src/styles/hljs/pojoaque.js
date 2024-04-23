@@ -1,8 +1,13 @@
 export default {
-    "hljs": {
+    "re code.hljs": {
         "display": "block",
         "overflowX": "auto",
-        "padding": "0.5em",
+        "padding": "1em"
+    },
+    "ode.hljs": {
+        "padding": "3px 5px"
+    },
+    "hljs": {
         "color": "#dccf8f",
         "background": "url(./pojoaque.jpg) repeat scroll left top #181914"
     },
@@ -54,6 +59,9 @@ export default {
         "color": "#b58900"
     },
     "hljs-template-variable": {
+        "color": "#b58900"
+    },
+    "hljs-title.class_": {
         "color": "#b58900"
     },
     "hljs-class .hljs-title": {

@@ -1,52 +1,210 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_highlight_objectivec"],{
+"use strict";
+(self["webpackChunkreact_syntax_highlighter"] = self["webpackChunkreact_syntax_highlighter"] || []).push([["react-syntax-highlighter_languages_highlight_objectivec"],{
 
-/***/ "./node_modules/highlight.js/lib/languages/objectivec.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/highlight.js/lib/languages/objectivec.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/highlight.js/es/languages/objectivec.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/highlight.js/es/languages/objectivec.js ***!
+  \**************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-module.exports = function(hljs) {
-  var API_CLASS = {
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ objectivec)
+/* harmony export */ });
+/*
+Language: Objective-C
+Author: Valerii Hiora <valerii.hiora@gmail.com>
+Contributors: Angel G. Olloqui <angelgarcia.mail@gmail.com>, Matt Diephouse <matt@diephouse.com>, Andrew Farmer <ahfarmer@gmail.com>, Minh Nguyễn <mxn@1ec5.org>
+Website: https://developer.apple.com/documentation/objectivec
+Category: common
+*/
+
+function objectivec(hljs) {
+  const API_CLASS = {
     className: 'built_in',
-    begin: '\\b(AV|CA|CF|CG|CI|CL|CM|CN|CT|MK|MP|MTK|MTL|NS|SCN|SK|UI|WK|XC)\\w+',
+    begin: '\\b(AV|CA|CF|CG|CI|CL|CM|CN|CT|MK|MP|MTK|MTL|NS|SCN|SK|UI|WK|XC)\\w+'
   };
-  var OBJC_KEYWORDS = {
-    keyword:
-      'int float while char export sizeof typedef const struct for union ' +
-      'unsigned long volatile static bool mutable if do return goto void ' +
-      'enum else break extern asm case short default double register explicit ' +
-      'signed typename this switch continue wchar_t inline readonly assign ' +
-      'readwrite self @synchronized id typeof ' +
-      'nonatomic super unichar IBOutlet IBAction strong weak copy ' +
-      'in out inout bycopy byref oneway __strong __weak __block __autoreleasing ' +
-      '@private @protected @public @try @property @end @throw @catch @finally ' +
-      '@autoreleasepool @synthesize @dynamic @selector @optional @required ' +
-      '@encode @package @import @defs @compatibility_alias ' +
-      '__bridge __bridge_transfer __bridge_retained __bridge_retain ' +
-      '__covariant __contravariant __kindof ' +
-      '_Nonnull _Nullable _Null_unspecified ' +
-      '__FUNCTION__ __PRETTY_FUNCTION__ __attribute__ ' +
-      'getter setter retain unsafe_unretained ' +
-      'nonnull nullable null_unspecified null_resettable class instancetype ' +
-      'NS_DESIGNATED_INITIALIZER NS_UNAVAILABLE NS_REQUIRES_SUPER ' +
-      'NS_RETURNS_INNER_POINTER NS_INLINE NS_AVAILABLE NS_DEPRECATED ' +
-      'NS_ENUM NS_OPTIONS NS_SWIFT_UNAVAILABLE ' +
-      'NS_ASSUME_NONNULL_BEGIN NS_ASSUME_NONNULL_END ' +
-      'NS_REFINED_FOR_SWIFT NS_SWIFT_NAME NS_SWIFT_NOTHROW ' +
-      'NS_DURING NS_HANDLER NS_ENDHANDLER NS_VALUERETURN NS_VOIDRETURN',
-    literal:
-      'false true FALSE TRUE nil YES NO NULL',
-    built_in:
-      'BOOL dispatch_once_t dispatch_queue_t dispatch_sync dispatch_async dispatch_once'
+  const IDENTIFIER_RE = /[a-zA-Z@][a-zA-Z0-9_]*/;
+  const TYPES = [
+    "int",
+    "float",
+    "char",
+    "unsigned",
+    "signed",
+    "short",
+    "long",
+    "double",
+    "wchar_t",
+    "unichar",
+    "void",
+    "bool",
+    "BOOL",
+    "id|0",
+    "_Bool"
+  ];
+  const KWS = [
+    "while",
+    "export",
+    "sizeof",
+    "typedef",
+    "const",
+    "struct",
+    "for",
+    "union",
+    "volatile",
+    "static",
+    "mutable",
+    "if",
+    "do",
+    "return",
+    "goto",
+    "enum",
+    "else",
+    "break",
+    "extern",
+    "asm",
+    "case",
+    "default",
+    "register",
+    "explicit",
+    "typename",
+    "switch",
+    "continue",
+    "inline",
+    "readonly",
+    "assign",
+    "readwrite",
+    "self",
+    "@synchronized",
+    "id",
+    "typeof",
+    "nonatomic",
+    "IBOutlet",
+    "IBAction",
+    "strong",
+    "weak",
+    "copy",
+    "in",
+    "out",
+    "inout",
+    "bycopy",
+    "byref",
+    "oneway",
+    "__strong",
+    "__weak",
+    "__block",
+    "__autoreleasing",
+    "@private",
+    "@protected",
+    "@public",
+    "@try",
+    "@property",
+    "@end",
+    "@throw",
+    "@catch",
+    "@finally",
+    "@autoreleasepool",
+    "@synthesize",
+    "@dynamic",
+    "@selector",
+    "@optional",
+    "@required",
+    "@encode",
+    "@package",
+    "@import",
+    "@defs",
+    "@compatibility_alias",
+    "__bridge",
+    "__bridge_transfer",
+    "__bridge_retained",
+    "__bridge_retain",
+    "__covariant",
+    "__contravariant",
+    "__kindof",
+    "_Nonnull",
+    "_Nullable",
+    "_Null_unspecified",
+    "__FUNCTION__",
+    "__PRETTY_FUNCTION__",
+    "__attribute__",
+    "getter",
+    "setter",
+    "retain",
+    "unsafe_unretained",
+    "nonnull",
+    "nullable",
+    "null_unspecified",
+    "null_resettable",
+    "class",
+    "instancetype",
+    "NS_DESIGNATED_INITIALIZER",
+    "NS_UNAVAILABLE",
+    "NS_REQUIRES_SUPER",
+    "NS_RETURNS_INNER_POINTER",
+    "NS_INLINE",
+    "NS_AVAILABLE",
+    "NS_DEPRECATED",
+    "NS_ENUM",
+    "NS_OPTIONS",
+    "NS_SWIFT_UNAVAILABLE",
+    "NS_ASSUME_NONNULL_BEGIN",
+    "NS_ASSUME_NONNULL_END",
+    "NS_REFINED_FOR_SWIFT",
+    "NS_SWIFT_NAME",
+    "NS_SWIFT_NOTHROW",
+    "NS_DURING",
+    "NS_HANDLER",
+    "NS_ENDHANDLER",
+    "NS_VALUERETURN",
+    "NS_VOIDRETURN"
+  ];
+  const LITERALS = [
+    "false",
+    "true",
+    "FALSE",
+    "TRUE",
+    "nil",
+    "YES",
+    "NO",
+    "NULL"
+  ];
+  const BUILT_INS = [
+    "dispatch_once_t",
+    "dispatch_queue_t",
+    "dispatch_sync",
+    "dispatch_async",
+    "dispatch_once"
+  ];
+  const KEYWORDS = {
+    "variable.language": [
+      "this",
+      "super"
+    ],
+    $pattern: IDENTIFIER_RE,
+    keyword: KWS,
+    literal: LITERALS,
+    built_in: BUILT_INS,
+    type: TYPES
   };
-  var LEXEMES = /[a-zA-Z@][a-zA-Z0-9_]*/;
-  var CLASS_KEYWORDS = '@interface @class @protocol @implementation';
+  const CLASS_KEYWORDS = {
+    $pattern: IDENTIFIER_RE,
+    keyword: [
+      "@interface",
+      "@class",
+      "@protocol",
+      "@implementation"
+    ]
+  };
   return {
-    aliases: ['mm', 'objc', 'obj-c'],
-    keywords: OBJC_KEYWORDS,
-    lexemes: LEXEMES,
+    name: 'Objective-C',
+    aliases: [
+      'mm',
+      'objc',
+      'obj-c',
+      'obj-c++',
+      'objective-c++'
+    ],
+    keywords: KEYWORDS,
     illegal: '</',
     contains: [
       API_CLASS,
@@ -59,29 +217,31 @@ module.exports = function(hljs) {
         className: 'string',
         variants: [
           {
-            begin: '@"', end: '"',
+            begin: '@"',
+            end: '"',
             illegal: '\\n',
-            contains: [hljs.BACKSLASH_ESCAPE]
+            contains: [ hljs.BACKSLASH_ESCAPE ]
           }
         ]
       },
       {
         className: 'meta',
-        begin: /#\s*[a-z]+\b/, end: /$/,
-        keywords: {
-          'meta-keyword':
-            'if else elif endif define undef warning error line ' +
-            'pragma ifdef ifndef include'
-        },
+        begin: /#\s*[a-z]+\b/,
+        end: /$/,
+        keywords: { keyword:
+            'if else elif endif define undef warning error line '
+            + 'pragma ifdef ifndef include' },
         contains: [
           {
-            begin: /\\\n/, relevance: 0
+            begin: /\\\n/,
+            relevance: 0
           },
-          hljs.inherit(hljs.QUOTE_STRING_MODE, {className: 'meta-string'}),
+          hljs.inherit(hljs.QUOTE_STRING_MODE, { className: 'string' }),
           {
-            className: 'meta-string',
-            begin: /<.*?>/, end: /$/,
-            illegal: '\\n',
+            className: 'string',
+            begin: /<.*?>/,
+            end: /$/,
+            illegal: '\\n'
           },
           hljs.C_LINE_COMMENT_MODE,
           hljs.C_BLOCK_COMMENT_MODE
@@ -89,19 +249,22 @@ module.exports = function(hljs) {
       },
       {
         className: 'class',
-        begin: '(' + CLASS_KEYWORDS.split(' ').join('|') + ')\\b', end: '({|$)', excludeEnd: true,
-        keywords: CLASS_KEYWORDS, lexemes: LEXEMES,
-        contains: [
-          hljs.UNDERSCORE_TITLE_MODE
-        ]
+        begin: '(' + CLASS_KEYWORDS.keyword.join('|') + ')\\b',
+        end: /(\{|$)/,
+        excludeEnd: true,
+        keywords: CLASS_KEYWORDS,
+        contains: [ hljs.UNDERSCORE_TITLE_MODE ]
       },
       {
-        begin: '\\.'+hljs.UNDERSCORE_IDENT_RE,
+        begin: '\\.' + hljs.UNDERSCORE_IDENT_RE,
         relevance: 0
       }
     ]
   };
-};
+}
+
+
+
 
 /***/ })
 

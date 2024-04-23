@@ -1,8 +1,8 @@
-var path = require('path');
-var webpack = require('webpack');
+import path from 'node:path';
+import webpack from 'webpack';
 
-module.exports = {
-  context: path.join(__dirname),
+const config = {
+  context: process.cwd(),
   devtool: 'source-map',
   mode: 'development',
   devServer: {
@@ -36,7 +36,7 @@ module.exports = {
     prismAsyncLight: './demo/prism-async-light.js'
   },
   output: {
-    path: path.resolve(__dirname, 'demo/build'),
+    path: path.resolve('demo/build'),
     publicPath: 'build/',
     filename: '[name]-build.js',
     chunkFilename: '[name].js'
@@ -48,7 +48,10 @@ module.exports = {
         loader: 'babel-loader',
         exclude: [/node_modules/]
       },
-      { test: /\.css$/, loader: 'style!css' }
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      }
     ]
   },
   plugins: [
@@ -57,3 +60,5 @@ module.exports = {
     })
   ]
 };
+
+export default config;

@@ -1,2 +1,2 @@
-import xquery from "refractor/lang/xquery.js";;
+import xquery from "refractor/lang/xquery.js";
 export default xquery;

@@ -1,2 +1,2 @@
-import typescript from "refractor/lang/typescript.js";;
+import typescript from "refractor/lang/typescript.js";
 export default typescript;

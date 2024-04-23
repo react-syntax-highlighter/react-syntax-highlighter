@@ -23,7 +23,7 @@ test('SyntaxHighlighter component passes along code style to non-inline line num
         showInlineLineNumbers={false}
       >
         {code}
-      </SyntaxHighlighter>
+      </SyntaxHighlighter>,
     )
     .toJSON();
   expect(tree).toMatchSnapshot();

@@ -1,26 +1,39 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_highlight_django"],{
+"use strict";
+(self["webpackChunkreact_syntax_highlighter"] = self["webpackChunkreact_syntax_highlighter"] || []).push([["react-syntax-highlighter_languages_highlight_django"],{
 
-/***/ "./node_modules/highlight.js/lib/languages/django.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/highlight.js/lib/languages/django.js ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/highlight.js/es/languages/django.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/highlight.js/es/languages/django.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-module.exports = function(hljs) {
-  var FILTER = {
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ django)
+/* harmony export */ });
+/*
+Language: Django
+Description: Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design.
+Requires: xml.js
+Author: Ivan Sagalaev <maniac@softwaremaniacs.org>
+Contributors: Ilya Baryshev <baryshev@gmail.com>
+Website: https://www.djangoproject.com
+Category: template
+*/
+
+/** @type LanguageFn */
+function django(hljs) {
+  const FILTER = {
     begin: /\|[A-Za-z]+:?/,
-    keywords: {
-      name:
-        'truncatewords removetags linebreaksbr yesno get_digit timesince random striptags ' +
-        'filesizeformat escape linebreaks length_is ljust rjust cut urlize fix_ampersands ' +
-        'title floatformat capfirst pprint divisibleby add make_list unordered_list urlencode ' +
-        'timeuntil urlizetrunc wordcount stringformat linenumbers slice date dictsort ' +
-        'dictsortreversed default_if_none pluralize lower join center default ' +
-        'truncatewords_html upper length phone2numeric wordwrap time addslashes slugify first ' +
-        'escapejs force_escape iriencode last safe safeseq truncatechars localize unlocalize ' +
-        'localtime utc timezone'
-    },
+    keywords: { name:
+        'truncatewords removetags linebreaksbr yesno get_digit timesince random striptags '
+        + 'filesizeformat escape linebreaks length_is ljust rjust cut urlize fix_ampersands '
+        + 'title floatformat capfirst pprint divisibleby add make_list unordered_list urlencode '
+        + 'timeuntil urlizetrunc wordcount stringformat linenumbers slice date dictsort '
+        + 'dictsortreversed default_if_none pluralize lower join center default '
+        + 'truncatewords_html upper length phone2numeric wordwrap time addslashes slugify first '
+        + 'escapejs force_escape iriencode last safe safeseq truncatechars localize unlocalize '
+        + 'localtime utc timezone' },
     contains: [
       hljs.QUOTE_STRING_MODE,
       hljs.APOS_STRING_MODE
@@ -28,35 +41,35 @@ module.exports = function(hljs) {
   };
 
   return {
-    aliases: ['jinja'],
+    name: 'Django',
+    aliases: [ 'jinja' ],
     case_insensitive: true,
     subLanguage: 'xml',
     contains: [
-      hljs.COMMENT(/\{%\s*comment\s*%}/, /\{%\s*endcomment\s*%}/),
-      hljs.COMMENT(/\{#/, /#}/),
+      hljs.COMMENT(/\{%\s*comment\s*%\}/, /\{%\s*endcomment\s*%\}/),
+      hljs.COMMENT(/\{#/, /#\}/),
       {
         className: 'template-tag',
-        begin: /\{%/, end: /%}/,
+        begin: /\{%/,
+        end: /%\}/,
         contains: [
           {
             className: 'name',
             begin: /\w+/,
-            keywords: {
-              name:
-                'comment endcomment load templatetag ifchanged endifchanged if endif firstof for ' +
-                'endfor ifnotequal endifnotequal widthratio extends include spaceless ' +
-                'endspaceless regroup ifequal endifequal ssi now with cycle url filter ' +
-                'endfilter debug block endblock else autoescape endautoescape csrf_token empty elif ' +
-                'endwith static trans blocktrans endblocktrans get_static_prefix get_media_prefix ' +
-                'plural get_current_language language get_available_languages ' +
-                'get_current_language_bidi get_language_info get_language_info_list localize ' +
-                'endlocalize localtime endlocaltime timezone endtimezone get_current_timezone ' +
-                'verbatim'
-            },
+            keywords: { name:
+                'comment endcomment load templatetag ifchanged endifchanged if endif firstof for '
+                + 'endfor ifnotequal endifnotequal widthratio extends include spaceless '
+                + 'endspaceless regroup ifequal endifequal ssi now with cycle url filter '
+                + 'endfilter debug block endblock else autoescape endautoescape csrf_token empty elif '
+                + 'endwith static trans blocktrans endblocktrans get_static_prefix get_media_prefix '
+                + 'plural get_current_language language get_available_languages '
+                + 'get_current_language_bidi get_language_info get_language_info_list localize '
+                + 'endlocalize localtime endlocaltime timezone endtimezone get_current_timezone '
+                + 'verbatim' },
             starts: {
               endsWithParent: true,
               keywords: 'in by as',
-              contains: [FILTER],
+              contains: [ FILTER ],
               relevance: 0
             }
           }
@@ -64,12 +77,16 @@ module.exports = function(hljs) {
       },
       {
         className: 'template-variable',
-        begin: /\{\{/, end: /}}/,
-        contains: [FILTER]
+        begin: /\{\{/,
+        end: /\}\}/,
+        contains: [ FILTER ]
       }
     ]
   };
-};
+}
+
+
+
 
 /***/ })
 

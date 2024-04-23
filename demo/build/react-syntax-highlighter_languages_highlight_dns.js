@@ -1,22 +1,74 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_highlight_dns"],{
+"use strict";
+(self["webpackChunkreact_syntax_highlighter"] = self["webpackChunkreact_syntax_highlighter"] || []).push([["react-syntax-highlighter_languages_highlight_dns"],{
 
-/***/ "./node_modules/highlight.js/lib/languages/dns.js":
-/*!********************************************************!*\
-  !*** ./node_modules/highlight.js/lib/languages/dns.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/highlight.js/es/languages/dns.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/highlight.js/es/languages/dns.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-module.exports = function(hljs) {
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ dns)
+/* harmony export */ });
+/*
+Language: DNS Zone
+Author: Tim Schumacher <tim@datenknoten.me>
+Category: config
+Website: https://en.wikipedia.org/wiki/Zone_file
+*/
+
+/** @type LanguageFn */
+function dns(hljs) {
+  const KEYWORDS = [
+    "IN",
+    "A",
+    "AAAA",
+    "AFSDB",
+    "APL",
+    "CAA",
+    "CDNSKEY",
+    "CDS",
+    "CERT",
+    "CNAME",
+    "DHCID",
+    "DLV",
+    "DNAME",
+    "DNSKEY",
+    "DS",
+    "HIP",
+    "IPSECKEY",
+    "KEY",
+    "KX",
+    "LOC",
+    "MX",
+    "NAPTR",
+    "NS",
+    "NSEC",
+    "NSEC3",
+    "NSEC3PARAM",
+    "PTR",
+    "RRSIG",
+    "RP",
+    "SIG",
+    "SOA",
+    "SRV",
+    "SSHFP",
+    "TA",
+    "TKEY",
+    "TLSA",
+    "TSIG",
+    "TXT"
+  ];
   return {
-    aliases: ['bind', 'zone'],
-    keywords: {
-      keyword:
-        'IN A AAAA AFSDB APL CAA CDNSKEY CDS CERT CNAME DHCID DLV DNAME DNSKEY DS HIP IPSECKEY KEY KX ' +
-        'LOC MX NAPTR NS NSEC NSEC3 NSEC3PARAM PTR RRSIG RP SIG SOA SRV SSHFP TA TKEY TLSA TSIG TXT'
-    },
+    name: 'DNS Zone',
+    aliases: [
+      'bind',
+      'zone'
+    ],
+    keywords: KEYWORDS,
     contains: [
-      hljs.COMMENT(';', '$', {relevance: 0}),
+      hljs.COMMENT(';', '$', { relevance: 0 }),
       {
         className: 'meta',
         begin: /^\$(TTL|GENERATE|INCLUDE|ORIGIN)\b/
@@ -31,10 +83,13 @@ module.exports = function(hljs) {
         className: 'number',
         begin: '((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\b'
       },
-      hljs.inherit(hljs.NUMBER_MODE, {begin: /\b\d+[dhwm]?/})
+      hljs.inherit(hljs.NUMBER_MODE, { begin: /\b\d+[dhwm]?/ })
     ]
   };
-};
+}
+
+
+
 
 /***/ })
 

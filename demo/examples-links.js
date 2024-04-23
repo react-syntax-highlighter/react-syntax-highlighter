@@ -4,24 +4,24 @@ const ExamplesLinks = () => {
   const demos = [
     {
       label: 'Highlight.js (default)',
-      path: ''
+      path: '',
     },
     {
       label: 'Prism.js',
-      path: './prism.html'
+      path: './prism.html',
     },
     {
       label: 'Diff',
-      path: './diff.html'
+      path: './diff.html',
     },
     {
       label: 'Virtualized',
-      path: './virtualized.html'
+      path: './virtualized.html',
     },
     {
       label: 'Prism async light',
-      path: './prism-async-light.html'
-    }
+      path: './prism-async-light.html',
+    },
   ];
 
   const baseLiClass = 'demo-nav__li';
@@ -29,7 +29,7 @@ const ExamplesLinks = () => {
   return (
     <nav className="demo-nav">
       <ul className="demo-nav__ul">
-        {demos.map(demo => {
+        {demos.map((demo) => {
           const { label, path } = demo;
 
           const currentPath = new URL(window.location.href).pathname

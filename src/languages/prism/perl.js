@@ -1,2 +1,2 @@
-import perl from "refractor/lang/perl.js";;
+import perl from "refractor/lang/perl.js";
 export default perl;

@@ -1,28 +1,66 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_highlight_nginx"],{
+"use strict";
+(self["webpackChunkreact_syntax_highlighter"] = self["webpackChunkreact_syntax_highlighter"] || []).push([["react-syntax-highlighter_languages_highlight_nginx"],{
 
-/***/ "./node_modules/highlight.js/lib/languages/nginx.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/highlight.js/lib/languages/nginx.js ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/highlight.js/es/languages/nginx.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/highlight.js/es/languages/nginx.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-module.exports = function(hljs) {
-  var VAR = {
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ nginx)
+/* harmony export */ });
+/*
+Language: Nginx config
+Author: Peter Leonov <gojpeg@yandex.ru>
+Contributors: Ivan Sagalaev <maniac@softwaremaniacs.org>
+Category: config, web
+Website: https://www.nginx.com
+*/
+
+/** @type LanguageFn */
+function nginx(hljs) {
+  const regex = hljs.regex;
+  const VAR = {
     className: 'variable',
     variants: [
-      {begin: /\$\d+/},
-      {begin: /\$\{/, end: /}/},
-      {begin: '[\\$\\@]' + hljs.UNDERSCORE_IDENT_RE}
+      { begin: /\$\d+/ },
+      { begin: /\$\{\w+\}/ },
+      { begin: regex.concat(/[$@]/, hljs.UNDERSCORE_IDENT_RE) }
     ]
   };
-  var DEFAULT = {
+  const LITERALS = [
+    "on",
+    "off",
+    "yes",
+    "no",
+    "true",
+    "false",
+    "none",
+    "blocked",
+    "debug",
+    "info",
+    "notice",
+    "warn",
+    "error",
+    "crit",
+    "select",
+    "break",
+    "last",
+    "permanent",
+    "redirect",
+    "kqueue",
+    "rtsig",
+    "epoll",
+    "poll",
+    "/dev/poll"
+  ];
+  const DEFAULT = {
     endsWithParent: true,
-    lexemes: '[a-z/_]+',
     keywords: {
-      literal:
-        'on off yes no true false none blocked debug info notice warn error crit ' +
-        'select break last permanent redirect kqueue rtsig epoll poll /dev/poll'
+      $pattern: /[a-z_]{2,}|\/dev\/poll/,
+      literal: LITERALS
     },
     relevance: 0,
     illegal: '=>',
@@ -30,28 +68,51 @@ module.exports = function(hljs) {
       hljs.HASH_COMMENT_MODE,
       {
         className: 'string',
-        contains: [hljs.BACKSLASH_ESCAPE, VAR],
+        contains: [
+          hljs.BACKSLASH_ESCAPE,
+          VAR
+        ],
         variants: [
-          {begin: /"/, end: /"/},
-          {begin: /'/, end: /'/}
+          {
+            begin: /"/,
+            end: /"/
+          },
+          {
+            begin: /'/,
+            end: /'/
+          }
         ]
       },
       // this swallows entire URLs to avoid detecting numbers within
       {
-        begin: '([a-z]+):/', end: '\\s', endsWithParent: true, excludeEnd: true,
-        contains: [VAR]
+        begin: '([a-z]+):/',
+        end: '\\s',
+        endsWithParent: true,
+        excludeEnd: true,
+        contains: [ VAR ]
       },
       {
         className: 'regexp',
-        contains: [hljs.BACKSLASH_ESCAPE, VAR],
+        contains: [
+          hljs.BACKSLASH_ESCAPE,
+          VAR
+        ],
         variants: [
-          {begin: "\\s\\^", end: "\\s|{|;", returnEnd: true},
+          {
+            begin: "\\s\\^",
+            end: "\\s|\\{|;",
+            returnEnd: true
+          },
           // regexp locations (~, ~*)
-          {begin: "~\\*?\\s+", end: "\\s|{|;", returnEnd: true},
+          {
+            begin: "~\\*?\\s+",
+            end: "\\s|\\{|;",
+            returnEnd: true
+          },
           // *.example.com
-          {begin: "\\*(\\.[a-z\\-]+)+"},
+          { begin: "\\*(\\.[a-z\\-]+)+" },
           // sub.example.*
-          {begin: "([a-z\\-]+\\.)+\\*"}
+          { begin: "([a-z\\-]+\\.)+\\*" }
         ]
       },
       // IP
@@ -62,7 +123,7 @@ module.exports = function(hljs) {
       // units
       {
         className: 'number',
-        begin: '\\b\\d+[kKmMgGdshdwy]*\\b',
+        begin: '\\b\\d+[kKmMgGdshdwy]?\\b',
         relevance: 0
       },
       VAR
@@ -70,22 +131,24 @@ module.exports = function(hljs) {
   };
 
   return {
-    aliases: ['nginxconf'],
+    name: 'Nginx config',
+    aliases: [ 'nginxconf' ],
     contains: [
       hljs.HASH_COMMENT_MODE,
       {
-        begin: hljs.UNDERSCORE_IDENT_RE + '\\s+{', returnBegin: true,
-        end: '{',
-        contains: [
-          {
-            className: 'section',
-            begin: hljs.UNDERSCORE_IDENT_RE
-          }
-        ],
+        beginKeywords: "upstream location",
+        end: /;|\{/,
+        contains: DEFAULT.contains,
+        keywords: { section: "upstream location" }
+      },
+      {
+        className: 'section',
+        begin: regex.concat(hljs.UNDERSCORE_IDENT_RE + regex.lookahead(/\s+\{/)),
         relevance: 0
       },
       {
-        begin: hljs.UNDERSCORE_IDENT_RE + '\\s', end: ';|{', returnBegin: true,
+        begin: regex.lookahead(hljs.UNDERSCORE_IDENT_RE + '\\s'),
+        end: ';|\\{',
         contains: [
           {
             className: 'attribute',
@@ -96,9 +159,12 @@ module.exports = function(hljs) {
         relevance: 0
       }
     ],
-    illegal: '[^\\s\\}]'
+    illegal: '[^\\s\\}\\{]'
   };
-};
+}
+
+
+
 
 /***/ })
 

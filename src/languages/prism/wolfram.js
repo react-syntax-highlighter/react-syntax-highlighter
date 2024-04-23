@@ -1,2 +1,2 @@
-import wolfram from "refractor/lang/wolfram.js";;
+import wolfram from "refractor/lang/wolfram.js";
 export default wolfram;

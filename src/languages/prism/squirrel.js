@@ -1,2 +1,2 @@
-import squirrel from "refractor/lang/squirrel.js";;
+import squirrel from "refractor/lang/squirrel.js";
 export default squirrel;

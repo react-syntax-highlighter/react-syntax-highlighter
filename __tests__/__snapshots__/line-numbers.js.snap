@@ -3,19 +3,16 @@
 exports[`SyntaxHighlighter allows lineNumberStyle as function 1`] = `
 <pre
   style={
-    Object {
-      "background": "#F0F0F0",
+    {
+      "background": "#F3F3F3",
       "color": "#444",
-      "display": "block",
-      "overflowX": "auto",
-      "padding": "0.5em",
     }
   }
 >
   <code
     className="language-javascript"
     style={
-      Object {
+      {
         "whiteSpace": "pre",
       }
     }
@@ -23,7 +20,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function 1`] = `
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "color": "red",
           "display": "inline-block",
           "minWidth": "2.25em",
@@ -37,7 +34,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function 1`] = `
     </span>
     <span
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -45,30 +42,29 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function 1`] = `
       const
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-       woah = 
+       
     </span>
     <span
-      className="hljs-function hljs-params"
-      style={Object {}}
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
     >
-      fun
+      woah
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
-       =&gt;
-    </span>
-    <span
-      style={Object {}}
-    >
-       fun + 
+       = fun =&gt; fun + 
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -76,7 +72,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function 1`] = `
       1
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ;
 
@@ -84,7 +80,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function 1`] = `
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "color": "red",
           "display": "inline-block",
           "minWidth": "2.25em",
@@ -97,13 +93,11 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function 1`] = `
       2
     </span>
     <span
-      style={Object {}}
-    >
-      
-    </span>
+      style={{}}
+    />
     <span
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -111,13 +105,29 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function 1`] = `
       const
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-       dude = woah(
+       dude = 
+    </span>
+    <span
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      woah
+    </span>
+    <span
+      style={{}}
+    >
+      (
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -125,13 +135,13 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function 1`] = `
       2
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ) + 
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -139,7 +149,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function 1`] = `
       3
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ;
 
@@ -147,7 +157,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function 1`] = `
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "color": "red",
           "display": "inline-block",
           "minWidth": "2.25em",
@@ -160,14 +170,11 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function 1`] = `
       3
     </span>
     <span
-      style={Object {}}
-    >
-      
-    </span>
+      style={{}}
+    />
     <span
-      className="hljs-function"
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -175,15 +182,14 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function 1`] = `
       function
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
-      className="hljs-function"
+      className="function_"
       style={
-        Object {
+        {
           "color": "#880000",
           "fontWeight": "bold",
         }
@@ -192,27 +198,20 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function 1`] = `
       thisIsAFunction
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
       (
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
-      ) 
-    </span>
-    <span
-      style={Object {}}
-    >
-      {
+      ) {
 
     </span>
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "color": "red",
           "display": "inline-block",
           "minWidth": "2.25em",
@@ -225,13 +224,13 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function 1`] = `
       4
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
         
     </span>
     <span
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -239,13 +238,13 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function 1`] = `
       return
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        [
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -253,13 +252,13 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function 1`] = `
       1
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ,
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -267,13 +266,13 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function 1`] = `
       2
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ,
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -281,30 +280,46 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function 1`] = `
       3
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-      ].map(
+      ].
     </span>
     <span
-      className="hljs-function hljs-params"
-      style={Object {}}
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      map
+    </span>
+    <span
+      style={{}}
+    >
+      (
+    </span>
+    <span
+      className="hljs-function"
+      style={{}}
     >
       n
     </span>
     <span
       className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
        =&gt;
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        n + 
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -312,13 +327,29 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function 1`] = `
       1
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-      ).filter(n !== 
+      ).
+    </span>
+    <span
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      filter
+    </span>
+    <span
+      style={{}}
+    >
+      (n !== 
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -326,7 +357,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function 1`] = `
       3
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       );
 
@@ -334,7 +365,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function 1`] = `
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "color": "red",
           "display": "inline-block",
           "minWidth": "2.25em",
@@ -351,7 +382,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function 1`] = `
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "color": "red",
           "display": "inline-block",
           "minWidth": "2.25em",
@@ -364,27 +395,42 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function 1`] = `
       6
     </span>
     <span
-      style={Object {}}
-    >
-      
-    </span>
+      style={{}}
+    />
     <span
+      className="language_"
       style={
-        Object {
-          "color": "#397300",
+        {
+          "color": "#ab5656",
         }
       }
     >
       console
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-      .log(
+      .
+    </span>
+    <span
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      log
+    </span>
+    <span
+      style={{}}
+    >
+      (
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -392,7 +438,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function 1`] = `
       'making up fake code is really hard'
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       );
 
@@ -400,7 +446,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function 1`] = `
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "color": "red",
           "display": "inline-block",
           "minWidth": "2.25em",
@@ -417,7 +463,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function 1`] = `
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "color": "red",
           "display": "inline-block",
           "minWidth": "2.25em",
@@ -430,14 +476,11 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function 1`] = `
       8
     </span>
     <span
-      style={Object {}}
-    >
-      
-    </span>
+      style={{}}
+    />
     <span
-      className="hljs-function"
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -445,15 +488,14 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function 1`] = `
       function
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
-      className="hljs-function"
+      className="function_"
       style={
-        Object {
+        {
           "color": "#880000",
           "fontWeight": "bold",
         }
@@ -462,27 +504,20 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function 1`] = `
       itIs
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
       (
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
-      ) 
-    </span>
-    <span
-      style={Object {}}
-    >
-      {
+      ) {
 
     </span>
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "color": "red",
           "display": "inline-block",
           "minWidth": "2.25em",
@@ -495,13 +530,13 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function 1`] = `
       9
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
         
     </span>
     <span
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -509,13 +544,13 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function 1`] = `
       return
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -523,7 +558,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function 1`] = `
       'no seriously really it is'
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ;
 
@@ -531,7 +566,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function 1`] = `
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "color": "red",
           "display": "inline-block",
           "minWidth": "2.25em",
@@ -548,7 +583,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function 1`] = `
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "color": "red",
           "display": "inline-block",
           "minWidth": "2.25em",
@@ -560,7 +595,6 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function 1`] = `
     >
       11
     </span>
-    
   </code>
 </pre>
 `;
@@ -568,19 +602,16 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function 1`] = `
 exports[`SyntaxHighlighter allows lineNumberStyle as function for inline line numbers 1`] = `
 <pre
   style={
-    Object {
-      "background": "#F0F0F0",
+    {
+      "background": "#F3F3F3",
       "color": "#444",
-      "display": "block",
-      "overflowX": "auto",
-      "padding": "0.5em",
     }
   }
 >
   <code
     className="language-javascript"
     style={
-      Object {
+      {
         "whiteSpace": "pre",
       }
     }
@@ -588,7 +619,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function for inline line nu
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "color": "red",
           "display": "inline-block",
           "minWidth": "2.25em",
@@ -602,7 +633,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function for inline line nu
     </span>
     <span
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -610,30 +641,29 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function for inline line nu
       const
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-       woah = 
+       
     </span>
     <span
-      className="hljs-function hljs-params"
-      style={Object {}}
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
     >
-      fun
+      woah
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
-       =&gt;
-    </span>
-    <span
-      style={Object {}}
-    >
-       fun + 
+       = fun =&gt; fun + 
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -641,7 +671,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function for inline line nu
       1
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ;
 
@@ -649,7 +679,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function for inline line nu
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "color": "red",
           "display": "inline-block",
           "minWidth": "2.25em",
@@ -662,13 +692,11 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function for inline line nu
       2
     </span>
     <span
-      style={Object {}}
-    >
-      
-    </span>
+      style={{}}
+    />
     <span
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -676,13 +704,29 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function for inline line nu
       const
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-       dude = woah(
+       dude = 
+    </span>
+    <span
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      woah
+    </span>
+    <span
+      style={{}}
+    >
+      (
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -690,13 +734,13 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function for inline line nu
       2
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ) + 
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -704,7 +748,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function for inline line nu
       3
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ;
 
@@ -712,7 +756,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function for inline line nu
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "color": "red",
           "display": "inline-block",
           "minWidth": "2.25em",
@@ -725,14 +769,11 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function for inline line nu
       3
     </span>
     <span
-      style={Object {}}
-    >
-      
-    </span>
+      style={{}}
+    />
     <span
-      className="hljs-function"
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -740,15 +781,14 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function for inline line nu
       function
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
-      className="hljs-function"
+      className="function_"
       style={
-        Object {
+        {
           "color": "#880000",
           "fontWeight": "bold",
         }
@@ -757,27 +797,20 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function for inline line nu
       thisIsAFunction
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
       (
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
-      ) 
-    </span>
-    <span
-      style={Object {}}
-    >
-      {
+      ) {
 
     </span>
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "color": "red",
           "display": "inline-block",
           "minWidth": "2.25em",
@@ -790,13 +823,13 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function for inline line nu
       4
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
         
     </span>
     <span
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -804,13 +837,13 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function for inline line nu
       return
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        [
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -818,13 +851,13 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function for inline line nu
       1
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ,
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -832,13 +865,13 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function for inline line nu
       2
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ,
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -846,30 +879,46 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function for inline line nu
       3
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-      ].map(
+      ].
     </span>
     <span
-      className="hljs-function hljs-params"
-      style={Object {}}
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      map
+    </span>
+    <span
+      style={{}}
+    >
+      (
+    </span>
+    <span
+      className="hljs-function"
+      style={{}}
     >
       n
     </span>
     <span
       className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
        =&gt;
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        n + 
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -877,13 +926,29 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function for inline line nu
       1
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-      ).filter(n !== 
+      ).
+    </span>
+    <span
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      filter
+    </span>
+    <span
+      style={{}}
+    >
+      (n !== 
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -891,7 +956,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function for inline line nu
       3
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       );
 
@@ -899,7 +964,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function for inline line nu
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "color": "red",
           "display": "inline-block",
           "minWidth": "2.25em",
@@ -916,7 +981,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function for inline line nu
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "color": "red",
           "display": "inline-block",
           "minWidth": "2.25em",
@@ -929,27 +994,42 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function for inline line nu
       6
     </span>
     <span
-      style={Object {}}
-    >
-      
-    </span>
+      style={{}}
+    />
     <span
+      className="language_"
       style={
-        Object {
-          "color": "#397300",
+        {
+          "color": "#ab5656",
         }
       }
     >
       console
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-      .log(
+      .
+    </span>
+    <span
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      log
+    </span>
+    <span
+      style={{}}
+    >
+      (
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -957,7 +1037,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function for inline line nu
       'making up fake code is really hard'
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       );
 
@@ -965,7 +1045,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function for inline line nu
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "color": "red",
           "display": "inline-block",
           "minWidth": "2.25em",
@@ -982,7 +1062,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function for inline line nu
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "color": "red",
           "display": "inline-block",
           "minWidth": "2.25em",
@@ -995,14 +1075,11 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function for inline line nu
       8
     </span>
     <span
-      style={Object {}}
-    >
-      
-    </span>
+      style={{}}
+    />
     <span
-      className="hljs-function"
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -1010,15 +1087,14 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function for inline line nu
       function
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
-      className="hljs-function"
+      className="function_"
       style={
-        Object {
+        {
           "color": "#880000",
           "fontWeight": "bold",
         }
@@ -1027,27 +1103,20 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function for inline line nu
       itIs
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
       (
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
-      ) 
-    </span>
-    <span
-      style={Object {}}
-    >
-      {
+      ) {
 
     </span>
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "color": "red",
           "display": "inline-block",
           "minWidth": "2.25em",
@@ -1060,13 +1129,13 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function for inline line nu
       9
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
         
     </span>
     <span
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -1074,13 +1143,13 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function for inline line nu
       return
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -1088,7 +1157,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function for inline line nu
       'no seriously really it is'
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ;
 
@@ -1096,7 +1165,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function for inline line nu
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "color": "red",
           "display": "inline-block",
           "minWidth": "2.25em",
@@ -1113,7 +1182,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function for inline line nu
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "color": "red",
           "display": "inline-block",
           "minWidth": "2.25em",
@@ -1125,7 +1194,6 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function for inline line nu
     >
       11
     </span>
-    
   </code>
 </pre>
 `;
@@ -1133,19 +1201,16 @@ exports[`SyntaxHighlighter allows lineNumberStyle as function for inline line nu
 exports[`SyntaxHighlighter allows lineNumberStyle as object 1`] = `
 <pre
   style={
-    Object {
-      "background": "#F0F0F0",
+    {
+      "background": "#F3F3F3",
       "color": "#444",
-      "display": "block",
-      "overflowX": "auto",
-      "padding": "0.5em",
     }
   }
 >
   <code
     className="language-javascript"
     style={
-      Object {
+      {
         "whiteSpace": "pre",
       }
     }
@@ -1153,7 +1218,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as object 1`] = `
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "color": "red",
           "display": "inline-block",
           "minWidth": "2.25em",
@@ -1167,7 +1232,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as object 1`] = `
     </span>
     <span
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -1175,30 +1240,29 @@ exports[`SyntaxHighlighter allows lineNumberStyle as object 1`] = `
       const
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-       woah = 
+       
     </span>
     <span
-      className="hljs-function hljs-params"
-      style={Object {}}
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
     >
-      fun
+      woah
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
-       =&gt;
-    </span>
-    <span
-      style={Object {}}
-    >
-       fun + 
+       = fun =&gt; fun + 
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -1206,7 +1270,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as object 1`] = `
       1
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ;
 
@@ -1214,7 +1278,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as object 1`] = `
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "color": "red",
           "display": "inline-block",
           "minWidth": "2.25em",
@@ -1227,13 +1291,11 @@ exports[`SyntaxHighlighter allows lineNumberStyle as object 1`] = `
       2
     </span>
     <span
-      style={Object {}}
-    >
-      
-    </span>
+      style={{}}
+    />
     <span
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -1241,13 +1303,29 @@ exports[`SyntaxHighlighter allows lineNumberStyle as object 1`] = `
       const
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-       dude = woah(
+       dude = 
+    </span>
+    <span
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      woah
+    </span>
+    <span
+      style={{}}
+    >
+      (
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -1255,13 +1333,13 @@ exports[`SyntaxHighlighter allows lineNumberStyle as object 1`] = `
       2
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ) + 
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -1269,7 +1347,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as object 1`] = `
       3
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ;
 
@@ -1277,7 +1355,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as object 1`] = `
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "color": "red",
           "display": "inline-block",
           "minWidth": "2.25em",
@@ -1290,14 +1368,11 @@ exports[`SyntaxHighlighter allows lineNumberStyle as object 1`] = `
       3
     </span>
     <span
-      style={Object {}}
-    >
-      
-    </span>
+      style={{}}
+    />
     <span
-      className="hljs-function"
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -1305,15 +1380,14 @@ exports[`SyntaxHighlighter allows lineNumberStyle as object 1`] = `
       function
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
-      className="hljs-function"
+      className="function_"
       style={
-        Object {
+        {
           "color": "#880000",
           "fontWeight": "bold",
         }
@@ -1322,27 +1396,20 @@ exports[`SyntaxHighlighter allows lineNumberStyle as object 1`] = `
       thisIsAFunction
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
       (
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
-      ) 
-    </span>
-    <span
-      style={Object {}}
-    >
-      {
+      ) {
 
     </span>
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "color": "red",
           "display": "inline-block",
           "minWidth": "2.25em",
@@ -1355,13 +1422,13 @@ exports[`SyntaxHighlighter allows lineNumberStyle as object 1`] = `
       4
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
         
     </span>
     <span
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -1369,13 +1436,13 @@ exports[`SyntaxHighlighter allows lineNumberStyle as object 1`] = `
       return
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        [
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -1383,13 +1450,13 @@ exports[`SyntaxHighlighter allows lineNumberStyle as object 1`] = `
       1
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ,
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -1397,13 +1464,13 @@ exports[`SyntaxHighlighter allows lineNumberStyle as object 1`] = `
       2
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ,
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -1411,30 +1478,46 @@ exports[`SyntaxHighlighter allows lineNumberStyle as object 1`] = `
       3
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-      ].map(
+      ].
     </span>
     <span
-      className="hljs-function hljs-params"
-      style={Object {}}
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      map
+    </span>
+    <span
+      style={{}}
+    >
+      (
+    </span>
+    <span
+      className="hljs-function"
+      style={{}}
     >
       n
     </span>
     <span
       className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
        =&gt;
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        n + 
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -1442,13 +1525,29 @@ exports[`SyntaxHighlighter allows lineNumberStyle as object 1`] = `
       1
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-      ).filter(n !== 
+      ).
+    </span>
+    <span
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      filter
+    </span>
+    <span
+      style={{}}
+    >
+      (n !== 
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -1456,7 +1555,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as object 1`] = `
       3
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       );
 
@@ -1464,7 +1563,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as object 1`] = `
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "color": "red",
           "display": "inline-block",
           "minWidth": "2.25em",
@@ -1481,7 +1580,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as object 1`] = `
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "color": "red",
           "display": "inline-block",
           "minWidth": "2.25em",
@@ -1494,27 +1593,42 @@ exports[`SyntaxHighlighter allows lineNumberStyle as object 1`] = `
       6
     </span>
     <span
-      style={Object {}}
-    >
-      
-    </span>
+      style={{}}
+    />
     <span
+      className="language_"
       style={
-        Object {
-          "color": "#397300",
+        {
+          "color": "#ab5656",
         }
       }
     >
       console
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-      .log(
+      .
+    </span>
+    <span
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      log
+    </span>
+    <span
+      style={{}}
+    >
+      (
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -1522,7 +1636,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as object 1`] = `
       'making up fake code is really hard'
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       );
 
@@ -1530,7 +1644,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as object 1`] = `
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "color": "red",
           "display": "inline-block",
           "minWidth": "2.25em",
@@ -1547,7 +1661,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as object 1`] = `
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "color": "red",
           "display": "inline-block",
           "minWidth": "2.25em",
@@ -1560,14 +1674,11 @@ exports[`SyntaxHighlighter allows lineNumberStyle as object 1`] = `
       8
     </span>
     <span
-      style={Object {}}
-    >
-      
-    </span>
+      style={{}}
+    />
     <span
-      className="hljs-function"
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -1575,15 +1686,14 @@ exports[`SyntaxHighlighter allows lineNumberStyle as object 1`] = `
       function
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
-      className="hljs-function"
+      className="function_"
       style={
-        Object {
+        {
           "color": "#880000",
           "fontWeight": "bold",
         }
@@ -1592,27 +1702,20 @@ exports[`SyntaxHighlighter allows lineNumberStyle as object 1`] = `
       itIs
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
       (
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
-      ) 
-    </span>
-    <span
-      style={Object {}}
-    >
-      {
+      ) {
 
     </span>
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "color": "red",
           "display": "inline-block",
           "minWidth": "2.25em",
@@ -1625,13 +1728,13 @@ exports[`SyntaxHighlighter allows lineNumberStyle as object 1`] = `
       9
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
         
     </span>
     <span
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -1639,13 +1742,13 @@ exports[`SyntaxHighlighter allows lineNumberStyle as object 1`] = `
       return
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -1653,7 +1756,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as object 1`] = `
       'no seriously really it is'
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ;
 
@@ -1661,7 +1764,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as object 1`] = `
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "color": "red",
           "display": "inline-block",
           "minWidth": "2.25em",
@@ -1678,7 +1781,7 @@ exports[`SyntaxHighlighter allows lineNumberStyle as object 1`] = `
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "color": "red",
           "display": "inline-block",
           "minWidth": "2.25em",
@@ -1690,7 +1793,6 @@ exports[`SyntaxHighlighter allows lineNumberStyle as object 1`] = `
     >
       11
     </span>
-    
   </code>
 </pre>
 `;
@@ -1698,26 +1800,23 @@ exports[`SyntaxHighlighter allows lineNumberStyle as object 1`] = `
 exports[`SyntaxHighlighter component does not render line numbers if showInlineNumbers === true && showLineNumbers === undefined 1`] = `
 <pre
   style={
-    Object {
-      "background": "#F0F0F0",
+    {
+      "background": "#F3F3F3",
       "color": "#444",
-      "display": "block",
-      "overflowX": "auto",
-      "padding": "0.5em",
     }
   }
 >
   <code
     className="language-javascript"
     style={
-      Object {
+      {
         "whiteSpace": "pre",
       }
     }
   >
     <span
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -1725,30 +1824,29 @@ exports[`SyntaxHighlighter component does not render line numbers if showInlineN
       const
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-       woah = 
+       
     </span>
     <span
-      className="hljs-function hljs-params"
-      style={Object {}}
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
     >
-      fun
+      woah
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
-       =&gt;
-    </span>
-    <span
-      style={Object {}}
-    >
-       fun + 
+       = fun =&gt; fun + 
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -1756,19 +1854,17 @@ exports[`SyntaxHighlighter component does not render line numbers if showInlineN
       1
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ;
 
     </span>
     <span
-      style={Object {}}
-    >
-      
-    </span>
+      style={{}}
+    />
     <span
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -1776,13 +1872,29 @@ exports[`SyntaxHighlighter component does not render line numbers if showInlineN
       const
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-       dude = woah(
+       dude = 
+    </span>
+    <span
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      woah
+    </span>
+    <span
+      style={{}}
+    >
+      (
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -1790,13 +1902,13 @@ exports[`SyntaxHighlighter component does not render line numbers if showInlineN
       2
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ) + 
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -1804,20 +1916,17 @@ exports[`SyntaxHighlighter component does not render line numbers if showInlineN
       3
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ;
 
     </span>
     <span
-      style={Object {}}
-    >
-      
-    </span>
+      style={{}}
+    />
     <span
-      className="hljs-function"
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -1825,15 +1934,14 @@ exports[`SyntaxHighlighter component does not render line numbers if showInlineN
       function
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
-      className="hljs-function"
+      className="function_"
       style={
-        Object {
+        {
           "color": "#880000",
           "fontWeight": "bold",
         }
@@ -1842,31 +1950,24 @@ exports[`SyntaxHighlighter component does not render line numbers if showInlineN
       thisIsAFunction
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
       (
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
-      ) 
-    </span>
-    <span
-      style={Object {}}
-    >
-      {
+      ) {
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
         
     </span>
     <span
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -1874,13 +1975,13 @@ exports[`SyntaxHighlighter component does not render line numbers if showInlineN
       return
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        [
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -1888,13 +1989,13 @@ exports[`SyntaxHighlighter component does not render line numbers if showInlineN
       1
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ,
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -1902,13 +2003,13 @@ exports[`SyntaxHighlighter component does not render line numbers if showInlineN
       2
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ,
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -1916,30 +2017,46 @@ exports[`SyntaxHighlighter component does not render line numbers if showInlineN
       3
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-      ].map(
+      ].
     </span>
     <span
-      className="hljs-function hljs-params"
-      style={Object {}}
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      map
+    </span>
+    <span
+      style={{}}
+    >
+      (
+    </span>
+    <span
+      className="hljs-function"
+      style={{}}
     >
       n
     </span>
     <span
       className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
        =&gt;
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        n + 
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -1947,13 +2064,29 @@ exports[`SyntaxHighlighter component does not render line numbers if showInlineN
       1
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-      ).filter(n !== 
+      ).
+    </span>
+    <span
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      filter
+    </span>
+    <span
+      style={{}}
+    >
+      (n !== 
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -1961,7 +2094,7 @@ exports[`SyntaxHighlighter component does not render line numbers if showInlineN
       3
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       );
 
@@ -1969,27 +2102,42 @@ exports[`SyntaxHighlighter component does not render line numbers if showInlineN
     }
 
     <span
-      style={Object {}}
-    >
-      
-    </span>
+      style={{}}
+    />
     <span
+      className="language_"
       style={
-        Object {
-          "color": "#397300",
+        {
+          "color": "#ab5656",
         }
       }
     >
       console
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-      .log(
+      .
+    </span>
+    <span
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      log
+    </span>
+    <span
+      style={{}}
+    >
+      (
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -1997,7 +2145,7 @@ exports[`SyntaxHighlighter component does not render line numbers if showInlineN
       'making up fake code is really hard'
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       );
 
@@ -2005,14 +2153,11 @@ exports[`SyntaxHighlighter component does not render line numbers if showInlineN
     
 
     <span
-      style={Object {}}
-    >
-      
-    </span>
+      style={{}}
+    />
     <span
-      className="hljs-function"
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -2020,15 +2165,14 @@ exports[`SyntaxHighlighter component does not render line numbers if showInlineN
       function
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
-      className="hljs-function"
+      className="function_"
       style={
-        Object {
+        {
           "color": "#880000",
           "fontWeight": "bold",
         }
@@ -2037,31 +2181,24 @@ exports[`SyntaxHighlighter component does not render line numbers if showInlineN
       itIs
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
       (
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
-      ) 
-    </span>
-    <span
-      style={Object {}}
-    >
-      {
+      ) {
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
         
     </span>
     <span
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -2069,13 +2206,13 @@ exports[`SyntaxHighlighter component does not render line numbers if showInlineN
       return
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -2083,14 +2220,13 @@ exports[`SyntaxHighlighter component does not render line numbers if showInlineN
       'no seriously really it is'
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ;
 
     </span>
     }
 
-    
   </code>
 </pre>
 `;
@@ -2098,26 +2234,23 @@ exports[`SyntaxHighlighter component does not render line numbers if showInlineN
 exports[`SyntaxHighlighter component does not render line numbers if showLineNumbers === undefined 1`] = `
 <pre
   style={
-    Object {
-      "background": "#F0F0F0",
+    {
+      "background": "#F3F3F3",
       "color": "#444",
-      "display": "block",
-      "overflowX": "auto",
-      "padding": "0.5em",
     }
   }
 >
   <code
     className="language-javascript"
     style={
-      Object {
+      {
         "whiteSpace": "pre",
       }
     }
   >
     <span
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -2125,30 +2258,29 @@ exports[`SyntaxHighlighter component does not render line numbers if showLineNum
       const
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-       woah = 
+       
     </span>
     <span
-      className="hljs-function hljs-params"
-      style={Object {}}
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
     >
-      fun
+      woah
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
-       =&gt;
-    </span>
-    <span
-      style={Object {}}
-    >
-       fun + 
+       = fun =&gt; fun + 
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -2156,19 +2288,17 @@ exports[`SyntaxHighlighter component does not render line numbers if showLineNum
       1
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ;
 
     </span>
     <span
-      style={Object {}}
-    >
-      
-    </span>
+      style={{}}
+    />
     <span
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -2176,13 +2306,29 @@ exports[`SyntaxHighlighter component does not render line numbers if showLineNum
       const
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-       dude = woah(
+       dude = 
+    </span>
+    <span
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      woah
+    </span>
+    <span
+      style={{}}
+    >
+      (
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -2190,13 +2336,13 @@ exports[`SyntaxHighlighter component does not render line numbers if showLineNum
       2
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ) + 
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -2204,20 +2350,17 @@ exports[`SyntaxHighlighter component does not render line numbers if showLineNum
       3
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ;
 
     </span>
     <span
-      style={Object {}}
-    >
-      
-    </span>
+      style={{}}
+    />
     <span
-      className="hljs-function"
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -2225,15 +2368,14 @@ exports[`SyntaxHighlighter component does not render line numbers if showLineNum
       function
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
-      className="hljs-function"
+      className="function_"
       style={
-        Object {
+        {
           "color": "#880000",
           "fontWeight": "bold",
         }
@@ -2242,31 +2384,24 @@ exports[`SyntaxHighlighter component does not render line numbers if showLineNum
       thisIsAFunction
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
       (
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
-      ) 
-    </span>
-    <span
-      style={Object {}}
-    >
-      {
+      ) {
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
         
     </span>
     <span
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -2274,13 +2409,13 @@ exports[`SyntaxHighlighter component does not render line numbers if showLineNum
       return
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        [
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -2288,13 +2423,13 @@ exports[`SyntaxHighlighter component does not render line numbers if showLineNum
       1
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ,
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -2302,13 +2437,13 @@ exports[`SyntaxHighlighter component does not render line numbers if showLineNum
       2
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ,
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -2316,30 +2451,46 @@ exports[`SyntaxHighlighter component does not render line numbers if showLineNum
       3
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-      ].map(
+      ].
     </span>
     <span
-      className="hljs-function hljs-params"
-      style={Object {}}
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      map
+    </span>
+    <span
+      style={{}}
+    >
+      (
+    </span>
+    <span
+      className="hljs-function"
+      style={{}}
     >
       n
     </span>
     <span
       className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
        =&gt;
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        n + 
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -2347,13 +2498,29 @@ exports[`SyntaxHighlighter component does not render line numbers if showLineNum
       1
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-      ).filter(n !== 
+      ).
+    </span>
+    <span
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      filter
+    </span>
+    <span
+      style={{}}
+    >
+      (n !== 
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -2361,7 +2528,7 @@ exports[`SyntaxHighlighter component does not render line numbers if showLineNum
       3
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       );
 
@@ -2369,27 +2536,42 @@ exports[`SyntaxHighlighter component does not render line numbers if showLineNum
     }
 
     <span
-      style={Object {}}
-    >
-      
-    </span>
+      style={{}}
+    />
     <span
+      className="language_"
       style={
-        Object {
-          "color": "#397300",
+        {
+          "color": "#ab5656",
         }
       }
     >
       console
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-      .log(
+      .
+    </span>
+    <span
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      log
+    </span>
+    <span
+      style={{}}
+    >
+      (
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -2397,7 +2579,7 @@ exports[`SyntaxHighlighter component does not render line numbers if showLineNum
       'making up fake code is really hard'
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       );
 
@@ -2405,14 +2587,11 @@ exports[`SyntaxHighlighter component does not render line numbers if showLineNum
     
 
     <span
-      style={Object {}}
-    >
-      
-    </span>
+      style={{}}
+    />
     <span
-      className="hljs-function"
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -2420,15 +2599,14 @@ exports[`SyntaxHighlighter component does not render line numbers if showLineNum
       function
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
-      className="hljs-function"
+      className="function_"
       style={
-        Object {
+        {
           "color": "#880000",
           "fontWeight": "bold",
         }
@@ -2437,31 +2615,24 @@ exports[`SyntaxHighlighter component does not render line numbers if showLineNum
       itIs
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
       (
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
-      ) 
-    </span>
-    <span
-      style={Object {}}
-    >
-      {
+      ) {
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
         
     </span>
     <span
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -2469,13 +2640,13 @@ exports[`SyntaxHighlighter component does not render line numbers if showLineNum
       return
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -2483,14 +2654,13 @@ exports[`SyntaxHighlighter component does not render line numbers if showLineNum
       'no seriously really it is'
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ;
 
     </span>
     }
 
-    
   </code>
 </pre>
 `;
@@ -2498,19 +2668,16 @@ exports[`SyntaxHighlighter component does not render line numbers if showLineNum
 exports[`SyntaxHighlighter component renders correctly 1`] = `
 <pre
   style={
-    Object {
-      "background": "#F0F0F0",
+    {
+      "background": "#F3F3F3",
       "color": "#444",
-      "display": "block",
-      "overflowX": "auto",
-      "padding": "0.5em",
     }
   }
 >
   <code
     className="language-javascript"
     style={
-      Object {
+      {
         "whiteSpace": "pre",
       }
     }
@@ -2518,7 +2685,7 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "display": "inline-block",
           "minWidth": "2.25em",
           "paddingRight": "1em",
@@ -2531,7 +2698,7 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
     </span>
     <span
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -2539,30 +2706,29 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       const
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-       woah = 
+       
     </span>
     <span
-      className="hljs-function hljs-params"
-      style={Object {}}
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
     >
-      fun
+      woah
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
-       =&gt;
-    </span>
-    <span
-      style={Object {}}
-    >
-       fun + 
+       = fun =&gt; fun + 
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -2570,7 +2736,7 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       1
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ;
 
@@ -2578,7 +2744,7 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "display": "inline-block",
           "minWidth": "2.25em",
           "paddingRight": "1em",
@@ -2590,13 +2756,11 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       2
     </span>
     <span
-      style={Object {}}
-    >
-      
-    </span>
+      style={{}}
+    />
     <span
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -2604,13 +2768,29 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       const
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-       dude = woah(
+       dude = 
+    </span>
+    <span
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      woah
+    </span>
+    <span
+      style={{}}
+    >
+      (
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -2618,13 +2798,13 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       2
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ) + 
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -2632,7 +2812,7 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       3
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ;
 
@@ -2640,7 +2820,7 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "display": "inline-block",
           "minWidth": "2.25em",
           "paddingRight": "1em",
@@ -2652,14 +2832,11 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       3
     </span>
     <span
-      style={Object {}}
-    >
-      
-    </span>
+      style={{}}
+    />
     <span
-      className="hljs-function"
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -2667,15 +2844,14 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       function
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
-      className="hljs-function"
+      className="function_"
       style={
-        Object {
+        {
           "color": "#880000",
           "fontWeight": "bold",
         }
@@ -2684,27 +2860,20 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       thisIsAFunction
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
       (
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
-      ) 
-    </span>
-    <span
-      style={Object {}}
-    >
-      {
+      ) {
 
     </span>
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "display": "inline-block",
           "minWidth": "2.25em",
           "paddingRight": "1em",
@@ -2716,13 +2885,13 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       4
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
         
     </span>
     <span
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -2730,13 +2899,13 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       return
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        [
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -2744,13 +2913,13 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       1
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ,
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -2758,13 +2927,13 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       2
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ,
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -2772,30 +2941,46 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       3
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-      ].map(
+      ].
     </span>
     <span
-      className="hljs-function hljs-params"
-      style={Object {}}
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      map
+    </span>
+    <span
+      style={{}}
+    >
+      (
+    </span>
+    <span
+      className="hljs-function"
+      style={{}}
     >
       n
     </span>
     <span
       className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
        =&gt;
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        n + 
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -2803,13 +2988,29 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       1
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-      ).filter(n !== 
+      ).
+    </span>
+    <span
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      filter
+    </span>
+    <span
+      style={{}}
+    >
+      (n !== 
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -2817,7 +3018,7 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       3
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       );
 
@@ -2825,7 +3026,7 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "display": "inline-block",
           "minWidth": "2.25em",
           "paddingRight": "1em",
@@ -2841,7 +3042,7 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "display": "inline-block",
           "minWidth": "2.25em",
           "paddingRight": "1em",
@@ -2853,27 +3054,42 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       6
     </span>
     <span
-      style={Object {}}
-    >
-      
-    </span>
+      style={{}}
+    />
     <span
+      className="language_"
       style={
-        Object {
-          "color": "#397300",
+        {
+          "color": "#ab5656",
         }
       }
     >
       console
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-      .log(
+      .
+    </span>
+    <span
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      log
+    </span>
+    <span
+      style={{}}
+    >
+      (
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -2881,7 +3097,7 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       'making up fake code is really hard'
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       );
 
@@ -2889,7 +3105,7 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "display": "inline-block",
           "minWidth": "2.25em",
           "paddingRight": "1em",
@@ -2905,7 +3121,7 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "display": "inline-block",
           "minWidth": "2.25em",
           "paddingRight": "1em",
@@ -2917,14 +3133,11 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       8
     </span>
     <span
-      style={Object {}}
-    >
-      
-    </span>
+      style={{}}
+    />
     <span
-      className="hljs-function"
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -2932,15 +3145,14 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       function
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
-      className="hljs-function"
+      className="function_"
       style={
-        Object {
+        {
           "color": "#880000",
           "fontWeight": "bold",
         }
@@ -2949,27 +3161,20 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       itIs
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
       (
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
-      ) 
-    </span>
-    <span
-      style={Object {}}
-    >
-      {
+      ) {
 
     </span>
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "display": "inline-block",
           "minWidth": "2.25em",
           "paddingRight": "1em",
@@ -2981,13 +3186,13 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       9
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
         
     </span>
     <span
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -2995,13 +3200,13 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       return
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -3009,7 +3214,7 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       'no seriously really it is'
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ;
 
@@ -3017,7 +3222,7 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "display": "inline-block",
           "minWidth": "2.25em",
           "paddingRight": "1em",
@@ -3033,7 +3238,7 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "display": "inline-block",
           "minWidth": "2.25em",
           "paddingRight": "1em",
@@ -3044,7 +3249,6 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
     >
       11
     </span>
-    
   </code>
 </pre>
 `;
@@ -3052,19 +3256,16 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
 exports[`SyntaxHighlighter component renders line numbers if showLineNumbers === true 1`] = `
 <pre
   style={
-    Object {
-      "background": "#F0F0F0",
+    {
+      "background": "#F3F3F3",
       "color": "#444",
-      "display": "block",
-      "overflowX": "auto",
-      "padding": "0.5em",
     }
   }
 >
   <code
     className="language-javascript"
     style={
-      Object {
+      {
         "whiteSpace": "pre",
       }
     }
@@ -3072,7 +3273,7 @@ exports[`SyntaxHighlighter component renders line numbers if showLineNumbers ===
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "display": "inline-block",
           "minWidth": "2.25em",
           "paddingRight": "1em",
@@ -3085,7 +3286,7 @@ exports[`SyntaxHighlighter component renders line numbers if showLineNumbers ===
     </span>
     <span
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -3093,30 +3294,29 @@ exports[`SyntaxHighlighter component renders line numbers if showLineNumbers ===
       const
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-       woah = 
+       
     </span>
     <span
-      className="hljs-function hljs-params"
-      style={Object {}}
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
     >
-      fun
+      woah
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
-       =&gt;
-    </span>
-    <span
-      style={Object {}}
-    >
-       fun + 
+       = fun =&gt; fun + 
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -3124,7 +3324,7 @@ exports[`SyntaxHighlighter component renders line numbers if showLineNumbers ===
       1
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ;
 
@@ -3132,7 +3332,7 @@ exports[`SyntaxHighlighter component renders line numbers if showLineNumbers ===
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "display": "inline-block",
           "minWidth": "2.25em",
           "paddingRight": "1em",
@@ -3144,13 +3344,11 @@ exports[`SyntaxHighlighter component renders line numbers if showLineNumbers ===
       2
     </span>
     <span
-      style={Object {}}
-    >
-      
-    </span>
+      style={{}}
+    />
     <span
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -3158,13 +3356,29 @@ exports[`SyntaxHighlighter component renders line numbers if showLineNumbers ===
       const
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-       dude = woah(
+       dude = 
+    </span>
+    <span
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      woah
+    </span>
+    <span
+      style={{}}
+    >
+      (
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -3172,13 +3386,13 @@ exports[`SyntaxHighlighter component renders line numbers if showLineNumbers ===
       2
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ) + 
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -3186,7 +3400,7 @@ exports[`SyntaxHighlighter component renders line numbers if showLineNumbers ===
       3
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ;
 
@@ -3194,7 +3408,7 @@ exports[`SyntaxHighlighter component renders line numbers if showLineNumbers ===
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "display": "inline-block",
           "minWidth": "2.25em",
           "paddingRight": "1em",
@@ -3206,14 +3420,11 @@ exports[`SyntaxHighlighter component renders line numbers if showLineNumbers ===
       3
     </span>
     <span
-      style={Object {}}
-    >
-      
-    </span>
+      style={{}}
+    />
     <span
-      className="hljs-function"
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -3221,15 +3432,14 @@ exports[`SyntaxHighlighter component renders line numbers if showLineNumbers ===
       function
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
-      className="hljs-function"
+      className="function_"
       style={
-        Object {
+        {
           "color": "#880000",
           "fontWeight": "bold",
         }
@@ -3238,27 +3448,20 @@ exports[`SyntaxHighlighter component renders line numbers if showLineNumbers ===
       thisIsAFunction
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
       (
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
-      ) 
-    </span>
-    <span
-      style={Object {}}
-    >
-      {
+      ) {
 
     </span>
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "display": "inline-block",
           "minWidth": "2.25em",
           "paddingRight": "1em",
@@ -3270,13 +3473,13 @@ exports[`SyntaxHighlighter component renders line numbers if showLineNumbers ===
       4
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
         
     </span>
     <span
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -3284,13 +3487,13 @@ exports[`SyntaxHighlighter component renders line numbers if showLineNumbers ===
       return
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        [
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -3298,13 +3501,13 @@ exports[`SyntaxHighlighter component renders line numbers if showLineNumbers ===
       1
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ,
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -3312,13 +3515,13 @@ exports[`SyntaxHighlighter component renders line numbers if showLineNumbers ===
       2
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ,
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -3326,30 +3529,46 @@ exports[`SyntaxHighlighter component renders line numbers if showLineNumbers ===
       3
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-      ].map(
+      ].
     </span>
     <span
-      className="hljs-function hljs-params"
-      style={Object {}}
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      map
+    </span>
+    <span
+      style={{}}
+    >
+      (
+    </span>
+    <span
+      className="hljs-function"
+      style={{}}
     >
       n
     </span>
     <span
       className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
        =&gt;
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        n + 
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -3357,13 +3576,29 @@ exports[`SyntaxHighlighter component renders line numbers if showLineNumbers ===
       1
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-      ).filter(n !== 
+      ).
+    </span>
+    <span
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      filter
+    </span>
+    <span
+      style={{}}
+    >
+      (n !== 
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -3371,7 +3606,7 @@ exports[`SyntaxHighlighter component renders line numbers if showLineNumbers ===
       3
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       );
 
@@ -3379,7 +3614,7 @@ exports[`SyntaxHighlighter component renders line numbers if showLineNumbers ===
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "display": "inline-block",
           "minWidth": "2.25em",
           "paddingRight": "1em",
@@ -3395,7 +3630,7 @@ exports[`SyntaxHighlighter component renders line numbers if showLineNumbers ===
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "display": "inline-block",
           "minWidth": "2.25em",
           "paddingRight": "1em",
@@ -3407,27 +3642,42 @@ exports[`SyntaxHighlighter component renders line numbers if showLineNumbers ===
       6
     </span>
     <span
-      style={Object {}}
-    >
-      
-    </span>
+      style={{}}
+    />
     <span
+      className="language_"
       style={
-        Object {
-          "color": "#397300",
+        {
+          "color": "#ab5656",
         }
       }
     >
       console
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-      .log(
+      .
+    </span>
+    <span
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      log
+    </span>
+    <span
+      style={{}}
+    >
+      (
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -3435,7 +3685,7 @@ exports[`SyntaxHighlighter component renders line numbers if showLineNumbers ===
       'making up fake code is really hard'
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       );
 
@@ -3443,7 +3693,7 @@ exports[`SyntaxHighlighter component renders line numbers if showLineNumbers ===
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "display": "inline-block",
           "minWidth": "2.25em",
           "paddingRight": "1em",
@@ -3459,7 +3709,7 @@ exports[`SyntaxHighlighter component renders line numbers if showLineNumbers ===
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "display": "inline-block",
           "minWidth": "2.25em",
           "paddingRight": "1em",
@@ -3471,14 +3721,11 @@ exports[`SyntaxHighlighter component renders line numbers if showLineNumbers ===
       8
     </span>
     <span
-      style={Object {}}
-    >
-      
-    </span>
+      style={{}}
+    />
     <span
-      className="hljs-function"
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -3486,15 +3733,14 @@ exports[`SyntaxHighlighter component renders line numbers if showLineNumbers ===
       function
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
-      className="hljs-function"
+      className="function_"
       style={
-        Object {
+        {
           "color": "#880000",
           "fontWeight": "bold",
         }
@@ -3503,27 +3749,20 @@ exports[`SyntaxHighlighter component renders line numbers if showLineNumbers ===
       itIs
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
       (
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
-      ) 
-    </span>
-    <span
-      style={Object {}}
-    >
-      {
+      ) {
 
     </span>
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "display": "inline-block",
           "minWidth": "2.25em",
           "paddingRight": "1em",
@@ -3535,13 +3774,13 @@ exports[`SyntaxHighlighter component renders line numbers if showLineNumbers ===
       9
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
         
     </span>
     <span
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -3549,13 +3788,13 @@ exports[`SyntaxHighlighter component renders line numbers if showLineNumbers ===
       return
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -3563,7 +3802,7 @@ exports[`SyntaxHighlighter component renders line numbers if showLineNumbers ===
       'no seriously really it is'
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ;
 
@@ -3571,7 +3810,7 @@ exports[`SyntaxHighlighter component renders line numbers if showLineNumbers ===
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "display": "inline-block",
           "minWidth": "2.25em",
           "paddingRight": "1em",
@@ -3587,7 +3826,7 @@ exports[`SyntaxHighlighter component renders line numbers if showLineNumbers ===
     <span
       className="comment linenumber react-syntax-highlighter-line-number"
       style={
-        Object {
+        {
           "display": "inline-block",
           "minWidth": "2.25em",
           "paddingRight": "1em",
@@ -3598,7 +3837,6 @@ exports[`SyntaxHighlighter component renders line numbers if showLineNumbers ===
     >
       11
     </span>
-    
   </code>
 </pre>
 `;

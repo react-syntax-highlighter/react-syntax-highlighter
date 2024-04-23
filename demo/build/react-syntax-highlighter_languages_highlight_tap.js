@@ -1,14 +1,27 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_highlight_tap"],{
+"use strict";
+(self["webpackChunkreact_syntax_highlighter"] = self["webpackChunkreact_syntax_highlighter"] || []).push([["react-syntax-highlighter_languages_highlight_tap"],{
 
-/***/ "./node_modules/highlight.js/lib/languages/tap.js":
-/*!********************************************************!*\
-  !*** ./node_modules/highlight.js/lib/languages/tap.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/highlight.js/es/languages/tap.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/highlight.js/es/languages/tap.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-module.exports = function(hljs) {
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ tap)
+/* harmony export */ });
+/*
+Language: Test Anything Protocol
+Description: TAP, the Test Anything Protocol, is a simple text-based interface between testing modules in a test harness.
+Requires: yaml.js
+Author: Sergey Bronnikov <sergeyb@bronevichok.ru>
+Website: https://testanything.org
+*/
+
+function tap(hljs) {
   return {
+    name: 'Test Anything Protocol',
     case_insensitive: true,
     contains: [
       hljs.HASH_COMMENT_MODE,
@@ -18,30 +31,34 @@ module.exports = function(hljs) {
         variants: [
           { begin: '^TAP version (\\d+)$' },
           { begin: '^1\\.\\.(\\d+)$' }
-        ],
+        ]
       },
       // YAML block
       {
-        begin: '(\s+)?---$', end: '\\.\\.\\.$',
+        begin: /---$/,
+        end: '\\.\\.\\.$',
         subLanguage: 'yaml',
         relevance: 0
       },
-	  // testcase number
+      // testcase number
       {
         className: 'number',
         begin: ' (\\d+) '
       },
-	  // testcase status and description
+      // testcase status and description
       {
         className: 'symbol',
         variants: [
           { begin: '^ok' },
           { begin: '^not ok' }
-        ],
-      },
+        ]
+      }
     ]
   };
-};
+}
+
+
+
 
 /***/ })
 

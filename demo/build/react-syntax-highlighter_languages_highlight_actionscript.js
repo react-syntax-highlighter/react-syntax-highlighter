@@ -1,31 +1,105 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_highlight_actionscript"],{
+"use strict";
+(self["webpackChunkreact_syntax_highlighter"] = self["webpackChunkreact_syntax_highlighter"] || []).push([["react-syntax-highlighter_languages_highlight_actionscript"],{
 
-/***/ "./node_modules/highlight.js/lib/languages/actionscript.js":
-/*!*****************************************************************!*\
-  !*** ./node_modules/highlight.js/lib/languages/actionscript.js ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/highlight.js/es/languages/actionscript.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/highlight.js/es/languages/actionscript.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-module.exports = function(hljs) {
-  var IDENT_RE = '[a-zA-Z_$][a-zA-Z0-9_$]*';
-  var IDENT_FUNC_RETURN_TYPE_RE = '([*]|[a-zA-Z_$][a-zA-Z0-9_$]*)';
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ actionscript)
+/* harmony export */ });
+/*
+Language: ActionScript
+Author: Alexander Myadzel <myadzel@gmail.com>
+Category: scripting
+Audit: 2020
+*/
 
-  var AS3_REST_ARG_MODE = {
+/** @type LanguageFn */
+function actionscript(hljs) {
+  const regex = hljs.regex;
+  const IDENT_RE = /[a-zA-Z_$][a-zA-Z0-9_$]*/;
+  const PKG_NAME_RE = regex.concat(
+    IDENT_RE,
+    regex.concat("(\\.", IDENT_RE, ")*")
+  );
+  const IDENT_FUNC_RETURN_TYPE_RE = /([*]|[a-zA-Z_$][a-zA-Z0-9_$]*)/;
+
+  const AS3_REST_ARG_MODE = {
     className: 'rest_arg',
-    begin: '[.]{3}', end: IDENT_RE,
+    begin: /[.]{3}/,
+    end: IDENT_RE,
     relevance: 10
   };
 
+  const KEYWORDS = [
+    "as",
+    "break",
+    "case",
+    "catch",
+    "class",
+    "const",
+    "continue",
+    "default",
+    "delete",
+    "do",
+    "dynamic",
+    "each",
+    "else",
+    "extends",
+    "final",
+    "finally",
+    "for",
+    "function",
+    "get",
+    "if",
+    "implements",
+    "import",
+    "in",
+    "include",
+    "instanceof",
+    "interface",
+    "internal",
+    "is",
+    "namespace",
+    "native",
+    "new",
+    "override",
+    "package",
+    "private",
+    "protected",
+    "public",
+    "return",
+    "set",
+    "static",
+    "super",
+    "switch",
+    "this",
+    "throw",
+    "try",
+    "typeof",
+    "use",
+    "var",
+    "void",
+    "while",
+    "with"
+  ];
+  const LITERALS = [
+    "true",
+    "false",
+    "null",
+    "undefined"
+  ];
+
   return {
-    aliases: ['as'],
+    name: 'ActionScript',
+    aliases: [ 'as' ],
     keywords: {
-      keyword: 'as break case catch class const continue default delete do dynamic each ' +
-        'else extends final finally for function get if implements import in include ' +
-        'instanceof interface internal is namespace native new override package private ' +
-        'protected public return set static super switch this throw try typeof use var void ' +
-        'while with',
-      literal: 'true false null undefined'
+      keyword: KEYWORDS,
+      literal: LITERALS
     },
     contains: [
       hljs.APOS_STRING_MODE,
@@ -34,34 +108,44 @@ module.exports = function(hljs) {
       hljs.C_BLOCK_COMMENT_MODE,
       hljs.C_NUMBER_MODE,
       {
-        className: 'class',
-        beginKeywords: 'package', end: '{',
-        contains: [hljs.TITLE_MODE]
+        match: [
+          /\bpackage/,
+          /\s+/,
+          PKG_NAME_RE
+        ],
+        className: {
+          1: "keyword",
+          3: "title.class"
+        }
       },
       {
-        className: 'class',
-        beginKeywords: 'class interface', end: '{', excludeEnd: true,
-        contains: [
-          {
-            beginKeywords: 'extends implements'
-          },
-          hljs.TITLE_MODE
-        ]
+        match: [
+          /\b(?:class|interface|extends|implements)/,
+          /\s+/,
+          IDENT_RE
+        ],
+        className: {
+          1: "keyword",
+          3: "title.class"
+        }
       },
       {
         className: 'meta',
-        beginKeywords: 'import include', end: ';',
-        keywords: {'meta-keyword': 'import include'}
+        beginKeywords: 'import include',
+        end: /;/,
+        keywords: { keyword: 'import include' }
       },
       {
-        className: 'function',
-        beginKeywords: 'function', end: '[{;]', excludeEnd: true,
-        illegal: '\\S',
+        beginKeywords: 'function',
+        end: /[{;]/,
+        excludeEnd: true,
+        illegal: /\S/,
         contains: [
-          hljs.TITLE_MODE,
+          hljs.inherit(hljs.TITLE_MODE, { className: "title.function" }),
           {
             className: 'params',
-            begin: '\\(', end: '\\)',
+            begin: /\(/,
+            end: /\)/,
             contains: [
               hljs.APOS_STRING_MODE,
               hljs.QUOTE_STRING_MODE,
@@ -70,16 +154,17 @@ module.exports = function(hljs) {
               AS3_REST_ARG_MODE
             ]
           },
-          {
-            begin: ':\\s*' + IDENT_FUNC_RETURN_TYPE_RE
-          }
+          { begin: regex.concat(/:\s*/, IDENT_FUNC_RETURN_TYPE_RE) }
         ]
       },
       hljs.METHOD_GUARD
     ],
     illegal: /#/
   };
-};
+}
+
+
+
 
 /***/ })
 

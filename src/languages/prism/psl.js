@@ -1,2 +1,2 @@
-import psl from "refractor/lang/psl.js";;
+import psl from "refractor/lang/psl.js";
 export default psl;

@@ -1,2 +1,2 @@
-import processing from "refractor/lang/processing.js";;
+import processing from "refractor/lang/processing.js";
 export default processing;

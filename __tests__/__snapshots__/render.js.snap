@@ -3,26 +3,23 @@
 exports[`SyntaxHighlighter component renders correctly 1`] = `
 <pre
   style={
-    Object {
-      "background": "#F0F0F0",
+    {
+      "background": "#F3F3F3",
       "color": "#444",
-      "display": "block",
-      "overflowX": "auto",
-      "padding": "0.5em",
     }
   }
 >
   <code
     className="language-javascript"
     style={
-      Object {
+      {
         "whiteSpace": "pre",
       }
     }
   >
     <span
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -30,30 +27,29 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       const
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-       woah = 
+       
     </span>
     <span
-      className="hljs-function hljs-params"
-      style={Object {}}
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
     >
-      fun
+      woah
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
-       =&gt;
-    </span>
-    <span
-      style={Object {}}
-    >
-       fun + 
+       = fun =&gt; fun + 
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -61,19 +57,17 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       1
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ;
 
     </span>
     <span
-      style={Object {}}
-    >
-      
-    </span>
+      style={{}}
+    />
     <span
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -81,13 +75,29 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       const
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-       dude = woah(
+       dude = 
+    </span>
+    <span
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      woah
+    </span>
+    <span
+      style={{}}
+    >
+      (
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -95,13 +105,13 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       2
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ) + 
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -109,20 +119,17 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       3
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ;
 
     </span>
     <span
-      style={Object {}}
-    >
-      
-    </span>
+      style={{}}
+    />
     <span
-      className="hljs-function"
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -130,15 +137,14 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       function
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
-      className="hljs-function"
+      className="function_"
       style={
-        Object {
+        {
           "color": "#880000",
           "fontWeight": "bold",
         }
@@ -147,31 +153,24 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       thisIsAFunction
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
       (
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
-      ) 
-    </span>
-    <span
-      style={Object {}}
-    >
-      {
+      ) {
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
         
     </span>
     <span
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -179,13 +178,13 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       return
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        [
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -193,13 +192,13 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       1
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ,
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -207,13 +206,13 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       2
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ,
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -221,30 +220,46 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       3
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-      ].map(
+      ].
     </span>
     <span
-      className="hljs-function hljs-params"
-      style={Object {}}
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      map
+    </span>
+    <span
+      style={{}}
+    >
+      (
+    </span>
+    <span
+      className="hljs-function"
+      style={{}}
     >
       n
     </span>
     <span
       className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
        =&gt;
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        n + 
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -252,13 +267,29 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       1
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-      ).filter(n !== 
+      ).
+    </span>
+    <span
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      filter
+    </span>
+    <span
+      style={{}}
+    >
+      (n !== 
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -266,7 +297,7 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       3
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       );
 
@@ -274,27 +305,42 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
     }
 
     <span
-      style={Object {}}
-    >
-      
-    </span>
+      style={{}}
+    />
     <span
+      className="language_"
       style={
-        Object {
-          "color": "#397300",
+        {
+          "color": "#ab5656",
         }
       }
     >
       console
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
-      .log(
+      .
+    </span>
+    <span
+      className="function_"
+      style={
+        {
+          "color": "#880000",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      log
+    </span>
+    <span
+      style={{}}
+    >
+      (
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -302,7 +348,7 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       'making up fake code is really hard'
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       );
 
@@ -310,14 +356,11 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
     
 
     <span
-      style={Object {}}
-    >
-      
-    </span>
+      style={{}}
+    />
     <span
-      className="hljs-function"
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -325,15 +368,14 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       function
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
-      className="hljs-function"
+      className="function_"
       style={
-        Object {
+        {
           "color": "#880000",
           "fontWeight": "bold",
         }
@@ -342,31 +384,24 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       itIs
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
       (
     </span>
     <span
-      className="hljs-function"
-      style={Object {}}
+      style={{}}
     >
-      ) 
-    </span>
-    <span
-      style={Object {}}
-    >
-      {
+      ) {
 
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
         
     </span>
     <span
       style={
-        Object {
+        {
           "fontWeight": "bold",
         }
       }
@@ -374,13 +409,13 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       return
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
        
     </span>
     <span
       style={
-        Object {
+        {
           "color": "#880000",
         }
       }
@@ -388,14 +423,13 @@ exports[`SyntaxHighlighter component renders correctly 1`] = `
       'no seriously really it is'
     </span>
     <span
-      style={Object {}}
+      style={{}}
     >
       ;
 
     </span>
     }
 
-    
   </code>
 </pre>
 `;

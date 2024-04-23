@@ -1,15 +1,16 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["vendors~react-syntax-highlighter_languages_highlight_gauss"],{
-
-/***/ "./node_modules/highlight.js/lib/languages/gauss.js":
-/*!**********************************************************!*\
+(window['webpackJsonp'] = window['webpackJsonp'] || []).push([
+  ['vendors~react-syntax-highlighter_languages_highlight_gauss'],
+  {
+    /***/ './node_modules/highlight.js/lib/languages/gauss.js':
+      /*!**********************************************************!*\
   !*** ./node_modules/highlight.js/lib/languages/gauss.js ***!
   \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = function(hljs) {
-  var KEYWORDS = {
-    keyword:  'bool break call callexe checkinterrupt clear clearg closeall cls comlog compile ' +
+      /*! no static exports found */
+      /***/ function (module, exports) {
+        module.exports = function (hljs) {
+          var KEYWORDS = {
+            keyword:
+              'bool break call callexe checkinterrupt clear clearg closeall cls comlog compile ' +
               'continue create debug declare delete disable dlibrary dllcall do dos ed edit else ' +
               'elseif enable end endfor endif endp endo errorlog errorlogat expr external fn ' +
               'for format goto gosub graph if keyword let lib library line load loadarray loadexe ' +
@@ -19,7 +20,8 @@ module.exports = function(hljs) {
               'scroll setarray show sparse stop string struct system trace trap threadfor ' +
               'threadendfor threadbegin threadjoin threadstat threadend until use while winprint ' +
               'ne ge le gt lt and xor or not eq eqv',
-    built_in: 'abs acf aconcat aeye amax amean AmericanBinomCall AmericanBinomCall_Greeks AmericanBinomCall_ImpVol ' +
+            built_in:
+              'abs acf aconcat aeye amax amean AmericanBinomCall AmericanBinomCall_Greeks AmericanBinomCall_ImpVol ' +
               'AmericanBinomPut AmericanBinomPut_Greeks AmericanBinomPut_ImpVol AmericanBSCall AmericanBSCall_Greeks ' +
               'AmericanBSCall_ImpVol AmericanBSPut AmericanBSPut_Greeks AmericanBSPut_ImpVol amin amult annotationGetDefaults ' +
               'annotationSetBkd annotationSetFont annotationSetLineColor annotationSetLineStyle annotationSetLineThickness ' +
@@ -104,201 +106,217 @@ module.exports = function(hljs) {
               'h5write h5writeAttribute ldl plotAddErrorBar plotAddSurface plotCDFEmpirical plotSetColormap plotSetContourLabels ' +
               'plotSetLegendFont plotSetTextInterpreter plotSetXTicCount plotSetYTicCount plotSetZLevels powerm strjoin sylvester ' +
               'strtrim',
-    literal: 'DB_AFTER_LAST_ROW DB_ALL_TABLES DB_BATCH_OPERATIONS DB_BEFORE_FIRST_ROW DB_BLOB DB_EVENT_NOTIFICATIONS ' +
-             'DB_FINISH_QUERY DB_HIGH_PRECISION DB_LAST_INSERT_ID DB_LOW_PRECISION_DOUBLE DB_LOW_PRECISION_INT32 ' +
-             'DB_LOW_PRECISION_INT64 DB_LOW_PRECISION_NUMBERS DB_MULTIPLE_RESULT_SETS DB_NAMED_PLACEHOLDERS ' +
-             'DB_POSITIONAL_PLACEHOLDERS DB_PREPARED_QUERIES DB_QUERY_SIZE DB_SIMPLE_LOCKING DB_SYSTEM_TABLES DB_TABLES ' +
-             'DB_TRANSACTIONS DB_UNICODE DB_VIEWS __STDIN __STDOUT __STDERR __FILE_DIR'
-  };
+            literal:
+              'DB_AFTER_LAST_ROW DB_ALL_TABLES DB_BATCH_OPERATIONS DB_BEFORE_FIRST_ROW DB_BLOB DB_EVENT_NOTIFICATIONS ' +
+              'DB_FINISH_QUERY DB_HIGH_PRECISION DB_LAST_INSERT_ID DB_LOW_PRECISION_DOUBLE DB_LOW_PRECISION_INT32 ' +
+              'DB_LOW_PRECISION_INT64 DB_LOW_PRECISION_NUMBERS DB_MULTIPLE_RESULT_SETS DB_NAMED_PLACEHOLDERS ' +
+              'DB_POSITIONAL_PLACEHOLDERS DB_PREPARED_QUERIES DB_QUERY_SIZE DB_SIMPLE_LOCKING DB_SYSTEM_TABLES DB_TABLES ' +
+              'DB_TRANSACTIONS DB_UNICODE DB_VIEWS __STDIN __STDOUT __STDERR __FILE_DIR',
+          };
 
+          var AT_COMMENT_MODE = hljs.COMMENT('@', '@');
 
-  var AT_COMMENT_MODE = hljs.COMMENT('@', '@');
+          var PREPROCESSOR = {
+            className: 'meta',
+            begin: '#',
+            end: '$',
+            keywords: {
+              'meta-keyword':
+                'define definecs|10 undef ifdef ifndef iflight ifdllcall ifmac ifos2win ifunix else endif lineson linesoff srcfile srcline',
+            },
+            contains: [
+              {
+                begin: /\\\n/,
+                relevance: 0,
+              },
+              {
+                beginKeywords: 'include',
+                end: '$',
+                keywords: { 'meta-keyword': 'include' },
+                contains: [
+                  {
+                    className: 'meta-string',
+                    begin: '"',
+                    end: '"',
+                    illegal: '\\n',
+                  },
+                ],
+              },
+              hljs.C_LINE_COMMENT_MODE,
+              hljs.C_BLOCK_COMMENT_MODE,
+              AT_COMMENT_MODE,
+            ],
+          };
 
-  var PREPROCESSOR =
-  {
-    className: 'meta',
-    begin: '#', end: '$',
-    keywords: {'meta-keyword': 'define definecs|10 undef ifdef ifndef iflight ifdllcall ifmac ifos2win ifunix else endif lineson linesoff srcfile srcline'},
-    contains: [
-      {
-        begin: /\\\n/, relevance: 0
+          var STRUCT_TYPE = {
+            begin: /\bstruct\s+/,
+            end: /\s/,
+            keywords: 'struct',
+            contains: [
+              {
+                className: 'type',
+                begin: hljs.UNDERSCORE_IDENT_RE,
+                relevance: 0,
+              },
+            ],
+          };
+
+          // only for definitions
+          var PARSE_PARAMS = [
+            {
+              className: 'params',
+              begin: /\(/,
+              end: /\)/,
+              excludeBegin: true,
+              excludeEnd: true,
+              endsWithParent: true,
+              relevance: 0,
+              contains: [
+                {
+                  // dots
+                  className: 'literal',
+                  begin: /\.\.\./,
+                },
+                hljs.C_NUMBER_MODE,
+                hljs.C_BLOCK_COMMENT_MODE,
+                AT_COMMENT_MODE,
+                STRUCT_TYPE,
+              ],
+            },
+          ];
+
+          var FUNCTION_DEF = {
+            className: 'title',
+            begin: hljs.UNDERSCORE_IDENT_RE,
+            relevance: 0,
+          };
+
+          var DEFINITION = function (beginKeywords, end, inherits) {
+            var mode = hljs.inherit(
+              {
+                className: 'function',
+                beginKeywords: beginKeywords,
+                end: end,
+                excludeEnd: true,
+                contains: [].concat(PARSE_PARAMS),
+              },
+              inherits || {},
+            );
+            mode.contains.push(FUNCTION_DEF);
+            mode.contains.push(hljs.C_NUMBER_MODE);
+            mode.contains.push(hljs.C_BLOCK_COMMENT_MODE);
+            mode.contains.push(AT_COMMENT_MODE);
+            return mode;
+          };
+
+          var BUILT_IN_REF = {
+            // these are explicitly named internal function calls
+            className: 'built_in',
+            begin: '\\b(' + KEYWORDS.built_in.split(' ').join('|') + ')\\b',
+          };
+
+          var STRING_REF = {
+            className: 'string',
+            begin: '"',
+            end: '"',
+            contains: [hljs.BACKSLASH_ESCAPE],
+            relevance: 0,
+          };
+
+          var FUNCTION_REF = {
+            //className: "fn_ref",
+            begin: hljs.UNDERSCORE_IDENT_RE + '\\s*\\(',
+            returnBegin: true,
+            keywords: KEYWORDS,
+            relevance: 0,
+            contains: [
+              {
+                beginKeywords: KEYWORDS.keyword,
+              },
+              BUILT_IN_REF,
+              {
+                // ambiguously named function calls get a relevance of 0
+                className: 'built_in',
+                begin: hljs.UNDERSCORE_IDENT_RE,
+                relevance: 0,
+              },
+            ],
+          };
+
+          var FUNCTION_REF_PARAMS = {
+            //className: "fn_ref_params",
+            begin: /\(/,
+            end: /\)/,
+            relevance: 0,
+            keywords: {
+              built_in: KEYWORDS.built_in,
+              literal: KEYWORDS.literal,
+            },
+            contains: [
+              hljs.C_NUMBER_MODE,
+              hljs.C_BLOCK_COMMENT_MODE,
+              AT_COMMENT_MODE,
+              BUILT_IN_REF,
+              FUNCTION_REF,
+              STRING_REF,
+              'self',
+            ],
+          };
+
+          FUNCTION_REF.contains.push(FUNCTION_REF_PARAMS);
+
+          return {
+            aliases: ['gss'],
+            case_insensitive: true, // language is case-insensitive
+            keywords: KEYWORDS,
+            illegal: /(\{[%#]|[%#]\}| <- )/,
+            contains: [
+              hljs.C_NUMBER_MODE,
+              hljs.C_LINE_COMMENT_MODE,
+              hljs.C_BLOCK_COMMENT_MODE,
+              AT_COMMENT_MODE,
+              STRING_REF,
+              PREPROCESSOR,
+              {
+                className: 'keyword',
+                begin:
+                  /\bexternal (matrix|string|array|sparse matrix|struct|proc|keyword|fn)/,
+              },
+              DEFINITION('proc keyword', ';'),
+              DEFINITION('fn', '='),
+              {
+                beginKeywords: 'for threadfor',
+                end: /;/,
+                //end: /\(/,
+                relevance: 0,
+                contains: [
+                  hljs.C_BLOCK_COMMENT_MODE,
+                  AT_COMMENT_MODE,
+                  FUNCTION_REF_PARAMS,
+                ],
+              },
+              {
+                // custom method guard
+                // excludes method names from keyword processing
+                variants: [
+                  {
+                    begin:
+                      hljs.UNDERSCORE_IDENT_RE +
+                      '\\.' +
+                      hljs.UNDERSCORE_IDENT_RE,
+                  },
+                  { begin: hljs.UNDERSCORE_IDENT_RE + '\\s*=' },
+                ],
+                relevance: 0,
+              },
+              FUNCTION_REF,
+              STRUCT_TYPE,
+            ],
+          };
+        };
+
+        /***/
       },
-      {
-        beginKeywords: 'include', end: '$',
-        keywords: {'meta-keyword': 'include'},
-        contains: [
-          {
-            className: 'meta-string',
-            begin: '"', end: '"',
-            illegal: '\\n'
-          }
-        ]
-      },
-      hljs.C_LINE_COMMENT_MODE,
-      hljs.C_BLOCK_COMMENT_MODE,
-      AT_COMMENT_MODE,
-    ]
-  };
-
-  var STRUCT_TYPE =
-  {
-    begin: /\bstruct\s+/,
-    end: /\s/,
-    keywords: "struct",
-    contains: [
-      {
-        className: "type",
-        begin: hljs.UNDERSCORE_IDENT_RE,
-        relevance: 0,
-      },
-    ],
-  };
-
-  // only for definitions
-  var PARSE_PARAMS = [
-    {
-      className: 'params',
-      begin: /\(/, end: /\)/,
-      excludeBegin: true,
-      excludeEnd: true,
-      endsWithParent: true,
-      relevance: 0,
-      contains: [
-        { // dots
-          className: 'literal',
-          begin: /\.\.\./,
-        },
-        hljs.C_NUMBER_MODE,
-        hljs.C_BLOCK_COMMENT_MODE,
-        AT_COMMENT_MODE,
-        STRUCT_TYPE,
-      ]
-    }
-  ];
-
-  var FUNCTION_DEF =
-  {
-    className: "title",
-    begin: hljs.UNDERSCORE_IDENT_RE,
-    relevance: 0,
-  };
-
-  var DEFINITION = function (beginKeywords, end, inherits) {
-    var mode = hljs.inherit(
-      {
-        className: "function",
-        beginKeywords: beginKeywords,
-        end: end,
-        excludeEnd: true,
-        contains: [].concat(PARSE_PARAMS),
-      },
-      inherits || {}
-    );
-    mode.contains.push(FUNCTION_DEF);
-    mode.contains.push(hljs.C_NUMBER_MODE);
-    mode.contains.push(hljs.C_BLOCK_COMMENT_MODE);
-    mode.contains.push(AT_COMMENT_MODE);
-    return mode;
-  };
-
-  var BUILT_IN_REF =
-  { // these are explicitly named internal function calls
-    className: 'built_in',
-    begin: '\\b(' + KEYWORDS.built_in.split(' ').join('|') + ')\\b',
-  };
-
-  var STRING_REF =
-  {
-    className: 'string',
-    begin: '"', end: '"',
-    contains: [hljs.BACKSLASH_ESCAPE],
-    relevance: 0,
-  };
-
-  var FUNCTION_REF =
-  {
-    //className: "fn_ref",
-    begin: hljs.UNDERSCORE_IDENT_RE + '\\s*\\(',
-    returnBegin: true,
-    keywords: KEYWORDS,
-    relevance: 0,
-    contains: [
-      {
-        beginKeywords: KEYWORDS.keyword,
-      },
-      BUILT_IN_REF,
-      { // ambiguously named function calls get a relevance of 0
-        className: 'built_in',
-        begin: hljs.UNDERSCORE_IDENT_RE,
-        relevance: 0,
-      },
-    ],
-  };
-
-  var FUNCTION_REF_PARAMS =
-  {
-    //className: "fn_ref_params",
-    begin: /\(/,
-    end: /\)/,
-    relevance: 0,
-    keywords: { built_in: KEYWORDS.built_in, literal: KEYWORDS.literal },
-    contains: [
-      hljs.C_NUMBER_MODE,
-      hljs.C_BLOCK_COMMENT_MODE,
-      AT_COMMENT_MODE,
-      BUILT_IN_REF,
-      FUNCTION_REF,
-      STRING_REF,
-      'self',
-    ],
-  };
-
-  FUNCTION_REF.contains.push(FUNCTION_REF_PARAMS);
-
-  return {
-    aliases: ['gss'],
-    case_insensitive: true, // language is case-insensitive
-    keywords: KEYWORDS,
-    illegal: /(\{[%#]|[%#]\}| <- )/,
-    contains: [
-      hljs.C_NUMBER_MODE,
-      hljs.C_LINE_COMMENT_MODE,
-      hljs.C_BLOCK_COMMENT_MODE,
-      AT_COMMENT_MODE,
-      STRING_REF,
-      PREPROCESSOR,
-      {
-        className: 'keyword',
-        begin: /\bexternal (matrix|string|array|sparse matrix|struct|proc|keyword|fn)/,
-      },
-      DEFINITION('proc keyword', ';'),
-      DEFINITION('fn', '='),
-      {
-        beginKeywords: 'for threadfor',
-        end: /;/,
-        //end: /\(/,
-        relevance: 0,
-        contains: [
-          hljs.C_BLOCK_COMMENT_MODE,
-          AT_COMMENT_MODE,
-          FUNCTION_REF_PARAMS,
-        ],
-      },
-      { // custom method guard
-        // excludes method names from keyword processing
-        variants: [
-          { begin: hljs.UNDERSCORE_IDENT_RE + '\\.' + hljs.UNDERSCORE_IDENT_RE, },
-          { begin: hljs.UNDERSCORE_IDENT_RE + '\\s*=', },
-        ],
-        relevance: 0,
-      },
-      FUNCTION_REF,
-      STRUCT_TYPE,
-    ]
-  };
-};
-
-/***/ })
-
-}]);
+  },
+]);
 //# sourceMappingURL=vendors~react-syntax-highlighter_languages_highlight_gauss.js.map

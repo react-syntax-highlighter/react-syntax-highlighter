@@ -1,49 +1,83 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_highlight_ini"],{
+"use strict";
+(self["webpackChunkreact_syntax_highlighter"] = self["webpackChunkreact_syntax_highlighter"] || []).push([["react-syntax-highlighter_languages_highlight_ini"],{
 
-/***/ "./node_modules/highlight.js/lib/languages/ini.js":
-/*!********************************************************!*\
-  !*** ./node_modules/highlight.js/lib/languages/ini.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/highlight.js/es/languages/ini.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/highlight.js/es/languages/ini.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-module.exports = function(hljs) {
-  var NUMBERS = {
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ ini)
+/* harmony export */ });
+/*
+Language: TOML, also INI
+Description: TOML aims to be a minimal configuration file format that's easy to read due to obvious semantics.
+Contributors: Guillaume Gomez <guillaume1.gomez@gmail.com>
+Category: common, config
+Website: https://github.com/toml-lang/toml
+*/
+
+function ini(hljs) {
+  const regex = hljs.regex;
+  const NUMBERS = {
     className: 'number',
     relevance: 0,
     variants: [
-      { begin: /([\+\-]+)?[\d]+_[\d_]+/ },
+      { begin: /([+-]+)?[\d]+_[\d_]+/ },
       { begin: hljs.NUMBER_RE }
     ]
   };
-  var COMMENTS = hljs.COMMENT();
+  const COMMENTS = hljs.COMMENT();
   COMMENTS.variants = [
-    {begin: /;/, end: /$/},
-    {begin: /#/, end: /$/},
+    {
+      begin: /;/,
+      end: /$/
+    },
+    {
+      begin: /#/,
+      end: /$/
+    }
   ];
-  var VARIABLES = {
+  const VARIABLES = {
     className: 'variable',
     variants: [
       { begin: /\$[\w\d"][\w\d_]*/ },
-      { begin: /\$\{(.*?)}/ }
+      { begin: /\$\{(.*?)\}/ }
     ]
   };
-  var LITERALS = {
+  const LITERALS = {
     className: 'literal',
     begin: /\bon|off|true|false|yes|no\b/
   };
-  var STRINGS = {
+  const STRINGS = {
     className: "string",
-    contains: [hljs.BACKSLASH_ESCAPE],
+    contains: [ hljs.BACKSLASH_ESCAPE ],
     variants: [
-      { begin: "'''", end: "'''", relevance: 10 },
-      { begin: '"""', end: '"""', relevance: 10 },
-      { begin: '"', end: '"' },
-      { begin: "'", end: "'" }
+      {
+        begin: "'''",
+        end: "'''",
+        relevance: 10
+      },
+      {
+        begin: '"""',
+        end: '"""',
+        relevance: 10
+      },
+      {
+        begin: '"',
+        end: '"'
+      },
+      {
+        begin: "'",
+        end: "'"
+      }
     ]
   };
-  var ARRAY = {
-    begin: /\[/, end: /\]/,
+  const ARRAY = {
+    begin: /\[/,
+    end: /\]/,
     contains: [
       COMMENTS,
       LITERALS,
@@ -52,21 +86,34 @@ module.exports = function(hljs) {
       NUMBERS,
       'self'
     ],
-    relevance:0
+    relevance: 0
   };
 
+  const BARE_KEY = /[A-Za-z0-9_-]+/;
+  const QUOTED_KEY_DOUBLE_QUOTE = /"(\\"|[^"])*"/;
+  const QUOTED_KEY_SINGLE_QUOTE = /'[^']*'/;
+  const ANY_KEY = regex.either(
+    BARE_KEY, QUOTED_KEY_DOUBLE_QUOTE, QUOTED_KEY_SINGLE_QUOTE
+  );
+  const DOTTED_KEY = regex.concat(
+    ANY_KEY, '(\\s*\\.\\s*', ANY_KEY, ')*',
+    regex.lookahead(/\s*=\s*[^#\s]/)
+  );
+
   return {
-    aliases: ['toml'],
+    name: 'TOML, also INI',
+    aliases: [ 'toml' ],
     case_insensitive: true,
     illegal: /\S/,
     contains: [
       COMMENTS,
       {
         className: 'section',
-        begin: /\[+/, end: /\]+/
+        begin: /\[+/,
+        end: /\]+/
       },
       {
-        begin: /^[a-z0-9\[\]_\.-]+(?=\s*=\s*)/,
+        begin: DOTTED_KEY,
         className: 'attr',
         starts: {
           end: /$/,
@@ -82,7 +129,10 @@ module.exports = function(hljs) {
       }
     ]
   };
-};
+}
+
+
+
 
 /***/ })
 

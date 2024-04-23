@@ -1,46 +1,65 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_highlight_jbossCli"],{
+"use strict";
+(self["webpackChunkreact_syntax_highlighter"] = self["webpackChunkreact_syntax_highlighter"] || []).push([["react-syntax-highlighter_languages_highlight_jbossCli"],{
 
-/***/ "./node_modules/highlight.js/lib/languages/jboss-cli.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/highlight.js/lib/languages/jboss-cli.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/highlight.js/es/languages/jboss-cli.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/highlight.js/es/languages/jboss-cli.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-module.exports = function (hljs) {
-  var PARAM = {
-    begin: /[\w-]+ *=/, returnBegin: true,
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ jbossCli)
+/* harmony export */ });
+/*
+ Language: JBoss CLI
+ Author: Raphaël Parrëe <rparree@edc4it.com>
+ Description: language definition jboss cli
+ Website: https://docs.jboss.org/author/display/WFLY/Command+Line+Interface
+ Category: config
+ */
+
+function jbossCli(hljs) {
+  const PARAM = {
+    begin: /[\w-]+ *=/,
+    returnBegin: true,
     relevance: 0,
-    contains: [{className: 'attr', begin: /[\w-]+/}]
+    contains: [
+      {
+        className: 'attr',
+        begin: /[\w-]+/
+      }
+    ]
   };
-  var PARAMSBLOCK = {
+  const PARAMSBLOCK = {
     className: 'params',
     begin: /\(/,
     end: /\)/,
-    contains: [PARAM],
-    relevance : 0
+    contains: [ PARAM ],
+    relevance: 0
   };
-  var OPERATION = {
+  const OPERATION = {
     className: 'function',
     begin: /:[\w\-.]+/,
     relevance: 0
   };
-  var PATH = {
+  const PATH = {
     className: 'string',
-    begin: /\B(([\/.])[\w\-.\/=]+)+/,
+    begin: /\B([\/.])[\w\-.\/=]+/
   };
-  var COMMAND_PARAMS = {
+  const COMMAND_PARAMS = {
     className: 'params',
-    begin: /--[\w\-=\/]+/,
+    begin: /--[\w\-=\/]+/
   };
   return {
-    aliases: ['wildfly-cli'],
-    lexemes: '[a-z\-]+',
+    name: 'JBoss CLI',
+    aliases: [ 'wildfly-cli' ],
     keywords: {
-      keyword: 'alias batch cd clear command connect connection-factory connection-info data-source deploy ' +
-      'deployment-info deployment-overlay echo echo-dmr help history if jdbc-driver-info jms-queue|20 jms-topic|20 ls ' +
-      'patch pwd quit read-attribute read-operation reload rollout-plan run-batch set shutdown try unalias ' +
-      'undeploy unset version xa-data-source', // module
+      $pattern: '[a-z\-]+',
+      keyword: 'alias batch cd clear command connect connection-factory connection-info data-source deploy '
+      + 'deployment-info deployment-overlay echo echo-dmr help history if jdbc-driver-info jms-queue|20 jms-topic|20 ls '
+      + 'patch pwd quit read-attribute read-operation reload rollout-plan run-batch set shutdown try unalias '
+      + 'undeploy unset version xa-data-source', // module
       literal: 'true false'
     },
     contains: [
@@ -51,8 +70,11 @@ module.exports = function (hljs) {
       PATH,
       PARAMSBLOCK
     ]
-  }
-};
+  };
+}
+
+
+
 
 /***/ })
 

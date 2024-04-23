@@ -1,10 +1,18 @@
 export default {
-    "hljs": {
+    "re code.hljs": {
         "display": "block",
         "overflowX": "auto",
-        "padding": "0.5em",
+        "padding": "1em"
+    },
+    "ode.hljs": {
+        "padding": "3px 5px"
+    },
+    "hljs": {
         "color": "#ffffff",
         "background": "#1c1b1b"
+    },
+    "hljs-subst": {
+        "color": "#ffffff"
     },
     "hljs-comment": {
         "color": "#999999"
@@ -15,22 +23,13 @@ export default {
     "hljs-selector-tag": {
         "color": "#88aece"
     },
-    "hljs-meta-keyword": {
+    "hljs-meta .hljs-keyword": {
         "color": "#88aece"
     },
     "hljs-doctag": {
         "color": "#88aece"
     },
     "hljs-section": {
-        "color": "#88aece"
-    },
-    "hljs-selector-class": {
-        "color": "#88aece"
-    },
-    "hljs-meta": {
-        "color": "#88aece"
-    },
-    "hljs-selector-pseudo": {
         "color": "#88aece"
     },
     "hljs-attr": {
@@ -57,14 +56,8 @@ export default {
     "hljs-template-tag": {
         "color": "#f08d49"
     },
-    "hljs-built_in": {
-        "color": "#f08d49"
-    },
-    "hljs-title": {
-        "color": "#f08d49"
-    },
-    "hljs-literal": {
-        "color": "#f08d49"
+    "hljs-selector-class": {
+        "color": "#88aece"
     },
     "hljs-string": {
         "color": "#b5bd68"
@@ -87,14 +80,29 @@ export default {
     "hljs-selector-attr": {
         "color": "#b5bd68"
     },
-    "hljs-meta-string": {
-        "color": "#b5bd68"
+    "hljs-meta": {
+        "color": "#88aece"
+    },
+    "hljs-selector-pseudo": {
+        "color": "#88aece"
+    },
+    "hljs-built_in": {
+        "color": "#f08d49"
+    },
+    "hljs-title": {
+        "color": "#f08d49"
+    },
+    "hljs-literal": {
+        "color": "#f08d49"
     },
     "hljs-bullet": {
         "color": "#cccccc"
     },
     "hljs-code": {
         "color": "#cccccc"
+    },
+    "hljs-meta .hljs-string": {
+        "color": "#b5bd68"
     },
     "hljs-deletion": {
         "color": "#de7176"
@@ -107,5 +115,11 @@ export default {
     },
     "hljs-strong": {
         "fontWeight": "bold"
-    }
+    },
+    "hljs-formula": {},
+    "hljs-operator": {},
+    "hljs-params": {},
+    "hljs-property": {},
+    "hljs-punctuation": {},
+    "hljs-tag": {}
 }

@@ -1,2 +1,2 @@
-import java from "refractor/lang/java.js";;
+import java from "refractor/lang/java.js";
 export default java;
