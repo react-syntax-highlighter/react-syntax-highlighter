@@ -1,0 +1,317 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SyntaxHighlighter component renders vue 1`] = `
+<pre
+  style={
+    Object {
+      "background": "#F0F0F0",
+      "color": "#444",
+      "display": "block",
+      "overflowX": "auto",
+      "padding": "0.5em",
+    }
+  }
+>
+  <code
+    className="language-vue"
+    style={
+      Object {
+        "whiteSpace": "pre",
+      }
+    }
+  >
+    <span
+      className="xml hljs-tag"
+      style={Object {}}
+    >
+      &lt;
+    </span>
+    <span
+      className="xml hljs-tag"
+      style={
+        Object {
+          "fontWeight": "bold",
+        }
+      }
+    >
+      script
+    </span>
+    <span
+      className="xml hljs-tag"
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="xml hljs-tag hljs-attr"
+      style={Object {}}
+    >
+      lang
+    </span>
+    <span
+      className="xml hljs-tag"
+      style={Object {}}
+    >
+      =
+    </span>
+    <span
+      className="xml hljs-tag"
+      style={
+        Object {
+          "color": "#880000",
+        }
+      }
+    >
+      "ts"
+    </span>
+    <span
+      className="xml hljs-tag"
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="xml hljs-tag hljs-attr"
+      style={Object {}}
+    >
+      setup
+    </span>
+    <span
+      className="xml hljs-tag"
+      style={Object {}}
+    >
+      &gt;
+    </span>
+    <span
+      className="xml javascript"
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      className="xml javascript"
+      style={Object {}}
+    >
+      
+    </span>
+    <span
+      className="xml javascript"
+      style={
+        Object {
+          "fontWeight": "bold",
+        }
+      }
+    >
+      import
+    </span>
+    <span
+      className="xml javascript"
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      style={
+        Object {
+          "color": "#BC6060",
+        }
+      }
+    >
+      { Layout }
+    </span>
+    <span
+      className="xml javascript"
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="xml javascript"
+      style={
+        Object {
+          "fontWeight": "bold",
+        }
+      }
+    >
+      from
+    </span>
+    <span
+      className="xml javascript"
+      style={Object {}}
+    >
+       
+    </span>
+    <span
+      className="xml javascript"
+      style={
+        Object {
+          "color": "#880000",
+        }
+      }
+    >
+      "@ui/libs"
+    </span>
+    <span
+      className="xml javascript"
+      style={Object {}}
+    >
+      ;
+
+    </span>
+    <span
+      className="xml javascript"
+      style={Object {}}
+    >
+      
+    </span>
+    <span
+      className="xml hljs-tag"
+      style={Object {}}
+    >
+      &lt;/
+    </span>
+    <span
+      className="xml hljs-tag"
+      style={
+        Object {
+          "fontWeight": "bold",
+        }
+      }
+    >
+      script
+    </span>
+    <span
+      className="xml hljs-tag"
+      style={Object {}}
+    >
+      &gt;
+    </span>
+    <span
+      className="xml"
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      className="xml"
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      className="xml"
+      style={Object {}}
+    >
+      
+    </span>
+    <span
+      className="xml hljs-tag"
+      style={Object {}}
+    >
+      &lt;
+    </span>
+    <span
+      className="xml hljs-tag"
+      style={
+        Object {
+          "fontWeight": "bold",
+        }
+      }
+    >
+      template
+    </span>
+    <span
+      className="xml hljs-tag"
+      style={Object {}}
+    >
+      &gt;
+    </span>
+    <span
+      className="xml"
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      className="xml"
+      style={Object {}}
+    >
+          
+    </span>
+    <span
+      className="xml hljs-tag"
+      style={Object {}}
+    >
+      &lt;
+    </span>
+    <span
+      className="xml hljs-tag"
+      style={
+        Object {
+          "fontWeight": "bold",
+        }
+      }
+    >
+      Layout
+    </span>
+    <span
+      className="xml hljs-tag"
+      style={Object {}}
+    >
+       /&gt;
+    </span>
+    <span
+      className="xml"
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      className="xml"
+      style={Object {}}
+    >
+      
+    </span>
+    <span
+      className="xml hljs-tag"
+      style={Object {}}
+    >
+      &lt;/
+    </span>
+    <span
+      className="xml hljs-tag"
+      style={
+        Object {
+          "fontWeight": "bold",
+        }
+      }
+    >
+      template
+    </span>
+    <span
+      className="xml hljs-tag"
+      style={Object {}}
+    >
+      &gt;
+    </span>
+    <span
+      className="xml"
+      style={Object {}}
+    >
+      
+
+    </span>
+    <span
+      className="xml"
+      style={Object {}}
+    >
+      
+    </span>
+  </code>
+</pre>
+`;
