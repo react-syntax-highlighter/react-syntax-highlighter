@@ -177,3 +177,12 @@ If your project uses react-syntax-highlighter please send a pr to add!
 ### License
 
 MIT
+
+### Contributing
+
+You'll need Node 16.x installed & active on your system to build this package.
+
+```
+npm i
+npm run dev
+```
