@@ -1,5 +1,12 @@
 # Changelog
 
+## 15.6.0
+- Bugfix: #561 Fix bug with wrapLines that butchers highlighting
+- Bugfix: #532 Fix typo in stackoverflow-dark.js
+- Docs: #559 Adding languages
+- Feat: #555 Add Vue language support
+- Feat: #534 Add a11yOneLight theme
+
 ## 15.4.3 / 2020-12-07
 - Fixed `highlight` version regression
 

@@ -100208,8 +100208,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lowlight_lib_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lowlight_lib_core__WEBPACK_IMPORTED_MODULE_1__);
 
 
-var SyntaxHighlighter = Object(_highlight__WEBPACK_IMPORTED_MODULE_0__["default"])(lowlight_lib_core__WEBPACK_IMPORTED_MODULE_1__["lowlight"], {});
-SyntaxHighlighter.registerLanguage = lowlight_lib_core__WEBPACK_IMPORTED_MODULE_1__["lowlight"].registerLanguage;
+var SyntaxHighlighter = Object(_highlight__WEBPACK_IMPORTED_MODULE_0__["default"])(lowlight_lib_core__WEBPACK_IMPORTED_MODULE_1___default.a, {});
+SyntaxHighlighter.registerLanguage = lowlight_lib_core__WEBPACK_IMPORTED_MODULE_1___default.a.registerLanguage;
 /* harmony default export */ __webpack_exports__["default"] = (SyntaxHighlighter);
 
 /***/ }),
