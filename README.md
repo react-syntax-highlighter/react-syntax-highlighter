@@ -323,6 +323,21 @@ Access via the `supportedLanguages` static field.
 SyntaxHighlighter.supportedLanguages;
 ```
 
+### Add support for another language
+
+To add another language, use the [light build](#light-build) and `registerLanguage`. For example to add cURL with highlight.js:
+
+```js
+import { Light as LightSyntaxHighlighter } from "react-syntax-highlighter";
+import curl from "highlightjs-curl";
+```
+
+Then you can do:
+
+```js
+LightSyntaxHighlighter.registerLanguage("curl", curl);
+```
+
 ### Built with React Syntax Highlighter
 
 - [mdx-deck](https://github.com/jxnblk/mdx-deck) - MDX-based presentation decks
