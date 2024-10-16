@@ -101,11 +101,18 @@ function createLineElement({
   lineProps = {},
   className = [],
   showLineNumbers,
-  wrapLongLines
+  wrapLongLines,
+  wrapLines = false
 }) {
-  const properties =
-    typeof lineProps === 'function' ? lineProps(lineNumber) : lineProps;
-  properties['className'] = className;
+  const properties = wrapLines
+    ? {
+        ...(typeof lineProps === 'function' ? lineProps(lineNumber) : lineProps)
+      }
+    : {};
+
+  properties['className'] = properties['className']
+    ? [...properties['className'].trim().split(/\s+/), ...className]
+    : className;
 
   if (lineNumber && showInlineLineNumbers) {
     const inlineLineNumberStyle = assembleLineNumberStyles(
@@ -172,7 +179,8 @@ function processLines(
       lineProps,
       className,
       showLineNumbers,
-      wrapLongLines
+      wrapLongLines,
+      wrapLines
     });
   }
 

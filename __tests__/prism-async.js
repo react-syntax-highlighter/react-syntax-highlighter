@@ -74,3 +74,24 @@ test('When the code split is loaded - SyntaxHighlighter renders jsx highlighted 
 
   expect(tree).toMatchSnapshot();
 });
+
+test('Prism SyntaxHighlighter renders template strings and JSX correctly', () => {
+  const tree = renderer.create(
+    <SyntaxHighlighter language="jsx" style={prism}>
+      {`import React from "react";
+
+const x = \`
+template string.
+\`
+
+const y = () => {
+  return (
+    <div>
+      jsx
+    </div>
+  )
+}`}
+    </SyntaxHighlighter>
+  );
+  expect(tree).toMatchSnapshot();
+});
