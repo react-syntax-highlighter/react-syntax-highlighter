@@ -183,7 +183,6 @@ export { default as vbscript } from './vbscript';
 export { default as verilog } from './verilog';
 export { default as vhdl } from './vhdl';
 export { default as vim } from './vim';
-export { default as vue } from './vue';
 export { default as x86asm } from './x86asm';
 export { default as xl } from './xl';
 export { default as xml } from './xml';
