@@ -185,6 +185,7 @@ export default {
   verilog: createLanguageAsyncLoader("verilog", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_verilog" */ "highlight.js/lib/languages/verilog")),
   vhdl: createLanguageAsyncLoader("vhdl", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_vhdl" */ "highlight.js/lib/languages/vhdl")),
   vim: createLanguageAsyncLoader("vim", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_vim" */ "highlight.js/lib/languages/vim")),
+  vue: createLanguageAsyncLoader("vue", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_javascript" */ "highlight.js/lib/languages/vue")),
   x86asm: createLanguageAsyncLoader("x86asm", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_x86asm" */ "highlight.js/lib/languages/x86asm")),
   xl: createLanguageAsyncLoader("xl", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_xl" */ "highlight.js/lib/languages/xl")),
   xml: createLanguageAsyncLoader("xml", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_xml" */ "highlight.js/lib/languages/xml")),

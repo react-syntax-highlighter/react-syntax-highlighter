@@ -188,6 +188,7 @@ export default [
   'verilog',
   'vhdl',
   'vim',
+  'vue',
   'x86asm',
   'xl',
   'xml',
