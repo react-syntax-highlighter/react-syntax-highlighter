@@ -99795,9 +99795,9 @@ function createLineElement(_ref3) {
     children.unshift(getInlineLineNumber(lineNumber, inlineLineNumberStyle));
   }
   if (wrapLongLines & showLineNumbers) {
-    properties.style = _objectSpread(_objectSpread({}, properties.style), {}, {
+    properties.style = _objectSpread({
       display: 'flex'
-    });
+    }, properties.style);
   }
   return {
     type: 'element',
@@ -100033,13 +100033,13 @@ function getCodeTree(_ref6) {
       style: Object.assign({}, customStyle)
     });
     if (wrapLongLines) {
-      codeTagProps.style = _objectSpread(_objectSpread({}, codeTagProps.style), {}, {
+      codeTagProps.style = _objectSpread({
         whiteSpace: 'pre-wrap'
-      });
+      }, codeTagProps.style);
     } else {
-      codeTagProps.style = _objectSpread(_objectSpread({}, codeTagProps.style), {}, {
+      codeTagProps.style = _objectSpread({
         whiteSpace: 'pre'
-      });
+      }, codeTagProps.style);
     }
     if (!astGenerator) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(PreTag, preProps, allLineNumbers, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(CodeTag, codeTagProps, code));
