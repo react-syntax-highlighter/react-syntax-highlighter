@@ -11,7 +11,7 @@
     "highlightjs-vue": "^1.0.0",
     "lowlight": "^1.17.0",
     "prismjs": "^1.27.0",
-    "refractor": "^3.6.0"
+    "refractor": "^4.9.0"
   },
   "jest": {
     "coverageDirectory": "./coverage/",
