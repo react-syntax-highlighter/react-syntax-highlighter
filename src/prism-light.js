@@ -1,5 +1,5 @@
 import highlight from './highlight';
-import refractor from 'refractor/core';
+import refractor from 'refractor/lib/core.js';
 
 const SyntaxHighlighter = highlight(refractor, {});
 SyntaxHighlighter.registerLanguage = (_, language) =>
