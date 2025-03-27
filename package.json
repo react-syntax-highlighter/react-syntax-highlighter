@@ -51,8 +51,8 @@
     "request": "^2.88.0",
     "style-loader": "^0.13.0",
     "to-camel-case": "^1.0.0",
-    "webpack": "^4.22.0",
-    "webpack-cli": "^3.1.2",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^3.1.14"
   },
   "peerDependencies": {
