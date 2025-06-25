@@ -10,7 +10,7 @@
     "highlight.js": "^10.4.1",
     "highlightjs-vue": "^1.0.0",
     "lowlight": "^1.17.0",
-    "prismjs": "^1.27.0",
+    "prismjs": "^1.30.0",
     "refractor": "^3.6.0"
   },
   "jest": {
