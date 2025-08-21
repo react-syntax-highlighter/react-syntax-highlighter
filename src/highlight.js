@@ -283,7 +283,7 @@ function defaultRenderer({ rows, stylesheet, useInlineStyles }) {
       node,
       stylesheet,
       useInlineStyles,
-      key: `code-segement${i}`
+      key: `code-segment-${i}`
     })
   );
 }
