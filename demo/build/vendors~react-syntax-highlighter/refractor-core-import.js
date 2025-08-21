@@ -1006,10 +1006,1148 @@ function disallowed(code) {
 
 /***/ }),
 
-/***/ "./node_modules/prismjs/components/prism-core.js":
+/***/ "./node_modules/property-information/find.js":
+/*!***************************************************!*\
+  !*** ./node_modules/property-information/find.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var normalize = __webpack_require__(/*! ./normalize */ "./node_modules/property-information/normalize.js")
+var DefinedInfo = __webpack_require__(/*! ./lib/util/defined-info */ "./node_modules/property-information/lib/util/defined-info.js")
+var Info = __webpack_require__(/*! ./lib/util/info */ "./node_modules/property-information/lib/util/info.js")
+
+var data = 'data'
+
+module.exports = find
+
+var valid = /^data[-\w.:]+$/i
+var dash = /-[a-z]/g
+var cap = /[A-Z]/g
+
+function find(schema, value) {
+  var normal = normalize(value)
+  var prop = value
+  var Type = Info
+
+  if (normal in schema.normal) {
+    return schema.property[schema.normal[normal]]
+  }
+
+  if (normal.length > 4 && normal.slice(0, 4) === data && valid.test(value)) {
+    // Attribute or property.
+    if (value.charAt(4) === '-') {
+      prop = datasetToProperty(value)
+    } else {
+      value = datasetToAttribute(value)
+    }
+
+    Type = DefinedInfo
+  }
+
+  return new Type(prop, value)
+}
+
+function datasetToProperty(attribute) {
+  var value = attribute.slice(5).replace(dash, camelcase)
+  return data + value.charAt(0).toUpperCase() + value.slice(1)
+}
+
+function datasetToAttribute(property) {
+  var value = property.slice(4)
+
+  if (dash.test(value)) {
+    return property
+  }
+
+  value = value.replace(cap, kebab)
+
+  if (value.charAt(0) !== '-') {
+    value = '-' + value
+  }
+
+  return data + value
+}
+
+function kebab($0) {
+  return '-' + $0.toLowerCase()
+}
+
+function camelcase($0) {
+  return $0.charAt(1).toUpperCase()
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/property-information/html.js":
+/*!***************************************************!*\
+  !*** ./node_modules/property-information/html.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var merge = __webpack_require__(/*! ./lib/util/merge */ "./node_modules/property-information/lib/util/merge.js")
+var xlink = __webpack_require__(/*! ./lib/xlink */ "./node_modules/property-information/lib/xlink.js")
+var xml = __webpack_require__(/*! ./lib/xml */ "./node_modules/property-information/lib/xml.js")
+var xmlns = __webpack_require__(/*! ./lib/xmlns */ "./node_modules/property-information/lib/xmlns.js")
+var aria = __webpack_require__(/*! ./lib/aria */ "./node_modules/property-information/lib/aria.js")
+var html = __webpack_require__(/*! ./lib/html */ "./node_modules/property-information/lib/html.js")
+
+module.exports = merge([xml, xlink, xmlns, aria, html])
+
+
+/***/ }),
+
+/***/ "./node_modules/property-information/lib/aria.js":
 /*!*******************************************************!*\
-  !*** ./node_modules/prismjs/components/prism-core.js ***!
+  !*** ./node_modules/property-information/lib/aria.js ***!
   \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var types = __webpack_require__(/*! ./util/types */ "./node_modules/property-information/lib/util/types.js")
+var create = __webpack_require__(/*! ./util/create */ "./node_modules/property-information/lib/util/create.js")
+
+var booleanish = types.booleanish
+var number = types.number
+var spaceSeparated = types.spaceSeparated
+
+module.exports = create({
+  transform: ariaTransform,
+  properties: {
+    ariaActiveDescendant: null,
+    ariaAtomic: booleanish,
+    ariaAutoComplete: null,
+    ariaBusy: booleanish,
+    ariaChecked: booleanish,
+    ariaColCount: number,
+    ariaColIndex: number,
+    ariaColSpan: number,
+    ariaControls: spaceSeparated,
+    ariaCurrent: null,
+    ariaDescribedBy: spaceSeparated,
+    ariaDetails: null,
+    ariaDisabled: booleanish,
+    ariaDropEffect: spaceSeparated,
+    ariaErrorMessage: null,
+    ariaExpanded: booleanish,
+    ariaFlowTo: spaceSeparated,
+    ariaGrabbed: booleanish,
+    ariaHasPopup: null,
+    ariaHidden: booleanish,
+    ariaInvalid: null,
+    ariaKeyShortcuts: null,
+    ariaLabel: null,
+    ariaLabelledBy: spaceSeparated,
+    ariaLevel: number,
+    ariaLive: null,
+    ariaModal: booleanish,
+    ariaMultiLine: booleanish,
+    ariaMultiSelectable: booleanish,
+    ariaOrientation: null,
+    ariaOwns: spaceSeparated,
+    ariaPlaceholder: null,
+    ariaPosInSet: number,
+    ariaPressed: booleanish,
+    ariaReadOnly: booleanish,
+    ariaRelevant: null,
+    ariaRequired: booleanish,
+    ariaRoleDescription: spaceSeparated,
+    ariaRowCount: number,
+    ariaRowIndex: number,
+    ariaRowSpan: number,
+    ariaSelected: booleanish,
+    ariaSetSize: number,
+    ariaSort: null,
+    ariaValueMax: number,
+    ariaValueMin: number,
+    ariaValueNow: number,
+    ariaValueText: null,
+    role: null
+  }
+})
+
+function ariaTransform(_, prop) {
+  return prop === 'role' ? prop : 'aria-' + prop.slice(4).toLowerCase()
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/property-information/lib/html.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/property-information/lib/html.js ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var types = __webpack_require__(/*! ./util/types */ "./node_modules/property-information/lib/util/types.js")
+var create = __webpack_require__(/*! ./util/create */ "./node_modules/property-information/lib/util/create.js")
+var caseInsensitiveTransform = __webpack_require__(/*! ./util/case-insensitive-transform */ "./node_modules/property-information/lib/util/case-insensitive-transform.js")
+
+var boolean = types.boolean
+var overloadedBoolean = types.overloadedBoolean
+var booleanish = types.booleanish
+var number = types.number
+var spaceSeparated = types.spaceSeparated
+var commaSeparated = types.commaSeparated
+
+module.exports = create({
+  space: 'html',
+  attributes: {
+    acceptcharset: 'accept-charset',
+    classname: 'class',
+    htmlfor: 'for',
+    httpequiv: 'http-equiv'
+  },
+  transform: caseInsensitiveTransform,
+  mustUseProperty: ['checked', 'multiple', 'muted', 'selected'],
+  properties: {
+    // Standard Properties.
+    abbr: null,
+    accept: commaSeparated,
+    acceptCharset: spaceSeparated,
+    accessKey: spaceSeparated,
+    action: null,
+    allow: null,
+    allowFullScreen: boolean,
+    allowPaymentRequest: boolean,
+    allowUserMedia: boolean,
+    alt: null,
+    as: null,
+    async: boolean,
+    autoCapitalize: null,
+    autoComplete: spaceSeparated,
+    autoFocus: boolean,
+    autoPlay: boolean,
+    capture: boolean,
+    charSet: null,
+    checked: boolean,
+    cite: null,
+    className: spaceSeparated,
+    cols: number,
+    colSpan: null,
+    content: null,
+    contentEditable: booleanish,
+    controls: boolean,
+    controlsList: spaceSeparated,
+    coords: number | commaSeparated,
+    crossOrigin: null,
+    data: null,
+    dateTime: null,
+    decoding: null,
+    default: boolean,
+    defer: boolean,
+    dir: null,
+    dirName: null,
+    disabled: boolean,
+    download: overloadedBoolean,
+    draggable: booleanish,
+    encType: null,
+    enterKeyHint: null,
+    form: null,
+    formAction: null,
+    formEncType: null,
+    formMethod: null,
+    formNoValidate: boolean,
+    formTarget: null,
+    headers: spaceSeparated,
+    height: number,
+    hidden: boolean,
+    high: number,
+    href: null,
+    hrefLang: null,
+    htmlFor: spaceSeparated,
+    httpEquiv: spaceSeparated,
+    id: null,
+    imageSizes: null,
+    imageSrcSet: commaSeparated,
+    inputMode: null,
+    integrity: null,
+    is: null,
+    isMap: boolean,
+    itemId: null,
+    itemProp: spaceSeparated,
+    itemRef: spaceSeparated,
+    itemScope: boolean,
+    itemType: spaceSeparated,
+    kind: null,
+    label: null,
+    lang: null,
+    language: null,
+    list: null,
+    loading: null,
+    loop: boolean,
+    low: number,
+    manifest: null,
+    max: null,
+    maxLength: number,
+    media: null,
+    method: null,
+    min: null,
+    minLength: number,
+    multiple: boolean,
+    muted: boolean,
+    name: null,
+    nonce: null,
+    noModule: boolean,
+    noValidate: boolean,
+    onAbort: null,
+    onAfterPrint: null,
+    onAuxClick: null,
+    onBeforePrint: null,
+    onBeforeUnload: null,
+    onBlur: null,
+    onCancel: null,
+    onCanPlay: null,
+    onCanPlayThrough: null,
+    onChange: null,
+    onClick: null,
+    onClose: null,
+    onContextMenu: null,
+    onCopy: null,
+    onCueChange: null,
+    onCut: null,
+    onDblClick: null,
+    onDrag: null,
+    onDragEnd: null,
+    onDragEnter: null,
+    onDragExit: null,
+    onDragLeave: null,
+    onDragOver: null,
+    onDragStart: null,
+    onDrop: null,
+    onDurationChange: null,
+    onEmptied: null,
+    onEnded: null,
+    onError: null,
+    onFocus: null,
+    onFormData: null,
+    onHashChange: null,
+    onInput: null,
+    onInvalid: null,
+    onKeyDown: null,
+    onKeyPress: null,
+    onKeyUp: null,
+    onLanguageChange: null,
+    onLoad: null,
+    onLoadedData: null,
+    onLoadedMetadata: null,
+    onLoadEnd: null,
+    onLoadStart: null,
+    onMessage: null,
+    onMessageError: null,
+    onMouseDown: null,
+    onMouseEnter: null,
+    onMouseLeave: null,
+    onMouseMove: null,
+    onMouseOut: null,
+    onMouseOver: null,
+    onMouseUp: null,
+    onOffline: null,
+    onOnline: null,
+    onPageHide: null,
+    onPageShow: null,
+    onPaste: null,
+    onPause: null,
+    onPlay: null,
+    onPlaying: null,
+    onPopState: null,
+    onProgress: null,
+    onRateChange: null,
+    onRejectionHandled: null,
+    onReset: null,
+    onResize: null,
+    onScroll: null,
+    onSecurityPolicyViolation: null,
+    onSeeked: null,
+    onSeeking: null,
+    onSelect: null,
+    onSlotChange: null,
+    onStalled: null,
+    onStorage: null,
+    onSubmit: null,
+    onSuspend: null,
+    onTimeUpdate: null,
+    onToggle: null,
+    onUnhandledRejection: null,
+    onUnload: null,
+    onVolumeChange: null,
+    onWaiting: null,
+    onWheel: null,
+    open: boolean,
+    optimum: number,
+    pattern: null,
+    ping: spaceSeparated,
+    placeholder: null,
+    playsInline: boolean,
+    poster: null,
+    preload: null,
+    readOnly: boolean,
+    referrerPolicy: null,
+    rel: spaceSeparated,
+    required: boolean,
+    reversed: boolean,
+    rows: number,
+    rowSpan: number,
+    sandbox: spaceSeparated,
+    scope: null,
+    scoped: boolean,
+    seamless: boolean,
+    selected: boolean,
+    shape: null,
+    size: number,
+    sizes: null,
+    slot: null,
+    span: number,
+    spellCheck: booleanish,
+    src: null,
+    srcDoc: null,
+    srcLang: null,
+    srcSet: commaSeparated,
+    start: number,
+    step: null,
+    style: null,
+    tabIndex: number,
+    target: null,
+    title: null,
+    translate: null,
+    type: null,
+    typeMustMatch: boolean,
+    useMap: null,
+    value: booleanish,
+    width: number,
+    wrap: null,
+
+    // Legacy.
+    // See: https://html.spec.whatwg.org/#other-elements,-attributes-and-apis
+    align: null, // Several. Use CSS `text-align` instead,
+    aLink: null, // `<body>`. Use CSS `a:active {color}` instead
+    archive: spaceSeparated, // `<object>`. List of URIs to archives
+    axis: null, // `<td>` and `<th>`. Use `scope` on `<th>`
+    background: null, // `<body>`. Use CSS `background-image` instead
+    bgColor: null, // `<body>` and table elements. Use CSS `background-color` instead
+    border: number, // `<table>`. Use CSS `border-width` instead,
+    borderColor: null, // `<table>`. Use CSS `border-color` instead,
+    bottomMargin: number, // `<body>`
+    cellPadding: null, // `<table>`
+    cellSpacing: null, // `<table>`
+    char: null, // Several table elements. When `align=char`, sets the character to align on
+    charOff: null, // Several table elements. When `char`, offsets the alignment
+    classId: null, // `<object>`
+    clear: null, // `<br>`. Use CSS `clear` instead
+    code: null, // `<object>`
+    codeBase: null, // `<object>`
+    codeType: null, // `<object>`
+    color: null, // `<font>` and `<hr>`. Use CSS instead
+    compact: boolean, // Lists. Use CSS to reduce space between items instead
+    declare: boolean, // `<object>`
+    event: null, // `<script>`
+    face: null, // `<font>`. Use CSS instead
+    frame: null, // `<table>`
+    frameBorder: null, // `<iframe>`. Use CSS `border` instead
+    hSpace: number, // `<img>` and `<object>`
+    leftMargin: number, // `<body>`
+    link: null, // `<body>`. Use CSS `a:link {color: *}` instead
+    longDesc: null, // `<frame>`, `<iframe>`, and `<img>`. Use an `<a>`
+    lowSrc: null, // `<img>`. Use a `<picture>`
+    marginHeight: number, // `<body>`
+    marginWidth: number, // `<body>`
+    noResize: boolean, // `<frame>`
+    noHref: boolean, // `<area>`. Use no href instead of an explicit `nohref`
+    noShade: boolean, // `<hr>`. Use background-color and height instead of borders
+    noWrap: boolean, // `<td>` and `<th>`
+    object: null, // `<applet>`
+    profile: null, // `<head>`
+    prompt: null, // `<isindex>`
+    rev: null, // `<link>`
+    rightMargin: number, // `<body>`
+    rules: null, // `<table>`
+    scheme: null, // `<meta>`
+    scrolling: booleanish, // `<frame>`. Use overflow in the child context
+    standby: null, // `<object>`
+    summary: null, // `<table>`
+    text: null, // `<body>`. Use CSS `color` instead
+    topMargin: number, // `<body>`
+    valueType: null, // `<param>`
+    version: null, // `<html>`. Use a doctype.
+    vAlign: null, // Several. Use CSS `vertical-align` instead
+    vLink: null, // `<body>`. Use CSS `a:visited {color}` instead
+    vSpace: number, // `<img>` and `<object>`
+
+    // Non-standard Properties.
+    allowTransparency: null,
+    autoCorrect: null,
+    autoSave: null,
+    disablePictureInPicture: boolean,
+    disableRemotePlayback: boolean,
+    prefix: null,
+    property: null,
+    results: number,
+    security: null,
+    unselectable: null
+  }
+})
+
+
+/***/ }),
+
+/***/ "./node_modules/property-information/lib/util/case-insensitive-transform.js":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/property-information/lib/util/case-insensitive-transform.js ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var caseSensitiveTransform = __webpack_require__(/*! ./case-sensitive-transform */ "./node_modules/property-information/lib/util/case-sensitive-transform.js")
+
+module.exports = caseInsensitiveTransform
+
+function caseInsensitiveTransform(attributes, property) {
+  return caseSensitiveTransform(attributes, property.toLowerCase())
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/property-information/lib/util/case-sensitive-transform.js":
+/*!********************************************************************************!*\
+  !*** ./node_modules/property-information/lib/util/case-sensitive-transform.js ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = caseSensitiveTransform
+
+function caseSensitiveTransform(attributes, attribute) {
+  return attribute in attributes ? attributes[attribute] : attribute
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/property-information/lib/util/create.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/property-information/lib/util/create.js ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var normalize = __webpack_require__(/*! ../../normalize */ "./node_modules/property-information/normalize.js")
+var Schema = __webpack_require__(/*! ./schema */ "./node_modules/property-information/lib/util/schema.js")
+var DefinedInfo = __webpack_require__(/*! ./defined-info */ "./node_modules/property-information/lib/util/defined-info.js")
+
+module.exports = create
+
+function create(definition) {
+  var space = definition.space
+  var mustUseProperty = definition.mustUseProperty || []
+  var attributes = definition.attributes || {}
+  var props = definition.properties
+  var transform = definition.transform
+  var property = {}
+  var normal = {}
+  var prop
+  var info
+
+  for (prop in props) {
+    info = new DefinedInfo(
+      prop,
+      transform(attributes, prop),
+      props[prop],
+      space
+    )
+
+    if (mustUseProperty.indexOf(prop) !== -1) {
+      info.mustUseProperty = true
+    }
+
+    property[prop] = info
+
+    normal[normalize(prop)] = prop
+    normal[normalize(info.attribute)] = prop
+  }
+
+  return new Schema(property, normal, space)
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/property-information/lib/util/defined-info.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/property-information/lib/util/defined-info.js ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var Info = __webpack_require__(/*! ./info */ "./node_modules/property-information/lib/util/info.js")
+var types = __webpack_require__(/*! ./types */ "./node_modules/property-information/lib/util/types.js")
+
+module.exports = DefinedInfo
+
+DefinedInfo.prototype = new Info()
+DefinedInfo.prototype.defined = true
+
+var checks = [
+  'boolean',
+  'booleanish',
+  'overloadedBoolean',
+  'number',
+  'commaSeparated',
+  'spaceSeparated',
+  'commaOrSpaceSeparated'
+]
+var checksLength = checks.length
+
+function DefinedInfo(property, attribute, mask, space) {
+  var index = -1
+  var check
+
+  mark(this, 'space', space)
+
+  Info.call(this, property, attribute)
+
+  while (++index < checksLength) {
+    check = checks[index]
+    mark(this, check, (mask & types[check]) === types[check])
+  }
+}
+
+function mark(values, key, value) {
+  if (value) {
+    values[key] = value
+  }
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/property-information/lib/util/info.js":
+/*!************************************************************!*\
+  !*** ./node_modules/property-information/lib/util/info.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = Info
+
+var proto = Info.prototype
+
+proto.space = null
+proto.attribute = null
+proto.property = null
+proto.boolean = false
+proto.booleanish = false
+proto.overloadedBoolean = false
+proto.number = false
+proto.commaSeparated = false
+proto.spaceSeparated = false
+proto.commaOrSpaceSeparated = false
+proto.mustUseProperty = false
+proto.defined = false
+
+function Info(property, attribute) {
+  this.property = property
+  this.attribute = attribute
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/property-information/lib/util/merge.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/property-information/lib/util/merge.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var xtend = __webpack_require__(/*! xtend */ "./node_modules/xtend/immutable.js")
+var Schema = __webpack_require__(/*! ./schema */ "./node_modules/property-information/lib/util/schema.js")
+
+module.exports = merge
+
+function merge(definitions) {
+  var length = definitions.length
+  var property = []
+  var normal = []
+  var index = -1
+  var info
+  var space
+
+  while (++index < length) {
+    info = definitions[index]
+    property.push(info.property)
+    normal.push(info.normal)
+    space = info.space
+  }
+
+  return new Schema(
+    xtend.apply(null, property),
+    xtend.apply(null, normal),
+    space
+  )
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/property-information/lib/util/schema.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/property-information/lib/util/schema.js ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = Schema
+
+var proto = Schema.prototype
+
+proto.space = null
+proto.normal = {}
+proto.property = {}
+
+function Schema(property, normal, space) {
+  this.property = property
+  this.normal = normal
+
+  if (space) {
+    this.space = space
+  }
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/property-information/lib/util/types.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/property-information/lib/util/types.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var powers = 0
+
+exports.boolean = increment()
+exports.booleanish = increment()
+exports.overloadedBoolean = increment()
+exports.number = increment()
+exports.spaceSeparated = increment()
+exports.commaSeparated = increment()
+exports.commaOrSpaceSeparated = increment()
+
+function increment() {
+  return Math.pow(2, ++powers)
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/property-information/lib/xlink.js":
+/*!********************************************************!*\
+  !*** ./node_modules/property-information/lib/xlink.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var create = __webpack_require__(/*! ./util/create */ "./node_modules/property-information/lib/util/create.js")
+
+module.exports = create({
+  space: 'xlink',
+  transform: xlinkTransform,
+  properties: {
+    xLinkActuate: null,
+    xLinkArcRole: null,
+    xLinkHref: null,
+    xLinkRole: null,
+    xLinkShow: null,
+    xLinkTitle: null,
+    xLinkType: null
+  }
+})
+
+function xlinkTransform(_, prop) {
+  return 'xlink:' + prop.slice(5).toLowerCase()
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/property-information/lib/xml.js":
+/*!******************************************************!*\
+  !*** ./node_modules/property-information/lib/xml.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var create = __webpack_require__(/*! ./util/create */ "./node_modules/property-information/lib/util/create.js")
+
+module.exports = create({
+  space: 'xml',
+  transform: xmlTransform,
+  properties: {
+    xmlLang: null,
+    xmlBase: null,
+    xmlSpace: null
+  }
+})
+
+function xmlTransform(_, prop) {
+  return 'xml:' + prop.slice(3).toLowerCase()
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/property-information/lib/xmlns.js":
+/*!********************************************************!*\
+  !*** ./node_modules/property-information/lib/xmlns.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var create = __webpack_require__(/*! ./util/create */ "./node_modules/property-information/lib/util/create.js")
+var caseInsensitiveTransform = __webpack_require__(/*! ./util/case-insensitive-transform */ "./node_modules/property-information/lib/util/case-insensitive-transform.js")
+
+module.exports = create({
+  space: 'xmlns',
+  attributes: {
+    xmlnsxlink: 'xmlns:xlink'
+  },
+  transform: caseInsensitiveTransform,
+  properties: {
+    xmlns: null,
+    xmlnsXLink: null
+  }
+})
+
+
+/***/ }),
+
+/***/ "./node_modules/property-information/normalize.js":
+/*!********************************************************!*\
+  !*** ./node_modules/property-information/normalize.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = normalize
+
+function normalize(value) {
+  return value.toLowerCase()
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/refractor/core.js":
+/*!****************************************!*\
+  !*** ./node_modules/refractor/core.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(global) {
+
+/* global window, self */
+
+// istanbul ignore next - Don't allow Prism to run on page load in browser or
+// to start messaging from workers.
+var ctx =
+  typeof globalThis === 'object'
+    ? globalThis
+    : typeof self === 'object'
+    ? self
+    : typeof window === 'object'
+    ? window
+    : typeof global === 'object'
+    ? global
+    : {}
+
+var restore = capture()
+
+ctx.Prism = {manual: true, disableWorkerMessageHandler: true}
+
+// Load all stuff in `prism.js` itself, except for `prism-file-highlight.js`.
+// The wrapped non-leaky grammars are loaded instead of Prism’s originals.
+var h = __webpack_require__(/*! hastscript */ "./node_modules/hastscript/index.js")
+var decode = __webpack_require__(/*! parse-entities */ "./node_modules/parse-entities/index.js")
+var Prism = __webpack_require__(/*! prismjs/components/prism-core */ "./node_modules/refractor/node_modules/prismjs/components/prism-core.js")
+var markup = __webpack_require__(/*! ./lang/markup */ "./node_modules/refractor/lang/markup.js")
+var css = __webpack_require__(/*! ./lang/css */ "./node_modules/refractor/lang/css.js")
+var clike = __webpack_require__(/*! ./lang/clike */ "./node_modules/refractor/lang/clike.js")
+var js = __webpack_require__(/*! ./lang/javascript */ "./node_modules/refractor/lang/javascript.js")
+
+restore()
+
+var own = {}.hasOwnProperty
+
+// Inherit.
+function Refractor() {}
+
+Refractor.prototype = Prism
+
+// Construct.
+var refract = new Refractor()
+
+// Expose.
+module.exports = refract
+
+// Create.
+refract.highlight = highlight
+refract.register = register
+refract.alias = alias
+refract.registered = registered
+refract.listLanguages = listLanguages
+
+// Register bundled grammars.
+register(markup)
+register(css)
+register(clike)
+register(js)
+
+refract.util.encode = encode
+refract.Token.stringify = stringify
+
+function register(grammar) {
+  if (typeof grammar !== 'function' || !grammar.displayName) {
+    throw new Error('Expected `function` for `grammar`, got `' + grammar + '`')
+  }
+
+  // Do not duplicate registrations.
+  if (refract.languages[grammar.displayName] === undefined) {
+    grammar(refract)
+  }
+}
+
+function alias(name, alias) {
+  var languages = refract.languages
+  var map = name
+  var key
+  var list
+  var length
+  var index
+
+  if (alias) {
+    map = {}
+    map[name] = alias
+  }
+
+  for (key in map) {
+    list = map[key]
+    list = typeof list === 'string' ? [list] : list
+    length = list.length
+    index = -1
+
+    while (++index < length) {
+      languages[list[index]] = languages[key]
+    }
+  }
+}
+
+function highlight(value, name) {
+  var sup = Prism.highlight
+  var grammar
+
+  if (typeof value !== 'string') {
+    throw new Error('Expected `string` for `value`, got `' + value + '`')
+  }
+
+  // `name` is a grammar object.
+  if (refract.util.type(name) === 'Object') {
+    grammar = name
+    name = null
+  } else {
+    if (typeof name !== 'string') {
+      throw new Error('Expected `string` for `name`, got `' + name + '`')
+    }
+
+    if (own.call(refract.languages, name)) {
+      grammar = refract.languages[name]
+    } else {
+      throw new Error('Unknown language: `' + name + '` is not registered')
+    }
+  }
+
+  return sup.call(this, value, grammar, name)
+}
+
+function registered(language) {
+  if (typeof language !== 'string') {
+    throw new Error('Expected `string` for `language`, got `' + language + '`')
+  }
+
+  return own.call(refract.languages, language)
+}
+
+function listLanguages() {
+  var languages = refract.languages
+  var list = []
+  var language
+
+  for (language in languages) {
+    if (
+      own.call(languages, language) &&
+      typeof languages[language] === 'object'
+    ) {
+      list.push(language)
+    }
+  }
+
+  return list
+}
+
+function stringify(value, language, parent) {
+  var env
+
+  if (typeof value === 'string') {
+    return {type: 'text', value: value}
+  }
+
+  if (refract.util.type(value) === 'Array') {
+    return stringifyAll(value, language)
+  }
+
+  env = {
+    type: value.type,
+    content: refract.Token.stringify(value.content, language, parent),
+    tag: 'span',
+    classes: ['token', value.type],
+    attributes: {},
+    language: language,
+    parent: parent
+  }
+
+  if (value.alias) {
+    env.classes = env.classes.concat(value.alias)
+  }
+
+  refract.hooks.run('wrap', env)
+
+  return h(
+    env.tag + '.' + env.classes.join('.'),
+    attributes(env.attributes),
+    env.content
+  )
+}
+
+function stringifyAll(values, language) {
+  var result = []
+  var length = values.length
+  var index = -1
+  var value
+
+  while (++index < length) {
+    value = values[index]
+
+    if (value !== '' && value !== null && value !== undefined) {
+      result.push(value)
+    }
+  }
+
+  index = -1
+  length = result.length
+
+  while (++index < length) {
+    value = result[index]
+    result[index] = refract.Token.stringify(value, language, result)
+  }
+
+  return result
+}
+
+function encode(tokens) {
+  return tokens
+}
+
+function attributes(attrs) {
+  var key
+
+  for (key in attrs) {
+    attrs[key] = decode(attrs[key])
+  }
+
+  return attrs
+}
+
+function capture() {
+  var defined = 'Prism' in ctx
+  /* istanbul ignore next */
+  var current = defined ? ctx.Prism : undefined
+
+  return restore
+
+  function restore() {
+    /* istanbul ignore else - Clean leaks after Prism. */
+    if (defined) {
+      ctx.Prism = current
+    } else {
+      delete ctx.Prism
+    }
+
+    defined = undefined
+    current = undefined
+  }
+}
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+
+/***/ }),
+
+/***/ "./node_modules/refractor/node_modules/prismjs/components/prism-core.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/refractor/node_modules/prismjs/components/prism-core.js ***!
+  \******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2277,1145 +3415,7 @@ if (typeof global !== 'undefined') {
  * @public
  */
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
-
-/***/ }),
-
-/***/ "./node_modules/property-information/find.js":
-/*!***************************************************!*\
-  !*** ./node_modules/property-information/find.js ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var normalize = __webpack_require__(/*! ./normalize */ "./node_modules/property-information/normalize.js")
-var DefinedInfo = __webpack_require__(/*! ./lib/util/defined-info */ "./node_modules/property-information/lib/util/defined-info.js")
-var Info = __webpack_require__(/*! ./lib/util/info */ "./node_modules/property-information/lib/util/info.js")
-
-var data = 'data'
-
-module.exports = find
-
-var valid = /^data[-\w.:]+$/i
-var dash = /-[a-z]/g
-var cap = /[A-Z]/g
-
-function find(schema, value) {
-  var normal = normalize(value)
-  var prop = value
-  var Type = Info
-
-  if (normal in schema.normal) {
-    return schema.property[schema.normal[normal]]
-  }
-
-  if (normal.length > 4 && normal.slice(0, 4) === data && valid.test(value)) {
-    // Attribute or property.
-    if (value.charAt(4) === '-') {
-      prop = datasetToProperty(value)
-    } else {
-      value = datasetToAttribute(value)
-    }
-
-    Type = DefinedInfo
-  }
-
-  return new Type(prop, value)
-}
-
-function datasetToProperty(attribute) {
-  var value = attribute.slice(5).replace(dash, camelcase)
-  return data + value.charAt(0).toUpperCase() + value.slice(1)
-}
-
-function datasetToAttribute(property) {
-  var value = property.slice(4)
-
-  if (dash.test(value)) {
-    return property
-  }
-
-  value = value.replace(cap, kebab)
-
-  if (value.charAt(0) !== '-') {
-    value = '-' + value
-  }
-
-  return data + value
-}
-
-function kebab($0) {
-  return '-' + $0.toLowerCase()
-}
-
-function camelcase($0) {
-  return $0.charAt(1).toUpperCase()
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/property-information/html.js":
-/*!***************************************************!*\
-  !*** ./node_modules/property-information/html.js ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var merge = __webpack_require__(/*! ./lib/util/merge */ "./node_modules/property-information/lib/util/merge.js")
-var xlink = __webpack_require__(/*! ./lib/xlink */ "./node_modules/property-information/lib/xlink.js")
-var xml = __webpack_require__(/*! ./lib/xml */ "./node_modules/property-information/lib/xml.js")
-var xmlns = __webpack_require__(/*! ./lib/xmlns */ "./node_modules/property-information/lib/xmlns.js")
-var aria = __webpack_require__(/*! ./lib/aria */ "./node_modules/property-information/lib/aria.js")
-var html = __webpack_require__(/*! ./lib/html */ "./node_modules/property-information/lib/html.js")
-
-module.exports = merge([xml, xlink, xmlns, aria, html])
-
-
-/***/ }),
-
-/***/ "./node_modules/property-information/lib/aria.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/property-information/lib/aria.js ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var types = __webpack_require__(/*! ./util/types */ "./node_modules/property-information/lib/util/types.js")
-var create = __webpack_require__(/*! ./util/create */ "./node_modules/property-information/lib/util/create.js")
-
-var booleanish = types.booleanish
-var number = types.number
-var spaceSeparated = types.spaceSeparated
-
-module.exports = create({
-  transform: ariaTransform,
-  properties: {
-    ariaActiveDescendant: null,
-    ariaAtomic: booleanish,
-    ariaAutoComplete: null,
-    ariaBusy: booleanish,
-    ariaChecked: booleanish,
-    ariaColCount: number,
-    ariaColIndex: number,
-    ariaColSpan: number,
-    ariaControls: spaceSeparated,
-    ariaCurrent: null,
-    ariaDescribedBy: spaceSeparated,
-    ariaDetails: null,
-    ariaDisabled: booleanish,
-    ariaDropEffect: spaceSeparated,
-    ariaErrorMessage: null,
-    ariaExpanded: booleanish,
-    ariaFlowTo: spaceSeparated,
-    ariaGrabbed: booleanish,
-    ariaHasPopup: null,
-    ariaHidden: booleanish,
-    ariaInvalid: null,
-    ariaKeyShortcuts: null,
-    ariaLabel: null,
-    ariaLabelledBy: spaceSeparated,
-    ariaLevel: number,
-    ariaLive: null,
-    ariaModal: booleanish,
-    ariaMultiLine: booleanish,
-    ariaMultiSelectable: booleanish,
-    ariaOrientation: null,
-    ariaOwns: spaceSeparated,
-    ariaPlaceholder: null,
-    ariaPosInSet: number,
-    ariaPressed: booleanish,
-    ariaReadOnly: booleanish,
-    ariaRelevant: null,
-    ariaRequired: booleanish,
-    ariaRoleDescription: spaceSeparated,
-    ariaRowCount: number,
-    ariaRowIndex: number,
-    ariaRowSpan: number,
-    ariaSelected: booleanish,
-    ariaSetSize: number,
-    ariaSort: null,
-    ariaValueMax: number,
-    ariaValueMin: number,
-    ariaValueNow: number,
-    ariaValueText: null,
-    role: null
-  }
-})
-
-function ariaTransform(_, prop) {
-  return prop === 'role' ? prop : 'aria-' + prop.slice(4).toLowerCase()
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/property-information/lib/html.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/property-information/lib/html.js ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var types = __webpack_require__(/*! ./util/types */ "./node_modules/property-information/lib/util/types.js")
-var create = __webpack_require__(/*! ./util/create */ "./node_modules/property-information/lib/util/create.js")
-var caseInsensitiveTransform = __webpack_require__(/*! ./util/case-insensitive-transform */ "./node_modules/property-information/lib/util/case-insensitive-transform.js")
-
-var boolean = types.boolean
-var overloadedBoolean = types.overloadedBoolean
-var booleanish = types.booleanish
-var number = types.number
-var spaceSeparated = types.spaceSeparated
-var commaSeparated = types.commaSeparated
-
-module.exports = create({
-  space: 'html',
-  attributes: {
-    acceptcharset: 'accept-charset',
-    classname: 'class',
-    htmlfor: 'for',
-    httpequiv: 'http-equiv'
-  },
-  transform: caseInsensitiveTransform,
-  mustUseProperty: ['checked', 'multiple', 'muted', 'selected'],
-  properties: {
-    // Standard Properties.
-    abbr: null,
-    accept: commaSeparated,
-    acceptCharset: spaceSeparated,
-    accessKey: spaceSeparated,
-    action: null,
-    allow: null,
-    allowFullScreen: boolean,
-    allowPaymentRequest: boolean,
-    allowUserMedia: boolean,
-    alt: null,
-    as: null,
-    async: boolean,
-    autoCapitalize: null,
-    autoComplete: spaceSeparated,
-    autoFocus: boolean,
-    autoPlay: boolean,
-    capture: boolean,
-    charSet: null,
-    checked: boolean,
-    cite: null,
-    className: spaceSeparated,
-    cols: number,
-    colSpan: null,
-    content: null,
-    contentEditable: booleanish,
-    controls: boolean,
-    controlsList: spaceSeparated,
-    coords: number | commaSeparated,
-    crossOrigin: null,
-    data: null,
-    dateTime: null,
-    decoding: null,
-    default: boolean,
-    defer: boolean,
-    dir: null,
-    dirName: null,
-    disabled: boolean,
-    download: overloadedBoolean,
-    draggable: booleanish,
-    encType: null,
-    enterKeyHint: null,
-    form: null,
-    formAction: null,
-    formEncType: null,
-    formMethod: null,
-    formNoValidate: boolean,
-    formTarget: null,
-    headers: spaceSeparated,
-    height: number,
-    hidden: boolean,
-    high: number,
-    href: null,
-    hrefLang: null,
-    htmlFor: spaceSeparated,
-    httpEquiv: spaceSeparated,
-    id: null,
-    imageSizes: null,
-    imageSrcSet: commaSeparated,
-    inputMode: null,
-    integrity: null,
-    is: null,
-    isMap: boolean,
-    itemId: null,
-    itemProp: spaceSeparated,
-    itemRef: spaceSeparated,
-    itemScope: boolean,
-    itemType: spaceSeparated,
-    kind: null,
-    label: null,
-    lang: null,
-    language: null,
-    list: null,
-    loading: null,
-    loop: boolean,
-    low: number,
-    manifest: null,
-    max: null,
-    maxLength: number,
-    media: null,
-    method: null,
-    min: null,
-    minLength: number,
-    multiple: boolean,
-    muted: boolean,
-    name: null,
-    nonce: null,
-    noModule: boolean,
-    noValidate: boolean,
-    onAbort: null,
-    onAfterPrint: null,
-    onAuxClick: null,
-    onBeforePrint: null,
-    onBeforeUnload: null,
-    onBlur: null,
-    onCancel: null,
-    onCanPlay: null,
-    onCanPlayThrough: null,
-    onChange: null,
-    onClick: null,
-    onClose: null,
-    onContextMenu: null,
-    onCopy: null,
-    onCueChange: null,
-    onCut: null,
-    onDblClick: null,
-    onDrag: null,
-    onDragEnd: null,
-    onDragEnter: null,
-    onDragExit: null,
-    onDragLeave: null,
-    onDragOver: null,
-    onDragStart: null,
-    onDrop: null,
-    onDurationChange: null,
-    onEmptied: null,
-    onEnded: null,
-    onError: null,
-    onFocus: null,
-    onFormData: null,
-    onHashChange: null,
-    onInput: null,
-    onInvalid: null,
-    onKeyDown: null,
-    onKeyPress: null,
-    onKeyUp: null,
-    onLanguageChange: null,
-    onLoad: null,
-    onLoadedData: null,
-    onLoadedMetadata: null,
-    onLoadEnd: null,
-    onLoadStart: null,
-    onMessage: null,
-    onMessageError: null,
-    onMouseDown: null,
-    onMouseEnter: null,
-    onMouseLeave: null,
-    onMouseMove: null,
-    onMouseOut: null,
-    onMouseOver: null,
-    onMouseUp: null,
-    onOffline: null,
-    onOnline: null,
-    onPageHide: null,
-    onPageShow: null,
-    onPaste: null,
-    onPause: null,
-    onPlay: null,
-    onPlaying: null,
-    onPopState: null,
-    onProgress: null,
-    onRateChange: null,
-    onRejectionHandled: null,
-    onReset: null,
-    onResize: null,
-    onScroll: null,
-    onSecurityPolicyViolation: null,
-    onSeeked: null,
-    onSeeking: null,
-    onSelect: null,
-    onSlotChange: null,
-    onStalled: null,
-    onStorage: null,
-    onSubmit: null,
-    onSuspend: null,
-    onTimeUpdate: null,
-    onToggle: null,
-    onUnhandledRejection: null,
-    onUnload: null,
-    onVolumeChange: null,
-    onWaiting: null,
-    onWheel: null,
-    open: boolean,
-    optimum: number,
-    pattern: null,
-    ping: spaceSeparated,
-    placeholder: null,
-    playsInline: boolean,
-    poster: null,
-    preload: null,
-    readOnly: boolean,
-    referrerPolicy: null,
-    rel: spaceSeparated,
-    required: boolean,
-    reversed: boolean,
-    rows: number,
-    rowSpan: number,
-    sandbox: spaceSeparated,
-    scope: null,
-    scoped: boolean,
-    seamless: boolean,
-    selected: boolean,
-    shape: null,
-    size: number,
-    sizes: null,
-    slot: null,
-    span: number,
-    spellCheck: booleanish,
-    src: null,
-    srcDoc: null,
-    srcLang: null,
-    srcSet: commaSeparated,
-    start: number,
-    step: null,
-    style: null,
-    tabIndex: number,
-    target: null,
-    title: null,
-    translate: null,
-    type: null,
-    typeMustMatch: boolean,
-    useMap: null,
-    value: booleanish,
-    width: number,
-    wrap: null,
-
-    // Legacy.
-    // See: https://html.spec.whatwg.org/#other-elements,-attributes-and-apis
-    align: null, // Several. Use CSS `text-align` instead,
-    aLink: null, // `<body>`. Use CSS `a:active {color}` instead
-    archive: spaceSeparated, // `<object>`. List of URIs to archives
-    axis: null, // `<td>` and `<th>`. Use `scope` on `<th>`
-    background: null, // `<body>`. Use CSS `background-image` instead
-    bgColor: null, // `<body>` and table elements. Use CSS `background-color` instead
-    border: number, // `<table>`. Use CSS `border-width` instead,
-    borderColor: null, // `<table>`. Use CSS `border-color` instead,
-    bottomMargin: number, // `<body>`
-    cellPadding: null, // `<table>`
-    cellSpacing: null, // `<table>`
-    char: null, // Several table elements. When `align=char`, sets the character to align on
-    charOff: null, // Several table elements. When `char`, offsets the alignment
-    classId: null, // `<object>`
-    clear: null, // `<br>`. Use CSS `clear` instead
-    code: null, // `<object>`
-    codeBase: null, // `<object>`
-    codeType: null, // `<object>`
-    color: null, // `<font>` and `<hr>`. Use CSS instead
-    compact: boolean, // Lists. Use CSS to reduce space between items instead
-    declare: boolean, // `<object>`
-    event: null, // `<script>`
-    face: null, // `<font>`. Use CSS instead
-    frame: null, // `<table>`
-    frameBorder: null, // `<iframe>`. Use CSS `border` instead
-    hSpace: number, // `<img>` and `<object>`
-    leftMargin: number, // `<body>`
-    link: null, // `<body>`. Use CSS `a:link {color: *}` instead
-    longDesc: null, // `<frame>`, `<iframe>`, and `<img>`. Use an `<a>`
-    lowSrc: null, // `<img>`. Use a `<picture>`
-    marginHeight: number, // `<body>`
-    marginWidth: number, // `<body>`
-    noResize: boolean, // `<frame>`
-    noHref: boolean, // `<area>`. Use no href instead of an explicit `nohref`
-    noShade: boolean, // `<hr>`. Use background-color and height instead of borders
-    noWrap: boolean, // `<td>` and `<th>`
-    object: null, // `<applet>`
-    profile: null, // `<head>`
-    prompt: null, // `<isindex>`
-    rev: null, // `<link>`
-    rightMargin: number, // `<body>`
-    rules: null, // `<table>`
-    scheme: null, // `<meta>`
-    scrolling: booleanish, // `<frame>`. Use overflow in the child context
-    standby: null, // `<object>`
-    summary: null, // `<table>`
-    text: null, // `<body>`. Use CSS `color` instead
-    topMargin: number, // `<body>`
-    valueType: null, // `<param>`
-    version: null, // `<html>`. Use a doctype.
-    vAlign: null, // Several. Use CSS `vertical-align` instead
-    vLink: null, // `<body>`. Use CSS `a:visited {color}` instead
-    vSpace: number, // `<img>` and `<object>`
-
-    // Non-standard Properties.
-    allowTransparency: null,
-    autoCorrect: null,
-    autoSave: null,
-    disablePictureInPicture: boolean,
-    disableRemotePlayback: boolean,
-    prefix: null,
-    property: null,
-    results: number,
-    security: null,
-    unselectable: null
-  }
-})
-
-
-/***/ }),
-
-/***/ "./node_modules/property-information/lib/util/case-insensitive-transform.js":
-/*!**********************************************************************************!*\
-  !*** ./node_modules/property-information/lib/util/case-insensitive-transform.js ***!
-  \**********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var caseSensitiveTransform = __webpack_require__(/*! ./case-sensitive-transform */ "./node_modules/property-information/lib/util/case-sensitive-transform.js")
-
-module.exports = caseInsensitiveTransform
-
-function caseInsensitiveTransform(attributes, property) {
-  return caseSensitiveTransform(attributes, property.toLowerCase())
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/property-information/lib/util/case-sensitive-transform.js":
-/*!********************************************************************************!*\
-  !*** ./node_modules/property-information/lib/util/case-sensitive-transform.js ***!
-  \********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = caseSensitiveTransform
-
-function caseSensitiveTransform(attributes, attribute) {
-  return attribute in attributes ? attributes[attribute] : attribute
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/property-information/lib/util/create.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/property-information/lib/util/create.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var normalize = __webpack_require__(/*! ../../normalize */ "./node_modules/property-information/normalize.js")
-var Schema = __webpack_require__(/*! ./schema */ "./node_modules/property-information/lib/util/schema.js")
-var DefinedInfo = __webpack_require__(/*! ./defined-info */ "./node_modules/property-information/lib/util/defined-info.js")
-
-module.exports = create
-
-function create(definition) {
-  var space = definition.space
-  var mustUseProperty = definition.mustUseProperty || []
-  var attributes = definition.attributes || {}
-  var props = definition.properties
-  var transform = definition.transform
-  var property = {}
-  var normal = {}
-  var prop
-  var info
-
-  for (prop in props) {
-    info = new DefinedInfo(
-      prop,
-      transform(attributes, prop),
-      props[prop],
-      space
-    )
-
-    if (mustUseProperty.indexOf(prop) !== -1) {
-      info.mustUseProperty = true
-    }
-
-    property[prop] = info
-
-    normal[normalize(prop)] = prop
-    normal[normalize(info.attribute)] = prop
-  }
-
-  return new Schema(property, normal, space)
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/property-information/lib/util/defined-info.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/property-information/lib/util/defined-info.js ***!
-  \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var Info = __webpack_require__(/*! ./info */ "./node_modules/property-information/lib/util/info.js")
-var types = __webpack_require__(/*! ./types */ "./node_modules/property-information/lib/util/types.js")
-
-module.exports = DefinedInfo
-
-DefinedInfo.prototype = new Info()
-DefinedInfo.prototype.defined = true
-
-var checks = [
-  'boolean',
-  'booleanish',
-  'overloadedBoolean',
-  'number',
-  'commaSeparated',
-  'spaceSeparated',
-  'commaOrSpaceSeparated'
-]
-var checksLength = checks.length
-
-function DefinedInfo(property, attribute, mask, space) {
-  var index = -1
-  var check
-
-  mark(this, 'space', space)
-
-  Info.call(this, property, attribute)
-
-  while (++index < checksLength) {
-    check = checks[index]
-    mark(this, check, (mask & types[check]) === types[check])
-  }
-}
-
-function mark(values, key, value) {
-  if (value) {
-    values[key] = value
-  }
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/property-information/lib/util/info.js":
-/*!************************************************************!*\
-  !*** ./node_modules/property-information/lib/util/info.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = Info
-
-var proto = Info.prototype
-
-proto.space = null
-proto.attribute = null
-proto.property = null
-proto.boolean = false
-proto.booleanish = false
-proto.overloadedBoolean = false
-proto.number = false
-proto.commaSeparated = false
-proto.spaceSeparated = false
-proto.commaOrSpaceSeparated = false
-proto.mustUseProperty = false
-proto.defined = false
-
-function Info(property, attribute) {
-  this.property = property
-  this.attribute = attribute
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/property-information/lib/util/merge.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/property-information/lib/util/merge.js ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var xtend = __webpack_require__(/*! xtend */ "./node_modules/xtend/immutable.js")
-var Schema = __webpack_require__(/*! ./schema */ "./node_modules/property-information/lib/util/schema.js")
-
-module.exports = merge
-
-function merge(definitions) {
-  var length = definitions.length
-  var property = []
-  var normal = []
-  var index = -1
-  var info
-  var space
-
-  while (++index < length) {
-    info = definitions[index]
-    property.push(info.property)
-    normal.push(info.normal)
-    space = info.space
-  }
-
-  return new Schema(
-    xtend.apply(null, property),
-    xtend.apply(null, normal),
-    space
-  )
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/property-information/lib/util/schema.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/property-information/lib/util/schema.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = Schema
-
-var proto = Schema.prototype
-
-proto.space = null
-proto.normal = {}
-proto.property = {}
-
-function Schema(property, normal, space) {
-  this.property = property
-  this.normal = normal
-
-  if (space) {
-    this.space = space
-  }
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/property-information/lib/util/types.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/property-information/lib/util/types.js ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var powers = 0
-
-exports.boolean = increment()
-exports.booleanish = increment()
-exports.overloadedBoolean = increment()
-exports.number = increment()
-exports.spaceSeparated = increment()
-exports.commaSeparated = increment()
-exports.commaOrSpaceSeparated = increment()
-
-function increment() {
-  return Math.pow(2, ++powers)
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/property-information/lib/xlink.js":
-/*!********************************************************!*\
-  !*** ./node_modules/property-information/lib/xlink.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var create = __webpack_require__(/*! ./util/create */ "./node_modules/property-information/lib/util/create.js")
-
-module.exports = create({
-  space: 'xlink',
-  transform: xlinkTransform,
-  properties: {
-    xLinkActuate: null,
-    xLinkArcRole: null,
-    xLinkHref: null,
-    xLinkRole: null,
-    xLinkShow: null,
-    xLinkTitle: null,
-    xLinkType: null
-  }
-})
-
-function xlinkTransform(_, prop) {
-  return 'xlink:' + prop.slice(5).toLowerCase()
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/property-information/lib/xml.js":
-/*!******************************************************!*\
-  !*** ./node_modules/property-information/lib/xml.js ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var create = __webpack_require__(/*! ./util/create */ "./node_modules/property-information/lib/util/create.js")
-
-module.exports = create({
-  space: 'xml',
-  transform: xmlTransform,
-  properties: {
-    xmlLang: null,
-    xmlBase: null,
-    xmlSpace: null
-  }
-})
-
-function xmlTransform(_, prop) {
-  return 'xml:' + prop.slice(3).toLowerCase()
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/property-information/lib/xmlns.js":
-/*!********************************************************!*\
-  !*** ./node_modules/property-information/lib/xmlns.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var create = __webpack_require__(/*! ./util/create */ "./node_modules/property-information/lib/util/create.js")
-var caseInsensitiveTransform = __webpack_require__(/*! ./util/case-insensitive-transform */ "./node_modules/property-information/lib/util/case-insensitive-transform.js")
-
-module.exports = create({
-  space: 'xmlns',
-  attributes: {
-    xmlnsxlink: 'xmlns:xlink'
-  },
-  transform: caseInsensitiveTransform,
-  properties: {
-    xmlns: null,
-    xmlnsXLink: null
-  }
-})
-
-
-/***/ }),
-
-/***/ "./node_modules/property-information/normalize.js":
-/*!********************************************************!*\
-  !*** ./node_modules/property-information/normalize.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = normalize
-
-function normalize(value) {
-  return value.toLowerCase()
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/refractor/core.js":
-/*!****************************************!*\
-  !*** ./node_modules/refractor/core.js ***!
-  \****************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(global) {
-
-/* global window, self */
-
-// istanbul ignore next - Don't allow Prism to run on page load in browser or
-// to start messaging from workers.
-var ctx =
-  typeof globalThis === 'object'
-    ? globalThis
-    : typeof self === 'object'
-    ? self
-    : typeof window === 'object'
-    ? window
-    : typeof global === 'object'
-    ? global
-    : {}
-
-var restore = capture()
-
-ctx.Prism = {manual: true, disableWorkerMessageHandler: true}
-
-// Load all stuff in `prism.js` itself, except for `prism-file-highlight.js`.
-// The wrapped non-leaky grammars are loaded instead of Prism’s originals.
-var h = __webpack_require__(/*! hastscript */ "./node_modules/hastscript/index.js")
-var decode = __webpack_require__(/*! parse-entities */ "./node_modules/parse-entities/index.js")
-var Prism = __webpack_require__(/*! prismjs/components/prism-core */ "./node_modules/prismjs/components/prism-core.js")
-var markup = __webpack_require__(/*! ./lang/markup */ "./node_modules/refractor/lang/markup.js")
-var css = __webpack_require__(/*! ./lang/css */ "./node_modules/refractor/lang/css.js")
-var clike = __webpack_require__(/*! ./lang/clike */ "./node_modules/refractor/lang/clike.js")
-var js = __webpack_require__(/*! ./lang/javascript */ "./node_modules/refractor/lang/javascript.js")
-
-restore()
-
-var own = {}.hasOwnProperty
-
-// Inherit.
-function Refractor() {}
-
-Refractor.prototype = Prism
-
-// Construct.
-var refract = new Refractor()
-
-// Expose.
-module.exports = refract
-
-// Create.
-refract.highlight = highlight
-refract.register = register
-refract.alias = alias
-refract.registered = registered
-refract.listLanguages = listLanguages
-
-// Register bundled grammars.
-register(markup)
-register(css)
-register(clike)
-register(js)
-
-refract.util.encode = encode
-refract.Token.stringify = stringify
-
-function register(grammar) {
-  if (typeof grammar !== 'function' || !grammar.displayName) {
-    throw new Error('Expected `function` for `grammar`, got `' + grammar + '`')
-  }
-
-  // Do not duplicate registrations.
-  if (refract.languages[grammar.displayName] === undefined) {
-    grammar(refract)
-  }
-}
-
-function alias(name, alias) {
-  var languages = refract.languages
-  var map = name
-  var key
-  var list
-  var length
-  var index
-
-  if (alias) {
-    map = {}
-    map[name] = alias
-  }
-
-  for (key in map) {
-    list = map[key]
-    list = typeof list === 'string' ? [list] : list
-    length = list.length
-    index = -1
-
-    while (++index < length) {
-      languages[list[index]] = languages[key]
-    }
-  }
-}
-
-function highlight(value, name) {
-  var sup = Prism.highlight
-  var grammar
-
-  if (typeof value !== 'string') {
-    throw new Error('Expected `string` for `value`, got `' + value + '`')
-  }
-
-  // `name` is a grammar object.
-  if (refract.util.type(name) === 'Object') {
-    grammar = name
-    name = null
-  } else {
-    if (typeof name !== 'string') {
-      throw new Error('Expected `string` for `name`, got `' + name + '`')
-    }
-
-    if (own.call(refract.languages, name)) {
-      grammar = refract.languages[name]
-    } else {
-      throw new Error('Unknown language: `' + name + '` is not registered')
-    }
-  }
-
-  return sup.call(this, value, grammar, name)
-}
-
-function registered(language) {
-  if (typeof language !== 'string') {
-    throw new Error('Expected `string` for `language`, got `' + language + '`')
-  }
-
-  return own.call(refract.languages, language)
-}
-
-function listLanguages() {
-  var languages = refract.languages
-  var list = []
-  var language
-
-  for (language in languages) {
-    if (
-      own.call(languages, language) &&
-      typeof languages[language] === 'object'
-    ) {
-      list.push(language)
-    }
-  }
-
-  return list
-}
-
-function stringify(value, language, parent) {
-  var env
-
-  if (typeof value === 'string') {
-    return {type: 'text', value: value}
-  }
-
-  if (refract.util.type(value) === 'Array') {
-    return stringifyAll(value, language)
-  }
-
-  env = {
-    type: value.type,
-    content: refract.Token.stringify(value.content, language, parent),
-    tag: 'span',
-    classes: ['token', value.type],
-    attributes: {},
-    language: language,
-    parent: parent
-  }
-
-  if (value.alias) {
-    env.classes = env.classes.concat(value.alias)
-  }
-
-  refract.hooks.run('wrap', env)
-
-  return h(
-    env.tag + '.' + env.classes.join('.'),
-    attributes(env.attributes),
-    env.content
-  )
-}
-
-function stringifyAll(values, language) {
-  var result = []
-  var length = values.length
-  var index = -1
-  var value
-
-  while (++index < length) {
-    value = values[index]
-
-    if (value !== '' && value !== null && value !== undefined) {
-      result.push(value)
-    }
-  }
-
-  index = -1
-  length = result.length
-
-  while (++index < length) {
-    value = result[index]
-    result[index] = refract.Token.stringify(value, language, result)
-  }
-
-  return result
-}
-
-function encode(tokens) {
-  return tokens
-}
-
-function attributes(attrs) {
-  var key
-
-  for (key in attrs) {
-    attrs[key] = decode(attrs[key])
-  }
-
-  return attrs
-}
-
-function capture() {
-  var defined = 'Prism' in ctx
-  /* istanbul ignore next */
-  var current = defined ? ctx.Prism : undefined
-
-  return restore
-
-  function restore() {
-    /* istanbul ignore else - Clean leaks after Prism. */
-    if (defined) {
-      ctx.Prism = current
-    } else {
-      delete ctx.Prism
-    }
-
-    defined = undefined
-    current = undefined
-  }
-}
-
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
 
 /***/ }),
 
