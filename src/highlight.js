@@ -408,13 +408,9 @@ export default function(defaultAstGenerator, defaultStyle) {
       codeTree.value = defaultCodeValue;
     }
 
-    // determine largest line number so that we can force minWidth on all linenumber elements
-    let lineCount = codeTree.value.length;
-    if (lineCount === 1 && codeTree.value[0].type === 'text') {
-      // Since codeTree for an unparsable text (e.g. 'a\na\na') is [{ type: 'text', value: 'a\na\na' }]
-      lineCount = codeTree.value[0].value.split('\n').length;
-    }
-    const largestLineNumber = lineCount + startingLineNumber;
+    // pre-determine largest line number so that we can force minWidth on all linenumber elements
+    const lineBreakCount = code.match(/\n/g)?.length ?? 0;
+    const largestLineNumber = startingLineNumber + lineBreakCount;
 
     const rows = processLines(
       codeTree,
