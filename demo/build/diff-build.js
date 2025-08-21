@@ -99931,7 +99931,7 @@ function defaultRenderer(_ref5) {
       node: node,
       stylesheet: stylesheet,
       useInlineStyles: useInlineStyles,
-      key: "code-segement".concat(i)
+      key: "code-segment-".concat(i)
     });
   });
 }
@@ -99978,6 +99978,7 @@ function getCodeTree(_ref6) {
 }
 /* harmony default export */ __webpack_exports__["default"] = (function (defaultAstGenerator, defaultStyle) {
   return function SyntaxHighlighter(_ref7) {
+    var _code$match$length, _code$match;
     var language = _ref7.language,
       children = _ref7.children,
       _ref7$style = _ref7.style,
@@ -100065,13 +100066,9 @@ function getCodeTree(_ref6) {
       codeTree.value = defaultCodeValue;
     }
 
-    // determine largest line number so that we can force minWidth on all linenumber elements
-    var lineCount = codeTree.value.length;
-    if (lineCount === 1 && codeTree.value[0].type === 'text') {
-      // Since codeTree for an unparsable text (e.g. 'a\na\na') is [{ type: 'text', value: 'a\na\na' }]
-      lineCount = codeTree.value[0].value.split('\n').length;
-    }
-    var largestLineNumber = lineCount + startingLineNumber;
+    // pre-determine largest line number so that we can force minWidth on all linenumber elements
+    var lineBreakCount = (_code$match$length = (_code$match = code.match(/\n/g)) === null || _code$match === void 0 ? void 0 : _code$match.length) !== null && _code$match$length !== void 0 ? _code$match$length : 0;
+    var largestLineNumber = startingLineNumber + lineBreakCount;
     var rows = processLines(codeTree, wrapLines, lineProps, showLineNumbers, showInlineLineNumbers, startingLineNumber, largestLineNumber, lineNumberStyle, wrapLongLines);
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(PreTag, preProps, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(CodeTag, codeTagProps, !showInlineLineNumbers && allLineNumbers, renderer({
       rows: rows,
