@@ -5,10 +5,9 @@ export default createAsyncLoadingHighlighter({
   loader: () =>
     import(
       /* webpackChunkName:"react-syntax-highlighter/refractor-import" */
-      'refractor'
+      'refractor/lib/all' // Import all languages from refractor
     ).then(module => {
-      // Webpack 3 returns module.exports as default as module, but webpack 4 returns module.exports as module.default
-      return module.default || module;
+      return module.refractor;
     }),
   noAsyncLoadingLanguages: true,
   supportedLanguages

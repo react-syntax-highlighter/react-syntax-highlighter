@@ -136,6 +136,9 @@ function createLineElement({
 }
 
 function flattenCodeTree(tree, className = [], newTree = []) {
+  if (tree.length === undefined) {
+    tree = [tree];
+  }
   for (let i = 0; i < tree.length; i++) {
     const node = tree[i];
     if (node.type === 'text') {
@@ -146,7 +149,7 @@ function flattenCodeTree(tree, className = [], newTree = []) {
         })
       );
     } else if (node.children) {
-      const classNames = className.concat(node.properties.className);
+      const classNames = className.concat(node.properties?.className || []);
       flattenCodeTree(node.children, classNames).forEach(i => newTree.push(i));
     }
   }
