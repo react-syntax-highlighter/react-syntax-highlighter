@@ -1,24 +1,2324 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["vendors~react-syntax-highlighter/refractor-core-import"],{
 
-/***/ "./node_modules/character-entities-legacy/index.json":
-/*!***********************************************************!*\
-  !*** ./node_modules/character-entities-legacy/index.json ***!
-  \***********************************************************/
-/*! exports provided: AElig, AMP, Aacute, Acirc, Agrave, Aring, Atilde, Auml, COPY, Ccedil, ETH, Eacute, Ecirc, Egrave, Euml, GT, Iacute, Icirc, Igrave, Iuml, LT, Ntilde, Oacute, Ocirc, Ograve, Oslash, Otilde, Ouml, QUOT, REG, THORN, Uacute, Ucirc, Ugrave, Uuml, Yacute, aacute, acirc, acute, aelig, agrave, amp, aring, atilde, auml, brvbar, ccedil, cedil, cent, copy, curren, deg, divide, eacute, ecirc, egrave, eth, euml, frac12, frac14, frac34, gt, iacute, icirc, iexcl, igrave, iquest, iuml, laquo, lt, macr, micro, middot, nbsp, not, ntilde, oacute, ocirc, ograve, ordf, ordm, oslash, otilde, ouml, para, plusmn, pound, quot, raquo, reg, sect, shy, sup1, sup2, sup3, szlig, thorn, times, uacute, ucirc, ugrave, uml, uuml, yacute, yen, yuml, default */
-/***/ (function(module) {
+/***/ "./node_modules/character-entities-legacy/index.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/character-entities-legacy/index.js ***!
+  \*********************************************************/
+/*! exports provided: characterEntitiesLegacy */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = JSON.parse("{\"AElig\":\"Æ\",\"AMP\":\"&\",\"Aacute\":\"Á\",\"Acirc\":\"Â\",\"Agrave\":\"À\",\"Aring\":\"Å\",\"Atilde\":\"Ã\",\"Auml\":\"Ä\",\"COPY\":\"©\",\"Ccedil\":\"Ç\",\"ETH\":\"Ð\",\"Eacute\":\"É\",\"Ecirc\":\"Ê\",\"Egrave\":\"È\",\"Euml\":\"Ë\",\"GT\":\">\",\"Iacute\":\"Í\",\"Icirc\":\"Î\",\"Igrave\":\"Ì\",\"Iuml\":\"Ï\",\"LT\":\"<\",\"Ntilde\":\"Ñ\",\"Oacute\":\"Ó\",\"Ocirc\":\"Ô\",\"Ograve\":\"Ò\",\"Oslash\":\"Ø\",\"Otilde\":\"Õ\",\"Ouml\":\"Ö\",\"QUOT\":\"\\\"\",\"REG\":\"®\",\"THORN\":\"Þ\",\"Uacute\":\"Ú\",\"Ucirc\":\"Û\",\"Ugrave\":\"Ù\",\"Uuml\":\"Ü\",\"Yacute\":\"Ý\",\"aacute\":\"á\",\"acirc\":\"â\",\"acute\":\"´\",\"aelig\":\"æ\",\"agrave\":\"à\",\"amp\":\"&\",\"aring\":\"å\",\"atilde\":\"ã\",\"auml\":\"ä\",\"brvbar\":\"¦\",\"ccedil\":\"ç\",\"cedil\":\"¸\",\"cent\":\"¢\",\"copy\":\"©\",\"curren\":\"¤\",\"deg\":\"°\",\"divide\":\"÷\",\"eacute\":\"é\",\"ecirc\":\"ê\",\"egrave\":\"è\",\"eth\":\"ð\",\"euml\":\"ë\",\"frac12\":\"½\",\"frac14\":\"¼\",\"frac34\":\"¾\",\"gt\":\">\",\"iacute\":\"í\",\"icirc\":\"î\",\"iexcl\":\"¡\",\"igrave\":\"ì\",\"iquest\":\"¿\",\"iuml\":\"ï\",\"laquo\":\"«\",\"lt\":\"<\",\"macr\":\"¯\",\"micro\":\"µ\",\"middot\":\"·\",\"nbsp\":\" \",\"not\":\"¬\",\"ntilde\":\"ñ\",\"oacute\":\"ó\",\"ocirc\":\"ô\",\"ograve\":\"ò\",\"ordf\":\"ª\",\"ordm\":\"º\",\"oslash\":\"ø\",\"otilde\":\"õ\",\"ouml\":\"ö\",\"para\":\"¶\",\"plusmn\":\"±\",\"pound\":\"£\",\"quot\":\"\\\"\",\"raquo\":\"»\",\"reg\":\"®\",\"sect\":\"§\",\"shy\":\"­\",\"sup1\":\"¹\",\"sup2\":\"²\",\"sup3\":\"³\",\"szlig\":\"ß\",\"thorn\":\"þ\",\"times\":\"×\",\"uacute\":\"ú\",\"ucirc\":\"û\",\"ugrave\":\"ù\",\"uml\":\"¨\",\"uuml\":\"ü\",\"yacute\":\"ý\",\"yen\":\"¥\",\"yuml\":\"ÿ\"}");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "characterEntitiesLegacy", function() { return characterEntitiesLegacy; });
+/**
+ * List of legacy HTML named character references that don’t need a trailing semicolon.
+ *
+ * @type {Array<string>}
+ */
+const characterEntitiesLegacy = [
+  'AElig',
+  'AMP',
+  'Aacute',
+  'Acirc',
+  'Agrave',
+  'Aring',
+  'Atilde',
+  'Auml',
+  'COPY',
+  'Ccedil',
+  'ETH',
+  'Eacute',
+  'Ecirc',
+  'Egrave',
+  'Euml',
+  'GT',
+  'Iacute',
+  'Icirc',
+  'Igrave',
+  'Iuml',
+  'LT',
+  'Ntilde',
+  'Oacute',
+  'Ocirc',
+  'Ograve',
+  'Oslash',
+  'Otilde',
+  'Ouml',
+  'QUOT',
+  'REG',
+  'THORN',
+  'Uacute',
+  'Ucirc',
+  'Ugrave',
+  'Uuml',
+  'Yacute',
+  'aacute',
+  'acirc',
+  'acute',
+  'aelig',
+  'agrave',
+  'amp',
+  'aring',
+  'atilde',
+  'auml',
+  'brvbar',
+  'ccedil',
+  'cedil',
+  'cent',
+  'copy',
+  'curren',
+  'deg',
+  'divide',
+  'eacute',
+  'ecirc',
+  'egrave',
+  'eth',
+  'euml',
+  'frac12',
+  'frac14',
+  'frac34',
+  'gt',
+  'iacute',
+  'icirc',
+  'iexcl',
+  'igrave',
+  'iquest',
+  'iuml',
+  'laquo',
+  'lt',
+  'macr',
+  'micro',
+  'middot',
+  'nbsp',
+  'not',
+  'ntilde',
+  'oacute',
+  'ocirc',
+  'ograve',
+  'ordf',
+  'ordm',
+  'oslash',
+  'otilde',
+  'ouml',
+  'para',
+  'plusmn',
+  'pound',
+  'quot',
+  'raquo',
+  'reg',
+  'sect',
+  'shy',
+  'sup1',
+  'sup2',
+  'sup3',
+  'szlig',
+  'thorn',
+  'times',
+  'uacute',
+  'ucirc',
+  'ugrave',
+  'uml',
+  'uuml',
+  'yacute',
+  'yen',
+  'yuml'
+]
+
 
 /***/ }),
 
-/***/ "./node_modules/character-reference-invalid/index.json":
-/*!*************************************************************!*\
-  !*** ./node_modules/character-reference-invalid/index.json ***!
-  \*************************************************************/
-/*! exports provided: 0, 128, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 142, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 158, 159, default */
-/***/ (function(module) {
+/***/ "./node_modules/character-entities/index.js":
+/*!**************************************************!*\
+  !*** ./node_modules/character-entities/index.js ***!
+  \**************************************************/
+/*! exports provided: characterEntities */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = JSON.parse("{\"0\":\"�\",\"128\":\"€\",\"130\":\"‚\",\"131\":\"ƒ\",\"132\":\"„\",\"133\":\"…\",\"134\":\"†\",\"135\":\"‡\",\"136\":\"ˆ\",\"137\":\"‰\",\"138\":\"Š\",\"139\":\"‹\",\"140\":\"Œ\",\"142\":\"Ž\",\"145\":\"‘\",\"146\":\"’\",\"147\":\"“\",\"148\":\"”\",\"149\":\"•\",\"150\":\"–\",\"151\":\"—\",\"152\":\"˜\",\"153\":\"™\",\"154\":\"š\",\"155\":\"›\",\"156\":\"œ\",\"158\":\"ž\",\"159\":\"Ÿ\"}");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "characterEntities", function() { return characterEntities; });
+/**
+ * Map of named character references.
+ *
+ * @type {Record<string, string>}
+ */
+const characterEntities = {
+  AElig: 'Æ',
+  AMP: '&',
+  Aacute: 'Á',
+  Abreve: 'Ă',
+  Acirc: 'Â',
+  Acy: 'А',
+  Afr: '𝔄',
+  Agrave: 'À',
+  Alpha: 'Α',
+  Amacr: 'Ā',
+  And: '⩓',
+  Aogon: 'Ą',
+  Aopf: '𝔸',
+  ApplyFunction: '⁡',
+  Aring: 'Å',
+  Ascr: '𝒜',
+  Assign: '≔',
+  Atilde: 'Ã',
+  Auml: 'Ä',
+  Backslash: '∖',
+  Barv: '⫧',
+  Barwed: '⌆',
+  Bcy: 'Б',
+  Because: '∵',
+  Bernoullis: 'ℬ',
+  Beta: 'Β',
+  Bfr: '𝔅',
+  Bopf: '𝔹',
+  Breve: '˘',
+  Bscr: 'ℬ',
+  Bumpeq: '≎',
+  CHcy: 'Ч',
+  COPY: '©',
+  Cacute: 'Ć',
+  Cap: '⋒',
+  CapitalDifferentialD: 'ⅅ',
+  Cayleys: 'ℭ',
+  Ccaron: 'Č',
+  Ccedil: 'Ç',
+  Ccirc: 'Ĉ',
+  Cconint: '∰',
+  Cdot: 'Ċ',
+  Cedilla: '¸',
+  CenterDot: '·',
+  Cfr: 'ℭ',
+  Chi: 'Χ',
+  CircleDot: '⊙',
+  CircleMinus: '⊖',
+  CirclePlus: '⊕',
+  CircleTimes: '⊗',
+  ClockwiseContourIntegral: '∲',
+  CloseCurlyDoubleQuote: '”',
+  CloseCurlyQuote: '’',
+  Colon: '∷',
+  Colone: '⩴',
+  Congruent: '≡',
+  Conint: '∯',
+  ContourIntegral: '∮',
+  Copf: 'ℂ',
+  Coproduct: '∐',
+  CounterClockwiseContourIntegral: '∳',
+  Cross: '⨯',
+  Cscr: '𝒞',
+  Cup: '⋓',
+  CupCap: '≍',
+  DD: 'ⅅ',
+  DDotrahd: '⤑',
+  DJcy: 'Ђ',
+  DScy: 'Ѕ',
+  DZcy: 'Џ',
+  Dagger: '‡',
+  Darr: '↡',
+  Dashv: '⫤',
+  Dcaron: 'Ď',
+  Dcy: 'Д',
+  Del: '∇',
+  Delta: 'Δ',
+  Dfr: '𝔇',
+  DiacriticalAcute: '´',
+  DiacriticalDot: '˙',
+  DiacriticalDoubleAcute: '˝',
+  DiacriticalGrave: '`',
+  DiacriticalTilde: '˜',
+  Diamond: '⋄',
+  DifferentialD: 'ⅆ',
+  Dopf: '𝔻',
+  Dot: '¨',
+  DotDot: '⃜',
+  DotEqual: '≐',
+  DoubleContourIntegral: '∯',
+  DoubleDot: '¨',
+  DoubleDownArrow: '⇓',
+  DoubleLeftArrow: '⇐',
+  DoubleLeftRightArrow: '⇔',
+  DoubleLeftTee: '⫤',
+  DoubleLongLeftArrow: '⟸',
+  DoubleLongLeftRightArrow: '⟺',
+  DoubleLongRightArrow: '⟹',
+  DoubleRightArrow: '⇒',
+  DoubleRightTee: '⊨',
+  DoubleUpArrow: '⇑',
+  DoubleUpDownArrow: '⇕',
+  DoubleVerticalBar: '∥',
+  DownArrow: '↓',
+  DownArrowBar: '⤓',
+  DownArrowUpArrow: '⇵',
+  DownBreve: '̑',
+  DownLeftRightVector: '⥐',
+  DownLeftTeeVector: '⥞',
+  DownLeftVector: '↽',
+  DownLeftVectorBar: '⥖',
+  DownRightTeeVector: '⥟',
+  DownRightVector: '⇁',
+  DownRightVectorBar: '⥗',
+  DownTee: '⊤',
+  DownTeeArrow: '↧',
+  Downarrow: '⇓',
+  Dscr: '𝒟',
+  Dstrok: 'Đ',
+  ENG: 'Ŋ',
+  ETH: 'Ð',
+  Eacute: 'É',
+  Ecaron: 'Ě',
+  Ecirc: 'Ê',
+  Ecy: 'Э',
+  Edot: 'Ė',
+  Efr: '𝔈',
+  Egrave: 'È',
+  Element: '∈',
+  Emacr: 'Ē',
+  EmptySmallSquare: '◻',
+  EmptyVerySmallSquare: '▫',
+  Eogon: 'Ę',
+  Eopf: '𝔼',
+  Epsilon: 'Ε',
+  Equal: '⩵',
+  EqualTilde: '≂',
+  Equilibrium: '⇌',
+  Escr: 'ℰ',
+  Esim: '⩳',
+  Eta: 'Η',
+  Euml: 'Ë',
+  Exists: '∃',
+  ExponentialE: 'ⅇ',
+  Fcy: 'Ф',
+  Ffr: '𝔉',
+  FilledSmallSquare: '◼',
+  FilledVerySmallSquare: '▪',
+  Fopf: '𝔽',
+  ForAll: '∀',
+  Fouriertrf: 'ℱ',
+  Fscr: 'ℱ',
+  GJcy: 'Ѓ',
+  GT: '>',
+  Gamma: 'Γ',
+  Gammad: 'Ϝ',
+  Gbreve: 'Ğ',
+  Gcedil: 'Ģ',
+  Gcirc: 'Ĝ',
+  Gcy: 'Г',
+  Gdot: 'Ġ',
+  Gfr: '𝔊',
+  Gg: '⋙',
+  Gopf: '𝔾',
+  GreaterEqual: '≥',
+  GreaterEqualLess: '⋛',
+  GreaterFullEqual: '≧',
+  GreaterGreater: '⪢',
+  GreaterLess: '≷',
+  GreaterSlantEqual: '⩾',
+  GreaterTilde: '≳',
+  Gscr: '𝒢',
+  Gt: '≫',
+  HARDcy: 'Ъ',
+  Hacek: 'ˇ',
+  Hat: '^',
+  Hcirc: 'Ĥ',
+  Hfr: 'ℌ',
+  HilbertSpace: 'ℋ',
+  Hopf: 'ℍ',
+  HorizontalLine: '─',
+  Hscr: 'ℋ',
+  Hstrok: 'Ħ',
+  HumpDownHump: '≎',
+  HumpEqual: '≏',
+  IEcy: 'Е',
+  IJlig: 'Ĳ',
+  IOcy: 'Ё',
+  Iacute: 'Í',
+  Icirc: 'Î',
+  Icy: 'И',
+  Idot: 'İ',
+  Ifr: 'ℑ',
+  Igrave: 'Ì',
+  Im: 'ℑ',
+  Imacr: 'Ī',
+  ImaginaryI: 'ⅈ',
+  Implies: '⇒',
+  Int: '∬',
+  Integral: '∫',
+  Intersection: '⋂',
+  InvisibleComma: '⁣',
+  InvisibleTimes: '⁢',
+  Iogon: 'Į',
+  Iopf: '𝕀',
+  Iota: 'Ι',
+  Iscr: 'ℐ',
+  Itilde: 'Ĩ',
+  Iukcy: 'І',
+  Iuml: 'Ï',
+  Jcirc: 'Ĵ',
+  Jcy: 'Й',
+  Jfr: '𝔍',
+  Jopf: '𝕁',
+  Jscr: '𝒥',
+  Jsercy: 'Ј',
+  Jukcy: 'Є',
+  KHcy: 'Х',
+  KJcy: 'Ќ',
+  Kappa: 'Κ',
+  Kcedil: 'Ķ',
+  Kcy: 'К',
+  Kfr: '𝔎',
+  Kopf: '𝕂',
+  Kscr: '𝒦',
+  LJcy: 'Љ',
+  LT: '<',
+  Lacute: 'Ĺ',
+  Lambda: 'Λ',
+  Lang: '⟪',
+  Laplacetrf: 'ℒ',
+  Larr: '↞',
+  Lcaron: 'Ľ',
+  Lcedil: 'Ļ',
+  Lcy: 'Л',
+  LeftAngleBracket: '⟨',
+  LeftArrow: '←',
+  LeftArrowBar: '⇤',
+  LeftArrowRightArrow: '⇆',
+  LeftCeiling: '⌈',
+  LeftDoubleBracket: '⟦',
+  LeftDownTeeVector: '⥡',
+  LeftDownVector: '⇃',
+  LeftDownVectorBar: '⥙',
+  LeftFloor: '⌊',
+  LeftRightArrow: '↔',
+  LeftRightVector: '⥎',
+  LeftTee: '⊣',
+  LeftTeeArrow: '↤',
+  LeftTeeVector: '⥚',
+  LeftTriangle: '⊲',
+  LeftTriangleBar: '⧏',
+  LeftTriangleEqual: '⊴',
+  LeftUpDownVector: '⥑',
+  LeftUpTeeVector: '⥠',
+  LeftUpVector: '↿',
+  LeftUpVectorBar: '⥘',
+  LeftVector: '↼',
+  LeftVectorBar: '⥒',
+  Leftarrow: '⇐',
+  Leftrightarrow: '⇔',
+  LessEqualGreater: '⋚',
+  LessFullEqual: '≦',
+  LessGreater: '≶',
+  LessLess: '⪡',
+  LessSlantEqual: '⩽',
+  LessTilde: '≲',
+  Lfr: '𝔏',
+  Ll: '⋘',
+  Lleftarrow: '⇚',
+  Lmidot: 'Ŀ',
+  LongLeftArrow: '⟵',
+  LongLeftRightArrow: '⟷',
+  LongRightArrow: '⟶',
+  Longleftarrow: '⟸',
+  Longleftrightarrow: '⟺',
+  Longrightarrow: '⟹',
+  Lopf: '𝕃',
+  LowerLeftArrow: '↙',
+  LowerRightArrow: '↘',
+  Lscr: 'ℒ',
+  Lsh: '↰',
+  Lstrok: 'Ł',
+  Lt: '≪',
+  Map: '⤅',
+  Mcy: 'М',
+  MediumSpace: ' ',
+  Mellintrf: 'ℳ',
+  Mfr: '𝔐',
+  MinusPlus: '∓',
+  Mopf: '𝕄',
+  Mscr: 'ℳ',
+  Mu: 'Μ',
+  NJcy: 'Њ',
+  Nacute: 'Ń',
+  Ncaron: 'Ň',
+  Ncedil: 'Ņ',
+  Ncy: 'Н',
+  NegativeMediumSpace: '​',
+  NegativeThickSpace: '​',
+  NegativeThinSpace: '​',
+  NegativeVeryThinSpace: '​',
+  NestedGreaterGreater: '≫',
+  NestedLessLess: '≪',
+  NewLine: '\n',
+  Nfr: '𝔑',
+  NoBreak: '⁠',
+  NonBreakingSpace: ' ',
+  Nopf: 'ℕ',
+  Not: '⫬',
+  NotCongruent: '≢',
+  NotCupCap: '≭',
+  NotDoubleVerticalBar: '∦',
+  NotElement: '∉',
+  NotEqual: '≠',
+  NotEqualTilde: '≂̸',
+  NotExists: '∄',
+  NotGreater: '≯',
+  NotGreaterEqual: '≱',
+  NotGreaterFullEqual: '≧̸',
+  NotGreaterGreater: '≫̸',
+  NotGreaterLess: '≹',
+  NotGreaterSlantEqual: '⩾̸',
+  NotGreaterTilde: '≵',
+  NotHumpDownHump: '≎̸',
+  NotHumpEqual: '≏̸',
+  NotLeftTriangle: '⋪',
+  NotLeftTriangleBar: '⧏̸',
+  NotLeftTriangleEqual: '⋬',
+  NotLess: '≮',
+  NotLessEqual: '≰',
+  NotLessGreater: '≸',
+  NotLessLess: '≪̸',
+  NotLessSlantEqual: '⩽̸',
+  NotLessTilde: '≴',
+  NotNestedGreaterGreater: '⪢̸',
+  NotNestedLessLess: '⪡̸',
+  NotPrecedes: '⊀',
+  NotPrecedesEqual: '⪯̸',
+  NotPrecedesSlantEqual: '⋠',
+  NotReverseElement: '∌',
+  NotRightTriangle: '⋫',
+  NotRightTriangleBar: '⧐̸',
+  NotRightTriangleEqual: '⋭',
+  NotSquareSubset: '⊏̸',
+  NotSquareSubsetEqual: '⋢',
+  NotSquareSuperset: '⊐̸',
+  NotSquareSupersetEqual: '⋣',
+  NotSubset: '⊂⃒',
+  NotSubsetEqual: '⊈',
+  NotSucceeds: '⊁',
+  NotSucceedsEqual: '⪰̸',
+  NotSucceedsSlantEqual: '⋡',
+  NotSucceedsTilde: '≿̸',
+  NotSuperset: '⊃⃒',
+  NotSupersetEqual: '⊉',
+  NotTilde: '≁',
+  NotTildeEqual: '≄',
+  NotTildeFullEqual: '≇',
+  NotTildeTilde: '≉',
+  NotVerticalBar: '∤',
+  Nscr: '𝒩',
+  Ntilde: 'Ñ',
+  Nu: 'Ν',
+  OElig: 'Œ',
+  Oacute: 'Ó',
+  Ocirc: 'Ô',
+  Ocy: 'О',
+  Odblac: 'Ő',
+  Ofr: '𝔒',
+  Ograve: 'Ò',
+  Omacr: 'Ō',
+  Omega: 'Ω',
+  Omicron: 'Ο',
+  Oopf: '𝕆',
+  OpenCurlyDoubleQuote: '“',
+  OpenCurlyQuote: '‘',
+  Or: '⩔',
+  Oscr: '𝒪',
+  Oslash: 'Ø',
+  Otilde: 'Õ',
+  Otimes: '⨷',
+  Ouml: 'Ö',
+  OverBar: '‾',
+  OverBrace: '⏞',
+  OverBracket: '⎴',
+  OverParenthesis: '⏜',
+  PartialD: '∂',
+  Pcy: 'П',
+  Pfr: '𝔓',
+  Phi: 'Φ',
+  Pi: 'Π',
+  PlusMinus: '±',
+  Poincareplane: 'ℌ',
+  Popf: 'ℙ',
+  Pr: '⪻',
+  Precedes: '≺',
+  PrecedesEqual: '⪯',
+  PrecedesSlantEqual: '≼',
+  PrecedesTilde: '≾',
+  Prime: '″',
+  Product: '∏',
+  Proportion: '∷',
+  Proportional: '∝',
+  Pscr: '𝒫',
+  Psi: 'Ψ',
+  QUOT: '"',
+  Qfr: '𝔔',
+  Qopf: 'ℚ',
+  Qscr: '𝒬',
+  RBarr: '⤐',
+  REG: '®',
+  Racute: 'Ŕ',
+  Rang: '⟫',
+  Rarr: '↠',
+  Rarrtl: '⤖',
+  Rcaron: 'Ř',
+  Rcedil: 'Ŗ',
+  Rcy: 'Р',
+  Re: 'ℜ',
+  ReverseElement: '∋',
+  ReverseEquilibrium: '⇋',
+  ReverseUpEquilibrium: '⥯',
+  Rfr: 'ℜ',
+  Rho: 'Ρ',
+  RightAngleBracket: '⟩',
+  RightArrow: '→',
+  RightArrowBar: '⇥',
+  RightArrowLeftArrow: '⇄',
+  RightCeiling: '⌉',
+  RightDoubleBracket: '⟧',
+  RightDownTeeVector: '⥝',
+  RightDownVector: '⇂',
+  RightDownVectorBar: '⥕',
+  RightFloor: '⌋',
+  RightTee: '⊢',
+  RightTeeArrow: '↦',
+  RightTeeVector: '⥛',
+  RightTriangle: '⊳',
+  RightTriangleBar: '⧐',
+  RightTriangleEqual: '⊵',
+  RightUpDownVector: '⥏',
+  RightUpTeeVector: '⥜',
+  RightUpVector: '↾',
+  RightUpVectorBar: '⥔',
+  RightVector: '⇀',
+  RightVectorBar: '⥓',
+  Rightarrow: '⇒',
+  Ropf: 'ℝ',
+  RoundImplies: '⥰',
+  Rrightarrow: '⇛',
+  Rscr: 'ℛ',
+  Rsh: '↱',
+  RuleDelayed: '⧴',
+  SHCHcy: 'Щ',
+  SHcy: 'Ш',
+  SOFTcy: 'Ь',
+  Sacute: 'Ś',
+  Sc: '⪼',
+  Scaron: 'Š',
+  Scedil: 'Ş',
+  Scirc: 'Ŝ',
+  Scy: 'С',
+  Sfr: '𝔖',
+  ShortDownArrow: '↓',
+  ShortLeftArrow: '←',
+  ShortRightArrow: '→',
+  ShortUpArrow: '↑',
+  Sigma: 'Σ',
+  SmallCircle: '∘',
+  Sopf: '𝕊',
+  Sqrt: '√',
+  Square: '□',
+  SquareIntersection: '⊓',
+  SquareSubset: '⊏',
+  SquareSubsetEqual: '⊑',
+  SquareSuperset: '⊐',
+  SquareSupersetEqual: '⊒',
+  SquareUnion: '⊔',
+  Sscr: '𝒮',
+  Star: '⋆',
+  Sub: '⋐',
+  Subset: '⋐',
+  SubsetEqual: '⊆',
+  Succeeds: '≻',
+  SucceedsEqual: '⪰',
+  SucceedsSlantEqual: '≽',
+  SucceedsTilde: '≿',
+  SuchThat: '∋',
+  Sum: '∑',
+  Sup: '⋑',
+  Superset: '⊃',
+  SupersetEqual: '⊇',
+  Supset: '⋑',
+  THORN: 'Þ',
+  TRADE: '™',
+  TSHcy: 'Ћ',
+  TScy: 'Ц',
+  Tab: '\t',
+  Tau: 'Τ',
+  Tcaron: 'Ť',
+  Tcedil: 'Ţ',
+  Tcy: 'Т',
+  Tfr: '𝔗',
+  Therefore: '∴',
+  Theta: 'Θ',
+  ThickSpace: '  ',
+  ThinSpace: ' ',
+  Tilde: '∼',
+  TildeEqual: '≃',
+  TildeFullEqual: '≅',
+  TildeTilde: '≈',
+  Topf: '𝕋',
+  TripleDot: '⃛',
+  Tscr: '𝒯',
+  Tstrok: 'Ŧ',
+  Uacute: 'Ú',
+  Uarr: '↟',
+  Uarrocir: '⥉',
+  Ubrcy: 'Ў',
+  Ubreve: 'Ŭ',
+  Ucirc: 'Û',
+  Ucy: 'У',
+  Udblac: 'Ű',
+  Ufr: '𝔘',
+  Ugrave: 'Ù',
+  Umacr: 'Ū',
+  UnderBar: '_',
+  UnderBrace: '⏟',
+  UnderBracket: '⎵',
+  UnderParenthesis: '⏝',
+  Union: '⋃',
+  UnionPlus: '⊎',
+  Uogon: 'Ų',
+  Uopf: '𝕌',
+  UpArrow: '↑',
+  UpArrowBar: '⤒',
+  UpArrowDownArrow: '⇅',
+  UpDownArrow: '↕',
+  UpEquilibrium: '⥮',
+  UpTee: '⊥',
+  UpTeeArrow: '↥',
+  Uparrow: '⇑',
+  Updownarrow: '⇕',
+  UpperLeftArrow: '↖',
+  UpperRightArrow: '↗',
+  Upsi: 'ϒ',
+  Upsilon: 'Υ',
+  Uring: 'Ů',
+  Uscr: '𝒰',
+  Utilde: 'Ũ',
+  Uuml: 'Ü',
+  VDash: '⊫',
+  Vbar: '⫫',
+  Vcy: 'В',
+  Vdash: '⊩',
+  Vdashl: '⫦',
+  Vee: '⋁',
+  Verbar: '‖',
+  Vert: '‖',
+  VerticalBar: '∣',
+  VerticalLine: '|',
+  VerticalSeparator: '❘',
+  VerticalTilde: '≀',
+  VeryThinSpace: ' ',
+  Vfr: '𝔙',
+  Vopf: '𝕍',
+  Vscr: '𝒱',
+  Vvdash: '⊪',
+  Wcirc: 'Ŵ',
+  Wedge: '⋀',
+  Wfr: '𝔚',
+  Wopf: '𝕎',
+  Wscr: '𝒲',
+  Xfr: '𝔛',
+  Xi: 'Ξ',
+  Xopf: '𝕏',
+  Xscr: '𝒳',
+  YAcy: 'Я',
+  YIcy: 'Ї',
+  YUcy: 'Ю',
+  Yacute: 'Ý',
+  Ycirc: 'Ŷ',
+  Ycy: 'Ы',
+  Yfr: '𝔜',
+  Yopf: '𝕐',
+  Yscr: '𝒴',
+  Yuml: 'Ÿ',
+  ZHcy: 'Ж',
+  Zacute: 'Ź',
+  Zcaron: 'Ž',
+  Zcy: 'З',
+  Zdot: 'Ż',
+  ZeroWidthSpace: '​',
+  Zeta: 'Ζ',
+  Zfr: 'ℨ',
+  Zopf: 'ℤ',
+  Zscr: '𝒵',
+  aacute: 'á',
+  abreve: 'ă',
+  ac: '∾',
+  acE: '∾̳',
+  acd: '∿',
+  acirc: 'â',
+  acute: '´',
+  acy: 'а',
+  aelig: 'æ',
+  af: '⁡',
+  afr: '𝔞',
+  agrave: 'à',
+  alefsym: 'ℵ',
+  aleph: 'ℵ',
+  alpha: 'α',
+  amacr: 'ā',
+  amalg: '⨿',
+  amp: '&',
+  and: '∧',
+  andand: '⩕',
+  andd: '⩜',
+  andslope: '⩘',
+  andv: '⩚',
+  ang: '∠',
+  ange: '⦤',
+  angle: '∠',
+  angmsd: '∡',
+  angmsdaa: '⦨',
+  angmsdab: '⦩',
+  angmsdac: '⦪',
+  angmsdad: '⦫',
+  angmsdae: '⦬',
+  angmsdaf: '⦭',
+  angmsdag: '⦮',
+  angmsdah: '⦯',
+  angrt: '∟',
+  angrtvb: '⊾',
+  angrtvbd: '⦝',
+  angsph: '∢',
+  angst: 'Å',
+  angzarr: '⍼',
+  aogon: 'ą',
+  aopf: '𝕒',
+  ap: '≈',
+  apE: '⩰',
+  apacir: '⩯',
+  ape: '≊',
+  apid: '≋',
+  apos: "'",
+  approx: '≈',
+  approxeq: '≊',
+  aring: 'å',
+  ascr: '𝒶',
+  ast: '*',
+  asymp: '≈',
+  asympeq: '≍',
+  atilde: 'ã',
+  auml: 'ä',
+  awconint: '∳',
+  awint: '⨑',
+  bNot: '⫭',
+  backcong: '≌',
+  backepsilon: '϶',
+  backprime: '‵',
+  backsim: '∽',
+  backsimeq: '⋍',
+  barvee: '⊽',
+  barwed: '⌅',
+  barwedge: '⌅',
+  bbrk: '⎵',
+  bbrktbrk: '⎶',
+  bcong: '≌',
+  bcy: 'б',
+  bdquo: '„',
+  becaus: '∵',
+  because: '∵',
+  bemptyv: '⦰',
+  bepsi: '϶',
+  bernou: 'ℬ',
+  beta: 'β',
+  beth: 'ℶ',
+  between: '≬',
+  bfr: '𝔟',
+  bigcap: '⋂',
+  bigcirc: '◯',
+  bigcup: '⋃',
+  bigodot: '⨀',
+  bigoplus: '⨁',
+  bigotimes: '⨂',
+  bigsqcup: '⨆',
+  bigstar: '★',
+  bigtriangledown: '▽',
+  bigtriangleup: '△',
+  biguplus: '⨄',
+  bigvee: '⋁',
+  bigwedge: '⋀',
+  bkarow: '⤍',
+  blacklozenge: '⧫',
+  blacksquare: '▪',
+  blacktriangle: '▴',
+  blacktriangledown: '▾',
+  blacktriangleleft: '◂',
+  blacktriangleright: '▸',
+  blank: '␣',
+  blk12: '▒',
+  blk14: '░',
+  blk34: '▓',
+  block: '█',
+  bne: '=⃥',
+  bnequiv: '≡⃥',
+  bnot: '⌐',
+  bopf: '𝕓',
+  bot: '⊥',
+  bottom: '⊥',
+  bowtie: '⋈',
+  boxDL: '╗',
+  boxDR: '╔',
+  boxDl: '╖',
+  boxDr: '╓',
+  boxH: '═',
+  boxHD: '╦',
+  boxHU: '╩',
+  boxHd: '╤',
+  boxHu: '╧',
+  boxUL: '╝',
+  boxUR: '╚',
+  boxUl: '╜',
+  boxUr: '╙',
+  boxV: '║',
+  boxVH: '╬',
+  boxVL: '╣',
+  boxVR: '╠',
+  boxVh: '╫',
+  boxVl: '╢',
+  boxVr: '╟',
+  boxbox: '⧉',
+  boxdL: '╕',
+  boxdR: '╒',
+  boxdl: '┐',
+  boxdr: '┌',
+  boxh: '─',
+  boxhD: '╥',
+  boxhU: '╨',
+  boxhd: '┬',
+  boxhu: '┴',
+  boxminus: '⊟',
+  boxplus: '⊞',
+  boxtimes: '⊠',
+  boxuL: '╛',
+  boxuR: '╘',
+  boxul: '┘',
+  boxur: '└',
+  boxv: '│',
+  boxvH: '╪',
+  boxvL: '╡',
+  boxvR: '╞',
+  boxvh: '┼',
+  boxvl: '┤',
+  boxvr: '├',
+  bprime: '‵',
+  breve: '˘',
+  brvbar: '¦',
+  bscr: '𝒷',
+  bsemi: '⁏',
+  bsim: '∽',
+  bsime: '⋍',
+  bsol: '\\',
+  bsolb: '⧅',
+  bsolhsub: '⟈',
+  bull: '•',
+  bullet: '•',
+  bump: '≎',
+  bumpE: '⪮',
+  bumpe: '≏',
+  bumpeq: '≏',
+  cacute: 'ć',
+  cap: '∩',
+  capand: '⩄',
+  capbrcup: '⩉',
+  capcap: '⩋',
+  capcup: '⩇',
+  capdot: '⩀',
+  caps: '∩︀',
+  caret: '⁁',
+  caron: 'ˇ',
+  ccaps: '⩍',
+  ccaron: 'č',
+  ccedil: 'ç',
+  ccirc: 'ĉ',
+  ccups: '⩌',
+  ccupssm: '⩐',
+  cdot: 'ċ',
+  cedil: '¸',
+  cemptyv: '⦲',
+  cent: '¢',
+  centerdot: '·',
+  cfr: '𝔠',
+  chcy: 'ч',
+  check: '✓',
+  checkmark: '✓',
+  chi: 'χ',
+  cir: '○',
+  cirE: '⧃',
+  circ: 'ˆ',
+  circeq: '≗',
+  circlearrowleft: '↺',
+  circlearrowright: '↻',
+  circledR: '®',
+  circledS: 'Ⓢ',
+  circledast: '⊛',
+  circledcirc: '⊚',
+  circleddash: '⊝',
+  cire: '≗',
+  cirfnint: '⨐',
+  cirmid: '⫯',
+  cirscir: '⧂',
+  clubs: '♣',
+  clubsuit: '♣',
+  colon: ':',
+  colone: '≔',
+  coloneq: '≔',
+  comma: ',',
+  commat: '@',
+  comp: '∁',
+  compfn: '∘',
+  complement: '∁',
+  complexes: 'ℂ',
+  cong: '≅',
+  congdot: '⩭',
+  conint: '∮',
+  copf: '𝕔',
+  coprod: '∐',
+  copy: '©',
+  copysr: '℗',
+  crarr: '↵',
+  cross: '✗',
+  cscr: '𝒸',
+  csub: '⫏',
+  csube: '⫑',
+  csup: '⫐',
+  csupe: '⫒',
+  ctdot: '⋯',
+  cudarrl: '⤸',
+  cudarrr: '⤵',
+  cuepr: '⋞',
+  cuesc: '⋟',
+  cularr: '↶',
+  cularrp: '⤽',
+  cup: '∪',
+  cupbrcap: '⩈',
+  cupcap: '⩆',
+  cupcup: '⩊',
+  cupdot: '⊍',
+  cupor: '⩅',
+  cups: '∪︀',
+  curarr: '↷',
+  curarrm: '⤼',
+  curlyeqprec: '⋞',
+  curlyeqsucc: '⋟',
+  curlyvee: '⋎',
+  curlywedge: '⋏',
+  curren: '¤',
+  curvearrowleft: '↶',
+  curvearrowright: '↷',
+  cuvee: '⋎',
+  cuwed: '⋏',
+  cwconint: '∲',
+  cwint: '∱',
+  cylcty: '⌭',
+  dArr: '⇓',
+  dHar: '⥥',
+  dagger: '†',
+  daleth: 'ℸ',
+  darr: '↓',
+  dash: '‐',
+  dashv: '⊣',
+  dbkarow: '⤏',
+  dblac: '˝',
+  dcaron: 'ď',
+  dcy: 'д',
+  dd: 'ⅆ',
+  ddagger: '‡',
+  ddarr: '⇊',
+  ddotseq: '⩷',
+  deg: '°',
+  delta: 'δ',
+  demptyv: '⦱',
+  dfisht: '⥿',
+  dfr: '𝔡',
+  dharl: '⇃',
+  dharr: '⇂',
+  diam: '⋄',
+  diamond: '⋄',
+  diamondsuit: '♦',
+  diams: '♦',
+  die: '¨',
+  digamma: 'ϝ',
+  disin: '⋲',
+  div: '÷',
+  divide: '÷',
+  divideontimes: '⋇',
+  divonx: '⋇',
+  djcy: 'ђ',
+  dlcorn: '⌞',
+  dlcrop: '⌍',
+  dollar: '$',
+  dopf: '𝕕',
+  dot: '˙',
+  doteq: '≐',
+  doteqdot: '≑',
+  dotminus: '∸',
+  dotplus: '∔',
+  dotsquare: '⊡',
+  doublebarwedge: '⌆',
+  downarrow: '↓',
+  downdownarrows: '⇊',
+  downharpoonleft: '⇃',
+  downharpoonright: '⇂',
+  drbkarow: '⤐',
+  drcorn: '⌟',
+  drcrop: '⌌',
+  dscr: '𝒹',
+  dscy: 'ѕ',
+  dsol: '⧶',
+  dstrok: 'đ',
+  dtdot: '⋱',
+  dtri: '▿',
+  dtrif: '▾',
+  duarr: '⇵',
+  duhar: '⥯',
+  dwangle: '⦦',
+  dzcy: 'џ',
+  dzigrarr: '⟿',
+  eDDot: '⩷',
+  eDot: '≑',
+  eacute: 'é',
+  easter: '⩮',
+  ecaron: 'ě',
+  ecir: '≖',
+  ecirc: 'ê',
+  ecolon: '≕',
+  ecy: 'э',
+  edot: 'ė',
+  ee: 'ⅇ',
+  efDot: '≒',
+  efr: '𝔢',
+  eg: '⪚',
+  egrave: 'è',
+  egs: '⪖',
+  egsdot: '⪘',
+  el: '⪙',
+  elinters: '⏧',
+  ell: 'ℓ',
+  els: '⪕',
+  elsdot: '⪗',
+  emacr: 'ē',
+  empty: '∅',
+  emptyset: '∅',
+  emptyv: '∅',
+  emsp13: ' ',
+  emsp14: ' ',
+  emsp: ' ',
+  eng: 'ŋ',
+  ensp: ' ',
+  eogon: 'ę',
+  eopf: '𝕖',
+  epar: '⋕',
+  eparsl: '⧣',
+  eplus: '⩱',
+  epsi: 'ε',
+  epsilon: 'ε',
+  epsiv: 'ϵ',
+  eqcirc: '≖',
+  eqcolon: '≕',
+  eqsim: '≂',
+  eqslantgtr: '⪖',
+  eqslantless: '⪕',
+  equals: '=',
+  equest: '≟',
+  equiv: '≡',
+  equivDD: '⩸',
+  eqvparsl: '⧥',
+  erDot: '≓',
+  erarr: '⥱',
+  escr: 'ℯ',
+  esdot: '≐',
+  esim: '≂',
+  eta: 'η',
+  eth: 'ð',
+  euml: 'ë',
+  euro: '€',
+  excl: '!',
+  exist: '∃',
+  expectation: 'ℰ',
+  exponentiale: 'ⅇ',
+  fallingdotseq: '≒',
+  fcy: 'ф',
+  female: '♀',
+  ffilig: 'ﬃ',
+  fflig: 'ﬀ',
+  ffllig: 'ﬄ',
+  ffr: '𝔣',
+  filig: 'ﬁ',
+  fjlig: 'fj',
+  flat: '♭',
+  fllig: 'ﬂ',
+  fltns: '▱',
+  fnof: 'ƒ',
+  fopf: '𝕗',
+  forall: '∀',
+  fork: '⋔',
+  forkv: '⫙',
+  fpartint: '⨍',
+  frac12: '½',
+  frac13: '⅓',
+  frac14: '¼',
+  frac15: '⅕',
+  frac16: '⅙',
+  frac18: '⅛',
+  frac23: '⅔',
+  frac25: '⅖',
+  frac34: '¾',
+  frac35: '⅗',
+  frac38: '⅜',
+  frac45: '⅘',
+  frac56: '⅚',
+  frac58: '⅝',
+  frac78: '⅞',
+  frasl: '⁄',
+  frown: '⌢',
+  fscr: '𝒻',
+  gE: '≧',
+  gEl: '⪌',
+  gacute: 'ǵ',
+  gamma: 'γ',
+  gammad: 'ϝ',
+  gap: '⪆',
+  gbreve: 'ğ',
+  gcirc: 'ĝ',
+  gcy: 'г',
+  gdot: 'ġ',
+  ge: '≥',
+  gel: '⋛',
+  geq: '≥',
+  geqq: '≧',
+  geqslant: '⩾',
+  ges: '⩾',
+  gescc: '⪩',
+  gesdot: '⪀',
+  gesdoto: '⪂',
+  gesdotol: '⪄',
+  gesl: '⋛︀',
+  gesles: '⪔',
+  gfr: '𝔤',
+  gg: '≫',
+  ggg: '⋙',
+  gimel: 'ℷ',
+  gjcy: 'ѓ',
+  gl: '≷',
+  glE: '⪒',
+  gla: '⪥',
+  glj: '⪤',
+  gnE: '≩',
+  gnap: '⪊',
+  gnapprox: '⪊',
+  gne: '⪈',
+  gneq: '⪈',
+  gneqq: '≩',
+  gnsim: '⋧',
+  gopf: '𝕘',
+  grave: '`',
+  gscr: 'ℊ',
+  gsim: '≳',
+  gsime: '⪎',
+  gsiml: '⪐',
+  gt: '>',
+  gtcc: '⪧',
+  gtcir: '⩺',
+  gtdot: '⋗',
+  gtlPar: '⦕',
+  gtquest: '⩼',
+  gtrapprox: '⪆',
+  gtrarr: '⥸',
+  gtrdot: '⋗',
+  gtreqless: '⋛',
+  gtreqqless: '⪌',
+  gtrless: '≷',
+  gtrsim: '≳',
+  gvertneqq: '≩︀',
+  gvnE: '≩︀',
+  hArr: '⇔',
+  hairsp: ' ',
+  half: '½',
+  hamilt: 'ℋ',
+  hardcy: 'ъ',
+  harr: '↔',
+  harrcir: '⥈',
+  harrw: '↭',
+  hbar: 'ℏ',
+  hcirc: 'ĥ',
+  hearts: '♥',
+  heartsuit: '♥',
+  hellip: '…',
+  hercon: '⊹',
+  hfr: '𝔥',
+  hksearow: '⤥',
+  hkswarow: '⤦',
+  hoarr: '⇿',
+  homtht: '∻',
+  hookleftarrow: '↩',
+  hookrightarrow: '↪',
+  hopf: '𝕙',
+  horbar: '―',
+  hscr: '𝒽',
+  hslash: 'ℏ',
+  hstrok: 'ħ',
+  hybull: '⁃',
+  hyphen: '‐',
+  iacute: 'í',
+  ic: '⁣',
+  icirc: 'î',
+  icy: 'и',
+  iecy: 'е',
+  iexcl: '¡',
+  iff: '⇔',
+  ifr: '𝔦',
+  igrave: 'ì',
+  ii: 'ⅈ',
+  iiiint: '⨌',
+  iiint: '∭',
+  iinfin: '⧜',
+  iiota: '℩',
+  ijlig: 'ĳ',
+  imacr: 'ī',
+  image: 'ℑ',
+  imagline: 'ℐ',
+  imagpart: 'ℑ',
+  imath: 'ı',
+  imof: '⊷',
+  imped: 'Ƶ',
+  in: '∈',
+  incare: '℅',
+  infin: '∞',
+  infintie: '⧝',
+  inodot: 'ı',
+  int: '∫',
+  intcal: '⊺',
+  integers: 'ℤ',
+  intercal: '⊺',
+  intlarhk: '⨗',
+  intprod: '⨼',
+  iocy: 'ё',
+  iogon: 'į',
+  iopf: '𝕚',
+  iota: 'ι',
+  iprod: '⨼',
+  iquest: '¿',
+  iscr: '𝒾',
+  isin: '∈',
+  isinE: '⋹',
+  isindot: '⋵',
+  isins: '⋴',
+  isinsv: '⋳',
+  isinv: '∈',
+  it: '⁢',
+  itilde: 'ĩ',
+  iukcy: 'і',
+  iuml: 'ï',
+  jcirc: 'ĵ',
+  jcy: 'й',
+  jfr: '𝔧',
+  jmath: 'ȷ',
+  jopf: '𝕛',
+  jscr: '𝒿',
+  jsercy: 'ј',
+  jukcy: 'є',
+  kappa: 'κ',
+  kappav: 'ϰ',
+  kcedil: 'ķ',
+  kcy: 'к',
+  kfr: '𝔨',
+  kgreen: 'ĸ',
+  khcy: 'х',
+  kjcy: 'ќ',
+  kopf: '𝕜',
+  kscr: '𝓀',
+  lAarr: '⇚',
+  lArr: '⇐',
+  lAtail: '⤛',
+  lBarr: '⤎',
+  lE: '≦',
+  lEg: '⪋',
+  lHar: '⥢',
+  lacute: 'ĺ',
+  laemptyv: '⦴',
+  lagran: 'ℒ',
+  lambda: 'λ',
+  lang: '⟨',
+  langd: '⦑',
+  langle: '⟨',
+  lap: '⪅',
+  laquo: '«',
+  larr: '←',
+  larrb: '⇤',
+  larrbfs: '⤟',
+  larrfs: '⤝',
+  larrhk: '↩',
+  larrlp: '↫',
+  larrpl: '⤹',
+  larrsim: '⥳',
+  larrtl: '↢',
+  lat: '⪫',
+  latail: '⤙',
+  late: '⪭',
+  lates: '⪭︀',
+  lbarr: '⤌',
+  lbbrk: '❲',
+  lbrace: '{',
+  lbrack: '[',
+  lbrke: '⦋',
+  lbrksld: '⦏',
+  lbrkslu: '⦍',
+  lcaron: 'ľ',
+  lcedil: 'ļ',
+  lceil: '⌈',
+  lcub: '{',
+  lcy: 'л',
+  ldca: '⤶',
+  ldquo: '“',
+  ldquor: '„',
+  ldrdhar: '⥧',
+  ldrushar: '⥋',
+  ldsh: '↲',
+  le: '≤',
+  leftarrow: '←',
+  leftarrowtail: '↢',
+  leftharpoondown: '↽',
+  leftharpoonup: '↼',
+  leftleftarrows: '⇇',
+  leftrightarrow: '↔',
+  leftrightarrows: '⇆',
+  leftrightharpoons: '⇋',
+  leftrightsquigarrow: '↭',
+  leftthreetimes: '⋋',
+  leg: '⋚',
+  leq: '≤',
+  leqq: '≦',
+  leqslant: '⩽',
+  les: '⩽',
+  lescc: '⪨',
+  lesdot: '⩿',
+  lesdoto: '⪁',
+  lesdotor: '⪃',
+  lesg: '⋚︀',
+  lesges: '⪓',
+  lessapprox: '⪅',
+  lessdot: '⋖',
+  lesseqgtr: '⋚',
+  lesseqqgtr: '⪋',
+  lessgtr: '≶',
+  lesssim: '≲',
+  lfisht: '⥼',
+  lfloor: '⌊',
+  lfr: '𝔩',
+  lg: '≶',
+  lgE: '⪑',
+  lhard: '↽',
+  lharu: '↼',
+  lharul: '⥪',
+  lhblk: '▄',
+  ljcy: 'љ',
+  ll: '≪',
+  llarr: '⇇',
+  llcorner: '⌞',
+  llhard: '⥫',
+  lltri: '◺',
+  lmidot: 'ŀ',
+  lmoust: '⎰',
+  lmoustache: '⎰',
+  lnE: '≨',
+  lnap: '⪉',
+  lnapprox: '⪉',
+  lne: '⪇',
+  lneq: '⪇',
+  lneqq: '≨',
+  lnsim: '⋦',
+  loang: '⟬',
+  loarr: '⇽',
+  lobrk: '⟦',
+  longleftarrow: '⟵',
+  longleftrightarrow: '⟷',
+  longmapsto: '⟼',
+  longrightarrow: '⟶',
+  looparrowleft: '↫',
+  looparrowright: '↬',
+  lopar: '⦅',
+  lopf: '𝕝',
+  loplus: '⨭',
+  lotimes: '⨴',
+  lowast: '∗',
+  lowbar: '_',
+  loz: '◊',
+  lozenge: '◊',
+  lozf: '⧫',
+  lpar: '(',
+  lparlt: '⦓',
+  lrarr: '⇆',
+  lrcorner: '⌟',
+  lrhar: '⇋',
+  lrhard: '⥭',
+  lrm: '‎',
+  lrtri: '⊿',
+  lsaquo: '‹',
+  lscr: '𝓁',
+  lsh: '↰',
+  lsim: '≲',
+  lsime: '⪍',
+  lsimg: '⪏',
+  lsqb: '[',
+  lsquo: '‘',
+  lsquor: '‚',
+  lstrok: 'ł',
+  lt: '<',
+  ltcc: '⪦',
+  ltcir: '⩹',
+  ltdot: '⋖',
+  lthree: '⋋',
+  ltimes: '⋉',
+  ltlarr: '⥶',
+  ltquest: '⩻',
+  ltrPar: '⦖',
+  ltri: '◃',
+  ltrie: '⊴',
+  ltrif: '◂',
+  lurdshar: '⥊',
+  luruhar: '⥦',
+  lvertneqq: '≨︀',
+  lvnE: '≨︀',
+  mDDot: '∺',
+  macr: '¯',
+  male: '♂',
+  malt: '✠',
+  maltese: '✠',
+  map: '↦',
+  mapsto: '↦',
+  mapstodown: '↧',
+  mapstoleft: '↤',
+  mapstoup: '↥',
+  marker: '▮',
+  mcomma: '⨩',
+  mcy: 'м',
+  mdash: '—',
+  measuredangle: '∡',
+  mfr: '𝔪',
+  mho: '℧',
+  micro: 'µ',
+  mid: '∣',
+  midast: '*',
+  midcir: '⫰',
+  middot: '·',
+  minus: '−',
+  minusb: '⊟',
+  minusd: '∸',
+  minusdu: '⨪',
+  mlcp: '⫛',
+  mldr: '…',
+  mnplus: '∓',
+  models: '⊧',
+  mopf: '𝕞',
+  mp: '∓',
+  mscr: '𝓂',
+  mstpos: '∾',
+  mu: 'μ',
+  multimap: '⊸',
+  mumap: '⊸',
+  nGg: '⋙̸',
+  nGt: '≫⃒',
+  nGtv: '≫̸',
+  nLeftarrow: '⇍',
+  nLeftrightarrow: '⇎',
+  nLl: '⋘̸',
+  nLt: '≪⃒',
+  nLtv: '≪̸',
+  nRightarrow: '⇏',
+  nVDash: '⊯',
+  nVdash: '⊮',
+  nabla: '∇',
+  nacute: 'ń',
+  nang: '∠⃒',
+  nap: '≉',
+  napE: '⩰̸',
+  napid: '≋̸',
+  napos: 'ŉ',
+  napprox: '≉',
+  natur: '♮',
+  natural: '♮',
+  naturals: 'ℕ',
+  nbsp: ' ',
+  nbump: '≎̸',
+  nbumpe: '≏̸',
+  ncap: '⩃',
+  ncaron: 'ň',
+  ncedil: 'ņ',
+  ncong: '≇',
+  ncongdot: '⩭̸',
+  ncup: '⩂',
+  ncy: 'н',
+  ndash: '–',
+  ne: '≠',
+  neArr: '⇗',
+  nearhk: '⤤',
+  nearr: '↗',
+  nearrow: '↗',
+  nedot: '≐̸',
+  nequiv: '≢',
+  nesear: '⤨',
+  nesim: '≂̸',
+  nexist: '∄',
+  nexists: '∄',
+  nfr: '𝔫',
+  ngE: '≧̸',
+  nge: '≱',
+  ngeq: '≱',
+  ngeqq: '≧̸',
+  ngeqslant: '⩾̸',
+  nges: '⩾̸',
+  ngsim: '≵',
+  ngt: '≯',
+  ngtr: '≯',
+  nhArr: '⇎',
+  nharr: '↮',
+  nhpar: '⫲',
+  ni: '∋',
+  nis: '⋼',
+  nisd: '⋺',
+  niv: '∋',
+  njcy: 'њ',
+  nlArr: '⇍',
+  nlE: '≦̸',
+  nlarr: '↚',
+  nldr: '‥',
+  nle: '≰',
+  nleftarrow: '↚',
+  nleftrightarrow: '↮',
+  nleq: '≰',
+  nleqq: '≦̸',
+  nleqslant: '⩽̸',
+  nles: '⩽̸',
+  nless: '≮',
+  nlsim: '≴',
+  nlt: '≮',
+  nltri: '⋪',
+  nltrie: '⋬',
+  nmid: '∤',
+  nopf: '𝕟',
+  not: '¬',
+  notin: '∉',
+  notinE: '⋹̸',
+  notindot: '⋵̸',
+  notinva: '∉',
+  notinvb: '⋷',
+  notinvc: '⋶',
+  notni: '∌',
+  notniva: '∌',
+  notnivb: '⋾',
+  notnivc: '⋽',
+  npar: '∦',
+  nparallel: '∦',
+  nparsl: '⫽⃥',
+  npart: '∂̸',
+  npolint: '⨔',
+  npr: '⊀',
+  nprcue: '⋠',
+  npre: '⪯̸',
+  nprec: '⊀',
+  npreceq: '⪯̸',
+  nrArr: '⇏',
+  nrarr: '↛',
+  nrarrc: '⤳̸',
+  nrarrw: '↝̸',
+  nrightarrow: '↛',
+  nrtri: '⋫',
+  nrtrie: '⋭',
+  nsc: '⊁',
+  nsccue: '⋡',
+  nsce: '⪰̸',
+  nscr: '𝓃',
+  nshortmid: '∤',
+  nshortparallel: '∦',
+  nsim: '≁',
+  nsime: '≄',
+  nsimeq: '≄',
+  nsmid: '∤',
+  nspar: '∦',
+  nsqsube: '⋢',
+  nsqsupe: '⋣',
+  nsub: '⊄',
+  nsubE: '⫅̸',
+  nsube: '⊈',
+  nsubset: '⊂⃒',
+  nsubseteq: '⊈',
+  nsubseteqq: '⫅̸',
+  nsucc: '⊁',
+  nsucceq: '⪰̸',
+  nsup: '⊅',
+  nsupE: '⫆̸',
+  nsupe: '⊉',
+  nsupset: '⊃⃒',
+  nsupseteq: '⊉',
+  nsupseteqq: '⫆̸',
+  ntgl: '≹',
+  ntilde: 'ñ',
+  ntlg: '≸',
+  ntriangleleft: '⋪',
+  ntrianglelefteq: '⋬',
+  ntriangleright: '⋫',
+  ntrianglerighteq: '⋭',
+  nu: 'ν',
+  num: '#',
+  numero: '№',
+  numsp: ' ',
+  nvDash: '⊭',
+  nvHarr: '⤄',
+  nvap: '≍⃒',
+  nvdash: '⊬',
+  nvge: '≥⃒',
+  nvgt: '>⃒',
+  nvinfin: '⧞',
+  nvlArr: '⤂',
+  nvle: '≤⃒',
+  nvlt: '<⃒',
+  nvltrie: '⊴⃒',
+  nvrArr: '⤃',
+  nvrtrie: '⊵⃒',
+  nvsim: '∼⃒',
+  nwArr: '⇖',
+  nwarhk: '⤣',
+  nwarr: '↖',
+  nwarrow: '↖',
+  nwnear: '⤧',
+  oS: 'Ⓢ',
+  oacute: 'ó',
+  oast: '⊛',
+  ocir: '⊚',
+  ocirc: 'ô',
+  ocy: 'о',
+  odash: '⊝',
+  odblac: 'ő',
+  odiv: '⨸',
+  odot: '⊙',
+  odsold: '⦼',
+  oelig: 'œ',
+  ofcir: '⦿',
+  ofr: '𝔬',
+  ogon: '˛',
+  ograve: 'ò',
+  ogt: '⧁',
+  ohbar: '⦵',
+  ohm: 'Ω',
+  oint: '∮',
+  olarr: '↺',
+  olcir: '⦾',
+  olcross: '⦻',
+  oline: '‾',
+  olt: '⧀',
+  omacr: 'ō',
+  omega: 'ω',
+  omicron: 'ο',
+  omid: '⦶',
+  ominus: '⊖',
+  oopf: '𝕠',
+  opar: '⦷',
+  operp: '⦹',
+  oplus: '⊕',
+  or: '∨',
+  orarr: '↻',
+  ord: '⩝',
+  order: 'ℴ',
+  orderof: 'ℴ',
+  ordf: 'ª',
+  ordm: 'º',
+  origof: '⊶',
+  oror: '⩖',
+  orslope: '⩗',
+  orv: '⩛',
+  oscr: 'ℴ',
+  oslash: 'ø',
+  osol: '⊘',
+  otilde: 'õ',
+  otimes: '⊗',
+  otimesas: '⨶',
+  ouml: 'ö',
+  ovbar: '⌽',
+  par: '∥',
+  para: '¶',
+  parallel: '∥',
+  parsim: '⫳',
+  parsl: '⫽',
+  part: '∂',
+  pcy: 'п',
+  percnt: '%',
+  period: '.',
+  permil: '‰',
+  perp: '⊥',
+  pertenk: '‱',
+  pfr: '𝔭',
+  phi: 'φ',
+  phiv: 'ϕ',
+  phmmat: 'ℳ',
+  phone: '☎',
+  pi: 'π',
+  pitchfork: '⋔',
+  piv: 'ϖ',
+  planck: 'ℏ',
+  planckh: 'ℎ',
+  plankv: 'ℏ',
+  plus: '+',
+  plusacir: '⨣',
+  plusb: '⊞',
+  pluscir: '⨢',
+  plusdo: '∔',
+  plusdu: '⨥',
+  pluse: '⩲',
+  plusmn: '±',
+  plussim: '⨦',
+  plustwo: '⨧',
+  pm: '±',
+  pointint: '⨕',
+  popf: '𝕡',
+  pound: '£',
+  pr: '≺',
+  prE: '⪳',
+  prap: '⪷',
+  prcue: '≼',
+  pre: '⪯',
+  prec: '≺',
+  precapprox: '⪷',
+  preccurlyeq: '≼',
+  preceq: '⪯',
+  precnapprox: '⪹',
+  precneqq: '⪵',
+  precnsim: '⋨',
+  precsim: '≾',
+  prime: '′',
+  primes: 'ℙ',
+  prnE: '⪵',
+  prnap: '⪹',
+  prnsim: '⋨',
+  prod: '∏',
+  profalar: '⌮',
+  profline: '⌒',
+  profsurf: '⌓',
+  prop: '∝',
+  propto: '∝',
+  prsim: '≾',
+  prurel: '⊰',
+  pscr: '𝓅',
+  psi: 'ψ',
+  puncsp: ' ',
+  qfr: '𝔮',
+  qint: '⨌',
+  qopf: '𝕢',
+  qprime: '⁗',
+  qscr: '𝓆',
+  quaternions: 'ℍ',
+  quatint: '⨖',
+  quest: '?',
+  questeq: '≟',
+  quot: '"',
+  rAarr: '⇛',
+  rArr: '⇒',
+  rAtail: '⤜',
+  rBarr: '⤏',
+  rHar: '⥤',
+  race: '∽̱',
+  racute: 'ŕ',
+  radic: '√',
+  raemptyv: '⦳',
+  rang: '⟩',
+  rangd: '⦒',
+  range: '⦥',
+  rangle: '⟩',
+  raquo: '»',
+  rarr: '→',
+  rarrap: '⥵',
+  rarrb: '⇥',
+  rarrbfs: '⤠',
+  rarrc: '⤳',
+  rarrfs: '⤞',
+  rarrhk: '↪',
+  rarrlp: '↬',
+  rarrpl: '⥅',
+  rarrsim: '⥴',
+  rarrtl: '↣',
+  rarrw: '↝',
+  ratail: '⤚',
+  ratio: '∶',
+  rationals: 'ℚ',
+  rbarr: '⤍',
+  rbbrk: '❳',
+  rbrace: '}',
+  rbrack: ']',
+  rbrke: '⦌',
+  rbrksld: '⦎',
+  rbrkslu: '⦐',
+  rcaron: 'ř',
+  rcedil: 'ŗ',
+  rceil: '⌉',
+  rcub: '}',
+  rcy: 'р',
+  rdca: '⤷',
+  rdldhar: '⥩',
+  rdquo: '”',
+  rdquor: '”',
+  rdsh: '↳',
+  real: 'ℜ',
+  realine: 'ℛ',
+  realpart: 'ℜ',
+  reals: 'ℝ',
+  rect: '▭',
+  reg: '®',
+  rfisht: '⥽',
+  rfloor: '⌋',
+  rfr: '𝔯',
+  rhard: '⇁',
+  rharu: '⇀',
+  rharul: '⥬',
+  rho: 'ρ',
+  rhov: 'ϱ',
+  rightarrow: '→',
+  rightarrowtail: '↣',
+  rightharpoondown: '⇁',
+  rightharpoonup: '⇀',
+  rightleftarrows: '⇄',
+  rightleftharpoons: '⇌',
+  rightrightarrows: '⇉',
+  rightsquigarrow: '↝',
+  rightthreetimes: '⋌',
+  ring: '˚',
+  risingdotseq: '≓',
+  rlarr: '⇄',
+  rlhar: '⇌',
+  rlm: '‏',
+  rmoust: '⎱',
+  rmoustache: '⎱',
+  rnmid: '⫮',
+  roang: '⟭',
+  roarr: '⇾',
+  robrk: '⟧',
+  ropar: '⦆',
+  ropf: '𝕣',
+  roplus: '⨮',
+  rotimes: '⨵',
+  rpar: ')',
+  rpargt: '⦔',
+  rppolint: '⨒',
+  rrarr: '⇉',
+  rsaquo: '›',
+  rscr: '𝓇',
+  rsh: '↱',
+  rsqb: ']',
+  rsquo: '’',
+  rsquor: '’',
+  rthree: '⋌',
+  rtimes: '⋊',
+  rtri: '▹',
+  rtrie: '⊵',
+  rtrif: '▸',
+  rtriltri: '⧎',
+  ruluhar: '⥨',
+  rx: '℞',
+  sacute: 'ś',
+  sbquo: '‚',
+  sc: '≻',
+  scE: '⪴',
+  scap: '⪸',
+  scaron: 'š',
+  sccue: '≽',
+  sce: '⪰',
+  scedil: 'ş',
+  scirc: 'ŝ',
+  scnE: '⪶',
+  scnap: '⪺',
+  scnsim: '⋩',
+  scpolint: '⨓',
+  scsim: '≿',
+  scy: 'с',
+  sdot: '⋅',
+  sdotb: '⊡',
+  sdote: '⩦',
+  seArr: '⇘',
+  searhk: '⤥',
+  searr: '↘',
+  searrow: '↘',
+  sect: '§',
+  semi: ';',
+  seswar: '⤩',
+  setminus: '∖',
+  setmn: '∖',
+  sext: '✶',
+  sfr: '𝔰',
+  sfrown: '⌢',
+  sharp: '♯',
+  shchcy: 'щ',
+  shcy: 'ш',
+  shortmid: '∣',
+  shortparallel: '∥',
+  shy: '­',
+  sigma: 'σ',
+  sigmaf: 'ς',
+  sigmav: 'ς',
+  sim: '∼',
+  simdot: '⩪',
+  sime: '≃',
+  simeq: '≃',
+  simg: '⪞',
+  simgE: '⪠',
+  siml: '⪝',
+  simlE: '⪟',
+  simne: '≆',
+  simplus: '⨤',
+  simrarr: '⥲',
+  slarr: '←',
+  smallsetminus: '∖',
+  smashp: '⨳',
+  smeparsl: '⧤',
+  smid: '∣',
+  smile: '⌣',
+  smt: '⪪',
+  smte: '⪬',
+  smtes: '⪬︀',
+  softcy: 'ь',
+  sol: '/',
+  solb: '⧄',
+  solbar: '⌿',
+  sopf: '𝕤',
+  spades: '♠',
+  spadesuit: '♠',
+  spar: '∥',
+  sqcap: '⊓',
+  sqcaps: '⊓︀',
+  sqcup: '⊔',
+  sqcups: '⊔︀',
+  sqsub: '⊏',
+  sqsube: '⊑',
+  sqsubset: '⊏',
+  sqsubseteq: '⊑',
+  sqsup: '⊐',
+  sqsupe: '⊒',
+  sqsupset: '⊐',
+  sqsupseteq: '⊒',
+  squ: '□',
+  square: '□',
+  squarf: '▪',
+  squf: '▪',
+  srarr: '→',
+  sscr: '𝓈',
+  ssetmn: '∖',
+  ssmile: '⌣',
+  sstarf: '⋆',
+  star: '☆',
+  starf: '★',
+  straightepsilon: 'ϵ',
+  straightphi: 'ϕ',
+  strns: '¯',
+  sub: '⊂',
+  subE: '⫅',
+  subdot: '⪽',
+  sube: '⊆',
+  subedot: '⫃',
+  submult: '⫁',
+  subnE: '⫋',
+  subne: '⊊',
+  subplus: '⪿',
+  subrarr: '⥹',
+  subset: '⊂',
+  subseteq: '⊆',
+  subseteqq: '⫅',
+  subsetneq: '⊊',
+  subsetneqq: '⫋',
+  subsim: '⫇',
+  subsub: '⫕',
+  subsup: '⫓',
+  succ: '≻',
+  succapprox: '⪸',
+  succcurlyeq: '≽',
+  succeq: '⪰',
+  succnapprox: '⪺',
+  succneqq: '⪶',
+  succnsim: '⋩',
+  succsim: '≿',
+  sum: '∑',
+  sung: '♪',
+  sup1: '¹',
+  sup2: '²',
+  sup3: '³',
+  sup: '⊃',
+  supE: '⫆',
+  supdot: '⪾',
+  supdsub: '⫘',
+  supe: '⊇',
+  supedot: '⫄',
+  suphsol: '⟉',
+  suphsub: '⫗',
+  suplarr: '⥻',
+  supmult: '⫂',
+  supnE: '⫌',
+  supne: '⊋',
+  supplus: '⫀',
+  supset: '⊃',
+  supseteq: '⊇',
+  supseteqq: '⫆',
+  supsetneq: '⊋',
+  supsetneqq: '⫌',
+  supsim: '⫈',
+  supsub: '⫔',
+  supsup: '⫖',
+  swArr: '⇙',
+  swarhk: '⤦',
+  swarr: '↙',
+  swarrow: '↙',
+  swnwar: '⤪',
+  szlig: 'ß',
+  target: '⌖',
+  tau: 'τ',
+  tbrk: '⎴',
+  tcaron: 'ť',
+  tcedil: 'ţ',
+  tcy: 'т',
+  tdot: '⃛',
+  telrec: '⌕',
+  tfr: '𝔱',
+  there4: '∴',
+  therefore: '∴',
+  theta: 'θ',
+  thetasym: 'ϑ',
+  thetav: 'ϑ',
+  thickapprox: '≈',
+  thicksim: '∼',
+  thinsp: ' ',
+  thkap: '≈',
+  thksim: '∼',
+  thorn: 'þ',
+  tilde: '˜',
+  times: '×',
+  timesb: '⊠',
+  timesbar: '⨱',
+  timesd: '⨰',
+  tint: '∭',
+  toea: '⤨',
+  top: '⊤',
+  topbot: '⌶',
+  topcir: '⫱',
+  topf: '𝕥',
+  topfork: '⫚',
+  tosa: '⤩',
+  tprime: '‴',
+  trade: '™',
+  triangle: '▵',
+  triangledown: '▿',
+  triangleleft: '◃',
+  trianglelefteq: '⊴',
+  triangleq: '≜',
+  triangleright: '▹',
+  trianglerighteq: '⊵',
+  tridot: '◬',
+  trie: '≜',
+  triminus: '⨺',
+  triplus: '⨹',
+  trisb: '⧍',
+  tritime: '⨻',
+  trpezium: '⏢',
+  tscr: '𝓉',
+  tscy: 'ц',
+  tshcy: 'ћ',
+  tstrok: 'ŧ',
+  twixt: '≬',
+  twoheadleftarrow: '↞',
+  twoheadrightarrow: '↠',
+  uArr: '⇑',
+  uHar: '⥣',
+  uacute: 'ú',
+  uarr: '↑',
+  ubrcy: 'ў',
+  ubreve: 'ŭ',
+  ucirc: 'û',
+  ucy: 'у',
+  udarr: '⇅',
+  udblac: 'ű',
+  udhar: '⥮',
+  ufisht: '⥾',
+  ufr: '𝔲',
+  ugrave: 'ù',
+  uharl: '↿',
+  uharr: '↾',
+  uhblk: '▀',
+  ulcorn: '⌜',
+  ulcorner: '⌜',
+  ulcrop: '⌏',
+  ultri: '◸',
+  umacr: 'ū',
+  uml: '¨',
+  uogon: 'ų',
+  uopf: '𝕦',
+  uparrow: '↑',
+  updownarrow: '↕',
+  upharpoonleft: '↿',
+  upharpoonright: '↾',
+  uplus: '⊎',
+  upsi: 'υ',
+  upsih: 'ϒ',
+  upsilon: 'υ',
+  upuparrows: '⇈',
+  urcorn: '⌝',
+  urcorner: '⌝',
+  urcrop: '⌎',
+  uring: 'ů',
+  urtri: '◹',
+  uscr: '𝓊',
+  utdot: '⋰',
+  utilde: 'ũ',
+  utri: '▵',
+  utrif: '▴',
+  uuarr: '⇈',
+  uuml: 'ü',
+  uwangle: '⦧',
+  vArr: '⇕',
+  vBar: '⫨',
+  vBarv: '⫩',
+  vDash: '⊨',
+  vangrt: '⦜',
+  varepsilon: 'ϵ',
+  varkappa: 'ϰ',
+  varnothing: '∅',
+  varphi: 'ϕ',
+  varpi: 'ϖ',
+  varpropto: '∝',
+  varr: '↕',
+  varrho: 'ϱ',
+  varsigma: 'ς',
+  varsubsetneq: '⊊︀',
+  varsubsetneqq: '⫋︀',
+  varsupsetneq: '⊋︀',
+  varsupsetneqq: '⫌︀',
+  vartheta: 'ϑ',
+  vartriangleleft: '⊲',
+  vartriangleright: '⊳',
+  vcy: 'в',
+  vdash: '⊢',
+  vee: '∨',
+  veebar: '⊻',
+  veeeq: '≚',
+  vellip: '⋮',
+  verbar: '|',
+  vert: '|',
+  vfr: '𝔳',
+  vltri: '⊲',
+  vnsub: '⊂⃒',
+  vnsup: '⊃⃒',
+  vopf: '𝕧',
+  vprop: '∝',
+  vrtri: '⊳',
+  vscr: '𝓋',
+  vsubnE: '⫋︀',
+  vsubne: '⊊︀',
+  vsupnE: '⫌︀',
+  vsupne: '⊋︀',
+  vzigzag: '⦚',
+  wcirc: 'ŵ',
+  wedbar: '⩟',
+  wedge: '∧',
+  wedgeq: '≙',
+  weierp: '℘',
+  wfr: '𝔴',
+  wopf: '𝕨',
+  wp: '℘',
+  wr: '≀',
+  wreath: '≀',
+  wscr: '𝓌',
+  xcap: '⋂',
+  xcirc: '◯',
+  xcup: '⋃',
+  xdtri: '▽',
+  xfr: '𝔵',
+  xhArr: '⟺',
+  xharr: '⟷',
+  xi: 'ξ',
+  xlArr: '⟸',
+  xlarr: '⟵',
+  xmap: '⟼',
+  xnis: '⋻',
+  xodot: '⨀',
+  xopf: '𝕩',
+  xoplus: '⨁',
+  xotime: '⨂',
+  xrArr: '⟹',
+  xrarr: '⟶',
+  xscr: '𝓍',
+  xsqcup: '⨆',
+  xuplus: '⨄',
+  xutri: '△',
+  xvee: '⋁',
+  xwedge: '⋀',
+  yacute: 'ý',
+  yacy: 'я',
+  ycirc: 'ŷ',
+  ycy: 'ы',
+  yen: '¥',
+  yfr: '𝔶',
+  yicy: 'ї',
+  yopf: '𝕪',
+  yscr: '𝓎',
+  yucy: 'ю',
+  yuml: 'ÿ',
+  zacute: 'ź',
+  zcaron: 'ž',
+  zcy: 'з',
+  zdot: 'ż',
+  zeetrf: 'ℨ',
+  zeta: 'ζ',
+  zfr: '𝔷',
+  zhcy: 'ж',
+  zigrarr: '⇝',
+  zopf: '𝕫',
+  zscr: '𝓏',
+  zwj: '‍',
+  zwnj: '‌'
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/character-reference-invalid/index.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/character-reference-invalid/index.js ***!
+  \***********************************************************/
+/*! exports provided: characterReferenceInvalid */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "characterReferenceInvalid", function() { return characterReferenceInvalid; });
+/**
+ * Map of invalid numeric character references to their replacements, according to HTML.
+ *
+ * @type {Record<number, string>}
+ */
+const characterReferenceInvalid = {
+  0: '�',
+  128: '€',
+  130: '‚',
+  131: 'ƒ',
+  132: '„',
+  133: '…',
+  134: '†',
+  135: '‡',
+  136: 'ˆ',
+  137: '‰',
+  138: 'Š',
+  139: '‹',
+  140: 'Œ',
+  142: 'Ž',
+  145: '‘',
+  146: '’',
+  147: '“',
+  148: '”',
+  149: '•',
+  150: '–',
+  151: '—',
+  152: '˜',
+  153: '™',
+  154: 'š',
+  155: '›',
+  156: 'œ',
+  158: 'ž',
+  159: 'Ÿ'
+}
+
 
 /***/ }),
 
@@ -26,27 +2326,43 @@ module.exports = JSON.parse("{\"0\":\"�\",\"128\":\"€\",\"130\":\"‚\",\"13
 /*!******************************************************!*\
   !*** ./node_modules/comma-separated-tokens/index.js ***!
   \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: parse, stringify */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "parse", function() { return parse; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "stringify", function() { return stringify; });
+/**
+ * @typedef Options
+ *   Configuration for `stringify`.
+ * @property {boolean} [padLeft=true]
+ *   Whether to pad a space before a token.
+ * @property {boolean} [padRight=false]
+ *   Whether to pad a space after a token.
+ */
 
+/**
+ * @typedef {Options} StringifyOptions
+ *   Please use `StringifyOptions` instead.
+ */
 
-exports.parse = parse
-exports.stringify = stringify
-
-var comma = ','
-var space = ' '
-var empty = ''
-
-// Parse comma-separated tokens to an array.
+/**
+ * Parse comma-separated tokens to an array.
+ *
+ * @param {string} value
+ *   Comma-separated tokens.
+ * @returns {Array<string>}
+ *   List of tokens.
+ */
 function parse(value) {
-  var values = []
-  var input = String(value || empty)
-  var index = input.indexOf(comma)
-  var lastIndex = 0
-  var end = false
-  var val
+  /** @type {Array<string>} */
+  const tokens = []
+  const input = String(value || '')
+  let index = input.indexOf(',')
+  let start = 0
+  /** @type {boolean} */
+  let end = false
 
   while (!end) {
     if (index === -1) {
@@ -54,33 +2370,76 @@ function parse(value) {
       end = true
     }
 
-    val = input.slice(lastIndex, index).trim()
+    const token = input.slice(start, index).trim()
 
-    if (val || !end) {
-      values.push(val)
+    if (token || !end) {
+      tokens.push(token)
     }
 
-    lastIndex = index + 1
-    index = input.indexOf(comma, lastIndex)
+    start = index + 1
+    index = input.indexOf(',', start)
   }
 
-  return values
+  return tokens
 }
 
-// Compile an array to comma-separated tokens.
-// `options.padLeft` (default: `true`) pads a space left of each token, and
-// `options.padRight` (default: `false`) pads a space to the right of each token.
+/**
+ * Serialize an array of strings or numbers to comma-separated tokens.
+ *
+ * @param {Array<string|number>} values
+ *   List of tokens.
+ * @param {Options} [options]
+ *   Configuration for `stringify` (optional).
+ * @returns {string}
+ *   Comma-separated tokens.
+ */
 function stringify(values, options) {
-  var settings = options || {}
-  var left = settings.padLeft === false ? empty : space
-  var right = settings.padRight ? space : empty
+  const settings = options || {}
 
   // Ensure the last empty entry is seen.
-  if (values[values.length - 1] === empty) {
-    values = values.concat(empty)
-  }
+  const input = values[values.length - 1] === '' ? [...values, ''] : values
 
-  return values.join(right + comma + left).trim()
+  return input
+    .join(
+      (settings.padRight ? ' ' : '') +
+        ',' +
+        (settings.padLeft === false ? '' : ' ')
+    )
+    .trim()
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/decode-named-character-reference/index.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/decode-named-character-reference/index.js ***!
+  \****************************************************************/
+/*! exports provided: decodeNamedCharacterReference */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "decodeNamedCharacterReference", function() { return decodeNamedCharacterReference; });
+/* harmony import */ var character_entities__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! character-entities */ "./node_modules/character-entities/index.js");
+
+
+// To do: next major: use `Object.hasOwn`.
+const own = {}.hasOwnProperty
+
+/**
+ * Decode a single character reference (without the `&` or `;`).
+ * You probably only need this when you’re building parsers yourself that follow
+ * different rules compared to HTML.
+ * This is optimized to be tiny in browsers.
+ *
+ * @param {string} value
+ *   `notin` (named), `#123` (deci), `#x123` (hexa).
+ * @returns {string|false}
+ *   Decoded reference.
+ */
+function decodeNamedCharacterReference(value) {
+  return own.call(character_entities__WEBPACK_IMPORTED_MODULE_0__["characterEntities"], value) ? character_entities__WEBPACK_IMPORTED_MODULE_0__["characterEntities"][value] : false
 }
 
 
@@ -90,37 +2449,94 @@ function stringify(values, options) {
 /*!********************************************************!*\
   !*** ./node_modules/hast-util-parse-selector/index.js ***!
   \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: parseSelector */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _lib_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lib/index.js */ "./node_modules/hast-util-parse-selector/lib/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "parseSelector", function() { return _lib_index_js__WEBPACK_IMPORTED_MODULE_0__["parseSelector"]; });
 
 
-module.exports = parse
 
-var search = /[#.]/g
 
-// Create a hast element from a simple CSS selector.
-function parse(selector, defaultTagName) {
-  var value = selector || ''
-  var name = defaultTagName || 'div'
-  var props = {}
-  var start = 0
-  var subvalue
-  var previous
-  var match
+/***/ }),
+
+/***/ "./node_modules/hast-util-parse-selector/lib/index.js":
+/*!************************************************************!*\
+  !*** ./node_modules/hast-util-parse-selector/lib/index.js ***!
+  \************************************************************/
+/*! exports provided: parseSelector */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "parseSelector", function() { return parseSelector; });
+/**
+ * @typedef {import('hast').Element} Element
+ * @typedef {import('hast').Properties} Properties
+ */
+
+/**
+ * @template {string} SimpleSelector
+ *   Selector type.
+ * @template {string} DefaultTagName
+ *   Default tag name.
+ * @typedef {(
+ *   SimpleSelector extends ''
+ *     ? DefaultTagName
+ *     : SimpleSelector extends `${infer TagName}.${infer Rest}`
+ *     ? ExtractTagName<TagName, DefaultTagName>
+ *     : SimpleSelector extends `${infer TagName}#${infer Rest}`
+ *     ? ExtractTagName<TagName, DefaultTagName>
+ *     : SimpleSelector extends string
+ *     ? SimpleSelector
+ *     : DefaultTagName
+ * )} ExtractTagName
+ *   Extract tag name from a simple selector.
+ */
+
+const search = /[#.]/g
+
+/**
+ * Create a hast element from a simple CSS selector.
+ *
+ * @template {string} Selector
+ *   Type of selector.
+ * @template {string} [DefaultTagName='div']
+ *   Type of default tag name (default: `'div'`).
+ * @param {Selector | null | undefined} [selector]
+ *   Simple CSS selector (optional).
+ *
+ *   Can contain a tag name (`foo`), classes (`.bar`), and an ID (`#baz`).
+ *   Multiple classes are allowed.
+ *   Uses the last ID if multiple IDs are found.
+ * @param {DefaultTagName | null | undefined} [defaultTagName='div']
+ *   Tag name to use if `selector` does not specify one (default: `'div'`).
+ * @returns {Element & {tagName: ExtractTagName<Selector, DefaultTagName>}}
+ *   Built element.
+ */
+function parseSelector(selector, defaultTagName) {
+  const value = selector || ''
+  /** @type {Properties} */
+  const props = {}
+  let start = 0
+  /** @type {string | undefined} */
+  let previous
+  /** @type {string | undefined} */
+  let tagName
 
   while (start < value.length) {
     search.lastIndex = start
-    match = search.exec(value)
-    subvalue = value.slice(start, match ? match.index : value.length)
+    const match = search.exec(value)
+    const subvalue = value.slice(start, match ? match.index : value.length)
 
     if (subvalue) {
       if (!previous) {
-        name = subvalue
+        tagName = subvalue
       } else if (previous === '#') {
         props.id = subvalue
-      } else if (props.className) {
+      } else if (Array.isArray(props.className)) {
         props.className.push(subvalue)
       } else {
         props.className = [subvalue]
@@ -135,253 +2551,14 @@ function parse(selector, defaultTagName) {
     }
   }
 
-  return {type: 'element', tagName: name, properties: props, children: []}
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/hastscript/factory.js":
-/*!********************************************!*\
-  !*** ./node_modules/hastscript/factory.js ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var find = __webpack_require__(/*! property-information/find */ "./node_modules/property-information/find.js")
-var normalize = __webpack_require__(/*! property-information/normalize */ "./node_modules/property-information/normalize.js")
-var parseSelector = __webpack_require__(/*! hast-util-parse-selector */ "./node_modules/hast-util-parse-selector/index.js")
-var spaces = __webpack_require__(/*! space-separated-tokens */ "./node_modules/space-separated-tokens/index.js").parse
-var commas = __webpack_require__(/*! comma-separated-tokens */ "./node_modules/comma-separated-tokens/index.js").parse
-
-module.exports = factory
-
-var own = {}.hasOwnProperty
-
-function factory(schema, defaultTagName, caseSensitive) {
-  var adjust = caseSensitive ? createAdjustMap(caseSensitive) : null
-
-  return h
-
-  // Hyperscript compatible DSL for creating virtual hast trees.
-  function h(selector, properties) {
-    var node = parseSelector(selector, defaultTagName)
-    var children = Array.prototype.slice.call(arguments, 2)
-    var name = node.tagName.toLowerCase()
-    var property
-
-    node.tagName = adjust && own.call(adjust, name) ? adjust[name] : name
-
-    if (properties && isChildren(properties, node)) {
-      children.unshift(properties)
-      properties = null
-    }
-
-    if (properties) {
-      for (property in properties) {
-        addProperty(node.properties, property, properties[property])
-      }
-    }
-
-    addChild(node.children, children)
-
-    if (node.tagName === 'template') {
-      node.content = {type: 'root', children: node.children}
-      node.children = []
-    }
-
-    return node
-  }
-
-  function addProperty(properties, key, value) {
-    var info
-    var property
-    var result
-
-    // Ignore nullish and NaN values.
-    if (value === null || value === undefined || value !== value) {
-      return
-    }
-
-    info = find(schema, key)
-    property = info.property
-    result = value
-
-    // Handle list values.
-    if (typeof result === 'string') {
-      if (info.spaceSeparated) {
-        result = spaces(result)
-      } else if (info.commaSeparated) {
-        result = commas(result)
-      } else if (info.commaOrSpaceSeparated) {
-        result = spaces(commas(result).join(' '))
-      }
-    }
-
-    // Accept `object` on style.
-    if (property === 'style' && typeof value !== 'string') {
-      result = style(result)
-    }
-
-    // Class-names (which can be added both on the `selector` and here).
-    if (property === 'className' && properties.className) {
-      result = properties.className.concat(result)
-    }
-
-    properties[property] = parsePrimitives(info, property, result)
+  return {
+    type: 'element',
+    // @ts-expect-error: tag name is parsed.
+    tagName: tagName || defaultTagName || 'div',
+    properties: props,
+    children: []
   }
 }
-
-function isChildren(value, node) {
-  return (
-    typeof value === 'string' ||
-    'length' in value ||
-    isNode(node.tagName, value)
-  )
-}
-
-function isNode(tagName, value) {
-  var type = value.type
-
-  if (tagName === 'input' || !type || typeof type !== 'string') {
-    return false
-  }
-
-  if (typeof value.children === 'object' && 'length' in value.children) {
-    return true
-  }
-
-  type = type.toLowerCase()
-
-  if (tagName === 'button') {
-    return (
-      type !== 'menu' &&
-      type !== 'submit' &&
-      type !== 'reset' &&
-      type !== 'button'
-    )
-  }
-
-  return 'value' in value
-}
-
-function addChild(nodes, value) {
-  var index
-  var length
-
-  if (typeof value === 'string' || typeof value === 'number') {
-    nodes.push({type: 'text', value: String(value)})
-    return
-  }
-
-  if (typeof value === 'object' && 'length' in value) {
-    index = -1
-    length = value.length
-
-    while (++index < length) {
-      addChild(nodes, value[index])
-    }
-
-    return
-  }
-
-  if (typeof value !== 'object' || !('type' in value)) {
-    throw new Error('Expected node, nodes, or string, got `' + value + '`')
-  }
-
-  nodes.push(value)
-}
-
-// Parse a (list of) primitives.
-function parsePrimitives(info, name, value) {
-  var index
-  var length
-  var result
-
-  if (typeof value !== 'object' || !('length' in value)) {
-    return parsePrimitive(info, name, value)
-  }
-
-  length = value.length
-  index = -1
-  result = []
-
-  while (++index < length) {
-    result[index] = parsePrimitive(info, name, value[index])
-  }
-
-  return result
-}
-
-// Parse a single primitives.
-function parsePrimitive(info, name, value) {
-  var result = value
-
-  if (info.number || info.positiveNumber) {
-    if (!isNaN(result) && result !== '') {
-      result = Number(result)
-    }
-  } else if (info.boolean || info.overloadedBoolean) {
-    // Accept `boolean` and `string`.
-    if (
-      typeof result === 'string' &&
-      (result === '' || normalize(value) === normalize(name))
-    ) {
-      result = true
-    }
-  }
-
-  return result
-}
-
-function style(value) {
-  var result = []
-  var key
-
-  for (key in value) {
-    result.push([key, value[key]].join(': '))
-  }
-
-  return result.join('; ')
-}
-
-function createAdjustMap(values) {
-  var length = values.length
-  var index = -1
-  var result = {}
-  var value
-
-  while (++index < length) {
-    value = values[index]
-    result[value.toLowerCase()] = value
-  }
-
-  return result
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/hastscript/html.js":
-/*!*****************************************!*\
-  !*** ./node_modules/hastscript/html.js ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var schema = __webpack_require__(/*! property-information/html */ "./node_modules/property-information/html.js")
-var factory = __webpack_require__(/*! ./factory */ "./node_modules/hastscript/factory.js")
-
-var html = factory(schema, 'div')
-html.displayName = 'html'
-
-module.exports = html
 
 
 /***/ }),
@@ -390,13 +2567,511 @@ module.exports = html
 /*!******************************************!*\
   !*** ./node_modules/hastscript/index.js ***!
   \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: h, s */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _lib_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lib/index.js */ "./node_modules/hastscript/lib/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "h", function() { return _lib_index_js__WEBPACK_IMPORTED_MODULE_0__["h"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "s", function() { return _lib_index_js__WEBPACK_IMPORTED_MODULE_0__["s"]; });
+
+/**
+ * @typedef {import('./lib/create-h.js').Child} Child
+ * @typedef {import('./lib/create-h.js').Properties} Properties
+ * @typedef {import('./lib/create-h.js').Result} Result
+ */
 
 
-module.exports = __webpack_require__(/*! ./html */ "./node_modules/hastscript/html.js")
+
+
+/***/ }),
+
+/***/ "./node_modules/hastscript/lib/create-h.js":
+/*!*************************************************!*\
+  !*** ./node_modules/hastscript/lib/create-h.js ***!
+  \*************************************************/
+/*! exports provided: createH */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createH", function() { return createH; });
+/* harmony import */ var comma_separated_tokens__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! comma-separated-tokens */ "./node_modules/comma-separated-tokens/index.js");
+/* harmony import */ var hast_util_parse_selector__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! hast-util-parse-selector */ "./node_modules/hast-util-parse-selector/index.js");
+/* harmony import */ var property_information__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! property-information */ "./node_modules/property-information/index.js");
+/* harmony import */ var space_separated_tokens__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! space-separated-tokens */ "./node_modules/space-separated-tokens/index.js");
+/**
+ * @import {Element, Nodes, RootContent, Root} from 'hast'
+ * @import {Info, Schema} from 'property-information'
+ */
+
+/**
+ * @typedef {Array<Nodes | PrimitiveChild>} ArrayChildNested
+ *   List of children (deep).
+ */
+
+/**
+ * @typedef {Array<ArrayChildNested | Nodes | PrimitiveChild>} ArrayChild
+ *   List of children.
+ */
+
+/**
+ * @typedef {Array<number | string>} ArrayValue
+ *   List of property values for space- or comma separated values (such as `className`).
+ */
+
+/**
+ * @typedef {ArrayChild | Nodes | PrimitiveChild} Child
+ *   Acceptable child value.
+ */
+
+/**
+ * @typedef {number | string | null | undefined} PrimitiveChild
+ *   Primitive children, either ignored (nullish), or turned into text nodes.
+ */
+
+/**
+ * @typedef {boolean | number | string | null | undefined} PrimitiveValue
+ *   Primitive property value.
+ */
+
+/**
+ * @typedef {Record<string, PropertyValue | Style>} Properties
+ *   Acceptable value for element properties.
+ */
+
+/**
+ * @typedef {ArrayValue | PrimitiveValue} PropertyValue
+ *   Primitive value or list value.
+ */
+
+/**
+ * @typedef {Element | Root} Result
+ *   Result from a `h` (or `s`) call.
+ */
+
+/**
+ * @typedef {number | string} StyleValue
+ *   Value for a CSS style field.
+ */
+
+/**
+ * @typedef {Record<string, StyleValue>} Style
+ *   Supported value of a `style` prop.
+ */
+
+
+
+
+
+
+/**
+ * @param {Schema} schema
+ *   Schema to use.
+ * @param {string} defaultTagName
+ *   Default tag name.
+ * @param {ReadonlyArray<string> | undefined} [caseSensitive]
+ *   Case-sensitive tag names (default: `undefined`).
+ * @returns
+ *   `h`.
+ */
+function createH(schema, defaultTagName, caseSensitive) {
+  const adjust = caseSensitive ? createAdjustMap(caseSensitive) : undefined
+
+  /**
+   * Hyperscript compatible DSL for creating virtual hast trees.
+   *
+   * @overload
+   * @param {null | undefined} [selector]
+   * @param {...Child} children
+   * @returns {Root}
+   *
+   * @overload
+   * @param {string} selector
+   * @param {Properties} properties
+   * @param {...Child} children
+   * @returns {Element}
+   *
+   * @overload
+   * @param {string} selector
+   * @param {...Child} children
+   * @returns {Element}
+   *
+   * @param {string | null | undefined} [selector]
+   *   Selector.
+   * @param {Child | Properties | null | undefined} [properties]
+   *   Properties (or first child) (default: `undefined`).
+   * @param {...Child} children
+   *   Children.
+   * @returns {Result}
+   *   Result.
+   */
+  function h(selector, properties, ...children) {
+    /** @type {Result} */
+    let node
+
+    if (selector === null || selector === undefined) {
+      node = {type: 'root', children: []}
+      // Properties are not supported for roots.
+      const child = /** @type {Child} */ (properties)
+      children.unshift(child)
+    } else {
+      node = Object(hast_util_parse_selector__WEBPACK_IMPORTED_MODULE_1__["parseSelector"])(selector, defaultTagName)
+      // Normalize the name.
+      const lower = node.tagName.toLowerCase()
+      const adjusted = adjust ? adjust.get(lower) : undefined
+      node.tagName = adjusted || lower
+
+      // Handle properties.
+      if (isChild(properties)) {
+        children.unshift(properties)
+      } else {
+        for (const [key, value] of Object.entries(properties)) {
+          addProperty(schema, node.properties, key, value)
+        }
+      }
+    }
+
+    // Handle children.
+    for (const child of children) {
+      addChild(node.children, child)
+    }
+
+    if (node.type === 'element' && node.tagName === 'template') {
+      node.content = {type: 'root', children: node.children}
+      node.children = []
+    }
+
+    return node
+  }
+
+  return h
+}
+
+/**
+ * Check if something is properties or a child.
+ *
+ * @param {Child | Properties} value
+ *   Value to check.
+ * @returns {value is Child}
+ *   Whether `value` is definitely a child.
+ */
+function isChild(value) {
+  // Never properties if not an object.
+  if (value === null || typeof value !== 'object' || Array.isArray(value)) {
+    return true
+  }
+
+  // Never node without `type`; that’s the main discriminator.
+  if (typeof value.type !== 'string') return false
+
+  // Slower check: never property value if object or array with
+  // non-number/strings.
+  const record = /** @type {Record<string, unknown>} */ (value)
+  const keys = Object.keys(value)
+
+  for (const key of keys) {
+    const value = record[key]
+
+    if (value && typeof value === 'object') {
+      if (!Array.isArray(value)) return true
+
+      const list = /** @type {ReadonlyArray<unknown>} */ (value)
+
+      for (const item of list) {
+        if (typeof item !== 'number' && typeof item !== 'string') {
+          return true
+        }
+      }
+    }
+  }
+
+  // Also see empty `children` as a node.
+  if ('children' in value && Array.isArray(value.children)) {
+    return true
+  }
+
+  // Default to properties, someone can always pass an empty object,
+  // put `data: {}` in a node,
+  // or wrap it in an array.
+  return false
+}
+
+/**
+ * @param {Schema} schema
+ *   Schema.
+ * @param {Properties} properties
+ *   Properties object.
+ * @param {string} key
+ *   Property name.
+ * @param {PropertyValue | Style} value
+ *   Property value.
+ * @returns {undefined}
+ *   Nothing.
+ */
+function addProperty(schema, properties, key, value) {
+  const info = Object(property_information__WEBPACK_IMPORTED_MODULE_2__["find"])(schema, key)
+  /** @type {PropertyValue} */
+  let result
+
+  // Ignore nullish and NaN values.
+  if (value === null || value === undefined) return
+
+  if (typeof value === 'number') {
+    // Ignore NaN.
+    if (Number.isNaN(value)) return
+
+    result = value
+  }
+  // Booleans.
+  else if (typeof value === 'boolean') {
+    result = value
+  }
+  // Handle list values.
+  else if (typeof value === 'string') {
+    if (info.spaceSeparated) {
+      result = Object(space_separated_tokens__WEBPACK_IMPORTED_MODULE_3__["parse"])(value)
+    } else if (info.commaSeparated) {
+      result = Object(comma_separated_tokens__WEBPACK_IMPORTED_MODULE_0__["parse"])(value)
+    } else if (info.commaOrSpaceSeparated) {
+      result = Object(space_separated_tokens__WEBPACK_IMPORTED_MODULE_3__["parse"])(Object(comma_separated_tokens__WEBPACK_IMPORTED_MODULE_0__["parse"])(value).join(' '))
+    } else {
+      result = parsePrimitive(info, info.property, value)
+    }
+  } else if (Array.isArray(value)) {
+    result = [...value]
+  } else {
+    result = info.property === 'style' ? style(value) : String(value)
+  }
+
+  if (Array.isArray(result)) {
+    /** @type {Array<number | string>} */
+    const finalResult = []
+
+    for (const item of result) {
+      // Assume no booleans in array.
+      finalResult.push(
+        /** @type {number | string} */ (
+          parsePrimitive(info, info.property, item)
+        )
+      )
+    }
+
+    result = finalResult
+  }
+
+  // Class names (which can be added both on the `selector` and here).
+  if (info.property === 'className' && Array.isArray(properties.className)) {
+    // Assume no booleans in `className`.
+    result = properties.className.concat(
+      /** @type {Array<number | string> | number | string} */ (result)
+    )
+  }
+
+  properties[info.property] = result
+}
+
+/**
+ * @param {Array<RootContent>} nodes
+ *   Children.
+ * @param {Child} value
+ *   Child.
+ * @returns {undefined}
+ *   Nothing.
+ */
+function addChild(nodes, value) {
+  if (value === null || value === undefined) {
+    // Empty.
+  } else if (typeof value === 'number' || typeof value === 'string') {
+    nodes.push({type: 'text', value: String(value)})
+  } else if (Array.isArray(value)) {
+    for (const child of value) {
+      addChild(nodes, child)
+    }
+  } else if (typeof value === 'object' && 'type' in value) {
+    if (value.type === 'root') {
+      addChild(nodes, value.children)
+    } else {
+      nodes.push(value)
+    }
+  } else {
+    throw new Error('Expected node, nodes, or string, got `' + value + '`')
+  }
+}
+
+/**
+ * Parse a single primitives.
+ *
+ * @param {Info} info
+ *   Property information.
+ * @param {string} name
+ *   Property name.
+ * @param {PrimitiveValue} value
+ *   Property value.
+ * @returns {PrimitiveValue}
+ *   Property value.
+ */
+function parsePrimitive(info, name, value) {
+  if (typeof value === 'string') {
+    if (info.number && value && !Number.isNaN(Number(value))) {
+      return Number(value)
+    }
+
+    if (
+      (info.boolean || info.overloadedBoolean) &&
+      (value === '' || Object(property_information__WEBPACK_IMPORTED_MODULE_2__["normalize"])(value) === Object(property_information__WEBPACK_IMPORTED_MODULE_2__["normalize"])(name))
+    ) {
+      return true
+    }
+  }
+
+  return value
+}
+
+/**
+ * Serialize a `style` object as a string.
+ *
+ * @param {Style} styles
+ *   Style object.
+ * @returns {string}
+ *   CSS string.
+ */
+function style(styles) {
+  /** @type {Array<string>} */
+  const result = []
+
+  for (const [key, value] of Object.entries(styles)) {
+    result.push([key, value].join(': '))
+  }
+
+  return result.join('; ')
+}
+
+/**
+ * Create a map to adjust casing.
+ *
+ * @param {ReadonlyArray<string>} values
+ *   List of properly cased keys.
+ * @returns {Map<string, string>}
+ *   Map of lowercase keys to uppercase keys.
+ */
+function createAdjustMap(values) {
+  /** @type {Map<string, string>} */
+  const result = new Map()
+
+  for (const value of values) {
+    result.set(value.toLowerCase(), value)
+  }
+
+  return result
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/hastscript/lib/index.js":
+/*!**********************************************!*\
+  !*** ./node_modules/hastscript/lib/index.js ***!
+  \**********************************************/
+/*! exports provided: h, s */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return h; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "s", function() { return s; });
+/* harmony import */ var property_information__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! property-information */ "./node_modules/property-information/index.js");
+/* harmony import */ var _create_h_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./create-h.js */ "./node_modules/hastscript/lib/create-h.js");
+/* harmony import */ var _svg_case_sensitive_tag_names_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./svg-case-sensitive-tag-names.js */ "./node_modules/hastscript/lib/svg-case-sensitive-tag-names.js");
+// Register the JSX namespace on `h`.
+/**
+ * @typedef {import('./jsx-classic.js').Element} h.JSX.Element
+ * @typedef {import('./jsx-classic.js').ElementChildrenAttribute} h.JSX.ElementChildrenAttribute
+ * @typedef {import('./jsx-classic.js').IntrinsicAttributes} h.JSX.IntrinsicAttributes
+ * @typedef {import('./jsx-classic.js').IntrinsicElements} h.JSX.IntrinsicElements
+ */
+
+// Register the JSX namespace on `s`.
+/**
+ * @typedef {import('./jsx-classic.js').Element} s.JSX.Element
+ * @typedef {import('./jsx-classic.js').ElementChildrenAttribute} s.JSX.ElementChildrenAttribute
+ * @typedef {import('./jsx-classic.js').IntrinsicAttributes} s.JSX.IntrinsicAttributes
+ * @typedef {import('./jsx-classic.js').IntrinsicElements} s.JSX.IntrinsicElements
+ */
+
+
+
+
+
+// Note: this explicit type is needed, otherwise TS creates broken types.
+/** @type {ReturnType<createH>} */
+const h = Object(_create_h_js__WEBPACK_IMPORTED_MODULE_1__["createH"])(property_information__WEBPACK_IMPORTED_MODULE_0__["html"], 'div')
+
+// Note: this explicit type is needed, otherwise TS creates broken types.
+/** @type {ReturnType<createH>} */
+const s = Object(_create_h_js__WEBPACK_IMPORTED_MODULE_1__["createH"])(property_information__WEBPACK_IMPORTED_MODULE_0__["svg"], 'g', _svg_case_sensitive_tag_names_js__WEBPACK_IMPORTED_MODULE_2__["svgCaseSensitiveTagNames"])
+
+
+/***/ }),
+
+/***/ "./node_modules/hastscript/lib/svg-case-sensitive-tag-names.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/hastscript/lib/svg-case-sensitive-tag-names.js ***!
+  \*********************************************************************/
+/*! exports provided: svgCaseSensitiveTagNames */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "svgCaseSensitiveTagNames", function() { return svgCaseSensitiveTagNames; });
+/**
+ * List of case-sensitive SVG tag names.
+ *
+ * @type {ReadonlyArray<string>}
+ */
+const svgCaseSensitiveTagNames = [
+  'altGlyph',
+  'altGlyphDef',
+  'altGlyphItem',
+  'animateColor',
+  'animateMotion',
+  'animateTransform',
+  'clipPath',
+  'feBlend',
+  'feColorMatrix',
+  'feComponentTransfer',
+  'feComposite',
+  'feConvolveMatrix',
+  'feDiffuseLighting',
+  'feDisplacementMap',
+  'feDistantLight',
+  'feDropShadow',
+  'feFlood',
+  'feFuncA',
+  'feFuncB',
+  'feFuncG',
+  'feFuncR',
+  'feGaussianBlur',
+  'feImage',
+  'feMerge',
+  'feMergeNode',
+  'feMorphology',
+  'feOffset',
+  'fePointLight',
+  'feSpecularLighting',
+  'feSpotLight',
+  'feTile',
+  'feTurbulence',
+  'foreignObject',
+  'glyphRef',
+  'linearGradient',
+  'radialGradient',
+  'solidColor',
+  'textArea',
+  'textPath'
+]
 
 
 /***/ }),
@@ -405,18 +3080,22 @@ module.exports = __webpack_require__(/*! ./html */ "./node_modules/hastscript/ht
 /*!***********************************************!*\
   !*** ./node_modules/is-alphabetical/index.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: isAlphabetical */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = alphabetical
-
-// Check if the given character code, or the character code at the first
-// character, is alphabetical.
-function alphabetical(character) {
-  var code = typeof character === 'string' ? character.charCodeAt(0) : character
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isAlphabetical", function() { return isAlphabetical; });
+/**
+ * Check if the given character code, or the character code at the first
+ * character, is alphabetical.
+ *
+ * @param {string|number} character
+ * @returns {boolean} Whether `character` is alphabetical.
+ */
+function isAlphabetical(character) {
+  const code =
+    typeof character === 'string' ? character.charCodeAt(0) : character
 
   return (
     (code >= 97 && code <= 122) /* a-z */ ||
@@ -431,21 +3110,26 @@ function alphabetical(character) {
 /*!*************************************************!*\
   !*** ./node_modules/is-alphanumerical/index.js ***!
   \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: isAlphanumerical */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isAlphanumerical", function() { return isAlphanumerical; });
+/* harmony import */ var is_alphabetical__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! is-alphabetical */ "./node_modules/is-alphabetical/index.js");
+/* harmony import */ var is_decimal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! is-decimal */ "./node_modules/is-decimal/index.js");
 
 
-var alphabetical = __webpack_require__(/*! is-alphabetical */ "./node_modules/is-alphabetical/index.js")
-var decimal = __webpack_require__(/*! is-decimal */ "./node_modules/is-decimal/index.js")
 
-module.exports = alphanumerical
-
-// Check if the given character code, or the character code at the first
-// character, is alphanumerical.
-function alphanumerical(character) {
-  return alphabetical(character) || decimal(character)
+/**
+ * Check if the given character code, or the character code at the first
+ * character, is alphanumerical.
+ *
+ * @param {string|number} character
+ * @returns {boolean} Whether `character` is alphanumerical.
+ */
+function isAlphanumerical(character) {
+  return Object(is_alphabetical__WEBPACK_IMPORTED_MODULE_0__["isAlphabetical"])(character) || Object(is_decimal__WEBPACK_IMPORTED_MODULE_1__["isDecimal"])(character)
 }
 
 
@@ -455,18 +3139,22 @@ function alphanumerical(character) {
 /*!******************************************!*\
   !*** ./node_modules/is-decimal/index.js ***!
   \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: isDecimal */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = decimal
-
-// Check if the given character code, or the character code at the first
-// character, is decimal.
-function decimal(character) {
-  var code = typeof character === 'string' ? character.charCodeAt(0) : character
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isDecimal", function() { return isDecimal; });
+/**
+ * Check if the given character code, or the character code at the first
+ * character, is decimal.
+ *
+ * @param {string|number} character
+ * @returns {boolean} Whether `character` is a decimal
+ */
+function isDecimal(character) {
+  const code =
+    typeof character === 'string' ? character.charCodeAt(0) : character
 
   return code >= 48 && code <= 57 /* 0-9 */
 }
@@ -478,18 +3166,22 @@ function decimal(character) {
 /*!**********************************************!*\
   !*** ./node_modules/is-hexadecimal/index.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: isHexadecimal */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = hexadecimal
-
-// Check if the given character code, or the character code at the first
-// character, is hexadecimal.
-function hexadecimal(character) {
-  var code = typeof character === 'string' ? character.charCodeAt(0) : character
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isHexadecimal", function() { return isHexadecimal; });
+/**
+ * Check if the given character code, or the character code at the first
+ * character, is hexadecimal.
+ *
+ * @param {string|number} character
+ * @returns {boolean} Whether `character` is hexadecimal
+ */
+function isHexadecimal(character) {
+  const code =
+    typeof character === 'string' ? character.charCodeAt(0) : character
 
   return (
     (code >= 97 /* a */ && code <= 102) /* z */ ||
@@ -501,351 +3193,259 @@ function hexadecimal(character) {
 
 /***/ }),
 
-/***/ "./node_modules/parse-entities/decode-entity.browser.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/parse-entities/decode-entity.browser.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/* eslint-env browser */
-
-var el
-
-var semicolon = 59 //  ';'
-
-module.exports = decodeEntity
-
-function decodeEntity(characters) {
-  var entity = '&' + characters + ';'
-  var char
-
-  el = el || document.createElement('i')
-  el.innerHTML = entity
-  char = el.textContent
-
-  // Some entities do not require the closing semicolon (`&not` - for instance),
-  // which leads to situations where parsing the assumed entity of &notit; will
-  // result in the string `¬it;`.  When we encounter a trailing semicolon after
-  // parsing and the entity to decode was not a semicolon (`&semi;`), we can
-  // assume that the matching was incomplete
-  if (char.charCodeAt(char.length - 1) === semicolon && characters !== 'semi') {
-    return false
-  }
-
-  // If the decoded string is equal to the input, the entity was not valid
-  return char === entity ? false : char
-}
-
-
-/***/ }),
-
 /***/ "./node_modules/parse-entities/index.js":
 /*!**********************************************!*\
   !*** ./node_modules/parse-entities/index.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: parseEntities */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _lib_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lib/index.js */ "./node_modules/parse-entities/lib/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "parseEntities", function() { return _lib_index_js__WEBPACK_IMPORTED_MODULE_0__["parseEntities"]; });
+
+// Note: more types exposed from `index.d.ts`.
+// To do: refactor to include type parameters in JS.
 
 
-var legacy = __webpack_require__(/*! character-entities-legacy */ "./node_modules/character-entities-legacy/index.json")
-var invalid = __webpack_require__(/*! character-reference-invalid */ "./node_modules/character-reference-invalid/index.json")
-var decimal = __webpack_require__(/*! is-decimal */ "./node_modules/is-decimal/index.js")
-var hexadecimal = __webpack_require__(/*! is-hexadecimal */ "./node_modules/is-hexadecimal/index.js")
-var alphanumerical = __webpack_require__(/*! is-alphanumerical */ "./node_modules/is-alphanumerical/index.js")
-var decodeEntity = __webpack_require__(/*! ./decode-entity */ "./node_modules/parse-entities/decode-entity.browser.js")
 
-module.exports = parseEntities
+/***/ }),
 
-var own = {}.hasOwnProperty
-var fromCharCode = String.fromCharCode
-var noop = Function.prototype
+/***/ "./node_modules/parse-entities/lib/index.js":
+/*!**************************************************!*\
+  !*** ./node_modules/parse-entities/lib/index.js ***!
+  \**************************************************/
+/*! exports provided: parseEntities */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-// Default settings.
-var defaults = {
-  warning: null,
-  reference: null,
-  text: null,
-  warningContext: null,
-  referenceContext: null,
-  textContext: null,
-  position: {},
-  additional: null,
-  attribute: false,
-  nonTerminated: true
-}
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "parseEntities", function() { return parseEntities; });
+/* harmony import */ var character_entities_legacy__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! character-entities-legacy */ "./node_modules/character-entities-legacy/index.js");
+/* harmony import */ var character_reference_invalid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! character-reference-invalid */ "./node_modules/character-reference-invalid/index.js");
+/* harmony import */ var is_decimal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! is-decimal */ "./node_modules/is-decimal/index.js");
+/* harmony import */ var is_hexadecimal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! is-hexadecimal */ "./node_modules/is-hexadecimal/index.js");
+/* harmony import */ var is_alphanumerical__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! is-alphanumerical */ "./node_modules/is-alphanumerical/index.js");
+/* harmony import */ var decode_named_character_reference__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! decode-named-character-reference */ "./node_modules/decode-named-character-reference/index.js");
+/**
+ * @import {Point} from 'unist'
+ * @import {Options} from '../index.js'
+ */
 
-// Characters.
-var tab = 9 // '\t'
-var lineFeed = 10 // '\n'
-var formFeed = 12 // '\f'
-var space = 32 // ' '
-var ampersand = 38 // '&'
-var semicolon = 59 // ';'
-var lessThan = 60 // '<'
-var equalsTo = 61 // '='
-var numberSign = 35 // '#'
-var uppercaseX = 88 // 'X'
-var lowercaseX = 120 // 'x'
-var replacementCharacter = 65533 // '�'
 
-// Reference types.
-var name = 'named'
-var hexa = 'hexadecimal'
-var deci = 'decimal'
 
-// Map of bases.
-var bases = {}
 
-bases[hexa] = 16
-bases[deci] = 10
 
-// Map of types to tests.
-// Each type of character reference accepts different characters.
-// This test is used to detect whether a reference has ended (as the semicolon
-// is not strictly needed).
-var tests = {}
 
-tests[name] = alphanumerical
-tests[deci] = decimal
-tests[hexa] = hexadecimal
 
-// Warning types.
-var namedNotTerminated = 1
-var numericNotTerminated = 2
-var namedEmpty = 3
-var numericEmpty = 4
-var namedUnknown = 5
-var numericDisallowed = 6
-var numericProhibited = 7
 
 // Warning messages.
-var messages = {}
-
-messages[namedNotTerminated] =
-  'Named character references must be terminated by a semicolon'
-messages[numericNotTerminated] =
-  'Numeric character references must be terminated by a semicolon'
-messages[namedEmpty] = 'Named character references cannot be empty'
-messages[numericEmpty] = 'Numeric character references cannot be empty'
-messages[namedUnknown] = 'Named character references must be known'
-messages[numericDisallowed] =
-  'Numeric character references cannot be disallowed'
-messages[numericProhibited] =
+const messages = [
+  '',
+  /* 1: Non terminated (named) */
+  'Named character references must be terminated by a semicolon',
+  /* 2: Non terminated (numeric) */
+  'Numeric character references must be terminated by a semicolon',
+  /* 3: Empty (named) */
+  'Named character references cannot be empty',
+  /* 4: Empty (numeric) */
+  'Numeric character references cannot be empty',
+  /* 5: Unknown (named) */
+  'Named character references must be known',
+  /* 6: Disallowed (numeric) */
+  'Numeric character references cannot be disallowed',
+  /* 7: Prohibited (numeric) */
   'Numeric character references cannot be outside the permissible Unicode range'
+]
 
-// Wrap to ensure clean parameters are given to `parse`.
+/**
+ * Parse HTML character references.
+ *
+ * @param {string} value
+ * @param {Readonly<Options> | null | undefined} [options]
+ */
 function parseEntities(value, options) {
-  var settings = {}
-  var option
-  var key
+  const settings = options || {}
+  const additional =
+    typeof settings.additional === 'string'
+      ? settings.additional.charCodeAt(0)
+      : settings.additional
+  /** @type {Array<string>} */
+  const result = []
+  let index = 0
+  let lines = -1
+  let queue = ''
+  /** @type {Point | undefined} */
+  let point
+  /** @type {Array<number>|undefined} */
+  let indent
 
-  if (!options) {
-    options = {}
+  if (settings.position) {
+    if ('start' in settings.position || 'indent' in settings.position) {
+      // @ts-expect-error: points don’t have indent.
+      indent = settings.position.indent
+      // @ts-expect-error: points don’t have indent.
+      point = settings.position.start
+    } else {
+      point = settings.position
+    }
   }
 
-  for (key in defaults) {
-    option = options[key]
-    settings[key] =
-      option === null || option === undefined ? defaults[key] : option
-  }
-
-  if (settings.position.indent || settings.position.start) {
-    settings.indent = settings.position.indent || []
-    settings.position = settings.position.start
-  }
-
-  return parse(value, settings)
-}
-
-// Parse entities.
-// eslint-disable-next-line complexity
-function parse(value, settings) {
-  var additional = settings.additional
-  var nonTerminated = settings.nonTerminated
-  var handleText = settings.text
-  var handleReference = settings.reference
-  var handleWarning = settings.warning
-  var textContext = settings.textContext
-  var referenceContext = settings.referenceContext
-  var warningContext = settings.warningContext
-  var pos = settings.position
-  var indent = settings.indent || []
-  var length = value.length
-  var index = 0
-  var lines = -1
-  var column = pos.column || 1
-  var line = pos.line || 1
-  var queue = ''
-  var result = []
-  var entityCharacters
-  var namedEntity
-  var terminated
-  var characters
-  var character
-  var reference
-  var following
-  var warning
-  var reason
-  var output
-  var entity
-  var begin
-  var start
-  var type
-  var test
-  var prev
-  var next
-  var diff
-  var end
-
-  if (typeof additional === 'string') {
-    additional = additional.charCodeAt(0)
-  }
+  let line = (point ? point.line : 0) || 1
+  let column = (point ? point.column : 0) || 1
 
   // Cache the current point.
-  prev = now()
+  let previous = now()
+  /** @type {number|undefined} */
+  let character
 
-  // Wrap `handleWarning`.
-  warning = handleWarning ? parseError : noop
-
-  // Ensure the algorithm walks over the first character and the end
-  // (inclusive).
+  // Ensure the algorithm walks over the first character (inclusive).
   index--
-  length++
 
-  while (++index < length) {
+  while (++index <= value.length) {
     // If the previous character was a newline.
-    if (character === lineFeed) {
-      column = indent[lines] || 1
+    if (character === 10 /* `\n` */) {
+      column = (indent ? indent[lines] : 0) || 1
     }
 
     character = value.charCodeAt(index)
 
-    if (character === ampersand) {
-      following = value.charCodeAt(index + 1)
+    if (character === 38 /* `&` */) {
+      const following = value.charCodeAt(index + 1)
 
-      // The behaviour depends on the identity of the next character.
+      // The behavior depends on the identity of the next character.
       if (
-        following === tab ||
-        following === lineFeed ||
-        following === formFeed ||
-        following === space ||
-        following === ampersand ||
-        following === lessThan ||
-        following !== following ||
+        following === 9 /* `\t` */ ||
+        following === 10 /* `\n` */ ||
+        following === 12 /* `\f` */ ||
+        following === 32 /* ` ` */ ||
+        following === 38 /* `&` */ ||
+        following === 60 /* `<` */ ||
+        Number.isNaN(following) ||
         (additional && following === additional)
       ) {
         // Not a character reference.
         // No characters are consumed, and nothing is returned.
         // This is not an error, either.
-        queue += fromCharCode(character)
+        queue += String.fromCharCode(character)
         column++
-
         continue
       }
 
-      start = index + 1
-      begin = start
-      end = start
+      const start = index + 1
+      let begin = start
+      let end = start
+      /** @type {string} */
+      let type
 
-      if (following === numberSign) {
-        // Numerical entity.
+      if (following === 35 /* `#` */) {
+        // Numerical reference.
         end = ++begin
 
-        // The behaviour further depends on the next character.
-        following = value.charCodeAt(end)
+        // The behavior further depends on the next character.
+        const following = value.charCodeAt(end)
 
-        if (following === uppercaseX || following === lowercaseX) {
-          // ASCII hex digits.
-          type = hexa
+        if (following === 88 /* `X` */ || following === 120 /* `x` */) {
+          // ASCII hexadecimal digits.
+          type = 'hexadecimal'
           end = ++begin
         } else {
-          // ASCII digits.
-          type = deci
+          // ASCII decimal digits.
+          type = 'decimal'
         }
       } else {
-        // Named entity.
-        type = name
+        // Named reference.
+        type = 'named'
       }
 
-      entityCharacters = ''
-      entity = ''
-      characters = ''
-      test = tests[type]
+      let characterReferenceCharacters = ''
+      let characterReference = ''
+      let characters = ''
+      // Each type of character reference accepts different characters.
+      // This test is used to detect whether a reference has ended (as the semicolon
+      // is not strictly needed).
+      const test =
+        type === 'named'
+          ? is_alphanumerical__WEBPACK_IMPORTED_MODULE_4__["isAlphanumerical"]
+          : type === 'decimal'
+            ? is_decimal__WEBPACK_IMPORTED_MODULE_2__["isDecimal"]
+            : is_hexadecimal__WEBPACK_IMPORTED_MODULE_3__["isHexadecimal"]
+
       end--
 
-      while (++end < length) {
-        following = value.charCodeAt(end)
+      while (++end <= value.length) {
+        const following = value.charCodeAt(end)
 
         if (!test(following)) {
           break
         }
 
-        characters += fromCharCode(following)
+        characters += String.fromCharCode(following)
 
         // Check if we can match a legacy named reference.
         // If so, we cache that as the last viable named reference.
         // This ensures we do not need to walk backwards later.
-        if (type === name && own.call(legacy, characters)) {
-          entityCharacters = characters
-          entity = legacy[characters]
+        if (type === 'named' && character_entities_legacy__WEBPACK_IMPORTED_MODULE_0__["characterEntitiesLegacy"].includes(characters)) {
+          characterReferenceCharacters = characters
+          // @ts-expect-error: always able to decode.
+          characterReference = Object(decode_named_character_reference__WEBPACK_IMPORTED_MODULE_5__["decodeNamedCharacterReference"])(characters)
         }
       }
 
-      terminated = value.charCodeAt(end) === semicolon
+      let terminated = value.charCodeAt(end) === 59 /* `;` */
 
       if (terminated) {
         end++
 
-        namedEntity = type === name ? decodeEntity(characters) : false
+        const namedReference =
+          type === 'named' ? Object(decode_named_character_reference__WEBPACK_IMPORTED_MODULE_5__["decodeNamedCharacterReference"])(characters) : false
 
-        if (namedEntity) {
-          entityCharacters = characters
-          entity = namedEntity
+        if (namedReference) {
+          characterReferenceCharacters = characters
+          characterReference = namedReference
         }
       }
 
-      diff = 1 + end - start
+      let diff = 1 + end - start
+      let reference = ''
 
-      if (!terminated && !nonTerminated) {
+      if (!terminated && settings.nonTerminated === false) {
         // Empty.
       } else if (!characters) {
-        // An empty (possible) entity is valid, unless it’s numeric (thus an
+        // An empty (possible) reference is valid, unless it’s numeric (thus an
         // ampersand followed by an octothorp).
-        if (type !== name) {
-          warning(numericEmpty, diff)
+        if (type !== 'named') {
+          warning(4 /* Empty (numeric) */, diff)
         }
-      } else if (type === name) {
+      } else if (type === 'named') {
         // An ampersand followed by anything unknown, and not terminated, is
         // invalid.
-        if (terminated && !entity) {
-          warning(namedUnknown, 1)
+        if (terminated && !characterReference) {
+          warning(5 /* Unknown (named) */, 1)
         } else {
-          // If theres something after an entity name which is not known, cap
-          // the reference.
-          if (entityCharacters !== characters) {
-            end = begin + entityCharacters.length
+          // If there’s something after an named reference which is not known,
+          // cap the reference.
+          if (characterReferenceCharacters !== characters) {
+            end = begin + characterReferenceCharacters.length
             diff = 1 + end - begin
             terminated = false
           }
 
           // If the reference is not terminated, warn.
           if (!terminated) {
-            reason = entityCharacters ? namedNotTerminated : namedEmpty
+            const reason = characterReferenceCharacters
+              ? 1 /* Non terminated (named) */
+              : 3 /* Empty (named) */
 
             if (settings.attribute) {
-              following = value.charCodeAt(end)
+              const following = value.charCodeAt(end)
 
-              if (following === equalsTo) {
+              if (following === 61 /* `=` */) {
                 warning(reason, diff)
-                entity = null
-              } else if (alphanumerical(following)) {
-                entity = null
+                characterReference = ''
+              } else if (Object(is_alphanumerical__WEBPACK_IMPORTED_MODULE_4__["isAlphanumerical"])(following)) {
+                characterReference = ''
               } else {
                 warning(reason, diff)
               }
@@ -855,69 +3455,75 @@ function parse(value, settings) {
           }
         }
 
-        reference = entity
+        reference = characterReference
       } else {
         if (!terminated) {
-          // All non-terminated numeric entities are not rendered, and trigger a
+          // All nonterminated numeric references are not rendered, and emit a
           // warning.
-          warning(numericNotTerminated, diff)
+          warning(2 /* Non terminated (numeric) */, diff)
         }
 
-        // When terminated and number, parse as either hexadecimal or decimal.
-        reference = parseInt(characters, bases[type])
+        // When terminated and numerical, parse as either hexadecimal or
+        // decimal.
+        let referenceCode = Number.parseInt(
+          characters,
+          type === 'hexadecimal' ? 16 : 10
+        )
 
-        // Trigger a warning when the parsed number is prohibited, and replace
-        // with replacement character.
-        if (prohibited(reference)) {
-          warning(numericProhibited, diff)
-          reference = fromCharCode(replacementCharacter)
-        } else if (reference in invalid) {
-          // Trigger a warning when the parsed number is disallowed, and replace
-          // by an alternative.
-          warning(numericDisallowed, diff)
-          reference = invalid[reference]
+        // Emit a warning when the parsed number is prohibited, and replace with
+        // replacement character.
+        if (prohibited(referenceCode)) {
+          warning(7 /* Prohibited (numeric) */, diff)
+          reference = String.fromCharCode(65533 /* `�` */)
+        } else if (referenceCode in character_reference_invalid__WEBPACK_IMPORTED_MODULE_1__["characterReferenceInvalid"]) {
+          // Emit a warning when the parsed number is disallowed, and replace by
+          // an alternative.
+          warning(6 /* Disallowed (numeric) */, diff)
+          reference = character_reference_invalid__WEBPACK_IMPORTED_MODULE_1__["characterReferenceInvalid"][referenceCode]
         } else {
           // Parse the number.
-          output = ''
+          let output = ''
 
-          // Trigger a warning when the parsed number should not be used.
-          if (disallowed(reference)) {
-            warning(numericDisallowed, diff)
+          // Emit a warning when the parsed number should not be used.
+          if (disallowed(referenceCode)) {
+            warning(6 /* Disallowed (numeric) */, diff)
           }
 
-          // Stringify the number.
-          if (reference > 0xffff) {
-            reference -= 0x10000
-            output += fromCharCode((reference >>> (10 & 0x3ff)) | 0xd800)
-            reference = 0xdc00 | (reference & 0x3ff)
+          // Serialize the number.
+          if (referenceCode > 0xffff) {
+            referenceCode -= 0x10000
+            output += String.fromCharCode(
+              (referenceCode >>> (10 & 0x3ff)) | 0xd800
+            )
+            referenceCode = 0xdc00 | (referenceCode & 0x3ff)
           }
 
-          reference = output + fromCharCode(reference)
+          reference = output + String.fromCharCode(referenceCode)
         }
       }
 
       // Found it!
-      // First eat the queued characters as normal text, then eat an entity.
+      // First eat the queued characters as normal text, then eat a reference.
       if (reference) {
         flush()
 
-        prev = now()
+        previous = now()
         index = end - 1
         column += end - start + 1
         result.push(reference)
-        next = now()
+        const next = now()
         next.offset++
 
-        if (handleReference) {
-          handleReference.call(
-            referenceContext,
+        if (settings.reference) {
+          settings.reference.call(
+            settings.referenceContext || undefined,
             reference,
-            {start: prev, end: next},
+            {start: previous, end: next},
             value.slice(start - 1, end)
           )
         }
 
-        prev = next
+        previous = next
       } else {
         // If we could not find a reference, queue the checked characters (as
         // normal characters), and move the pointer to their end.
@@ -930,19 +3536,17 @@ function parse(value, settings) {
       }
     } else {
       // Handle anything other than an ampersand, including newlines and EOF.
-      if (
-        character === 10 // Line feed
-      ) {
+      if (character === 10 /* `\n` */) {
         line++
         lines++
         column = 0
       }
 
-      if (character === character) {
-        queue += fromCharCode(character)
-        column++
-      } else {
+      if (Number.isNaN(character)) {
         flush()
+      } else {
+        queue += String.fromCharCode(character)
+        column++
       }
     }
   }
@@ -953,31 +3557,50 @@ function parse(value, settings) {
   // Get current position.
   function now() {
     return {
-      line: line,
-      column: column,
-      offset: index + (pos.offset || 0)
+      line,
+      column,
+      offset: index + ((point ? point.offset : 0) || 0)
     }
   }
 
-  // “Throw” a parse-error: a warning.
-  function parseError(code, offset) {
-    var position = now()
+  /**
+   * Handle the warning.
+   *
+   * @param {1|2|3|4|5|6|7} code
+   * @param {number} offset
+   */
+  function warning(code, offset) {
+    /** @type {ReturnType<now>} */
+    let position
 
-    position.column += offset
-    position.offset += offset
+    if (settings.warning) {
+      position = now()
+      position.column += offset
+      position.offset += offset
 
-    handleWarning.call(warningContext, messages[code], position, code)
+      settings.warning.call(
+        settings.warningContext || undefined,
+        messages[code],
+        position,
+        code
+      )
+    }
   }
 
-  // Flush `queue` (normal text).
-  // Macro invoked before each entity and at the end of `value`.
-  // Does nothing when `queue` is empty.
+  /**
+   * Flush `queue` (normal text).
+   * Macro invoked before each reference and at the end of `value`.
+   * Does nothing when `queue` is empty.
+   */
   function flush() {
     if (queue) {
       result.push(queue)
 
-      if (handleText) {
-        handleText.call(textContext, queue, {start: prev, end: now()})
+      if (settings.text) {
+        settings.text.call(settings.textContext || undefined, queue, {
+          start: previous,
+          end: now()
+        })
       }
 
       queue = ''
@@ -985,12 +3608,22 @@ function parse(value, settings) {
   }
 }
 
-// Check if `character` is outside the permissible unicode range.
+/**
+ * Check if `character` is outside the permissible unicode range.
+ *
+ * @param {number} code
+ * @returns {boolean}
+ */
 function prohibited(code) {
   return (code >= 0xd800 && code <= 0xdfff) || code > 0x10ffff
 }
 
-// Check if `character` is disallowed.
+/**
+ * Check if `character` is disallowed.
+ *
+ * @param {number} code
+ * @returns {boolean}
+ */
 function disallowed(code) {
   return (
     (code >= 0x0001 && code <= 0x0008) ||
@@ -1010,8 +3643,8 @@ function disallowed(code) {
 /*!*******************************************************!*\
   !*** ./node_modules/prismjs/components/prism-core.js ***!
   \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: aria */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/// <reference lib="WebWorker"/>
 
@@ -2223,59 +4856,342 @@ if ( true && module.exports) {
 	module.exports = Prism;
 }
 
-// hack for components to work correctly in node.js
-if (typeof global !== 'undefined') {
-	global.Prism = Prism;
+// Typescript note:
+// The following can be used to import the Token type in JSDoc:
+//
+//   @typedef {InstanceType<import("./prism-core")["Token"]>} Token
+
+/**
+ * Creates a new token.
+ *
+ * @param {string} type See {@link Token#type type}
+ * @param {string | TokenStream} content See {@link Token#content content}
+ * @param {string|string[]} [alias] The alias(es) of the token.
+ * @param {string} [matchedStr=""] A copy of the full string this token was created from.
+ * @class
+ * @global
+ * @public
+ */
+function Token(type, content, alias, matchedStr) {
+  /**
+   * The type of the token.
+   *
+   * This is usually the key of a pattern in a {@link Grammar}.
+   *
+   * @type {string}
+   * @see GrammarToken
+   * @public
+   */
+  this.type = type
+  /**
+   * The strings or tokens contained by this token.
+   *
+   * This will be a token stream if the pattern matched also defined an `inside` grammar.
+   *
+   * @type {string | TokenStream}
+   * @public
+   */
+  this.content = content
+  /**
+   * The alias(es) of the token.
+   *
+   * @type {string|string[]}
+   * @see GrammarToken
+   * @public
+   */
+  this.alias = alias
+  // Copy of the full string this token was created from
+  this.length = (matchedStr || '').length | 0
 }
 
-// some additional documentation/types
-
 /**
- * The expansion of a simple `RegExp` literal to support additional properties.
+ * A token stream is an array of strings and {@link Token Token} objects.
  *
- * @typedef GrammarToken
- * @property {RegExp} pattern The regular expression of the token.
- * @property {boolean} [lookbehind=false] If `true`, then the first capturing group of `pattern` will (effectively)
- * behave as a lookbehind group meaning that the captured text will not be part of the matched text of the new token.
- * @property {boolean} [greedy=false] Whether the token is greedy.
- * @property {string|string[]} [alias] An optional alias or list of aliases.
- * @property {Grammar} [inside] The nested grammar of this token.
+ * Token streams have to fulfill a few properties that are assumed by most functions (mostly internal ones) that process
+ * them.
  *
- * The `inside` grammar will be used to tokenize the text value of each token of this kind.
+ * 1. No adjacent strings.
+ * 2. No empty strings.
  *
- * This can be used to make nested and even recursive language definitions.
+ *    The only exception here is the token stream that only contains the empty string and nothing else.
  *
- * Note: This can cause infinite recursion. Be careful when you embed different languages or even the same language into
- * each another.
+ * @typedef {Array<string | Token>} TokenStream
  * @global
  * @public
  */
 
 /**
- * @typedef Grammar
- * @type {Object<string, RegExp | GrammarToken | Array<RegExp | GrammarToken>>}
- * @property {Grammar} [rest] An optional grammar object that will be appended to this grammar.
- * @global
- * @public
+ * @param {RegExp} pattern
+ * @param {number} pos
+ * @param {string} text
+ * @param {boolean} lookbehind
+ * @returns {RegExpExecArray | null}
  */
+function matchPattern(pattern, pos, text, lookbehind) {
+  pattern.lastIndex = pos
+  var match = pattern.exec(text)
+  if (match && lookbehind && match[1]) {
+    // change the match to remove the text matched by the Prism lookbehind group
+    var lookbehindLength = match[1].length
+    match.index += lookbehindLength
+    match[0] = match[0].slice(lookbehindLength)
+  }
+  return match
+}
 
 /**
- * A function which will invoked after an element was successfully highlighted.
- *
- * @callback HighlightCallback
- * @param {Element} element The element successfully highlighted.
+ * @param {string} text
+ * @param {LinkedList<string | Token>} tokenList
+ * @param {any} grammar
+ * @param {LinkedListNode<string | Token>} startNode
+ * @param {number} startPos
+ * @param {RematchOptions} [rematch]
  * @returns {void}
- * @global
- * @public
+ * @private
+ *
+ * @typedef RematchOptions
+ * @property {string} cause
+ * @property {number} reach
+ */
+function matchGrammar(text, tokenList, grammar, startNode, startPos, rematch) {
+  for (var token in grammar) {
+    if (!grammar.hasOwnProperty(token) || !grammar[token]) {
+      continue
+    }
+
+    var patterns = grammar[token]
+    patterns = Array.isArray(patterns) ? patterns : [patterns]
+
+    for (var j = 0; j < patterns.length; ++j) {
+      if (rematch && rematch.cause == token + ',' + j) {
+        return
+      }
+
+      var patternObj = patterns[j]
+      var inside = patternObj.inside
+      var lookbehind = !!patternObj.lookbehind
+      var greedy = !!patternObj.greedy
+      var alias = patternObj.alias
+
+      if (greedy && !patternObj.pattern.global) {
+        // Without the global flag, lastIndex won't work
+        var flags = patternObj.pattern.toString().match(/[imsuy]*$/)[0]
+        patternObj.pattern = RegExp(patternObj.pattern.source, flags + 'g')
+      }
+
+      /** @type {RegExp} */
+      var pattern = patternObj.pattern || patternObj
+
+      for (
+        // iterate the token list and keep track of the current token/string position
+        var currentNode = startNode.next, pos = startPos;
+        currentNode !== tokenList.tail;
+        pos += currentNode.value.length, currentNode = currentNode.next
+      ) {
+        if (rematch && pos >= rematch.reach) {
+          break
+        }
+
+        var str = currentNode.value
+
+        if (tokenList.length > text.length) {
+          // Something went terribly wrong, ABORT, ABORT!
+          return
+        }
+
+        if (str instanceof Token) {
+          continue
+        }
+
+        var removeCount = 1 // this is the to parameter of removeBetween
+        var match
+
+        if (greedy) {
+          match = matchPattern(pattern, pos, text, lookbehind)
+          if (!match || match.index >= text.length) {
+            break
+          }
+
+          var from = match.index
+          var to = match.index + match[0].length
+          var p = pos
+
+          // find the node that contains the match
+          p += currentNode.value.length
+          while (from >= p) {
+            currentNode = currentNode.next
+            p += currentNode.value.length
+          }
+          // adjust pos (and p)
+          p -= currentNode.value.length
+          pos = p
+
+          // the current node is a Token, then the match starts inside another Token, which is invalid
+          if (currentNode.value instanceof Token) {
+            continue
+          }
+
+          // find the last node which is affected by this match
+          for (
+            var k = currentNode;
+            k !== tokenList.tail && (p < to || typeof k.value === 'string');
+            k = k.next
+          ) {
+            removeCount++
+            p += k.value.length
+          }
+          removeCount--
+
+          // replace with the new match
+          str = text.slice(pos, p)
+          match.index -= pos
+        } else {
+          match = matchPattern(pattern, 0, str, lookbehind)
+          if (!match) {
+            continue
+          }
+        }
+
+        // eslint-disable-next-line no-redeclare
+        var from = match.index
+        var matchStr = match[0]
+        var before = str.slice(0, from)
+        var after = str.slice(from + matchStr.length)
+
+        var reach = pos + str.length
+        if (rematch && reach > rematch.reach) {
+          rematch.reach = reach
+        }
+
+        var removeFrom = currentNode.prev
+
+        if (before) {
+          removeFrom = addAfter(tokenList, removeFrom, before)
+          pos += before.length
+        }
+
+        removeRange(tokenList, removeFrom, removeCount)
+
+        var wrapped = new Token(
+          token,
+          inside ? _.tokenize(matchStr, inside) : matchStr,
+          alias,
+          matchStr
+        )
+        currentNode = addAfter(tokenList, removeFrom, wrapped)
+
+        if (after) {
+          addAfter(tokenList, currentNode, after)
+        }
+
+        if (removeCount > 1) {
+          // at least one Token object was removed, so we have to do some rematching
+          // this can only happen if the current pattern is greedy
+
+          /** @type {RematchOptions} */
+          var nestedRematch = {
+            cause: token + ',' + j,
+            reach: reach
+          }
+          matchGrammar(
+            text,
+            tokenList,
+            grammar,
+            currentNode.prev,
+            pos,
+            nestedRematch
+          )
+
+          // the reach might have been extended because of the rematching
+          if (rematch && nestedRematch.reach > rematch.reach) {
+            rematch.reach = nestedRematch.reach
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * @typedef LinkedListNode
+ * @property {T} value
+ * @property {LinkedListNode<T> | null} prev The previous node.
+ * @property {LinkedListNode<T> | null} next The next node.
+ * @template T
+ * @private
  */
 
 /**
- * @callback HookCallback
- * @param {Object<string, any>} env The environment variables of the hook.
- * @returns {void}
- * @global
- * @public
+ * @template T
+ * @private
  */
+function LinkedList() {
+  /** @type {LinkedListNode<T>} */
+  var head = {value: null, prev: null, next: null}
+  /** @type {LinkedListNode<T>} */
+  var tail = {value: null, prev: head, next: null}
+  head.next = tail
+
+  /** @type {LinkedListNode<T>} */
+  this.head = head
+  /** @type {LinkedListNode<T>} */
+  this.tail = tail
+  this.length = 0
+}
+
+/**
+ * Adds a new node with the given value to the list.
+ *
+ * @param {LinkedList<T>} list
+ * @param {LinkedListNode<T>} node
+ * @param {T} value
+ * @returns {LinkedListNode<T>} The added node.
+ * @template T
+ */
+function addAfter(list, node, value) {
+  // assumes that node != list.tail && values.length >= 0
+  var next = node.next
+
+  var newNode = {value: value, prev: node, next: next}
+  node.next = newNode
+  next.prev = newNode
+  list.length++
+
+  return newNode
+}
+/**
+ * Removes `count` nodes after the given node. The given node will not be removed.
+ *
+ * @param {LinkedList<T>} list
+ * @param {LinkedListNode<T>} node
+ * @param {number} count
+ * @template T
+ */
+function removeRange(list, node, count) {
+  var next = node.next
+  for (var i = 0; i < count && next !== list.tail; i++) {
+    next = next.next
+  }
+  node.next = next
+  next.prev = node
+  list.length -= i
+}
+/**
+ * @param {LinkedList<T>} list
+ * @returns {T[]}
+ * @template T
+ */
+function toArray(list) {
+  var array = []
+  var node = list.head.next
+  while (node !== list.tail) {
+    array.push(node.value)
+    node = node.next
+  }
+  return array
+}
+
+const Prism = _
 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
 
@@ -3423,56 +6339,36 @@ function capture() {
 /*!******************************************************!*\
   !*** ./node_modules/space-separated-tokens/index.js ***!
   \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: parse, stringify */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-exports.parse = parse
-exports.stringify = stringify
-
-var empty = ''
-var space = ' '
-var whiteSpace = /[ \t\n\r\f]+/g
-
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "parse", function() { return parse; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "stringify", function() { return stringify; });
+/**
+ * Parse space-separated tokens to an array of strings.
+ *
+ * @param {string} value
+ *   Space-separated tokens.
+ * @returns {Array<string>}
+ *   List of tokens.
+ */
 function parse(value) {
-  var input = String(value || empty).trim()
-  return input === empty ? [] : input.split(whiteSpace)
+  const input = String(value || '').trim()
+  return input ? input.split(/[ \t\n\r\f]+/g) : []
 }
 
+/**
+ * Serialize an array of strings as space separated-tokens.
+ *
+ * @param {Array<string|number>} values
+ *   List of tokens.
+ * @returns {string}
+ *   Space-separated tokens.
+ */
 function stringify(values) {
-  return values.join(space).trim()
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/xtend/immutable.js":
-/*!*****************************************!*\
-  !*** ./node_modules/xtend/immutable.js ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = extend
-
-var hasOwnProperty = Object.prototype.hasOwnProperty;
-
-function extend() {
-    var target = {}
-
-    for (var i = 0; i < arguments.length; i++) {
-        var source = arguments[i]
-
-        for (var key in source) {
-            if (hasOwnProperty.call(source, key)) {
-                target[key] = source[key]
-            }
-        }
-    }
-
-    return target
+  return values.join(' ').trim()
 }
 
 

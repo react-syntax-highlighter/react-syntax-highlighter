@@ -294,7 +294,7 @@ var Component = /*#__PURE__*/function (_React$Component) {
     }
   }]);
 }(react__WEBPACK_IMPORTED_MODULE_5___default.a.Component);
-Object(react_dom__WEBPACK_IMPORTED_MODULE_6__["render"])( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(Component, null), document.getElementById('app'));
+Object(react_dom__WEBPACK_IMPORTED_MODULE_6__["render"])(/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(Component, null), document.getElementById('app'));
 
 /***/ }),
 
@@ -720,25 +720,2325 @@ module.exports = _unsupportedIterableToArray, module.exports.__esModule = true, 
 
 /***/ }),
 
-/***/ "./node_modules/character-entities-legacy/index.json":
-/*!***********************************************************!*\
-  !*** ./node_modules/character-entities-legacy/index.json ***!
-  \***********************************************************/
-/*! exports provided: AElig, AMP, Aacute, Acirc, Agrave, Aring, Atilde, Auml, COPY, Ccedil, ETH, Eacute, Ecirc, Egrave, Euml, GT, Iacute, Icirc, Igrave, Iuml, LT, Ntilde, Oacute, Ocirc, Ograve, Oslash, Otilde, Ouml, QUOT, REG, THORN, Uacute, Ucirc, Ugrave, Uuml, Yacute, aacute, acirc, acute, aelig, agrave, amp, aring, atilde, auml, brvbar, ccedil, cedil, cent, copy, curren, deg, divide, eacute, ecirc, egrave, eth, euml, frac12, frac14, frac34, gt, iacute, icirc, iexcl, igrave, iquest, iuml, laquo, lt, macr, micro, middot, nbsp, not, ntilde, oacute, ocirc, ograve, ordf, ordm, oslash, otilde, ouml, para, plusmn, pound, quot, raquo, reg, sect, shy, sup1, sup2, sup3, szlig, thorn, times, uacute, ucirc, ugrave, uml, uuml, yacute, yen, yuml, default */
-/***/ (function(module) {
+/***/ "./node_modules/character-entities-legacy/index.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/character-entities-legacy/index.js ***!
+  \*********************************************************/
+/*! exports provided: characterEntitiesLegacy */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = JSON.parse("{\"AElig\":\"Æ\",\"AMP\":\"&\",\"Aacute\":\"Á\",\"Acirc\":\"Â\",\"Agrave\":\"À\",\"Aring\":\"Å\",\"Atilde\":\"Ã\",\"Auml\":\"Ä\",\"COPY\":\"©\",\"Ccedil\":\"Ç\",\"ETH\":\"Ð\",\"Eacute\":\"É\",\"Ecirc\":\"Ê\",\"Egrave\":\"È\",\"Euml\":\"Ë\",\"GT\":\">\",\"Iacute\":\"Í\",\"Icirc\":\"Î\",\"Igrave\":\"Ì\",\"Iuml\":\"Ï\",\"LT\":\"<\",\"Ntilde\":\"Ñ\",\"Oacute\":\"Ó\",\"Ocirc\":\"Ô\",\"Ograve\":\"Ò\",\"Oslash\":\"Ø\",\"Otilde\":\"Õ\",\"Ouml\":\"Ö\",\"QUOT\":\"\\\"\",\"REG\":\"®\",\"THORN\":\"Þ\",\"Uacute\":\"Ú\",\"Ucirc\":\"Û\",\"Ugrave\":\"Ù\",\"Uuml\":\"Ü\",\"Yacute\":\"Ý\",\"aacute\":\"á\",\"acirc\":\"â\",\"acute\":\"´\",\"aelig\":\"æ\",\"agrave\":\"à\",\"amp\":\"&\",\"aring\":\"å\",\"atilde\":\"ã\",\"auml\":\"ä\",\"brvbar\":\"¦\",\"ccedil\":\"ç\",\"cedil\":\"¸\",\"cent\":\"¢\",\"copy\":\"©\",\"curren\":\"¤\",\"deg\":\"°\",\"divide\":\"÷\",\"eacute\":\"é\",\"ecirc\":\"ê\",\"egrave\":\"è\",\"eth\":\"ð\",\"euml\":\"ë\",\"frac12\":\"½\",\"frac14\":\"¼\",\"frac34\":\"¾\",\"gt\":\">\",\"iacute\":\"í\",\"icirc\":\"î\",\"iexcl\":\"¡\",\"igrave\":\"ì\",\"iquest\":\"¿\",\"iuml\":\"ï\",\"laquo\":\"«\",\"lt\":\"<\",\"macr\":\"¯\",\"micro\":\"µ\",\"middot\":\"·\",\"nbsp\":\" \",\"not\":\"¬\",\"ntilde\":\"ñ\",\"oacute\":\"ó\",\"ocirc\":\"ô\",\"ograve\":\"ò\",\"ordf\":\"ª\",\"ordm\":\"º\",\"oslash\":\"ø\",\"otilde\":\"õ\",\"ouml\":\"ö\",\"para\":\"¶\",\"plusmn\":\"±\",\"pound\":\"£\",\"quot\":\"\\\"\",\"raquo\":\"»\",\"reg\":\"®\",\"sect\":\"§\",\"shy\":\"­\",\"sup1\":\"¹\",\"sup2\":\"²\",\"sup3\":\"³\",\"szlig\":\"ß\",\"thorn\":\"þ\",\"times\":\"×\",\"uacute\":\"ú\",\"ucirc\":\"û\",\"ugrave\":\"ù\",\"uml\":\"¨\",\"uuml\":\"ü\",\"yacute\":\"ý\",\"yen\":\"¥\",\"yuml\":\"ÿ\"}");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "characterEntitiesLegacy", function() { return characterEntitiesLegacy; });
+/**
+ * List of legacy HTML named character references that don’t need a trailing semicolon.
+ *
+ * @type {Array<string>}
+ */
+const characterEntitiesLegacy = [
+  'AElig',
+  'AMP',
+  'Aacute',
+  'Acirc',
+  'Agrave',
+  'Aring',
+  'Atilde',
+  'Auml',
+  'COPY',
+  'Ccedil',
+  'ETH',
+  'Eacute',
+  'Ecirc',
+  'Egrave',
+  'Euml',
+  'GT',
+  'Iacute',
+  'Icirc',
+  'Igrave',
+  'Iuml',
+  'LT',
+  'Ntilde',
+  'Oacute',
+  'Ocirc',
+  'Ograve',
+  'Oslash',
+  'Otilde',
+  'Ouml',
+  'QUOT',
+  'REG',
+  'THORN',
+  'Uacute',
+  'Ucirc',
+  'Ugrave',
+  'Uuml',
+  'Yacute',
+  'aacute',
+  'acirc',
+  'acute',
+  'aelig',
+  'agrave',
+  'amp',
+  'aring',
+  'atilde',
+  'auml',
+  'brvbar',
+  'ccedil',
+  'cedil',
+  'cent',
+  'copy',
+  'curren',
+  'deg',
+  'divide',
+  'eacute',
+  'ecirc',
+  'egrave',
+  'eth',
+  'euml',
+  'frac12',
+  'frac14',
+  'frac34',
+  'gt',
+  'iacute',
+  'icirc',
+  'iexcl',
+  'igrave',
+  'iquest',
+  'iuml',
+  'laquo',
+  'lt',
+  'macr',
+  'micro',
+  'middot',
+  'nbsp',
+  'not',
+  'ntilde',
+  'oacute',
+  'ocirc',
+  'ograve',
+  'ordf',
+  'ordm',
+  'oslash',
+  'otilde',
+  'ouml',
+  'para',
+  'plusmn',
+  'pound',
+  'quot',
+  'raquo',
+  'reg',
+  'sect',
+  'shy',
+  'sup1',
+  'sup2',
+  'sup3',
+  'szlig',
+  'thorn',
+  'times',
+  'uacute',
+  'ucirc',
+  'ugrave',
+  'uml',
+  'uuml',
+  'yacute',
+  'yen',
+  'yuml'
+]
+
 
 /***/ }),
 
-/***/ "./node_modules/character-reference-invalid/index.json":
-/*!*************************************************************!*\
-  !*** ./node_modules/character-reference-invalid/index.json ***!
-  \*************************************************************/
-/*! exports provided: 0, 128, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 142, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 158, 159, default */
-/***/ (function(module) {
+/***/ "./node_modules/character-entities/index.js":
+/*!**************************************************!*\
+  !*** ./node_modules/character-entities/index.js ***!
+  \**************************************************/
+/*! exports provided: characterEntities */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = JSON.parse("{\"0\":\"�\",\"128\":\"€\",\"130\":\"‚\",\"131\":\"ƒ\",\"132\":\"„\",\"133\":\"…\",\"134\":\"†\",\"135\":\"‡\",\"136\":\"ˆ\",\"137\":\"‰\",\"138\":\"Š\",\"139\":\"‹\",\"140\":\"Œ\",\"142\":\"Ž\",\"145\":\"‘\",\"146\":\"’\",\"147\":\"“\",\"148\":\"”\",\"149\":\"•\",\"150\":\"–\",\"151\":\"—\",\"152\":\"˜\",\"153\":\"™\",\"154\":\"š\",\"155\":\"›\",\"156\":\"œ\",\"158\":\"ž\",\"159\":\"Ÿ\"}");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "characterEntities", function() { return characterEntities; });
+/**
+ * Map of named character references.
+ *
+ * @type {Record<string, string>}
+ */
+const characterEntities = {
+  AElig: 'Æ',
+  AMP: '&',
+  Aacute: 'Á',
+  Abreve: 'Ă',
+  Acirc: 'Â',
+  Acy: 'А',
+  Afr: '𝔄',
+  Agrave: 'À',
+  Alpha: 'Α',
+  Amacr: 'Ā',
+  And: '⩓',
+  Aogon: 'Ą',
+  Aopf: '𝔸',
+  ApplyFunction: '⁡',
+  Aring: 'Å',
+  Ascr: '𝒜',
+  Assign: '≔',
+  Atilde: 'Ã',
+  Auml: 'Ä',
+  Backslash: '∖',
+  Barv: '⫧',
+  Barwed: '⌆',
+  Bcy: 'Б',
+  Because: '∵',
+  Bernoullis: 'ℬ',
+  Beta: 'Β',
+  Bfr: '𝔅',
+  Bopf: '𝔹',
+  Breve: '˘',
+  Bscr: 'ℬ',
+  Bumpeq: '≎',
+  CHcy: 'Ч',
+  COPY: '©',
+  Cacute: 'Ć',
+  Cap: '⋒',
+  CapitalDifferentialD: 'ⅅ',
+  Cayleys: 'ℭ',
+  Ccaron: 'Č',
+  Ccedil: 'Ç',
+  Ccirc: 'Ĉ',
+  Cconint: '∰',
+  Cdot: 'Ċ',
+  Cedilla: '¸',
+  CenterDot: '·',
+  Cfr: 'ℭ',
+  Chi: 'Χ',
+  CircleDot: '⊙',
+  CircleMinus: '⊖',
+  CirclePlus: '⊕',
+  CircleTimes: '⊗',
+  ClockwiseContourIntegral: '∲',
+  CloseCurlyDoubleQuote: '”',
+  CloseCurlyQuote: '’',
+  Colon: '∷',
+  Colone: '⩴',
+  Congruent: '≡',
+  Conint: '∯',
+  ContourIntegral: '∮',
+  Copf: 'ℂ',
+  Coproduct: '∐',
+  CounterClockwiseContourIntegral: '∳',
+  Cross: '⨯',
+  Cscr: '𝒞',
+  Cup: '⋓',
+  CupCap: '≍',
+  DD: 'ⅅ',
+  DDotrahd: '⤑',
+  DJcy: 'Ђ',
+  DScy: 'Ѕ',
+  DZcy: 'Џ',
+  Dagger: '‡',
+  Darr: '↡',
+  Dashv: '⫤',
+  Dcaron: 'Ď',
+  Dcy: 'Д',
+  Del: '∇',
+  Delta: 'Δ',
+  Dfr: '𝔇',
+  DiacriticalAcute: '´',
+  DiacriticalDot: '˙',
+  DiacriticalDoubleAcute: '˝',
+  DiacriticalGrave: '`',
+  DiacriticalTilde: '˜',
+  Diamond: '⋄',
+  DifferentialD: 'ⅆ',
+  Dopf: '𝔻',
+  Dot: '¨',
+  DotDot: '⃜',
+  DotEqual: '≐',
+  DoubleContourIntegral: '∯',
+  DoubleDot: '¨',
+  DoubleDownArrow: '⇓',
+  DoubleLeftArrow: '⇐',
+  DoubleLeftRightArrow: '⇔',
+  DoubleLeftTee: '⫤',
+  DoubleLongLeftArrow: '⟸',
+  DoubleLongLeftRightArrow: '⟺',
+  DoubleLongRightArrow: '⟹',
+  DoubleRightArrow: '⇒',
+  DoubleRightTee: '⊨',
+  DoubleUpArrow: '⇑',
+  DoubleUpDownArrow: '⇕',
+  DoubleVerticalBar: '∥',
+  DownArrow: '↓',
+  DownArrowBar: '⤓',
+  DownArrowUpArrow: '⇵',
+  DownBreve: '̑',
+  DownLeftRightVector: '⥐',
+  DownLeftTeeVector: '⥞',
+  DownLeftVector: '↽',
+  DownLeftVectorBar: '⥖',
+  DownRightTeeVector: '⥟',
+  DownRightVector: '⇁',
+  DownRightVectorBar: '⥗',
+  DownTee: '⊤',
+  DownTeeArrow: '↧',
+  Downarrow: '⇓',
+  Dscr: '𝒟',
+  Dstrok: 'Đ',
+  ENG: 'Ŋ',
+  ETH: 'Ð',
+  Eacute: 'É',
+  Ecaron: 'Ě',
+  Ecirc: 'Ê',
+  Ecy: 'Э',
+  Edot: 'Ė',
+  Efr: '𝔈',
+  Egrave: 'È',
+  Element: '∈',
+  Emacr: 'Ē',
+  EmptySmallSquare: '◻',
+  EmptyVerySmallSquare: '▫',
+  Eogon: 'Ę',
+  Eopf: '𝔼',
+  Epsilon: 'Ε',
+  Equal: '⩵',
+  EqualTilde: '≂',
+  Equilibrium: '⇌',
+  Escr: 'ℰ',
+  Esim: '⩳',
+  Eta: 'Η',
+  Euml: 'Ë',
+  Exists: '∃',
+  ExponentialE: 'ⅇ',
+  Fcy: 'Ф',
+  Ffr: '𝔉',
+  FilledSmallSquare: '◼',
+  FilledVerySmallSquare: '▪',
+  Fopf: '𝔽',
+  ForAll: '∀',
+  Fouriertrf: 'ℱ',
+  Fscr: 'ℱ',
+  GJcy: 'Ѓ',
+  GT: '>',
+  Gamma: 'Γ',
+  Gammad: 'Ϝ',
+  Gbreve: 'Ğ',
+  Gcedil: 'Ģ',
+  Gcirc: 'Ĝ',
+  Gcy: 'Г',
+  Gdot: 'Ġ',
+  Gfr: '𝔊',
+  Gg: '⋙',
+  Gopf: '𝔾',
+  GreaterEqual: '≥',
+  GreaterEqualLess: '⋛',
+  GreaterFullEqual: '≧',
+  GreaterGreater: '⪢',
+  GreaterLess: '≷',
+  GreaterSlantEqual: '⩾',
+  GreaterTilde: '≳',
+  Gscr: '𝒢',
+  Gt: '≫',
+  HARDcy: 'Ъ',
+  Hacek: 'ˇ',
+  Hat: '^',
+  Hcirc: 'Ĥ',
+  Hfr: 'ℌ',
+  HilbertSpace: 'ℋ',
+  Hopf: 'ℍ',
+  HorizontalLine: '─',
+  Hscr: 'ℋ',
+  Hstrok: 'Ħ',
+  HumpDownHump: '≎',
+  HumpEqual: '≏',
+  IEcy: 'Е',
+  IJlig: 'Ĳ',
+  IOcy: 'Ё',
+  Iacute: 'Í',
+  Icirc: 'Î',
+  Icy: 'И',
+  Idot: 'İ',
+  Ifr: 'ℑ',
+  Igrave: 'Ì',
+  Im: 'ℑ',
+  Imacr: 'Ī',
+  ImaginaryI: 'ⅈ',
+  Implies: '⇒',
+  Int: '∬',
+  Integral: '∫',
+  Intersection: '⋂',
+  InvisibleComma: '⁣',
+  InvisibleTimes: '⁢',
+  Iogon: 'Į',
+  Iopf: '𝕀',
+  Iota: 'Ι',
+  Iscr: 'ℐ',
+  Itilde: 'Ĩ',
+  Iukcy: 'І',
+  Iuml: 'Ï',
+  Jcirc: 'Ĵ',
+  Jcy: 'Й',
+  Jfr: '𝔍',
+  Jopf: '𝕁',
+  Jscr: '𝒥',
+  Jsercy: 'Ј',
+  Jukcy: 'Є',
+  KHcy: 'Х',
+  KJcy: 'Ќ',
+  Kappa: 'Κ',
+  Kcedil: 'Ķ',
+  Kcy: 'К',
+  Kfr: '𝔎',
+  Kopf: '𝕂',
+  Kscr: '𝒦',
+  LJcy: 'Љ',
+  LT: '<',
+  Lacute: 'Ĺ',
+  Lambda: 'Λ',
+  Lang: '⟪',
+  Laplacetrf: 'ℒ',
+  Larr: '↞',
+  Lcaron: 'Ľ',
+  Lcedil: 'Ļ',
+  Lcy: 'Л',
+  LeftAngleBracket: '⟨',
+  LeftArrow: '←',
+  LeftArrowBar: '⇤',
+  LeftArrowRightArrow: '⇆',
+  LeftCeiling: '⌈',
+  LeftDoubleBracket: '⟦',
+  LeftDownTeeVector: '⥡',
+  LeftDownVector: '⇃',
+  LeftDownVectorBar: '⥙',
+  LeftFloor: '⌊',
+  LeftRightArrow: '↔',
+  LeftRightVector: '⥎',
+  LeftTee: '⊣',
+  LeftTeeArrow: '↤',
+  LeftTeeVector: '⥚',
+  LeftTriangle: '⊲',
+  LeftTriangleBar: '⧏',
+  LeftTriangleEqual: '⊴',
+  LeftUpDownVector: '⥑',
+  LeftUpTeeVector: '⥠',
+  LeftUpVector: '↿',
+  LeftUpVectorBar: '⥘',
+  LeftVector: '↼',
+  LeftVectorBar: '⥒',
+  Leftarrow: '⇐',
+  Leftrightarrow: '⇔',
+  LessEqualGreater: '⋚',
+  LessFullEqual: '≦',
+  LessGreater: '≶',
+  LessLess: '⪡',
+  LessSlantEqual: '⩽',
+  LessTilde: '≲',
+  Lfr: '𝔏',
+  Ll: '⋘',
+  Lleftarrow: '⇚',
+  Lmidot: 'Ŀ',
+  LongLeftArrow: '⟵',
+  LongLeftRightArrow: '⟷',
+  LongRightArrow: '⟶',
+  Longleftarrow: '⟸',
+  Longleftrightarrow: '⟺',
+  Longrightarrow: '⟹',
+  Lopf: '𝕃',
+  LowerLeftArrow: '↙',
+  LowerRightArrow: '↘',
+  Lscr: 'ℒ',
+  Lsh: '↰',
+  Lstrok: 'Ł',
+  Lt: '≪',
+  Map: '⤅',
+  Mcy: 'М',
+  MediumSpace: ' ',
+  Mellintrf: 'ℳ',
+  Mfr: '𝔐',
+  MinusPlus: '∓',
+  Mopf: '𝕄',
+  Mscr: 'ℳ',
+  Mu: 'Μ',
+  NJcy: 'Њ',
+  Nacute: 'Ń',
+  Ncaron: 'Ň',
+  Ncedil: 'Ņ',
+  Ncy: 'Н',
+  NegativeMediumSpace: '​',
+  NegativeThickSpace: '​',
+  NegativeThinSpace: '​',
+  NegativeVeryThinSpace: '​',
+  NestedGreaterGreater: '≫',
+  NestedLessLess: '≪',
+  NewLine: '\n',
+  Nfr: '𝔑',
+  NoBreak: '⁠',
+  NonBreakingSpace: ' ',
+  Nopf: 'ℕ',
+  Not: '⫬',
+  NotCongruent: '≢',
+  NotCupCap: '≭',
+  NotDoubleVerticalBar: '∦',
+  NotElement: '∉',
+  NotEqual: '≠',
+  NotEqualTilde: '≂̸',
+  NotExists: '∄',
+  NotGreater: '≯',
+  NotGreaterEqual: '≱',
+  NotGreaterFullEqual: '≧̸',
+  NotGreaterGreater: '≫̸',
+  NotGreaterLess: '≹',
+  NotGreaterSlantEqual: '⩾̸',
+  NotGreaterTilde: '≵',
+  NotHumpDownHump: '≎̸',
+  NotHumpEqual: '≏̸',
+  NotLeftTriangle: '⋪',
+  NotLeftTriangleBar: '⧏̸',
+  NotLeftTriangleEqual: '⋬',
+  NotLess: '≮',
+  NotLessEqual: '≰',
+  NotLessGreater: '≸',
+  NotLessLess: '≪̸',
+  NotLessSlantEqual: '⩽̸',
+  NotLessTilde: '≴',
+  NotNestedGreaterGreater: '⪢̸',
+  NotNestedLessLess: '⪡̸',
+  NotPrecedes: '⊀',
+  NotPrecedesEqual: '⪯̸',
+  NotPrecedesSlantEqual: '⋠',
+  NotReverseElement: '∌',
+  NotRightTriangle: '⋫',
+  NotRightTriangleBar: '⧐̸',
+  NotRightTriangleEqual: '⋭',
+  NotSquareSubset: '⊏̸',
+  NotSquareSubsetEqual: '⋢',
+  NotSquareSuperset: '⊐̸',
+  NotSquareSupersetEqual: '⋣',
+  NotSubset: '⊂⃒',
+  NotSubsetEqual: '⊈',
+  NotSucceeds: '⊁',
+  NotSucceedsEqual: '⪰̸',
+  NotSucceedsSlantEqual: '⋡',
+  NotSucceedsTilde: '≿̸',
+  NotSuperset: '⊃⃒',
+  NotSupersetEqual: '⊉',
+  NotTilde: '≁',
+  NotTildeEqual: '≄',
+  NotTildeFullEqual: '≇',
+  NotTildeTilde: '≉',
+  NotVerticalBar: '∤',
+  Nscr: '𝒩',
+  Ntilde: 'Ñ',
+  Nu: 'Ν',
+  OElig: 'Œ',
+  Oacute: 'Ó',
+  Ocirc: 'Ô',
+  Ocy: 'О',
+  Odblac: 'Ő',
+  Ofr: '𝔒',
+  Ograve: 'Ò',
+  Omacr: 'Ō',
+  Omega: 'Ω',
+  Omicron: 'Ο',
+  Oopf: '𝕆',
+  OpenCurlyDoubleQuote: '“',
+  OpenCurlyQuote: '‘',
+  Or: '⩔',
+  Oscr: '𝒪',
+  Oslash: 'Ø',
+  Otilde: 'Õ',
+  Otimes: '⨷',
+  Ouml: 'Ö',
+  OverBar: '‾',
+  OverBrace: '⏞',
+  OverBracket: '⎴',
+  OverParenthesis: '⏜',
+  PartialD: '∂',
+  Pcy: 'П',
+  Pfr: '𝔓',
+  Phi: 'Φ',
+  Pi: 'Π',
+  PlusMinus: '±',
+  Poincareplane: 'ℌ',
+  Popf: 'ℙ',
+  Pr: '⪻',
+  Precedes: '≺',
+  PrecedesEqual: '⪯',
+  PrecedesSlantEqual: '≼',
+  PrecedesTilde: '≾',
+  Prime: '″',
+  Product: '∏',
+  Proportion: '∷',
+  Proportional: '∝',
+  Pscr: '𝒫',
+  Psi: 'Ψ',
+  QUOT: '"',
+  Qfr: '𝔔',
+  Qopf: 'ℚ',
+  Qscr: '𝒬',
+  RBarr: '⤐',
+  REG: '®',
+  Racute: 'Ŕ',
+  Rang: '⟫',
+  Rarr: '↠',
+  Rarrtl: '⤖',
+  Rcaron: 'Ř',
+  Rcedil: 'Ŗ',
+  Rcy: 'Р',
+  Re: 'ℜ',
+  ReverseElement: '∋',
+  ReverseEquilibrium: '⇋',
+  ReverseUpEquilibrium: '⥯',
+  Rfr: 'ℜ',
+  Rho: 'Ρ',
+  RightAngleBracket: '⟩',
+  RightArrow: '→',
+  RightArrowBar: '⇥',
+  RightArrowLeftArrow: '⇄',
+  RightCeiling: '⌉',
+  RightDoubleBracket: '⟧',
+  RightDownTeeVector: '⥝',
+  RightDownVector: '⇂',
+  RightDownVectorBar: '⥕',
+  RightFloor: '⌋',
+  RightTee: '⊢',
+  RightTeeArrow: '↦',
+  RightTeeVector: '⥛',
+  RightTriangle: '⊳',
+  RightTriangleBar: '⧐',
+  RightTriangleEqual: '⊵',
+  RightUpDownVector: '⥏',
+  RightUpTeeVector: '⥜',
+  RightUpVector: '↾',
+  RightUpVectorBar: '⥔',
+  RightVector: '⇀',
+  RightVectorBar: '⥓',
+  Rightarrow: '⇒',
+  Ropf: 'ℝ',
+  RoundImplies: '⥰',
+  Rrightarrow: '⇛',
+  Rscr: 'ℛ',
+  Rsh: '↱',
+  RuleDelayed: '⧴',
+  SHCHcy: 'Щ',
+  SHcy: 'Ш',
+  SOFTcy: 'Ь',
+  Sacute: 'Ś',
+  Sc: '⪼',
+  Scaron: 'Š',
+  Scedil: 'Ş',
+  Scirc: 'Ŝ',
+  Scy: 'С',
+  Sfr: '𝔖',
+  ShortDownArrow: '↓',
+  ShortLeftArrow: '←',
+  ShortRightArrow: '→',
+  ShortUpArrow: '↑',
+  Sigma: 'Σ',
+  SmallCircle: '∘',
+  Sopf: '𝕊',
+  Sqrt: '√',
+  Square: '□',
+  SquareIntersection: '⊓',
+  SquareSubset: '⊏',
+  SquareSubsetEqual: '⊑',
+  SquareSuperset: '⊐',
+  SquareSupersetEqual: '⊒',
+  SquareUnion: '⊔',
+  Sscr: '𝒮',
+  Star: '⋆',
+  Sub: '⋐',
+  Subset: '⋐',
+  SubsetEqual: '⊆',
+  Succeeds: '≻',
+  SucceedsEqual: '⪰',
+  SucceedsSlantEqual: '≽',
+  SucceedsTilde: '≿',
+  SuchThat: '∋',
+  Sum: '∑',
+  Sup: '⋑',
+  Superset: '⊃',
+  SupersetEqual: '⊇',
+  Supset: '⋑',
+  THORN: 'Þ',
+  TRADE: '™',
+  TSHcy: 'Ћ',
+  TScy: 'Ц',
+  Tab: '\t',
+  Tau: 'Τ',
+  Tcaron: 'Ť',
+  Tcedil: 'Ţ',
+  Tcy: 'Т',
+  Tfr: '𝔗',
+  Therefore: '∴',
+  Theta: 'Θ',
+  ThickSpace: '  ',
+  ThinSpace: ' ',
+  Tilde: '∼',
+  TildeEqual: '≃',
+  TildeFullEqual: '≅',
+  TildeTilde: '≈',
+  Topf: '𝕋',
+  TripleDot: '⃛',
+  Tscr: '𝒯',
+  Tstrok: 'Ŧ',
+  Uacute: 'Ú',
+  Uarr: '↟',
+  Uarrocir: '⥉',
+  Ubrcy: 'Ў',
+  Ubreve: 'Ŭ',
+  Ucirc: 'Û',
+  Ucy: 'У',
+  Udblac: 'Ű',
+  Ufr: '𝔘',
+  Ugrave: 'Ù',
+  Umacr: 'Ū',
+  UnderBar: '_',
+  UnderBrace: '⏟',
+  UnderBracket: '⎵',
+  UnderParenthesis: '⏝',
+  Union: '⋃',
+  UnionPlus: '⊎',
+  Uogon: 'Ų',
+  Uopf: '𝕌',
+  UpArrow: '↑',
+  UpArrowBar: '⤒',
+  UpArrowDownArrow: '⇅',
+  UpDownArrow: '↕',
+  UpEquilibrium: '⥮',
+  UpTee: '⊥',
+  UpTeeArrow: '↥',
+  Uparrow: '⇑',
+  Updownarrow: '⇕',
+  UpperLeftArrow: '↖',
+  UpperRightArrow: '↗',
+  Upsi: 'ϒ',
+  Upsilon: 'Υ',
+  Uring: 'Ů',
+  Uscr: '𝒰',
+  Utilde: 'Ũ',
+  Uuml: 'Ü',
+  VDash: '⊫',
+  Vbar: '⫫',
+  Vcy: 'В',
+  Vdash: '⊩',
+  Vdashl: '⫦',
+  Vee: '⋁',
+  Verbar: '‖',
+  Vert: '‖',
+  VerticalBar: '∣',
+  VerticalLine: '|',
+  VerticalSeparator: '❘',
+  VerticalTilde: '≀',
+  VeryThinSpace: ' ',
+  Vfr: '𝔙',
+  Vopf: '𝕍',
+  Vscr: '𝒱',
+  Vvdash: '⊪',
+  Wcirc: 'Ŵ',
+  Wedge: '⋀',
+  Wfr: '𝔚',
+  Wopf: '𝕎',
+  Wscr: '𝒲',
+  Xfr: '𝔛',
+  Xi: 'Ξ',
+  Xopf: '𝕏',
+  Xscr: '𝒳',
+  YAcy: 'Я',
+  YIcy: 'Ї',
+  YUcy: 'Ю',
+  Yacute: 'Ý',
+  Ycirc: 'Ŷ',
+  Ycy: 'Ы',
+  Yfr: '𝔜',
+  Yopf: '𝕐',
+  Yscr: '𝒴',
+  Yuml: 'Ÿ',
+  ZHcy: 'Ж',
+  Zacute: 'Ź',
+  Zcaron: 'Ž',
+  Zcy: 'З',
+  Zdot: 'Ż',
+  ZeroWidthSpace: '​',
+  Zeta: 'Ζ',
+  Zfr: 'ℨ',
+  Zopf: 'ℤ',
+  Zscr: '𝒵',
+  aacute: 'á',
+  abreve: 'ă',
+  ac: '∾',
+  acE: '∾̳',
+  acd: '∿',
+  acirc: 'â',
+  acute: '´',
+  acy: 'а',
+  aelig: 'æ',
+  af: '⁡',
+  afr: '𝔞',
+  agrave: 'à',
+  alefsym: 'ℵ',
+  aleph: 'ℵ',
+  alpha: 'α',
+  amacr: 'ā',
+  amalg: '⨿',
+  amp: '&',
+  and: '∧',
+  andand: '⩕',
+  andd: '⩜',
+  andslope: '⩘',
+  andv: '⩚',
+  ang: '∠',
+  ange: '⦤',
+  angle: '∠',
+  angmsd: '∡',
+  angmsdaa: '⦨',
+  angmsdab: '⦩',
+  angmsdac: '⦪',
+  angmsdad: '⦫',
+  angmsdae: '⦬',
+  angmsdaf: '⦭',
+  angmsdag: '⦮',
+  angmsdah: '⦯',
+  angrt: '∟',
+  angrtvb: '⊾',
+  angrtvbd: '⦝',
+  angsph: '∢',
+  angst: 'Å',
+  angzarr: '⍼',
+  aogon: 'ą',
+  aopf: '𝕒',
+  ap: '≈',
+  apE: '⩰',
+  apacir: '⩯',
+  ape: '≊',
+  apid: '≋',
+  apos: "'",
+  approx: '≈',
+  approxeq: '≊',
+  aring: 'å',
+  ascr: '𝒶',
+  ast: '*',
+  asymp: '≈',
+  asympeq: '≍',
+  atilde: 'ã',
+  auml: 'ä',
+  awconint: '∳',
+  awint: '⨑',
+  bNot: '⫭',
+  backcong: '≌',
+  backepsilon: '϶',
+  backprime: '‵',
+  backsim: '∽',
+  backsimeq: '⋍',
+  barvee: '⊽',
+  barwed: '⌅',
+  barwedge: '⌅',
+  bbrk: '⎵',
+  bbrktbrk: '⎶',
+  bcong: '≌',
+  bcy: 'б',
+  bdquo: '„',
+  becaus: '∵',
+  because: '∵',
+  bemptyv: '⦰',
+  bepsi: '϶',
+  bernou: 'ℬ',
+  beta: 'β',
+  beth: 'ℶ',
+  between: '≬',
+  bfr: '𝔟',
+  bigcap: '⋂',
+  bigcirc: '◯',
+  bigcup: '⋃',
+  bigodot: '⨀',
+  bigoplus: '⨁',
+  bigotimes: '⨂',
+  bigsqcup: '⨆',
+  bigstar: '★',
+  bigtriangledown: '▽',
+  bigtriangleup: '△',
+  biguplus: '⨄',
+  bigvee: '⋁',
+  bigwedge: '⋀',
+  bkarow: '⤍',
+  blacklozenge: '⧫',
+  blacksquare: '▪',
+  blacktriangle: '▴',
+  blacktriangledown: '▾',
+  blacktriangleleft: '◂',
+  blacktriangleright: '▸',
+  blank: '␣',
+  blk12: '▒',
+  blk14: '░',
+  blk34: '▓',
+  block: '█',
+  bne: '=⃥',
+  bnequiv: '≡⃥',
+  bnot: '⌐',
+  bopf: '𝕓',
+  bot: '⊥',
+  bottom: '⊥',
+  bowtie: '⋈',
+  boxDL: '╗',
+  boxDR: '╔',
+  boxDl: '╖',
+  boxDr: '╓',
+  boxH: '═',
+  boxHD: '╦',
+  boxHU: '╩',
+  boxHd: '╤',
+  boxHu: '╧',
+  boxUL: '╝',
+  boxUR: '╚',
+  boxUl: '╜',
+  boxUr: '╙',
+  boxV: '║',
+  boxVH: '╬',
+  boxVL: '╣',
+  boxVR: '╠',
+  boxVh: '╫',
+  boxVl: '╢',
+  boxVr: '╟',
+  boxbox: '⧉',
+  boxdL: '╕',
+  boxdR: '╒',
+  boxdl: '┐',
+  boxdr: '┌',
+  boxh: '─',
+  boxhD: '╥',
+  boxhU: '╨',
+  boxhd: '┬',
+  boxhu: '┴',
+  boxminus: '⊟',
+  boxplus: '⊞',
+  boxtimes: '⊠',
+  boxuL: '╛',
+  boxuR: '╘',
+  boxul: '┘',
+  boxur: '└',
+  boxv: '│',
+  boxvH: '╪',
+  boxvL: '╡',
+  boxvR: '╞',
+  boxvh: '┼',
+  boxvl: '┤',
+  boxvr: '├',
+  bprime: '‵',
+  breve: '˘',
+  brvbar: '¦',
+  bscr: '𝒷',
+  bsemi: '⁏',
+  bsim: '∽',
+  bsime: '⋍',
+  bsol: '\\',
+  bsolb: '⧅',
+  bsolhsub: '⟈',
+  bull: '•',
+  bullet: '•',
+  bump: '≎',
+  bumpE: '⪮',
+  bumpe: '≏',
+  bumpeq: '≏',
+  cacute: 'ć',
+  cap: '∩',
+  capand: '⩄',
+  capbrcup: '⩉',
+  capcap: '⩋',
+  capcup: '⩇',
+  capdot: '⩀',
+  caps: '∩︀',
+  caret: '⁁',
+  caron: 'ˇ',
+  ccaps: '⩍',
+  ccaron: 'č',
+  ccedil: 'ç',
+  ccirc: 'ĉ',
+  ccups: '⩌',
+  ccupssm: '⩐',
+  cdot: 'ċ',
+  cedil: '¸',
+  cemptyv: '⦲',
+  cent: '¢',
+  centerdot: '·',
+  cfr: '𝔠',
+  chcy: 'ч',
+  check: '✓',
+  checkmark: '✓',
+  chi: 'χ',
+  cir: '○',
+  cirE: '⧃',
+  circ: 'ˆ',
+  circeq: '≗',
+  circlearrowleft: '↺',
+  circlearrowright: '↻',
+  circledR: '®',
+  circledS: 'Ⓢ',
+  circledast: '⊛',
+  circledcirc: '⊚',
+  circleddash: '⊝',
+  cire: '≗',
+  cirfnint: '⨐',
+  cirmid: '⫯',
+  cirscir: '⧂',
+  clubs: '♣',
+  clubsuit: '♣',
+  colon: ':',
+  colone: '≔',
+  coloneq: '≔',
+  comma: ',',
+  commat: '@',
+  comp: '∁',
+  compfn: '∘',
+  complement: '∁',
+  complexes: 'ℂ',
+  cong: '≅',
+  congdot: '⩭',
+  conint: '∮',
+  copf: '𝕔',
+  coprod: '∐',
+  copy: '©',
+  copysr: '℗',
+  crarr: '↵',
+  cross: '✗',
+  cscr: '𝒸',
+  csub: '⫏',
+  csube: '⫑',
+  csup: '⫐',
+  csupe: '⫒',
+  ctdot: '⋯',
+  cudarrl: '⤸',
+  cudarrr: '⤵',
+  cuepr: '⋞',
+  cuesc: '⋟',
+  cularr: '↶',
+  cularrp: '⤽',
+  cup: '∪',
+  cupbrcap: '⩈',
+  cupcap: '⩆',
+  cupcup: '⩊',
+  cupdot: '⊍',
+  cupor: '⩅',
+  cups: '∪︀',
+  curarr: '↷',
+  curarrm: '⤼',
+  curlyeqprec: '⋞',
+  curlyeqsucc: '⋟',
+  curlyvee: '⋎',
+  curlywedge: '⋏',
+  curren: '¤',
+  curvearrowleft: '↶',
+  curvearrowright: '↷',
+  cuvee: '⋎',
+  cuwed: '⋏',
+  cwconint: '∲',
+  cwint: '∱',
+  cylcty: '⌭',
+  dArr: '⇓',
+  dHar: '⥥',
+  dagger: '†',
+  daleth: 'ℸ',
+  darr: '↓',
+  dash: '‐',
+  dashv: '⊣',
+  dbkarow: '⤏',
+  dblac: '˝',
+  dcaron: 'ď',
+  dcy: 'д',
+  dd: 'ⅆ',
+  ddagger: '‡',
+  ddarr: '⇊',
+  ddotseq: '⩷',
+  deg: '°',
+  delta: 'δ',
+  demptyv: '⦱',
+  dfisht: '⥿',
+  dfr: '𝔡',
+  dharl: '⇃',
+  dharr: '⇂',
+  diam: '⋄',
+  diamond: '⋄',
+  diamondsuit: '♦',
+  diams: '♦',
+  die: '¨',
+  digamma: 'ϝ',
+  disin: '⋲',
+  div: '÷',
+  divide: '÷',
+  divideontimes: '⋇',
+  divonx: '⋇',
+  djcy: 'ђ',
+  dlcorn: '⌞',
+  dlcrop: '⌍',
+  dollar: '$',
+  dopf: '𝕕',
+  dot: '˙',
+  doteq: '≐',
+  doteqdot: '≑',
+  dotminus: '∸',
+  dotplus: '∔',
+  dotsquare: '⊡',
+  doublebarwedge: '⌆',
+  downarrow: '↓',
+  downdownarrows: '⇊',
+  downharpoonleft: '⇃',
+  downharpoonright: '⇂',
+  drbkarow: '⤐',
+  drcorn: '⌟',
+  drcrop: '⌌',
+  dscr: '𝒹',
+  dscy: 'ѕ',
+  dsol: '⧶',
+  dstrok: 'đ',
+  dtdot: '⋱',
+  dtri: '▿',
+  dtrif: '▾',
+  duarr: '⇵',
+  duhar: '⥯',
+  dwangle: '⦦',
+  dzcy: 'џ',
+  dzigrarr: '⟿',
+  eDDot: '⩷',
+  eDot: '≑',
+  eacute: 'é',
+  easter: '⩮',
+  ecaron: 'ě',
+  ecir: '≖',
+  ecirc: 'ê',
+  ecolon: '≕',
+  ecy: 'э',
+  edot: 'ė',
+  ee: 'ⅇ',
+  efDot: '≒',
+  efr: '𝔢',
+  eg: '⪚',
+  egrave: 'è',
+  egs: '⪖',
+  egsdot: '⪘',
+  el: '⪙',
+  elinters: '⏧',
+  ell: 'ℓ',
+  els: '⪕',
+  elsdot: '⪗',
+  emacr: 'ē',
+  empty: '∅',
+  emptyset: '∅',
+  emptyv: '∅',
+  emsp13: ' ',
+  emsp14: ' ',
+  emsp: ' ',
+  eng: 'ŋ',
+  ensp: ' ',
+  eogon: 'ę',
+  eopf: '𝕖',
+  epar: '⋕',
+  eparsl: '⧣',
+  eplus: '⩱',
+  epsi: 'ε',
+  epsilon: 'ε',
+  epsiv: 'ϵ',
+  eqcirc: '≖',
+  eqcolon: '≕',
+  eqsim: '≂',
+  eqslantgtr: '⪖',
+  eqslantless: '⪕',
+  equals: '=',
+  equest: '≟',
+  equiv: '≡',
+  equivDD: '⩸',
+  eqvparsl: '⧥',
+  erDot: '≓',
+  erarr: '⥱',
+  escr: 'ℯ',
+  esdot: '≐',
+  esim: '≂',
+  eta: 'η',
+  eth: 'ð',
+  euml: 'ë',
+  euro: '€',
+  excl: '!',
+  exist: '∃',
+  expectation: 'ℰ',
+  exponentiale: 'ⅇ',
+  fallingdotseq: '≒',
+  fcy: 'ф',
+  female: '♀',
+  ffilig: 'ﬃ',
+  fflig: 'ﬀ',
+  ffllig: 'ﬄ',
+  ffr: '𝔣',
+  filig: 'ﬁ',
+  fjlig: 'fj',
+  flat: '♭',
+  fllig: 'ﬂ',
+  fltns: '▱',
+  fnof: 'ƒ',
+  fopf: '𝕗',
+  forall: '∀',
+  fork: '⋔',
+  forkv: '⫙',
+  fpartint: '⨍',
+  frac12: '½',
+  frac13: '⅓',
+  frac14: '¼',
+  frac15: '⅕',
+  frac16: '⅙',
+  frac18: '⅛',
+  frac23: '⅔',
+  frac25: '⅖',
+  frac34: '¾',
+  frac35: '⅗',
+  frac38: '⅜',
+  frac45: '⅘',
+  frac56: '⅚',
+  frac58: '⅝',
+  frac78: '⅞',
+  frasl: '⁄',
+  frown: '⌢',
+  fscr: '𝒻',
+  gE: '≧',
+  gEl: '⪌',
+  gacute: 'ǵ',
+  gamma: 'γ',
+  gammad: 'ϝ',
+  gap: '⪆',
+  gbreve: 'ğ',
+  gcirc: 'ĝ',
+  gcy: 'г',
+  gdot: 'ġ',
+  ge: '≥',
+  gel: '⋛',
+  geq: '≥',
+  geqq: '≧',
+  geqslant: '⩾',
+  ges: '⩾',
+  gescc: '⪩',
+  gesdot: '⪀',
+  gesdoto: '⪂',
+  gesdotol: '⪄',
+  gesl: '⋛︀',
+  gesles: '⪔',
+  gfr: '𝔤',
+  gg: '≫',
+  ggg: '⋙',
+  gimel: 'ℷ',
+  gjcy: 'ѓ',
+  gl: '≷',
+  glE: '⪒',
+  gla: '⪥',
+  glj: '⪤',
+  gnE: '≩',
+  gnap: '⪊',
+  gnapprox: '⪊',
+  gne: '⪈',
+  gneq: '⪈',
+  gneqq: '≩',
+  gnsim: '⋧',
+  gopf: '𝕘',
+  grave: '`',
+  gscr: 'ℊ',
+  gsim: '≳',
+  gsime: '⪎',
+  gsiml: '⪐',
+  gt: '>',
+  gtcc: '⪧',
+  gtcir: '⩺',
+  gtdot: '⋗',
+  gtlPar: '⦕',
+  gtquest: '⩼',
+  gtrapprox: '⪆',
+  gtrarr: '⥸',
+  gtrdot: '⋗',
+  gtreqless: '⋛',
+  gtreqqless: '⪌',
+  gtrless: '≷',
+  gtrsim: '≳',
+  gvertneqq: '≩︀',
+  gvnE: '≩︀',
+  hArr: '⇔',
+  hairsp: ' ',
+  half: '½',
+  hamilt: 'ℋ',
+  hardcy: 'ъ',
+  harr: '↔',
+  harrcir: '⥈',
+  harrw: '↭',
+  hbar: 'ℏ',
+  hcirc: 'ĥ',
+  hearts: '♥',
+  heartsuit: '♥',
+  hellip: '…',
+  hercon: '⊹',
+  hfr: '𝔥',
+  hksearow: '⤥',
+  hkswarow: '⤦',
+  hoarr: '⇿',
+  homtht: '∻',
+  hookleftarrow: '↩',
+  hookrightarrow: '↪',
+  hopf: '𝕙',
+  horbar: '―',
+  hscr: '𝒽',
+  hslash: 'ℏ',
+  hstrok: 'ħ',
+  hybull: '⁃',
+  hyphen: '‐',
+  iacute: 'í',
+  ic: '⁣',
+  icirc: 'î',
+  icy: 'и',
+  iecy: 'е',
+  iexcl: '¡',
+  iff: '⇔',
+  ifr: '𝔦',
+  igrave: 'ì',
+  ii: 'ⅈ',
+  iiiint: '⨌',
+  iiint: '∭',
+  iinfin: '⧜',
+  iiota: '℩',
+  ijlig: 'ĳ',
+  imacr: 'ī',
+  image: 'ℑ',
+  imagline: 'ℐ',
+  imagpart: 'ℑ',
+  imath: 'ı',
+  imof: '⊷',
+  imped: 'Ƶ',
+  in: '∈',
+  incare: '℅',
+  infin: '∞',
+  infintie: '⧝',
+  inodot: 'ı',
+  int: '∫',
+  intcal: '⊺',
+  integers: 'ℤ',
+  intercal: '⊺',
+  intlarhk: '⨗',
+  intprod: '⨼',
+  iocy: 'ё',
+  iogon: 'į',
+  iopf: '𝕚',
+  iota: 'ι',
+  iprod: '⨼',
+  iquest: '¿',
+  iscr: '𝒾',
+  isin: '∈',
+  isinE: '⋹',
+  isindot: '⋵',
+  isins: '⋴',
+  isinsv: '⋳',
+  isinv: '∈',
+  it: '⁢',
+  itilde: 'ĩ',
+  iukcy: 'і',
+  iuml: 'ï',
+  jcirc: 'ĵ',
+  jcy: 'й',
+  jfr: '𝔧',
+  jmath: 'ȷ',
+  jopf: '𝕛',
+  jscr: '𝒿',
+  jsercy: 'ј',
+  jukcy: 'є',
+  kappa: 'κ',
+  kappav: 'ϰ',
+  kcedil: 'ķ',
+  kcy: 'к',
+  kfr: '𝔨',
+  kgreen: 'ĸ',
+  khcy: 'х',
+  kjcy: 'ќ',
+  kopf: '𝕜',
+  kscr: '𝓀',
+  lAarr: '⇚',
+  lArr: '⇐',
+  lAtail: '⤛',
+  lBarr: '⤎',
+  lE: '≦',
+  lEg: '⪋',
+  lHar: '⥢',
+  lacute: 'ĺ',
+  laemptyv: '⦴',
+  lagran: 'ℒ',
+  lambda: 'λ',
+  lang: '⟨',
+  langd: '⦑',
+  langle: '⟨',
+  lap: '⪅',
+  laquo: '«',
+  larr: '←',
+  larrb: '⇤',
+  larrbfs: '⤟',
+  larrfs: '⤝',
+  larrhk: '↩',
+  larrlp: '↫',
+  larrpl: '⤹',
+  larrsim: '⥳',
+  larrtl: '↢',
+  lat: '⪫',
+  latail: '⤙',
+  late: '⪭',
+  lates: '⪭︀',
+  lbarr: '⤌',
+  lbbrk: '❲',
+  lbrace: '{',
+  lbrack: '[',
+  lbrke: '⦋',
+  lbrksld: '⦏',
+  lbrkslu: '⦍',
+  lcaron: 'ľ',
+  lcedil: 'ļ',
+  lceil: '⌈',
+  lcub: '{',
+  lcy: 'л',
+  ldca: '⤶',
+  ldquo: '“',
+  ldquor: '„',
+  ldrdhar: '⥧',
+  ldrushar: '⥋',
+  ldsh: '↲',
+  le: '≤',
+  leftarrow: '←',
+  leftarrowtail: '↢',
+  leftharpoondown: '↽',
+  leftharpoonup: '↼',
+  leftleftarrows: '⇇',
+  leftrightarrow: '↔',
+  leftrightarrows: '⇆',
+  leftrightharpoons: '⇋',
+  leftrightsquigarrow: '↭',
+  leftthreetimes: '⋋',
+  leg: '⋚',
+  leq: '≤',
+  leqq: '≦',
+  leqslant: '⩽',
+  les: '⩽',
+  lescc: '⪨',
+  lesdot: '⩿',
+  lesdoto: '⪁',
+  lesdotor: '⪃',
+  lesg: '⋚︀',
+  lesges: '⪓',
+  lessapprox: '⪅',
+  lessdot: '⋖',
+  lesseqgtr: '⋚',
+  lesseqqgtr: '⪋',
+  lessgtr: '≶',
+  lesssim: '≲',
+  lfisht: '⥼',
+  lfloor: '⌊',
+  lfr: '𝔩',
+  lg: '≶',
+  lgE: '⪑',
+  lhard: '↽',
+  lharu: '↼',
+  lharul: '⥪',
+  lhblk: '▄',
+  ljcy: 'љ',
+  ll: '≪',
+  llarr: '⇇',
+  llcorner: '⌞',
+  llhard: '⥫',
+  lltri: '◺',
+  lmidot: 'ŀ',
+  lmoust: '⎰',
+  lmoustache: '⎰',
+  lnE: '≨',
+  lnap: '⪉',
+  lnapprox: '⪉',
+  lne: '⪇',
+  lneq: '⪇',
+  lneqq: '≨',
+  lnsim: '⋦',
+  loang: '⟬',
+  loarr: '⇽',
+  lobrk: '⟦',
+  longleftarrow: '⟵',
+  longleftrightarrow: '⟷',
+  longmapsto: '⟼',
+  longrightarrow: '⟶',
+  looparrowleft: '↫',
+  looparrowright: '↬',
+  lopar: '⦅',
+  lopf: '𝕝',
+  loplus: '⨭',
+  lotimes: '⨴',
+  lowast: '∗',
+  lowbar: '_',
+  loz: '◊',
+  lozenge: '◊',
+  lozf: '⧫',
+  lpar: '(',
+  lparlt: '⦓',
+  lrarr: '⇆',
+  lrcorner: '⌟',
+  lrhar: '⇋',
+  lrhard: '⥭',
+  lrm: '‎',
+  lrtri: '⊿',
+  lsaquo: '‹',
+  lscr: '𝓁',
+  lsh: '↰',
+  lsim: '≲',
+  lsime: '⪍',
+  lsimg: '⪏',
+  lsqb: '[',
+  lsquo: '‘',
+  lsquor: '‚',
+  lstrok: 'ł',
+  lt: '<',
+  ltcc: '⪦',
+  ltcir: '⩹',
+  ltdot: '⋖',
+  lthree: '⋋',
+  ltimes: '⋉',
+  ltlarr: '⥶',
+  ltquest: '⩻',
+  ltrPar: '⦖',
+  ltri: '◃',
+  ltrie: '⊴',
+  ltrif: '◂',
+  lurdshar: '⥊',
+  luruhar: '⥦',
+  lvertneqq: '≨︀',
+  lvnE: '≨︀',
+  mDDot: '∺',
+  macr: '¯',
+  male: '♂',
+  malt: '✠',
+  maltese: '✠',
+  map: '↦',
+  mapsto: '↦',
+  mapstodown: '↧',
+  mapstoleft: '↤',
+  mapstoup: '↥',
+  marker: '▮',
+  mcomma: '⨩',
+  mcy: 'м',
+  mdash: '—',
+  measuredangle: '∡',
+  mfr: '𝔪',
+  mho: '℧',
+  micro: 'µ',
+  mid: '∣',
+  midast: '*',
+  midcir: '⫰',
+  middot: '·',
+  minus: '−',
+  minusb: '⊟',
+  minusd: '∸',
+  minusdu: '⨪',
+  mlcp: '⫛',
+  mldr: '…',
+  mnplus: '∓',
+  models: '⊧',
+  mopf: '𝕞',
+  mp: '∓',
+  mscr: '𝓂',
+  mstpos: '∾',
+  mu: 'μ',
+  multimap: '⊸',
+  mumap: '⊸',
+  nGg: '⋙̸',
+  nGt: '≫⃒',
+  nGtv: '≫̸',
+  nLeftarrow: '⇍',
+  nLeftrightarrow: '⇎',
+  nLl: '⋘̸',
+  nLt: '≪⃒',
+  nLtv: '≪̸',
+  nRightarrow: '⇏',
+  nVDash: '⊯',
+  nVdash: '⊮',
+  nabla: '∇',
+  nacute: 'ń',
+  nang: '∠⃒',
+  nap: '≉',
+  napE: '⩰̸',
+  napid: '≋̸',
+  napos: 'ŉ',
+  napprox: '≉',
+  natur: '♮',
+  natural: '♮',
+  naturals: 'ℕ',
+  nbsp: ' ',
+  nbump: '≎̸',
+  nbumpe: '≏̸',
+  ncap: '⩃',
+  ncaron: 'ň',
+  ncedil: 'ņ',
+  ncong: '≇',
+  ncongdot: '⩭̸',
+  ncup: '⩂',
+  ncy: 'н',
+  ndash: '–',
+  ne: '≠',
+  neArr: '⇗',
+  nearhk: '⤤',
+  nearr: '↗',
+  nearrow: '↗',
+  nedot: '≐̸',
+  nequiv: '≢',
+  nesear: '⤨',
+  nesim: '≂̸',
+  nexist: '∄',
+  nexists: '∄',
+  nfr: '𝔫',
+  ngE: '≧̸',
+  nge: '≱',
+  ngeq: '≱',
+  ngeqq: '≧̸',
+  ngeqslant: '⩾̸',
+  nges: '⩾̸',
+  ngsim: '≵',
+  ngt: '≯',
+  ngtr: '≯',
+  nhArr: '⇎',
+  nharr: '↮',
+  nhpar: '⫲',
+  ni: '∋',
+  nis: '⋼',
+  nisd: '⋺',
+  niv: '∋',
+  njcy: 'њ',
+  nlArr: '⇍',
+  nlE: '≦̸',
+  nlarr: '↚',
+  nldr: '‥',
+  nle: '≰',
+  nleftarrow: '↚',
+  nleftrightarrow: '↮',
+  nleq: '≰',
+  nleqq: '≦̸',
+  nleqslant: '⩽̸',
+  nles: '⩽̸',
+  nless: '≮',
+  nlsim: '≴',
+  nlt: '≮',
+  nltri: '⋪',
+  nltrie: '⋬',
+  nmid: '∤',
+  nopf: '𝕟',
+  not: '¬',
+  notin: '∉',
+  notinE: '⋹̸',
+  notindot: '⋵̸',
+  notinva: '∉',
+  notinvb: '⋷',
+  notinvc: '⋶',
+  notni: '∌',
+  notniva: '∌',
+  notnivb: '⋾',
+  notnivc: '⋽',
+  npar: '∦',
+  nparallel: '∦',
+  nparsl: '⫽⃥',
+  npart: '∂̸',
+  npolint: '⨔',
+  npr: '⊀',
+  nprcue: '⋠',
+  npre: '⪯̸',
+  nprec: '⊀',
+  npreceq: '⪯̸',
+  nrArr: '⇏',
+  nrarr: '↛',
+  nrarrc: '⤳̸',
+  nrarrw: '↝̸',
+  nrightarrow: '↛',
+  nrtri: '⋫',
+  nrtrie: '⋭',
+  nsc: '⊁',
+  nsccue: '⋡',
+  nsce: '⪰̸',
+  nscr: '𝓃',
+  nshortmid: '∤',
+  nshortparallel: '∦',
+  nsim: '≁',
+  nsime: '≄',
+  nsimeq: '≄',
+  nsmid: '∤',
+  nspar: '∦',
+  nsqsube: '⋢',
+  nsqsupe: '⋣',
+  nsub: '⊄',
+  nsubE: '⫅̸',
+  nsube: '⊈',
+  nsubset: '⊂⃒',
+  nsubseteq: '⊈',
+  nsubseteqq: '⫅̸',
+  nsucc: '⊁',
+  nsucceq: '⪰̸',
+  nsup: '⊅',
+  nsupE: '⫆̸',
+  nsupe: '⊉',
+  nsupset: '⊃⃒',
+  nsupseteq: '⊉',
+  nsupseteqq: '⫆̸',
+  ntgl: '≹',
+  ntilde: 'ñ',
+  ntlg: '≸',
+  ntriangleleft: '⋪',
+  ntrianglelefteq: '⋬',
+  ntriangleright: '⋫',
+  ntrianglerighteq: '⋭',
+  nu: 'ν',
+  num: '#',
+  numero: '№',
+  numsp: ' ',
+  nvDash: '⊭',
+  nvHarr: '⤄',
+  nvap: '≍⃒',
+  nvdash: '⊬',
+  nvge: '≥⃒',
+  nvgt: '>⃒',
+  nvinfin: '⧞',
+  nvlArr: '⤂',
+  nvle: '≤⃒',
+  nvlt: '<⃒',
+  nvltrie: '⊴⃒',
+  nvrArr: '⤃',
+  nvrtrie: '⊵⃒',
+  nvsim: '∼⃒',
+  nwArr: '⇖',
+  nwarhk: '⤣',
+  nwarr: '↖',
+  nwarrow: '↖',
+  nwnear: '⤧',
+  oS: 'Ⓢ',
+  oacute: 'ó',
+  oast: '⊛',
+  ocir: '⊚',
+  ocirc: 'ô',
+  ocy: 'о',
+  odash: '⊝',
+  odblac: 'ő',
+  odiv: '⨸',
+  odot: '⊙',
+  odsold: '⦼',
+  oelig: 'œ',
+  ofcir: '⦿',
+  ofr: '𝔬',
+  ogon: '˛',
+  ograve: 'ò',
+  ogt: '⧁',
+  ohbar: '⦵',
+  ohm: 'Ω',
+  oint: '∮',
+  olarr: '↺',
+  olcir: '⦾',
+  olcross: '⦻',
+  oline: '‾',
+  olt: '⧀',
+  omacr: 'ō',
+  omega: 'ω',
+  omicron: 'ο',
+  omid: '⦶',
+  ominus: '⊖',
+  oopf: '𝕠',
+  opar: '⦷',
+  operp: '⦹',
+  oplus: '⊕',
+  or: '∨',
+  orarr: '↻',
+  ord: '⩝',
+  order: 'ℴ',
+  orderof: 'ℴ',
+  ordf: 'ª',
+  ordm: 'º',
+  origof: '⊶',
+  oror: '⩖',
+  orslope: '⩗',
+  orv: '⩛',
+  oscr: 'ℴ',
+  oslash: 'ø',
+  osol: '⊘',
+  otilde: 'õ',
+  otimes: '⊗',
+  otimesas: '⨶',
+  ouml: 'ö',
+  ovbar: '⌽',
+  par: '∥',
+  para: '¶',
+  parallel: '∥',
+  parsim: '⫳',
+  parsl: '⫽',
+  part: '∂',
+  pcy: 'п',
+  percnt: '%',
+  period: '.',
+  permil: '‰',
+  perp: '⊥',
+  pertenk: '‱',
+  pfr: '𝔭',
+  phi: 'φ',
+  phiv: 'ϕ',
+  phmmat: 'ℳ',
+  phone: '☎',
+  pi: 'π',
+  pitchfork: '⋔',
+  piv: 'ϖ',
+  planck: 'ℏ',
+  planckh: 'ℎ',
+  plankv: 'ℏ',
+  plus: '+',
+  plusacir: '⨣',
+  plusb: '⊞',
+  pluscir: '⨢',
+  plusdo: '∔',
+  plusdu: '⨥',
+  pluse: '⩲',
+  plusmn: '±',
+  plussim: '⨦',
+  plustwo: '⨧',
+  pm: '±',
+  pointint: '⨕',
+  popf: '𝕡',
+  pound: '£',
+  pr: '≺',
+  prE: '⪳',
+  prap: '⪷',
+  prcue: '≼',
+  pre: '⪯',
+  prec: '≺',
+  precapprox: '⪷',
+  preccurlyeq: '≼',
+  preceq: '⪯',
+  precnapprox: '⪹',
+  precneqq: '⪵',
+  precnsim: '⋨',
+  precsim: '≾',
+  prime: '′',
+  primes: 'ℙ',
+  prnE: '⪵',
+  prnap: '⪹',
+  prnsim: '⋨',
+  prod: '∏',
+  profalar: '⌮',
+  profline: '⌒',
+  profsurf: '⌓',
+  prop: '∝',
+  propto: '∝',
+  prsim: '≾',
+  prurel: '⊰',
+  pscr: '𝓅',
+  psi: 'ψ',
+  puncsp: ' ',
+  qfr: '𝔮',
+  qint: '⨌',
+  qopf: '𝕢',
+  qprime: '⁗',
+  qscr: '𝓆',
+  quaternions: 'ℍ',
+  quatint: '⨖',
+  quest: '?',
+  questeq: '≟',
+  quot: '"',
+  rAarr: '⇛',
+  rArr: '⇒',
+  rAtail: '⤜',
+  rBarr: '⤏',
+  rHar: '⥤',
+  race: '∽̱',
+  racute: 'ŕ',
+  radic: '√',
+  raemptyv: '⦳',
+  rang: '⟩',
+  rangd: '⦒',
+  range: '⦥',
+  rangle: '⟩',
+  raquo: '»',
+  rarr: '→',
+  rarrap: '⥵',
+  rarrb: '⇥',
+  rarrbfs: '⤠',
+  rarrc: '⤳',
+  rarrfs: '⤞',
+  rarrhk: '↪',
+  rarrlp: '↬',
+  rarrpl: '⥅',
+  rarrsim: '⥴',
+  rarrtl: '↣',
+  rarrw: '↝',
+  ratail: '⤚',
+  ratio: '∶',
+  rationals: 'ℚ',
+  rbarr: '⤍',
+  rbbrk: '❳',
+  rbrace: '}',
+  rbrack: ']',
+  rbrke: '⦌',
+  rbrksld: '⦎',
+  rbrkslu: '⦐',
+  rcaron: 'ř',
+  rcedil: 'ŗ',
+  rceil: '⌉',
+  rcub: '}',
+  rcy: 'р',
+  rdca: '⤷',
+  rdldhar: '⥩',
+  rdquo: '”',
+  rdquor: '”',
+  rdsh: '↳',
+  real: 'ℜ',
+  realine: 'ℛ',
+  realpart: 'ℜ',
+  reals: 'ℝ',
+  rect: '▭',
+  reg: '®',
+  rfisht: '⥽',
+  rfloor: '⌋',
+  rfr: '𝔯',
+  rhard: '⇁',
+  rharu: '⇀',
+  rharul: '⥬',
+  rho: 'ρ',
+  rhov: 'ϱ',
+  rightarrow: '→',
+  rightarrowtail: '↣',
+  rightharpoondown: '⇁',
+  rightharpoonup: '⇀',
+  rightleftarrows: '⇄',
+  rightleftharpoons: '⇌',
+  rightrightarrows: '⇉',
+  rightsquigarrow: '↝',
+  rightthreetimes: '⋌',
+  ring: '˚',
+  risingdotseq: '≓',
+  rlarr: '⇄',
+  rlhar: '⇌',
+  rlm: '‏',
+  rmoust: '⎱',
+  rmoustache: '⎱',
+  rnmid: '⫮',
+  roang: '⟭',
+  roarr: '⇾',
+  robrk: '⟧',
+  ropar: '⦆',
+  ropf: '𝕣',
+  roplus: '⨮',
+  rotimes: '⨵',
+  rpar: ')',
+  rpargt: '⦔',
+  rppolint: '⨒',
+  rrarr: '⇉',
+  rsaquo: '›',
+  rscr: '𝓇',
+  rsh: '↱',
+  rsqb: ']',
+  rsquo: '’',
+  rsquor: '’',
+  rthree: '⋌',
+  rtimes: '⋊',
+  rtri: '▹',
+  rtrie: '⊵',
+  rtrif: '▸',
+  rtriltri: '⧎',
+  ruluhar: '⥨',
+  rx: '℞',
+  sacute: 'ś',
+  sbquo: '‚',
+  sc: '≻',
+  scE: '⪴',
+  scap: '⪸',
+  scaron: 'š',
+  sccue: '≽',
+  sce: '⪰',
+  scedil: 'ş',
+  scirc: 'ŝ',
+  scnE: '⪶',
+  scnap: '⪺',
+  scnsim: '⋩',
+  scpolint: '⨓',
+  scsim: '≿',
+  scy: 'с',
+  sdot: '⋅',
+  sdotb: '⊡',
+  sdote: '⩦',
+  seArr: '⇘',
+  searhk: '⤥',
+  searr: '↘',
+  searrow: '↘',
+  sect: '§',
+  semi: ';',
+  seswar: '⤩',
+  setminus: '∖',
+  setmn: '∖',
+  sext: '✶',
+  sfr: '𝔰',
+  sfrown: '⌢',
+  sharp: '♯',
+  shchcy: 'щ',
+  shcy: 'ш',
+  shortmid: '∣',
+  shortparallel: '∥',
+  shy: '­',
+  sigma: 'σ',
+  sigmaf: 'ς',
+  sigmav: 'ς',
+  sim: '∼',
+  simdot: '⩪',
+  sime: '≃',
+  simeq: '≃',
+  simg: '⪞',
+  simgE: '⪠',
+  siml: '⪝',
+  simlE: '⪟',
+  simne: '≆',
+  simplus: '⨤',
+  simrarr: '⥲',
+  slarr: '←',
+  smallsetminus: '∖',
+  smashp: '⨳',
+  smeparsl: '⧤',
+  smid: '∣',
+  smile: '⌣',
+  smt: '⪪',
+  smte: '⪬',
+  smtes: '⪬︀',
+  softcy: 'ь',
+  sol: '/',
+  solb: '⧄',
+  solbar: '⌿',
+  sopf: '𝕤',
+  spades: '♠',
+  spadesuit: '♠',
+  spar: '∥',
+  sqcap: '⊓',
+  sqcaps: '⊓︀',
+  sqcup: '⊔',
+  sqcups: '⊔︀',
+  sqsub: '⊏',
+  sqsube: '⊑',
+  sqsubset: '⊏',
+  sqsubseteq: '⊑',
+  sqsup: '⊐',
+  sqsupe: '⊒',
+  sqsupset: '⊐',
+  sqsupseteq: '⊒',
+  squ: '□',
+  square: '□',
+  squarf: '▪',
+  squf: '▪',
+  srarr: '→',
+  sscr: '𝓈',
+  ssetmn: '∖',
+  ssmile: '⌣',
+  sstarf: '⋆',
+  star: '☆',
+  starf: '★',
+  straightepsilon: 'ϵ',
+  straightphi: 'ϕ',
+  strns: '¯',
+  sub: '⊂',
+  subE: '⫅',
+  subdot: '⪽',
+  sube: '⊆',
+  subedot: '⫃',
+  submult: '⫁',
+  subnE: '⫋',
+  subne: '⊊',
+  subplus: '⪿',
+  subrarr: '⥹',
+  subset: '⊂',
+  subseteq: '⊆',
+  subseteqq: '⫅',
+  subsetneq: '⊊',
+  subsetneqq: '⫋',
+  subsim: '⫇',
+  subsub: '⫕',
+  subsup: '⫓',
+  succ: '≻',
+  succapprox: '⪸',
+  succcurlyeq: '≽',
+  succeq: '⪰',
+  succnapprox: '⪺',
+  succneqq: '⪶',
+  succnsim: '⋩',
+  succsim: '≿',
+  sum: '∑',
+  sung: '♪',
+  sup1: '¹',
+  sup2: '²',
+  sup3: '³',
+  sup: '⊃',
+  supE: '⫆',
+  supdot: '⪾',
+  supdsub: '⫘',
+  supe: '⊇',
+  supedot: '⫄',
+  suphsol: '⟉',
+  suphsub: '⫗',
+  suplarr: '⥻',
+  supmult: '⫂',
+  supnE: '⫌',
+  supne: '⊋',
+  supplus: '⫀',
+  supset: '⊃',
+  supseteq: '⊇',
+  supseteqq: '⫆',
+  supsetneq: '⊋',
+  supsetneqq: '⫌',
+  supsim: '⫈',
+  supsub: '⫔',
+  supsup: '⫖',
+  swArr: '⇙',
+  swarhk: '⤦',
+  swarr: '↙',
+  swarrow: '↙',
+  swnwar: '⤪',
+  szlig: 'ß',
+  target: '⌖',
+  tau: 'τ',
+  tbrk: '⎴',
+  tcaron: 'ť',
+  tcedil: 'ţ',
+  tcy: 'т',
+  tdot: '⃛',
+  telrec: '⌕',
+  tfr: '𝔱',
+  there4: '∴',
+  therefore: '∴',
+  theta: 'θ',
+  thetasym: 'ϑ',
+  thetav: 'ϑ',
+  thickapprox: '≈',
+  thicksim: '∼',
+  thinsp: ' ',
+  thkap: '≈',
+  thksim: '∼',
+  thorn: 'þ',
+  tilde: '˜',
+  times: '×',
+  timesb: '⊠',
+  timesbar: '⨱',
+  timesd: '⨰',
+  tint: '∭',
+  toea: '⤨',
+  top: '⊤',
+  topbot: '⌶',
+  topcir: '⫱',
+  topf: '𝕥',
+  topfork: '⫚',
+  tosa: '⤩',
+  tprime: '‴',
+  trade: '™',
+  triangle: '▵',
+  triangledown: '▿',
+  triangleleft: '◃',
+  trianglelefteq: '⊴',
+  triangleq: '≜',
+  triangleright: '▹',
+  trianglerighteq: '⊵',
+  tridot: '◬',
+  trie: '≜',
+  triminus: '⨺',
+  triplus: '⨹',
+  trisb: '⧍',
+  tritime: '⨻',
+  trpezium: '⏢',
+  tscr: '𝓉',
+  tscy: 'ц',
+  tshcy: 'ћ',
+  tstrok: 'ŧ',
+  twixt: '≬',
+  twoheadleftarrow: '↞',
+  twoheadrightarrow: '↠',
+  uArr: '⇑',
+  uHar: '⥣',
+  uacute: 'ú',
+  uarr: '↑',
+  ubrcy: 'ў',
+  ubreve: 'ŭ',
+  ucirc: 'û',
+  ucy: 'у',
+  udarr: '⇅',
+  udblac: 'ű',
+  udhar: '⥮',
+  ufisht: '⥾',
+  ufr: '𝔲',
+  ugrave: 'ù',
+  uharl: '↿',
+  uharr: '↾',
+  uhblk: '▀',
+  ulcorn: '⌜',
+  ulcorner: '⌜',
+  ulcrop: '⌏',
+  ultri: '◸',
+  umacr: 'ū',
+  uml: '¨',
+  uogon: 'ų',
+  uopf: '𝕦',
+  uparrow: '↑',
+  updownarrow: '↕',
+  upharpoonleft: '↿',
+  upharpoonright: '↾',
+  uplus: '⊎',
+  upsi: 'υ',
+  upsih: 'ϒ',
+  upsilon: 'υ',
+  upuparrows: '⇈',
+  urcorn: '⌝',
+  urcorner: '⌝',
+  urcrop: '⌎',
+  uring: 'ů',
+  urtri: '◹',
+  uscr: '𝓊',
+  utdot: '⋰',
+  utilde: 'ũ',
+  utri: '▵',
+  utrif: '▴',
+  uuarr: '⇈',
+  uuml: 'ü',
+  uwangle: '⦧',
+  vArr: '⇕',
+  vBar: '⫨',
+  vBarv: '⫩',
+  vDash: '⊨',
+  vangrt: '⦜',
+  varepsilon: 'ϵ',
+  varkappa: 'ϰ',
+  varnothing: '∅',
+  varphi: 'ϕ',
+  varpi: 'ϖ',
+  varpropto: '∝',
+  varr: '↕',
+  varrho: 'ϱ',
+  varsigma: 'ς',
+  varsubsetneq: '⊊︀',
+  varsubsetneqq: '⫋︀',
+  varsupsetneq: '⊋︀',
+  varsupsetneqq: '⫌︀',
+  vartheta: 'ϑ',
+  vartriangleleft: '⊲',
+  vartriangleright: '⊳',
+  vcy: 'в',
+  vdash: '⊢',
+  vee: '∨',
+  veebar: '⊻',
+  veeeq: '≚',
+  vellip: '⋮',
+  verbar: '|',
+  vert: '|',
+  vfr: '𝔳',
+  vltri: '⊲',
+  vnsub: '⊂⃒',
+  vnsup: '⊃⃒',
+  vopf: '𝕧',
+  vprop: '∝',
+  vrtri: '⊳',
+  vscr: '𝓋',
+  vsubnE: '⫋︀',
+  vsubne: '⊊︀',
+  vsupnE: '⫌︀',
+  vsupne: '⊋︀',
+  vzigzag: '⦚',
+  wcirc: 'ŵ',
+  wedbar: '⩟',
+  wedge: '∧',
+  wedgeq: '≙',
+  weierp: '℘',
+  wfr: '𝔴',
+  wopf: '𝕨',
+  wp: '℘',
+  wr: '≀',
+  wreath: '≀',
+  wscr: '𝓌',
+  xcap: '⋂',
+  xcirc: '◯',
+  xcup: '⋃',
+  xdtri: '▽',
+  xfr: '𝔵',
+  xhArr: '⟺',
+  xharr: '⟷',
+  xi: 'ξ',
+  xlArr: '⟸',
+  xlarr: '⟵',
+  xmap: '⟼',
+  xnis: '⋻',
+  xodot: '⨀',
+  xopf: '𝕩',
+  xoplus: '⨁',
+  xotime: '⨂',
+  xrArr: '⟹',
+  xrarr: '⟶',
+  xscr: '𝓍',
+  xsqcup: '⨆',
+  xuplus: '⨄',
+  xutri: '△',
+  xvee: '⋁',
+  xwedge: '⋀',
+  yacute: 'ý',
+  yacy: 'я',
+  ycirc: 'ŷ',
+  ycy: 'ы',
+  yen: '¥',
+  yfr: '𝔶',
+  yicy: 'ї',
+  yopf: '𝕪',
+  yscr: '𝓎',
+  yucy: 'ю',
+  yuml: 'ÿ',
+  zacute: 'ź',
+  zcaron: 'ž',
+  zcy: 'з',
+  zdot: 'ż',
+  zeetrf: 'ℨ',
+  zeta: 'ζ',
+  zfr: '𝔷',
+  zhcy: 'ж',
+  zigrarr: '⇝',
+  zopf: '𝕫',
+  zscr: '𝓏',
+  zwj: '‍',
+  zwnj: '‌'
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/character-reference-invalid/index.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/character-reference-invalid/index.js ***!
+  \***********************************************************/
+/*! exports provided: characterReferenceInvalid */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "characterReferenceInvalid", function() { return characterReferenceInvalid; });
+/**
+ * Map of invalid numeric character references to their replacements, according to HTML.
+ *
+ * @type {Record<number, string>}
+ */
+const characterReferenceInvalid = {
+  0: '�',
+  128: '€',
+  130: '‚',
+  131: 'ƒ',
+  132: '„',
+  133: '…',
+  134: '†',
+  135: '‡',
+  136: 'ˆ',
+  137: '‰',
+  138: 'Š',
+  139: '‹',
+  140: 'Œ',
+  142: 'Ž',
+  145: '‘',
+  146: '’',
+  147: '“',
+  148: '”',
+  149: '•',
+  150: '–',
+  151: '—',
+  152: '˜',
+  153: '™',
+  154: 'š',
+  155: '›',
+  156: 'œ',
+  158: 'ž',
+  159: 'Ÿ'
+}
+
 
 /***/ }),
 
@@ -746,27 +3046,43 @@ module.exports = JSON.parse("{\"0\":\"�\",\"128\":\"€\",\"130\":\"‚\",\"13
 /*!******************************************************!*\
   !*** ./node_modules/comma-separated-tokens/index.js ***!
   \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: parse, stringify */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "parse", function() { return parse; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "stringify", function() { return stringify; });
+/**
+ * @typedef Options
+ *   Configuration for `stringify`.
+ * @property {boolean} [padLeft=true]
+ *   Whether to pad a space before a token.
+ * @property {boolean} [padRight=false]
+ *   Whether to pad a space after a token.
+ */
 
+/**
+ * @typedef {Options} StringifyOptions
+ *   Please use `StringifyOptions` instead.
+ */
 
-exports.parse = parse
-exports.stringify = stringify
-
-var comma = ','
-var space = ' '
-var empty = ''
-
-// Parse comma-separated tokens to an array.
+/**
+ * Parse comma-separated tokens to an array.
+ *
+ * @param {string} value
+ *   Comma-separated tokens.
+ * @returns {Array<string>}
+ *   List of tokens.
+ */
 function parse(value) {
-  var values = []
-  var input = String(value || empty)
-  var index = input.indexOf(comma)
-  var lastIndex = 0
-  var end = false
-  var val
+  /** @type {Array<string>} */
+  const tokens = []
+  const input = String(value || '')
+  let index = input.indexOf(',')
+  let start = 0
+  /** @type {boolean} */
+  let end = false
 
   while (!end) {
     if (index === -1) {
@@ -774,33 +3090,42 @@ function parse(value) {
       end = true
     }
 
-    val = input.slice(lastIndex, index).trim()
+    const token = input.slice(start, index).trim()
 
-    if (val || !end) {
-      values.push(val)
+    if (token || !end) {
+      tokens.push(token)
     }
 
-    lastIndex = index + 1
-    index = input.indexOf(comma, lastIndex)
+    start = index + 1
+    index = input.indexOf(',', start)
   }
 
-  return values
+  return tokens
 }
 
-// Compile an array to comma-separated tokens.
-// `options.padLeft` (default: `true`) pads a space left of each token, and
-// `options.padRight` (default: `false`) pads a space to the right of each token.
+/**
+ * Serialize an array of strings or numbers to comma-separated tokens.
+ *
+ * @param {Array<string|number>} values
+ *   List of tokens.
+ * @param {Options} [options]
+ *   Configuration for `stringify` (optional).
+ * @returns {string}
+ *   Comma-separated tokens.
+ */
 function stringify(values, options) {
-  var settings = options || {}
-  var left = settings.padLeft === false ? empty : space
-  var right = settings.padRight ? space : empty
+  const settings = options || {}
 
   // Ensure the last empty entry is seen.
-  if (values[values.length - 1] === empty) {
-    values = values.concat(empty)
-  }
+  const input = values[values.length - 1] === '' ? [...values, ''] : values
 
-  return values.join(right + comma + left).trim()
+  return input
+    .join(
+      (settings.padRight ? ' ' : '') +
+        ',' +
+        (settings.padLeft === false ? '' : ' ')
+    )
+    .trim()
 }
 
 
@@ -1622,6 +3947,40 @@ function factory(ReactComponent, isValidElement, ReactNoopUpdateQueue) {
 }
 
 module.exports = factory;
+
+
+/***/ }),
+
+/***/ "./node_modules/decode-named-character-reference/index.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/decode-named-character-reference/index.js ***!
+  \****************************************************************/
+/*! exports provided: decodeNamedCharacterReference */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "decodeNamedCharacterReference", function() { return decodeNamedCharacterReference; });
+/* harmony import */ var character_entities__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! character-entities */ "./node_modules/character-entities/index.js");
+
+
+// To do: next major: use `Object.hasOwn`.
+const own = {}.hasOwnProperty
+
+/**
+ * Decode a single character reference (without the `&` or `;`).
+ * You probably only need this when you’re building parsers yourself that follow
+ * different rules compared to HTML.
+ * This is optimized to be tiny in browsers.
+ *
+ * @param {string} value
+ *   `notin` (named), `#123` (deci), `#x123` (hexa).
+ * @returns {string|false}
+ *   Decoded reference.
+ */
+function decodeNamedCharacterReference(value) {
+  return own.call(character_entities__WEBPACK_IMPORTED_MODULE_0__["characterEntities"], value) ? character_entities__WEBPACK_IMPORTED_MODULE_0__["characterEntities"][value] : false
+}
 
 
 /***/ }),
@@ -2786,37 +5145,94 @@ module.exports = warning;
 /*!********************************************************!*\
   !*** ./node_modules/hast-util-parse-selector/index.js ***!
   \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: parseSelector */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _lib_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lib/index.js */ "./node_modules/hast-util-parse-selector/lib/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "parseSelector", function() { return _lib_index_js__WEBPACK_IMPORTED_MODULE_0__["parseSelector"]; });
 
 
-module.exports = parse
 
-var search = /[#.]/g
 
-// Create a hast element from a simple CSS selector.
-function parse(selector, defaultTagName) {
-  var value = selector || ''
-  var name = defaultTagName || 'div'
-  var props = {}
-  var start = 0
-  var subvalue
-  var previous
-  var match
+/***/ }),
+
+/***/ "./node_modules/hast-util-parse-selector/lib/index.js":
+/*!************************************************************!*\
+  !*** ./node_modules/hast-util-parse-selector/lib/index.js ***!
+  \************************************************************/
+/*! exports provided: parseSelector */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "parseSelector", function() { return parseSelector; });
+/**
+ * @typedef {import('hast').Element} Element
+ * @typedef {import('hast').Properties} Properties
+ */
+
+/**
+ * @template {string} SimpleSelector
+ *   Selector type.
+ * @template {string} DefaultTagName
+ *   Default tag name.
+ * @typedef {(
+ *   SimpleSelector extends ''
+ *     ? DefaultTagName
+ *     : SimpleSelector extends `${infer TagName}.${infer Rest}`
+ *     ? ExtractTagName<TagName, DefaultTagName>
+ *     : SimpleSelector extends `${infer TagName}#${infer Rest}`
+ *     ? ExtractTagName<TagName, DefaultTagName>
+ *     : SimpleSelector extends string
+ *     ? SimpleSelector
+ *     : DefaultTagName
+ * )} ExtractTagName
+ *   Extract tag name from a simple selector.
+ */
+
+const search = /[#.]/g
+
+/**
+ * Create a hast element from a simple CSS selector.
+ *
+ * @template {string} Selector
+ *   Type of selector.
+ * @template {string} [DefaultTagName='div']
+ *   Type of default tag name (default: `'div'`).
+ * @param {Selector | null | undefined} [selector]
+ *   Simple CSS selector (optional).
+ *
+ *   Can contain a tag name (`foo`), classes (`.bar`), and an ID (`#baz`).
+ *   Multiple classes are allowed.
+ *   Uses the last ID if multiple IDs are found.
+ * @param {DefaultTagName | null | undefined} [defaultTagName='div']
+ *   Tag name to use if `selector` does not specify one (default: `'div'`).
+ * @returns {Element & {tagName: ExtractTagName<Selector, DefaultTagName>}}
+ *   Built element.
+ */
+function parseSelector(selector, defaultTagName) {
+  const value = selector || ''
+  /** @type {Properties} */
+  const props = {}
+  let start = 0
+  /** @type {string | undefined} */
+  let previous
+  /** @type {string | undefined} */
+  let tagName
 
   while (start < value.length) {
     search.lastIndex = start
-    match = search.exec(value)
-    subvalue = value.slice(start, match ? match.index : value.length)
+    const match = search.exec(value)
+    const subvalue = value.slice(start, match ? match.index : value.length)
 
     if (subvalue) {
       if (!previous) {
-        name = subvalue
+        tagName = subvalue
       } else if (previous === '#') {
         props.id = subvalue
-      } else if (props.className) {
+      } else if (Array.isArray(props.className)) {
         props.className.push(subvalue)
       } else {
         props.className = [subvalue]
@@ -2831,253 +5247,14 @@ function parse(selector, defaultTagName) {
     }
   }
 
-  return {type: 'element', tagName: name, properties: props, children: []}
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/hastscript/factory.js":
-/*!********************************************!*\
-  !*** ./node_modules/hastscript/factory.js ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var find = __webpack_require__(/*! property-information/find */ "./node_modules/property-information/find.js")
-var normalize = __webpack_require__(/*! property-information/normalize */ "./node_modules/property-information/normalize.js")
-var parseSelector = __webpack_require__(/*! hast-util-parse-selector */ "./node_modules/hast-util-parse-selector/index.js")
-var spaces = __webpack_require__(/*! space-separated-tokens */ "./node_modules/space-separated-tokens/index.js").parse
-var commas = __webpack_require__(/*! comma-separated-tokens */ "./node_modules/comma-separated-tokens/index.js").parse
-
-module.exports = factory
-
-var own = {}.hasOwnProperty
-
-function factory(schema, defaultTagName, caseSensitive) {
-  var adjust = caseSensitive ? createAdjustMap(caseSensitive) : null
-
-  return h
-
-  // Hyperscript compatible DSL for creating virtual hast trees.
-  function h(selector, properties) {
-    var node = parseSelector(selector, defaultTagName)
-    var children = Array.prototype.slice.call(arguments, 2)
-    var name = node.tagName.toLowerCase()
-    var property
-
-    node.tagName = adjust && own.call(adjust, name) ? adjust[name] : name
-
-    if (properties && isChildren(properties, node)) {
-      children.unshift(properties)
-      properties = null
-    }
-
-    if (properties) {
-      for (property in properties) {
-        addProperty(node.properties, property, properties[property])
-      }
-    }
-
-    addChild(node.children, children)
-
-    if (node.tagName === 'template') {
-      node.content = {type: 'root', children: node.children}
-      node.children = []
-    }
-
-    return node
-  }
-
-  function addProperty(properties, key, value) {
-    var info
-    var property
-    var result
-
-    // Ignore nullish and NaN values.
-    if (value === null || value === undefined || value !== value) {
-      return
-    }
-
-    info = find(schema, key)
-    property = info.property
-    result = value
-
-    // Handle list values.
-    if (typeof result === 'string') {
-      if (info.spaceSeparated) {
-        result = spaces(result)
-      } else if (info.commaSeparated) {
-        result = commas(result)
-      } else if (info.commaOrSpaceSeparated) {
-        result = spaces(commas(result).join(' '))
-      }
-    }
-
-    // Accept `object` on style.
-    if (property === 'style' && typeof value !== 'string') {
-      result = style(result)
-    }
-
-    // Class-names (which can be added both on the `selector` and here).
-    if (property === 'className' && properties.className) {
-      result = properties.className.concat(result)
-    }
-
-    properties[property] = parsePrimitives(info, property, result)
+  return {
+    type: 'element',
+    // @ts-expect-error: tag name is parsed.
+    tagName: tagName || defaultTagName || 'div',
+    properties: props,
+    children: []
   }
 }
-
-function isChildren(value, node) {
-  return (
-    typeof value === 'string' ||
-    'length' in value ||
-    isNode(node.tagName, value)
-  )
-}
-
-function isNode(tagName, value) {
-  var type = value.type
-
-  if (tagName === 'input' || !type || typeof type !== 'string') {
-    return false
-  }
-
-  if (typeof value.children === 'object' && 'length' in value.children) {
-    return true
-  }
-
-  type = type.toLowerCase()
-
-  if (tagName === 'button') {
-    return (
-      type !== 'menu' &&
-      type !== 'submit' &&
-      type !== 'reset' &&
-      type !== 'button'
-    )
-  }
-
-  return 'value' in value
-}
-
-function addChild(nodes, value) {
-  var index
-  var length
-
-  if (typeof value === 'string' || typeof value === 'number') {
-    nodes.push({type: 'text', value: String(value)})
-    return
-  }
-
-  if (typeof value === 'object' && 'length' in value) {
-    index = -1
-    length = value.length
-
-    while (++index < length) {
-      addChild(nodes, value[index])
-    }
-
-    return
-  }
-
-  if (typeof value !== 'object' || !('type' in value)) {
-    throw new Error('Expected node, nodes, or string, got `' + value + '`')
-  }
-
-  nodes.push(value)
-}
-
-// Parse a (list of) primitives.
-function parsePrimitives(info, name, value) {
-  var index
-  var length
-  var result
-
-  if (typeof value !== 'object' || !('length' in value)) {
-    return parsePrimitive(info, name, value)
-  }
-
-  length = value.length
-  index = -1
-  result = []
-
-  while (++index < length) {
-    result[index] = parsePrimitive(info, name, value[index])
-  }
-
-  return result
-}
-
-// Parse a single primitives.
-function parsePrimitive(info, name, value) {
-  var result = value
-
-  if (info.number || info.positiveNumber) {
-    if (!isNaN(result) && result !== '') {
-      result = Number(result)
-    }
-  } else if (info.boolean || info.overloadedBoolean) {
-    // Accept `boolean` and `string`.
-    if (
-      typeof result === 'string' &&
-      (result === '' || normalize(value) === normalize(name))
-    ) {
-      result = true
-    }
-  }
-
-  return result
-}
-
-function style(value) {
-  var result = []
-  var key
-
-  for (key in value) {
-    result.push([key, value[key]].join(': '))
-  }
-
-  return result.join('; ')
-}
-
-function createAdjustMap(values) {
-  var length = values.length
-  var index = -1
-  var result = {}
-  var value
-
-  while (++index < length) {
-    value = values[index]
-    result[value.toLowerCase()] = value
-  }
-
-  return result
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/hastscript/html.js":
-/*!*****************************************!*\
-  !*** ./node_modules/hastscript/html.js ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var schema = __webpack_require__(/*! property-information/html */ "./node_modules/property-information/html.js")
-var factory = __webpack_require__(/*! ./factory */ "./node_modules/hastscript/factory.js")
-
-var html = factory(schema, 'div')
-html.displayName = 'html'
-
-module.exports = html
 
 
 /***/ }),
@@ -3086,13 +5263,511 @@ module.exports = html
 /*!******************************************!*\
   !*** ./node_modules/hastscript/index.js ***!
   \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: h, s */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _lib_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lib/index.js */ "./node_modules/hastscript/lib/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "h", function() { return _lib_index_js__WEBPACK_IMPORTED_MODULE_0__["h"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "s", function() { return _lib_index_js__WEBPACK_IMPORTED_MODULE_0__["s"]; });
+
+/**
+ * @typedef {import('./lib/create-h.js').Child} Child
+ * @typedef {import('./lib/create-h.js').Properties} Properties
+ * @typedef {import('./lib/create-h.js').Result} Result
+ */
 
 
-module.exports = __webpack_require__(/*! ./html */ "./node_modules/hastscript/html.js")
+
+
+/***/ }),
+
+/***/ "./node_modules/hastscript/lib/create-h.js":
+/*!*************************************************!*\
+  !*** ./node_modules/hastscript/lib/create-h.js ***!
+  \*************************************************/
+/*! exports provided: createH */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createH", function() { return createH; });
+/* harmony import */ var comma_separated_tokens__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! comma-separated-tokens */ "./node_modules/comma-separated-tokens/index.js");
+/* harmony import */ var hast_util_parse_selector__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! hast-util-parse-selector */ "./node_modules/hast-util-parse-selector/index.js");
+/* harmony import */ var property_information__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! property-information */ "./node_modules/property-information/index.js");
+/* harmony import */ var space_separated_tokens__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! space-separated-tokens */ "./node_modules/space-separated-tokens/index.js");
+/**
+ * @import {Element, Nodes, RootContent, Root} from 'hast'
+ * @import {Info, Schema} from 'property-information'
+ */
+
+/**
+ * @typedef {Array<Nodes | PrimitiveChild>} ArrayChildNested
+ *   List of children (deep).
+ */
+
+/**
+ * @typedef {Array<ArrayChildNested | Nodes | PrimitiveChild>} ArrayChild
+ *   List of children.
+ */
+
+/**
+ * @typedef {Array<number | string>} ArrayValue
+ *   List of property values for space- or comma separated values (such as `className`).
+ */
+
+/**
+ * @typedef {ArrayChild | Nodes | PrimitiveChild} Child
+ *   Acceptable child value.
+ */
+
+/**
+ * @typedef {number | string | null | undefined} PrimitiveChild
+ *   Primitive children, either ignored (nullish), or turned into text nodes.
+ */
+
+/**
+ * @typedef {boolean | number | string | null | undefined} PrimitiveValue
+ *   Primitive property value.
+ */
+
+/**
+ * @typedef {Record<string, PropertyValue | Style>} Properties
+ *   Acceptable value for element properties.
+ */
+
+/**
+ * @typedef {ArrayValue | PrimitiveValue} PropertyValue
+ *   Primitive value or list value.
+ */
+
+/**
+ * @typedef {Element | Root} Result
+ *   Result from a `h` (or `s`) call.
+ */
+
+/**
+ * @typedef {number | string} StyleValue
+ *   Value for a CSS style field.
+ */
+
+/**
+ * @typedef {Record<string, StyleValue>} Style
+ *   Supported value of a `style` prop.
+ */
+
+
+
+
+
+
+/**
+ * @param {Schema} schema
+ *   Schema to use.
+ * @param {string} defaultTagName
+ *   Default tag name.
+ * @param {ReadonlyArray<string> | undefined} [caseSensitive]
+ *   Case-sensitive tag names (default: `undefined`).
+ * @returns
+ *   `h`.
+ */
+function createH(schema, defaultTagName, caseSensitive) {
+  const adjust = caseSensitive ? createAdjustMap(caseSensitive) : undefined
+
+  /**
+   * Hyperscript compatible DSL for creating virtual hast trees.
+   *
+   * @overload
+   * @param {null | undefined} [selector]
+   * @param {...Child} children
+   * @returns {Root}
+   *
+   * @overload
+   * @param {string} selector
+   * @param {Properties} properties
+   * @param {...Child} children
+   * @returns {Element}
+   *
+   * @overload
+   * @param {string} selector
+   * @param {...Child} children
+   * @returns {Element}
+   *
+   * @param {string | null | undefined} [selector]
+   *   Selector.
+   * @param {Child | Properties | null | undefined} [properties]
+   *   Properties (or first child) (default: `undefined`).
+   * @param {...Child} children
+   *   Children.
+   * @returns {Result}
+   *   Result.
+   */
+  function h(selector, properties, ...children) {
+    /** @type {Result} */
+    let node
+
+    if (selector === null || selector === undefined) {
+      node = {type: 'root', children: []}
+      // Properties are not supported for roots.
+      const child = /** @type {Child} */ (properties)
+      children.unshift(child)
+    } else {
+      node = Object(hast_util_parse_selector__WEBPACK_IMPORTED_MODULE_1__["parseSelector"])(selector, defaultTagName)
+      // Normalize the name.
+      const lower = node.tagName.toLowerCase()
+      const adjusted = adjust ? adjust.get(lower) : undefined
+      node.tagName = adjusted || lower
+
+      // Handle properties.
+      if (isChild(properties)) {
+        children.unshift(properties)
+      } else {
+        for (const [key, value] of Object.entries(properties)) {
+          addProperty(schema, node.properties, key, value)
+        }
+      }
+    }
+
+    // Handle children.
+    for (const child of children) {
+      addChild(node.children, child)
+    }
+
+    if (node.type === 'element' && node.tagName === 'template') {
+      node.content = {type: 'root', children: node.children}
+      node.children = []
+    }
+
+    return node
+  }
+
+  return h
+}
+
+/**
+ * Check if something is properties or a child.
+ *
+ * @param {Child | Properties} value
+ *   Value to check.
+ * @returns {value is Child}
+ *   Whether `value` is definitely a child.
+ */
+function isChild(value) {
+  // Never properties if not an object.
+  if (value === null || typeof value !== 'object' || Array.isArray(value)) {
+    return true
+  }
+
+  // Never node without `type`; that’s the main discriminator.
+  if (typeof value.type !== 'string') return false
+
+  // Slower check: never property value if object or array with
+  // non-number/strings.
+  const record = /** @type {Record<string, unknown>} */ (value)
+  const keys = Object.keys(value)
+
+  for (const key of keys) {
+    const value = record[key]
+
+    if (value && typeof value === 'object') {
+      if (!Array.isArray(value)) return true
+
+      const list = /** @type {ReadonlyArray<unknown>} */ (value)
+
+      for (const item of list) {
+        if (typeof item !== 'number' && typeof item !== 'string') {
+          return true
+        }
+      }
+    }
+  }
+
+  // Also see empty `children` as a node.
+  if ('children' in value && Array.isArray(value.children)) {
+    return true
+  }
+
+  // Default to properties, someone can always pass an empty object,
+  // put `data: {}` in a node,
+  // or wrap it in an array.
+  return false
+}
+
+/**
+ * @param {Schema} schema
+ *   Schema.
+ * @param {Properties} properties
+ *   Properties object.
+ * @param {string} key
+ *   Property name.
+ * @param {PropertyValue | Style} value
+ *   Property value.
+ * @returns {undefined}
+ *   Nothing.
+ */
+function addProperty(schema, properties, key, value) {
+  const info = Object(property_information__WEBPACK_IMPORTED_MODULE_2__["find"])(schema, key)
+  /** @type {PropertyValue} */
+  let result
+
+  // Ignore nullish and NaN values.
+  if (value === null || value === undefined) return
+
+  if (typeof value === 'number') {
+    // Ignore NaN.
+    if (Number.isNaN(value)) return
+
+    result = value
+  }
+  // Booleans.
+  else if (typeof value === 'boolean') {
+    result = value
+  }
+  // Handle list values.
+  else if (typeof value === 'string') {
+    if (info.spaceSeparated) {
+      result = Object(space_separated_tokens__WEBPACK_IMPORTED_MODULE_3__["parse"])(value)
+    } else if (info.commaSeparated) {
+      result = Object(comma_separated_tokens__WEBPACK_IMPORTED_MODULE_0__["parse"])(value)
+    } else if (info.commaOrSpaceSeparated) {
+      result = Object(space_separated_tokens__WEBPACK_IMPORTED_MODULE_3__["parse"])(Object(comma_separated_tokens__WEBPACK_IMPORTED_MODULE_0__["parse"])(value).join(' '))
+    } else {
+      result = parsePrimitive(info, info.property, value)
+    }
+  } else if (Array.isArray(value)) {
+    result = [...value]
+  } else {
+    result = info.property === 'style' ? style(value) : String(value)
+  }
+
+  if (Array.isArray(result)) {
+    /** @type {Array<number | string>} */
+    const finalResult = []
+
+    for (const item of result) {
+      // Assume no booleans in array.
+      finalResult.push(
+        /** @type {number | string} */ (
+          parsePrimitive(info, info.property, item)
+        )
+      )
+    }
+
+    result = finalResult
+  }
+
+  // Class names (which can be added both on the `selector` and here).
+  if (info.property === 'className' && Array.isArray(properties.className)) {
+    // Assume no booleans in `className`.
+    result = properties.className.concat(
+      /** @type {Array<number | string> | number | string} */ (result)
+    )
+  }
+
+  properties[info.property] = result
+}
+
+/**
+ * @param {Array<RootContent>} nodes
+ *   Children.
+ * @param {Child} value
+ *   Child.
+ * @returns {undefined}
+ *   Nothing.
+ */
+function addChild(nodes, value) {
+  if (value === null || value === undefined) {
+    // Empty.
+  } else if (typeof value === 'number' || typeof value === 'string') {
+    nodes.push({type: 'text', value: String(value)})
+  } else if (Array.isArray(value)) {
+    for (const child of value) {
+      addChild(nodes, child)
+    }
+  } else if (typeof value === 'object' && 'type' in value) {
+    if (value.type === 'root') {
+      addChild(nodes, value.children)
+    } else {
+      nodes.push(value)
+    }
+  } else {
+    throw new Error('Expected node, nodes, or string, got `' + value + '`')
+  }
+}
+
+/**
+ * Parse a single primitives.
+ *
+ * @param {Info} info
+ *   Property information.
+ * @param {string} name
+ *   Property name.
+ * @param {PrimitiveValue} value
+ *   Property value.
+ * @returns {PrimitiveValue}
+ *   Property value.
+ */
+function parsePrimitive(info, name, value) {
+  if (typeof value === 'string') {
+    if (info.number && value && !Number.isNaN(Number(value))) {
+      return Number(value)
+    }
+
+    if (
+      (info.boolean || info.overloadedBoolean) &&
+      (value === '' || Object(property_information__WEBPACK_IMPORTED_MODULE_2__["normalize"])(value) === Object(property_information__WEBPACK_IMPORTED_MODULE_2__["normalize"])(name))
+    ) {
+      return true
+    }
+  }
+
+  return value
+}
+
+/**
+ * Serialize a `style` object as a string.
+ *
+ * @param {Style} styles
+ *   Style object.
+ * @returns {string}
+ *   CSS string.
+ */
+function style(styles) {
+  /** @type {Array<string>} */
+  const result = []
+
+  for (const [key, value] of Object.entries(styles)) {
+    result.push([key, value].join(': '))
+  }
+
+  return result.join('; ')
+}
+
+/**
+ * Create a map to adjust casing.
+ *
+ * @param {ReadonlyArray<string>} values
+ *   List of properly cased keys.
+ * @returns {Map<string, string>}
+ *   Map of lowercase keys to uppercase keys.
+ */
+function createAdjustMap(values) {
+  /** @type {Map<string, string>} */
+  const result = new Map()
+
+  for (const value of values) {
+    result.set(value.toLowerCase(), value)
+  }
+
+  return result
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/hastscript/lib/index.js":
+/*!**********************************************!*\
+  !*** ./node_modules/hastscript/lib/index.js ***!
+  \**********************************************/
+/*! exports provided: h, s */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return h; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "s", function() { return s; });
+/* harmony import */ var property_information__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! property-information */ "./node_modules/property-information/index.js");
+/* harmony import */ var _create_h_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./create-h.js */ "./node_modules/hastscript/lib/create-h.js");
+/* harmony import */ var _svg_case_sensitive_tag_names_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./svg-case-sensitive-tag-names.js */ "./node_modules/hastscript/lib/svg-case-sensitive-tag-names.js");
+// Register the JSX namespace on `h`.
+/**
+ * @typedef {import('./jsx-classic.js').Element} h.JSX.Element
+ * @typedef {import('./jsx-classic.js').ElementChildrenAttribute} h.JSX.ElementChildrenAttribute
+ * @typedef {import('./jsx-classic.js').IntrinsicAttributes} h.JSX.IntrinsicAttributes
+ * @typedef {import('./jsx-classic.js').IntrinsicElements} h.JSX.IntrinsicElements
+ */
+
+// Register the JSX namespace on `s`.
+/**
+ * @typedef {import('./jsx-classic.js').Element} s.JSX.Element
+ * @typedef {import('./jsx-classic.js').ElementChildrenAttribute} s.JSX.ElementChildrenAttribute
+ * @typedef {import('./jsx-classic.js').IntrinsicAttributes} s.JSX.IntrinsicAttributes
+ * @typedef {import('./jsx-classic.js').IntrinsicElements} s.JSX.IntrinsicElements
+ */
+
+
+
+
+
+// Note: this explicit type is needed, otherwise TS creates broken types.
+/** @type {ReturnType<createH>} */
+const h = Object(_create_h_js__WEBPACK_IMPORTED_MODULE_1__["createH"])(property_information__WEBPACK_IMPORTED_MODULE_0__["html"], 'div')
+
+// Note: this explicit type is needed, otherwise TS creates broken types.
+/** @type {ReturnType<createH>} */
+const s = Object(_create_h_js__WEBPACK_IMPORTED_MODULE_1__["createH"])(property_information__WEBPACK_IMPORTED_MODULE_0__["svg"], 'g', _svg_case_sensitive_tag_names_js__WEBPACK_IMPORTED_MODULE_2__["svgCaseSensitiveTagNames"])
+
+
+/***/ }),
+
+/***/ "./node_modules/hastscript/lib/svg-case-sensitive-tag-names.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/hastscript/lib/svg-case-sensitive-tag-names.js ***!
+  \*********************************************************************/
+/*! exports provided: svgCaseSensitiveTagNames */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "svgCaseSensitiveTagNames", function() { return svgCaseSensitiveTagNames; });
+/**
+ * List of case-sensitive SVG tag names.
+ *
+ * @type {ReadonlyArray<string>}
+ */
+const svgCaseSensitiveTagNames = [
+  'altGlyph',
+  'altGlyphDef',
+  'altGlyphItem',
+  'animateColor',
+  'animateMotion',
+  'animateTransform',
+  'clipPath',
+  'feBlend',
+  'feColorMatrix',
+  'feComponentTransfer',
+  'feComposite',
+  'feConvolveMatrix',
+  'feDiffuseLighting',
+  'feDisplacementMap',
+  'feDistantLight',
+  'feDropShadow',
+  'feFlood',
+  'feFuncA',
+  'feFuncB',
+  'feFuncG',
+  'feFuncR',
+  'feGaussianBlur',
+  'feImage',
+  'feMerge',
+  'feMergeNode',
+  'feMorphology',
+  'feOffset',
+  'fePointLight',
+  'feSpecularLighting',
+  'feSpotLight',
+  'feTile',
+  'feTurbulence',
+  'foreignObject',
+  'glyphRef',
+  'linearGradient',
+  'radialGradient',
+  'solidColor',
+  'textArea',
+  'textPath'
+]
 
 
 /***/ }),
@@ -3101,18 +5776,22 @@ module.exports = __webpack_require__(/*! ./html */ "./node_modules/hastscript/ht
 /*!***********************************************!*\
   !*** ./node_modules/is-alphabetical/index.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: isAlphabetical */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = alphabetical
-
-// Check if the given character code, or the character code at the first
-// character, is alphabetical.
-function alphabetical(character) {
-  var code = typeof character === 'string' ? character.charCodeAt(0) : character
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isAlphabetical", function() { return isAlphabetical; });
+/**
+ * Check if the given character code, or the character code at the first
+ * character, is alphabetical.
+ *
+ * @param {string|number} character
+ * @returns {boolean} Whether `character` is alphabetical.
+ */
+function isAlphabetical(character) {
+  const code =
+    typeof character === 'string' ? character.charCodeAt(0) : character
 
   return (
     (code >= 97 && code <= 122) /* a-z */ ||
@@ -3127,21 +5806,26 @@ function alphabetical(character) {
 /*!*************************************************!*\
   !*** ./node_modules/is-alphanumerical/index.js ***!
   \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: isAlphanumerical */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isAlphanumerical", function() { return isAlphanumerical; });
+/* harmony import */ var is_alphabetical__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! is-alphabetical */ "./node_modules/is-alphabetical/index.js");
+/* harmony import */ var is_decimal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! is-decimal */ "./node_modules/is-decimal/index.js");
 
 
-var alphabetical = __webpack_require__(/*! is-alphabetical */ "./node_modules/is-alphabetical/index.js")
-var decimal = __webpack_require__(/*! is-decimal */ "./node_modules/is-decimal/index.js")
 
-module.exports = alphanumerical
-
-// Check if the given character code, or the character code at the first
-// character, is alphanumerical.
-function alphanumerical(character) {
-  return alphabetical(character) || decimal(character)
+/**
+ * Check if the given character code, or the character code at the first
+ * character, is alphanumerical.
+ *
+ * @param {string|number} character
+ * @returns {boolean} Whether `character` is alphanumerical.
+ */
+function isAlphanumerical(character) {
+  return Object(is_alphabetical__WEBPACK_IMPORTED_MODULE_0__["isAlphabetical"])(character) || Object(is_decimal__WEBPACK_IMPORTED_MODULE_1__["isDecimal"])(character)
 }
 
 
@@ -3151,18 +5835,22 @@ function alphanumerical(character) {
 /*!******************************************!*\
   !*** ./node_modules/is-decimal/index.js ***!
   \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: isDecimal */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = decimal
-
-// Check if the given character code, or the character code at the first
-// character, is decimal.
-function decimal(character) {
-  var code = typeof character === 'string' ? character.charCodeAt(0) : character
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isDecimal", function() { return isDecimal; });
+/**
+ * Check if the given character code, or the character code at the first
+ * character, is decimal.
+ *
+ * @param {string|number} character
+ * @returns {boolean} Whether `character` is a decimal
+ */
+function isDecimal(character) {
+  const code =
+    typeof character === 'string' ? character.charCodeAt(0) : character
 
   return code >= 48 && code <= 57 /* 0-9 */
 }
@@ -3174,18 +5862,22 @@ function decimal(character) {
 /*!**********************************************!*\
   !*** ./node_modules/is-hexadecimal/index.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: isHexadecimal */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = hexadecimal
-
-// Check if the given character code, or the character code at the first
-// character, is hexadecimal.
-function hexadecimal(character) {
-  var code = typeof character === 'string' ? character.charCodeAt(0) : character
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isHexadecimal", function() { return isHexadecimal; });
+/**
+ * Check if the given character code, or the character code at the first
+ * character, is hexadecimal.
+ *
+ * @param {string|number} character
+ * @returns {boolean} Whether `character` is hexadecimal
+ */
+function isHexadecimal(character) {
+  const code =
+    typeof character === 'string' ? character.charCodeAt(0) : character
 
   return (
     (code >= 97 /* a */ && code <= 102) /* z */ ||
@@ -3299,351 +5991,259 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 /***/ }),
 
-/***/ "./node_modules/parse-entities/decode-entity.browser.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/parse-entities/decode-entity.browser.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/* eslint-env browser */
-
-var el
-
-var semicolon = 59 //  ';'
-
-module.exports = decodeEntity
-
-function decodeEntity(characters) {
-  var entity = '&' + characters + ';'
-  var char
-
-  el = el || document.createElement('i')
-  el.innerHTML = entity
-  char = el.textContent
-
-  // Some entities do not require the closing semicolon (`&not` - for instance),
-  // which leads to situations where parsing the assumed entity of &notit; will
-  // result in the string `¬it;`.  When we encounter a trailing semicolon after
-  // parsing and the entity to decode was not a semicolon (`&semi;`), we can
-  // assume that the matching was incomplete
-  if (char.charCodeAt(char.length - 1) === semicolon && characters !== 'semi') {
-    return false
-  }
-
-  // If the decoded string is equal to the input, the entity was not valid
-  return char === entity ? false : char
-}
-
-
-/***/ }),
-
 /***/ "./node_modules/parse-entities/index.js":
 /*!**********************************************!*\
   !*** ./node_modules/parse-entities/index.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: parseEntities */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _lib_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lib/index.js */ "./node_modules/parse-entities/lib/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "parseEntities", function() { return _lib_index_js__WEBPACK_IMPORTED_MODULE_0__["parseEntities"]; });
+
+// Note: more types exposed from `index.d.ts`.
+// To do: refactor to include type parameters in JS.
 
 
-var legacy = __webpack_require__(/*! character-entities-legacy */ "./node_modules/character-entities-legacy/index.json")
-var invalid = __webpack_require__(/*! character-reference-invalid */ "./node_modules/character-reference-invalid/index.json")
-var decimal = __webpack_require__(/*! is-decimal */ "./node_modules/is-decimal/index.js")
-var hexadecimal = __webpack_require__(/*! is-hexadecimal */ "./node_modules/is-hexadecimal/index.js")
-var alphanumerical = __webpack_require__(/*! is-alphanumerical */ "./node_modules/is-alphanumerical/index.js")
-var decodeEntity = __webpack_require__(/*! ./decode-entity */ "./node_modules/parse-entities/decode-entity.browser.js")
 
-module.exports = parseEntities
+/***/ }),
 
-var own = {}.hasOwnProperty
-var fromCharCode = String.fromCharCode
-var noop = Function.prototype
+/***/ "./node_modules/parse-entities/lib/index.js":
+/*!**************************************************!*\
+  !*** ./node_modules/parse-entities/lib/index.js ***!
+  \**************************************************/
+/*! exports provided: parseEntities */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-// Default settings.
-var defaults = {
-  warning: null,
-  reference: null,
-  text: null,
-  warningContext: null,
-  referenceContext: null,
-  textContext: null,
-  position: {},
-  additional: null,
-  attribute: false,
-  nonTerminated: true
-}
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "parseEntities", function() { return parseEntities; });
+/* harmony import */ var character_entities_legacy__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! character-entities-legacy */ "./node_modules/character-entities-legacy/index.js");
+/* harmony import */ var character_reference_invalid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! character-reference-invalid */ "./node_modules/character-reference-invalid/index.js");
+/* harmony import */ var is_decimal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! is-decimal */ "./node_modules/is-decimal/index.js");
+/* harmony import */ var is_hexadecimal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! is-hexadecimal */ "./node_modules/is-hexadecimal/index.js");
+/* harmony import */ var is_alphanumerical__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! is-alphanumerical */ "./node_modules/is-alphanumerical/index.js");
+/* harmony import */ var decode_named_character_reference__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! decode-named-character-reference */ "./node_modules/decode-named-character-reference/index.js");
+/**
+ * @import {Point} from 'unist'
+ * @import {Options} from '../index.js'
+ */
 
-// Characters.
-var tab = 9 // '\t'
-var lineFeed = 10 // '\n'
-var formFeed = 12 // '\f'
-var space = 32 // ' '
-var ampersand = 38 // '&'
-var semicolon = 59 // ';'
-var lessThan = 60 // '<'
-var equalsTo = 61 // '='
-var numberSign = 35 // '#'
-var uppercaseX = 88 // 'X'
-var lowercaseX = 120 // 'x'
-var replacementCharacter = 65533 // '�'
 
-// Reference types.
-var name = 'named'
-var hexa = 'hexadecimal'
-var deci = 'decimal'
 
-// Map of bases.
-var bases = {}
 
-bases[hexa] = 16
-bases[deci] = 10
 
-// Map of types to tests.
-// Each type of character reference accepts different characters.
-// This test is used to detect whether a reference has ended (as the semicolon
-// is not strictly needed).
-var tests = {}
 
-tests[name] = alphanumerical
-tests[deci] = decimal
-tests[hexa] = hexadecimal
 
-// Warning types.
-var namedNotTerminated = 1
-var numericNotTerminated = 2
-var namedEmpty = 3
-var numericEmpty = 4
-var namedUnknown = 5
-var numericDisallowed = 6
-var numericProhibited = 7
 
 // Warning messages.
-var messages = {}
-
-messages[namedNotTerminated] =
-  'Named character references must be terminated by a semicolon'
-messages[numericNotTerminated] =
-  'Numeric character references must be terminated by a semicolon'
-messages[namedEmpty] = 'Named character references cannot be empty'
-messages[numericEmpty] = 'Numeric character references cannot be empty'
-messages[namedUnknown] = 'Named character references must be known'
-messages[numericDisallowed] =
-  'Numeric character references cannot be disallowed'
-messages[numericProhibited] =
+const messages = [
+  '',
+  /* 1: Non terminated (named) */
+  'Named character references must be terminated by a semicolon',
+  /* 2: Non terminated (numeric) */
+  'Numeric character references must be terminated by a semicolon',
+  /* 3: Empty (named) */
+  'Named character references cannot be empty',
+  /* 4: Empty (numeric) */
+  'Numeric character references cannot be empty',
+  /* 5: Unknown (named) */
+  'Named character references must be known',
+  /* 6: Disallowed (numeric) */
+  'Numeric character references cannot be disallowed',
+  /* 7: Prohibited (numeric) */
   'Numeric character references cannot be outside the permissible Unicode range'
+]
 
-// Wrap to ensure clean parameters are given to `parse`.
+/**
+ * Parse HTML character references.
+ *
+ * @param {string} value
+ * @param {Readonly<Options> | null | undefined} [options]
+ */
 function parseEntities(value, options) {
-  var settings = {}
-  var option
-  var key
+  const settings = options || {}
+  const additional =
+    typeof settings.additional === 'string'
+      ? settings.additional.charCodeAt(0)
+      : settings.additional
+  /** @type {Array<string>} */
+  const result = []
+  let index = 0
+  let lines = -1
+  let queue = ''
+  /** @type {Point | undefined} */
+  let point
+  /** @type {Array<number>|undefined} */
+  let indent
 
-  if (!options) {
-    options = {}
+  if (settings.position) {
+    if ('start' in settings.position || 'indent' in settings.position) {
+      // @ts-expect-error: points don’t have indent.
+      indent = settings.position.indent
+      // @ts-expect-error: points don’t have indent.
+      point = settings.position.start
+    } else {
+      point = settings.position
+    }
   }
 
-  for (key in defaults) {
-    option = options[key]
-    settings[key] =
-      option === null || option === undefined ? defaults[key] : option
-  }
-
-  if (settings.position.indent || settings.position.start) {
-    settings.indent = settings.position.indent || []
-    settings.position = settings.position.start
-  }
-
-  return parse(value, settings)
-}
-
-// Parse entities.
-// eslint-disable-next-line complexity
-function parse(value, settings) {
-  var additional = settings.additional
-  var nonTerminated = settings.nonTerminated
-  var handleText = settings.text
-  var handleReference = settings.reference
-  var handleWarning = settings.warning
-  var textContext = settings.textContext
-  var referenceContext = settings.referenceContext
-  var warningContext = settings.warningContext
-  var pos = settings.position
-  var indent = settings.indent || []
-  var length = value.length
-  var index = 0
-  var lines = -1
-  var column = pos.column || 1
-  var line = pos.line || 1
-  var queue = ''
-  var result = []
-  var entityCharacters
-  var namedEntity
-  var terminated
-  var characters
-  var character
-  var reference
-  var following
-  var warning
-  var reason
-  var output
-  var entity
-  var begin
-  var start
-  var type
-  var test
-  var prev
-  var next
-  var diff
-  var end
-
-  if (typeof additional === 'string') {
-    additional = additional.charCodeAt(0)
-  }
+  let line = (point ? point.line : 0) || 1
+  let column = (point ? point.column : 0) || 1
 
   // Cache the current point.
-  prev = now()
+  let previous = now()
+  /** @type {number|undefined} */
+  let character
 
-  // Wrap `handleWarning`.
-  warning = handleWarning ? parseError : noop
-
-  // Ensure the algorithm walks over the first character and the end
-  // (inclusive).
+  // Ensure the algorithm walks over the first character (inclusive).
   index--
-  length++
 
-  while (++index < length) {
+  while (++index <= value.length) {
     // If the previous character was a newline.
-    if (character === lineFeed) {
-      column = indent[lines] || 1
+    if (character === 10 /* `\n` */) {
+      column = (indent ? indent[lines] : 0) || 1
     }
 
     character = value.charCodeAt(index)
 
-    if (character === ampersand) {
-      following = value.charCodeAt(index + 1)
+    if (character === 38 /* `&` */) {
+      const following = value.charCodeAt(index + 1)
 
-      // The behaviour depends on the identity of the next character.
+      // The behavior depends on the identity of the next character.
       if (
-        following === tab ||
-        following === lineFeed ||
-        following === formFeed ||
-        following === space ||
-        following === ampersand ||
-        following === lessThan ||
-        following !== following ||
+        following === 9 /* `\t` */ ||
+        following === 10 /* `\n` */ ||
+        following === 12 /* `\f` */ ||
+        following === 32 /* ` ` */ ||
+        following === 38 /* `&` */ ||
+        following === 60 /* `<` */ ||
+        Number.isNaN(following) ||
         (additional && following === additional)
       ) {
         // Not a character reference.
         // No characters are consumed, and nothing is returned.
         // This is not an error, either.
-        queue += fromCharCode(character)
+        queue += String.fromCharCode(character)
         column++
-
         continue
       }
 
-      start = index + 1
-      begin = start
-      end = start
+      const start = index + 1
+      let begin = start
+      let end = start
+      /** @type {string} */
+      let type
 
-      if (following === numberSign) {
-        // Numerical entity.
+      if (following === 35 /* `#` */) {
+        // Numerical reference.
         end = ++begin
 
-        // The behaviour further depends on the next character.
-        following = value.charCodeAt(end)
+        // The behavior further depends on the next character.
+        const following = value.charCodeAt(end)
 
-        if (following === uppercaseX || following === lowercaseX) {
-          // ASCII hex digits.
-          type = hexa
+        if (following === 88 /* `X` */ || following === 120 /* `x` */) {
+          // ASCII hexadecimal digits.
+          type = 'hexadecimal'
           end = ++begin
         } else {
-          // ASCII digits.
-          type = deci
+          // ASCII decimal digits.
+          type = 'decimal'
         }
       } else {
-        // Named entity.
-        type = name
+        // Named reference.
+        type = 'named'
       }
 
-      entityCharacters = ''
-      entity = ''
-      characters = ''
-      test = tests[type]
+      let characterReferenceCharacters = ''
+      let characterReference = ''
+      let characters = ''
+      // Each type of character reference accepts different characters.
+      // This test is used to detect whether a reference has ended (as the semicolon
+      // is not strictly needed).
+      const test =
+        type === 'named'
+          ? is_alphanumerical__WEBPACK_IMPORTED_MODULE_4__["isAlphanumerical"]
+          : type === 'decimal'
+            ? is_decimal__WEBPACK_IMPORTED_MODULE_2__["isDecimal"]
+            : is_hexadecimal__WEBPACK_IMPORTED_MODULE_3__["isHexadecimal"]
+
       end--
 
-      while (++end < length) {
-        following = value.charCodeAt(end)
+      while (++end <= value.length) {
+        const following = value.charCodeAt(end)
 
         if (!test(following)) {
           break
         }
 
-        characters += fromCharCode(following)
+        characters += String.fromCharCode(following)
 
         // Check if we can match a legacy named reference.
         // If so, we cache that as the last viable named reference.
         // This ensures we do not need to walk backwards later.
-        if (type === name && own.call(legacy, characters)) {
-          entityCharacters = characters
-          entity = legacy[characters]
+        if (type === 'named' && character_entities_legacy__WEBPACK_IMPORTED_MODULE_0__["characterEntitiesLegacy"].includes(characters)) {
+          characterReferenceCharacters = characters
+          // @ts-expect-error: always able to decode.
+          characterReference = Object(decode_named_character_reference__WEBPACK_IMPORTED_MODULE_5__["decodeNamedCharacterReference"])(characters)
         }
       }
 
-      terminated = value.charCodeAt(end) === semicolon
+      let terminated = value.charCodeAt(end) === 59 /* `;` */
 
       if (terminated) {
         end++
 
-        namedEntity = type === name ? decodeEntity(characters) : false
+        const namedReference =
+          type === 'named' ? Object(decode_named_character_reference__WEBPACK_IMPORTED_MODULE_5__["decodeNamedCharacterReference"])(characters) : false
 
-        if (namedEntity) {
-          entityCharacters = characters
-          entity = namedEntity
+        if (namedReference) {
+          characterReferenceCharacters = characters
+          characterReference = namedReference
         }
       }
 
-      diff = 1 + end - start
+      let diff = 1 + end - start
+      let reference = ''
 
-      if (!terminated && !nonTerminated) {
+      if (!terminated && settings.nonTerminated === false) {
         // Empty.
       } else if (!characters) {
-        // An empty (possible) entity is valid, unless it’s numeric (thus an
+        // An empty (possible) reference is valid, unless it’s numeric (thus an
         // ampersand followed by an octothorp).
-        if (type !== name) {
-          warning(numericEmpty, diff)
+        if (type !== 'named') {
+          warning(4 /* Empty (numeric) */, diff)
         }
-      } else if (type === name) {
+      } else if (type === 'named') {
         // An ampersand followed by anything unknown, and not terminated, is
         // invalid.
-        if (terminated && !entity) {
-          warning(namedUnknown, 1)
+        if (terminated && !characterReference) {
+          warning(5 /* Unknown (named) */, 1)
         } else {
-          // If theres something after an entity name which is not known, cap
-          // the reference.
-          if (entityCharacters !== characters) {
-            end = begin + entityCharacters.length
+          // If there’s something after an named reference which is not known,
+          // cap the reference.
+          if (characterReferenceCharacters !== characters) {
+            end = begin + characterReferenceCharacters.length
             diff = 1 + end - begin
             terminated = false
           }
 
           // If the reference is not terminated, warn.
           if (!terminated) {
-            reason = entityCharacters ? namedNotTerminated : namedEmpty
+            const reason = characterReferenceCharacters
+              ? 1 /* Non terminated (named) */
+              : 3 /* Empty (named) */
 
             if (settings.attribute) {
-              following = value.charCodeAt(end)
+              const following = value.charCodeAt(end)
 
-              if (following === equalsTo) {
+              if (following === 61 /* `=` */) {
                 warning(reason, diff)
-                entity = null
-              } else if (alphanumerical(following)) {
-                entity = null
+                characterReference = ''
+              } else if (Object(is_alphanumerical__WEBPACK_IMPORTED_MODULE_4__["isAlphanumerical"])(following)) {
+                characterReference = ''
               } else {
                 warning(reason, diff)
               }
@@ -3653,69 +6253,75 @@ function parse(value, settings) {
           }
         }
 
-        reference = entity
+        reference = characterReference
       } else {
         if (!terminated) {
-          // All non-terminated numeric entities are not rendered, and trigger a
+          // All nonterminated numeric references are not rendered, and emit a
           // warning.
-          warning(numericNotTerminated, diff)
+          warning(2 /* Non terminated (numeric) */, diff)
         }
 
-        // When terminated and number, parse as either hexadecimal or decimal.
-        reference = parseInt(characters, bases[type])
+        // When terminated and numerical, parse as either hexadecimal or
+        // decimal.
+        let referenceCode = Number.parseInt(
+          characters,
+          type === 'hexadecimal' ? 16 : 10
+        )
 
-        // Trigger a warning when the parsed number is prohibited, and replace
-        // with replacement character.
-        if (prohibited(reference)) {
-          warning(numericProhibited, diff)
-          reference = fromCharCode(replacementCharacter)
-        } else if (reference in invalid) {
-          // Trigger a warning when the parsed number is disallowed, and replace
-          // by an alternative.
-          warning(numericDisallowed, diff)
-          reference = invalid[reference]
+        // Emit a warning when the parsed number is prohibited, and replace with
+        // replacement character.
+        if (prohibited(referenceCode)) {
+          warning(7 /* Prohibited (numeric) */, diff)
+          reference = String.fromCharCode(65533 /* `�` */)
+        } else if (referenceCode in character_reference_invalid__WEBPACK_IMPORTED_MODULE_1__["characterReferenceInvalid"]) {
+          // Emit a warning when the parsed number is disallowed, and replace by
+          // an alternative.
+          warning(6 /* Disallowed (numeric) */, diff)
+          reference = character_reference_invalid__WEBPACK_IMPORTED_MODULE_1__["characterReferenceInvalid"][referenceCode]
         } else {
           // Parse the number.
-          output = ''
+          let output = ''
 
-          // Trigger a warning when the parsed number should not be used.
-          if (disallowed(reference)) {
-            warning(numericDisallowed, diff)
+          // Emit a warning when the parsed number should not be used.
+          if (disallowed(referenceCode)) {
+            warning(6 /* Disallowed (numeric) */, diff)
           }
 
-          // Stringify the number.
-          if (reference > 0xffff) {
-            reference -= 0x10000
-            output += fromCharCode((reference >>> (10 & 0x3ff)) | 0xd800)
-            reference = 0xdc00 | (reference & 0x3ff)
+          // Serialize the number.
+          if (referenceCode > 0xffff) {
+            referenceCode -= 0x10000
+            output += String.fromCharCode(
+              (referenceCode >>> (10 & 0x3ff)) | 0xd800
+            )
+            referenceCode = 0xdc00 | (referenceCode & 0x3ff)
           }
 
-          reference = output + fromCharCode(reference)
+          reference = output + String.fromCharCode(referenceCode)
         }
       }
 
       // Found it!
-      // First eat the queued characters as normal text, then eat an entity.
+      // First eat the queued characters as normal text, then eat a reference.
       if (reference) {
         flush()
 
-        prev = now()
+        previous = now()
         index = end - 1
         column += end - start + 1
         result.push(reference)
-        next = now()
+        const next = now()
         next.offset++
 
-        if (handleReference) {
-          handleReference.call(
-            referenceContext,
+        if (settings.reference) {
+          settings.reference.call(
+            settings.referenceContext || undefined,
             reference,
-            {start: prev, end: next},
+            {start: previous, end: next},
             value.slice(start - 1, end)
           )
         }
 
-        prev = next
+        previous = next
       } else {
         // If we could not find a reference, queue the checked characters (as
         // normal characters), and move the pointer to their end.
@@ -3728,19 +6334,17 @@ function parse(value, settings) {
       }
     } else {
       // Handle anything other than an ampersand, including newlines and EOF.
-      if (
-        character === 10 // Line feed
-      ) {
+      if (character === 10 /* `\n` */) {
         line++
         lines++
         column = 0
       }
 
-      if (character === character) {
-        queue += fromCharCode(character)
-        column++
-      } else {
+      if (Number.isNaN(character)) {
         flush()
+      } else {
+        queue += String.fromCharCode(character)
+        column++
       }
     }
   }
@@ -3751,31 +6355,50 @@ function parse(value, settings) {
   // Get current position.
   function now() {
     return {
-      line: line,
-      column: column,
-      offset: index + (pos.offset || 0)
+      line,
+      column,
+      offset: index + ((point ? point.offset : 0) || 0)
     }
   }
 
-  // “Throw” a parse-error: a warning.
-  function parseError(code, offset) {
-    var position = now()
+  /**
+   * Handle the warning.
+   *
+   * @param {1|2|3|4|5|6|7} code
+   * @param {number} offset
+   */
+  function warning(code, offset) {
+    /** @type {ReturnType<now>} */
+    let position
 
-    position.column += offset
-    position.offset += offset
+    if (settings.warning) {
+      position = now()
+      position.column += offset
+      position.offset += offset
 
-    handleWarning.call(warningContext, messages[code], position, code)
+      settings.warning.call(
+        settings.warningContext || undefined,
+        messages[code],
+        position,
+        code
+      )
+    }
   }
 
-  // Flush `queue` (normal text).
-  // Macro invoked before each entity and at the end of `value`.
-  // Does nothing when `queue` is empty.
+  /**
+   * Flush `queue` (normal text).
+   * Macro invoked before each reference and at the end of `value`.
+   * Does nothing when `queue` is empty.
+   */
   function flush() {
     if (queue) {
       result.push(queue)
 
-      if (handleText) {
-        handleText.call(textContext, queue, {start: prev, end: now()})
+      if (settings.text) {
+        settings.text.call(settings.textContext || undefined, queue, {
+          start: previous,
+          end: now()
+        })
       }
 
       queue = ''
@@ -3783,12 +6406,22 @@ function parse(value, settings) {
   }
 }
 
-// Check if `character` is outside the permissible unicode range.
+/**
+ * Check if `character` is outside the permissible unicode range.
+ *
+ * @param {number} code
+ * @returns {boolean}
+ */
 function prohibited(code) {
   return (code >= 0xd800 && code <= 0xdfff) || code > 0x10ffff
 }
 
-// Check if `character` is disallowed.
+/**
+ * Check if `character` is disallowed.
+ *
+ * @param {number} code
+ * @returns {boolean}
+ */
 function disallowed(code) {
   return (
     (code >= 0x0001 && code <= 0x0008) ||
@@ -5970,101 +8603,50 @@ module.exports = Function.call.bind(Object.prototype.hasOwnProperty);
 
 /***/ }),
 
-/***/ "./node_modules/property-information/find.js":
-/*!***************************************************!*\
-  !*** ./node_modules/property-information/find.js ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./node_modules/property-information/index.js":
+/*!****************************************************!*\
+  !*** ./node_modules/property-information/index.js ***!
+  \****************************************************/
+/*! exports provided: hastToReact, html, find, normalize, svg */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "html", function() { return html; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "svg", function() { return svg; });
+/* harmony import */ var _lib_util_merge_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lib/util/merge.js */ "./node_modules/property-information/lib/util/merge.js");
+/* harmony import */ var _lib_aria_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./lib/aria.js */ "./node_modules/property-information/lib/aria.js");
+/* harmony import */ var _lib_html_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./lib/html.js */ "./node_modules/property-information/lib/html.js");
+/* harmony import */ var _lib_svg_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./lib/svg.js */ "./node_modules/property-information/lib/svg.js");
+/* harmony import */ var _lib_xlink_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./lib/xlink.js */ "./node_modules/property-information/lib/xlink.js");
+/* harmony import */ var _lib_xmlns_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./lib/xmlns.js */ "./node_modules/property-information/lib/xmlns.js");
+/* harmony import */ var _lib_xml_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./lib/xml.js */ "./node_modules/property-information/lib/xml.js");
+/* harmony import */ var _lib_hast_to_react_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./lib/hast-to-react.js */ "./node_modules/property-information/lib/hast-to-react.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "hastToReact", function() { return _lib_hast_to_react_js__WEBPACK_IMPORTED_MODULE_7__["hastToReact"]; });
+
+/* harmony import */ var _lib_find_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./lib/find.js */ "./node_modules/property-information/lib/find.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "find", function() { return _lib_find_js__WEBPACK_IMPORTED_MODULE_8__["find"]; });
+
+/* harmony import */ var _lib_normalize_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./lib/normalize.js */ "./node_modules/property-information/lib/normalize.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "normalize", function() { return _lib_normalize_js__WEBPACK_IMPORTED_MODULE_9__["normalize"]; });
+
+// Note: types exposed from `index.d.ts`.
 
 
-var normalize = __webpack_require__(/*! ./normalize */ "./node_modules/property-information/normalize.js")
-var DefinedInfo = __webpack_require__(/*! ./lib/util/defined-info */ "./node_modules/property-information/lib/util/defined-info.js")
-var Info = __webpack_require__(/*! ./lib/util/info */ "./node_modules/property-information/lib/util/info.js")
-
-var data = 'data'
-
-module.exports = find
-
-var valid = /^data[-\w.:]+$/i
-var dash = /-[a-z]/g
-var cap = /[A-Z]/g
-
-function find(schema, value) {
-  var normal = normalize(value)
-  var prop = value
-  var Type = Info
-
-  if (normal in schema.normal) {
-    return schema.property[schema.normal[normal]]
-  }
-
-  if (normal.length > 4 && normal.slice(0, 4) === data && valid.test(value)) {
-    // Attribute or property.
-    if (value.charAt(4) === '-') {
-      prop = datasetToProperty(value)
-    } else {
-      value = datasetToAttribute(value)
-    }
-
-    Type = DefinedInfo
-  }
-
-  return new Type(prop, value)
-}
-
-function datasetToProperty(attribute) {
-  var value = attribute.slice(5).replace(dash, camelcase)
-  return data + value.charAt(0).toUpperCase() + value.slice(1)
-}
-
-function datasetToAttribute(property) {
-  var value = property.slice(4)
-
-  if (dash.test(value)) {
-    return property
-  }
-
-  value = value.replace(cap, kebab)
-
-  if (value.charAt(0) !== '-') {
-    value = '-' + value
-  }
-
-  return data + value
-}
-
-function kebab($0) {
-  return '-' + $0.toLowerCase()
-}
-
-function camelcase($0) {
-  return $0.charAt(1).toUpperCase()
-}
 
 
-/***/ }),
-
-/***/ "./node_modules/property-information/html.js":
-/*!***************************************************!*\
-  !*** ./node_modules/property-information/html.js ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
 
 
-var merge = __webpack_require__(/*! ./lib/util/merge */ "./node_modules/property-information/lib/util/merge.js")
-var xlink = __webpack_require__(/*! ./lib/xlink */ "./node_modules/property-information/lib/xlink.js")
-var xml = __webpack_require__(/*! ./lib/xml */ "./node_modules/property-information/lib/xml.js")
-var xmlns = __webpack_require__(/*! ./lib/xmlns */ "./node_modules/property-information/lib/xmlns.js")
-var aria = __webpack_require__(/*! ./lib/aria */ "./node_modules/property-information/lib/aria.js")
-var html = __webpack_require__(/*! ./lib/html */ "./node_modules/property-information/lib/html.js")
 
-module.exports = merge([xml, xlink, xmlns, aria, html])
+
+
+
+const html = Object(_lib_util_merge_js__WEBPACK_IMPORTED_MODULE_0__["merge"])([_lib_aria_js__WEBPACK_IMPORTED_MODULE_1__["aria"], _lib_html_js__WEBPACK_IMPORTED_MODULE_2__["html"], _lib_xlink_js__WEBPACK_IMPORTED_MODULE_4__["xlink"], _lib_xmlns_js__WEBPACK_IMPORTED_MODULE_5__["xmlns"], _lib_xml_js__WEBPACK_IMPORTED_MODULE_6__["xml"]], 'html')
+
+
+
+
+const svg = Object(_lib_util_merge_js__WEBPACK_IMPORTED_MODULE_0__["merge"])([_lib_aria_js__WEBPACK_IMPORTED_MODULE_1__["aria"], _lib_svg_js__WEBPACK_IMPORTED_MODULE_3__["svg"], _lib_xlink_js__WEBPACK_IMPORTED_MODULE_4__["xlink"], _lib_xmlns_js__WEBPACK_IMPORTED_MODULE_5__["xmlns"], _lib_xml_js__WEBPACK_IMPORTED_MODULE_6__["xml"]], 'svg')
 
 
 /***/ }),
@@ -6073,76 +8655,232 @@ module.exports = merge([xml, xlink, xmlns, aria, html])
 /*!*******************************************************!*\
   !*** ./node_modules/property-information/lib/aria.js ***!
   \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: aria */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "aria", function() { return aria; });
+/* harmony import */ var _util_create_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./util/create.js */ "./node_modules/property-information/lib/util/create.js");
+/* harmony import */ var _util_types_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./util/types.js */ "./node_modules/property-information/lib/util/types.js");
 
 
-var types = __webpack_require__(/*! ./util/types */ "./node_modules/property-information/lib/util/types.js")
-var create = __webpack_require__(/*! ./util/create */ "./node_modules/property-information/lib/util/create.js")
 
-var booleanish = types.booleanish
-var number = types.number
-var spaceSeparated = types.spaceSeparated
-
-module.exports = create({
-  transform: ariaTransform,
+const aria = Object(_util_create_js__WEBPACK_IMPORTED_MODULE_0__["create"])({
   properties: {
     ariaActiveDescendant: null,
-    ariaAtomic: booleanish,
+    ariaAtomic: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["booleanish"],
     ariaAutoComplete: null,
-    ariaBusy: booleanish,
-    ariaChecked: booleanish,
-    ariaColCount: number,
-    ariaColIndex: number,
-    ariaColSpan: number,
-    ariaControls: spaceSeparated,
+    ariaBusy: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["booleanish"],
+    ariaChecked: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["booleanish"],
+    ariaColCount: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["number"],
+    ariaColIndex: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["number"],
+    ariaColSpan: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["number"],
+    ariaControls: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["spaceSeparated"],
     ariaCurrent: null,
-    ariaDescribedBy: spaceSeparated,
+    ariaDescribedBy: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["spaceSeparated"],
     ariaDetails: null,
-    ariaDisabled: booleanish,
-    ariaDropEffect: spaceSeparated,
+    ariaDisabled: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["booleanish"],
+    ariaDropEffect: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["spaceSeparated"],
     ariaErrorMessage: null,
-    ariaExpanded: booleanish,
-    ariaFlowTo: spaceSeparated,
-    ariaGrabbed: booleanish,
+    ariaExpanded: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["booleanish"],
+    ariaFlowTo: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["spaceSeparated"],
+    ariaGrabbed: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["booleanish"],
     ariaHasPopup: null,
-    ariaHidden: booleanish,
+    ariaHidden: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["booleanish"],
     ariaInvalid: null,
     ariaKeyShortcuts: null,
     ariaLabel: null,
-    ariaLabelledBy: spaceSeparated,
-    ariaLevel: number,
+    ariaLabelledBy: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["spaceSeparated"],
+    ariaLevel: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["number"],
     ariaLive: null,
-    ariaModal: booleanish,
-    ariaMultiLine: booleanish,
-    ariaMultiSelectable: booleanish,
+    ariaModal: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["booleanish"],
+    ariaMultiLine: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["booleanish"],
+    ariaMultiSelectable: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["booleanish"],
     ariaOrientation: null,
-    ariaOwns: spaceSeparated,
+    ariaOwns: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["spaceSeparated"],
     ariaPlaceholder: null,
-    ariaPosInSet: number,
-    ariaPressed: booleanish,
-    ariaReadOnly: booleanish,
+    ariaPosInSet: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["number"],
+    ariaPressed: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["booleanish"],
+    ariaReadOnly: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["booleanish"],
     ariaRelevant: null,
-    ariaRequired: booleanish,
-    ariaRoleDescription: spaceSeparated,
-    ariaRowCount: number,
-    ariaRowIndex: number,
-    ariaRowSpan: number,
-    ariaSelected: booleanish,
-    ariaSetSize: number,
+    ariaRequired: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["booleanish"],
+    ariaRoleDescription: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["spaceSeparated"],
+    ariaRowCount: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["number"],
+    ariaRowIndex: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["number"],
+    ariaRowSpan: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["number"],
+    ariaSelected: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["booleanish"],
+    ariaSetSize: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["number"],
     ariaSort: null,
-    ariaValueMax: number,
-    ariaValueMin: number,
-    ariaValueNow: number,
+    ariaValueMax: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["number"],
+    ariaValueMin: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["number"],
+    ariaValueNow: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["number"],
     ariaValueText: null,
     role: null
+  },
+  transform(_, property) {
+    return property === 'role'
+      ? property
+      : 'aria-' + property.slice(4).toLowerCase()
   }
 })
 
-function ariaTransform(_, prop) {
-  return prop === 'role' ? prop : 'aria-' + prop.slice(4).toLowerCase()
+
+/***/ }),
+
+/***/ "./node_modules/property-information/lib/find.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/property-information/lib/find.js ***!
+  \*******************************************************/
+/*! exports provided: find */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "find", function() { return find; });
+/* harmony import */ var _util_defined_info_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./util/defined-info.js */ "./node_modules/property-information/lib/util/defined-info.js");
+/* harmony import */ var _util_info_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./util/info.js */ "./node_modules/property-information/lib/util/info.js");
+/* harmony import */ var _normalize_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./normalize.js */ "./node_modules/property-information/lib/normalize.js");
+/**
+ * @import {Schema} from 'property-information'
+ */
+
+
+
+
+
+const cap = /[A-Z]/g
+const dash = /-[a-z]/g
+const valid = /^data[-\w.:]+$/i
+
+/**
+ * Look up info on a property.
+ *
+ * In most cases the given `schema` contains info on the property.
+ * All standard,
+ * most legacy,
+ * and some non-standard properties are supported.
+ * For these cases,
+ * the returned `Info` has hints about the value of the property.
+ *
+ * `name` can also be a valid data attribute or property,
+ * in which case an `Info` object with the correctly cased `attribute` and
+ * `property` is returned.
+ *
+ * `name` can be an unknown attribute,
+ * in which case an `Info` object with `attribute` and `property` set to the
+ * given name is returned.
+ * It is not recommended to provide unsupported legacy or recently specced
+ * properties.
+ *
+ *
+ * @param {Schema} schema
+ *   Schema;
+ *   either the `html` or `svg` export.
+ * @param {string} value
+ *   An attribute-like or property-like name;
+ *   it will be passed through `normalize` to hopefully find the correct info.
+ * @returns {Info}
+ *   Info.
+ */
+function find(schema, value) {
+  const normal = Object(_normalize_js__WEBPACK_IMPORTED_MODULE_2__["normalize"])(value)
+  let property = value
+  let Type = _util_info_js__WEBPACK_IMPORTED_MODULE_1__["Info"]
+
+  if (normal in schema.normal) {
+    return schema.property[schema.normal[normal]]
+  }
+
+  if (normal.length > 4 && normal.slice(0, 4) === 'data' && valid.test(value)) {
+    // Attribute or property.
+    if (value.charAt(4) === '-') {
+      // Turn it into a property.
+      const rest = value.slice(5).replace(dash, camelcase)
+      property = 'data' + rest.charAt(0).toUpperCase() + rest.slice(1)
+    } else {
+      // Turn it into an attribute.
+      const rest = value.slice(4)
+
+      if (!dash.test(rest)) {
+        let dashes = rest.replace(cap, kebab)
+
+        if (dashes.charAt(0) !== '-') {
+          dashes = '-' + dashes
+        }
+
+        value = 'data' + dashes
+      }
+    }
+
+    Type = _util_defined_info_js__WEBPACK_IMPORTED_MODULE_0__["DefinedInfo"]
+  }
+
+  return new Type(property, value)
+}
+
+/**
+ * @param {string} $0
+ *   Value.
+ * @returns {string}
+ *   Kebab.
+ */
+function kebab($0) {
+  return '-' + $0.toLowerCase()
+}
+
+/**
+ * @param {string} $0
+ *   Value.
+ * @returns {string}
+ *   Camel.
+ */
+function camelcase($0) {
+  return $0.charAt(1).toUpperCase()
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/property-information/lib/hast-to-react.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/property-information/lib/hast-to-react.js ***!
+  \****************************************************************/
+/*! exports provided: hastToReact */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hastToReact", function() { return hastToReact; });
+/**
+ * Special cases for React (`Record<string, string>`).
+ *
+ * `hast` is close to `React` but differs in a couple of cases.
+ * To get a React property from a hast property,
+ * check if it is in `hastToReact`.
+ * If it is, use the corresponding value;
+ * otherwise, use the hast property.
+ *
+ * @type {Record<string, string>}
+ */
+const hastToReact = {
+  classId: 'classID',
+  dataType: 'datatype',
+  itemId: 'itemID',
+  strokeDashArray: 'strokeDasharray',
+  strokeDashOffset: 'strokeDashoffset',
+  strokeLineCap: 'strokeLinecap',
+  strokeLineJoin: 'strokeLinejoin',
+  strokeMiterLimit: 'strokeMiterlimit',
+  typeOf: 'typeof',
+  xLinkActuate: 'xlinkActuate',
+  xLinkArcRole: 'xlinkArcrole',
+  xLinkHref: 'xlinkHref',
+  xLinkRole: 'xlinkRole',
+  xLinkShow: 'xlinkShow',
+  xLinkTitle: 'xlinkTitle',
+  xLinkType: 'xlinkType',
+  xmlnsXLink: 'xmlnsXlink'
 }
 
 
@@ -6152,127 +8890,126 @@ function ariaTransform(_, prop) {
 /*!*******************************************************!*\
   !*** ./node_modules/property-information/lib/html.js ***!
   \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: html */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "html", function() { return html; });
+/* harmony import */ var _util_case_insensitive_transform_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./util/case-insensitive-transform.js */ "./node_modules/property-information/lib/util/case-insensitive-transform.js");
+/* harmony import */ var _util_create_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./util/create.js */ "./node_modules/property-information/lib/util/create.js");
+/* harmony import */ var _util_types_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./util/types.js */ "./node_modules/property-information/lib/util/types.js");
 
 
-var types = __webpack_require__(/*! ./util/types */ "./node_modules/property-information/lib/util/types.js")
-var create = __webpack_require__(/*! ./util/create */ "./node_modules/property-information/lib/util/create.js")
-var caseInsensitiveTransform = __webpack_require__(/*! ./util/case-insensitive-transform */ "./node_modules/property-information/lib/util/case-insensitive-transform.js")
 
-var boolean = types.boolean
-var overloadedBoolean = types.overloadedBoolean
-var booleanish = types.booleanish
-var number = types.number
-var spaceSeparated = types.spaceSeparated
-var commaSeparated = types.commaSeparated
 
-module.exports = create({
-  space: 'html',
+const html = Object(_util_create_js__WEBPACK_IMPORTED_MODULE_1__["create"])({
   attributes: {
     acceptcharset: 'accept-charset',
     classname: 'class',
     htmlfor: 'for',
     httpequiv: 'http-equiv'
   },
-  transform: caseInsensitiveTransform,
   mustUseProperty: ['checked', 'multiple', 'muted', 'selected'],
   properties: {
     // Standard Properties.
     abbr: null,
-    accept: commaSeparated,
-    acceptCharset: spaceSeparated,
-    accessKey: spaceSeparated,
+    accept: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["commaSeparated"],
+    acceptCharset: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["spaceSeparated"],
+    accessKey: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["spaceSeparated"],
     action: null,
     allow: null,
-    allowFullScreen: boolean,
-    allowPaymentRequest: boolean,
-    allowUserMedia: boolean,
+    allowFullScreen: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    allowPaymentRequest: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    allowUserMedia: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
     alt: null,
     as: null,
-    async: boolean,
+    async: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
     autoCapitalize: null,
-    autoComplete: spaceSeparated,
-    autoFocus: boolean,
-    autoPlay: boolean,
-    capture: boolean,
+    autoComplete: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["spaceSeparated"],
+    autoFocus: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    autoPlay: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    blocking: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["spaceSeparated"],
+    capture: null,
     charSet: null,
-    checked: boolean,
+    checked: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
     cite: null,
-    className: spaceSeparated,
-    cols: number,
+    className: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["spaceSeparated"],
+    cols: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
     colSpan: null,
     content: null,
-    contentEditable: booleanish,
-    controls: boolean,
-    controlsList: spaceSeparated,
-    coords: number | commaSeparated,
+    contentEditable: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["booleanish"],
+    controls: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    controlsList: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["spaceSeparated"],
+    coords: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"] | _util_types_js__WEBPACK_IMPORTED_MODULE_2__["commaSeparated"],
     crossOrigin: null,
     data: null,
     dateTime: null,
     decoding: null,
-    default: boolean,
-    defer: boolean,
+    default: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    defer: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
     dir: null,
     dirName: null,
-    disabled: boolean,
-    download: overloadedBoolean,
-    draggable: booleanish,
+    disabled: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    download: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["overloadedBoolean"],
+    draggable: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["booleanish"],
     encType: null,
     enterKeyHint: null,
+    fetchPriority: null,
     form: null,
     formAction: null,
     formEncType: null,
     formMethod: null,
-    formNoValidate: boolean,
+    formNoValidate: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
     formTarget: null,
-    headers: spaceSeparated,
-    height: number,
-    hidden: boolean,
-    high: number,
+    headers: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["spaceSeparated"],
+    height: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    hidden: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["overloadedBoolean"],
+    high: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
     href: null,
     hrefLang: null,
-    htmlFor: spaceSeparated,
-    httpEquiv: spaceSeparated,
+    htmlFor: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["spaceSeparated"],
+    httpEquiv: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["spaceSeparated"],
     id: null,
     imageSizes: null,
-    imageSrcSet: commaSeparated,
+    imageSrcSet: null,
+    inert: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
     inputMode: null,
     integrity: null,
     is: null,
-    isMap: boolean,
+    isMap: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
     itemId: null,
-    itemProp: spaceSeparated,
-    itemRef: spaceSeparated,
-    itemScope: boolean,
-    itemType: spaceSeparated,
+    itemProp: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["spaceSeparated"],
+    itemRef: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["spaceSeparated"],
+    itemScope: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    itemType: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["spaceSeparated"],
     kind: null,
     label: null,
     lang: null,
     language: null,
     list: null,
     loading: null,
-    loop: boolean,
-    low: number,
+    loop: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    low: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
     manifest: null,
     max: null,
-    maxLength: number,
+    maxLength: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
     media: null,
     method: null,
     min: null,
-    minLength: number,
-    multiple: boolean,
-    muted: boolean,
+    minLength: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    multiple: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    muted: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
     name: null,
     nonce: null,
-    noModule: boolean,
-    noValidate: boolean,
+    noModule: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    noValidate: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
     onAbort: null,
     onAfterPrint: null,
     onAuxClick: null,
+    onBeforeMatch: null,
     onBeforePrint: null,
+    onBeforeToggle: null,
     onBeforeUnload: null,
     onBlur: null,
     onCancel: null,
@@ -6281,7 +9018,9 @@ module.exports = create({
     onChange: null,
     onClick: null,
     onClose: null,
+    onContextLost: null,
     onContextMenu: null,
+    onContextRestored: null,
     onCopy: null,
     onCueChange: null,
     onCut: null,
@@ -6336,6 +9075,7 @@ module.exports = create({
     onReset: null,
     onResize: null,
     onScroll: null,
+    onScrollEnd: null,
     onSecurityPolicyViolation: null,
     onSeeked: null,
     onSeeking: null,
@@ -6352,61 +9092,68 @@ module.exports = create({
     onVolumeChange: null,
     onWaiting: null,
     onWheel: null,
-    open: boolean,
-    optimum: number,
+    open: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    optimum: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
     pattern: null,
-    ping: spaceSeparated,
+    ping: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["spaceSeparated"],
     placeholder: null,
-    playsInline: boolean,
+    playsInline: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    popover: null,
+    popoverTarget: null,
+    popoverTargetAction: null,
     poster: null,
     preload: null,
-    readOnly: boolean,
+    readOnly: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
     referrerPolicy: null,
-    rel: spaceSeparated,
-    required: boolean,
-    reversed: boolean,
-    rows: number,
-    rowSpan: number,
-    sandbox: spaceSeparated,
+    rel: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["spaceSeparated"],
+    required: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    reversed: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    rows: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    rowSpan: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    sandbox: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["spaceSeparated"],
     scope: null,
-    scoped: boolean,
-    seamless: boolean,
-    selected: boolean,
+    scoped: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    seamless: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    selected: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    shadowRootClonable: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    shadowRootDelegatesFocus: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    shadowRootMode: null,
     shape: null,
-    size: number,
+    size: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
     sizes: null,
     slot: null,
-    span: number,
-    spellCheck: booleanish,
+    span: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    spellCheck: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["booleanish"],
     src: null,
     srcDoc: null,
     srcLang: null,
-    srcSet: commaSeparated,
-    start: number,
+    srcSet: null,
+    start: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
     step: null,
     style: null,
-    tabIndex: number,
+    tabIndex: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
     target: null,
     title: null,
     translate: null,
     type: null,
-    typeMustMatch: boolean,
+    typeMustMatch: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
     useMap: null,
-    value: booleanish,
-    width: number,
+    value: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["booleanish"],
+    width: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
     wrap: null,
+    writingSuggestions: null,
 
     // Legacy.
     // See: https://html.spec.whatwg.org/#other-elements,-attributes-and-apis
     align: null, // Several. Use CSS `text-align` instead,
     aLink: null, // `<body>`. Use CSS `a:active {color}` instead
-    archive: spaceSeparated, // `<object>`. List of URIs to archives
+    archive: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["spaceSeparated"], // `<object>`. List of URIs to archives
     axis: null, // `<td>` and `<th>`. Use `scope` on `<th>`
     background: null, // `<body>`. Use CSS `background-image` instead
     bgColor: null, // `<body>` and table elements. Use CSS `background-color` instead
-    border: number, // `<table>`. Use CSS `border-width` instead,
+    border: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"], // `<table>`. Use CSS `border-width` instead,
     borderColor: null, // `<table>`. Use CSS `border-color` instead,
-    bottomMargin: number, // `<body>`
+    bottomMargin: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"], // `<body>`
     cellPadding: null, // `<table>`
     cellSpacing: null, // `<table>`
     char: null, // Several table elements. When `align=char`, sets the character to align on
@@ -6417,53 +9164,659 @@ module.exports = create({
     codeBase: null, // `<object>`
     codeType: null, // `<object>`
     color: null, // `<font>` and `<hr>`. Use CSS instead
-    compact: boolean, // Lists. Use CSS to reduce space between items instead
-    declare: boolean, // `<object>`
+    compact: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"], // Lists. Use CSS to reduce space between items instead
+    declare: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"], // `<object>`
     event: null, // `<script>`
     face: null, // `<font>`. Use CSS instead
     frame: null, // `<table>`
     frameBorder: null, // `<iframe>`. Use CSS `border` instead
-    hSpace: number, // `<img>` and `<object>`
-    leftMargin: number, // `<body>`
+    hSpace: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"], // `<img>` and `<object>`
+    leftMargin: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"], // `<body>`
     link: null, // `<body>`. Use CSS `a:link {color: *}` instead
     longDesc: null, // `<frame>`, `<iframe>`, and `<img>`. Use an `<a>`
     lowSrc: null, // `<img>`. Use a `<picture>`
-    marginHeight: number, // `<body>`
-    marginWidth: number, // `<body>`
-    noResize: boolean, // `<frame>`
-    noHref: boolean, // `<area>`. Use no href instead of an explicit `nohref`
-    noShade: boolean, // `<hr>`. Use background-color and height instead of borders
-    noWrap: boolean, // `<td>` and `<th>`
+    marginHeight: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"], // `<body>`
+    marginWidth: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"], // `<body>`
+    noResize: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"], // `<frame>`
+    noHref: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"], // `<area>`. Use no href instead of an explicit `nohref`
+    noShade: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"], // `<hr>`. Use background-color and height instead of borders
+    noWrap: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"], // `<td>` and `<th>`
     object: null, // `<applet>`
     profile: null, // `<head>`
     prompt: null, // `<isindex>`
     rev: null, // `<link>`
-    rightMargin: number, // `<body>`
+    rightMargin: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"], // `<body>`
     rules: null, // `<table>`
     scheme: null, // `<meta>`
-    scrolling: booleanish, // `<frame>`. Use overflow in the child context
+    scrolling: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["booleanish"], // `<frame>`. Use overflow in the child context
     standby: null, // `<object>`
     summary: null, // `<table>`
     text: null, // `<body>`. Use CSS `color` instead
-    topMargin: number, // `<body>`
+    topMargin: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"], // `<body>`
     valueType: null, // `<param>`
     version: null, // `<html>`. Use a doctype.
     vAlign: null, // Several. Use CSS `vertical-align` instead
     vLink: null, // `<body>`. Use CSS `a:visited {color}` instead
-    vSpace: number, // `<img>` and `<object>`
+    vSpace: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"], // `<img>` and `<object>`
 
     // Non-standard Properties.
     allowTransparency: null,
     autoCorrect: null,
     autoSave: null,
-    disablePictureInPicture: boolean,
-    disableRemotePlayback: boolean,
+    disablePictureInPicture: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    disableRemotePlayback: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
     prefix: null,
     property: null,
-    results: number,
+    results: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
     security: null,
     unselectable: null
-  }
+  },
+  space: 'html',
+  transform: _util_case_insensitive_transform_js__WEBPACK_IMPORTED_MODULE_0__["caseInsensitiveTransform"]
+})
+
+
+/***/ }),
+
+/***/ "./node_modules/property-information/lib/normalize.js":
+/*!************************************************************!*\
+  !*** ./node_modules/property-information/lib/normalize.js ***!
+  \************************************************************/
+/*! exports provided: normalize */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "normalize", function() { return normalize; });
+/**
+ * Get the cleaned case insensitive form of an attribute or property.
+ *
+ * @param {string} value
+ *   An attribute-like or property-like name.
+ * @returns {string}
+ *   Value that can be used to look up the properly cased property on a
+ *   `Schema`.
+ */
+function normalize(value) {
+  return value.toLowerCase()
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/property-information/lib/svg.js":
+/*!******************************************************!*\
+  !*** ./node_modules/property-information/lib/svg.js ***!
+  \******************************************************/
+/*! exports provided: svg */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "svg", function() { return svg; });
+/* harmony import */ var _util_case_sensitive_transform_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./util/case-sensitive-transform.js */ "./node_modules/property-information/lib/util/case-sensitive-transform.js");
+/* harmony import */ var _util_create_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./util/create.js */ "./node_modules/property-information/lib/util/create.js");
+/* harmony import */ var _util_types_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./util/types.js */ "./node_modules/property-information/lib/util/types.js");
+
+
+
+
+const svg = Object(_util_create_js__WEBPACK_IMPORTED_MODULE_1__["create"])({
+  attributes: {
+    accentHeight: 'accent-height',
+    alignmentBaseline: 'alignment-baseline',
+    arabicForm: 'arabic-form',
+    baselineShift: 'baseline-shift',
+    capHeight: 'cap-height',
+    className: 'class',
+    clipPath: 'clip-path',
+    clipRule: 'clip-rule',
+    colorInterpolation: 'color-interpolation',
+    colorInterpolationFilters: 'color-interpolation-filters',
+    colorProfile: 'color-profile',
+    colorRendering: 'color-rendering',
+    crossOrigin: 'crossorigin',
+    dataType: 'datatype',
+    dominantBaseline: 'dominant-baseline',
+    enableBackground: 'enable-background',
+    fillOpacity: 'fill-opacity',
+    fillRule: 'fill-rule',
+    floodColor: 'flood-color',
+    floodOpacity: 'flood-opacity',
+    fontFamily: 'font-family',
+    fontSize: 'font-size',
+    fontSizeAdjust: 'font-size-adjust',
+    fontStretch: 'font-stretch',
+    fontStyle: 'font-style',
+    fontVariant: 'font-variant',
+    fontWeight: 'font-weight',
+    glyphName: 'glyph-name',
+    glyphOrientationHorizontal: 'glyph-orientation-horizontal',
+    glyphOrientationVertical: 'glyph-orientation-vertical',
+    hrefLang: 'hreflang',
+    horizAdvX: 'horiz-adv-x',
+    horizOriginX: 'horiz-origin-x',
+    horizOriginY: 'horiz-origin-y',
+    imageRendering: 'image-rendering',
+    letterSpacing: 'letter-spacing',
+    lightingColor: 'lighting-color',
+    markerEnd: 'marker-end',
+    markerMid: 'marker-mid',
+    markerStart: 'marker-start',
+    navDown: 'nav-down',
+    navDownLeft: 'nav-down-left',
+    navDownRight: 'nav-down-right',
+    navLeft: 'nav-left',
+    navNext: 'nav-next',
+    navPrev: 'nav-prev',
+    navRight: 'nav-right',
+    navUp: 'nav-up',
+    navUpLeft: 'nav-up-left',
+    navUpRight: 'nav-up-right',
+    onAbort: 'onabort',
+    onActivate: 'onactivate',
+    onAfterPrint: 'onafterprint',
+    onBeforePrint: 'onbeforeprint',
+    onBegin: 'onbegin',
+    onCancel: 'oncancel',
+    onCanPlay: 'oncanplay',
+    onCanPlayThrough: 'oncanplaythrough',
+    onChange: 'onchange',
+    onClick: 'onclick',
+    onClose: 'onclose',
+    onCopy: 'oncopy',
+    onCueChange: 'oncuechange',
+    onCut: 'oncut',
+    onDblClick: 'ondblclick',
+    onDrag: 'ondrag',
+    onDragEnd: 'ondragend',
+    onDragEnter: 'ondragenter',
+    onDragExit: 'ondragexit',
+    onDragLeave: 'ondragleave',
+    onDragOver: 'ondragover',
+    onDragStart: 'ondragstart',
+    onDrop: 'ondrop',
+    onDurationChange: 'ondurationchange',
+    onEmptied: 'onemptied',
+    onEnd: 'onend',
+    onEnded: 'onended',
+    onError: 'onerror',
+    onFocus: 'onfocus',
+    onFocusIn: 'onfocusin',
+    onFocusOut: 'onfocusout',
+    onHashChange: 'onhashchange',
+    onInput: 'oninput',
+    onInvalid: 'oninvalid',
+    onKeyDown: 'onkeydown',
+    onKeyPress: 'onkeypress',
+    onKeyUp: 'onkeyup',
+    onLoad: 'onload',
+    onLoadedData: 'onloadeddata',
+    onLoadedMetadata: 'onloadedmetadata',
+    onLoadStart: 'onloadstart',
+    onMessage: 'onmessage',
+    onMouseDown: 'onmousedown',
+    onMouseEnter: 'onmouseenter',
+    onMouseLeave: 'onmouseleave',
+    onMouseMove: 'onmousemove',
+    onMouseOut: 'onmouseout',
+    onMouseOver: 'onmouseover',
+    onMouseUp: 'onmouseup',
+    onMouseWheel: 'onmousewheel',
+    onOffline: 'onoffline',
+    onOnline: 'ononline',
+    onPageHide: 'onpagehide',
+    onPageShow: 'onpageshow',
+    onPaste: 'onpaste',
+    onPause: 'onpause',
+    onPlay: 'onplay',
+    onPlaying: 'onplaying',
+    onPopState: 'onpopstate',
+    onProgress: 'onprogress',
+    onRateChange: 'onratechange',
+    onRepeat: 'onrepeat',
+    onReset: 'onreset',
+    onResize: 'onresize',
+    onScroll: 'onscroll',
+    onSeeked: 'onseeked',
+    onSeeking: 'onseeking',
+    onSelect: 'onselect',
+    onShow: 'onshow',
+    onStalled: 'onstalled',
+    onStorage: 'onstorage',
+    onSubmit: 'onsubmit',
+    onSuspend: 'onsuspend',
+    onTimeUpdate: 'ontimeupdate',
+    onToggle: 'ontoggle',
+    onUnload: 'onunload',
+    onVolumeChange: 'onvolumechange',
+    onWaiting: 'onwaiting',
+    onZoom: 'onzoom',
+    overlinePosition: 'overline-position',
+    overlineThickness: 'overline-thickness',
+    paintOrder: 'paint-order',
+    panose1: 'panose-1',
+    pointerEvents: 'pointer-events',
+    referrerPolicy: 'referrerpolicy',
+    renderingIntent: 'rendering-intent',
+    shapeRendering: 'shape-rendering',
+    stopColor: 'stop-color',
+    stopOpacity: 'stop-opacity',
+    strikethroughPosition: 'strikethrough-position',
+    strikethroughThickness: 'strikethrough-thickness',
+    strokeDashArray: 'stroke-dasharray',
+    strokeDashOffset: 'stroke-dashoffset',
+    strokeLineCap: 'stroke-linecap',
+    strokeLineJoin: 'stroke-linejoin',
+    strokeMiterLimit: 'stroke-miterlimit',
+    strokeOpacity: 'stroke-opacity',
+    strokeWidth: 'stroke-width',
+    tabIndex: 'tabindex',
+    textAnchor: 'text-anchor',
+    textDecoration: 'text-decoration',
+    textRendering: 'text-rendering',
+    transformOrigin: 'transform-origin',
+    typeOf: 'typeof',
+    underlinePosition: 'underline-position',
+    underlineThickness: 'underline-thickness',
+    unicodeBidi: 'unicode-bidi',
+    unicodeRange: 'unicode-range',
+    unitsPerEm: 'units-per-em',
+    vAlphabetic: 'v-alphabetic',
+    vHanging: 'v-hanging',
+    vIdeographic: 'v-ideographic',
+    vMathematical: 'v-mathematical',
+    vectorEffect: 'vector-effect',
+    vertAdvY: 'vert-adv-y',
+    vertOriginX: 'vert-origin-x',
+    vertOriginY: 'vert-origin-y',
+    wordSpacing: 'word-spacing',
+    writingMode: 'writing-mode',
+    xHeight: 'x-height',
+    // These were camelcased in Tiny. Now lowercased in SVG 2
+    playbackOrder: 'playbackorder',
+    timelineBegin: 'timelinebegin'
+  },
+  properties: {
+    about: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["commaOrSpaceSeparated"],
+    accentHeight: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    accumulate: null,
+    additive: null,
+    alignmentBaseline: null,
+    alphabetic: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    amplitude: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    arabicForm: null,
+    ascent: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    attributeName: null,
+    attributeType: null,
+    azimuth: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    bandwidth: null,
+    baselineShift: null,
+    baseFrequency: null,
+    baseProfile: null,
+    bbox: null,
+    begin: null,
+    bias: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    by: null,
+    calcMode: null,
+    capHeight: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    className: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["spaceSeparated"],
+    clip: null,
+    clipPath: null,
+    clipPathUnits: null,
+    clipRule: null,
+    color: null,
+    colorInterpolation: null,
+    colorInterpolationFilters: null,
+    colorProfile: null,
+    colorRendering: null,
+    content: null,
+    contentScriptType: null,
+    contentStyleType: null,
+    crossOrigin: null,
+    cursor: null,
+    cx: null,
+    cy: null,
+    d: null,
+    dataType: null,
+    defaultAction: null,
+    descent: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    diffuseConstant: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    direction: null,
+    display: null,
+    dur: null,
+    divisor: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    dominantBaseline: null,
+    download: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    dx: null,
+    dy: null,
+    edgeMode: null,
+    editable: null,
+    elevation: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    enableBackground: null,
+    end: null,
+    event: null,
+    exponent: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    externalResourcesRequired: null,
+    fill: null,
+    fillOpacity: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    fillRule: null,
+    filter: null,
+    filterRes: null,
+    filterUnits: null,
+    floodColor: null,
+    floodOpacity: null,
+    focusable: null,
+    focusHighlight: null,
+    fontFamily: null,
+    fontSize: null,
+    fontSizeAdjust: null,
+    fontStretch: null,
+    fontStyle: null,
+    fontVariant: null,
+    fontWeight: null,
+    format: null,
+    fr: null,
+    from: null,
+    fx: null,
+    fy: null,
+    g1: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["commaSeparated"],
+    g2: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["commaSeparated"],
+    glyphName: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["commaSeparated"],
+    glyphOrientationHorizontal: null,
+    glyphOrientationVertical: null,
+    glyphRef: null,
+    gradientTransform: null,
+    gradientUnits: null,
+    handler: null,
+    hanging: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    hatchContentUnits: null,
+    hatchUnits: null,
+    height: null,
+    href: null,
+    hrefLang: null,
+    horizAdvX: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    horizOriginX: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    horizOriginY: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    id: null,
+    ideographic: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    imageRendering: null,
+    initialVisibility: null,
+    in: null,
+    in2: null,
+    intercept: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    k: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    k1: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    k2: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    k3: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    k4: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    kernelMatrix: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["commaOrSpaceSeparated"],
+    kernelUnitLength: null,
+    keyPoints: null, // SEMI_COLON_SEPARATED
+    keySplines: null, // SEMI_COLON_SEPARATED
+    keyTimes: null, // SEMI_COLON_SEPARATED
+    kerning: null,
+    lang: null,
+    lengthAdjust: null,
+    letterSpacing: null,
+    lightingColor: null,
+    limitingConeAngle: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    local: null,
+    markerEnd: null,
+    markerMid: null,
+    markerStart: null,
+    markerHeight: null,
+    markerUnits: null,
+    markerWidth: null,
+    mask: null,
+    maskContentUnits: null,
+    maskUnits: null,
+    mathematical: null,
+    max: null,
+    media: null,
+    mediaCharacterEncoding: null,
+    mediaContentEncodings: null,
+    mediaSize: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    mediaTime: null,
+    method: null,
+    min: null,
+    mode: null,
+    name: null,
+    navDown: null,
+    navDownLeft: null,
+    navDownRight: null,
+    navLeft: null,
+    navNext: null,
+    navPrev: null,
+    navRight: null,
+    navUp: null,
+    navUpLeft: null,
+    navUpRight: null,
+    numOctaves: null,
+    observer: null,
+    offset: null,
+    onAbort: null,
+    onActivate: null,
+    onAfterPrint: null,
+    onBeforePrint: null,
+    onBegin: null,
+    onCancel: null,
+    onCanPlay: null,
+    onCanPlayThrough: null,
+    onChange: null,
+    onClick: null,
+    onClose: null,
+    onCopy: null,
+    onCueChange: null,
+    onCut: null,
+    onDblClick: null,
+    onDrag: null,
+    onDragEnd: null,
+    onDragEnter: null,
+    onDragExit: null,
+    onDragLeave: null,
+    onDragOver: null,
+    onDragStart: null,
+    onDrop: null,
+    onDurationChange: null,
+    onEmptied: null,
+    onEnd: null,
+    onEnded: null,
+    onError: null,
+    onFocus: null,
+    onFocusIn: null,
+    onFocusOut: null,
+    onHashChange: null,
+    onInput: null,
+    onInvalid: null,
+    onKeyDown: null,
+    onKeyPress: null,
+    onKeyUp: null,
+    onLoad: null,
+    onLoadedData: null,
+    onLoadedMetadata: null,
+    onLoadStart: null,
+    onMessage: null,
+    onMouseDown: null,
+    onMouseEnter: null,
+    onMouseLeave: null,
+    onMouseMove: null,
+    onMouseOut: null,
+    onMouseOver: null,
+    onMouseUp: null,
+    onMouseWheel: null,
+    onOffline: null,
+    onOnline: null,
+    onPageHide: null,
+    onPageShow: null,
+    onPaste: null,
+    onPause: null,
+    onPlay: null,
+    onPlaying: null,
+    onPopState: null,
+    onProgress: null,
+    onRateChange: null,
+    onRepeat: null,
+    onReset: null,
+    onResize: null,
+    onScroll: null,
+    onSeeked: null,
+    onSeeking: null,
+    onSelect: null,
+    onShow: null,
+    onStalled: null,
+    onStorage: null,
+    onSubmit: null,
+    onSuspend: null,
+    onTimeUpdate: null,
+    onToggle: null,
+    onUnload: null,
+    onVolumeChange: null,
+    onWaiting: null,
+    onZoom: null,
+    opacity: null,
+    operator: null,
+    order: null,
+    orient: null,
+    orientation: null,
+    origin: null,
+    overflow: null,
+    overlay: null,
+    overlinePosition: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    overlineThickness: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    paintOrder: null,
+    panose1: null,
+    path: null,
+    pathLength: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    patternContentUnits: null,
+    patternTransform: null,
+    patternUnits: null,
+    phase: null,
+    ping: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["spaceSeparated"],
+    pitch: null,
+    playbackOrder: null,
+    pointerEvents: null,
+    points: null,
+    pointsAtX: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    pointsAtY: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    pointsAtZ: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    preserveAlpha: null,
+    preserveAspectRatio: null,
+    primitiveUnits: null,
+    propagate: null,
+    property: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["commaOrSpaceSeparated"],
+    r: null,
+    radius: null,
+    referrerPolicy: null,
+    refX: null,
+    refY: null,
+    rel: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["commaOrSpaceSeparated"],
+    rev: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["commaOrSpaceSeparated"],
+    renderingIntent: null,
+    repeatCount: null,
+    repeatDur: null,
+    requiredExtensions: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["commaOrSpaceSeparated"],
+    requiredFeatures: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["commaOrSpaceSeparated"],
+    requiredFonts: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["commaOrSpaceSeparated"],
+    requiredFormats: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["commaOrSpaceSeparated"],
+    resource: null,
+    restart: null,
+    result: null,
+    rotate: null,
+    rx: null,
+    ry: null,
+    scale: null,
+    seed: null,
+    shapeRendering: null,
+    side: null,
+    slope: null,
+    snapshotTime: null,
+    specularConstant: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    specularExponent: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    spreadMethod: null,
+    spacing: null,
+    startOffset: null,
+    stdDeviation: null,
+    stemh: null,
+    stemv: null,
+    stitchTiles: null,
+    stopColor: null,
+    stopOpacity: null,
+    strikethroughPosition: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    strikethroughThickness: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    string: null,
+    stroke: null,
+    strokeDashArray: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["commaOrSpaceSeparated"],
+    strokeDashOffset: null,
+    strokeLineCap: null,
+    strokeLineJoin: null,
+    strokeMiterLimit: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    strokeOpacity: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    strokeWidth: null,
+    style: null,
+    surfaceScale: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    syncBehavior: null,
+    syncBehaviorDefault: null,
+    syncMaster: null,
+    syncTolerance: null,
+    syncToleranceDefault: null,
+    systemLanguage: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["commaOrSpaceSeparated"],
+    tabIndex: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    tableValues: null,
+    target: null,
+    targetX: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    targetY: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    textAnchor: null,
+    textDecoration: null,
+    textRendering: null,
+    textLength: null,
+    timelineBegin: null,
+    title: null,
+    transformBehavior: null,
+    type: null,
+    typeOf: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["commaOrSpaceSeparated"],
+    to: null,
+    transform: null,
+    transformOrigin: null,
+    u1: null,
+    u2: null,
+    underlinePosition: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    underlineThickness: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    unicode: null,
+    unicodeBidi: null,
+    unicodeRange: null,
+    unitsPerEm: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    values: null,
+    vAlphabetic: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    vMathematical: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    vectorEffect: null,
+    vHanging: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    vIdeographic: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    version: null,
+    vertAdvY: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    vertOriginX: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    vertOriginY: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    viewBox: null,
+    viewTarget: null,
+    visibility: null,
+    width: null,
+    widths: null,
+    wordSpacing: null,
+    writingMode: null,
+    x: null,
+    x1: null,
+    x2: null,
+    xChannelSelector: null,
+    xHeight: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    y: null,
+    y1: null,
+    y2: null,
+    yChannelSelector: null,
+    z: null,
+    zoomAndPan: null
+  },
+  space: 'svg',
+  transform: _util_case_sensitive_transform_js__WEBPACK_IMPORTED_MODULE_0__["caseSensitiveTransform"]
 })
 
 
@@ -6473,18 +9826,25 @@ module.exports = create({
 /*!**********************************************************************************!*\
   !*** ./node_modules/property-information/lib/util/case-insensitive-transform.js ***!
   \**********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: caseInsensitiveTransform */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "caseInsensitiveTransform", function() { return caseInsensitiveTransform; });
+/* harmony import */ var _case_sensitive_transform_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./case-sensitive-transform.js */ "./node_modules/property-information/lib/util/case-sensitive-transform.js");
 
 
-var caseSensitiveTransform = __webpack_require__(/*! ./case-sensitive-transform */ "./node_modules/property-information/lib/util/case-sensitive-transform.js")
-
-module.exports = caseInsensitiveTransform
-
+/**
+ * @param {Record<string, string>} attributes
+ *   Attributes.
+ * @param {string} property
+ *   Property.
+ * @returns {string}
+ *   Transformed property.
+ */
 function caseInsensitiveTransform(attributes, property) {
-  return caseSensitiveTransform(attributes, property.toLowerCase())
+  return Object(_case_sensitive_transform_js__WEBPACK_IMPORTED_MODULE_0__["caseSensitiveTransform"])(attributes, property.toLowerCase())
 }
 
 
@@ -6494,14 +9854,20 @@ function caseInsensitiveTransform(attributes, property) {
 /*!********************************************************************************!*\
   !*** ./node_modules/property-information/lib/util/case-sensitive-transform.js ***!
   \********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: caseSensitiveTransform */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = caseSensitiveTransform
-
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "caseSensitiveTransform", function() { return caseSensitiveTransform; });
+/**
+ * @param {Record<string, string>} attributes
+ *   Attributes.
+ * @param {string} attribute
+ *   Attribute.
+ * @returns {string}
+ *   Transformed attribute.
+ */
 function caseSensitiveTransform(attributes, attribute) {
   return attribute in attributes ? attributes[attribute] : attribute
 }
@@ -6513,48 +9879,83 @@ function caseSensitiveTransform(attributes, attribute) {
 /*!**************************************************************!*\
   !*** ./node_modules/property-information/lib/util/create.js ***!
   \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: create */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "create", function() { return create; });
+/* harmony import */ var _normalize_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../normalize.js */ "./node_modules/property-information/lib/normalize.js");
+/* harmony import */ var _defined_info_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./defined-info.js */ "./node_modules/property-information/lib/util/defined-info.js");
+/* harmony import */ var _schema_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./schema.js */ "./node_modules/property-information/lib/util/schema.js");
+/**
+ * @import {Info, Space} from 'property-information'
+ */
+
+/**
+ * @typedef Definition
+ *   Definition of a schema.
+ * @property {Record<string, string> | undefined} [attributes]
+ *   Normalzed names to special attribute case.
+ * @property {ReadonlyArray<string> | undefined} [mustUseProperty]
+ *   Normalized names that must be set as properties.
+ * @property {Record<string, number | null>} properties
+ *   Property names to their types.
+ * @property {Space | undefined} [space]
+ *   Space.
+ * @property {Transform} transform
+ *   Transform a property name.
+ */
+
+/**
+ * @callback Transform
+ *   Transform.
+ * @param {Record<string, string>} attributes
+ *   Attributes.
+ * @param {string} property
+ *   Property.
+ * @returns {string}
+ *   Attribute.
+ */
 
 
-var normalize = __webpack_require__(/*! ../../normalize */ "./node_modules/property-information/normalize.js")
-var Schema = __webpack_require__(/*! ./schema */ "./node_modules/property-information/lib/util/schema.js")
-var DefinedInfo = __webpack_require__(/*! ./defined-info */ "./node_modules/property-information/lib/util/defined-info.js")
 
-module.exports = create
 
+
+/**
+ * @param {Definition} definition
+ *   Definition.
+ * @returns {Schema}
+ *   Schema.
+ */
 function create(definition) {
-  var space = definition.space
-  var mustUseProperty = definition.mustUseProperty || []
-  var attributes = definition.attributes || {}
-  var props = definition.properties
-  var transform = definition.transform
-  var property = {}
-  var normal = {}
-  var prop
-  var info
+  /** @type {Record<string, Info>} */
+  const properties = {}
+  /** @type {Record<string, string>} */
+  const normals = {}
 
-  for (prop in props) {
-    info = new DefinedInfo(
-      prop,
-      transform(attributes, prop),
-      props[prop],
-      space
+  for (const [property, value] of Object.entries(definition.properties)) {
+    const info = new _defined_info_js__WEBPACK_IMPORTED_MODULE_1__["DefinedInfo"](
+      property,
+      definition.transform(definition.attributes || {}, property),
+      value,
+      definition.space
     )
 
-    if (mustUseProperty.indexOf(prop) !== -1) {
+    if (
+      definition.mustUseProperty &&
+      definition.mustUseProperty.includes(property)
+    ) {
       info.mustUseProperty = true
     }
 
-    property[prop] = info
+    properties[property] = info
 
-    normal[normalize(prop)] = prop
-    normal[normalize(info.attribute)] = prop
+    normals[Object(_normalize_js__WEBPACK_IMPORTED_MODULE_0__["normalize"])(property)] = property
+    normals[Object(_normalize_js__WEBPACK_IMPORTED_MODULE_0__["normalize"])(info.attribute)] = property
   }
 
-  return new Schema(property, normal, space)
+  return new _schema_js__WEBPACK_IMPORTED_MODULE_2__["Schema"](properties, normals, definition.space)
 }
 
 
@@ -6564,45 +9965,69 @@ function create(definition) {
 /*!********************************************************************!*\
   !*** ./node_modules/property-information/lib/util/defined-info.js ***!
   \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: DefinedInfo */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DefinedInfo", function() { return DefinedInfo; });
+/* harmony import */ var _info_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./info.js */ "./node_modules/property-information/lib/util/info.js");
+/* harmony import */ var _types_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./types.js */ "./node_modules/property-information/lib/util/types.js");
+/**
+ * @import {Space} from 'property-information'
+ */
 
 
-var Info = __webpack_require__(/*! ./info */ "./node_modules/property-information/lib/util/info.js")
-var types = __webpack_require__(/*! ./types */ "./node_modules/property-information/lib/util/types.js")
 
-module.exports = DefinedInfo
 
-DefinedInfo.prototype = new Info()
-DefinedInfo.prototype.defined = true
+const checks = /** @type {ReadonlyArray<keyof typeof types>} */ (
+  Object.keys(_types_js__WEBPACK_IMPORTED_MODULE_1__)
+)
 
-var checks = [
-  'boolean',
-  'booleanish',
-  'overloadedBoolean',
-  'number',
-  'commaSeparated',
-  'spaceSeparated',
-  'commaOrSpaceSeparated'
-]
-var checksLength = checks.length
+class DefinedInfo extends _info_js__WEBPACK_IMPORTED_MODULE_0__["Info"] {
+  /**
+   * @constructor
+   * @param {string} property
+   *   Property.
+   * @param {string} attribute
+   *   Attribute.
+   * @param {number | null | undefined} [mask]
+   *   Mask.
+   * @param {Space | undefined} [space]
+   *   Space.
+   * @returns
+   *   Info.
+   */
+  constructor(property, attribute, mask, space) {
+    let index = -1
 
-function DefinedInfo(property, attribute, mask, space) {
-  var index = -1
-  var check
+    super(property, attribute)
 
-  mark(this, 'space', space)
+    mark(this, 'space', space)
 
-  Info.call(this, property, attribute)
-
-  while (++index < checksLength) {
-    check = checks[index]
-    mark(this, check, (mask & types[check]) === types[check])
+    if (typeof mask === 'number') {
+      while (++index < checks.length) {
+        const check = checks[index]
+        mark(this, checks[index], (mask & _types_js__WEBPACK_IMPORTED_MODULE_1__[check]) === _types_js__WEBPACK_IMPORTED_MODULE_1__[check])
+      }
+    }
   }
 }
 
+DefinedInfo.prototype.defined = true
+
+/**
+ * @template {keyof DefinedInfo} Key
+ *   Key type.
+ * @param {DefinedInfo} values
+ *   Info.
+ * @param {Key} key
+ *   Key.
+ * @param {DefinedInfo[Key]} value
+ *   Value.
+ * @returns {undefined}
+ *   Nothing.
+ */
 function mark(values, key, value) {
   if (value) {
     values[key] = value
@@ -6616,33 +10041,44 @@ function mark(values, key, value) {
 /*!************************************************************!*\
   !*** ./node_modules/property-information/lib/util/info.js ***!
   \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: Info */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Info", function() { return Info; });
+/**
+ * @import {Info as InfoType} from 'property-information'
+ */
 
-
-module.exports = Info
-
-var proto = Info.prototype
-
-proto.space = null
-proto.attribute = null
-proto.property = null
-proto.boolean = false
-proto.booleanish = false
-proto.overloadedBoolean = false
-proto.number = false
-proto.commaSeparated = false
-proto.spaceSeparated = false
-proto.commaOrSpaceSeparated = false
-proto.mustUseProperty = false
-proto.defined = false
-
-function Info(property, attribute) {
-  this.property = property
-  this.attribute = attribute
+/** @type {InfoType} */
+class Info {
+  /**
+   * @param {string} property
+   *   Property.
+   * @param {string} attribute
+   *   Attribute.
+   * @returns
+   *   Info.
+   */
+  constructor(property, attribute) {
+    this.attribute = attribute
+    this.property = property
+  }
 }
+
+Info.prototype.attribute = ''
+Info.prototype.booleanish = false
+Info.prototype.boolean = false
+Info.prototype.commaOrSpaceSeparated = false
+Info.prototype.commaSeparated = false
+Info.prototype.defined = false
+Info.prototype.mustUseProperty = false
+Info.prototype.number = false
+Info.prototype.overloadedBoolean = false
+Info.prototype.property = ''
+Info.prototype.spaceSeparated = false
+Info.prototype.space = undefined
 
 
 /***/ }),
@@ -6651,37 +10087,39 @@ function Info(property, attribute) {
 /*!*************************************************************!*\
   !*** ./node_modules/property-information/lib/util/merge.js ***!
   \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: merge */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "merge", function() { return merge; });
+/* harmony import */ var _schema_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./schema.js */ "./node_modules/property-information/lib/util/schema.js");
+/**
+ * @import {Info, Space} from 'property-information'
+ */
 
 
-var xtend = __webpack_require__(/*! xtend */ "./node_modules/xtend/immutable.js")
-var Schema = __webpack_require__(/*! ./schema */ "./node_modules/property-information/lib/util/schema.js")
 
-module.exports = merge
+/**
+ * @param {ReadonlyArray<Schema>} definitions
+ *   Definitions.
+ * @param {Space | undefined} [space]
+ *   Space.
+ * @returns {Schema}
+ *   Schema.
+ */
+function merge(definitions, space) {
+  /** @type {Record<string, Info>} */
+  const property = {}
+  /** @type {Record<string, string>} */
+  const normal = {}
 
-function merge(definitions) {
-  var length = definitions.length
-  var property = []
-  var normal = []
-  var index = -1
-  var info
-  var space
-
-  while (++index < length) {
-    info = definitions[index]
-    property.push(info.property)
-    normal.push(info.normal)
-    space = info.space
+  for (const definition of definitions) {
+    Object.assign(property, definition.property)
+    Object.assign(normal, definition.normal)
   }
 
-  return new Schema(
-    xtend.apply(null, property),
-    xtend.apply(null, normal),
-    space
-  )
+  return new _schema_js__WEBPACK_IMPORTED_MODULE_0__["Schema"](property, normal, space)
 }
 
 
@@ -6691,28 +10129,41 @@ function merge(definitions) {
 /*!**************************************************************!*\
   !*** ./node_modules/property-information/lib/util/schema.js ***!
   \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: Schema */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Schema", function() { return Schema; });
+/**
+ * @import {Schema as SchemaType, Space} from 'property-information'
+ */
 
+/** @type {SchemaType} */
+class Schema {
+  /**
+   * @param {SchemaType['property']} property
+   *   Property.
+   * @param {SchemaType['normal']} normal
+   *   Normal.
+   * @param {Space | undefined} [space]
+   *   Space.
+   * @returns
+   *   Schema.
+   */
+  constructor(property, normal, space) {
+    this.normal = normal
+    this.property = property
 
-module.exports = Schema
-
-var proto = Schema.prototype
-
-proto.space = null
-proto.normal = {}
-proto.property = {}
-
-function Schema(property, normal, space) {
-  this.property = property
-  this.normal = normal
-
-  if (space) {
-    this.space = space
+    if (space) {
+      this.space = space
+    }
   }
 }
+
+Schema.prototype.normal = {}
+Schema.prototype.property = {}
+Schema.prototype.space = undefined
 
 
 /***/ }),
@@ -6721,24 +10172,30 @@ function Schema(property, normal, space) {
 /*!*************************************************************!*\
   !*** ./node_modules/property-information/lib/util/types.js ***!
   \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: boolean, booleanish, overloadedBoolean, number, spaceSeparated, commaSeparated, commaOrSpaceSeparated */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "boolean", function() { return boolean; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "booleanish", function() { return booleanish; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "overloadedBoolean", function() { return overloadedBoolean; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "number", function() { return number; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "spaceSeparated", function() { return spaceSeparated; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "commaSeparated", function() { return commaSeparated; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "commaOrSpaceSeparated", function() { return commaOrSpaceSeparated; });
+let powers = 0
 
-
-var powers = 0
-
-exports.boolean = increment()
-exports.booleanish = increment()
-exports.overloadedBoolean = increment()
-exports.number = increment()
-exports.spaceSeparated = increment()
-exports.commaSeparated = increment()
-exports.commaOrSpaceSeparated = increment()
+const boolean = increment()
+const booleanish = increment()
+const overloadedBoolean = increment()
+const number = increment()
+const spaceSeparated = increment()
+const commaSeparated = increment()
+const commaOrSpaceSeparated = increment()
 
 function increment() {
-  return Math.pow(2, ++powers)
+  return 2 ** ++powers
 }
 
 
@@ -6748,17 +10205,16 @@ function increment() {
 /*!********************************************************!*\
   !*** ./node_modules/property-information/lib/xlink.js ***!
   \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: xlink */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "xlink", function() { return xlink; });
+/* harmony import */ var _util_create_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./util/create.js */ "./node_modules/property-information/lib/util/create.js");
 
 
-var create = __webpack_require__(/*! ./util/create */ "./node_modules/property-information/lib/util/create.js")
-
-module.exports = create({
-  space: 'xlink',
-  transform: xlinkTransform,
+const xlink = Object(_util_create_js__WEBPACK_IMPORTED_MODULE_0__["create"])({
   properties: {
     xLinkActuate: null,
     xLinkArcRole: null,
@@ -6767,12 +10223,12 @@ module.exports = create({
     xLinkShow: null,
     xLinkTitle: null,
     xLinkType: null
+  },
+  space: 'xlink',
+  transform(_, property) {
+    return 'xlink:' + property.slice(5).toLowerCase()
   }
 })
-
-function xlinkTransform(_, prop) {
-  return 'xlink:' + prop.slice(5).toLowerCase()
-}
 
 
 /***/ }),
@@ -6781,27 +10237,22 @@ function xlinkTransform(_, prop) {
 /*!******************************************************!*\
   !*** ./node_modules/property-information/lib/xml.js ***!
   \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: xml */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "xml", function() { return xml; });
+/* harmony import */ var _util_create_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./util/create.js */ "./node_modules/property-information/lib/util/create.js");
 
 
-var create = __webpack_require__(/*! ./util/create */ "./node_modules/property-information/lib/util/create.js")
-
-module.exports = create({
+const xml = Object(_util_create_js__WEBPACK_IMPORTED_MODULE_0__["create"])({
+  properties: {xmlBase: null, xmlLang: null, xmlSpace: null},
   space: 'xml',
-  transform: xmlTransform,
-  properties: {
-    xmlLang: null,
-    xmlBase: null,
-    xmlSpace: null
+  transform(_, property) {
+    return 'xml:' + property.slice(3).toLowerCase()
   }
 })
-
-function xmlTransform(_, prop) {
-  return 'xml:' + prop.slice(3).toLowerCase()
-}
 
 
 /***/ }),
@@ -6810,45 +10261,23 @@ function xmlTransform(_, prop) {
 /*!********************************************************!*\
   !*** ./node_modules/property-information/lib/xmlns.js ***!
   \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: xmlns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "xmlns", function() { return xmlns; });
+/* harmony import */ var _util_create_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./util/create.js */ "./node_modules/property-information/lib/util/create.js");
+/* harmony import */ var _util_case_insensitive_transform_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./util/case-insensitive-transform.js */ "./node_modules/property-information/lib/util/case-insensitive-transform.js");
 
 
-var create = __webpack_require__(/*! ./util/create */ "./node_modules/property-information/lib/util/create.js")
-var caseInsensitiveTransform = __webpack_require__(/*! ./util/case-insensitive-transform */ "./node_modules/property-information/lib/util/case-insensitive-transform.js")
 
-module.exports = create({
+const xmlns = Object(_util_create_js__WEBPACK_IMPORTED_MODULE_0__["create"])({
+  attributes: {xmlnsxlink: 'xmlns:xlink'},
+  properties: {xmlnsXLink: null, xmlns: null},
   space: 'xmlns',
-  attributes: {
-    xmlnsxlink: 'xmlns:xlink'
-  },
-  transform: caseInsensitiveTransform,
-  properties: {
-    xmlns: null,
-    xmlnsXLink: null
-  }
+  transform: _util_case_insensitive_transform_js__WEBPACK_IMPORTED_MODULE_1__["caseInsensitiveTransform"]
 })
-
-
-/***/ }),
-
-/***/ "./node_modules/property-information/normalize.js":
-/*!********************************************************!*\
-  !*** ./node_modules/property-information/normalize.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = normalize
-
-function normalize(value) {
-  return value.toLowerCase()
-}
 
 
 /***/ }),
@@ -24485,15 +27914,20 @@ refractor.register(__webpack_require__(/*! ./lang/zig.js */ "./node_modules/refr
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/abap.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = abap
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return abap; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 abap.displayName = 'abap'
 abap.aliases = []
+
+/** @param {Refractor} Prism */
 function abap(Prism) {
   Prism.languages.abap = {
     comment: /^\*.*/m,
@@ -24514,7 +27948,7 @@ inside an EOL comment is more acceptable than the opposite.
     },
     keyword: {
       pattern:
-        /(\s|\.|^)(?:SCIENTIFIC_WITH_LEADING_ZERO|SCALE_PRESERVING_SCIENTIFIC|RMC_COMMUNICATION_FAILURE|END-ENHANCEMENT-SECTION|MULTIPLY-CORRESPONDING|SUBTRACT-CORRESPONDING|VERIFICATION-MESSAGE|DIVIDE-CORRESPONDING|ENHANCEMENT-SECTION|CURRENCY_CONVERSION|RMC_SYSTEM_FAILURE|START-OF-SELECTION|MOVE-CORRESPONDING|RMC_INVALID_STATUS|CUSTOMER-FUNCTION|END-OF-DEFINITION|ENHANCEMENT-POINT|SYSTEM-EXCEPTIONS|ADD-CORRESPONDING|SCALE_PRESERVING|SELECTION-SCREEN|CURSOR-SELECTION|END-OF-SELECTION|LOAD-OF-PROGRAM|SCROLL-BOUNDARY|SELECTION-TABLE|EXCEPTION-TABLE|IMPLEMENTATIONS|PARAMETER-TABLE|RIGHT-JUSTIFIED|UNIT_CONVERSION|AUTHORITY-CHECK|LIST-PROCESSING|SIGN_AS_POSTFIX|COL_BACKGROUND|IMPLEMENTATION|INTERFACE-POOL|TRANSFORMATION|IDENTIFICATION|ENDENHANCEMENT|LINE-SELECTION|INITIALIZATION|LEFT-JUSTIFIED|SELECT-OPTIONS|SELECTION-SETS|COMMUNICATION|CORRESPONDING|DECIMAL_SHIFT|PRINT-CONTROL|VALUE-REQUEST|CHAIN-REQUEST|FUNCTION-POOL|FIELD-SYMBOLS|FUNCTIONALITY|INVERTED-DATE|SELECTION-SET|CLASS-METHODS|OUTPUT-LENGTH|CLASS-CODING|COL_NEGATIVE|ERRORMESSAGE|FIELD-GROUPS|HELP-REQUEST|NO-EXTENSION|NO-TOPOFPAGE|REDEFINITION|DISPLAY-MODE|ENDINTERFACE|EXIT-COMMAND|FIELD-SYMBOL|NO-SCROLLING|SHORTDUMP-ID|ACCESSPOLICY|CLASS-EVENTS|COL_POSITIVE|DECLARATIONS|ENHANCEMENTS|FILTER-TABLE|SWITCHSTATES|SYNTAX-CHECK|TRANSPORTING|ASYNCHRONOUS|SYNTAX-TRACE|TOKENIZATION|USER-COMMAND|WITH-HEADING|ABAP-SOURCE|BREAK-POINT|CHAIN-INPUT|COMPRESSION|FIXED-POINT|NEW-SECTION|NON-UNICODE|OCCURRENCES|RESPONSIBLE|SYSTEM-CALL|TRACE-TABLE|ABBREVIATED|CHAR-TO-HEX|END-OF-FILE|ENDFUNCTION|ENVIRONMENT|ASSOCIATION|COL_HEADING|EDITOR-CALL|END-OF-PAGE|ENGINEERING|IMPLEMENTED|INTENSIFIED|RADIOBUTTON|SYSTEM-EXIT|TOP-OF-PAGE|TRANSACTION|APPLICATION|CONCATENATE|DESTINATION|ENHANCEMENT|IMMEDIATELY|NO-GROUPING|PRECOMPILED|REPLACEMENT|TITLE-LINES|ACTIVATION|BYTE-ORDER|CLASS-POOL|CONNECTION|CONVERSION|DEFINITION|DEPARTMENT|EXPIRATION|INHERITING|MESSAGE-ID|NO-HEADING|PERFORMING|QUEUE-ONLY|RIGHTSPACE|SCIENTIFIC|STATUSINFO|STRUCTURES|SYNCPOINTS|WITH-TITLE|ATTRIBUTES|BOUNDARIES|CLASS-DATA|COL_NORMAL|DD\/MM\/YYYY|DESCENDING|INTERFACES|LINE-COUNT|MM\/DD\/YYYY|NON-UNIQUE|PRESERVING|SELECTIONS|STATEMENTS|SUBROUTINE|TRUNCATION|TYPE-POOLS|ARITHMETIC|BACKGROUND|ENDPROVIDE|EXCEPTIONS|IDENTIFIER|INDEX-LINE|OBLIGATORY|PARAMETERS|PERCENTAGE|PUSHBUTTON|RESOLUTION|COMPONENTS|DEALLOCATE|DISCONNECT|DUPLICATES|FIRST-LINE|HEAD-LINES|NO-DISPLAY|OCCURRENCE|RESPECTING|RETURNCODE|SUBMATCHES|TRACE-FILE|ASCENDING|BYPASSING|ENDMODULE|EXCEPTION|EXCLUDING|EXPORTING|INCREMENT|MATCHCODE|PARAMETER|PARTIALLY|PREFERRED|REFERENCE|REPLACING|RETURNING|SELECTION|SEPARATED|SPECIFIED|STATEMENT|TIMESTAMP|TYPE-POOL|ACCEPTING|APPENDAGE|ASSIGNING|COL_GROUP|COMPARING|CONSTANTS|DANGEROUS|IMPORTING|INSTANCES|LEFTSPACE|LOG-POINT|QUICKINFO|READ-ONLY|SCROLLING|SQLSCRIPT|STEP-LOOP|TOP-LINES|TRANSLATE|APPENDING|AUTHORITY|CHARACTER|COMPONENT|CONDITION|DIRECTORY|DUPLICATE|MESSAGING|RECEIVING|SUBSCREEN|ACCORDING|COL_TOTAL|END-LINES|ENDMETHOD|ENDSELECT|EXPANDING|EXTENSION|INCLUDING|INFOTYPES|INTERFACE|INTERVALS|LINE-SIZE|PF-STATUS|PROCEDURE|PROTECTED|REQUESTED|RESUMABLE|RIGHTPLUS|SAP-SPOOL|SECONDARY|STRUCTURE|SUBSTRING|TABLEVIEW|NUMOFCHAR|ADJACENT|ANALYSIS|ASSIGNED|BACKWARD|CHANNELS|CHECKBOX|CONTINUE|CRITICAL|DATAINFO|DD\/MM\/YY|DURATION|ENCODING|ENDCLASS|FUNCTION|LEFTPLUS|LINEFEED|MM\/DD\/YY|OVERFLOW|RECEIVED|SKIPPING|SORTABLE|STANDARD|SUBTRACT|SUPPRESS|TABSTRIP|TITLEBAR|TRUNCATE|UNASSIGN|WHENEVER|ANALYZER|COALESCE|COMMENTS|CONDENSE|DECIMALS|DEFERRED|ENDWHILE|EXPLICIT|KEYWORDS|MESSAGES|POSITION|PRIORITY|RECEIVER|RENAMING|TIMEZONE|TRAILING|ALLOCATE|CENTERED|CIRCULAR|CONTROLS|CURRENCY|DELETING|DESCRIBE|DISTANCE|ENDCATCH|EXPONENT|EXTENDED|GENERATE|IGNORING|INCLUDES|INTERNAL|MAJOR-ID|MODIFIER|NEW-LINE|OPTIONAL|PROPERTY|ROLLBACK|STARTING|SUPPLIED|ABSTRACT|CHANGING|CONTEXTS|CREATING|CUSTOMER|DATABASE|DAYLIGHT|DEFINING|DISTINCT|DIVISION|ENABLING|ENDCHAIN|ESCAPING|HARMLESS|IMPLICIT|INACTIVE|LANGUAGE|MINOR-ID|MULTIPLY|NEW-PAGE|NO-TITLE|POS_HIGH|SEPARATE|TEXTPOOL|TRANSFER|SELECTOR|DBMAXLEN|ITERATOR|ARCHIVE|BIT-XOR|BYTE-CO|COLLECT|COMMENT|CURRENT|DEFAULT|DISPLAY|ENDFORM|EXTRACT|LEADING|LISTBOX|LOCATOR|MEMBERS|METHODS|NESTING|POS_LOW|PROCESS|PROVIDE|RAISING|RESERVE|SECONDS|SUMMARY|VISIBLE|BETWEEN|BIT-AND|BYTE-CS|CLEANUP|COMPUTE|CONTROL|CONVERT|DATASET|ENDCASE|FORWARD|HEADERS|HOTSPOT|INCLUDE|INVERSE|KEEPING|NO-ZERO|OBJECTS|OVERLAY|PADDING|PATTERN|PROGRAM|REFRESH|SECTION|SUMMING|TESTING|VERSION|WINDOWS|WITHOUT|BIT-NOT|BYTE-CA|BYTE-NA|CASTING|CONTEXT|COUNTRY|DYNAMIC|ENABLED|ENDLOOP|EXECUTE|FRIENDS|HANDLER|HEADING|INITIAL|\*-INPUT|LOGFILE|MAXIMUM|MINIMUM|NO-GAPS|NO-SIGN|PRAGMAS|PRIMARY|PRIVATE|REDUCED|REPLACE|REQUEST|RESULTS|UNICODE|WARNING|ALIASES|BYTE-CN|BYTE-NS|CALLING|COL_KEY|COLUMNS|CONNECT|ENDEXEC|ENTRIES|EXCLUDE|FILTERS|FURTHER|HELP-ID|LOGICAL|MAPPING|MESSAGE|NAMETAB|OPTIONS|PACKAGE|PERFORM|RECEIVE|STATICS|VARYING|BINDING|CHARLEN|GREATER|XSTRLEN|ACCEPT|APPEND|DETAIL|ELSEIF|ENDING|ENDTRY|FORMAT|FRAMES|GIVING|HASHED|HEADER|IMPORT|INSERT|MARGIN|MODULE|NATIVE|OBJECT|OFFSET|REMOTE|RESUME|SAVING|SIMPLE|SUBMIT|TABBED|TOKENS|UNIQUE|UNPACK|UPDATE|WINDOW|YELLOW|ACTUAL|ASPECT|CENTER|CURSOR|DELETE|DIALOG|DIVIDE|DURING|ERRORS|EVENTS|EXTEND|FILTER|HANDLE|HAVING|IGNORE|LITTLE|MEMORY|NO-GAP|OCCURS|OPTION|PERSON|PLACES|PUBLIC|REDUCE|REPORT|RESULT|SINGLE|SORTED|SWITCH|SYNTAX|TARGET|VALUES|WRITER|ASSERT|BLOCKS|BOUNDS|BUFFER|CHANGE|COLUMN|COMMIT|CONCAT|COPIES|CREATE|DDMMYY|DEFINE|ENDIAN|ESCAPE|EXPAND|KERNEL|LAYOUT|LEGACY|LEVELS|MMDDYY|NUMBER|OUTPUT|RANGES|READER|RETURN|SCREEN|SEARCH|SELECT|SHARED|SOURCE|STABLE|STATIC|SUBKEY|SUFFIX|TABLES|UNWIND|YYMMDD|ASSIGN|BACKUP|BEFORE|BINARY|BIT-OR|BLANKS|CLIENT|CODING|COMMON|DEMAND|DYNPRO|EXCEPT|EXISTS|EXPORT|FIELDS|GLOBAL|GROUPS|LENGTH|LOCALE|MEDIUM|METHOD|MODIFY|NESTED|OTHERS|REJECT|SCROLL|SUPPLY|SYMBOL|ENDFOR|STRLEN|ALIGN|BEGIN|BOUND|ENDAT|ENTRY|EVENT|FINAL|FLUSH|GRANT|INNER|SHORT|USING|WRITE|AFTER|BLACK|BLOCK|CLOCK|COLOR|COUNT|DUMMY|EMPTY|ENDDO|ENDON|GREEN|INDEX|INOUT|LEAVE|LEVEL|LINES|MODIF|ORDER|OUTER|RANGE|RESET|RETRY|RIGHT|SMART|SPLIT|STYLE|TABLE|THROW|UNDER|UNTIL|UPPER|UTF-8|WHERE|ALIAS|BLANK|CLEAR|CLOSE|EXACT|FETCH|FIRST|FOUND|GROUP|LLANG|LOCAL|OTHER|REGEX|SPOOL|TITLE|TYPES|VALID|WHILE|ALPHA|BOXED|CATCH|CHAIN|CHECK|CLASS|COVER|ENDIF|EQUIV|FIELD|FLOOR|FRAME|INPUT|LOWER|MATCH|NODES|PAGES|PRINT|RAISE|ROUND|SHIFT|SPACE|SPOTS|STAMP|STATE|TASKS|TIMES|TRMAC|ULINE|UNION|VALUE|WIDTH|EQUAL|LOG10|TRUNC|BLOB|CASE|CEIL|CLOB|COND|EXIT|FILE|GAPS|HOLD|INCL|INTO|KEEP|KEYS|LAST|LINE|LONG|LPAD|MAIL|MODE|OPEN|PINK|READ|ROWS|TEST|THEN|ZERO|AREA|BACK|BADI|BYTE|CAST|EDIT|EXEC|FAIL|FIND|FKEQ|FONT|FREE|GKEQ|HIDE|INIT|ITNO|LATE|LOOP|MAIN|MARK|MOVE|NEXT|NULL|RISK|ROLE|UNIT|WAIT|ZONE|BASE|CALL|CODE|DATA|DATE|FKGE|GKGE|HIGH|KIND|LEFT|LIST|MASK|MESH|NAME|NODE|PACK|PAGE|POOL|SEND|SIGN|SIZE|SOME|STOP|TASK|TEXT|TIME|USER|VARY|WITH|WORD|BLUE|CONV|COPY|DEEP|ELSE|FORM|FROM|HINT|ICON|JOIN|LIKE|LOAD|ONLY|PART|SCAN|SKIP|SORT|TYPE|UNIX|VIEW|WHEN|WORK|ACOS|ASIN|ATAN|COSH|EACH|FRAC|LESS|RTTI|SINH|SQRT|TANH|AVG|BIT|DIV|ISO|LET|OUT|PAD|SQL|ALL|CI_|CPI|END|LOB|LPI|MAX|MIN|NEW|OLE|RUN|SET|\?TO|YES|ABS|ADD|AND|BIG|FOR|HDB|JOB|LOW|NOT|SAP|TRY|VIA|XML|ANY|GET|IDS|KEY|MOD|OFF|PUT|RAW|RED|REF|SUM|TAB|XSD|CNT|COS|EXP|LOG|SIN|TAN|XOR|AT|CO|CP|DO|GT|ID|IF|NS|OR|BT|CA|CS|GE|NA|NB|EQ|IN|LT|NE|NO|OF|ON|PF|TO|AS|BY|CN|IS|LE|NP|UP|E|I|M|O|Z|C|X)\b/i,
+        /(\s|\.|^)(?:\*-INPUT|\?TO|ABAP-SOURCE|ABBREVIATED|ABS|ABSTRACT|ACCEPT|ACCEPTING|ACCESSPOLICY|ACCORDING|ACOS|ACTIVATION|ACTUAL|ADD|ADD-CORRESPONDING|ADJACENT|AFTER|ALIAS|ALIASES|ALIGN|ALL|ALLOCATE|ALPHA|ANALYSIS|ANALYZER|AND|ANY|APPEND|APPENDAGE|APPENDING|APPLICATION|ARCHIVE|AREA|ARITHMETIC|AS|ASCENDING|ASIN|ASPECT|ASSERT|ASSIGN|ASSIGNED|ASSIGNING|ASSOCIATION|ASYNCHRONOUS|AT|ATAN|ATTRIBUTES|AUTHORITY|AUTHORITY-CHECK|AVG|BACK|BACKGROUND|BACKUP|BACKWARD|BADI|BASE|BEFORE|BEGIN|BETWEEN|BIG|BINARY|BINDING|BIT|BIT-AND|BIT-NOT|BIT-OR|BIT-XOR|BLACK|BLANK|BLANKS|BLOB|BLOCK|BLOCKS|BLUE|BOUND|BOUNDARIES|BOUNDS|BOXED|BREAK-POINT|BT|BUFFER|BY|BYPASSING|BYTE|BYTE-CA|BYTE-CN|BYTE-CO|BYTE-CS|BYTE-NA|BYTE-NS|BYTE-ORDER|C|CA|CALL|CALLING|CASE|CAST|CASTING|CATCH|CEIL|CENTER|CENTERED|CHAIN|CHAIN-INPUT|CHAIN-REQUEST|CHANGE|CHANGING|CHANNELS|CHAR-TO-HEX|CHARACTER|CHARLEN|CHECK|CHECKBOX|CIRCULAR|CI_|CLASS|CLASS-CODING|CLASS-DATA|CLASS-EVENTS|CLASS-METHODS|CLASS-POOL|CLEANUP|CLEAR|CLIENT|CLOB|CLOCK|CLOSE|CN|CNT|CO|COALESCE|CODE|CODING|COLLECT|COLOR|COLUMN|COLUMNS|COL_BACKGROUND|COL_GROUP|COL_HEADING|COL_KEY|COL_NEGATIVE|COL_NORMAL|COL_POSITIVE|COL_TOTAL|COMMENT|COMMENTS|COMMIT|COMMON|COMMUNICATION|COMPARING|COMPONENT|COMPONENTS|COMPRESSION|COMPUTE|CONCAT|CONCATENATE|COND|CONDENSE|CONDITION|CONNECT|CONNECTION|CONSTANTS|CONTEXT|CONTEXTS|CONTINUE|CONTROL|CONTROLS|CONV|CONVERSION|CONVERT|COPIES|COPY|CORRESPONDING|COS|COSH|COUNT|COUNTRY|COVER|CP|CPI|CREATE|CREATING|CRITICAL|CS|CURRENCY|CURRENCY_CONVERSION|CURRENT|CURSOR|CURSOR-SELECTION|CUSTOMER|CUSTOMER-FUNCTION|DANGEROUS|DATA|DATABASE|DATAINFO|DATASET|DATE|DAYLIGHT|DBMAXLEN|DD\/MM\/YY|DD\/MM\/YYYY|DDMMYY|DEALLOCATE|DECIMALS|DECIMAL_SHIFT|DECLARATIONS|DEEP|DEFAULT|DEFERRED|DEFINE|DEFINING|DEFINITION|DELETE|DELETING|DEMAND|DEPARTMENT|DESCENDING|DESCRIBE|DESTINATION|DETAIL|DIALOG|DIRECTORY|DISCONNECT|DISPLAY|DISPLAY-MODE|DISTANCE|DISTINCT|DIV|DIVIDE|DIVIDE-CORRESPONDING|DIVISION|DO|DUMMY|DUPLICATE|DUPLICATES|DURATION|DURING|DYNAMIC|DYNPRO|E|EACH|EDIT|EDITOR-CALL|ELSE|ELSEIF|EMPTY|ENABLED|ENABLING|ENCODING|END|END-ENHANCEMENT-SECTION|END-LINES|END-OF-DEFINITION|END-OF-FILE|END-OF-PAGE|END-OF-SELECTION|ENDAT|ENDCASE|ENDCATCH|ENDCHAIN|ENDCLASS|ENDDO|ENDENHANCEMENT|ENDEXEC|ENDFOR|ENDFORM|ENDFUNCTION|ENDIAN|ENDIF|ENDING|ENDINTERFACE|ENDLOOP|ENDMETHOD|ENDMODULE|ENDON|ENDPROVIDE|ENDSELECT|ENDTRY|ENDWHILE|ENGINEERING|ENHANCEMENT|ENHANCEMENT-POINT|ENHANCEMENT-SECTION|ENHANCEMENTS|ENTRIES|ENTRY|ENVIRONMENT|EQ|EQUAL|EQUIV|ERRORMESSAGE|ERRORS|ESCAPE|ESCAPING|EVENT|EVENTS|EXACT|EXCEPT|EXCEPTION|EXCEPTION-TABLE|EXCEPTIONS|EXCLUDE|EXCLUDING|EXEC|EXECUTE|EXISTS|EXIT|EXIT-COMMAND|EXP|EXPAND|EXPANDING|EXPIRATION|EXPLICIT|EXPONENT|EXPORT|EXPORTING|EXTEND|EXTENDED|EXTENSION|EXTRACT|FAIL|FETCH|FIELD|FIELD-GROUPS|FIELD-SYMBOL|FIELD-SYMBOLS|FIELDS|FILE|FILTER|FILTER-TABLE|FILTERS|FINAL|FIND|FIRST|FIRST-LINE|FIXED-POINT|FKEQ|FKGE|FLOOR|FLUSH|FONT|FOR|FORM|FORMAT|FORWARD|FOUND|FRAC|FRAME|FRAMES|FREE|FRIENDS|FROM|FUNCTION|FUNCTION-POOL|FUNCTIONALITY|FURTHER|GAPS|GE|GENERATE|GET|GIVING|GKEQ|GKGE|GLOBAL|GRANT|GREATER|GREEN|GROUP|GROUPS|GT|HANDLE|HANDLER|HARMLESS|HASHED|HAVING|HDB|HEAD-LINES|HEADER|HEADERS|HEADING|HELP-ID|HELP-REQUEST|HIDE|HIGH|HINT|HOLD|HOTSPOT|I|ICON|ID|IDENTIFICATION|IDENTIFIER|IDS|IF|IGNORE|IGNORING|IMMEDIATELY|IMPLEMENTATION|IMPLEMENTATIONS|IMPLEMENTED|IMPLICIT|IMPORT|IMPORTING|IN|INACTIVE|INCL|INCLUDE|INCLUDES|INCLUDING|INCREMENT|INDEX|INDEX-LINE|INFOTYPES|INHERITING|INIT|INITIAL|INITIALIZATION|INNER|INOUT|INPUT|INSERT|INSTANCES|INTENSIFIED|INTERFACE|INTERFACE-POOL|INTERFACES|INTERNAL|INTERVALS|INTO|INVERSE|INVERTED-DATE|IS|ISO|ITERATOR|ITNO|JOB|JOIN|KEEP|KEEPING|KERNEL|KEY|KEYS|KEYWORDS|KIND|LANGUAGE|LAST|LATE|LAYOUT|LE|LEADING|LEAVE|LEFT|LEFT-JUSTIFIED|LEFTPLUS|LEFTSPACE|LEGACY|LENGTH|LESS|LET|LEVEL|LEVELS|LIKE|LINE|LINE-COUNT|LINE-SELECTION|LINE-SIZE|LINEFEED|LINES|LIST|LIST-PROCESSING|LISTBOX|LITTLE|LLANG|LOAD|LOAD-OF-PROGRAM|LOB|LOCAL|LOCALE|LOCATOR|LOG|LOG-POINT|LOG10|LOGFILE|LOGICAL|LONG|LOOP|LOW|LOWER|LPAD|LPI|LT|M|MAIL|MAIN|MAJOR-ID|MAPPING|MARGIN|MARK|MASK|MATCH|MATCHCODE|MAX|MAXIMUM|MEDIUM|MEMBERS|MEMORY|MESH|MESSAGE|MESSAGE-ID|MESSAGES|MESSAGING|METHOD|METHODS|MIN|MINIMUM|MINOR-ID|MM\/DD\/YY|MM\/DD\/YYYY|MMDDYY|MOD|MODE|MODIF|MODIFIER|MODIFY|MODULE|MOVE|MOVE-CORRESPONDING|MULTIPLY|MULTIPLY-CORRESPONDING|NA|NAME|NAMETAB|NATIVE|NB|NE|NESTED|NESTING|NEW|NEW-LINE|NEW-PAGE|NEW-SECTION|NEXT|NO|NO-DISPLAY|NO-EXTENSION|NO-GAP|NO-GAPS|NO-GROUPING|NO-HEADING|NO-SCROLLING|NO-SIGN|NO-TITLE|NO-TOPOFPAGE|NO-ZERO|NODE|NODES|NON-UNICODE|NON-UNIQUE|NOT|NP|NS|NULL|NUMBER|NUMOFCHAR|O|OBJECT|OBJECTS|OBLIGATORY|OCCURRENCE|OCCURRENCES|OCCURS|OF|OFF|OFFSET|OLE|ON|ONLY|OPEN|OPTION|OPTIONAL|OPTIONS|OR|ORDER|OTHER|OTHERS|OUT|OUTER|OUTPUT|OUTPUT-LENGTH|OVERFLOW|OVERLAY|PACK|PACKAGE|PAD|PADDING|PAGE|PAGES|PARAMETER|PARAMETER-TABLE|PARAMETERS|PART|PARTIALLY|PATTERN|PERCENTAGE|PERFORM|PERFORMING|PERSON|PF|PF-STATUS|PINK|PLACES|POOL|POSITION|POS_HIGH|POS_LOW|PRAGMAS|PRECOMPILED|PREFERRED|PRESERVING|PRIMARY|PRINT|PRINT-CONTROL|PRIORITY|PRIVATE|PROCEDURE|PROCESS|PROGRAM|PROPERTY|PROTECTED|PROVIDE|PUBLIC|PUSHBUTTON|PUT|QUEUE-ONLY|QUICKINFO|RADIOBUTTON|RAISE|RAISING|RANGE|RANGES|RAW|READ|READ-ONLY|READER|RECEIVE|RECEIVED|RECEIVER|RECEIVING|RED|REDEFINITION|REDUCE|REDUCED|REF|REFERENCE|REFRESH|REGEX|REJECT|REMOTE|RENAMING|REPLACE|REPLACEMENT|REPLACING|REPORT|REQUEST|REQUESTED|RESERVE|RESET|RESOLUTION|RESPECTING|RESPONSIBLE|RESULT|RESULTS|RESUMABLE|RESUME|RETRY|RETURN|RETURNCODE|RETURNING|RIGHT|RIGHT-JUSTIFIED|RIGHTPLUS|RIGHTSPACE|RISK|RMC_COMMUNICATION_FAILURE|RMC_INVALID_STATUS|RMC_SYSTEM_FAILURE|ROLE|ROLLBACK|ROUND|ROWS|RTTI|RUN|SAP|SAP-SPOOL|SAVING|SCALE_PRESERVING|SCALE_PRESERVING_SCIENTIFIC|SCAN|SCIENTIFIC|SCIENTIFIC_WITH_LEADING_ZERO|SCREEN|SCROLL|SCROLL-BOUNDARY|SCROLLING|SEARCH|SECONDARY|SECONDS|SECTION|SELECT|SELECT-OPTIONS|SELECTION|SELECTION-SCREEN|SELECTION-SET|SELECTION-SETS|SELECTION-TABLE|SELECTIONS|SELECTOR|SEND|SEPARATE|SEPARATED|SET|SHARED|SHIFT|SHORT|SHORTDUMP-ID|SIGN|SIGN_AS_POSTFIX|SIMPLE|SIN|SINGLE|SINH|SIZE|SKIP|SKIPPING|SMART|SOME|SORT|SORTABLE|SORTED|SOURCE|SPACE|SPECIFIED|SPLIT|SPOOL|SPOTS|SQL|SQLSCRIPT|SQRT|STABLE|STAMP|STANDARD|START-OF-SELECTION|STARTING|STATE|STATEMENT|STATEMENTS|STATIC|STATICS|STATUSINFO|STEP-LOOP|STOP|STRLEN|STRUCTURE|STRUCTURES|STYLE|SUBKEY|SUBMATCHES|SUBMIT|SUBROUTINE|SUBSCREEN|SUBSTRING|SUBTRACT|SUBTRACT-CORRESPONDING|SUFFIX|SUM|SUMMARY|SUMMING|SUPPLIED|SUPPLY|SUPPRESS|SWITCH|SWITCHSTATES|SYMBOL|SYNCPOINTS|SYNTAX|SYNTAX-CHECK|SYNTAX-TRACE|SYSTEM-CALL|SYSTEM-EXCEPTIONS|SYSTEM-EXIT|TAB|TABBED|TABLE|TABLES|TABLEVIEW|TABSTRIP|TAN|TANH|TARGET|TASK|TASKS|TEST|TESTING|TEXT|TEXTPOOL|THEN|THROW|TIME|TIMES|TIMESTAMP|TIMEZONE|TITLE|TITLE-LINES|TITLEBAR|TO|TOKENIZATION|TOKENS|TOP-LINES|TOP-OF-PAGE|TRACE-FILE|TRACE-TABLE|TRAILING|TRANSACTION|TRANSFER|TRANSFORMATION|TRANSLATE|TRANSPORTING|TRMAC|TRUNC|TRUNCATE|TRUNCATION|TRY|TYPE|TYPE-POOL|TYPE-POOLS|TYPES|ULINE|UNASSIGN|UNDER|UNICODE|UNION|UNIQUE|UNIT|UNIT_CONVERSION|UNIX|UNPACK|UNTIL|UNWIND|UP|UPDATE|UPPER|USER|USER-COMMAND|USING|UTF-8|VALID|VALUE|VALUE-REQUEST|VALUES|VARY|VARYING|VERIFICATION-MESSAGE|VERSION|VIA|VIEW|VISIBLE|WAIT|WARNING|WHEN|WHENEVER|WHERE|WHILE|WIDTH|WINDOW|WINDOWS|WITH|WITH-HEADING|WITH-TITLE|WITHOUT|WORD|WORK|WRITE|WRITER|X|XML|XOR|XSD|XSTRLEN|YELLOW|YES|YYMMDD|Z|ZERO|ZONE)(?![\w-])/i,
       lookbehind: true
     },
     /* Numbers can be only integers. Decimal or Hex appear only as strings */
@@ -24556,15 +27990,20 @@ adjacent to operands.
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/abnf.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = abnf
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return abnf; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 abnf.displayName = 'abnf'
 abnf.aliases = []
+
+/** @param {Refractor} Prism */
 function abnf(Prism) {
   ;(function (Prism) {
     var coreRules =
@@ -24631,22 +28070,32 @@ function abnf(Prism) {
 /*!*****************************************************!*\
   !*** ./node_modules/refractor/lang/actionscript.js ***!
   \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return actionscript; });
+/* harmony import */ var _javascript_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./javascript.js */ "./node_modules/refractor/lang/javascript.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = actionscript
 actionscript.displayName = 'actionscript'
 actionscript.aliases = []
+
+/** @param {Refractor} Prism */
 function actionscript(Prism) {
+  Prism.register(_javascript_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   Prism.languages.actionscript = Prism.languages.extend('javascript', {
     keyword:
       /\b(?:as|break|case|catch|class|const|default|delete|do|dynamic|each|else|extends|final|finally|for|function|get|if|implements|import|in|include|instanceof|interface|internal|is|namespace|native|new|null|override|package|private|protected|public|return|set|static|super|switch|this|throw|try|typeof|use|var|void|while|with)\b/,
     operator: /\+\+|--|(?:[+\-*\/%^]|&&?|\|\|?|<<?|>>?>?|[!=]=?)=?|[~?@]/
   })
-  Prism.languages.actionscript['class-name'].alias = 'function' // doesn't work with AS because AS is too complex
+  Prism.languages.actionscript['class-name'].alias = 'function'
+
+  // doesn't work with AS because AS is too complex
   delete Prism.languages.actionscript['parameter']
   delete Prism.languages.actionscript['literal-property']
   if (Prism.languages.markup) {
@@ -24668,15 +28117,20 @@ function actionscript(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/ada.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = ada
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ada; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 ada.displayName = 'ada'
 ada.aliases = []
+
+/** @param {Refractor} Prism */
 function ada(Prism) {
   Prism.languages.ada = {
     comment: /--.*/,
@@ -24690,9 +28144,12 @@ function ada(Prism) {
         pattern: /\b\d(?:_?\d)*(?:\.\d(?:_?\d)*)?(?:E[+-]?\d(?:_?\d)*)?\b/i
       }
     ],
-    'attr-name': /\b'\w+/,
+    attribute: {
+      pattern: /\b'\w+/,
+      alias: 'attr-name'
+    },
     keyword:
-      /\b(?:abort|abs|abstract|accept|access|aliased|all|and|array|at|begin|body|case|constant|declare|delay|delta|digits|do|else|elsif|end|entry|exception|exit|for|function|generic|goto|if|in|interface|is|limited|loop|mod|new|not|null|of|others|out|overriding|package|pragma|private|procedure|protected|raise|range|record|rem|renames|requeue|return|reverse|select|separate|some|subtype|synchronized|tagged|task|terminate|then|type|until|use|when|while|with|xor)\b/i,
+      /\b(?:abort|abs|abstract|accept|access|aliased|all|and|array|at|begin|body|case|constant|declare|delay|delta|digits|do|else|elsif|end|entry|exception|exit|for|function|generic|goto|if|in|interface|is|limited|loop|mod|new|not|null|of|or|others|out|overriding|package|pragma|private|procedure|protected|raise|range|record|rem|renames|requeue|return|reverse|select|separate|some|subtype|synchronized|tagged|task|terminate|then|type|until|use|when|while|with|xor)\b/i,
     boolean: /\b(?:false|true)\b/i,
     operator: /<[=>]?|>=?|=>?|:=|\/=?|\*\*?|[&+-]/,
     punctuation: /\.\.?|[,;():]/,
@@ -24708,15 +28165,20 @@ function ada(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/agda.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = agda
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return agda; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 agda.displayName = 'agda'
 agda.aliases = []
+
+/** @param {Refractor} Prism */
 function agda(Prism) {
   ;(function (Prism) {
     Prism.languages.agda = {
@@ -24751,17 +28213,23 @@ function agda(Prism) {
 /*!*******************************************!*\
   !*** ./node_modules/refractor/lang/al.js ***!
   \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = al
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return al; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 al.displayName = 'al'
 al.aliases = []
+
+/** @param {Refractor} Prism */
 function al(Prism) {
   // based on https://github.com/microsoft/AL/blob/master/grammar/alsyntax.tmlanguage
+
   Prism.languages.al = {
     comment: /\/\/.*|\/\*[\s\S]*?\*\//,
     string: {
@@ -24775,7 +28243,8 @@ function al(Prism) {
     },
     keyword: [
       // keywords
-      /\b(?:array|asserterror|begin|break|case|do|downto|else|end|event|exit|for|foreach|function|if|implements|in|indataset|interface|internal|local|of|procedure|program|protected|repeat|runonclient|securityfiltering|suppressdispose|temporary|then|to|trigger|until|var|while|with|withevents)\b/i, // objects and metadata that are used like keywords
+      /\b(?:array|asserterror|begin|break|case|do|downto|else|end|event|exit|for|foreach|function|if|implements|in|indataset|interface|internal|local|of|procedure|program|protected|repeat|runonclient|securityfiltering|suppressdispose|temporary|then|to|trigger|until|var|while|with|withevents)\b/i,
+      // objects and metadata that are used like keywords
       /\b(?:action|actions|addafter|addbefore|addfirst|addlast|area|assembly|chartpart|codeunit|column|controladdin|cuegroup|customizes|dataitem|dataset|dotnet|elements|enum|enumextension|extends|field|fieldattribute|fieldelement|fieldgroup|fieldgroups|fields|filter|fixed|grid|group|key|keys|label|labels|layout|modify|moveafter|movebefore|movefirst|movelast|page|pagecustomization|pageextension|part|profile|query|repeater|report|requestpage|schema|separator|systempart|table|tableelement|tableextension|textattribute|textelement|type|usercontrol|value|xmlport)\b/i
     ],
     number:
@@ -24796,15 +28265,20 @@ function al(Prism) {
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/antlr4.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = antlr4
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return antlr4; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 antlr4.displayName = 'antlr4'
 antlr4.aliases = ['g4']
+
+/** @param {Refractor} Prism */
 function antlr4(Prism) {
   Prism.languages.antlr4 = {
     comment: /\/\/.*|\/\*[\s\S]*?(?:\*\/|$)/,
@@ -24882,15 +28356,20 @@ function antlr4(Prism) {
 /*!***************************************************!*\
   !*** ./node_modules/refractor/lang/apacheconf.js ***!
   \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = apacheconf
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return apacheconf; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 apacheconf.displayName = 'apacheconf'
 apacheconf.aliases = []
+
+/** @param {Refractor} Prism */
 function apacheconf(Prism) {
   Prism.languages.apacheconf = {
     comment: /#.*/,
@@ -24950,17 +28429,27 @@ function apacheconf(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/apex.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return apex; });
+/* harmony import */ var _clike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clike.js */ "./node_modules/refractor/lang/clike.js");
+/* harmony import */ var _sql_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sql.js */ "./node_modules/refractor/lang/sql.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorSql = __webpack_require__(/*! ./sql.js */ "./node_modules/refractor/lang/sql.js")
-module.exports = apex
+
 apex.displayName = 'apex'
 apex.aliases = []
+
+/** @param {Refractor} Prism */
 function apex(Prism) {
-  Prism.register(refractorSql)
+  Prism.register(_clike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+  Prism.register(_sql_js__WEBPACK_IMPORTED_MODULE_1__["default"])
   ;(function (Prism) {
     var keywords =
       /\b(?:(?:after|before)(?=\s+[a-z])|abstract|activate|and|any|array|as|asc|autonomous|begin|bigdecimal|blob|boolean|break|bulk|by|byte|case|cast|catch|char|class|collect|commit|const|continue|currency|date|datetime|decimal|default|delete|desc|do|double|else|end|enum|exception|exit|export|extends|final|finally|float|for|from|get(?=\s*[{};])|global|goto|group|having|hint|if|implements|import|in|inner|insert|instanceof|int|integer|interface|into|join|like|limit|list|long|loop|map|merge|new|not|null|nulls|number|object|of|on|or|outer|override|package|parallel|pragma|private|protected|public|retrieve|return|rollback|select|set|short|sObject|sort|static|string|super|switch|synchronized|system|testmethod|then|this|throw|time|transaction|transient|trigger|try|undelete|update|upsert|using|virtual|void|webservice|when|where|while|(?:inherited|with|without)\s+sharing)\b/i
@@ -25044,15 +28533,20 @@ function apex(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/apl.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = apl
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return apl; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 apl.displayName = 'apl'
 apl.aliases = []
+
+/** @param {Refractor} Prism */
 function apl(Prism) {
   Prism.languages.apl = {
     comment: /(?:⍝|#[! ]).*$/m,
@@ -25068,7 +28562,8 @@ function apl(Prism) {
       alias: 'function'
     },
     constant: /[⍬⌾#⎕⍞]/,
-    function: /[-+×÷⌈⌊∣|⍳⍸?*⍟○!⌹<≤=>≥≠≡≢∊⍷∪∩~∨∧⍱⍲⍴,⍪⌽⊖⍉↑↓⊂⊃⊆⊇⌷⍋⍒⊤⊥⍕⍎⊣⊢⍁⍂≈⍯↗¤→]/,
+    function:
+      /[-+×÷⌈⌊∣|⍳⍸?*⍟○!⌹<≤=>≥≠≡≢∊⍷∪∩~∨∧⍱⍲⍴,⍪⌽⊖⍉↑↓⊂⊃⊆⊇⌷⍋⍒⊤⊥⍕⍎⊣⊢⍁⍂≈⍯↗¤→]/,
     'monadic-operator': {
       pattern: /[\\\/⌿⍀¨⍨⌶&∥]/,
       alias: 'operator'
@@ -25096,15 +28591,20 @@ function apl(Prism) {
 /*!****************************************************!*\
   !*** ./node_modules/refractor/lang/applescript.js ***!
   \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = applescript
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return applescript; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 applescript.displayName = 'applescript'
 applescript.aliases = []
+
+/** @param {Refractor} Prism */
 function applescript(Prism) {
   Prism.languages.applescript = {
     comment: [
@@ -25134,15 +28634,20 @@ function applescript(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/aql.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = aql
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return aql; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 aql.displayName = 'aql'
 aql.aliases = []
+
+/** @param {Refractor} Prism */
 function aql(Prism) {
   Prism.languages.aql = {
     comment: /\/\/.*|\/\*[\s\S]*?\*\//,
@@ -25166,7 +28671,8 @@ function aql(Prism) {
         pattern: /(\bWITH\s+)COUNT(?=\s+INTO\b)/i,
         lookbehind: true
       },
-      /\b(?:AGGREGATE|ALL|AND|ANY|ASC|COLLECT|DESC|DISTINCT|FILTER|FOR|GRAPH|IN|INBOUND|INSERT|INTO|K_PATHS|K_SHORTEST_PATHS|LET|LIKE|LIMIT|NONE|NOT|NULL|OR|OUTBOUND|REMOVE|REPLACE|RETURN|SHORTEST_PATH|SORT|UPDATE|UPSERT|WINDOW|WITH)\b/i, // pseudo keywords get a lookbehind to avoid false positives
+      /\b(?:AGGREGATE|ALL|AND|ANY|ASC|COLLECT|DESC|DISTINCT|FILTER|FOR|GRAPH|IN|INBOUND|INSERT|INTO|K_PATHS|K_SHORTEST_PATHS|LET|LIKE|LIMIT|NONE|NOT|NULL|OR|OUTBOUND|REMOVE|REPLACE|RETURN|SHORTEST_PATH|SORT|UPDATE|UPSERT|WINDOW|WITH)\b/i,
+      // pseudo keywords get a lookbehind to avoid false positives
       {
         pattern: /(^|[^\w.[])(?:KEEP|PRUNE|SEARCH|TO)\b/i,
         lookbehind: true
@@ -25202,17 +28708,24 @@ function aql(Prism) {
 /*!************************************************!*\
   !*** ./node_modules/refractor/lang/arduino.js ***!
   \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return arduino; });
+/* harmony import */ var _cpp_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./cpp.js */ "./node_modules/refractor/lang/cpp.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorCpp = __webpack_require__(/*! ./cpp.js */ "./node_modules/refractor/lang/cpp.js")
-module.exports = arduino
 arduino.displayName = 'arduino'
 arduino.aliases = ['ino']
+
+/** @param {Refractor} Prism */
 function arduino(Prism) {
-  Prism.register(refractorCpp)
+  Prism.register(_cpp_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   Prism.languages.arduino = Prism.languages.extend('cpp', {
     keyword:
       /\b(?:String|array|bool|boolean|break|byte|case|catch|continue|default|do|double|else|finally|for|function|goto|if|in|instanceof|int|integer|long|loop|new|null|return|setup|string|switch|throw|try|void|while|word)\b/,
@@ -25231,15 +28744,20 @@ function arduino(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/arff.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = arff
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return arff; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 arff.displayName = 'arff'
 arff.aliases = []
+
+/** @param {Refractor} Prism */
 function arff(Prism) {
   Prism.languages.arff = {
     comment: /%.*/,
@@ -25256,19 +28774,211 @@ function arff(Prism) {
 
 /***/ }),
 
+/***/ "./node_modules/refractor/lang/armasm.js":
+/*!***********************************************!*\
+  !*** ./node_modules/refractor/lang/armasm.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return armasm; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
+armasm.displayName = 'armasm'
+armasm.aliases = ['arm-asm']
+
+/** @param {Refractor} Prism */
+function armasm(Prism) {
+  Prism.languages.armasm = {
+    comment: {
+      pattern: /;.*/,
+      greedy: true
+    },
+    string: {
+      pattern: /"(?:[^"\r\n]|"")*"/,
+      greedy: true,
+      inside: {
+        variable: {
+          pattern: /((?:^|[^$])(?:\${2})*)\$\w+/,
+          lookbehind: true
+        }
+      }
+    },
+    char: {
+      pattern: /'(?:[^'\r\n]{0,4}|'')'/,
+      greedy: true
+    },
+    'version-symbol': {
+      pattern: /\|[\w@]+\|/,
+      greedy: true,
+      alias: 'property'
+    },
+    boolean: /\b(?:FALSE|TRUE)\b/,
+    directive: {
+      pattern:
+        /\b(?:ALIAS|ALIGN|AREA|ARM|ASSERT|ATTR|CN|CODE|CODE16|CODE32|COMMON|CP|DATA|DCB|DCD|DCDO|DCDU|DCFD|DCFDU|DCI|DCQ|DCQU|DCW|DCWU|DN|ELIF|ELSE|END|ENDFUNC|ENDIF|ENDP|ENTRY|EQU|EXPORT|EXPORTAS|EXTERN|FIELD|FILL|FN|FUNCTION|GBLA|GBLL|GBLS|GET|GLOBAL|IF|IMPORT|INCBIN|INCLUDE|INFO|KEEP|LCLA|LCLL|LCLS|LTORG|MACRO|MAP|MEND|MEXIT|NOFP|OPT|PRESERVE8|PROC|QN|READONLY|RELOC|REQUIRE|REQUIRE8|RLIST|ROUT|SETA|SETL|SETS|SN|SPACE|SUBT|THUMB|THUMBX|TTL|WEND|WHILE)\b/,
+      alias: 'property'
+    },
+    instruction: {
+      pattern:
+        /((?:^|(?:^|[^\\])(?:\r\n?|\n))[ \t]*(?:(?:[A-Z][A-Z0-9_]*[a-z]\w*|[a-z]\w*|\d+)[ \t]+)?)\b[A-Z.]+\b/,
+      lookbehind: true,
+      alias: 'keyword'
+    },
+    variable: /\$\w+/,
+    number:
+      /(?:\b[2-9]_\d+|(?:\b\d+(?:\.\d+)?|\B\.\d+)(?:e-?\d+)?|\b0(?:[fd]_|x)[0-9a-f]+|&[0-9a-f]+)\b/i,
+    register: {
+      pattern: /\b(?:r\d|lr)\b/,
+      alias: 'symbol'
+    },
+    operator: /<>|<<|>>|&&|\|\||[=!<>/]=?|[+\-*%#?&|^]|:[A-Z]+:/,
+    punctuation: /[()[\],]/
+  }
+  Prism.languages['arm-asm'] = Prism.languages.armasm
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/refractor/lang/arturo.js":
+/*!***********************************************!*\
+  !*** ./node_modules/refractor/lang/arturo.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return arturo; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
+arturo.displayName = 'arturo'
+arturo.aliases = ['art']
+
+/** @param {Refractor} Prism */
+function arturo(Prism) {
+  ;(function (Prism) {
+    /**
+     * @param {string} lang
+     * @param {string} pattern
+     */
+    var createLanguageString = function (lang, pattern) {
+      return {
+        pattern: RegExp(
+          /\{!/.source + '(?:' + (pattern || lang) + ')' + /$[\s\S]*\}/.source,
+          'm'
+        ),
+        greedy: true,
+        inside: {
+          embedded: {
+            pattern: /(^\{!\w+\b)[\s\S]+(?=\}$)/,
+            lookbehind: true,
+            alias: 'language-' + lang,
+            inside: Prism.languages[lang]
+          },
+          string: /[\s\S]+/
+        }
+      }
+    }
+    Prism.languages.arturo = {
+      comment: {
+        pattern: /;.*/,
+        greedy: true
+      },
+      character: {
+        pattern: /`.`/,
+        alias: 'char',
+        greedy: true
+      },
+      number: {
+        pattern: /\b\d+(?:\.\d+(?:\.\d+(?:-[\w+-]+)?)?)?\b/
+      },
+      string: {
+        pattern: /"(?:[^"\\\r\n]|\\.)*"/,
+        greedy: true
+      },
+      regex: {
+        pattern: /\{\/.*?\/\}/,
+        greedy: true
+      },
+      'html-string': createLanguageString('html'),
+      'css-string': createLanguageString('css'),
+      'js-string': createLanguageString('js'),
+      'md-string': createLanguageString('md'),
+      'sql-string': createLanguageString('sql'),
+      'sh-string': createLanguageString('shell', 'sh'),
+      multistring: {
+        pattern: /».*|\{:[\s\S]*?:\}|\{[\s\S]*?\}|^-{6}$[\s\S]*/m,
+        alias: 'string',
+        greedy: true
+      },
+      label: {
+        pattern: /\w+\b\??:/,
+        alias: 'property'
+      },
+      literal: {
+        pattern: /'(?:\w+\b\??:?)/,
+        alias: 'constant'
+      },
+      type: {
+        pattern: /:(?:\w+\b\??:?)/,
+        alias: 'class-name'
+      },
+      color: /#\w+/,
+      predicate: {
+        pattern:
+          /\b(?:all|and|any|ascii|attr|attribute|attributeLabel|binary|block|char|contains|database|date|dictionary|empty|equal|even|every|exists|false|floating|function|greater|greaterOrEqual|if|in|inline|integer|is|key|label|leap|less|lessOrEqual|literal|logical|lower|nand|negative|nor|not|notEqual|null|numeric|odd|or|path|pathLabel|positive|prefix|prime|regex|same|set|some|sorted|standalone|string|subset|suffix|superset|symbol|symbolLiteral|true|try|type|unless|upper|when|whitespace|word|xnor|xor|zero)\?/,
+        alias: 'keyword'
+      },
+      'builtin-function': {
+        pattern:
+          /\b(?:abs|acos|acosh|acsec|acsech|actan|actanh|add|after|alert|alias|and|angle|append|arg|args|arity|array|as|asec|asech|asin|asinh|atan|atan2|atanh|attr|attrs|average|before|benchmark|blend|break|call|capitalize|case|ceil|chop|clear|clip|close|color|combine|conj|continue|copy|cos|cosh|crc|csec|csech|ctan|ctanh|cursor|darken|dec|decode|define|delete|desaturate|deviation|dialog|dictionary|difference|digest|digits|div|do|download|drop|dup|e|else|empty|encode|ensure|env|escape|execute|exit|exp|extend|extract|factors|fdiv|filter|first|flatten|floor|fold|from|function|gamma|gcd|get|goto|hash|hypot|if|inc|indent|index|infinity|info|input|insert|inspect|intersection|invert|jaro|join|keys|kurtosis|last|let|levenshtein|lighten|list|ln|log|loop|lower|mail|map|match|max|median|min|mod|module|mul|nand|neg|new|nor|normalize|not|now|null|open|or|outdent|pad|palette|panic|path|pause|permissions|permutate|pi|pop|popup|pow|powerset|powmod|prefix|print|prints|process|product|query|random|range|read|relative|remove|rename|render|repeat|replace|request|return|reverse|round|sample|saturate|script|sec|sech|select|serve|set|shl|shr|shuffle|sin|sinh|size|skewness|slice|sort|spin|split|sqrt|squeeze|stack|strip|sub|suffix|sum|switch|symbols|symlink|sys|take|tan|tanh|terminal|terminate|to|truncate|try|type|unclip|union|unique|unless|until|unzip|upper|values|var|variance|volume|webview|while|with|wordwrap|write|xnor|xor|zip)\b/,
+        alias: 'keyword'
+      },
+      sugar: {
+        pattern: /->|=>|\||::/,
+        alias: 'operator'
+      },
+      punctuation: /[()[\],]/,
+      symbol: {
+        pattern: /<:|-:|ø|@|#|\+|\||\*|\$|---|-|%|\/|\.\.|\^|~|=|<|>|\\/
+      },
+      boolean: {
+        pattern: /\b(?:false|maybe|true)\b/
+      }
+    }
+    Prism.languages.art = Prism.languages['arturo']
+  })(Prism)
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/refractor/lang/asciidoc.js":
 /*!*************************************************!*\
   !*** ./node_modules/refractor/lang/asciidoc.js ***!
   \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = asciidoc
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return asciidoc; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 asciidoc.displayName = 'asciidoc'
 asciidoc.aliases = ['adoc']
+
+/** @param {Refractor} Prism */
 function asciidoc(Prism) {
   ;(function (Prism) {
     var attributes = {
@@ -25285,7 +28995,8 @@ function asciidoc(Prism) {
         interpreted: {
           pattern: /'(?:[^'\\]|\\.)*'/,
           inside: {
-            punctuation: /^'|'$/ // See rest below
+            punctuation: /^'|'$/
+            // See rest below
           }
         },
         string: /"(?:[^"\\]|\\.)*"/,
@@ -25298,7 +29009,7 @@ function asciidoc(Prism) {
     }
     var asciidoc = (Prism.languages.asciidoc = {
       'comment-block': {
-        pattern: /^(\/{4,})(?:\r?\n|\r)(?:[\s\S]*(?:\r?\n|\r))??\1/m,
+        pattern: /^(\/{4,})$[\s\S]*?^\1/m,
         alias: 'comment'
       },
       table: {
@@ -25312,28 +29023,31 @@ function asciidoc(Prism) {
           punctuation: {
             pattern: /(^|[^\\])[|!]=*/,
             lookbehind: true
-          } // See rest below
+          }
+          // See rest below
         }
       },
       'passthrough-block': {
-        pattern: /^(\+{4,})(?:\r?\n|\r)(?:[\s\S]*(?:\r?\n|\r))??\1$/m,
+        pattern: /^(\+{4,})$[\s\S]*?^\1$/m,
         inside: {
-          punctuation: /^\++|\++$/ // See rest below
+          punctuation: /^\++|\++$/
+          // See rest below
         }
       },
       // Literal blocks and listing blocks
       'literal-block': {
-        pattern: /^(-{4,}|\.{4,})(?:\r?\n|\r)(?:[\s\S]*(?:\r?\n|\r))??\1$/m,
+        pattern: /^(-{4,}|\.{4,})$[\s\S]*?^\1$/m,
         inside: {
-          punctuation: /^(?:-+|\.+)|(?:-+|\.+)$/ // See rest below
+          punctuation: /^(?:-+|\.+)|(?:-+|\.+)$/
+          // See rest below
         }
       },
       // Sidebar blocks, quote blocks, example blocks and open blocks
       'other-block': {
-        pattern:
-          /^(--|\*{4,}|_{4,}|={4,})(?:\r?\n|\r)(?:[\s\S]*(?:\r?\n|\r))??\1$/m,
+        pattern: /^(--|\*{4,}|_{4,}|={4,})$[\s\S]*?^\1$/m,
         inside: {
-          punctuation: /^(?:-+|\*+|_+|=+)|(?:-+|\*+|_+|=+)$/ // See rest below
+          punctuation: /^(?:-+|\*+|_+|=+)|(?:-+|\*+|_+|=+)$/
+          // See rest below
         }
       },
       // list-punctuation and list-label must appear before indented-block
@@ -25358,7 +29072,8 @@ function asciidoc(Prism) {
           /^.+(?:\r?\n|\r)(?:={3,}|-{3,}|~{3,}|\^{3,}|\+{3,})$|^={1,5} .+|^\.(?![\s.]).*/m,
         alias: 'important',
         inside: {
-          punctuation: /^(?:\.|=+)|(?:=+|-+|~+|\^+|\++)$/ // See rest below
+          punctuation: /^(?:\.|=+)|(?:=+|-+|~+|\^+|\++)$/
+          // See rest below
         }
       },
       'attribute-entry': {
@@ -25461,7 +29176,10 @@ They are, in order: __emphasis__, **strong**, ++monospace++, +++passthrough+++, 
         lookbehind: true,
         alias: 'punctuation'
       }
-    }) // Allow some nesting. There is no recursion though, so cloning should not be needed.
+    })
+
+    // Allow some nesting. There is no recursion though, so cloning should not be needed.
+
     function copyFromAsciiDoc(keys) {
       keys = keys.split(' ')
       var o = {}
@@ -25483,7 +29201,9 @@ They are, in order: __emphasis__, **strong**, ++monospace++, +++passthrough+++, 
     )
     asciidoc['title'].inside.rest = copyFromAsciiDoc(
       'macro inline replacement entity'
-    ) // Plugin to make entity title show the real entity, idea by Roman Komarov
+    )
+
+    // Plugin to make entity title show the real entity, idea by Roman Komarov
     Prism.hooks.add('wrap', function (env) {
       if (env.type === 'entity') {
         env.attributes['title'] = env.content.value.replace(/&amp;/, '&')
@@ -25500,15 +29220,20 @@ They are, in order: __emphasis__, **strong**, ++monospace++, +++passthrough+++, 
 /*!************************************************!*\
   !*** ./node_modules/refractor/lang/asm6502.js ***!
   \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = asm6502
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return asm6502; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 asm6502.displayName = 'asm6502'
 asm6502.aliases = []
+
+/** @param {Refractor} Prism */
 function asm6502(Prism) {
   Prism.languages.asm6502 = {
     comment: /;.*/,
@@ -25549,15 +29274,20 @@ function asm6502(Prism) {
 /*!*************************************************!*\
   !*** ./node_modules/refractor/lang/asmatmel.js ***!
   \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = asmatmel
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return asmatmel; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 asmatmel.displayName = 'asmatmel'
 asmatmel.aliases = []
+
+/** @param {Refractor} Prism */
 function asmatmel(Prism) {
   Prism.languages.asmatmel = {
     comment: {
@@ -25598,7 +29328,7 @@ function asmatmel(Prism) {
       pattern: /\b[acznvshtixy]\b/i,
       alias: 'variable'
     },
-    operator: />>=?|<<=?|&&?|\|\|?|[-+*/%&|^!=<>?]=?/,
+    operator: />>=?|<<=?|&[&=]?|\|[\|=]?|[-+*/%^!=<>?]=?/,
     punctuation: /[(),:]/
   }
 }
@@ -25610,17 +29340,27 @@ function asmatmel(Prism) {
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/aspnet.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return aspnet; });
+/* harmony import */ var _csharp_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./csharp.js */ "./node_modules/refractor/lang/csharp.js");
+/* harmony import */ var _markup_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./markup.js */ "./node_modules/refractor/lang/markup.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorCsharp = __webpack_require__(/*! ./csharp.js */ "./node_modules/refractor/lang/csharp.js")
-module.exports = aspnet
+
 aspnet.displayName = 'aspnet'
 aspnet.aliases = []
+
+/** @param {Refractor} Prism */
 function aspnet(Prism) {
-  Prism.register(refractorCsharp)
+  Prism.register(_csharp_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+  Prism.register(_markup_js__WEBPACK_IMPORTED_MODULE_1__["default"])
   Prism.languages.aspnet = Prism.languages.extend('markup', {
     'page-directive': {
       pattern: /<%\s*@.*%>/,
@@ -25645,9 +29385,12 @@ function aspnet(Prism) {
         rest: Prism.languages.csharp
       }
     }
-  }) // Regexp copied from prism-markup, with a negative look-ahead added
+  })
+  // Regexp copied from prism-markup, with a negative look-ahead added
   Prism.languages.aspnet.tag.pattern =
-    /<(?!%)\/?[^\s>\/]+(?:\s+[^\s>\/=]+(?:=(?:("|')(?:\\[\s\S]|(?!\1)[^\\])*\1|[^\s'">=]+))?)*\s*\/?>/ // match directives of attribute value foo="<% Bar %>"
+    /<(?!%)\/?[^\s>\/]+(?:\s+[^\s>\/=]+(?:=(?:("|')(?:\\[\s\S]|(?!\1)[^\\])*\1|[^\s'">=]+))?)*\s*\/?>/
+
+  // match directives of attribute value foo="<% Bar %>"
   Prism.languages.insertBefore(
     'inside',
     'punctuation',
@@ -25661,7 +29404,9 @@ function aspnet(Prism) {
       pattern: /<%--[\s\S]*?--%>/,
       alias: ['asp', 'comment']
     }
-  }) // script runat="server" contains csharp, not javascript
+  })
+
+  // script runat="server" contains csharp, not javascript
   Prism.languages.insertBefore(
     'aspnet',
     Prism.languages.javascript ? 'script' : 'tag',
@@ -25684,15 +29429,20 @@ function aspnet(Prism) {
 /*!***************************************************!*\
   !*** ./node_modules/refractor/lang/autohotkey.js ***!
   \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = autohotkey
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return autohotkey; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 autohotkey.displayName = 'autohotkey'
 autohotkey.aliases = []
+
+/** @param {Refractor} Prism */
 function autohotkey(Prism) {
   // NOTES - follows first-first highlight method, block is locked after highlight, different from SyntaxHl
   Prism.languages.autohotkey = {
@@ -25719,16 +29469,21 @@ function autohotkey(Prism) {
     operator:
       /\?|\/\/?=?|:=|\|[=|]?|&[=&]?|\+[=+]?|-[=-]?|\*[=*]?|<(?:<=?|>|=)?|>>?=?|[.^!=~]=?|\b(?:AND|NOT|OR)\b/,
     boolean: /\b(?:false|true)\b/,
-    selector:
-      /\b(?:AutoTrim|BlockInput|Break|Click|ClipWait|Continue|Control|ControlClick|ControlFocus|ControlGet|ControlGetFocus|ControlGetPos|ControlGetText|ControlMove|ControlSend|ControlSendRaw|ControlSetText|CoordMode|Critical|DetectHiddenText|DetectHiddenWindows|Drive|DriveGet|DriveSpaceFree|EnvAdd|EnvDiv|EnvGet|EnvMult|EnvSet|EnvSub|EnvUpdate|Exit|ExitApp|FileAppend|FileCopy|FileCopyDir|FileCreateDir|FileCreateShortcut|FileDelete|FileEncoding|FileGetAttrib|FileGetShortcut|FileGetSize|FileGetTime|FileGetVersion|FileInstall|FileMove|FileMoveDir|FileRead|FileReadLine|FileRecycle|FileRecycleEmpty|FileRemoveDir|FileSelectFile|FileSelectFolder|FileSetAttrib|FileSetTime|FormatTime|GetKeyState|Gosub|Goto|GroupActivate|GroupAdd|GroupClose|GroupDeactivate|Gui|GuiControl|GuiControlGet|Hotkey|ImageSearch|IniDelete|IniRead|IniWrite|Input|InputBox|KeyWait|ListHotkeys|ListLines|ListVars|Loop|Menu|MouseClick|MouseClickDrag|MouseGetPos|MouseMove|MsgBox|OnExit|OutputDebug|Pause|PixelGetColor|PixelSearch|PostMessage|Process|Progress|Random|RegDelete|RegRead|RegWrite|Reload|Repeat|Return|Run|RunAs|RunWait|Send|SendEvent|SendInput|SendMessage|SendMode|SendPlay|SendRaw|SetBatchLines|SetCapslockState|SetControlDelay|SetDefaultMouseSpeed|SetEnv|SetFormat|SetKeyDelay|SetMouseDelay|SetNumlockState|SetRegView|SetScrollLockState|SetStoreCapslockMode|SetTimer|SetTitleMatchMode|SetWinDelay|SetWorkingDir|Shutdown|Sleep|Sort|SoundBeep|SoundGet|SoundGetWaveVolume|SoundPlay|SoundSet|SoundSetWaveVolume|SplashImage|SplashTextOff|SplashTextOn|SplitPath|StatusBarGetText|StatusBarWait|StringCaseSense|StringGetPos|StringLeft|StringLen|StringLower|StringMid|StringReplace|StringRight|StringSplit|StringTrimLeft|StringTrimRight|StringUpper|Suspend|SysGet|Thread|ToolTip|Transform|TrayTip|URLDownloadToFile|WinActivate|WinActivateBottom|WinClose|WinGet|WinGetActiveStats|WinGetActiveTitle|WinGetClass|WinGetPos|WinGetText|WinGetTitle|WinHide|WinKill|WinMaximize|WinMenuSelectItem|WinMinimize|WinMinimizeAll|WinMinimizeAllUndo|WinMove|WinRestore|WinSet|WinSetTitle|WinShow|WinWait|WinWaitActive|WinWaitClose|WinWaitNotActive)\b/i,
+    command: {
+      pattern:
+        /\b(?:AutoTrim|BlockInput|Break|Click|ClipWait|Continue|Control|ControlClick|ControlFocus|ControlGet|ControlGetFocus|ControlGetPos|ControlGetText|ControlMove|ControlSend|ControlSendRaw|ControlSetText|CoordMode|Critical|DetectHiddenText|DetectHiddenWindows|Drive|DriveGet|DriveSpaceFree|EnvAdd|EnvDiv|EnvGet|EnvMult|EnvSet|EnvSub|EnvUpdate|Exit|ExitApp|FileAppend|FileCopy|FileCopyDir|FileCreateDir|FileCreateShortcut|FileDelete|FileEncoding|FileGetAttrib|FileGetShortcut|FileGetSize|FileGetTime|FileGetVersion|FileInstall|FileMove|FileMoveDir|FileRead|FileReadLine|FileRecycle|FileRecycleEmpty|FileRemoveDir|FileSelectFile|FileSelectFolder|FileSetAttrib|FileSetTime|FormatTime|GetKeyState|Gosub|Goto|GroupActivate|GroupAdd|GroupClose|GroupDeactivate|Gui|GuiControl|GuiControlGet|Hotkey|ImageSearch|IniDelete|IniRead|IniWrite|Input|InputBox|KeyWait|ListHotkeys|ListLines|ListVars|Loop|Menu|MouseClick|MouseClickDrag|MouseGetPos|MouseMove|MsgBox|OnExit|OutputDebug|Pause|PixelGetColor|PixelSearch|PostMessage|Process|Progress|Random|RegDelete|RegRead|RegWrite|Reload|Repeat|Return|Run|RunAs|RunWait|Send|SendEvent|SendInput|SendMessage|SendMode|SendPlay|SendRaw|SetBatchLines|SetCapslockState|SetControlDelay|SetDefaultMouseSpeed|SetEnv|SetFormat|SetKeyDelay|SetMouseDelay|SetNumlockState|SetRegView|SetScrollLockState|SetStoreCapslockMode|SetTimer|SetTitleMatchMode|SetWinDelay|SetWorkingDir|Shutdown|Sleep|Sort|SoundBeep|SoundGet|SoundGetWaveVolume|SoundPlay|SoundSet|SoundSetWaveVolume|SplashImage|SplashTextOff|SplashTextOn|SplitPath|StatusBarGetText|StatusBarWait|StringCaseSense|StringGetPos|StringLeft|StringLen|StringLower|StringMid|StringReplace|StringRight|StringSplit|StringTrimLeft|StringTrimRight|StringUpper|Suspend|SysGet|Thread|ToolTip|Transform|TrayTip|URLDownloadToFile|WinActivate|WinActivateBottom|WinClose|WinGet|WinGetActiveStats|WinGetActiveTitle|WinGetClass|WinGetPos|WinGetText|WinGetTitle|WinHide|WinKill|WinMaximize|WinMenuSelectItem|WinMinimize|WinMinimizeAll|WinMinimizeAllUndo|WinMove|WinRestore|WinSet|WinSetTitle|WinShow|WinWait|WinWaitActive|WinWaitClose|WinWaitNotActive)\b/i,
+      alias: 'selector'
+    },
     constant:
       /\b(?:a_ahkpath|a_ahkversion|a_appdata|a_appdatacommon|a_autotrim|a_batchlines|a_caretx|a_carety|a_computername|a_controldelay|a_cursor|a_dd|a_ddd|a_dddd|a_defaultmousespeed|a_desktop|a_desktopcommon|a_detecthiddentext|a_detecthiddenwindows|a_endchar|a_eventinfo|a_exitreason|a_fileencoding|a_formatfloat|a_formatinteger|a_gui|a_guicontrol|a_guicontrolevent|a_guievent|a_guiheight|a_guiwidth|a_guix|a_guiy|a_hour|a_iconfile|a_iconhidden|a_iconnumber|a_icontip|a_index|a_ipaddress1|a_ipaddress2|a_ipaddress3|a_ipaddress4|a_is64bitos|a_isadmin|a_iscompiled|a_iscritical|a_ispaused|a_issuspended|a_isunicode|a_keydelay|a_language|a_lasterror|a_linefile|a_linenumber|a_loopfield|a_loopfileattrib|a_loopfiledir|a_loopfileext|a_loopfilefullpath|a_loopfilelongpath|a_loopfilename|a_loopfileshortname|a_loopfileshortpath|a_loopfilesize|a_loopfilesizekb|a_loopfilesizemb|a_loopfiletimeaccessed|a_loopfiletimecreated|a_loopfiletimemodified|a_loopreadline|a_loopregkey|a_loopregname|a_loopregsubkey|a_loopregtimemodified|a_loopregtype|a_mday|a_min|a_mm|a_mmm|a_mmmm|a_mon|a_mousedelay|a_msec|a_mydocuments|a_now|a_nowutc|a_numbatchlines|a_ostype|a_osversion|a_priorhotkey|a_priorkey|a_programfiles|a_programs|a_programscommon|a_ptrsize|a_regview|a_screendpi|a_screenheight|a_screenwidth|a_scriptdir|a_scriptfullpath|a_scripthwnd|a_scriptname|a_sec|a_space|a_startmenu|a_startmenucommon|a_startup|a_startupcommon|a_stringcasesense|a_tab|a_temp|a_thisfunc|a_thishotkey|a_thislabel|a_thismenu|a_thismenuitem|a_thismenuitempos|a_tickcount|a_timeidle|a_timeidlephysical|a_timesincepriorhotkey|a_timesincethishotkey|a_titlematchmode|a_titlematchmodespeed|a_username|a_wday|a_windelay|a_windir|a_workingdir|a_yday|a_year|a_yweek|a_yyyy|clipboard|clipboardall|comspec|errorlevel|programfiles)\b/i,
     builtin:
       /\b(?:abs|acos|asc|asin|atan|ceil|chr|class|comobjactive|comobjarray|comobjconnect|comobjcreate|comobjerror|comobjflags|comobjget|comobjquery|comobjtype|comobjvalue|cos|dllcall|exp|fileexist|Fileopen|floor|format|il_add|il_create|il_destroy|instr|isfunc|islabel|IsObject|ln|log|ltrim|lv_add|lv_delete|lv_deletecol|lv_getcount|lv_getnext|lv_gettext|lv_insert|lv_insertcol|lv_modify|lv_modifycol|lv_setimagelist|mod|numget|numput|onmessage|regexmatch|regexreplace|registercallback|round|rtrim|sb_seticon|sb_setparts|sb_settext|sin|sqrt|strlen|strreplace|strsplit|substr|tan|tv_add|tv_delete|tv_get|tv_getchild|tv_getcount|tv_getnext|tv_getparent|tv_getprev|tv_getselection|tv_gettext|tv_modify|varsetcapacity|winactive|winexist|__Call|__Get|__New|__Set)\b/i,
     symbol:
       /\b(?:alt|altdown|altup|appskey|backspace|browser_back|browser_favorites|browser_forward|browser_home|browser_refresh|browser_search|browser_stop|bs|capslock|ctrl|ctrlbreak|ctrldown|ctrlup|del|delete|down|end|enter|esc|escape|f1|f10|f11|f12|f13|f14|f15|f16|f17|f18|f19|f2|f20|f21|f22|f23|f24|f3|f4|f5|f6|f7|f8|f9|home|ins|insert|joy1|joy10|joy11|joy12|joy13|joy14|joy15|joy16|joy17|joy18|joy19|joy2|joy20|joy21|joy22|joy23|joy24|joy25|joy26|joy27|joy28|joy29|joy3|joy30|joy31|joy32|joy4|joy5|joy6|joy7|joy8|joy9|joyaxes|joybuttons|joyinfo|joyname|joypov|joyr|joyu|joyv|joyx|joyy|joyz|lalt|launch_app1|launch_app2|launch_mail|launch_media|lbutton|lcontrol|lctrl|left|lshift|lwin|lwindown|lwinup|mbutton|media_next|media_play_pause|media_prev|media_stop|numlock|numpad0|numpad1|numpad2|numpad3|numpad4|numpad5|numpad6|numpad7|numpad8|numpad9|numpadadd|numpadclear|numpaddel|numpaddiv|numpaddot|numpaddown|numpadend|numpadenter|numpadhome|numpadins|numpadleft|numpadmult|numpadpgdn|numpadpgup|numpadright|numpadsub|numpadup|pgdn|pgup|printscreen|ralt|rbutton|rcontrol|rctrl|right|rshift|rwin|rwindown|rwinup|scrolllock|shift|shiftdown|shiftup|space|tab|up|volume_down|volume_mute|volume_up|wheeldown|wheelleft|wheelright|wheelup|xbutton1|xbutton2)\b/i,
-    important:
-      /#\b(?:AllowSameLineComments|ClipboardTimeout|CommentFlag|DerefChar|ErrorStdOut|EscapeChar|HotkeyInterval|HotkeyModifierTimeout|Hotstring|If|IfTimeout|IfWinActive|IfWinExist|IfWinNotActive|IfWinNotExist|Include|IncludeAgain|InputLevel|InstallKeybdHook|InstallMouseHook|KeyHistory|MaxHotkeysPerInterval|MaxMem|MaxThreads|MaxThreadsBuffer|MaxThreadsPerHotkey|MenuMaskKey|NoEnv|NoTrayIcon|Persistent|SingleInstance|UseHook|Warn|WinActivateForce)\b/i,
+    directive: {
+      pattern: /#[a-z]+\b/i,
+      alias: 'important'
+    },
     keyword:
       /\b(?:Abort|AboveNormal|Add|ahk_class|ahk_exe|ahk_group|ahk_id|ahk_pid|All|Alnum|Alpha|AltSubmit|AltTab|AltTabAndMenu|AltTabMenu|AltTabMenuDismiss|AlwaysOnTop|AutoSize|Background|BackgroundTrans|BelowNormal|between|BitAnd|BitNot|BitOr|BitShiftLeft|BitShiftRight|BitXOr|Bold|Border|Button|ByRef|Catch|Checkbox|Checked|CheckedGray|Choose|ChooseString|Close|Color|ComboBox|Contains|ControlList|Count|Date|DateTime|Days|DDL|Default|DeleteAll|Delimiter|Deref|Destroy|Digit|Disable|Disabled|DropDownList|Edit|Eject|Else|Enable|Enabled|Error|Exist|Expand|ExStyle|FileSystem|Finally|First|Flash|Float|FloatFast|Focus|Font|for|global|Grid|Group|GroupBox|GuiClose|GuiContextMenu|GuiDropFiles|GuiEscape|GuiSize|Hdr|Hidden|Hide|High|HKCC|HKCR|HKCU|HKEY_CLASSES_ROOT|HKEY_CURRENT_CONFIG|HKEY_CURRENT_USER|HKEY_LOCAL_MACHINE|HKEY_USERS|HKLM|HKU|Hours|HScroll|Icon|IconSmall|ID|IDLast|If|IfEqual|IfExist|IfGreater|IfGreaterOrEqual|IfInString|IfLess|IfLessOrEqual|IfMsgBox|IfNotEqual|IfNotExist|IfNotInString|IfWinActive|IfWinExist|IfWinNotActive|IfWinNotExist|Ignore|ImageList|in|Integer|IntegerFast|Interrupt|is|italic|Join|Label|LastFound|LastFoundExist|Limit|Lines|List|ListBox|ListView|local|Lock|Logoff|Low|Lower|Lowercase|MainWindow|Margin|Maximize|MaximizeBox|MaxSize|Minimize|MinimizeBox|MinMax|MinSize|Minutes|MonthCal|Mouse|Move|Multi|NA|No|NoActivate|NoDefault|NoHide|NoIcon|NoMainWindow|norm|Normal|NoSort|NoSortHdr|NoStandard|Not|NoTab|NoTimers|Number|Off|Ok|On|OwnDialogs|Owner|Parse|Password|Picture|Pixel|Pos|Pow|Priority|ProcessName|Radio|Range|Read|ReadOnly|Realtime|Redraw|Region|REG_BINARY|REG_DWORD|REG_EXPAND_SZ|REG_MULTI_SZ|REG_SZ|Relative|Rename|Report|Resize|Restore|Retry|RGB|Screen|Seconds|Section|Serial|SetLabel|ShiftAltTab|Show|Single|Slider|SortDesc|Standard|static|Status|StatusBar|StatusCD|strike|Style|Submit|SysMenu|Tab2|TabStop|Text|Theme|Throw|Tile|ToggleCheck|ToggleEnable|ToolWindow|Top|Topmost|TransColor|Transparent|Tray|TreeView|Try|TryAgain|Type|UnCheck|underline|Unicode|Unlock|Until|UpDown|Upper|Uppercase|UseErrorLevel|Vis|VisFirst|Visible|VScroll|Wait|WaitClose|WantCtrlA|WantF2|WantReturn|While|Wrap|Xdigit|xm|xp|xs|Yes|ym|yp|ys)\b/i,
     function: /[^(); \t,\n+*\-=?>:\\\/<&%\[\]]+(?=\()/,
@@ -25743,15 +29498,20 @@ function autohotkey(Prism) {
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/autoit.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = autoit
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return autoit; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 autoit.displayName = 'autoit'
 autoit.aliases = []
+
+/** @param {Refractor} Prism */
 function autoit(Prism) {
   Prism.languages.autoit = {
     comment: [
@@ -25798,15 +29558,20 @@ function autoit(Prism) {
 /*!*************************************************!*\
   !*** ./node_modules/refractor/lang/avisynth.js ***!
   \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = avisynth
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return avisynth; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 avisynth.displayName = 'avisynth'
 avisynth.aliases = ['avs']
+
+/** @param {Refractor} Prism */
 function avisynth(Prism) {
   // http://avisynth.nl/index.php/The_full_AviSynth_grammar
   ;(function (Prism) {
@@ -25822,57 +29587,84 @@ function avisynth(Prism) {
     var internals = [
       // bools
       /is(?:bool|clip|float|int|string)|defined|(?:(?:internal)?function|var)?exists?/
-        .source, // control
-      /apply|assert|default|eval|import|nop|select|undefined/.source, // global
+        .source,
+      // control
+      /apply|assert|default|eval|import|nop|select|undefined/.source,
+      // global
       /opt_(?:allowfloataudio|avipadscanlines|dwchannelmask|enable_(?:b64a|planartopackedrgb|v210|y3_10_10|y3_10_16)|usewaveextensible|vdubplanarhack)|set(?:cachemode|maxcpu|memorymax|planarlegacyalignment|workingdir)/
-        .source, // conv
-      /hex(?:value)?|value/.source, // numeric
+        .source,
+      // conv
+      /hex(?:value)?|value/.source,
+      // numeric
       /abs|ceil|continued(?:denominator|numerator)?|exp|floor|fmod|frac|log(?:10)?|max|min|muldiv|pi|pow|rand|round|sign|spline|sqrt/
-        .source, // trig
-      /a?sinh?|a?cosh?|a?tan[2h]?/.source, // bit
+        .source,
+      // trig
+      /a?sinh?|a?cosh?|a?tan[2h]?/.source,
+      // bit
       /(?:bit(?:and|not|x?or|[lr]?shift[aslu]?|sh[lr]|sa[lr]|[lr]rotatel?|ro[rl]|te?st|set(?:count)?|cl(?:ea)?r|ch(?:an)?ge?))/
-        .source, // runtime
+        .source,
+      // runtime
       /average(?:[bgr]|chroma[uv]|luma)|(?:[rgb]|chroma[uv]|luma|rgb|[yuv](?=difference(?:fromprevious|tonext)))difference(?:fromprevious|tonext)?|[yuvrgb]plane(?:median|min|max|minmaxdifference)/
-        .source, // script
+        .source,
+      // script
       /getprocessinfo|logmsg|script(?:dir(?:utf8)?|file(?:utf8)?|name(?:utf8)?)|setlogparams/
-        .source, // string
+        .source,
+      // string
       /chr|(?:fill|find|left|mid|replace|rev|right)str|format|[lu]case|ord|str(?:cmpi?|fromutf8|len|toutf8)|time|trim(?:all|left|right)/
-        .source, // version
-      /isversionorgreater|version(?:number|string)/.source, // helper
-      /buildpixeltype|colorspacenametopixeltype/.source, // avsplus
+        .source,
+      // version
+      /isversionorgreater|version(?:number|string)/.source,
+      // helper
+      /buildpixeltype|colorspacenametopixeltype/.source,
+      // avsplus
       /addautoloaddir|on(?:cpu|cuda)|prefetch|setfiltermtmode/.source
     ].join('|')
     var properties = [
       // content
-      /has(?:audio|video)/.source, // resolution
-      /height|width/.source, // framerate
-      /frame(?:count|rate)|framerate(?:denominator|numerator)/.source, // interlacing
-      /getparity|is(?:field|frame)based/.source, // color format
+      /has(?:audio|video)/.source,
+      // resolution
+      /height|width/.source,
+      // framerate
+      /frame(?:count|rate)|framerate(?:denominator|numerator)/.source,
+      // interlacing
+      /getparity|is(?:field|frame)based/.source,
+      // color format
       /bitspercomponent|componentsize|hasalpha|is(?:planar(?:rgba?)?|interleaved|rgb(?:24|32|48|64)?|y(?:8|u(?:va?|y2))?|yv(?:12|16|24|411)|420|422|444|packedrgb)|numcomponents|pixeltype/
-        .source, // audio
+        .source,
+      // audio
       /audio(?:bits|channels|duration|length(?:[fs]|hi|lo)?|rate)|isaudio(?:float|int)/
         .source
     ].join('|')
     var filters = [
       // source
       /avi(?:file)?source|directshowsource|image(?:reader|source|sourceanim)|opendmlsource|segmented(?:avisource|directshowsource)|wavsource/
-        .source, // color
+        .source,
+      // color
       /coloryuv|convertbacktoyuy2|convertto(?:RGB(?:24|32|48|64)|(?:planar)?RGBA?|Y8?|YV(?:12|16|24|411)|YUVA?(?:411|420|422|444)|YUY2)|fixluminance|gr[ae]yscale|invert|levels|limiter|mergea?rgb|merge(?:chroma|luma)|rgbadjust|show(?:alpha|blue|green|red)|swapuv|tweak|[uv]toy8?|ytouv/
-        .source, // overlay
-      /(?:colorkey|reset)mask|layer|mask(?:hs)?|merge|overlay|subtract/.source, // geometry
+        .source,
+      // overlay
+      /(?:colorkey|reset)mask|layer|mask(?:hs)?|merge|overlay|subtract/.source,
+      // geometry
       /addborders|(?:bicubic|bilinear|blackman|gauss|lanczos4|lanczos|point|sinc|spline(?:16|36|64))resize|crop(?:bottom)?|flip(?:horizontal|vertical)|(?:horizontal|vertical)?reduceby2|letterbox|skewrows|turn(?:180|left|right)/
-        .source, // pixel
+        .source,
+      // pixel
       /blur|fixbrokenchromaupsampling|generalconvolution|(?:spatial|temporal)soften|sharpen/
-        .source, // timeline
+        .source,
+      // timeline
       /trim|(?:un)?alignedsplice|(?:assume|assumescaled|change|convert)FPS|(?:delete|duplicate)frame|dissolve|fade(?:in|io|out)[02]?|freezeframe|interleave|loop|reverse|select(?:even|odd|(?:range)?every)/
-        .source, // interlace
+        .source,
+      // interlace
       /assume[bt]ff|assume(?:field|frame)based|bob|complementparity|doubleweave|peculiarblend|pulldown|separate(?:columns|fields|rows)|swapfields|weave(?:columns|rows)?/
-        .source, // audio
+        .source,
+      // audio
       /amplify(?:db)?|assumesamplerate|audiodub(?:ex)?|audiotrim|convertaudioto(?:(?:8|16|24|32)bit|float)|converttomono|delayaudio|ensurevbrmp3sync|get(?:left|right)?channel|kill(?:audio|video)|mergechannels|mixaudio|monotostereo|normalize|resampleaudio|ssrc|supereq|timestretch/
-        .source, // conditional
+        .source,
+      // conditional
       /animate|applyrange|conditional(?:filter|reader|select)|frameevaluate|scriptclip|tcp(?:server|source)|writefile(?:end|if|start)?/
-        .source, // export
-      /imagewriter/.source, // debug
+        .source,
+      // export
+      /imagewriter/.source,
+      // debug
       /blackness|blankclip|colorbars(?:hd)?|compare|dumpfiltergraph|echo|histogram|info|messageclip|preroll|setgraphanalysis|show(?:framenumber|smpte|time)|showfiveversions|stack(?:horizontal|vertical)|subtitle|tone|version/
         .source
     ].join('|')
@@ -25980,18 +29772,24 @@ function avisynth(Prism) {
 /*!*************************************************!*\
   !*** ./node_modules/refractor/lang/avro-idl.js ***!
   \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return avroIdl; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
+avroIdl.displayName = 'avro-idl'
+avroIdl.aliases = ['avdl']
 
-
-module.exports = avroIdl
-avroIdl.displayName = 'avroIdl'
-avroIdl.aliases = []
+/** @param {Refractor} Prism */
 function avroIdl(Prism) {
   // GitHub: https://github.com/apache/avro
   // Docs: https://avro.apache.org/docs/current/idl.html
+
   Prism.languages['avro-idl'] = {
     comment: {
       pattern: /\/\/.*|\/\*[\s\S]*?\*\//,
@@ -26041,19 +29839,77 @@ function avroIdl(Prism) {
 
 /***/ }),
 
+/***/ "./node_modules/refractor/lang/awk.js":
+/*!********************************************!*\
+  !*** ./node_modules/refractor/lang/awk.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return awk; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
+awk.displayName = 'awk'
+awk.aliases = ['gawk']
+
+/** @param {Refractor} Prism */
+function awk(Prism) {
+  Prism.languages.awk = {
+    hashbang: {
+      pattern: /^#!.*/,
+      greedy: true,
+      alias: 'comment'
+    },
+    comment: {
+      pattern: /#.*/,
+      greedy: true
+    },
+    string: {
+      pattern: /(^|[^\\])"(?:[^\\"\r\n]|\\.)*"/,
+      lookbehind: true,
+      greedy: true
+    },
+    regex: {
+      pattern: /((?:^|[^\w\s)])\s*)\/(?:[^\/\\\r\n]|\\.)*\//,
+      lookbehind: true,
+      greedy: true
+    },
+    variable: /\$\w+/,
+    keyword:
+      /\b(?:BEGIN|BEGINFILE|END|ENDFILE|break|case|continue|default|delete|do|else|exit|for|function|getline|if|in|next|nextfile|printf?|return|switch|while)\b|@(?:include|load)\b/,
+    function: /\b[a-z_]\w*(?=\s*\()/i,
+    number: /\b(?:\d+(?:\.\d+)?(?:e[+-]?\d+)?|0x[a-fA-F0-9]+)\b/,
+    operator: /--|\+\+|!?~|>&|>>|<<|(?:\*\*|[<>!=+\-*/%^])=?|&&|\|[|&]|[?:]/,
+    punctuation: /[()[\]{},;]/
+  }
+  Prism.languages.gawk = Prism.languages.awk
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/refractor/lang/bash.js":
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/bash.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = bash
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return bash; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 bash.displayName = 'bash'
-bash.aliases = ['shell']
+bash.aliases = ['sh', 'shell']
+
+/** @param {Refractor} Prism */
 function bash(Prism) {
   ;(function (Prism) {
     // $ set | grep '^[A-Z][^[:space:]]*=' | cut -d= -f1 | tr '\n' '|'
@@ -26097,14 +29953,16 @@ function bash(Prism) {
             // If there is no $ sign at the beginning highlight (( and )) as punctuation
             punctuation: /\(\(?|\)\)?|,|;/
           }
-        }, // [1]: Command Substitution
+        },
+        // [1]: Command Substitution
         {
           pattern: /\$\((?:\([^)]+\)|[^()])+\)|`[^`]+`/,
           greedy: true,
           inside: {
             variable: /^\$\(|^`|\)$|`$/
           }
-        }, // [2]: Brace expansion
+        },
+        // [2]: Brace expansion
         {
           pattern: /\$\{[^}]+\}/,
           greedy: true,
@@ -26159,7 +30017,7 @@ function bash(Prism) {
       // Highlight variable names as variables in the left-hand part
       // of assignments (“=” and “+=”).
       'assign-left': {
-        pattern: /(^|[\s;|&]|[<>]\()\w+(?=\+?=)/,
+        pattern: /(^|[\s;|&]|[<>]\()\w+(?:\.\w+)*(?=\+?=)/,
         inside: {
           environment: {
             pattern: RegExp('(^|[\\s;|&]|[<>]\\()' + envVars),
@@ -26170,6 +30028,12 @@ function bash(Prism) {
         alias: 'variable',
         lookbehind: true
       },
+      // Highlight parameter names as variables
+      parameter: {
+        pattern: /(^|\s)-{1,2}(?:\w+:[+-]?)?\w+(?:\.\w+)*(?=[=\s]|$)/,
+        alias: 'variable',
+        lookbehind: true
+      },
       string: [
         // Support for Here-documents https://en.wikipedia.org/wiki/Here_document
         {
@@ -26177,7 +30041,8 @@ function bash(Prism) {
           lookbehind: true,
           greedy: true,
           inside: insideString
-        }, // Here-document with quotes around the tag
+        },
+        // Here-document with quotes around the tag
         // → No expansion (so no “inside”).
         {
           pattern: /((?:^|[^<])<<-?\s*)(["'])(\w+)\2\s[\s\S]*?(?:\r?\n|\r)\3/,
@@ -26186,7 +30051,8 @@ function bash(Prism) {
           inside: {
             bash: commandAfterHeredoc
           }
-        }, // “Normal” string
+        },
+        // “Normal” string
         {
           // https://www.gnu.org/software/bash/manual/html_node/Double-Quotes.html
           pattern:
@@ -26217,7 +30083,7 @@ function bash(Prism) {
       variable: insideString.variable,
       function: {
         pattern:
-          /(^|[\s;|&]|[<>]\()(?:add|apropos|apt|apt-cache|apt-get|aptitude|aspell|automysqlbackup|awk|basename|bash|bc|bconsole|bg|bzip2|cal|cat|cfdisk|chgrp|chkconfig|chmod|chown|chroot|cksum|clear|cmp|column|comm|composer|cp|cron|crontab|csplit|curl|cut|date|dc|dd|ddrescue|debootstrap|df|diff|diff3|dig|dir|dircolors|dirname|dirs|dmesg|docker|docker-compose|du|egrep|eject|env|ethtool|expand|expect|expr|fdformat|fdisk|fg|fgrep|file|find|fmt|fold|format|free|fsck|ftp|fuser|gawk|git|gparted|grep|groupadd|groupdel|groupmod|groups|grub-mkconfig|gzip|halt|head|hg|history|host|hostname|htop|iconv|id|ifconfig|ifdown|ifup|import|install|ip|jobs|join|kill|killall|less|link|ln|locate|logname|logrotate|look|lpc|lpr|lprint|lprintd|lprintq|lprm|ls|lsof|lynx|make|man|mc|mdadm|mkconfig|mkdir|mke2fs|mkfifo|mkfs|mkisofs|mknod|mkswap|mmv|more|most|mount|mtools|mtr|mutt|mv|nano|nc|netstat|nice|nl|node|nohup|notify-send|npm|nslookup|op|open|parted|passwd|paste|pathchk|ping|pkill|pnpm|podman|podman-compose|popd|pr|printcap|printenv|ps|pushd|pv|quota|quotacheck|quotactl|ram|rar|rcp|reboot|remsync|rename|renice|rev|rm|rmdir|rpm|rsync|scp|screen|sdiff|sed|sendmail|seq|service|sftp|sh|shellcheck|shuf|shutdown|sleep|slocate|sort|split|ssh|stat|strace|su|sudo|sum|suspend|swapon|sync|tac|tail|tar|tee|time|timeout|top|touch|tr|traceroute|tsort|tty|umount|uname|unexpand|uniq|units|unrar|unshar|unzip|update-grub|uptime|useradd|userdel|usermod|users|uudecode|uuencode|v|vcpkg|vdir|vi|vim|virsh|vmstat|wait|watch|wc|wget|whereis|which|who|whoami|write|xargs|xdg-open|yarn|yes|zenity|zip|zsh|zypper)(?=$|[)\s;|&])/,
+          /(^|[\s;|&]|[<>]\()(?:add|apropos|apt|apt-cache|apt-get|aptitude|aspell|automysqlbackup|awk|basename|bash|bc|bconsole|bg|bzip2|cal|cargo|cat|cfdisk|chgrp|chkconfig|chmod|chown|chroot|cksum|clear|cmp|column|comm|composer|cp|cron|crontab|csplit|curl|cut|date|dc|dd|ddrescue|debootstrap|df|diff|diff3|dig|dir|dircolors|dirname|dirs|dmesg|docker|docker-compose|du|egrep|eject|env|ethtool|expand|expect|expr|fdformat|fdisk|fg|fgrep|file|find|fmt|fold|format|free|fsck|ftp|fuser|gawk|git|gparted|grep|groupadd|groupdel|groupmod|groups|grub-mkconfig|gzip|halt|head|hg|history|host|hostname|htop|iconv|id|ifconfig|ifdown|ifup|import|install|ip|java|jobs|join|kill|killall|less|link|ln|locate|logname|logrotate|look|lpc|lpr|lprint|lprintd|lprintq|lprm|ls|lsof|lynx|make|man|mc|mdadm|mkconfig|mkdir|mke2fs|mkfifo|mkfs|mkisofs|mknod|mkswap|mmv|more|most|mount|mtools|mtr|mutt|mv|nano|nc|netstat|nice|nl|node|nohup|notify-send|npm|nslookup|op|open|parted|passwd|paste|pathchk|ping|pkill|pnpm|podman|podman-compose|popd|pr|printcap|printenv|ps|pushd|pv|quota|quotacheck|quotactl|ram|rar|rcp|reboot|remsync|rename|renice|rev|rm|rmdir|rpm|rsync|scp|screen|sdiff|sed|sendmail|seq|service|sftp|sh|shellcheck|shuf|shutdown|sleep|slocate|sort|split|ssh|stat|strace|su|sudo|sum|suspend|swapon|sync|sysctl|tac|tail|tar|tee|time|timeout|top|touch|tr|traceroute|tsort|tty|umount|uname|unexpand|uniq|units|unrar|unshar|unzip|update-grub|uptime|useradd|userdel|usermod|users|uudecode|uuencode|v|vcpkg|vdir|vi|vim|virsh|vmstat|wait|watch|wc|wget|whereis|which|who|whoami|write|xargs|xdg-open|yarn|yes|zenity|zip|zsh|zypper)(?=$|[)\s;|&])/,
         lookbehind: true
       },
       keyword: {
@@ -26259,12 +30125,14 @@ function bash(Prism) {
       }
     }
     commandAfterHeredoc.inside = Prism.languages.bash
+
     /* Patterns in command substitution. */
     var toBeCopied = [
       'comment',
       'function-name',
       'for-or-select',
       'assign-left',
+      'parameter',
       'string',
       'environment',
       'function',
@@ -26280,6 +30148,7 @@ function bash(Prism) {
     for (var i = 0; i < toBeCopied.length; i++) {
       inside[toBeCopied[i]] = Prism.languages.bash[toBeCopied[i]]
     }
+    Prism.languages.sh = Prism.languages.bash
     Prism.languages.shell = Prism.languages.bash
   })(Prism)
 }
@@ -26291,15 +30160,20 @@ function bash(Prism) {
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/basic.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = basic
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return basic; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 basic.displayName = 'basic'
 basic.aliases = []
+
+/** @param {Refractor} Prism */
 function basic(Prism) {
   Prism.languages.basic = {
     comment: {
@@ -26329,15 +30203,20 @@ function basic(Prism) {
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/batch.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = batch
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return batch; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 batch.displayName = 'batch'
 batch.aliases = []
+
+/** @param {Refractor} Prism */
 function batch(Prism) {
   ;(function (Prism) {
     var variable = /%%?[~:\w]+%?|!\S+!/
@@ -26448,15 +30327,20 @@ function batch(Prism) {
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/bbcode.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = bbcode
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return bbcode; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 bbcode.displayName = 'bbcode'
 bbcode.aliases = ['shortcode']
+
+/** @param {Refractor} Prism */
 function bbcode(Prism) {
   Prism.languages.bbcode = {
     tag: {
@@ -26492,19 +30376,68 @@ function bbcode(Prism) {
 
 /***/ }),
 
+/***/ "./node_modules/refractor/lang/bbj.js":
+/*!********************************************!*\
+  !*** ./node_modules/refractor/lang/bbj.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return bbj; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
+bbj.displayName = 'bbj'
+bbj.aliases = []
+
+/** @param {Refractor} Prism */
+function bbj(Prism) {
+  ;(function (Prism) {
+    Prism.languages.bbj = {
+      comment: {
+        pattern: /(^|[^\\:])rem\s+.*/i,
+        lookbehind: true,
+        greedy: true
+      },
+      string: {
+        pattern: /(['"])(?:(?!\1|\\).|\\.)*\1/,
+        greedy: true
+      },
+      number: /(?:\b\d+(?:\.\d*)?|\B\.\d+)(?:E[+-]?\d+)?/i,
+      keyword:
+        /\b(?:abstract|all|argc|begin|bye|callback|case|chn|class|classend|ctl|day|declare|delete|dim|dom|dread|dsz|else|end|endif|err|exitto|extends|fi|field|for|from|gosub|goto|if|implements|interface|interfaceend|iol|iolist|let|list|load|method|methodend|methodret|on|opts|pfx|print|private|process_events|protected|psz|public|read|read_resource|release|remove_callback|repeat|restore|return|rev|seterr|setesc|sqlchn|sqlunt|ssn|start|static|swend|switch|sys|then|tim|unt|until|use|void|wend|where|while)\b/i,
+      function: /\b\w+(?=\()/,
+      boolean: /\b(?:BBjAPI\.TRUE|BBjAPI\.FALSE)\b/i,
+      operator: /<[=>]?|>=?|[+\-*\/^=&]|\b(?:and|not|or|xor)\b/i,
+      punctuation: /[.,;:()]/
+    }
+  })(Prism)
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/refractor/lang/bicep.js":
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/bicep.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = bicep
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return bicep; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 bicep.displayName = 'bicep'
 bicep.aliases = []
+
+/** @param {Refractor} Prism */
 function bicep(Prism) {
   // based loosely upon: https://github.com/Azure/bicep/blob/main/src/textmate/bicep.tmlanguage
   Prism.languages.bicep = {
@@ -26590,23 +30523,32 @@ function bicep(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/birb.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return birb; });
+/* harmony import */ var _clike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clike.js */ "./node_modules/refractor/lang/clike.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = birb
 birb.displayName = 'birb'
 birb.aliases = []
+
+/** @param {Refractor} Prism */
 function birb(Prism) {
+  Prism.register(_clike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   Prism.languages.birb = Prism.languages.extend('clike', {
     string: {
       pattern: /r?("|')(?:\\.|(?!\1)[^\\])*\1/,
       greedy: true
     },
     'class-name': [
-      /\b[A-Z](?:[\d_]*[a-zA-Z]\w*)?\b/, // matches variable and function return types (parameters as well).
+      /\b[A-Z](?:[\d_]*[a-zA-Z]\w*)?\b/,
+      // matches variable and function return types (parameters as well).
       /\b(?:[A-Z]\w*|(?!(?:var|void)\b)[a-z]\w*)(?=\s+\w+\s*[;,=()])/
     ],
     keyword:
@@ -26630,17 +30572,24 @@ function birb(Prism) {
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/bison.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return bison; });
+/* harmony import */ var _c_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./c.js */ "./node_modules/refractor/lang/c.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorC = __webpack_require__(/*! ./c.js */ "./node_modules/refractor/lang/c.js")
-module.exports = bison
 bison.displayName = 'bison'
 bison.aliases = []
+
+/** @param {Refractor} Prism */
 function bison(Prism) {
-  Prism.register(refractorC)
+  Prism.register(_c_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   Prism.languages.bison = Prism.languages.extend('c', {})
   Prism.languages.insertBefore('bison', 'comment', {
     bison: {
@@ -26688,15 +30637,20 @@ function bison(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/bnf.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = bnf
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return bnf; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 bnf.displayName = 'bnf'
 bnf.aliases = ['rbnf']
+
+/** @param {Refractor} Prism */
 function bnf(Prism) {
   Prism.languages.bnf = {
     string: {
@@ -26723,19 +30677,112 @@ function bnf(Prism) {
 
 /***/ }),
 
+/***/ "./node_modules/refractor/lang/bqn.js":
+/*!********************************************!*\
+  !*** ./node_modules/refractor/lang/bqn.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return bqn; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
+bqn.displayName = 'bqn'
+bqn.aliases = []
+
+/** @param {Refractor} Prism */
+function bqn(Prism) {
+  Prism.languages.bqn = {
+    shebang: {
+      pattern: /^#![ \t]*\/.*/,
+      alias: 'important',
+      greedy: true
+    },
+    comment: {
+      pattern: /#.*/,
+      greedy: true
+    },
+    'string-literal': {
+      pattern: /"(?:[^"]|"")*"/,
+      greedy: true,
+      alias: 'string'
+    },
+    'character-literal': {
+      pattern: /'(?:[\s\S]|[\uD800-\uDBFF][\uDC00-\uDFFF])'/,
+      greedy: true,
+      alias: 'char'
+    },
+    function: /•[\w¯.∞π]+[\w¯.∞π]*/,
+    'dot-notation-on-brackets': {
+      pattern: /\{(?=.*\}\.)|\}\./,
+      alias: 'namespace'
+    },
+    'special-name': {
+      pattern: /(?:𝕨|𝕩|𝕗|𝕘|𝕤|𝕣|𝕎|𝕏|𝔽|𝔾|𝕊|_𝕣_|_𝕣)/,
+      alias: 'keyword'
+    },
+    'dot-notation-on-name': {
+      pattern: /[A-Za-z_][\w¯∞π]*\./,
+      alias: 'namespace'
+    },
+    'word-number-scientific': {
+      pattern: /\d+(?:\.\d+)?[eE]¯?\d+/,
+      alias: 'number'
+    },
+    'word-name': {
+      pattern: /[A-Za-z_][\w¯∞π]*/,
+      alias: 'symbol'
+    },
+    'word-number': {
+      pattern:
+        /[¯∞π]?(?:\d*\.?\b\d+(?:e[+¯]?\d+|E[+¯]?\d+)?|¯|∞|π)(?:j¯?(?:(?:\d+(?:\.\d+)?|\.\d+)(?:e[+¯]?\d+|E[+¯]?\d+)?|¯|∞|π))?/,
+      alias: 'number'
+    },
+    'null-literal': {
+      pattern: /@/,
+      alias: 'char'
+    },
+    'primitive-functions': {
+      pattern: /[-+×÷⋆√⌊⌈|¬∧∨<>≠=≤≥≡≢⊣⊢⥊∾≍⋈↑↓↕«»⌽⍉/⍋⍒⊏⊑⊐⊒∊⍷⊔!]/,
+      alias: 'operator'
+    },
+    'primitive-1-operators': {
+      pattern: /[`˜˘¨⁼⌜´˝˙]/,
+      alias: 'operator'
+    },
+    'primitive-2-operators': {
+      pattern: /[∘⊸⟜○⌾⎉⚇⍟⊘◶⎊]/,
+      alias: 'operator'
+    },
+    punctuation: /[←⇐↩(){}⟨⟩[\]‿·⋄,.;:?]/
+  }
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/refractor/lang/brainfuck.js":
 /*!**************************************************!*\
   !*** ./node_modules/refractor/lang/brainfuck.js ***!
   \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = brainfuck
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return brainfuck; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 brainfuck.displayName = 'brainfuck'
 brainfuck.aliases = []
+
+/** @param {Refractor} Prism */
 function brainfuck(Prism) {
   Prism.languages.brainfuck = {
     pointer: {
@@ -26766,15 +30813,20 @@ function brainfuck(Prism) {
 /*!*****************************************************!*\
   !*** ./node_modules/refractor/lang/brightscript.js ***!
   \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = brightscript
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return brightscript; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 brightscript.displayName = 'brightscript'
 brightscript.aliases = []
+
+/** @param {Refractor} Prism */
 function brightscript(Prism) {
   Prism.languages.brightscript = {
     comment: /(?:\brem|').*/i,
@@ -26832,15 +30884,20 @@ function brightscript(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/bro.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = bro
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return bro; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 bro.displayName = 'bro'
 bro.aliases = []
+
+/** @param {Refractor} Prism */
 function bro(Prism) {
   Prism.languages.bro = {
     comment: {
@@ -26880,17 +30937,23 @@ function bro(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/bsl.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = bsl
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return bsl; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 bsl.displayName = 'bsl'
-bsl.aliases = []
+bsl.aliases = ['oscript']
+
+/** @param {Refractor} Prism */
 function bsl(Prism) {
   /* eslint-disable no-misleading-character-class */
+
   // 1C:Enterprise
   // https://github.com/Diversus23/
   //
@@ -26902,7 +30965,8 @@ function bsl(Prism) {
       {
         pattern: /"(?:[^"]|"")*"(?!")/,
         greedy: true
-      }, // Дата и время
+      },
+      // Дата и время
       // Date & time
       {
         pattern: /'(?:[^'\r\n\\]|\\.)*'/
@@ -26927,12 +30991,14 @@ function bsl(Prism) {
       lookbehind: true
     },
     operator: [
-      /[<>+\-*/]=?|[%=]/, // RU
+      /[<>+\-*/]=?|[%=]/,
+      // RU
       {
         pattern:
           /(^|[^\w\u0400-\u0484\u0487-\u052f\u1d2b\u1d78\u2de0-\u2dff\ua640-\ua69f\ufe2e\ufe2f])(?:и|или|не)(?![\w\u0400-\u0484\u0487-\u052f\u1d2b\u1d78\u2de0-\u2dff\ua640-\ua69f\ufe2e\ufe2f])/i,
         lookbehind: true
-      }, // EN
+      },
+      // EN
       {
         pattern: /\b(?:and|not|or)\b/i
       }
@@ -26946,7 +31012,8 @@ function bsl(Prism) {
         lookbehind: true,
         greedy: true,
         alias: 'important'
-      }, // Инструкции препроцессора вида:
+      },
+      // Инструкции препроцессора вида:
       // #Если Сервер Тогда
       // ...
       // #КонецЕсли
@@ -26972,16 +31039,24 @@ function bsl(Prism) {
 /*!******************************************!*\
   !*** ./node_modules/refractor/lang/c.js ***!
   \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return c; });
+/* harmony import */ var _clike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clike.js */ "./node_modules/refractor/lang/clike.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = c
 c.displayName = 'c'
 c.aliases = []
+
+/** @param {Refractor} Prism */
 function c(Prism) {
+  Prism.register(_clike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   Prism.languages.c = Prism.languages.extend('clike', {
     comment: {
       pattern:
@@ -27073,16 +31148,24 @@ function c(Prism) {
 /*!*************************************************!*\
   !*** ./node_modules/refractor/lang/cfscript.js ***!
   \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return cfscript; });
+/* harmony import */ var _clike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clike.js */ "./node_modules/refractor/lang/clike.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = cfscript
 cfscript.displayName = 'cfscript'
-cfscript.aliases = []
+cfscript.aliases = ['cfc']
+
+/** @param {Refractor} Prism */
 function cfscript(Prism) {
+  Prism.register(_clike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   // https://cfdocs.org/script
   Prism.languages.cfscript = Prism.languages.extend('clike', {
     comment: [
@@ -27105,7 +31188,7 @@ function cfscript(Prism) {
     keyword:
       /\b(?:abstract|break|catch|component|continue|default|do|else|extends|final|finally|for|function|if|in|include|package|private|property|public|remote|required|rethrow|return|static|switch|throw|try|var|while|xml)\b(?!\s*=)/,
     operator: [
-      /\+\+|--|&&|\|\||::|=>|[!=]==|<=?|>=?|[-+*/%&|^!=<>]=?|\?(?:\.|:)?|[?:]/,
+      /\+\+|--|&&|\|\||::|=>|[!=]==|[-+*/%&|^!=<>]=?|\?(?:\.|:)?|:/,
       /\b(?:and|contains|eq|equal|eqv|gt|gte|imp|is|lt|lte|mod|not|or|xor)\b/
     ],
     scope: {
@@ -27138,17 +31221,27 @@ function cfscript(Prism) {
 /*!***************************************************!*\
   !*** ./node_modules/refractor/lang/chaiscript.js ***!
   \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return chaiscript; });
+/* harmony import */ var _clike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clike.js */ "./node_modules/refractor/lang/clike.js");
+/* harmony import */ var _cpp_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./cpp.js */ "./node_modules/refractor/lang/cpp.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorCpp = __webpack_require__(/*! ./cpp.js */ "./node_modules/refractor/lang/cpp.js")
-module.exports = chaiscript
+
 chaiscript.displayName = 'chaiscript'
 chaiscript.aliases = []
+
+/** @param {Refractor} Prism */
 function chaiscript(Prism) {
-  Prism.register(refractorCpp)
+  Prism.register(_clike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+  Prism.register(_cpp_js__WEBPACK_IMPORTED_MODULE_1__["default"])
   Prism.languages.chaiscript = Prism.languages.extend('clike', {
     string: {
       pattern: /(^|[^\\])'(?:[^'\\]|\\[\s\S])*'/,
@@ -27217,15 +31310,20 @@ function chaiscript(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/cil.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = cil
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return cil; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 cil.displayName = 'cil'
 cil.aliases = []
+
+/** @param {Refractor} Prism */
 function cil(Prism) {
   Prism.languages.cil = {
     comment: /\/\/.*/,
@@ -27253,19 +31351,93 @@ function cil(Prism) {
 
 /***/ }),
 
+/***/ "./node_modules/refractor/lang/cilkc.js":
+/*!**********************************************!*\
+  !*** ./node_modules/refractor/lang/cilkc.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return cilkc; });
+/* harmony import */ var _c_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./c.js */ "./node_modules/refractor/lang/c.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
+
+cilkc.displayName = 'cilkc'
+cilkc.aliases = ['cilk-c']
+
+/** @param {Refractor} Prism */
+function cilkc(Prism) {
+  Prism.register(_c_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+  Prism.languages.cilkc = Prism.languages.insertBefore('c', 'function', {
+    'parallel-keyword': {
+      pattern: /\bcilk_(?:for|reducer|s(?:cope|pawn|ync))\b/,
+      alias: 'keyword'
+    }
+  })
+  Prism.languages['cilk-c'] = Prism.languages['cilkc']
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/refractor/lang/cilkcpp.js":
+/*!************************************************!*\
+  !*** ./node_modules/refractor/lang/cilkcpp.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return cilkcpp; });
+/* harmony import */ var _cpp_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./cpp.js */ "./node_modules/refractor/lang/cpp.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
+
+cilkcpp.displayName = 'cilkcpp'
+cilkcpp.aliases = ['cilk', 'cilk-cpp']
+
+/** @param {Refractor} Prism */
+function cilkcpp(Prism) {
+  Prism.register(_cpp_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+  Prism.languages.cilkcpp = Prism.languages.insertBefore('cpp', 'function', {
+    'parallel-keyword': {
+      pattern: /\bcilk_(?:for|reducer|s(?:cope|pawn|ync))\b/,
+      alias: 'keyword'
+    }
+  })
+  Prism.languages['cilk-cpp'] = Prism.languages['cilkcpp']
+  Prism.languages['cilk'] = Prism.languages['cilkcpp']
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/refractor/lang/clike.js":
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/clike.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = clike
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return clike; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 clike.displayName = 'clike'
 clike.aliases = []
+
+/** @param {Refractor} Prism */
 function clike(Prism) {
   Prism.languages.clike = {
     comment: [
@@ -27309,15 +31481,20 @@ function clike(Prism) {
 /*!************************************************!*\
   !*** ./node_modules/refractor/lang/clojure.js ***!
   \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = clojure
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return clojure; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 clojure.displayName = 'clojure'
 clojure.aliases = []
+
+/** @param {Refractor} Prism */
 function clojure(Prism) {
   // Copied from https://github.com/jeluard/prism-clojure
   Prism.languages.clojure = {
@@ -27361,15 +31538,20 @@ function clojure(Prism) {
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/cmake.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = cmake
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return cmake; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 cmake.displayName = 'cmake'
 cmake.aliases = []
+
+/** @param {Refractor} Prism */
 function cmake(Prism) {
   Prism.languages.cmake = {
     comment: /#.*/,
@@ -27387,9 +31569,9 @@ function cmake(Prism) {
       }
     },
     variable:
-      /\b(?:CMAKE_\w+|\w+_(?:(?:BINARY|SOURCE)_DIR|DESCRIPTION|HOMEPAGE_URL|ROOT|VERSION(?:_MAJOR|_MINOR|_PATCH|_TWEAK)?)|(?:ANDROID|APPLE|BORLAND|BUILD_SHARED_LIBS|CACHE|CPACK_(?:ABSOLUTE_DESTINATION_FILES|COMPONENT_INCLUDE_TOPLEVEL_DIRECTORY|ERROR_ON_ABSOLUTE_INSTALL_DESTINATION|INCLUDE_TOPLEVEL_DIRECTORY|INSTALL_DEFAULT_DIRECTORY_PERMISSIONS|INSTALL_SCRIPT|PACKAGING_INSTALL_PREFIX|SET_DESTDIR|WARN_ON_ABSOLUTE_INSTALL_DESTINATION)|CTEST_(?:BINARY_DIRECTORY|BUILD_COMMAND|BUILD_NAME|BZR_COMMAND|BZR_UPDATE_OPTIONS|CHANGE_ID|CHECKOUT_COMMAND|CONFIGURATION_TYPE|CONFIGURE_COMMAND|COVERAGE_COMMAND|COVERAGE_EXTRA_FLAGS|CURL_OPTIONS|CUSTOM_(?:COVERAGE_EXCLUDE|ERROR_EXCEPTION|ERROR_MATCH|ERROR_POST_CONTEXT|ERROR_PRE_CONTEXT|MAXIMUM_FAILED_TEST_OUTPUT_SIZE|MAXIMUM_NUMBER_OF_(?:ERRORS|WARNINGS)|MAXIMUM_PASSED_TEST_OUTPUT_SIZE|MEMCHECK_IGNORE|POST_MEMCHECK|POST_TEST|PRE_MEMCHECK|PRE_TEST|TESTS_IGNORE|WARNING_EXCEPTION|WARNING_MATCH)|CVS_CHECKOUT|CVS_COMMAND|CVS_UPDATE_OPTIONS|DROP_LOCATION|DROP_METHOD|DROP_SITE|DROP_SITE_CDASH|DROP_SITE_PASSWORD|DROP_SITE_USER|EXTRA_COVERAGE_GLOB|GIT_COMMAND|GIT_INIT_SUBMODULES|GIT_UPDATE_CUSTOM|GIT_UPDATE_OPTIONS|HG_COMMAND|HG_UPDATE_OPTIONS|LABELS_FOR_SUBPROJECTS|MEMORYCHECK_(?:COMMAND|COMMAND_OPTIONS|SANITIZER_OPTIONS|SUPPRESSIONS_FILE|TYPE)|NIGHTLY_START_TIME|P4_CLIENT|P4_COMMAND|P4_OPTIONS|P4_UPDATE_OPTIONS|RUN_CURRENT_SCRIPT|SCP_COMMAND|SITE|SOURCE_DIRECTORY|SUBMIT_URL|SVN_COMMAND|SVN_OPTIONS|SVN_UPDATE_OPTIONS|TEST_LOAD|TEST_TIMEOUT|TRIGGER_SITE|UPDATE_COMMAND|UPDATE_OPTIONS|UPDATE_VERSION_ONLY|USE_LAUNCHERS)|CYGWIN|ENV|EXECUTABLE_OUTPUT_PATH|GHS-MULTI|IOS|LIBRARY_OUTPUT_PATH|MINGW|MSVC(?:10|11|12|14|60|70|71|80|90|_IDE|_TOOLSET_VERSION|_VERSION)?|MSYS|PROJECT_(?:BINARY_DIR|DESCRIPTION|HOMEPAGE_URL|NAME|SOURCE_DIR|VERSION|VERSION_(?:MAJOR|MINOR|PATCH|TWEAK))|UNIX|WIN32|WINCE|WINDOWS_PHONE|WINDOWS_STORE|XCODE|XCODE_VERSION))\b/,
+      /\b(?:CMAKE_\w+|\w+_(?:(?:BINARY|SOURCE)_DIR|DESCRIPTION|HOMEPAGE_URL|ROOT|VERSION(?:_MAJOR|_MINOR|_PATCH|_TWEAK)?)|(?:ANDROID|APPLE|BORLAND|BUILD_SHARED_LIBS|CACHE|CPACK_(?:ABSOLUTE_DESTINATION_FILES|COMPONENT_INCLUDE_TOPLEVEL_DIRECTORY|ERROR_ON_ABSOLUTE_INSTALL_DESTINATION|INCLUDE_TOPLEVEL_DIRECTORY|INSTALL_DEFAULT_DIRECTORY_PERMISSIONS|INSTALL_SCRIPT|PACKAGING_INSTALL_PREFIX|SET_DESTDIR|WARN_ON_ABSOLUTE_INSTALL_DESTINATION)|CTEST_(?:BINARY_DIRECTORY|BUILD_COMMAND|BUILD_NAME|BZR_COMMAND|BZR_UPDATE_OPTIONS|CHANGE_ID|CHECKOUT_COMMAND|CONFIGURATION_TYPE|CONFIGURE_COMMAND|COVERAGE_COMMAND|COVERAGE_EXTRA_FLAGS|CURL_OPTIONS|CUSTOM_(?:COVERAGE_EXCLUDE|ERROR_EXCEPTION|ERROR_MATCH|ERROR_POST_CONTEXT|ERROR_PRE_CONTEXT|MAXIMUM_FAILED_TEST_OUTPUT_SIZE|MAXIMUM_NUMBER_OF_(?:ERRORS|WARNINGS)|MAXIMUM_PASSED_TEST_OUTPUT_SIZE|MEMCHECK_IGNORE|POST_MEMCHECK|POST_TEST|PRE_MEMCHECK|PRE_TEST|TESTS_IGNORE|WARNING_EXCEPTION|WARNING_MATCH)|CVS_CHECKOUT|CVS_COMMAND|CVS_UPDATE_OPTIONS|DROP_LOCATION|DROP_METHOD|DROP_SITE|DROP_SITE_CDASH|DROP_SITE_PASSWORD|DROP_SITE_USER|EXTRA_COVERAGE_GLOB|GIT_COMMAND|GIT_INIT_SUBMODULES|GIT_UPDATE_CUSTOM|GIT_UPDATE_OPTIONS|HG_COMMAND|HG_UPDATE_OPTIONS|LABELS_FOR_SUBPROJECTS|MEMORYCHECK_(?:COMMAND|COMMAND_OPTIONS|SANITIZER_OPTIONS|SUPPRESSIONS_FILE|TYPE)|NIGHTLY_START_TIME|P4_CLIENT|P4_COMMAND|P4_OPTIONS|P4_UPDATE_OPTIONS|RUN_CURRENT_SCRIPT|SCP_COMMAND|SITE|SOURCE_DIRECTORY|SUBMIT_URL|SVN_COMMAND|SVN_OPTIONS|SVN_UPDATE_OPTIONS|TEST_LOAD|TEST_TIMEOUT|TRIGGER_SITE|UPDATE_COMMAND|UPDATE_OPTIONS|UPDATE_VERSION_ONLY|USE_LAUNCHERS)|CYGWIN|ENV|EXECUTABLE_OUTPUT_PATH|GHS-MULTI|IOS|LIBRARY_OUTPUT_PATH|MINGW|MSVC(?:10|11|12|14|60|70|71|80|90|_IDE|_TOOLSET_VERSION|_VERSION)?|MSYS|PROJECT_NAME|UNIX|WIN32|WINCE|WINDOWS_PHONE|WINDOWS_STORE|XCODE))\b/,
     property:
-      /\b(?:cxx_\w+|(?:ARCHIVE_OUTPUT_(?:DIRECTORY|NAME)|COMPILE_DEFINITIONS|COMPILE_PDB_NAME|COMPILE_PDB_OUTPUT_DIRECTORY|EXCLUDE_FROM_DEFAULT_BUILD|IMPORTED_(?:IMPLIB|LIBNAME|LINK_DEPENDENT_LIBRARIES|LINK_INTERFACE_LANGUAGES|LINK_INTERFACE_LIBRARIES|LINK_INTERFACE_MULTIPLICITY|LOCATION|NO_SONAME|OBJECTS|SONAME)|INTERPROCEDURAL_OPTIMIZATION|LIBRARY_OUTPUT_DIRECTORY|LIBRARY_OUTPUT_NAME|LINK_FLAGS|LINK_INTERFACE_LIBRARIES|LINK_INTERFACE_MULTIPLICITY|LOCATION|MAP_IMPORTED_CONFIG|OSX_ARCHITECTURES|OUTPUT_NAME|PDB_NAME|PDB_OUTPUT_DIRECTORY|RUNTIME_OUTPUT_DIRECTORY|RUNTIME_OUTPUT_NAME|STATIC_LIBRARY_FLAGS|VS_CSHARP|VS_DOTNET_REFERENCEPROP|VS_DOTNET_REFERENCE|VS_GLOBAL_SECTION_POST|VS_GLOBAL_SECTION_PRE|VS_GLOBAL|XCODE_ATTRIBUTE)_\w+|\w+_(?:CLANG_TIDY|COMPILER_LAUNCHER|CPPCHECK|CPPLINT|INCLUDE_WHAT_YOU_USE|OUTPUT_NAME|POSTFIX|VISIBILITY_PRESET)|ABSTRACT|ADDITIONAL_MAKE_CLEAN_FILES|ADVANCED|ALIASED_TARGET|ALLOW_DUPLICATE_CUSTOM_TARGETS|ANDROID_(?:ANT_ADDITIONAL_OPTIONS|API|API_MIN|ARCH|ASSETS_DIRECTORIES|GUI|JAR_DEPENDENCIES|NATIVE_LIB_DEPENDENCIES|NATIVE_LIB_DIRECTORIES|PROCESS_MAX|PROGUARD|PROGUARD_CONFIG_PATH|SECURE_PROPS_PATH|SKIP_ANT_STEP|STL_TYPE)|ARCHIVE_OUTPUT_DIRECTORY|ATTACHED_FILES|ATTACHED_FILES_ON_FAIL|AUTOGEN_(?:BUILD_DIR|ORIGIN_DEPENDS|PARALLEL|SOURCE_GROUP|TARGETS_FOLDER|TARGET_DEPENDS)|AUTOMOC|AUTOMOC_(?:COMPILER_PREDEFINES|DEPEND_FILTERS|EXECUTABLE|MACRO_NAMES|MOC_OPTIONS|SOURCE_GROUP|TARGETS_FOLDER)|AUTORCC|AUTORCC_EXECUTABLE|AUTORCC_OPTIONS|AUTORCC_SOURCE_GROUP|AUTOUIC|AUTOUIC_EXECUTABLE|AUTOUIC_OPTIONS|AUTOUIC_SEARCH_PATHS|BINARY_DIR|BUILDSYSTEM_TARGETS|BUILD_RPATH|BUILD_RPATH_USE_ORIGIN|BUILD_WITH_INSTALL_NAME_DIR|BUILD_WITH_INSTALL_RPATH|BUNDLE|BUNDLE_EXTENSION|CACHE_VARIABLES|CLEAN_NO_CUSTOM|COMMON_LANGUAGE_RUNTIME|COMPATIBLE_INTERFACE_(?:BOOL|NUMBER_MAX|NUMBER_MIN|STRING)|COMPILE_(?:DEFINITIONS|FEATURES|FLAGS|OPTIONS|PDB_NAME|PDB_OUTPUT_DIRECTORY)|COST|CPACK_DESKTOP_SHORTCUTS|CPACK_NEVER_OVERWRITE|CPACK_PERMANENT|CPACK_STARTUP_SHORTCUTS|CPACK_START_MENU_SHORTCUTS|CPACK_WIX_ACL|CROSSCOMPILING_EMULATOR|CUDA_EXTENSIONS|CUDA_PTX_COMPILATION|CUDA_RESOLVE_DEVICE_SYMBOLS|CUDA_SEPARABLE_COMPILATION|CUDA_STANDARD|CUDA_STANDARD_REQUIRED|CXX_EXTENSIONS|CXX_STANDARD|CXX_STANDARD_REQUIRED|C_EXTENSIONS|C_STANDARD|C_STANDARD_REQUIRED|DEBUG_CONFIGURATIONS|DEFINE_SYMBOL|DEFINITIONS|DEPENDS|DEPLOYMENT_ADDITIONAL_FILES|DEPLOYMENT_REMOTE_DIRECTORY|DISABLED|DISABLED_FEATURES|ECLIPSE_EXTRA_CPROJECT_CONTENTS|ECLIPSE_EXTRA_NATURES|ENABLED_FEATURES|ENABLED_LANGUAGES|ENABLE_EXPORTS|ENVIRONMENT|EXCLUDE_FROM_ALL|EXCLUDE_FROM_DEFAULT_BUILD|EXPORT_NAME|EXPORT_PROPERTIES|EXTERNAL_OBJECT|EchoString|FAIL_REGULAR_EXPRESSION|FIND_LIBRARY_USE_LIB32_PATHS|FIND_LIBRARY_USE_LIB64_PATHS|FIND_LIBRARY_USE_LIBX32_PATHS|FIND_LIBRARY_USE_OPENBSD_VERSIONING|FIXTURES_CLEANUP|FIXTURES_REQUIRED|FIXTURES_SETUP|FOLDER|FRAMEWORK|Fortran_FORMAT|Fortran_MODULE_DIRECTORY|GENERATED|GENERATOR_FILE_NAME|GENERATOR_IS_MULTI_CONFIG|GHS_INTEGRITY_APP|GHS_NO_SOURCE_GROUP_FILE|GLOBAL_DEPENDS_DEBUG_MODE|GLOBAL_DEPENDS_NO_CYCLES|GNUtoMS|HAS_CXX|HEADER_FILE_ONLY|HELPSTRING|IMPLICIT_DEPENDS_INCLUDE_TRANSFORM|IMPORTED|IMPORTED_(?:COMMON_LANGUAGE_RUNTIME|CONFIGURATIONS|GLOBAL|IMPLIB|LIBNAME|LINK_DEPENDENT_LIBRARIES|LINK_INTERFACE_(?:LANGUAGES|LIBRARIES|MULTIPLICITY)|LOCATION|NO_SONAME|OBJECTS|SONAME)|IMPORT_PREFIX|IMPORT_SUFFIX|INCLUDE_DIRECTORIES|INCLUDE_REGULAR_EXPRESSION|INSTALL_NAME_DIR|INSTALL_RPATH|INSTALL_RPATH_USE_LINK_PATH|INTERFACE_(?:AUTOUIC_OPTIONS|COMPILE_DEFINITIONS|COMPILE_FEATURES|COMPILE_OPTIONS|INCLUDE_DIRECTORIES|LINK_DEPENDS|LINK_DIRECTORIES|LINK_LIBRARIES|LINK_OPTIONS|POSITION_INDEPENDENT_CODE|SOURCES|SYSTEM_INCLUDE_DIRECTORIES)|INTERPROCEDURAL_OPTIMIZATION|IN_TRY_COMPILE|IOS_INSTALL_COMBINED|JOB_POOLS|JOB_POOL_COMPILE|JOB_POOL_LINK|KEEP_EXTENSION|LABELS|LANGUAGE|LIBRARY_OUTPUT_DIRECTORY|LINKER_LANGUAGE|LINK_(?:DEPENDS|DEPENDS_NO_SHARED|DIRECTORIES|FLAGS|INTERFACE_LIBRARIES|INTERFACE_MULTIPLICITY|LIBRARIES|OPTIONS|SEARCH_END_STATIC|SEARCH_START_STATIC|WHAT_YOU_USE)|LISTFILE_STACK|LOCATION|MACOSX_BUNDLE|MACOSX_BUNDLE_INFO_PLIST|MACOSX_FRAMEWORK_INFO_PLIST|MACOSX_PACKAGE_LOCATION|MACOSX_RPATH|MACROS|MANUALLY_ADDED_DEPENDENCIES|MEASUREMENT|MODIFIED|NAME|NO_SONAME|NO_SYSTEM_FROM_IMPORTED|OBJECT_DEPENDS|OBJECT_OUTPUTS|OSX_ARCHITECTURES|OUTPUT_NAME|PACKAGES_FOUND|PACKAGES_NOT_FOUND|PARENT_DIRECTORY|PASS_REGULAR_EXPRESSION|PDB_NAME|PDB_OUTPUT_DIRECTORY|POSITION_INDEPENDENT_CODE|POST_INSTALL_SCRIPT|PREDEFINED_TARGETS_FOLDER|PREFIX|PRE_INSTALL_SCRIPT|PRIVATE_HEADER|PROCESSORS|PROCESSOR_AFFINITY|PROJECT_LABEL|PUBLIC_HEADER|REPORT_UNDEFINED_PROPERTIES|REQUIRED_FILES|RESOURCE|RESOURCE_LOCK|RULE_LAUNCH_COMPILE|RULE_LAUNCH_CUSTOM|RULE_LAUNCH_LINK|RULE_MESSAGES|RUNTIME_OUTPUT_DIRECTORY|RUN_SERIAL|SKIP_AUTOGEN|SKIP_AUTOMOC|SKIP_AUTORCC|SKIP_AUTOUIC|SKIP_BUILD_RPATH|SKIP_RETURN_CODE|SOURCES|SOURCE_DIR|SOVERSION|STATIC_LIBRARY_FLAGS|STATIC_LIBRARY_OPTIONS|STRINGS|SUBDIRECTORIES|SUFFIX|SYMBOLIC|TARGET_ARCHIVES_MAY_BE_SHARED_LIBS|TARGET_MESSAGES|TARGET_SUPPORTS_SHARED_LIBS|TESTS|TEST_INCLUDE_FILE|TEST_INCLUDE_FILES|TIMEOUT|TIMEOUT_AFTER_MATCH|TYPE|USE_FOLDERS|VALUE|VARIABLES|VERSION|VISIBILITY_INLINES_HIDDEN|VS_(?:CONFIGURATION_TYPE|COPY_TO_OUT_DIR|DEBUGGER_(?:COMMAND|COMMAND_ARGUMENTS|ENVIRONMENT|WORKING_DIRECTORY)|DEPLOYMENT_CONTENT|DEPLOYMENT_LOCATION|DOTNET_REFERENCES|DOTNET_REFERENCES_COPY_LOCAL|GLOBAL_KEYWORD|GLOBAL_PROJECT_TYPES|GLOBAL_ROOTNAMESPACE|INCLUDE_IN_VSIX|IOT_STARTUP_TASK|KEYWORD|RESOURCE_GENERATOR|SCC_AUXPATH|SCC_LOCALPATH|SCC_PROJECTNAME|SCC_PROVIDER|SDK_REFERENCES|SHADER_(?:DISABLE_OPTIMIZATIONS|ENABLE_DEBUG|ENTRYPOINT|FLAGS|MODEL|OBJECT_FILE_NAME|OUTPUT_HEADER_FILE|TYPE|VARIABLE_NAME)|STARTUP_PROJECT|TOOL_OVERRIDE|USER_PROPS|WINRT_COMPONENT|WINRT_EXTENSIONS|WINRT_REFERENCES|XAML_TYPE)|WILL_FAIL|WIN32_EXECUTABLE|WINDOWS_EXPORT_ALL_SYMBOLS|WORKING_DIRECTORY|WRAP_EXCLUDE|XCODE_(?:EMIT_EFFECTIVE_PLATFORM_NAME|EXPLICIT_FILE_TYPE|FILE_ATTRIBUTES|LAST_KNOWN_FILE_TYPE|PRODUCT_TYPE|SCHEME_(?:ADDRESS_SANITIZER|ADDRESS_SANITIZER_USE_AFTER_RETURN|ARGUMENTS|DISABLE_MAIN_THREAD_CHECKER|DYNAMIC_LIBRARY_LOADS|DYNAMIC_LINKER_API_USAGE|ENVIRONMENT|EXECUTABLE|GUARD_MALLOC|MAIN_THREAD_CHECKER_STOP|MALLOC_GUARD_EDGES|MALLOC_SCRIBBLE|MALLOC_STACK|THREAD_SANITIZER(?:_STOP)?|UNDEFINED_BEHAVIOUR_SANITIZER(?:_STOP)?|ZOMBIE_OBJECTS))|XCTEST)\b/,
+      /\b(?:cxx_\w+|(?:ARCHIVE_OUTPUT_(?:DIRECTORY|NAME)|COMPILE_DEFINITIONS|COMPILE_PDB_NAME|COMPILE_PDB_OUTPUT_DIRECTORY|EXCLUDE_FROM_DEFAULT_BUILD|IMPORTED_(?:IMPLIB|LIBNAME|LINK_DEPENDENT_LIBRARIES|LINK_INTERFACE_LANGUAGES|LINK_INTERFACE_LIBRARIES|LINK_INTERFACE_MULTIPLICITY|LOCATION|NO_SONAME|OBJECTS|SONAME)|INTERPROCEDURAL_OPTIMIZATION|LIBRARY_OUTPUT_DIRECTORY|LIBRARY_OUTPUT_NAME|LINK_FLAGS|LINK_INTERFACE_LIBRARIES|LINK_INTERFACE_MULTIPLICITY|LOCATION|MAP_IMPORTED_CONFIG|OSX_ARCHITECTURES|OUTPUT_NAME|PDB_NAME|PDB_OUTPUT_DIRECTORY|RUNTIME_OUTPUT_DIRECTORY|RUNTIME_OUTPUT_NAME|STATIC_LIBRARY_FLAGS|VS_CSHARP|VS_DOTNET_REFERENCEPROP|VS_DOTNET_REFERENCE|VS_GLOBAL_SECTION_POST|VS_GLOBAL_SECTION_PRE|VS_GLOBAL|XCODE_ATTRIBUTE)_\w+|\w+_(?:CLANG_TIDY|COMPILER_LAUNCHER|CPPCHECK|CPPLINT|INCLUDE_WHAT_YOU_USE|OUTPUT_NAME|POSTFIX|VISIBILITY_PRESET)|ABSTRACT|ADDITIONAL_MAKE_CLEAN_FILES|ADVANCED|ALIASED_TARGET|ALLOW_DUPLICATE_CUSTOM_TARGETS|ANDROID_(?:ANT_ADDITIONAL_OPTIONS|API|API_MIN|ARCH|ASSETS_DIRECTORIES|GUI|JAR_DEPENDENCIES|NATIVE_LIB_DEPENDENCIES|NATIVE_LIB_DIRECTORIES|PROCESS_MAX|PROGUARD|PROGUARD_CONFIG_PATH|SECURE_PROPS_PATH|SKIP_ANT_STEP|STL_TYPE)|ARCHIVE_OUTPUT_DIRECTORY|ATTACHED_FILES|ATTACHED_FILES_ON_FAIL|AUTOGEN_(?:BUILD_DIR|ORIGIN_DEPENDS|PARALLEL|SOURCE_GROUP|TARGETS_FOLDER|TARGET_DEPENDS)|AUTOMOC|AUTOMOC_(?:COMPILER_PREDEFINES|DEPEND_FILTERS|EXECUTABLE|MACRO_NAMES|MOC_OPTIONS|SOURCE_GROUP|TARGETS_FOLDER)|AUTORCC|AUTORCC_EXECUTABLE|AUTORCC_OPTIONS|AUTORCC_SOURCE_GROUP|AUTOUIC|AUTOUIC_EXECUTABLE|AUTOUIC_OPTIONS|AUTOUIC_SEARCH_PATHS|BINARY_DIR|BUILDSYSTEM_TARGETS|BUILD_RPATH|BUILD_RPATH_USE_ORIGIN|BUILD_WITH_INSTALL_NAME_DIR|BUILD_WITH_INSTALL_RPATH|BUNDLE|BUNDLE_EXTENSION|CACHE_VARIABLES|CLEAN_NO_CUSTOM|COMMON_LANGUAGE_RUNTIME|COMPATIBLE_INTERFACE_(?:BOOL|NUMBER_MAX|NUMBER_MIN|STRING)|COMPILE_(?:DEFINITIONS|FEATURES|FLAGS|OPTIONS|PDB_NAME|PDB_OUTPUT_DIRECTORY)|COST|CPACK_DESKTOP_SHORTCUTS|CPACK_NEVER_OVERWRITE|CPACK_PERMANENT|CPACK_STARTUP_SHORTCUTS|CPACK_START_MENU_SHORTCUTS|CPACK_WIX_ACL|CROSSCOMPILING_EMULATOR|CUDA_EXTENSIONS|CUDA_PTX_COMPILATION|CUDA_RESOLVE_DEVICE_SYMBOLS|CUDA_SEPARABLE_COMPILATION|CUDA_STANDARD|CUDA_STANDARD_REQUIRED|CXX_EXTENSIONS|CXX_STANDARD|CXX_STANDARD_REQUIRED|C_EXTENSIONS|C_STANDARD|C_STANDARD_REQUIRED|DEBUG_CONFIGURATIONS|DEFINE_SYMBOL|DEFINITIONS|DEPENDS|DEPLOYMENT_ADDITIONAL_FILES|DEPLOYMENT_REMOTE_DIRECTORY|DISABLED|DISABLED_FEATURES|ECLIPSE_EXTRA_CPROJECT_CONTENTS|ECLIPSE_EXTRA_NATURES|ENABLED_FEATURES|ENABLED_LANGUAGES|ENABLE_EXPORTS|ENVIRONMENT|EXCLUDE_FROM_ALL|EXCLUDE_FROM_DEFAULT_BUILD|EXPORT_NAME|EXPORT_PROPERTIES|EXTERNAL_OBJECT|EchoString|FAIL_REGULAR_EXPRESSION|FIND_LIBRARY_USE_LIB32_PATHS|FIND_LIBRARY_USE_LIB64_PATHS|FIND_LIBRARY_USE_LIBX32_PATHS|FIND_LIBRARY_USE_OPENBSD_VERSIONING|FIXTURES_CLEANUP|FIXTURES_REQUIRED|FIXTURES_SETUP|FOLDER|FRAMEWORK|Fortran_FORMAT|Fortran_MODULE_DIRECTORY|GENERATED|GENERATOR_FILE_NAME|GENERATOR_IS_MULTI_CONFIG|GHS_INTEGRITY_APP|GHS_NO_SOURCE_GROUP_FILE|GLOBAL_DEPENDS_DEBUG_MODE|GLOBAL_DEPENDS_NO_CYCLES|GNUtoMS|HAS_CXX|HEADER_FILE_ONLY|HELPSTRING|IMPLICIT_DEPENDS_INCLUDE_TRANSFORM|IMPORTED|IMPORTED_(?:COMMON_LANGUAGE_RUNTIME|CONFIGURATIONS|GLOBAL|IMPLIB|LIBNAME|LINK_DEPENDENT_LIBRARIES|LINK_INTERFACE_(?:LANGUAGES|LIBRARIES|MULTIPLICITY)|LOCATION|NO_SONAME|OBJECTS|SONAME)|IMPORT_PREFIX|IMPORT_SUFFIX|INCLUDE_DIRECTORIES|INCLUDE_REGULAR_EXPRESSION|INSTALL_NAME_DIR|INSTALL_RPATH|INSTALL_RPATH_USE_LINK_PATH|INTERFACE_(?:AUTOUIC_OPTIONS|COMPILE_DEFINITIONS|COMPILE_FEATURES|COMPILE_OPTIONS|INCLUDE_DIRECTORIES|LINK_DEPENDS|LINK_DIRECTORIES|LINK_LIBRARIES|LINK_OPTIONS|POSITION_INDEPENDENT_CODE|SOURCES|SYSTEM_INCLUDE_DIRECTORIES)|INTERPROCEDURAL_OPTIMIZATION|IN_TRY_COMPILE|IOS_INSTALL_COMBINED|JOB_POOLS|JOB_POOL_COMPILE|JOB_POOL_LINK|KEEP_EXTENSION|LABELS|LANGUAGE|LIBRARY_OUTPUT_DIRECTORY|LINKER_LANGUAGE|LINK_(?:DEPENDS|DEPENDS_NO_SHARED|DIRECTORIES|FLAGS|INTERFACE_LIBRARIES|INTERFACE_MULTIPLICITY|LIBRARIES|OPTIONS|SEARCH_END_STATIC|SEARCH_START_STATIC|WHAT_YOU_USE)|LISTFILE_STACK|LOCATION|MACOSX_BUNDLE|MACOSX_BUNDLE_INFO_PLIST|MACOSX_FRAMEWORK_INFO_PLIST|MACOSX_PACKAGE_LOCATION|MACOSX_RPATH|MACROS|MANUALLY_ADDED_DEPENDENCIES|MEASUREMENT|MODIFIED|NAME|NO_SONAME|NO_SYSTEM_FROM_IMPORTED|OBJECT_DEPENDS|OBJECT_OUTPUTS|OSX_ARCHITECTURES|OUTPUT_NAME|PACKAGES_FOUND|PACKAGES_NOT_FOUND|PARENT_DIRECTORY|PASS_REGULAR_EXPRESSION|PDB_NAME|PDB_OUTPUT_DIRECTORY|POSITION_INDEPENDENT_CODE|POST_INSTALL_SCRIPT|PREDEFINED_TARGETS_FOLDER|PREFIX|PRE_INSTALL_SCRIPT|PRIVATE_HEADER|PROCESSORS|PROCESSOR_AFFINITY|PROJECT_LABEL|PUBLIC_HEADER|REPORT_UNDEFINED_PROPERTIES|REQUIRED_FILES|RESOURCE|RESOURCE_LOCK|RULE_LAUNCH_COMPILE|RULE_LAUNCH_CUSTOM|RULE_LAUNCH_LINK|RULE_MESSAGES|RUNTIME_OUTPUT_DIRECTORY|RUN_SERIAL|SKIP_AUTOGEN|SKIP_AUTOMOC|SKIP_AUTORCC|SKIP_AUTOUIC|SKIP_BUILD_RPATH|SKIP_RETURN_CODE|SOURCES|SOURCE_DIR|SOVERSION|STATIC_LIBRARY_FLAGS|STATIC_LIBRARY_OPTIONS|STRINGS|SUBDIRECTORIES|SUFFIX|SYMBOLIC|TARGET_ARCHIVES_MAY_BE_SHARED_LIBS|TARGET_MESSAGES|TARGET_SUPPORTS_SHARED_LIBS|TESTS|TEST_INCLUDE_FILE|TEST_INCLUDE_FILES|TIMEOUT|TIMEOUT_AFTER_MATCH|TYPE|USE_FOLDERS|VALUE|VARIABLES|VERSION|VISIBILITY_INLINES_HIDDEN|VS_(?:CONFIGURATION_TYPE|COPY_TO_OUT_DIR|DEBUGGER_(?:COMMAND|COMMAND_ARGUMENTS|ENVIRONMENT|WORKING_DIRECTORY)|DEPLOYMENT_CONTENT|DEPLOYMENT_LOCATION|DOTNET_REFERENCES|DOTNET_REFERENCES_COPY_LOCAL|INCLUDE_IN_VSIX|IOT_STARTUP_TASK|KEYWORD|RESOURCE_GENERATOR|SCC_AUXPATH|SCC_LOCALPATH|SCC_PROJECTNAME|SCC_PROVIDER|SDK_REFERENCES|SHADER_(?:DISABLE_OPTIMIZATIONS|ENABLE_DEBUG|ENTRYPOINT|FLAGS|MODEL|OBJECT_FILE_NAME|OUTPUT_HEADER_FILE|TYPE|VARIABLE_NAME)|STARTUP_PROJECT|TOOL_OVERRIDE|USER_PROPS|WINRT_COMPONENT|WINRT_EXTENSIONS|WINRT_REFERENCES|XAML_TYPE)|WILL_FAIL|WIN32_EXECUTABLE|WINDOWS_EXPORT_ALL_SYMBOLS|WORKING_DIRECTORY|WRAP_EXCLUDE|XCODE_(?:EMIT_EFFECTIVE_PLATFORM_NAME|EXPLICIT_FILE_TYPE|FILE_ATTRIBUTES|LAST_KNOWN_FILE_TYPE|PRODUCT_TYPE|SCHEME_(?:ADDRESS_SANITIZER|ADDRESS_SANITIZER_USE_AFTER_RETURN|ARGUMENTS|DISABLE_MAIN_THREAD_CHECKER|DYNAMIC_LIBRARY_LOADS|DYNAMIC_LINKER_API_USAGE|ENVIRONMENT|EXECUTABLE|GUARD_MALLOC|MAIN_THREAD_CHECKER_STOP|MALLOC_GUARD_EDGES|MALLOC_SCRIBBLE|MALLOC_STACK|THREAD_SANITIZER(?:_STOP)?|UNDEFINED_BEHAVIOUR_SANITIZER(?:_STOP)?|ZOMBIE_OBJECTS))|XCTEST)\b/,
     keyword:
       /\b(?:add_compile_definitions|add_compile_options|add_custom_command|add_custom_target|add_definitions|add_dependencies|add_executable|add_library|add_link_options|add_subdirectory|add_test|aux_source_directory|break|build_command|build_name|cmake_host_system_information|cmake_minimum_required|cmake_parse_arguments|cmake_policy|configure_file|continue|create_test_sourcelist|ctest_build|ctest_configure|ctest_coverage|ctest_empty_binary_directory|ctest_memcheck|ctest_read_custom_files|ctest_run_script|ctest_sleep|ctest_start|ctest_submit|ctest_test|ctest_update|ctest_upload|define_property|else|elseif|enable_language|enable_testing|endforeach|endfunction|endif|endmacro|endwhile|exec_program|execute_process|export|export_library_dependencies|file|find_file|find_library|find_package|find_path|find_program|fltk_wrap_ui|foreach|function|get_cmake_property|get_directory_property|get_filename_component|get_property|get_source_file_property|get_target_property|get_test_property|if|include|include_directories|include_external_msproject|include_guard|include_regular_expression|install|install_files|install_programs|install_targets|link_directories|link_libraries|list|load_cache|load_command|macro|make_directory|mark_as_advanced|math|message|option|output_required_files|project|qt_wrap_cpp|qt_wrap_ui|remove|remove_definitions|return|separate_arguments|set|set_directory_properties|set_property|set_source_files_properties|set_target_properties|set_tests_properties|site_name|source_group|string|subdir_depends|subdirs|target_compile_definitions|target_compile_features|target_compile_options|target_include_directories|target_link_directories|target_link_libraries|target_link_options|target_sources|try_compile|try_run|unset|use_mangled_mesa|utility_source|variable_requires|variable_watch|while|write_file)(?=\s*\()\b/,
     boolean: /\b(?:FALSE|OFF|ON|TRUE)\b/,
@@ -27414,15 +31596,20 @@ function cmake(Prism) {
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/cobol.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = cobol
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return cobol; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 cobol.displayName = 'cobol'
 cobol.aliases = []
+
+/** @param {Refractor} Prism */
 function cobol(Prism) {
   Prism.languages.cobol = {
     comment: {
@@ -27485,16 +31672,24 @@ function cobol(Prism) {
 /*!*****************************************************!*\
   !*** ./node_modules/refractor/lang/coffeescript.js ***!
   \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return coffeescript; });
+/* harmony import */ var _javascript_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./javascript.js */ "./node_modules/refractor/lang/javascript.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = coffeescript
 coffeescript.displayName = 'coffeescript'
 coffeescript.aliases = ['coffee']
+
+/** @param {Refractor} Prism */
 function coffeescript(Prism) {
+  Prism.register(_javascript_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   ;(function (Prism) {
     // Ignore comments starting with { to privilege string interpolation highlighting
     var comment = /#(?!\{).+/
@@ -27589,15 +31784,20 @@ function coffeescript(Prism) {
 /*!**************************************************!*\
   !*** ./node_modules/refractor/lang/concurnas.js ***!
   \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = concurnas
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return concurnas; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 concurnas.displayName = 'concurnas'
 concurnas.aliases = ['conc']
+
+/** @param {Refractor} Prism */
 function concurnas(Prism) {
   Prism.languages.concurnas = {
     comment: {
@@ -27668,22 +31868,190 @@ function concurnas(Prism) {
 
 /***/ }),
 
+/***/ "./node_modules/refractor/lang/cooklang.js":
+/*!*************************************************!*\
+  !*** ./node_modules/refractor/lang/cooklang.js ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return cooklang; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
+cooklang.displayName = 'cooklang'
+cooklang.aliases = []
+
+/** @param {Refractor} Prism */
+function cooklang(Prism) {
+  ;(function (Prism) {
+    // see https://github.com/cooklang/spec/blob/main/EBNF.md
+
+    var single_token_suffix = /(?:(?!\s)[\d$+<=a-zA-Z\x80-\uFFFF])+/.source
+    var multi_token_infix = /[^{}@#]+/.source
+    var multi_token_suffix = /\{[^}#@]*\}/.source
+    var multi_token = multi_token_infix + multi_token_suffix
+    var timer_units = /(?:h|hours|hrs|m|min|minutes)/.source
+    var amount_group_impl = {
+      pattern: /\{[^{}]*\}/,
+      inside: {
+        amount: {
+          pattern: /([\{|])[^{}|*%]+/,
+          lookbehind: true,
+          alias: 'number'
+        },
+        unit: {
+          pattern: /(%)[^}]+/,
+          lookbehind: true,
+          alias: 'symbol'
+        },
+        'servings-scaler': {
+          pattern: /\*/,
+          alias: 'operator'
+        },
+        'servings-alternative-separator': {
+          pattern: /\|/,
+          alias: 'operator'
+        },
+        'unit-separator': {
+          pattern: /(?:%|(\*)%)/,
+          lookbehind: true,
+          alias: 'operator'
+        },
+        punctuation: /[{}]/
+      }
+    }
+    Prism.languages.cooklang = {
+      comment: {
+        // [- comment -]
+        // -- comment
+        pattern: /\[-[\s\S]*?-\]|--.*/,
+        greedy: true
+      },
+      meta: {
+        // >> key: value
+        pattern: />>.*:.*/,
+        inside: {
+          property: {
+            // key:
+            pattern: /(>>\s*)[^\s:](?:[^:]*[^\s:])?/,
+            lookbehind: true
+          }
+        }
+      },
+      'cookware-group': {
+        // #...{...}, #...
+        pattern: new RegExp(
+          '#(?:' + multi_token + '|' + single_token_suffix + ')'
+        ),
+        inside: {
+          cookware: {
+            pattern: new RegExp('(^#)(?:' + multi_token_infix + ')'),
+            lookbehind: true,
+            alias: 'variable'
+          },
+          'cookware-keyword': {
+            pattern: /^#/,
+            alias: 'keyword'
+          },
+          'quantity-group': {
+            pattern: new RegExp(/\{[^{}@#]*\}/),
+            inside: {
+              quantity: {
+                pattern: new RegExp(/(^\{)/.source + multi_token_infix),
+                lookbehind: true,
+                alias: 'number'
+              },
+              punctuation: /[{}]/
+            }
+          }
+        }
+      },
+      'ingredient-group': {
+        // @...{...}, @...
+        pattern: new RegExp(
+          '@(?:' + multi_token + '|' + single_token_suffix + ')'
+        ),
+        inside: {
+          ingredient: {
+            pattern: new RegExp('(^@)(?:' + multi_token_infix + ')'),
+            lookbehind: true,
+            alias: 'variable'
+          },
+          'ingredient-keyword': {
+            pattern: /^@/,
+            alias: 'keyword'
+          },
+          'amount-group': amount_group_impl
+        }
+      },
+      'timer-group': {
+        // ~timer{...}
+        // eslint-disable-next-line regexp/sort-alternatives
+        pattern: /~(?!\s)[^@#~{}]*\{[^{}]*\}/,
+        inside: {
+          timer: {
+            pattern: /(^~)[^{]+/,
+            lookbehind: true,
+            alias: 'variable'
+          },
+          'duration-group': {
+            // {...}
+            pattern: /\{[^{}]*\}/,
+            inside: {
+              punctuation: /[{}]/,
+              unit: {
+                pattern: new RegExp(
+                  /(%\s*)/.source + timer_units + /\b/.source
+                ),
+                lookbehind: true,
+                alias: 'symbol'
+              },
+              operator: /%/,
+              duration: {
+                pattern: /\d+/,
+                alias: 'number'
+              }
+            }
+          },
+          'timer-keyword': {
+            pattern: /^~/,
+            alias: 'keyword'
+          }
+        }
+      }
+    }
+  })(Prism)
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/refractor/lang/coq.js":
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/coq.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = coq
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return coq; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 coq.displayName = 'coq'
 coq.aliases = []
+
+/** @param {Refractor} Prism */
 function coq(Prism) {
   ;(function (Prism) {
     // https://github.com/coq/coq
+
     var commentSource = /\(\*(?:[^(*]|\((?!\*)|\*(?!\))|<self>)*\*\)/.source
     for (var i = 0; i < 2; i++) {
       commentSource = commentSource.replace(/<self>/g, function () {
@@ -27747,17 +32115,24 @@ function coq(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/cpp.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return cpp; });
+/* harmony import */ var _c_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./c.js */ "./node_modules/refractor/lang/c.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorC = __webpack_require__(/*! ./c.js */ "./node_modules/refractor/lang/c.js")
-module.exports = cpp
 cpp.displayName = 'cpp'
 cpp.aliases = []
+
+/** @param {Refractor} Prism */
 function cpp(Prism) {
-  Prism.register(refractorC)
+  Prism.register(_c_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   ;(function (Prism) {
     var keyword =
       /\b(?:alignas|alignof|asm|auto|bool|break|case|catch|char|char16_t|char32_t|char8_t|class|co_await|co_return|co_yield|compl|concept|const|const_cast|consteval|constexpr|constinit|continue|decltype|default|delete|do|double|dynamic_cast|else|enum|explicit|export|extern|final|float|for|friend|goto|if|import|inline|int|int16_t|int32_t|int64_t|int8_t|long|module|mutable|namespace|new|noexcept|nullptr|operator|override|private|protected|public|register|reinterpret_cast|requires|return|short|signed|sizeof|static|static_assert|static_cast|struct|switch|template|this|thread_local|throw|try|typedef|typeid|typename|uint16_t|uint32_t|uint64_t|uint8_t|union|unsigned|using|virtual|void|volatile|wchar_t|while)\b/
@@ -27779,13 +32154,16 @@ function cpp(Prism) {
             )
           ),
           lookbehind: true
-        }, // This is intended to capture the class name of method implementations like:
+        },
+        // This is intended to capture the class name of method implementations like:
         //   void foo::bar() const {}
         // However! The `foo` in the above example could also be a namespace, so we only capture the class name if
         // it starts with an uppercase letter. This approximation should give decent results.
-        /\b[A-Z]\w*(?=\s*::\s*\w+\s*\()/, // This will capture the class name before destructors like:
+        /\b[A-Z]\w*(?=\s*::\s*\w+\s*\()/,
+        // This will capture the class name before destructors like:
         //   Foo::~Foo() {}
-        /\b[A-Z_]\w*(?=\s*::\s*~\w+\s*\()/i, // This also intends to capture the class name of method implementations but here the class has template
+        /\b[A-Z_]\w*(?=\s*::\s*~\w+\s*\()/i,
+        // This also intends to capture the class name of method implementations but here the class has template
         // parameters, so it can't be a namespace (until C++ adds generic namespaces).
         /\b\w+(?=\s*<(?:[^<>]|<(?:[^<>]|<[^<>]*>)*>)*>\s*::\s*\w+\s*\()/
       ],
@@ -27804,9 +32182,11 @@ function cpp(Prism) {
         // https://en.cppreference.com/w/cpp/language/modules
         pattern: RegExp(
           /(\b(?:import|module)\s+)/.source +
-            '(?:' + // header-name
+            '(?:' +
+            // header-name
             /"(?:\\(?:\r\n|[\s\S])|[^"\\\r\n])*"|<[^<>\r\n]*>/.source +
-            '|' + // module name or partition or both
+            '|' +
+            // module name or partition or both
             /<mod-name>(?:\s*:\s*<mod-name>)?|:\s*<mod-name>/.source.replace(
               /<mod-name>/g,
               function () {
@@ -27878,17 +32258,24 @@ function cpp(Prism) {
 /*!************************************************!*\
   !*** ./node_modules/refractor/lang/crystal.js ***!
   \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return crystal; });
+/* harmony import */ var _ruby_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ruby.js */ "./node_modules/refractor/lang/ruby.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorRuby = __webpack_require__(/*! ./ruby.js */ "./node_modules/refractor/lang/ruby.js")
-module.exports = crystal
 crystal.displayName = 'crystal'
 crystal.aliases = []
+
+/** @param {Refractor} Prism */
 function crystal(Prism) {
-  Prism.register(refractorRuby)
+  Prism.register(_ruby_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   ;(function (Prism) {
     Prism.languages.crystal = Prism.languages.extend('ruby', {
       keyword: [
@@ -27952,16 +32339,24 @@ function crystal(Prism) {
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/csharp.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return csharp; });
+/* harmony import */ var _clike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clike.js */ "./node_modules/refractor/lang/clike.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = csharp
 csharp.displayName = 'csharp'
-csharp.aliases = ['dotnet', 'cs']
+csharp.aliases = ['cs', 'dotnet']
+
+/** @param {Refractor} Prism */
 function csharp(Prism) {
+  Prism.register(_clike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   ;(function (Prism) {
     /**
      * Replaces all placeholders "<<n>>" of given pattern with the n-th replacement (zero based).
@@ -27987,6 +32382,7 @@ function csharp(Prism) {
     function re(pattern, replacements, flags) {
       return RegExp(replace(pattern, replacements), flags || '')
     }
+
     /**
      * Creates a nested pattern where all occurrences of the string `<<self>>` are replaced with the pattern itself.
      *
@@ -28001,7 +32397,9 @@ function csharp(Prism) {
         })
       }
       return pattern.replace(/<<self>>/g, '[^\\s\\S]')
-    } // https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/
+    }
+
+    // https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/
     var keywordKinds = {
       // keywords which represent a return or variable type
       type: 'bool byte char decimal double dynamic float int long object sbyte short string uint ulong ushort var void',
@@ -28014,7 +32412,9 @@ function csharp(Prism) {
       // all other keywords
       other:
         'abstract as base break case catch checked const continue default delegate do else event explicit extern finally fixed for foreach goto if implicit in internal is lock namespace new null operator out override params private protected public readonly ref return sealed sizeof stackalloc static switch this throw try typeof unchecked unsafe using virtual volatile while yield'
-    } // keywords
+    }
+
+    // keywords
     function keywordsToPattern(words) {
       return '\\b(?:' + words.trim().replace(/ /g, '|') + ')\\b'
     }
@@ -28045,7 +32445,9 @@ function csharp(Prism) {
         keywordKinds.typeDeclaration +
         ' ' +
         keywordKinds.other
-    ) // types
+    )
+
+    // types
     var generic = nested(/<(?:[^<>;=+\-*/%&|^]|<<self>>)*>/.source, 2) // the idea behind the other forbidden characters is to prevent false positives. Same for tupleElement.
     var nestedRound = nested(/\((?:[^()]|<<self>>)*\)/.source, 2)
     var name = /@?\b[A-Za-z_]\w*\b/.source
@@ -28071,7 +32473,9 @@ function csharp(Prism) {
     var typeInside = {
       keyword: keywords,
       punctuation: /[<>()?,.:[\]]/
-    } // strings & characters
+    }
+
+    // strings & characters
     // https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/lexical-structure#character-literals
     // https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/lexical-structure#string-literals
     var character = /'(?:[^\r\n'\\]|\\.|\\[Uux][\da-fA-F]{1,8})'/.source // simplified pattern
@@ -28293,7 +32697,9 @@ alias: 'class-name'
           }
         }
       }
-    }) // attributes
+    })
+
+    // attributes
     var regularStringOrCharacter = regularString + '|' + character
     var regularStringCharacterOrComment = replace(
       /\/(?![*/])|\/\/[^\r\n]*[\r\n]|\/\*(?:[^*]|\*(?!\/))*\*\/|<<0>>/.source,
@@ -28304,7 +32710,9 @@ alias: 'class-name'
         regularStringCharacterOrComment
       ]),
       2
-    ) // https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/attributes/#attribute-targets
+    )
+
+    // https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/attributes/#attribute-targets
     var attrTarget =
       /\b(?:assembly|event|field|method|module|param|property|return|type)\b/
         .source
@@ -28341,8 +32749,11 @@ alias: 'class-name'
           punctuation: /[:,]/
         }
       }
-    }) // string interpolation
-    var formatString = /:[^}\r\n]+/.source // multi line
+    })
+
+    // string interpolation
+    var formatString = /:[^}\r\n]+/.source
+    // multi line
     var mInterpolationRound = nested(
       replace(/[^"'/()]|<<0>>|\(<<self>>*\)/.source, [
         regularStringCharacterOrComment
@@ -28352,7 +32763,8 @@ alias: 'class-name'
     var mInterpolation = replace(/\{(?!\{)(?:(?![}:])<<0>>)*<<1>>?\}/.source, [
       mInterpolationRound,
       formatString
-    ]) // single line
+    ])
+    // single line
     var sInterpolationRound = nested(
       replace(
         /[^"'/()]|\/(?!\*)|\/\*(?:[^*]|\*(?!\/))*\*\/|<<0>>|\(<<self>>*\)/
@@ -28428,20 +32840,31 @@ alias: 'class-name'
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/cshtml.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return cshtml; });
+/* harmony import */ var _csharp_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./csharp.js */ "./node_modules/refractor/lang/csharp.js");
+/* harmony import */ var _markup_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./markup.js */ "./node_modules/refractor/lang/markup.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorCsharp = __webpack_require__(/*! ./csharp.js */ "./node_modules/refractor/lang/csharp.js")
-module.exports = cshtml
+
 cshtml.displayName = 'cshtml'
 cshtml.aliases = ['razor']
+
+/** @param {Refractor} Prism */
 function cshtml(Prism) {
-  Prism.register(refractorCsharp)
+  Prism.register(_csharp_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+  Prism.register(_markup_js__WEBPACK_IMPORTED_MODULE_1__["default"])
   // Docs:
   // https://docs.microsoft.com/en-us/aspnet/core/razor-pages/?view=aspnetcore-5.0&tabs=visual-studio
   // https://docs.microsoft.com/en-us/aspnet/core/mvc/views/razor?view=aspnetcore-5.0
+
   ;(function (Prism) {
     var commentLike = /\/(?![/*])|\/\/.*[\r\n]|\/\*[^*]*(?:\*(?!\/)[^*]*)*\*\//
       .source
@@ -28449,6 +32872,7 @@ function cshtml(Prism) {
       /@(?!")|"(?:[^\r\n\\"]|\\.)*"|@"(?:[^\\"]|""|\\[\s\S])*"(?!")/.source +
       '|' +
       /'(?:(?:[^\r\n'\\]|\\.|\\[Uux][\da-fA-F]{1,8})'|(?=[^\\](?!')))/.source
+
     /**
      * Creates a nested pattern where all occurrences of the string `<<self>>` are replaced with the pattern itself.
      *
@@ -28468,9 +32892,30 @@ function cshtml(Prism) {
         .replace(/<comment>/g, '(?:' + commentLike + ')')
     }
     var round = nested(/\((?:[^()'"@/]|<str>|<comment>|<self>)*\)/.source, 2)
-    var square = nested(/\[(?:[^\[\]'"@/]|<str>|<comment>|<self>)*\]/.source, 2)
+    var square = nested(/\[(?:[^\[\]'"@/]|<str>|<comment>|<self>)*\]/.source, 1)
     var curly = nested(/\{(?:[^{}'"@/]|<str>|<comment>|<self>)*\}/.source, 2)
-    var angle = nested(/<(?:[^<>'"@/]|<str>|<comment>|<self>)*>/.source, 2) // Note about the above bracket patterns:
+    var angle = nested(/<(?:[^<>'"@/]|<comment>|<self>)*>/.source, 1)
+    var inlineCs =
+      /@/.source +
+      /(?:await\b\s*)?/.source +
+      '(?:' +
+      /(?!await\b)\w+\b/.source +
+      '|' +
+      round +
+      ')' +
+      '(?:' +
+      /[?!]?\.\w+\b/.source +
+      '|' +
+      '(?:' +
+      angle +
+      ')?' +
+      round +
+      '|' +
+      square +
+      ')*' +
+      /(?![?!\.(\[]|<(?!\/))/.source
+
+    // Note about the above bracket patterns:
     // They all ignore HTML expressions that might be in the C# code. This is a problem because HTML (like strings and
     // comments) is parsed differently. This is a huge problem because HTML might contain brackets and quotes which
     // messes up the bracket and string counting implemented by the above patterns.
@@ -28481,9 +32926,21 @@ function cshtml(Prism) {
     //
     // To somewhat alleviate the problem a bit, the patterns for characters (e.g. 'a') is very permissive, it also
     // allows invalid characters to support HTML expressions like this: <p>That's it!</p>.
+
+    var tagAttrInlineCs = /@(?![\w()])/.source + '|' + inlineCs
+    var tagAttrValue =
+      '(?:' +
+      /"[^"@]*"|'[^'@]*'|[^\s'"@>=]+(?=[\s>])/.source +
+      '|' +
+      '["\'][^"\'@]*(?:(?:' +
+      tagAttrInlineCs +
+      ')[^"\'@]*)+["\']' +
+      ')'
     var tagAttrs =
-      /(?:\s(?:\s*[^\s>\/=]+(?:\s*=\s*(?:"[^"]*"|'[^']*'|[^\s'">=]+(?=[\s>]))|(?=[\s/>])))+)?/
-        .source
+      /(?:\s(?:\s*[^\s>\/=]+(?:\s*=\s*<tagAttrValue>|(?=[\s/>])))+)?/.source.replace(
+        /<tagAttrValue>/,
+        tagAttrValue
+      )
     var tagContent = /(?!\d)[^\s>\/=$<%]+/.source + tagAttrs + /\s*\/?>/.source
     var tagRegion =
       /\B@?/.source +
@@ -28493,11 +32950,13 @@ function cshtml(Prism) {
       /\s*>/.source +
       '(?:' +
       (/[^<]/.source +
-        '|' + // all tags that are not the start tag
+        '|' +
+        // all tags that are not the start tag
         // eslint-disable-next-line regexp/strict
         /<\/?(?!\1\b)/.source +
         tagContent +
-        '|' + // nested start tag
+        '|' +
+        // nested start tag
         nested(
           // eslint-disable-next-line regexp/strict
           /<\1/.source +
@@ -28505,22 +32964,27 @@ function cshtml(Prism) {
             /\s*>/.source +
             '(?:' +
             (/[^<]/.source +
-              '|' + // all tags that are not the start tag
+              '|' +
+              // all tags that are not the start tag
               // eslint-disable-next-line regexp/strict
               /<\/?(?!\1\b)/.source +
               tagContent +
               '|' +
               '<self>') +
-            ')*' + // eslint-disable-next-line regexp/strict
+            ')*' +
+            // eslint-disable-next-line regexp/strict
             /<\/\1\s*>/.source,
           2
         )) +
-      ')*' + // eslint-disable-next-line regexp/strict
+      ')*' +
+      // eslint-disable-next-line regexp/strict
       /<\/\1\s*>/.source +
       '|' +
       /</.source +
       tagContent +
-      ')' // Now for the actual language definition(s):
+      ')'
+
+    // Now for the actual language definition(s):
     //
     // Razor as a language has 2 parts:
     //  1) CSHTML: A markup-like language that has been extended with inline C# code expressions and blocks.
@@ -28528,6 +32992,7 @@ function cshtml(Prism) {
     //
     // In the below code, both CSHTML and C#+HTML will be create as separate language definitions that reference each
     // other. However, only CSHTML will be exported via `Prism.languages`.
+
     Prism.languages.cshtml = Prism.languages.extend('markup', {})
     var csharpWithHtml = Prism.languages.insertBefore(
       'csharp',
@@ -28548,6 +33013,28 @@ function cshtml(Prism) {
       alias: 'language-csharp',
       inside: csharpWithHtml
     }
+    var inlineValue = {
+      pattern: RegExp(/(^|[^@])/.source + inlineCs),
+      lookbehind: true,
+      greedy: true,
+      alias: 'variable',
+      inside: {
+        keyword: /^@/,
+        csharp: cs
+      }
+    }
+    Prism.languages.cshtml.tag.pattern = RegExp(/<\/?/.source + tagContent)
+    Prism.languages.cshtml.tag.inside['attr-value'].pattern = RegExp(
+      /=\s*/.source + tagAttrValue
+    )
+    Prism.languages.insertBefore(
+      'inside',
+      'punctuation',
+      {
+        value: inlineValue
+      },
+      Prism.languages.cshtml.tag.inside['attr-value']
+    )
     Prism.languages.insertBefore('cshtml', 'prolog', {
       'razor-comment': {
         pattern: /@\*[\s\S]*?\*@/,
@@ -28560,17 +33047,21 @@ function cshtml(Prism) {
             '(?:' +
             [
               // @{ ... }
-              curly, // @code{ ... }
-              /(?:code|functions)\s*/.source + curly, // @for (...) { ... }
+              curly,
+              // @code{ ... }
+              /(?:code|functions)\s*/.source + curly,
+              // @for (...) { ... }
               /(?:for|foreach|lock|switch|using|while)\s*/.source +
                 round +
                 /\s*/.source +
-                curly, // @do { ... } while (...);
+                curly,
+              // @do { ... } while (...);
               /do\s*/.source +
                 curly +
                 /\s*while\s*/.source +
                 round +
-                /(?:\s*;)?/.source, // @try { ... } catch (...) { ... } finally { ... }
+                /(?:\s*;)?/.source,
+              // @try { ... } catch (...) { ... } finally { ... }
               /try\s*/.source +
                 curly +
                 /\s*catch\s*/.source +
@@ -28578,7 +33069,8 @@ function cshtml(Prism) {
                 /\s*/.source +
                 curly +
                 /\s*finally\s*/.source +
-                curly, // @if (...) {...} else if (...) {...} else {...}
+                curly,
+              // @if (...) {...} else if (...) {...} else {...}
               /if\s*/.source +
                 round +
                 /\s*/.source +
@@ -28591,7 +33083,9 @@ function cshtml(Prism) {
                 ')?' +
                 /\s*/.source +
                 curly +
-                ')*'
+                ')*',
+              // @helper Ident(params) { ... }
+              /helper\s+\w+\s*/.source + round + /\s*/.source + curly
             ].join('|') +
             ')'
         ),
@@ -28612,34 +33106,7 @@ function cshtml(Prism) {
           csharp: cs
         }
       },
-      value: {
-        pattern: RegExp(
-          /(^|[^@])@/.source +
-            /(?:await\b\s*)?/.source +
-            '(?:' +
-            /\w+\b/.source +
-            '|' +
-            round +
-            ')' +
-            '(?:' +
-            /[?!]?\.\w+\b/.source +
-            '|' +
-            round +
-            '|' +
-            square +
-            '|' +
-            angle +
-            round +
-            ')*'
-        ),
-        lookbehind: true,
-        greedy: true,
-        alias: 'variable',
-        inside: {
-          keyword: /^@/,
-          csharp: cs
-        }
-      },
+      value: inlineValue,
       'delegate-operator': {
         pattern: /(^|[^@])@(?=<)/,
         lookbehind: true,
@@ -28657,15 +33124,20 @@ function cshtml(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/csp.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = csp
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return csp; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 csp.displayName = 'csp'
 csp.aliases = []
+
+/** @param {Refractor} Prism */
 function csp(Prism) {
   /**
    * Original by Scott Helme.
@@ -28677,6 +33149,7 @@ function csp(Prism) {
    *  - https://www.w3.org/TR/CSP2/
    *  - https://www.w3.org/TR/CSP3/
    */
+
   ;(function (Prism) {
     /**
      * @param {string} source
@@ -28752,16 +33225,24 @@ function csp(Prism) {
 /*!***************************************************!*\
   !*** ./node_modules/refractor/lang/css-extras.js ***!
   \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return cssExtras; });
+/* harmony import */ var _css_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css.js */ "./node_modules/refractor/lang/css.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = cssExtras
-cssExtras.displayName = 'cssExtras'
+cssExtras.displayName = 'css-extras'
 cssExtras.aliases = []
+
+/** @param {Refractor} Prism */
 function cssExtras(Prism) {
+  Prism.register(_css_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   ;(function (Prism) {
     var string = /("|')(?:\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/
     var selectorInside
@@ -28823,6 +33304,7 @@ function cssExtras(Prism) {
         // the `tag` token has been existed and removed.
         // because we can't find a perfect tokenize to match it.
         // if you want to add it, please read https://github.com/PrismJS/prism/pull/2373 first.
+
         punctuation: /[(),]/
       })
     }
@@ -28838,7 +33320,8 @@ function cssExtras(Prism) {
     var unit = {
       pattern: /(\b\d+)(?:%|[a-z]+(?![\w-]))/,
       lookbehind: true
-    } // 123 -123 .123 -.123 12.3 -12.3
+    }
+    // 123 -123 .123 -.123 12.3 -12.3
     var number = {
       pattern: /(^|[^\w.-])-?(?:\d+(?:\.\d+)?|\.\d+)/,
       lookbehind: true
@@ -28857,7 +33340,7 @@ function cssExtras(Prism) {
       color: [
         {
           pattern:
-            /(^|[^\w-])(?:AliceBlue|AntiqueWhite|Aqua|Aquamarine|Azure|Beige|Bisque|Black|BlanchedAlmond|Blue|BlueViolet|Brown|BurlyWood|CadetBlue|Chartreuse|Chocolate|Coral|CornflowerBlue|Cornsilk|Crimson|Cyan|DarkBlue|DarkCyan|DarkGoldenRod|DarkGr[ae]y|DarkGreen|DarkKhaki|DarkMagenta|DarkOliveGreen|DarkOrange|DarkOrchid|DarkRed|DarkSalmon|DarkSeaGreen|DarkSlateBlue|DarkSlateGr[ae]y|DarkTurquoise|DarkViolet|DeepPink|DeepSkyBlue|DimGr[ae]y|DodgerBlue|FireBrick|FloralWhite|ForestGreen|Fuchsia|Gainsboro|GhostWhite|Gold|GoldenRod|Gr[ae]y|Green|GreenYellow|HoneyDew|HotPink|IndianRed|Indigo|Ivory|Khaki|Lavender|LavenderBlush|LawnGreen|LemonChiffon|LightBlue|LightCoral|LightCyan|LightGoldenRodYellow|LightGr[ae]y|LightGreen|LightPink|LightSalmon|LightSeaGreen|LightSkyBlue|LightSlateGr[ae]y|LightSteelBlue|LightYellow|Lime|LimeGreen|Linen|Magenta|Maroon|MediumAquaMarine|MediumBlue|MediumOrchid|MediumPurple|MediumSeaGreen|MediumSlateBlue|MediumSpringGreen|MediumTurquoise|MediumVioletRed|MidnightBlue|MintCream|MistyRose|Moccasin|NavajoWhite|Navy|OldLace|Olive|OliveDrab|Orange|OrangeRed|Orchid|PaleGoldenRod|PaleGreen|PaleTurquoise|PaleVioletRed|PapayaWhip|PeachPuff|Peru|Pink|Plum|PowderBlue|Purple|Red|RosyBrown|RoyalBlue|SaddleBrown|Salmon|SandyBrown|SeaGreen|SeaShell|Sienna|Silver|SkyBlue|SlateBlue|SlateGr[ae]y|Snow|SpringGreen|SteelBlue|Tan|Teal|Thistle|Tomato|Transparent|Turquoise|Violet|Wheat|White|WhiteSmoke|Yellow|YellowGreen)(?![\w-])/i,
+            /(^|[^\w-])(?:AliceBlue|AntiqueWhite|Aqua|Aquamarine|Azure|Beige|Bisque|Black|BlanchedAlmond|Blue|BlueViolet|Brown|BurlyWood|CadetBlue|Chartreuse|Chocolate|Coral|CornflowerBlue|Cornsilk|Crimson|Cyan|DarkBlue|DarkCyan|DarkGoldenRod|DarkGr[ae]y|DarkGreen|DarkKhaki|DarkMagenta|DarkOliveGreen|DarkOrange|DarkOrchid|DarkRed|DarkSalmon|DarkSeaGreen|DarkSlateBlue|DarkSlateGr[ae]y|DarkTurquoise|DarkViolet|DeepPink|DeepSkyBlue|DimGr[ae]y|DodgerBlue|FireBrick|FloralWhite|ForestGreen|Fuchsia|Gainsboro|GhostWhite|Gold|GoldenRod|Gr[ae]y|Green|GreenYellow|HoneyDew|HotPink|IndianRed|Indigo|Ivory|Khaki|Lavender|LavenderBlush|LawnGreen|LemonChiffon|LightBlue|LightCoral|LightCyan|LightGoldenRodYellow|LightGr[ae]y|LightGreen|LightPink|LightSalmon|LightSeaGreen|LightSkyBlue|LightSlateGr[ae]y|LightSteelBlue|LightYellow|Lime|LimeGreen|Linen|Magenta|Maroon|MediumAquaMarine|MediumBlue|MediumOrchid|MediumPurple|MediumSeaGreen|MediumSlateBlue|MediumSpringGreen|MediumTurquoise|MediumVioletRed|MidnightBlue|MintCream|MistyRose|Moccasin|NavajoWhite|Navy|OldLace|Olive|OliveDrab|Orange|OrangeRed|Orchid|PaleGoldenRod|PaleGreen|PaleTurquoise|PaleVioletRed|PapayaWhip|PeachPuff|Peru|Pink|Plum|PowderBlue|Purple|RebeccaPurple|Red|RosyBrown|RoyalBlue|SaddleBrown|Salmon|SandyBrown|SeaGreen|SeaShell|Sienna|Silver|SkyBlue|SlateBlue|SlateGr[ae]y|Snow|SpringGreen|SteelBlue|Tan|Teal|Thistle|Tomato|Transparent|Turquoise|Violet|Wheat|White|WhiteSmoke|Yellow|YellowGreen)(?![\w-])/i,
           lookbehind: true
         },
         {
@@ -28886,15 +33369,20 @@ function cssExtras(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/css.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = css
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return css; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 css.displayName = 'css'
 css.aliases = []
+
+/** @param {Refractor} Prism */
 function css(Prism) {
   ;(function (Prism) {
     var string =
@@ -28902,7 +33390,14 @@ function css(Prism) {
     Prism.languages.css = {
       comment: /\/\*[\s\S]*?\*\//,
       atrule: {
-        pattern: /@[\w-](?:[^;{\s]|\s+(?![\s{]))*(?:;|(?=\s*\{))/,
+        pattern: RegExp(
+          '@[\\w-](?:' +
+            /[^;{\s"']|\s+(?!\s)/.source +
+            '|' +
+            string.source +
+            ')*?' +
+            /(?:;|(?=\s*\{))/.source
+        ),
         inside: {
           rule: /^@[\w-]+/,
           'selector-function-argument': {
@@ -28914,7 +33409,8 @@ function css(Prism) {
           keyword: {
             pattern: /(^|[^\w-])(?:and|not|only|or)(?![\w-])/,
             lookbehind: true
-          } // See rest below
+          }
+          // See rest below
         }
       },
       url: {
@@ -28977,17 +33473,23 @@ function css(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/csv.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = csv
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return csv; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 csv.displayName = 'csv'
 csv.aliases = []
+
+/** @param {Refractor} Prism */
 function csv(Prism) {
   // https://tools.ietf.org/html/rfc4180
+
   Prism.languages.csv = {
     value: /[^\r\n,"]+|"(?:[^"]|"")*"(?!")/,
     punctuation: /,/
@@ -28997,19 +33499,136 @@ function csv(Prism) {
 
 /***/ }),
 
+/***/ "./node_modules/refractor/lang/cue.js":
+/*!********************************************!*\
+  !*** ./node_modules/refractor/lang/cue.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return cue; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
+cue.displayName = 'cue'
+cue.aliases = []
+
+/** @param {Refractor} Prism */
+function cue(Prism) {
+  ;(function (Prism) {
+    // https://cuelang.org/docs/references/spec/
+
+    // eslint-disable-next-line regexp/strict
+    var stringEscape = /\\(?:(?!\2)|\2(?:[^()\r\n]|\([^()]*\)))/.source
+    // eslint-disable-next-line regexp/strict
+    var stringTypes =
+      /"""(?:[^\\"]|"(?!""\2)|<esc>)*"""/.source +
+      // eslint-disable-next-line regexp/strict
+      '|' +
+      /'''(?:[^\\']|'(?!''\2)|<esc>)*'''/.source +
+      // eslint-disable-next-line regexp/strict
+      '|' +
+      /"(?:[^\\\r\n"]|"(?!\2)|<esc>)*"/.source +
+      // eslint-disable-next-line regexp/strict
+      '|' +
+      /'(?:[^\\\r\n']|'(?!\2)|<esc>)*'/.source
+    var stringLiteral =
+      '(?:' + stringTypes.replace(/<esc>/g, stringEscape) + ')'
+    Prism.languages.cue = {
+      comment: {
+        pattern: /\/\/.*/,
+        greedy: true
+      },
+      'string-literal': {
+        // eslint-disable-next-line regexp/strict
+        pattern: RegExp(
+          /(^|[^#"'\\])(#*)/.source + stringLiteral + /(?!["'])\2/.source
+        ),
+        lookbehind: true,
+        greedy: true,
+        inside: {
+          // I'm using dirty hack here. We have to know the number hashes at the start of the string somehow,
+          // but we can't look back. So instead, we will use a lookahead, go to the end of the string, and
+          // capture the hashes at the end of the string.
+          escape: {
+            pattern:
+              /(?=[\s\S]*["'](#*)$)\\\1(?:U[a-fA-F0-9]{1,8}|u[a-fA-F0-9]{1,4}|x[a-fA-F0-9]{1,2}|\d{2,3}|[^(])/,
+            greedy: true,
+            alias: 'string'
+          },
+          interpolation: {
+            pattern: /(?=[\s\S]*["'](#*)$)\\\1\([^()]*\)/,
+            greedy: true,
+            inside: {
+              punctuation: /^\\#*\(|\)$/,
+              expression: {
+                pattern: /[\s\S]+/,
+                inside: null
+              }
+            }
+          },
+          string: /[\s\S]+/
+        }
+      },
+      keyword: {
+        pattern: /(^|[^\w$])(?:for|if|import|in|let|null|package)(?![\w$])/,
+        lookbehind: true
+      },
+      boolean: {
+        pattern: /(^|[^\w$])(?:false|true)(?![\w$])/,
+        lookbehind: true
+      },
+      builtin: {
+        pattern:
+          /(^|[^\w$])(?:bool|bytes|float|float(?:32|64)|u?int(?:8|16|32|64|128)?|number|rune|string)(?![\w$])/,
+        lookbehind: true
+      },
+      attribute: {
+        pattern: /@[\w$]+(?=\s*\()/,
+        alias: 'function'
+      },
+      function: {
+        pattern: /(^|[^\w$])[a-z_$][\w$]*(?=\s*\()/i,
+        lookbehind: true
+      },
+      number: {
+        pattern:
+          /(^|[^\w$.])(?:0b[01]+(?:_[01]+)*|0o[0-7]+(?:_[0-7]+)*|0[xX][0-9A-Fa-f]+(?:_[0-9A-Fa-f]+)*|(?:\d+(?:_\d+)*(?:\.(?:\d+(?:_\d+)*)?)?|\.\d+(?:_\d+)*)(?:[eE][+-]?\d+(?:_\d+)*)?(?:[KMGTP]i?)?)(?![\w$])/,
+        lookbehind: true
+      },
+      operator: /\.{3}|_\|_|&&?|\|\|?|[=!]~|[<>=!]=?|[+\-*/?]/,
+      punctuation: /[()[\]{},.:]/
+    }
+    Prism.languages.cue[
+      'string-literal'
+    ].inside.interpolation.inside.expression.inside = Prism.languages.cue
+  })(Prism)
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/refractor/lang/cypher.js":
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/cypher.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = cypher
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return cypher; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 cypher.displayName = 'cypher'
 cypher.aliases = []
+
+/** @param {Refractor} Prism */
 function cypher(Prism) {
   Prism.languages.cypher = {
     // https://neo4j.com/docs/cypher-manual/current/syntax/comments/
@@ -29054,16 +33673,24 @@ function cypher(Prism) {
 /*!******************************************!*\
   !*** ./node_modules/refractor/lang/d.js ***!
   \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return d; });
+/* harmony import */ var _clike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clike.js */ "./node_modules/refractor/lang/clike.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = d
 d.displayName = 'd'
 d.aliases = []
+
+/** @param {Refractor} Prism */
 function d(Prism) {
+  Prism.register(_clike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   Prism.languages.d = Prism.languages.extend('clike', {
     comment: [
       {
@@ -29078,8 +33705,10 @@ function d(Prism) {
             [
               // /+ comment +/
               // Allow one level of nesting
-              /\/\+(?:\/\+(?:[^+]|\+(?!\/))*\+\/|(?!\/\+)[\s\S])*?\+\//.source, // // comment
-              /\/\/.*/.source, // /* comment */
+              /\/\+(?:\/\+(?:[^+]|\+(?!\/))*\+\/|(?!\/\+)[\s\S])*?\+\//.source,
+              // // comment
+              /\/\/.*/.source,
+              // /* comment */
               /\/\*[\s\S]*?\*\//.source
             ].join('|') +
             ')'
@@ -29093,13 +33722,17 @@ function d(Prism) {
         pattern: RegExp(
           [
             // r"", x""
-            /\b[rx]"(?:\\[\s\S]|[^\\"])*"[cwd]?/.source, // q"[]", q"()", q"<>", q"{}"
-            /\bq"(?:\[[\s\S]*?\]|\([\s\S]*?\)|<[\s\S]*?>|\{[\s\S]*?\})"/.source, // q"IDENT
+            /\b[rx]"(?:\\[\s\S]|[^\\"])*"[cwd]?/.source,
+            // q"[]", q"()", q"<>", q"{}"
+            /\bq"(?:\[[\s\S]*?\]|\([\s\S]*?\)|<[\s\S]*?>|\{[\s\S]*?\})"/.source,
+            // q"IDENT
             // ...
             // IDENT"
-            /\bq"((?!\d)\w+)$[\s\S]*?^\1"/.source, // q"//", q"||", etc.
+            /\bq"((?!\d)\w+)$[\s\S]*?^\1"/.source,
+            // q"//", q"||", etc.
             // eslint-disable-next-line regexp/strict
-            /\bq"(.)[\s\S]*?\2"/.source, // eslint-disable-next-line regexp/strict
+            /\bq"(.)[\s\S]*?\2"/.source,
+            // eslint-disable-next-line regexp/strict
             /(["`])(?:\\[\s\S]|(?!\3)[^\\])*\3[cwd]?/.source
           ].join('|'),
           'm'
@@ -29153,23 +33786,35 @@ function d(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/dart.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return dart; });
+/* harmony import */ var _clike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clike.js */ "./node_modules/refractor/lang/clike.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = dart
 dart.displayName = 'dart'
 dart.aliases = []
+
+/** @param {Refractor} Prism */
 function dart(Prism) {
+  Prism.register(_clike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   ;(function (Prism) {
     var keywords = [
       /\b(?:async|sync|yield)\*/,
       /\b(?:abstract|assert|async|await|break|case|catch|class|const|continue|covariant|default|deferred|do|dynamic|else|enum|export|extends|extension|external|factory|final|finally|for|get|hide|if|implements|import|in|interface|library|mixin|new|null|on|operator|part|rethrow|return|set|show|static|super|switch|sync|this|throw|try|typedef|var|void|while|with|yield)\b/
-    ] // Handles named imports, such as http.Client
+    ]
+
+    // Handles named imports, such as http.Client
     var packagePrefix = /(^|[^\w.])(?:[a-z]\w*\s*\.\s*)*(?:[A-Z]\w*\s*\.\s*)*/
-      .source // based on the dart naming conventions
+      .source
+
+    // based on the dart naming conventions
     var className = {
       pattern: RegExp(packagePrefix + /[A-Z](?:[\d_A-Z]*[a-z]\w*)?\b/.source),
       lookbehind: true,
@@ -29250,15 +33895,20 @@ function dart(Prism) {
 /*!**************************************************!*\
   !*** ./node_modules/refractor/lang/dataweave.js ***!
   \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = dataweave
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return dataweave; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 dataweave.displayName = 'dataweave'
 dataweave.aliases = []
+
+/** @param {Refractor} Prism */
 function dataweave(Prism) {
   ;(function (Prism) {
     Prism.languages.dataweave = {
@@ -29311,15 +33961,20 @@ function dataweave(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/dax.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = dax
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return dax; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 dax.displayName = 'dax'
 dax.aliases = []
+
+/** @param {Refractor} Prism */
 function dax(Prism) {
   Prism.languages.dax = {
     comment: {
@@ -29360,18 +34015,24 @@ function dax(Prism) {
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/dhall.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = dhall
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return dhall; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 dhall.displayName = 'dhall'
 dhall.aliases = []
+
+/** @param {Refractor} Prism */
 function dhall(Prism) {
   // ABNF grammar:
   // https://github.com/dhall-lang/dhall-lang/blob/master/standard/dhall.abnf
+
   Prism.languages.dhall = {
     // Multi-line comments can be nested. E.g. {- foo {- bar -} -}
     // The multi-line pattern is essentially this:
@@ -29449,25 +34110,35 @@ function dhall(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/diff.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = diff
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return diff; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 diff.displayName = 'diff'
 diff.aliases = []
+
+/** @param {Refractor} Prism */
 function diff(Prism) {
   ;(function (Prism) {
     Prism.languages.diff = {
       coord: [
         // Match all kinds of coord lines (prefixed by "+++", "---" or "***").
-        /^(?:\*{3}|-{3}|\+{3}).*$/m, // Match "@@ ... @@" coord lines in unified diff.
-        /^@@.*@@$/m, // Match coord lines in normal diff (starts with a number).
+        /^(?:\*{3}|-{3}|\+{3}).*$/m,
+        // Match "@@ ... @@" coord lines in unified diff.
+        /^@@.*@@$/m,
+        // Match coord lines in normal diff (starts with a number).
         /^\d.*$/m
-      ] // deleted, inserted, unchanged, diff
+      ]
+
+      // deleted, inserted, unchanged, diff
     }
+
     /**
      * A map from the name of a block to its line prefix.
      *
@@ -29480,7 +34151,9 @@ function diff(Prism) {
       'inserted-arrow': '>',
       unchanged: ' ',
       diff: '!'
-    } // add a token for each prefix
+    }
+
+    // add a token for each prefix
     Object.keys(PREFIXES).forEach(function (name) {
       var prefix = PREFIXES[name]
       var alias = []
@@ -29508,7 +34181,9 @@ function diff(Prism) {
           }
         }
       }
-    }) // make prefixes available to Diff plugin
+    })
+
+    // make prefixes available to Diff plugin
     Object.defineProperty(Prism.languages.diff, 'PREFIXES', {
       value: PREFIXES
     })
@@ -29522,19 +34197,27 @@ function diff(Prism) {
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/django.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return django; });
+/* harmony import */ var _markup_templating_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./markup-templating.js */ "./node_modules/refractor/lang/markup-templating.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorMarkupTemplating = __webpack_require__(/*! ./markup-templating.js */ "./node_modules/refractor/lang/markup-templating.js")
-module.exports = django
 django.displayName = 'django'
 django.aliases = ['jinja2']
+
+/** @param {Refractor} Prism */
 function django(Prism) {
-  Prism.register(refractorMarkupTemplating)
+  Prism.register(_markup_templating_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   // Django/Jinja2 syntax definition for Prism.js <http://prismjs.com> syntax highlighter.
   // Mostly it works OK but can paint code incorrectly on complex html/template tag combinations.
+
   ;(function (Prism) {
     Prism.languages.django = {
       comment: /^\{#[\s\S]*?#\}$/,
@@ -29577,7 +34260,9 @@ function django(Prism) {
     })
     Prism.hooks.add('after-tokenize', function (env) {
       markupTemplating.tokenizePlaceholders(env, 'django')
-    }) // Add an Jinja2 alias
+    })
+
+    // Add an Jinja2 alias
     Prism.languages.jinja2 = Prism.languages.django
     Prism.hooks.add('before-tokenize', function (env) {
       markupTemplating.buildPlaceholders(env, 'jinja2', pattern)
@@ -29595,15 +34280,20 @@ function django(Prism) {
 /*!******************************************************!*\
   !*** ./node_modules/refractor/lang/dns-zone-file.js ***!
   \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return dnsZoneFile; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
+dnsZoneFile.displayName = 'dns-zone-file'
+dnsZoneFile.aliases = ['dns-zone']
 
-
-module.exports = dnsZoneFile
-dnsZoneFile.displayName = 'dnsZoneFile'
-dnsZoneFile.aliases = []
+/** @param {Refractor} Prism */
 function dnsZoneFile(Prism) {
   Prism.languages['dns-zone-file'] = {
     comment: /;.*/,
@@ -29647,21 +34337,28 @@ function dnsZoneFile(Prism) {
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/docker.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = docker
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return docker; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 docker.displayName = 'docker'
 docker.aliases = ['dockerfile']
+
+/** @param {Refractor} Prism */
 function docker(Prism) {
   ;(function (Prism) {
     // Many of the following regexes will contain negated lookaheads like `[ \t]+(?![ \t])`. This is a trick to ensure
     // that quantifiers behave *atomically*. Atomic quantifiers are necessary to prevent exponential backtracking.
+
     var spaceAfterBackSlash =
-      /\\[\r\n](?:\s|\\[\r\n]|#.*(?!.))*(?![\s#]|\\[\r\n])/.source // At least one space, comment, or line break
+      /\\[\r\n](?:\s|\\[\r\n]|#.*(?!.))*(?![\s#]|\\[\r\n])/.source
+    // At least one space, comment, or line break
     var space = /(?:[ \t]+(?![ \t])(?:<SP_BS>)?|<SP_BS>)/.source.replace(
       /<SP_BS>/g,
       function () {
@@ -29686,6 +34383,7 @@ function docker(Prism) {
       lookbehind: true,
       greedy: true
     }
+
     /**
      * @param {string} source
      * @param {string} flags
@@ -29782,25 +34480,34 @@ function docker(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/dot.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = dot
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return dot; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 dot.displayName = 'dot'
 dot.aliases = ['gv']
+
+/** @param {Refractor} Prism */
 function dot(Prism) {
   // https://www.graphviz.org/doc/info/lang.html
+
   ;(function (Prism) {
     var ID =
       '(?:' +
       [
         // an identifier
-        /[a-zA-Z_\x80-\uFFFF][\w\x80-\uFFFF]*/.source, // a number
-        /-?(?:\.\d+|\d+(?:\.\d*)?)/.source, // a double-quoted string
-        /"[^"\\]*(?:\\[\s\S][^"\\]*)*"/.source, // HTML-like string
+        /[a-zA-Z_\x80-\uFFFF][\w\x80-\uFFFF]*/.source,
+        // a number
+        /-?(?:\.\d+|\d+(?:\.\d*)?)/.source,
+        // a double-quoted string
+        /"[^"\\]*(?:\\[\s\S][^"\\]*)*"/.source,
+        // HTML-like string
         /<(?:[^<>]|(?!<!--)<(?:[^<>"']|"[^"]*"|'[^']*')+>|<!--(?:[^-]|-(?!->))*-->)*>/
           .source
       ].join('|') +
@@ -29813,6 +34520,7 @@ function dot(Prism) {
         inside: Prism.languages.markup
       }
     }
+
     /**
      * @param {string} source
      * @param {string} flags
@@ -29879,15 +34587,20 @@ function dot(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/ebnf.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = ebnf
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ebnf; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 ebnf.displayName = 'ebnf'
 ebnf.aliases = []
+
+/** @param {Refractor} Prism */
 function ebnf(Prism) {
   Prism.languages.ebnf = {
     comment: /\(\*[\s\S]*?\*\)/,
@@ -29918,15 +34631,20 @@ function ebnf(Prism) {
 /*!*****************************************************!*\
   !*** ./node_modules/refractor/lang/editorconfig.js ***!
   \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = editorconfig
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return editorconfig; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 editorconfig.displayName = 'editorconfig'
 editorconfig.aliases = []
+
+/** @param {Refractor} Prism */
 function editorconfig(Prism) {
   Prism.languages.editorconfig = {
     // https://editorconfig-specification.readthedocs.io
@@ -29964,15 +34682,20 @@ function editorconfig(Prism) {
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/eiffel.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = eiffel
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return eiffel; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 eiffel.displayName = 'eiffel'
 eiffel.aliases = []
+
+/** @param {Refractor} Prism */
 function eiffel(Prism) {
   Prism.languages.eiffel = {
     comment: /--.*/,
@@ -29981,11 +34704,13 @@ function eiffel(Prism) {
       {
         pattern: /"([^[]*)\[[\s\S]*?\]\1"/,
         greedy: true
-      }, // Non-aligned-verbatim-strings
+      },
+      // Non-aligned-verbatim-strings
       {
         pattern: /"([^{]*)\{[\s\S]*?\}\1"/,
         greedy: true
-      }, // Single-line string
+      },
+      // Single-line string
       {
         pattern: /"(?:%(?:(?!\n)\s)*\n\s*%|%\S|[^%"\r\n])*"/,
         greedy: true
@@ -30000,7 +34725,8 @@ function eiffel(Prism) {
     'class-name': /\b[A-Z][\dA-Z_]*\b/,
     number: [
       // hexa | octal | bin
-      /\b0[xcb][\da-f](?:_*[\da-f])*\b/i, // Decimal
+      /\b0[xcb][\da-f](?:_*[\da-f])*\b/i,
+      // Decimal
       /(?:\b\d(?:_*\d)*)?\.(?:(?:\d(?:_*\d)*)?e[+-]?)?\d(?:_*\d)*\b|\b\d(?:_*\d)*\b\.?/i
     ],
     punctuation: /:=|<<|>>|\(\||\|\)|->|\.(?=\w)|[{}[\];(),:?]/,
@@ -30015,17 +34741,27 @@ function eiffel(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/ejs.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ejs; });
+/* harmony import */ var _javascript_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./javascript.js */ "./node_modules/refractor/lang/javascript.js");
+/* harmony import */ var _markup_templating_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./markup-templating.js */ "./node_modules/refractor/lang/markup-templating.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorMarkupTemplating = __webpack_require__(/*! ./markup-templating.js */ "./node_modules/refractor/lang/markup-templating.js")
-module.exports = ejs
+
 ejs.displayName = 'ejs'
 ejs.aliases = ['eta']
+
+/** @param {Refractor} Prism */
 function ejs(Prism) {
-  Prism.register(refractorMarkupTemplating)
+  Prism.register(_javascript_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+  Prism.register(_markup_templating_js__WEBPACK_IMPORTED_MODULE_1__["default"])
   ;(function (Prism) {
     Prism.languages.ejs = {
       delimiter: {
@@ -30060,15 +34796,20 @@ function ejs(Prism) {
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/elixir.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = elixir
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return elixir; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 elixir.displayName = 'elixir'
 elixir.aliases = []
+
+/** @param {Refractor} Prism */
 function elixir(Prism) {
   Prism.languages.elixir = {
     doc: {
@@ -30180,15 +34921,20 @@ function elixir(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/elm.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = elm
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return elm; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 elm.displayName = 'elm'
 elm.aliases = []
+
+/** @param {Refractor} Prism */
 function elm(Prism) {
   Prism.languages.elm = {
     comment: /--.*|\{-[\s\S]*?-\}/,
@@ -30248,19 +34994,27 @@ function elm(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/erb.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return erb; });
+/* harmony import */ var _markup_templating_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./markup-templating.js */ "./node_modules/refractor/lang/markup-templating.js");
+/* harmony import */ var _ruby_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ruby.js */ "./node_modules/refractor/lang/ruby.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorRuby = __webpack_require__(/*! ./ruby.js */ "./node_modules/refractor/lang/ruby.js")
-var refractorMarkupTemplating = __webpack_require__(/*! ./markup-templating.js */ "./node_modules/refractor/lang/markup-templating.js")
-module.exports = erb
+
 erb.displayName = 'erb'
 erb.aliases = []
+
+/** @param {Refractor} Prism */
 function erb(Prism) {
-  Prism.register(refractorRuby)
-  Prism.register(refractorMarkupTemplating)
+  Prism.register(_markup_templating_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+  Prism.register(_ruby_js__WEBPACK_IMPORTED_MODULE_1__["default"])
   ;(function (Prism) {
     Prism.languages.erb = {
       delimiter: {
@@ -30296,15 +35050,20 @@ function erb(Prism) {
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/erlang.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = erlang
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return erlang; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 erlang.displayName = 'erlang'
 erlang.aliases = []
+
+/** @param {Refractor} Prism */
 function erlang(Prism) {
   Prism.languages.erlang = {
     comment: /%.+/,
@@ -30321,7 +35080,7 @@ function erlang(Prism) {
       alias: 'atom'
     },
     boolean: /\b(?:false|true)\b/,
-    keyword: /\b(?:after|case|catch|end|fun|if|of|receive|try|when)\b/,
+    keyword: /\b(?:after|begin|case|catch|end|fun|if|of|receive|try|when)\b/,
     number: [
       /\$\\?./,
       /\b\d+#[a-z0-9]+/i,
@@ -30358,19 +35117,27 @@ function erlang(Prism) {
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/etlua.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return etlua; });
+/* harmony import */ var _lua_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lua.js */ "./node_modules/refractor/lang/lua.js");
+/* harmony import */ var _markup_templating_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./markup-templating.js */ "./node_modules/refractor/lang/markup-templating.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorLua = __webpack_require__(/*! ./lua.js */ "./node_modules/refractor/lang/lua.js")
-var refractorMarkupTemplating = __webpack_require__(/*! ./markup-templating.js */ "./node_modules/refractor/lang/markup-templating.js")
-module.exports = etlua
+
 etlua.displayName = 'etlua'
 etlua.aliases = []
+
+/** @param {Refractor} Prism */
 function etlua(Prism) {
-  Prism.register(refractorLua)
-  Prism.register(refractorMarkupTemplating)
+  Prism.register(_lua_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+  Prism.register(_markup_templating_js__WEBPACK_IMPORTED_MODULE_1__["default"])
   ;(function (Prism) {
     Prism.languages.etlua = {
       delimiter: {
@@ -30403,15 +35170,20 @@ function etlua(Prism) {
 /*!******************************************************!*\
   !*** ./node_modules/refractor/lang/excel-formula.js ***!
   \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return excelFormula; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
+excelFormula.displayName = 'excel-formula'
+excelFormula.aliases = ['xls', 'xlsx']
 
-
-module.exports = excelFormula
-excelFormula.displayName = 'excelFormula'
-excelFormula.aliases = []
+/** @param {Refractor} Prism */
 function excelFormula(Prism) {
   Prism.languages['excel-formula'] = {
     comment: {
@@ -30425,12 +35197,14 @@ function excelFormula(Prism) {
     },
     reference: {
       // https://www.ablebits.com/office-addins-blog/2015/12/08/excel-reference-another-sheet-workbook/
+
       // Sales!B2
       // 'Winter sales'!B2
       // [Sales.xlsx]Jan!B2:B5
       // D:\Reports\[Sales.xlsx]Jan!B2:B5
       // '[Sales.xlsx]Jan sales'!B2:B5
       // 'D:\Reports\[Sales.xlsx]Jan sales'!B2:B5
+
       pattern:
         /(?:'[^']*'|(?:[^\s()[\]{}<>*?"';,$&]*\[[^^\s()[\]{}<>*?"']+\])?\w+)!/,
       greedy: true,
@@ -30453,12 +35227,12 @@ function excelFormula(Prism) {
     },
     'function-name': {
       pattern: /\b[A-Z]\w*(?=\()/i,
-      alias: 'keyword'
+      alias: 'builtin'
     },
     range: {
       pattern:
         /\$?\b(?:[A-Z]+\$?\d+:\$?[A-Z]+\$?\d+|[A-Z]+:\$?[A-Z]+|\d+:\$?\d+)\b/i,
-      alias: 'property',
+      alias: 'selector',
       inside: {
         operator: /:/,
         cell: /\$?[A-Z]+\$?\d+/i,
@@ -30470,7 +35244,7 @@ function excelFormula(Prism) {
       // Excel is case insensitive, so the string "foo1" could be either a variable or a cell.
       // To combat this, we match cells case insensitive, if the contain at least one "$", and case sensitive otherwise.
       pattern: /\b[A-Z]+\d+\b|\$[A-Za-z]+\$?\d+\b|\b[A-Za-z]+\$\d+\b/,
-      alias: 'property'
+      alias: 'selector'
     },
     number: /(?:\b\d+(?:\.\d+)?|\B\.\d+)(?:e[+-]?\d+)?\b/i,
     boolean: /\b(?:FALSE|TRUE)\b/i,
@@ -30488,15 +35262,20 @@ function excelFormula(Prism) {
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/factor.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = factor
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return factor; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 factor.displayName = 'factor'
 factor.aliases = []
+
+/** @param {Refractor} Prism */
 function factor(Prism) {
   ;(function (Prism) {
     var comment_inside = {
@@ -30513,8 +35292,7 @@ function factor(Prism) {
           pattern: /(^|\s)(?:! .*|!$)/,
           lookbehind: true,
           inside: comment_inside
-        },
-        /* from basis/multiline: */
+        } /* from basis/multiline: */,
         {
           // /* comment */, /* comment*/
           pattern: /(^|\s)\/\*\s[\s\S]*?\*\/(?=\s|$)/,
@@ -30669,6 +35447,7 @@ https://docs.factorcode.org/content/article-effects.html
 these are pretty complicated to highlight properly without a real parser, and therefore out of scope
 the old pattern, which may be later useful, was: (^|\s)(?:call|execute|eval)?\((?:\s+[^"\r\n\t ]\S*)*?\s+--(?:\s+[^"\n\t ]\S*)*?\s+\)(?=\s|$)
 */
+
       // current solution is not great
       'stack-effect-delimiter': [
         {
@@ -30928,7 +35707,8 @@ this is fine for a regex-only implementation.
         '>>>>>>>',
         'call-next-method',
         '<<',
-        'foldable', // literals
+        'foldable',
+        // literals
         '$',
         '$[',
         '${'
@@ -31192,7 +35972,8 @@ this is fine for a regex-only implementation.
         'real?',
         'rational?',
         'numerator'
-      ] // that's all for now
+      ]
+      // that's all for now
     }
     Object.keys(builtins).forEach(function (k) {
       factor[k].pattern = arrToWordsRegExp(builtins[k])
@@ -31255,7 +36036,8 @@ this is fine for a regex-only implementation.
       'while*',
       'dip',
       'composed',
-      'bi-curry@', // sequences
+      'bi-curry@',
+      // sequences
       'find-last-from',
       'trim-head-slice',
       'map-as',
@@ -31336,7 +36118,8 @@ this is fine for a regex-only implementation.
       'trim',
       'trim-head',
       'cartesian-find',
-      'map-index', // math
+      'map-index',
+      // math
       'if-zero',
       'each-integer',
       'unless-zero',
@@ -31347,13 +36130,15 @@ this is fine for a regex-only implementation.
       'times',
       '(each-integer)',
       'find-integer',
-      'all-integers?', // math.combinators
+      'all-integers?',
+      // math.combinators
       'unless-negative',
       'if-positive',
       'when-positive',
       'when-negative',
       'unless-positive',
-      'if-negative', // combinators
+      'if-negative',
+      // combinators
       'case',
       '2cleave',
       'cond>quot',
@@ -31367,7 +36152,8 @@ this is fine for a regex-only implementation.
       'call-effect',
       'recursive-hashcode',
       'spread',
-      'deep-spread>quot', // combinators.short-circuit
+      'deep-spread>quot',
+      // combinators.short-circuit
       '2||',
       '0||',
       'n||',
@@ -31377,7 +36163,8 @@ this is fine for a regex-only implementation.
       '1||',
       '1&&',
       'n&&',
-      '3&&', // combinators.smart
+      '3&&',
+      // combinators.smart
       'smart-unless*',
       'keep-inputs',
       'reduce-outputs',
@@ -31411,7 +36198,8 @@ this is fine for a regex-only implementation.
       'smart-if*',
       'sum-outputs',
       'input<sequence-unsafe',
-      'output>sequence' // tafn
+      'output>sequence'
+      // tafn
     ]
     factor.combinators.pattern = arrToWordsRegExp(combinators)
     Prism.languages.factor = factor
@@ -31425,15 +36213,20 @@ this is fine for a regex-only implementation.
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/false.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = $false
-$false.displayName = '$false'
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return $false; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
+$false.displayName = 'false'
 $false.aliases = []
+
+/** @param {Refractor} Prism */
 function $false(Prism) {
   ;(function (Prism) {
     /**
@@ -31476,16 +36269,24 @@ function $false(Prism) {
 /*!*****************************************************************!*\
   !*** ./node_modules/refractor/lang/firestore-security-rules.js ***!
   \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return firestoreSecurityRules; });
+/* harmony import */ var _clike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clike.js */ "./node_modules/refractor/lang/clike.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = firestoreSecurityRules
-firestoreSecurityRules.displayName = 'firestoreSecurityRules'
+firestoreSecurityRules.displayName = 'firestore-security-rules'
 firestoreSecurityRules.aliases = []
+
+/** @param {Refractor} Prism */
 function firestoreSecurityRules(Prism) {
+  Prism.register(_clike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   Prism.languages['firestore-security-rules'] = Prism.languages.extend(
     'clike',
     {
@@ -31533,24 +36334,32 @@ function firestoreSecurityRules(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/flow.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return flow; });
+/* harmony import */ var _javascript_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./javascript.js */ "./node_modules/refractor/lang/javascript.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = flow
 flow.displayName = 'flow'
 flow.aliases = []
+
+/** @param {Refractor} Prism */
 function flow(Prism) {
+  Prism.register(_javascript_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   ;(function (Prism) {
     Prism.languages.flow = Prism.languages.extend('javascript', {})
     Prism.languages.insertBefore('flow', 'keyword', {
       type: [
         {
           pattern:
-            /\b(?:[Bb]oolean|Function|[Nn]umber|[Ss]tring|any|mixed|null|void)\b/,
-          alias: 'tag'
+            /\b(?:[Bb]oolean|Function|[Nn]umber|[Ss]tring|[Ss]ymbol|any|mixed|null|void)\b/,
+          alias: 'class-name'
         }
       ]
     })
@@ -31587,15 +36396,20 @@ function flow(Prism) {
 /*!************************************************!*\
   !*** ./node_modules/refractor/lang/fortran.js ***!
   \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = fortran
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return fortran; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 fortran.displayName = 'fortran'
 fortran.aliases = []
+
+/** @param {Refractor} Prism */
 function fortran(Prism) {
   Prism.languages.fortran = {
     'quoted-number': {
@@ -31620,9 +36434,12 @@ function fortran(Prism) {
     number: /(?:\b\d+(?:\.\d*)?|\B\.\d+)(?:[ED][+-]?\d+)?(?:_\w+)?/i,
     keyword: [
       // Types
-      /\b(?:CHARACTER|COMPLEX|DOUBLE ?PRECISION|INTEGER|LOGICAL|REAL)\b/i, // END statements
-      /\b(?:END ?)?(?:BLOCK ?DATA|DO|FILE|FORALL|FUNCTION|IF|INTERFACE|MODULE(?! PROCEDURE)|PROGRAM|SELECT|SUBROUTINE|TYPE|WHERE)\b/i, // Statements
-      /\b(?:ALLOCATABLE|ALLOCATE|BACKSPACE|CALL|CASE|CLOSE|COMMON|CONTAINS|CONTINUE|CYCLE|DATA|DEALLOCATE|DIMENSION|DO|END|EQUIVALENCE|EXIT|EXTERNAL|FORMAT|GO ?TO|IMPLICIT(?: NONE)?|INQUIRE|INTENT|INTRINSIC|MODULE PROCEDURE|NAMELIST|NULLIFY|OPEN|OPTIONAL|PARAMETER|POINTER|PRINT|PRIVATE|PUBLIC|READ|RETURN|REWIND|SAVE|SELECT|STOP|TARGET|WHILE|WRITE)\b/i, // Others
+      /\b(?:CHARACTER|COMPLEX|DOUBLE ?PRECISION|INTEGER|LOGICAL|REAL)\b/i,
+      // END statements
+      /\b(?:END ?)?(?:BLOCK ?DATA|DO|FILE|FORALL|FUNCTION|IF|INTERFACE|MODULE(?! PROCEDURE)|PROGRAM|SELECT|SUBROUTINE|TYPE|WHERE)\b/i,
+      // Statements
+      /\b(?:ALLOCATABLE|ALLOCATE|BACKSPACE|CALL|CASE|CLOSE|COMMON|CONTAINS|CONTINUE|CYCLE|DATA|DEALLOCATE|DIMENSION|DO|END|EQUIVALENCE|EXIT|EXTERNAL|FORMAT|GO ?TO|IMPLICIT(?: NONE)?|INQUIRE|INTENT|INTRINSIC|MODULE PROCEDURE|NAMELIST|NULLIFY|OPEN|OPTIONAL|PARAMETER|POINTER|PRINT|PRIVATE|PUBLIC|READ|RETURN|REWIND|SAVE|SELECT|STOP|TARGET|WHILE|WRITE)\b/i,
+      // Others
       /\b(?:ASSIGNMENT|DEFAULT|ELEMENTAL|ELSE|ELSEIF|ELSEWHERE|ENTRY|IN|INCLUDE|INOUT|KIND|NULL|ONLY|OPERATOR|OUT|PURE|RECURSIVE|RESULT|SEQUENCE|STAT|THEN|USE)\b/i
     ],
     operator: [
@@ -31644,16 +36461,24 @@ function fortran(Prism) {
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/fsharp.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return fsharp; });
+/* harmony import */ var _clike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clike.js */ "./node_modules/refractor/lang/clike.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = fsharp
 fsharp.displayName = 'fsharp'
 fsharp.aliases = []
+
+/** @param {Refractor} Prism */
 function fsharp(Prism) {
+  Prism.register(_clike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   Prism.languages.fsharp = Prism.languages.extend('clike', {
     comment: [
       {
@@ -31742,19 +36567,27 @@ function fsharp(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/ftl.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ftl; });
+/* harmony import */ var _markup_templating_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./markup-templating.js */ "./node_modules/refractor/lang/markup-templating.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorMarkupTemplating = __webpack_require__(/*! ./markup-templating.js */ "./node_modules/refractor/lang/markup-templating.js")
-module.exports = ftl
 ftl.displayName = 'ftl'
 ftl.aliases = []
+
+/** @param {Refractor} Prism */
 function ftl(Prism) {
-  Prism.register(refractorMarkupTemplating)
+  Prism.register(_markup_templating_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   ;(function (Prism) {
     // https://freemarker.apache.org/docs/dgui_template_exp.html
+
     // FTL expression with 4 levels of nesting supported
     var FTL_EXPR =
       /[^<()"']|\((?:<expr>)*\)|<(?!#--)|<#--(?:[^-]|-(?!->))*-->|"(?:[^\\"]|\\.)*"|'(?:[^\\']|\\.)*'/
@@ -31883,18 +36716,24 @@ function ftl(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/gap.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = gap
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return gap; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 gap.displayName = 'gap'
 gap.aliases = []
+
+/** @param {Refractor} Prism */
 function gap(Prism) {
   // https://www.gap-system.org/Manuals/doc/ref/chap4.html
   // https://www.gap-system.org/Manuals/doc/ref/chap27.html
+
   Prism.languages.gap = {
     shell: {
       pattern: /^gap>[\s\S]*?(?=^gap>|$(?![\s\S]))/m,
@@ -31952,15 +36791,20 @@ function gap(Prism) {
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/gcode.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = gcode
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return gcode; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 gcode.displayName = 'gcode'
 gcode.aliases = []
+
+/** @param {Refractor} Prism */
 function gcode(Prism) {
   Prism.languages.gcode = {
     comment: /;.*|\B\(.*?\)\B/,
@@ -31987,15 +36831,20 @@ function gcode(Prism) {
 /*!*************************************************!*\
   !*** ./node_modules/refractor/lang/gdscript.js ***!
   \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = gdscript
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return gdscript; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 gdscript.displayName = 'gdscript'
 gdscript.aliases = []
+
+/** @param {Refractor} Prism */
 function gdscript(Prism) {
   Prism.languages.gdscript = {
     comment: /#.*/,
@@ -32036,15 +36885,20 @@ function gdscript(Prism) {
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/gedcom.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = gedcom
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return gedcom; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 gedcom.displayName = 'gedcom'
 gedcom.aliases = []
+
+/** @param {Refractor} Prism */
 function gedcom(Prism) {
   Prism.languages.gedcom = {
     'line-value': {
@@ -32059,12 +36913,12 @@ function gedcom(Prism) {
         }
       }
     },
-    tag: {
+    record: {
       // Preceded by level and optional pointer
       pattern:
         /(^[\t ]*\d+ +(?:@\w[\w!"$%&'()*+,\-./:;<=>?[\\\]^`{|}~\x80-\xfe #]*@ +)?)\w+/m,
       lookbehind: true,
-      alias: 'string'
+      alias: 'tag'
     },
     level: {
       pattern: /(^[\t ]*)\d+/m,
@@ -32081,19 +36935,90 @@ function gedcom(Prism) {
 
 /***/ }),
 
+/***/ "./node_modules/refractor/lang/gettext.js":
+/*!************************************************!*\
+  !*** ./node_modules/refractor/lang/gettext.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return gettext; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
+gettext.displayName = 'gettext'
+gettext.aliases = ['po']
+
+/** @param {Refractor} Prism */
+function gettext(Prism) {
+  Prism.languages.gettext = {
+    comment: [
+      {
+        pattern: /# .*/,
+        greedy: true,
+        alias: 'translator-comment'
+      },
+      {
+        pattern: /#\..*/,
+        greedy: true,
+        alias: 'extracted-comment'
+      },
+      {
+        pattern: /#:.*/,
+        greedy: true,
+        alias: 'reference-comment'
+      },
+      {
+        pattern: /#,.*/,
+        greedy: true,
+        alias: 'flag-comment'
+      },
+      {
+        pattern: /#\|.*/,
+        greedy: true,
+        alias: 'previously-untranslated-comment'
+      },
+      {
+        pattern: /#.*/,
+        greedy: true
+      }
+    ],
+    string: {
+      pattern: /(^|[^\\])"(?:[^"\\]|\\.)*"/,
+      lookbehind: true,
+      greedy: true
+    },
+    keyword: /^msg(?:ctxt|id|id_plural|str)\b/m,
+    number: /\b\d+\b/,
+    punctuation: /[\[\]]/
+  }
+  Prism.languages.po = Prism.languages.gettext
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/refractor/lang/gherkin.js":
 /*!************************************************!*\
   !*** ./node_modules/refractor/lang/gherkin.js ***!
   \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = gherkin
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return gherkin; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 gherkin.displayName = 'gherkin'
 gherkin.aliases = []
+
+/** @param {Refractor} Prism */
 function gherkin(Prism) {
   ;(function (Prism) {
     var tableRow = /(?:\r?\n|\r)[ \t]*\|.+\|(?:(?!\|).)*/.source
@@ -32189,15 +37114,20 @@ function gherkin(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/git.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = git
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return git; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 git.displayName = 'git'
 git.aliases = []
+
+/** @param {Refractor} Prism */
 function git(Prism) {
   Prism.languages.git = {
     /*
@@ -32271,17 +37201,24 @@ function git(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/glsl.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return glsl; });
+/* harmony import */ var _c_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./c.js */ "./node_modules/refractor/lang/c.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorC = __webpack_require__(/*! ./c.js */ "./node_modules/refractor/lang/c.js")
-module.exports = glsl
 glsl.displayName = 'glsl'
 glsl.aliases = []
+
+/** @param {Refractor} Prism */
 function glsl(Prism) {
-  Prism.register(refractorC)
+  Prism.register(_c_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   Prism.languages.glsl = Prism.languages.extend('c', {
     keyword:
       /\b(?:active|asm|atomic_uint|attribute|[ibdu]?vec[234]|bool|break|buffer|case|cast|centroid|class|coherent|common|const|continue|d?mat[234](?:x[234])?|default|discard|do|double|else|enum|extern|external|false|filter|fixed|flat|float|for|fvec[234]|goto|half|highp|hvec[234]|[iu]?sampler2DMS(?:Array)?|[iu]?sampler2DRect|[iu]?samplerBuffer|[iu]?samplerCube|[iu]?samplerCubeArray|[iu]?sampler[123]D|[iu]?sampler[12]DArray|[iu]?image2DMS(?:Array)?|[iu]?image2DRect|[iu]?imageBuffer|[iu]?imageCube|[iu]?imageCubeArray|[iu]?image[123]D|[iu]?image[12]DArray|if|in|inline|inout|input|int|interface|invariant|layout|long|lowp|mediump|namespace|noinline|noperspective|out|output|partition|patch|precise|precision|public|readonly|resource|restrict|return|sample|sampler[12]DArrayShadow|sampler[12]DShadow|sampler2DRectShadow|sampler3DRect|samplerCubeArrayShadow|samplerCubeShadow|shared|short|sizeof|smooth|static|struct|subroutine|superp|switch|template|this|true|typedef|uint|uniform|union|unsigned|using|varying|void|volatile|while|writeonly)\b/
@@ -32295,16 +37232,24 @@ function glsl(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/gml.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return gml; });
+/* harmony import */ var _clike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clike.js */ "./node_modules/refractor/lang/clike.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = gml
 gml.displayName = 'gml'
-gml.aliases = []
+gml.aliases = ['gamemakerlanguage']
+
+/** @param {Refractor} Prism */
 function gml(Prism) {
+  Prism.register(_clike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   Prism.languages.gamemakerlanguage = Prism.languages.gml =
     Prism.languages.extend('clike', {
       keyword:
@@ -32327,17 +37272,23 @@ function gml(Prism) {
 /*!*******************************************!*\
   !*** ./node_modules/refractor/lang/gn.js ***!
   \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = gn
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return gn; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 gn.displayName = 'gn'
 gn.aliases = ['gni']
+
+/** @param {Refractor} Prism */
 function gn(Prism) {
   // https://gn.googlesource.com/gn/+/refs/heads/main/docs/reference.md#grammar
+
   Prism.languages.gn = {
     comment: {
       pattern: /#.*/,
@@ -32396,17 +37347,23 @@ function gn(Prism) {
 /*!**************************************************!*\
   !*** ./node_modules/refractor/lang/go-module.js ***!
   \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return goModule; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
+goModule.displayName = 'go-module'
+goModule.aliases = ['go-mod']
 
-
-module.exports = goModule
-goModule.displayName = 'goModule'
-goModule.aliases = []
+/** @param {Refractor} Prism */
 function goModule(Prism) {
   // https://go.dev/ref/mod#go-mod-file-module
+
   Prism.languages['go-mod'] = Prism.languages['go-module'] = {
     comment: {
       pattern: /\/\/.*/,
@@ -32438,16 +37395,24 @@ function goModule(Prism) {
 /*!*******************************************!*\
   !*** ./node_modules/refractor/lang/go.js ***!
   \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return go; });
+/* harmony import */ var _clike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clike.js */ "./node_modules/refractor/lang/clike.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = go
 go.displayName = 'go'
 go.aliases = []
+
+/** @param {Refractor} Prism */
 function go(Prism) {
+  Prism.register(_clike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   Prism.languages.go = Prism.languages.extend('clike', {
     string: {
       pattern: /(^|[^\\])"(?:\\.|[^"\\\r\n])*"|`[^`]*`/,
@@ -32459,8 +37424,10 @@ function go(Prism) {
     boolean: /\b(?:_|false|iota|nil|true)\b/,
     number: [
       // binary and octal integers
-      /\b0(?:b[01_]+|o[0-7_]+)i?\b/i, // hexadecimal integers and floats
-      /\b0x(?:[a-f\d_]+(?:\.[a-f\d_]*)?|\.[a-f\d_]+)(?:p[+-]?\d+(?:_\d+)*)?i?(?!\w)/i, // decimal integers and floats
+      /\b0(?:b[01_]+|o[0-7_]+)i?\b/i,
+      // hexadecimal integers and floats
+      /\b0x(?:[a-f\d_]+(?:\.[a-f\d_]*)?|\.[a-f\d_]+)(?:p[+-]?\d+(?:_\d+)*)?i?(?!\w)/i,
+      // decimal integers and floats
       /(?:\b\d[\d_]*(?:\.[\d_]*)?|\B\.\d[\d_]*)(?:e[+-]?[\d_]+)?i?(?!\w)/i
     ],
     operator:
@@ -32480,19 +37447,110 @@ function go(Prism) {
 
 /***/ }),
 
+/***/ "./node_modules/refractor/lang/gradle.js":
+/*!***********************************************!*\
+  !*** ./node_modules/refractor/lang/gradle.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return gradle; });
+/* harmony import */ var _clike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clike.js */ "./node_modules/refractor/lang/clike.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
+
+gradle.displayName = 'gradle'
+gradle.aliases = []
+
+/** @param {Refractor} Prism */
+function gradle(Prism) {
+  Prism.register(_clike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+  ;(function (Prism) {
+    var interpolation = {
+      pattern: /((?:^|[^\\$])(?:\\{2})*)\$(?:\w+|\{[^{}]*\})/,
+      lookbehind: true,
+      inside: {
+        'interpolation-punctuation': {
+          pattern: /^\$\{?|\}$/,
+          alias: 'punctuation'
+        },
+        expression: {
+          pattern: /[\s\S]+/,
+          inside: null
+        }
+      }
+    }
+    Prism.languages.gradle = Prism.languages.extend('clike', {
+      string: {
+        pattern: /'''(?:[^\\]|\\[\s\S])*?'''|'(?:\\.|[^\\'\r\n])*'/,
+        greedy: true
+      },
+      keyword:
+        /\b(?:apply|def|dependencies|else|if|implementation|import|plugin|plugins|project|repositories|repository|sourceSets|tasks|val)\b/,
+      number:
+        /\b(?:0b[01_]+|0x[\da-f_]+(?:\.[\da-f_p\-]+)?|[\d_]+(?:\.[\d_]+)?(?:e[+-]?\d+)?)[glidf]?\b/i,
+      operator: {
+        pattern:
+          /(^|[^.])(?:~|==?~?|\?[.:]?|\*(?:[.=]|\*=?)?|\.[@&]|\.\.<|\.\.(?!\.)|-[-=>]?|\+[+=]?|!=?|<(?:<=?|=>?)?|>(?:>>?=?|=)?|&[&=]?|\|[|=]?|\/=?|\^=?|%=?)/,
+        lookbehind: true
+      },
+      punctuation: /\.+|[{}[\];(),:$]/
+    })
+    Prism.languages.insertBefore('gradle', 'string', {
+      shebang: {
+        pattern: /#!.+/,
+        alias: 'comment',
+        greedy: true
+      },
+      'interpolation-string': {
+        pattern:
+          /"""(?:[^\\]|\\[\s\S])*?"""|(["/])(?:\\.|(?!\1)[^\\\r\n])*\1|\$\/(?:[^/$]|\$(?:[/$]|(?![/$]))|\/(?!\$))*\/\$/,
+        greedy: true,
+        inside: {
+          interpolation: interpolation,
+          string: /[\s\S]+/
+        }
+      }
+    })
+    Prism.languages.insertBefore('gradle', 'punctuation', {
+      'spock-block': /\b(?:and|cleanup|expect|given|setup|then|when|where):/
+    })
+    Prism.languages.insertBefore('gradle', 'function', {
+      annotation: {
+        pattern: /(^|[^.])@\w+/,
+        lookbehind: true,
+        alias: 'punctuation'
+      }
+    })
+    interpolation.inside.expression.inside = Prism.languages.gradle
+  })(Prism)
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/refractor/lang/graphql.js":
 /*!************************************************!*\
   !*** ./node_modules/refractor/lang/graphql.js ***!
   \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = graphql
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return graphql; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 graphql.displayName = 'graphql'
 graphql.aliases = []
+
+/** @param {Refractor} Prism */
 function graphql(Prism) {
   Prism.languages.graphql = {
     comment: /#.*/,
@@ -32562,6 +37620,7 @@ function graphql(Prism) {
     if (env.language !== 'graphql') {
       return
     }
+
     /**
      * get the graphql token stream that we want to customize
      *
@@ -32576,6 +37635,7 @@ function graphql(Prism) {
       )
     })
     var currentIndex = 0
+
     /**
      * Returns whether the token relative to the current index has the given type.
      *
@@ -32585,6 +37645,7 @@ function graphql(Prism) {
     function getToken(offset) {
       return validTokens[currentIndex + offset]
     }
+
     /**
      * Returns whether the token relative to the current index has the given type.
      *
@@ -32602,6 +37663,7 @@ function graphql(Prism) {
       }
       return true
     }
+
     /**
      * Returns the index of the closing bracket to an opening bracket.
      *
@@ -32631,6 +37693,7 @@ function graphql(Prism) {
       }
       return -1
     }
+
     /**
      * Adds an alias to the given token.
      *
@@ -32648,7 +37711,9 @@ function graphql(Prism) {
       aliases.push(alias)
     }
     for (; currentIndex < validTokens.length; ) {
-      var startToken = validTokens[currentIndex++] // add special aliases for mutation tokens
+      var startToken = validTokens[currentIndex++]
+
+      // add special aliases for mutation tokens
       if (startToken.type === 'keyword' && startToken.content === 'mutation') {
         // any array of the names of all input variables (if any)
         var inputVariables = []
@@ -32657,11 +37722,15 @@ function graphql(Prism) {
           getToken(1).content === '('
         ) {
           // definition
+
           currentIndex += 2 // skip 'definition-mutation' and 'punctuation'
+
           var definitionEnd = findClosingBracket(/^\($/, /^\)$/)
           if (definitionEnd === -1) {
             continue
-          } // find all input variables
+          }
+
+          // find all input variables
           for (; currentIndex < definitionEnd; currentIndex++) {
             var t = getToken(0)
             if (t.type === 'variable') {
@@ -32676,12 +37745,15 @@ function graphql(Prism) {
           getToken(0).content === '{'
         ) {
           currentIndex++ // skip opening bracket
+
           addAlias(getToken(0), 'property-mutation')
           if (inputVariables.length > 0) {
             var mutationEnd = findClosingBracket(/^\{$/, /^\}$/)
             if (mutationEnd === -1) {
               continue
-            } // give references to input variables a special alias
+            }
+
+            // give references to input variables a special alias
             for (var i = currentIndex; i < mutationEnd; i++) {
               var varToken = validTokens[i]
               if (
@@ -32705,80 +37777,86 @@ function graphql(Prism) {
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/groovy.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return groovy; });
+/* harmony import */ var _clike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clike.js */ "./node_modules/refractor/lang/clike.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = groovy
 groovy.displayName = 'groovy'
 groovy.aliases = []
+
+/** @param {Refractor} Prism */
 function groovy(Prism) {
-  Prism.languages.groovy = Prism.languages.extend('clike', {
-    string: [
-      {
+  Prism.register(_clike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+  ;(function (Prism) {
+    var interpolation = {
+      pattern: /((?:^|[^\\$])(?:\\{2})*)\$(?:\w+|\{[^{}]*\})/,
+      lookbehind: true,
+      inside: {
+        'interpolation-punctuation': {
+          pattern: /^\$\{?|\}$/,
+          alias: 'punctuation'
+        },
+        expression: {
+          pattern: /[\s\S]+/,
+          inside: null // see below
+        }
+      }
+    }
+    Prism.languages.groovy = Prism.languages.extend('clike', {
+      string: {
         // https://groovy-lang.org/syntax.html#_dollar_slashy_string
-        pattern:
-          /("""|''')(?:[^\\]|\\[\s\S])*?\1|\$\/(?:[^/$]|\$(?:[/$]|(?![/$]))|\/(?!\$))*\/\$/,
+        pattern: /'''(?:[^\\]|\\[\s\S])*?'''|'(?:\\.|[^\\'\r\n])*'/,
         greedy: true
       },
-      {
+      keyword:
+        /\b(?:abstract|as|assert|boolean|break|byte|case|catch|char|class|const|continue|def|default|do|double|else|enum|extends|final|finally|float|for|goto|if|implements|import|in|instanceof|int|interface|long|native|new|package|private|protected|public|return|short|static|strictfp|super|switch|synchronized|this|throw|throws|trait|transient|try|void|volatile|while)\b/,
+      number:
+        /\b(?:0b[01_]+|0x[\da-f_]+(?:\.[\da-f_p\-]+)?|[\d_]+(?:\.[\d_]+)?(?:e[+-]?\d+)?)[glidf]?\b/i,
+      operator: {
+        pattern:
+          /(^|[^.])(?:~|==?~?|\?[.:]?|\*(?:[.=]|\*=?)?|\.[@&]|\.\.<|\.\.(?!\.)|-[-=>]?|\+[+=]?|!=?|<(?:<=?|=>?)?|>(?:>>?=?|=)?|&[&=]?|\|[|=]?|\/=?|\^=?|%=?)/,
+        lookbehind: true
+      },
+      punctuation: /\.+|[{}[\];(),:$]/
+    })
+    Prism.languages.insertBefore('groovy', 'string', {
+      shebang: {
+        pattern: /#!.+/,
+        alias: 'comment',
+        greedy: true
+      },
+      'interpolation-string': {
         // TODO: Slash strings (e.g. /foo/) can contain line breaks but this will cause a lot of trouble with
         // simple division (see JS regex), so find a fix maybe?
-        pattern: /(["'/])(?:\\.|(?!\1)[^\\\r\n])*\1/,
-        greedy: true
+        pattern:
+          /"""(?:[^\\]|\\[\s\S])*?"""|(["/])(?:\\.|(?!\1)[^\\\r\n])*\1|\$\/(?:[^/$]|\$(?:[/$]|(?![/$]))|\/(?!\$))*\/\$/,
+        greedy: true,
+        inside: {
+          interpolation: interpolation,
+          string: /[\s\S]+/
+        }
       }
-    ],
-    keyword:
-      /\b(?:abstract|as|assert|boolean|break|byte|case|catch|char|class|const|continue|def|default|do|double|else|enum|extends|final|finally|float|for|goto|if|implements|import|in|instanceof|int|interface|long|native|new|package|private|protected|public|return|short|static|strictfp|super|switch|synchronized|this|throw|throws|trait|transient|try|void|volatile|while)\b/,
-    number:
-      /\b(?:0b[01_]+|0x[\da-f_]+(?:\.[\da-f_p\-]+)?|[\d_]+(?:\.[\d_]+)?(?:e[+-]?\d+)?)[glidf]?\b/i,
-    operator: {
-      pattern:
-        /(^|[^.])(?:~|==?~?|\?[.:]?|\*(?:[.=]|\*=?)?|\.[@&]|\.\.<|\.\.(?!\.)|-[-=>]?|\+[+=]?|!=?|<(?:<=?|=>?)?|>(?:>>?=?|=)?|&[&=]?|\|[|=]?|\/=?|\^=?|%=?)/,
-      lookbehind: true
-    },
-    punctuation: /\.+|[{}[\];(),:$]/
-  })
-  Prism.languages.insertBefore('groovy', 'string', {
-    shebang: {
-      pattern: /#!.+/,
-      alias: 'comment'
-    }
-  })
-  Prism.languages.insertBefore('groovy', 'punctuation', {
-    'spock-block': /\b(?:and|cleanup|expect|given|setup|then|when|where):/
-  })
-  Prism.languages.insertBefore('groovy', 'function', {
-    annotation: {
-      pattern: /(^|[^.])@\w+/,
-      lookbehind: true,
-      alias: 'punctuation'
-    }
-  }) // Handle string interpolation
-  Prism.hooks.add('wrap', function (env) {
-    if (env.language === 'groovy' && env.type === 'string') {
-      var delimiter = env.content.value[0]
-      if (delimiter != "'") {
-        var pattern = /([^\\])(?:\$(?:\{.*?\}|[\w.]+))/
-        if (delimiter === '$') {
-          pattern = /([^\$])(?:\$(?:\{.*?\}|[\w.]+))/
-        } // To prevent double HTML-encoding we have to decode env.content first
-        env.content.value = env.content.value
-          .replace(/&lt;/g, '<')
-          .replace(/&amp;/g, '&')
-        env.content = Prism.highlight(env.content.value, {
-          expression: {
-            pattern: pattern,
-            lookbehind: true,
-            inside: Prism.languages.groovy
-          }
-        })
-        env.classes.push(delimiter === '/' ? 'regex' : 'gstring')
+    })
+    Prism.languages.insertBefore('groovy', 'punctuation', {
+      'spock-block': /\b(?:and|cleanup|expect|given|setup|then|when|where):/
+    })
+    Prism.languages.insertBefore('groovy', 'function', {
+      annotation: {
+        pattern: /(^|[^.])@\w+/,
+        lookbehind: true,
+        alias: 'punctuation'
       }
-    }
-  })
+    })
+    interpolation.inside.expression.inside = Prism.languages.groovy
+  })(Prism)
 }
 
 
@@ -32788,26 +37866,35 @@ function groovy(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/haml.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return haml; });
+/* harmony import */ var _ruby_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ruby.js */ "./node_modules/refractor/lang/ruby.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorRuby = __webpack_require__(/*! ./ruby.js */ "./node_modules/refractor/lang/ruby.js")
-module.exports = haml
 haml.displayName = 'haml'
 haml.aliases = []
+
+/** @param {Refractor} Prism */
 function haml(Prism) {
-  Prism.register(refractorRuby)
+  Prism.register(_ruby_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   /* TODO
 Handle multiline code after tag
 %foo= some |
 multiline |
 code |
 */
+
   ;(function (Prism) {
     Prism.languages.haml = {
       // Multiline stuff should appear before the rest
+
       'multiline-comment': {
         pattern:
           /((?:^|\r?\n|\r)([\t ]*))(?:\/|-#).*(?:(?:\r?\n|\r)\2[\t ].+)*/,
@@ -32907,7 +37994,9 @@ code |
       }
     }
     var filter_pattern =
-      '((?:^|\\r?\\n|\\r)([\\t ]*)):{{filter_name}}(?:(?:\\r?\\n|\\r)(?:\\2[\\t ].+|\\s*?(?=\\r?\\n|\\r)))+' // Non exhaustive list of available filters and associated languages
+      '((?:^|\\r?\\n|\\r)([\\t ]*)):{{filter_name}}(?:(?:\\r?\\n|\\r)(?:\\2[\\t ].+|\\s*?(?=\\r?\\n|\\r)))+'
+
+    // Non exhaustive list of available filters and associated languages
     var filters = [
       'css',
       {
@@ -32965,17 +38054,24 @@ code |
 /*!***************************************************!*\
   !*** ./node_modules/refractor/lang/handlebars.js ***!
   \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return handlebars; });
+/* harmony import */ var _markup_templating_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./markup-templating.js */ "./node_modules/refractor/lang/markup-templating.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorMarkupTemplating = __webpack_require__(/*! ./markup-templating.js */ "./node_modules/refractor/lang/markup-templating.js")
-module.exports = handlebars
 handlebars.displayName = 'handlebars'
-handlebars.aliases = ['hbs']
+handlebars.aliases = ['hbs', 'mustache']
+
+/** @param {Refractor} Prism */
 function handlebars(Prism) {
-  Prism.register(refractorMarkupTemplating)
+  Prism.register(_markup_templating_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   ;(function (Prism) {
     Prism.languages.handlebars = {
       comment: /\{\{![\s\S]*?\}\}/,
@@ -33016,6 +38112,7 @@ function handlebars(Prism) {
       )
     })
     Prism.languages.hbs = Prism.languages.handlebars
+    Prism.languages.mustache = Prism.languages.handlebars
   })(Prism)
 }
 
@@ -33026,15 +38123,20 @@ function handlebars(Prism) {
 /*!************************************************!*\
   !*** ./node_modules/refractor/lang/haskell.js ***!
   \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = haskell
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return haskell; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 haskell.displayName = 'haskell'
 haskell.aliases = ['hs']
+
+/** @param {Refractor} Prism */
 function haskell(Prism) {
   Prism.languages.haskell = {
     comment: {
@@ -33080,7 +38182,8 @@ function haskell(Prism) {
         // function composition
         pattern: /(\s)\.(?=\s)/,
         lookbehind: true
-      }, // Most of this is needed because of the meaning of a single '.'.
+      },
+      // Most of this is needed because of the meaning of a single '.'.
       // If it stands alone freely, it is the function composition.
       // It may also be a separator between a module name and an identifier => no
       // operator. If it comes together with other special characters it is an
@@ -33114,16 +38217,24 @@ function haskell(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/haxe.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return haxe; });
+/* harmony import */ var _clike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clike.js */ "./node_modules/refractor/lang/clike.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = haxe
 haxe.displayName = 'haxe'
 haxe.aliases = []
+
+/** @param {Refractor} Prism */
 function haxe(Prism) {
+  Prism.register(_clike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   Prism.languages.haxe = Prism.languages.extend('clike', {
     string: {
       // Strings can be multi-line
@@ -33135,7 +38246,8 @@ function haxe(Prism) {
         pattern:
           /(\b(?:abstract|class|enum|extends|implements|interface|new|typedef)\s+)[A-Z_]\w*/,
         lookbehind: true
-      }, // based on naming convention
+      },
+      // based on naming convention
       /\b[A-Z]\w*/
     ],
     // The final look-ahead prevents highlighting of keywords if expressions such as "haxe.macro.Expr"
@@ -33209,15 +38321,20 @@ function haxe(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/hcl.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = hcl
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return hcl; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 hcl.displayName = 'hcl'
 hcl.aliases = []
+
+/** @param {Refractor} Prism */
 function hcl(Prism) {
   Prism.languages.hcl = {
     comment: /(?:\/\/|#).*|\/\*[\s\S]*?(?:\*\/|$)/,
@@ -33293,17 +38410,24 @@ function hcl(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/hlsl.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return hlsl; });
+/* harmony import */ var _c_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./c.js */ "./node_modules/refractor/lang/c.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorC = __webpack_require__(/*! ./c.js */ "./node_modules/refractor/lang/c.js")
-module.exports = hlsl
 hlsl.displayName = 'hlsl'
 hlsl.aliases = []
+
+/** @param {Refractor} Prism */
 function hlsl(Prism) {
-  Prism.register(refractorC)
+  Prism.register(_c_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   Prism.languages.hlsl = Prism.languages.extend('c', {
     // Regarding keywords and class names:
     // The list of all keywords was split into 'keyword' and 'class-name' tokens based on whether they are capitalized.
@@ -33315,7 +38439,8 @@ function hlsl(Prism) {
     ],
     keyword: [
       // HLSL keyword
-      /\b(?:asm|asm_fragment|auto|break|case|catch|cbuffer|centroid|char|class|column_major|compile|compile_fragment|const|const_cast|continue|default|delete|discard|do|dynamic_cast|else|enum|explicit|export|extern|for|friend|fxgroup|goto|groupshared|if|in|inline|inout|interface|line|lineadj|linear|long|matrix|mutable|namespace|new|nointerpolation|noperspective|operator|out|packoffset|pass|pixelfragment|point|precise|private|protected|public|register|reinterpret_cast|return|row_major|sample|sampler|shared|short|signed|sizeof|snorm|stateblock|stateblock_state|static|static_cast|string|struct|switch|tbuffer|technique|technique10|technique11|template|texture|this|throw|triangle|triangleadj|try|typedef|typename|uniform|union|unorm|unsigned|using|vector|vertexfragment|virtual|void|volatile|while)\b/, // scalar, vector, and matrix types
+      /\b(?:asm|asm_fragment|auto|break|case|catch|cbuffer|centroid|char|class|column_major|compile|compile_fragment|const|const_cast|continue|default|delete|discard|do|dynamic_cast|else|enum|explicit|export|extern|for|friend|fxgroup|goto|groupshared|if|in|inline|inout|interface|line|lineadj|linear|long|matrix|mutable|namespace|new|nointerpolation|noperspective|operator|out|packoffset|pass|pixelfragment|point|precise|private|protected|public|register|reinterpret_cast|return|row_major|sample|sampler|shared|short|signed|sizeof|snorm|stateblock|stateblock_state|static|static_cast|string|struct|switch|tbuffer|technique|technique10|technique11|template|texture|this|throw|triangle|triangleadj|try|typedef|typename|uniform|union|unorm|unsigned|using|vector|vertexfragment|virtual|void|volatile|while)\b/,
+      // scalar, vector, and matrix types
       /\b(?:bool|double|dword|float|half|int|min(?:10float|12int|16(?:float|int|uint))|uint)(?:[1-4](?:x[1-4])?)?\b/
     ],
     // https://docs.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl-appendix-grammar#floating-point-numbers
@@ -33332,15 +38457,20 @@ function hlsl(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/hoon.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = hoon
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return hoon; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 hoon.displayName = 'hoon'
 hoon.aliases = []
+
+/** @param {Refractor} Prism */
 function hoon(Prism) {
   Prism.languages.hoon = {
     comment: {
@@ -33348,7 +38478,7 @@ function hoon(Prism) {
       greedy: true
     },
     string: {
-      pattern: /"[^"]*"|'[^']*'/,
+      pattern: /"(?:[^"\\]|\\.)*"|'(?:[^'\\]|\\.)*'/,
       greedy: true
     },
     constant: /%(?:\.[ny]|[\w-]+)/,
@@ -33366,21 +38496,27 @@ function hoon(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/hpkp.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = hpkp
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return hpkp; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 hpkp.displayName = 'hpkp'
 hpkp.aliases = []
+
+/** @param {Refractor} Prism */
 function hpkp(Prism) {
   /**
    * Original by Scott Helme.
    *
    * Reference: https://scotthelme.co.uk/hpkp-cheat-sheet/
    */
+
   Prism.languages.hpkp = {
     directive: {
       pattern:
@@ -33399,21 +38535,27 @@ function hpkp(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/hsts.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = hsts
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return hsts; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 hsts.displayName = 'hsts'
 hsts.aliases = []
+
+/** @param {Refractor} Prism */
 function hsts(Prism) {
   /**
    * Original by Scott Helme.
    *
    * Reference: https://scotthelme.co.uk/hsts-cheat-sheet/
    */
+
   Prism.languages.hsts = {
     directive: {
       pattern: /\b(?:includeSubDomains|max-age|preload)(?=[\s;=]|$)/i,
@@ -33431,15 +38573,20 @@ function hsts(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/http.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = http
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return http; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 http.displayName = 'http'
 http.aliases = []
+
+/** @param {Refractor} Prism */
 function http(Prism) {
   ;(function (Prism) {
     /**
@@ -33530,7 +38677,9 @@ function http(Prism) {
           punctuation: /^:/
         }
       }
-    } // Create a mapping of Content-Type headers to language definitions
+    }
+
+    // Create a mapping of Content-Type headers to language definitions
     var langs = Prism.languages
     var httpLanguages = {
       'application/javascript': langs.javascript,
@@ -33540,11 +38689,14 @@ function http(Prism) {
       'text/html': langs.html,
       'text/css': langs.css,
       'text/plain': langs.plain
-    } // Declare which types can also be suffixes
+    }
+
+    // Declare which types can also be suffixes
     var suffixTypes = {
       'application/json': true,
       'application/xml': true
     }
+
     /**
      * Returns a pattern for the given content type which matches it and any type which has it as a suffix.
      *
@@ -33555,7 +38707,9 @@ function http(Prism) {
       var suffix = contentType.replace(/^[a-z]+\//, '')
       var suffixPattern = '\\w+/(?:[\\w.-]+\\+)+' + suffix + '(?![+\\w.-])'
       return '(?:' + contentType + '|' + suffixPattern + ')'
-    } // Insert each content type parser that has its associated language
+    }
+
+    // Insert each content type parser that has its associated language
     // currently loaded.
     var options
     for (var contentType in httpLanguages) {
@@ -33570,7 +38724,8 @@ function http(Prism) {
               /content-type:\s*/.source +
               pattern +
               /(?:(?:\r\n?|\n)[\w-].*)*(?:\r(?:\n|(?!\n))|\n)/.source +
-              ')' + // This is a little interesting:
+              ')' +
+              // This is a little interesting:
               // The HTTP format spec required 1 empty line before the body to make everything unambiguous.
               // However, when writing code by hand (e.g. to display on a website) people can forget about this,
               // so we want to be liberal here. We will allow the empty line to be omitted if the first line of
@@ -33596,15 +38751,20 @@ function http(Prism) {
 /*!**************************************************!*\
   !*** ./node_modules/refractor/lang/ichigojam.js ***!
   \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = ichigojam
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ichigojam; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 ichigojam.displayName = 'ichigojam'
 ichigojam.aliases = []
+
+/** @param {Refractor} Prism */
 function ichigojam(Prism) {
   // according to the offical reference (EN)
   // https://ichigojam.net/IchigoJam-en.html
@@ -33632,15 +38792,20 @@ function ichigojam(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/icon.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = icon
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return icon; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 icon.displayName = 'icon'
 icon.aliases = []
+
+/** @param {Refractor} Prism */
 function icon(Prism) {
   Prism.languages.icon = {
     comment: /#.*/,
@@ -33674,18 +38839,24 @@ function icon(Prism) {
 /*!***********************************************************!*\
   !*** ./node_modules/refractor/lang/icu-message-format.js ***!
   \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = icuMessageFormat
-icuMessageFormat.displayName = 'icuMessageFormat'
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return icuMessageFormat; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
+icuMessageFormat.displayName = 'icu-message-format'
 icuMessageFormat.aliases = []
+
+/** @param {Refractor} Prism */
 function icuMessageFormat(Prism) {
   // https://unicode-org.github.io/icu/userguide/format_parse/messages/
   // https://unicode-org.github.io/icu-docs/apidoc/released/icu4j/com/ibm/icu/text/MessageFormat.html
+
   ;(function (Prism) {
     /**
      * @param {string} source
@@ -33846,17 +39017,24 @@ function icuMessageFormat(Prism) {
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/idris.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return idris; });
+/* harmony import */ var _haskell_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./haskell.js */ "./node_modules/refractor/lang/haskell.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorHaskell = __webpack_require__(/*! ./haskell.js */ "./node_modules/refractor/lang/haskell.js")
-module.exports = idris
 idris.displayName = 'idris'
 idris.aliases = ['idr']
+
+/** @param {Refractor} Prism */
 function idris(Prism) {
-  Prism.register(refractorHaskell)
+  Prism.register(_haskell_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   Prism.languages.idris = Prism.languages.extend('haskell', {
     comment: {
       pattern: /(?:(?:--|\|\|\|).*$|\{-[\s\S]*?-\})/m
@@ -33884,15 +39062,20 @@ function idris(Prism) {
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/iecst.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = iecst
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return iecst; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 iecst.displayName = 'iecst'
 iecst.aliases = []
+
+/** @param {Refractor} Prism */
 function iecst(Prism) {
   Prism.languages.iecst = {
     comment: [
@@ -33939,15 +39122,20 @@ function iecst(Prism) {
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/ignore.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = ignore
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ignore; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 ignore.displayName = 'ignore'
 ignore.aliases = ['gitignore', 'hgignore', 'npmignore']
+
+/** @param {Refractor} Prism */
 function ignore(Prism) {
   ;(function (Prism) {
     Prism.languages.ignore = {
@@ -33979,15 +39167,20 @@ function ignore(Prism) {
 /*!************************************************!*\
   !*** ./node_modules/refractor/lang/inform7.js ***!
   \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = inform7
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return inform7; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 inform7.displayName = 'inform7'
 inform7.aliases = []
+
+/** @param {Refractor} Prism */
 function inform7(Prism) {
   Prism.languages.inform7 = {
     string: {
@@ -33999,7 +39192,8 @@ function inform7(Prism) {
             delimiter: {
               pattern: /\[|\]/,
               alias: 'punctuation'
-            } // See rest below
+            }
+            // See rest below
           }
         }
       }
@@ -34049,7 +39243,8 @@ function inform7(Prism) {
     punctuation: /[.,:;(){}]/
   }
   Prism.languages.inform7['string'].inside['substitution'].inside.rest =
-    Prism.languages.inform7 // We don't want the remaining text in the substitution to be highlighted as the string.
+    Prism.languages.inform7
+  // We don't want the remaining text in the substitution to be highlighted as the string.
   Prism.languages.inform7['string'].inside['substitution'].inside.rest.text = {
     pattern: /\S(?:\s*\S)*/,
     alias: 'comment'
@@ -34063,15 +39258,20 @@ function inform7(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/ini.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = ini
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ini; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 ini.displayName = 'ini'
 ini.aliases = []
+
+/** @param {Refractor} Prism */
 function ini(Prism) {
   Prism.languages.ini = {
     /**
@@ -34079,6 +39279,7 @@ function ini(Prism) {
      *
      * @see {@link https://github.com/PrismJS/prism/issues/2775#issuecomment-787477723}
      */
+
     comment: {
       pattern: /(^[ \f\t\v]*)[#;][^\n\r]*/m,
       lookbehind: true
@@ -34123,15 +39324,20 @@ function ini(Prism) {
 /*!*******************************************!*\
   !*** ./node_modules/refractor/lang/io.js ***!
   \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = io
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return io; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 io.displayName = 'io'
 io.aliases = []
+
+/** @param {Refractor} Prism */
 function io(Prism) {
   Prism.languages.io = {
     comment: {
@@ -34167,15 +39373,20 @@ function io(Prism) {
 /*!******************************************!*\
   !*** ./node_modules/refractor/lang/j.js ***!
   \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = j
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return j; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 j.displayName = 'j'
 j.aliases = []
+
+/** @param {Refractor} Prism */
 function j(Prism) {
   Prism.languages.j = {
     comment: {
@@ -34217,23 +39428,38 @@ function j(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/java.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return java; });
+/* harmony import */ var _clike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clike.js */ "./node_modules/refractor/lang/clike.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = java
 java.displayName = 'java'
 java.aliases = []
+
+/** @param {Refractor} Prism */
 function java(Prism) {
+  Prism.register(_clike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   ;(function (Prism) {
     var keywords =
-      /\b(?:abstract|assert|boolean|break|byte|case|catch|char|class|const|continue|default|do|double|else|enum|exports|extends|final|finally|float|for|goto|if|implements|import|instanceof|int|interface|long|module|native|new|non-sealed|null|open|opens|package|permits|private|protected|provides|public|record|requires|return|sealed|short|static|strictfp|super|switch|synchronized|this|throw|throws|to|transient|transitive|try|uses|var|void|volatile|while|with|yield)\b/ // full package (optional) + parent classes (optional)
-    var classNamePrefix = /(^|[^\w.])(?:[a-z]\w*\s*\.\s*)*(?:[A-Z]\w*\s*\.\s*)*/
-      .source // based on the java naming conventions
+      /\b(?:abstract|assert|boolean|break|byte|case|catch|char|class|const|continue|default|do|double|else|enum|exports|extends|final|finally|float|for|goto|if|implements|import|instanceof|int|interface|long|module|native|new|non-sealed|null|open|opens|package|permits|private|protected|provides|public|record(?!\s*[(){}[\]<>=%~.:,;?+\-*/&|^])|requires|return|sealed|short|static|strictfp|super|switch|synchronized|this|throw|throws|to|transient|transitive|try|uses|var|void|volatile|while|with|yield)\b/
+
+    // full package (optional) + parent classes (optional)
+    var classNamePrefix = /(?:[a-z]\w*\s*\.\s*)*(?:[A-Z]\w*\s*\.\s*)*/.source
+
+    // based on the java naming conventions
     var className = {
-      pattern: RegExp(classNamePrefix + /[A-Z](?:[\d_A-Z]*[a-z]\w*)?\b/.source),
+      pattern: RegExp(
+        /(^|[^\w.])/.source +
+          classNamePrefix +
+          /[A-Z](?:[\d_A-Z]*[a-z]\w*)?\b/.source
+      ),
       lookbehind: true,
       inside: {
         namespace: {
@@ -34254,10 +39480,25 @@ function java(Prism) {
       'class-name': [
         className,
         {
-          // variables and parameters
+          // variables, parameters, and constructor references
           // this to support class names (or generic parameters) which do not contain a lower case letter (also works for methods)
           pattern: RegExp(
-            classNamePrefix + /[A-Z]\w*(?=\s+\w+\s*[;,=()])/.source
+            /(^|[^\w.])/.source +
+              classNamePrefix +
+              /[A-Z]\w*(?=\s+\w+\s*[;,=()]|\s*(?:\[[\s,]*\]\s*)?::\s*new\b)/
+                .source
+          ),
+          lookbehind: true,
+          inside: className.inside
+        },
+        {
+          // class names based on keyword
+          // this to support class names (or generic parameters) which do not contain a lower case letter (also works for methods)
+          pattern: RegExp(
+            /(\b(?:class|enum|extends|implements|instanceof|interface|new|record|throws)\s+)/
+              .source +
+              classNamePrefix +
+              /[A-Z]\w*\b/.source
           ),
           lookbehind: true,
           inside: className.inside
@@ -34277,7 +39518,8 @@ function java(Prism) {
         pattern:
           /(^|[^.])(?:<<=?|>>>?=?|->|--|\+\+|&&|\|\||::|[?:~]|[-+*/%&|^!=<>]=?)/m,
         lookbehind: true
-      }
+      },
+      constant: /\b[A-Z][A-Z_\d]+\b/
     })
     Prism.languages.insertBefore('java', 'string', {
       'triple-quoted-string': {
@@ -34307,6 +39549,38 @@ function java(Prism) {
           operator: /[?&|]/
         }
       },
+      import: [
+        {
+          pattern: RegExp(
+            /(\bimport\s+)/.source +
+              classNamePrefix +
+              /(?:[A-Z]\w*|\*)(?=\s*;)/.source
+          ),
+          lookbehind: true,
+          inside: {
+            namespace: className.inside.namespace,
+            punctuation: /\./,
+            operator: /\*/,
+            'class-name': /\w+/
+          }
+        },
+        {
+          pattern: RegExp(
+            /(\bimport\s+static\s+)/.source +
+              classNamePrefix +
+              /(?:\w+|\*)(?=\s*;)/.source
+          ),
+          lookbehind: true,
+          alias: 'static',
+          inside: {
+            namespace: className.inside.namespace,
+            static: /\b\w+$/,
+            punctuation: /\./,
+            operator: /\*/,
+            'class-name': /\w+/
+          }
+        }
+      ],
       namespace: {
         pattern: RegExp(
           /(\b(?:exports|import(?:\s+static)?|module|open|opens|package|provides|requires|to|transitive|uses|with)\s+)(?!<keyword>)[a-z]\w*(?:\.[a-z]\w*)*\.?/.source.replace(
@@ -34332,19 +39606,30 @@ function java(Prism) {
 /*!************************************************!*\
   !*** ./node_modules/refractor/lang/javadoc.js ***!
   \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return javadoc; });
+/* harmony import */ var _java_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./java.js */ "./node_modules/refractor/lang/java.js");
+/* harmony import */ var _javadoclike_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./javadoclike.js */ "./node_modules/refractor/lang/javadoclike.js");
+/* harmony import */ var _markup_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./markup.js */ "./node_modules/refractor/lang/markup.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorJava = __webpack_require__(/*! ./java.js */ "./node_modules/refractor/lang/java.js")
-var refractorJavadoclike = __webpack_require__(/*! ./javadoclike.js */ "./node_modules/refractor/lang/javadoclike.js")
-module.exports = javadoc
+
+
 javadoc.displayName = 'javadoc'
 javadoc.aliases = []
+
+/** @param {Refractor} Prism */
 function javadoc(Prism) {
-  Prism.register(refractorJava)
-  Prism.register(refractorJavadoclike)
+  Prism.register(_java_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+  Prism.register(_javadoclike_js__WEBPACK_IMPORTED_MODULE_1__["default"])
+  Prism.register(_markup_js__WEBPACK_IMPORTED_MODULE_2__["default"])
   ;(function (Prism) {
     var codeLinePattern = /(^(?:[\t ]*(?:\*\s*)*))[^*\s].*$/m
     var memberReference = /#\s*\w+(?:\s*\([^()]*\))?/.source
@@ -34446,15 +39731,20 @@ function javadoc(Prism) {
 /*!****************************************************!*\
   !*** ./node_modules/refractor/lang/javadoclike.js ***!
   \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = javadoclike
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return javadoclike; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 javadoclike.displayName = 'javadoclike'
 javadoclike.aliases = []
+
+/** @param {Refractor} Prism */
 function javadoclike(Prism) {
   ;(function (Prism) {
     var javaDocLike = (Prism.languages.javadoclike = {
@@ -34471,6 +39761,7 @@ function javadoclike(Prism) {
       },
       punctuation: /[{}]/
     })
+
     /**
      * Adds doc comment support to the given language and calls a given callback on each doc comment pattern.
      *
@@ -34514,6 +39805,7 @@ function javadoclike(Prism) {
         callback(token)
       }
     }
+
     /**
      * Adds doc-comment support to the given languages for the given documentation language.
      *
@@ -34547,16 +39839,24 @@ function javadoclike(Prism) {
 /*!***************************************************!*\
   !*** ./node_modules/refractor/lang/javascript.js ***!
   \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return javascript; });
+/* harmony import */ var _clike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clike.js */ "./node_modules/refractor/lang/clike.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = javascript
 javascript.displayName = 'javascript'
 javascript.aliases = ['js']
+
+/** @param {Refractor} Prism */
 function javascript(Prism) {
+  Prism.register(_clike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   Prism.languages.javascript = Prism.languages.extend('clike', {
     'class-name': [
       Prism.languages.clike['class-name'],
@@ -34583,17 +39883,23 @@ function javascript(Prism) {
     number: {
       pattern: RegExp(
         /(^|[^\w$])/.source +
-          '(?:' + // constant
+          '(?:' +
+          // constant
           (/NaN|Infinity/.source +
-            '|' + // binary integer
+            '|' +
+            // binary integer
             /0[bB][01]+(?:_[01]+)*n?/.source +
-            '|' + // octal integer
+            '|' +
+            // octal integer
             /0[oO][0-7]+(?:_[0-7]+)*n?/.source +
-            '|' + // hexadecimal integer
+            '|' +
+            // hexadecimal integer
             /0[xX][\dA-Fa-f]+(?:_[\dA-Fa-f]+)*n?/.source +
-            '|' + // decimal bigint
+            '|' +
+            // decimal bigint
             /\d+(?:_\d+)*n/.source +
-            '|' + // decimal number (integer or float) but no bigint
+            '|' +
+            // decimal number (integer or float) but no bigint
             /(?:\d+(?:_\d+)*(?:\.(?:\d+(?:_\d+)*)?)?|\.\d+(?:_\d+)*)(?:[Ee][+-]?\d+(?:_\d+)*)?/
               .source) +
           ')' +
@@ -34608,9 +39914,27 @@ function javascript(Prism) {
     /(\b(?:class|extends|implements|instanceof|interface|new)\s+)[\w.\\]+/
   Prism.languages.insertBefore('javascript', 'keyword', {
     regex: {
-      // eslint-disable-next-line regexp/no-dupe-characters-character-class
-      pattern:
-        /((?:^|[^$\w\xA0-\uFFFF."'\])\s]|\b(?:return|yield))\s*)\/(?:\[(?:[^\]\\\r\n]|\\.)*\]|\\.|[^/\\\[\r\n])+\/[dgimyus]{0,7}(?=(?:\s|\/\*(?:[^*]|\*(?!\/))*\*\/)*(?:$|[\r\n,.;:})\]]|\/\/))/,
+      pattern: RegExp(
+        // lookbehind
+        // eslint-disable-next-line regexp/no-dupe-characters-character-class
+        /((?:^|[^$\w\xA0-\uFFFF."'\])\s]|\b(?:return|yield))\s*)/.source +
+          // Regex pattern:
+          // There are 2 regex patterns here. The RegExp set notation proposal added support for nested character
+          // classes if the `v` flag is present. Unfortunately, nested CCs are both context-free and incompatible
+          // with the only syntax, so we have to define 2 different regex patterns.
+          /\//.source +
+          '(?:' +
+          /(?:\[(?:[^\]\\\r\n]|\\.)*\]|\\.|[^/\\\[\r\n])+\/[dgimyus]{0,7}/
+            .source +
+          '|' +
+          // `v` flag syntax. This supports 3 levels of nested character classes.
+          /(?:\[(?:[^[\]\\\r\n]|\\.|\[(?:[^[\]\\\r\n]|\\.|\[(?:[^[\]\\\r\n]|\\.)*\])*\])*\]|\\.|[^/\\\[\r\n])+\/[dgimyus]{0,7}v[dgimyus]{0,7}/
+            .source +
+          ')' +
+          // lookahead
+          /(?=(?:\s|\/\*(?:[^*]|\*(?!\/))*\*\/)*(?:$|[\r\n,.;:})\]]|\/\/))/
+            .source
+      ),
       lookbehind: true,
       greedy: true,
       inside: {
@@ -34705,7 +40029,9 @@ function javascript(Prism) {
     }
   })
   if (Prism.languages.markup) {
-    Prism.languages.markup.tag.addInlined('script', 'javascript') // add attribute support for all DOM events.
+    Prism.languages.markup.tag.addInlined('script', 'javascript')
+
+    // add attribute support for all DOM events.
     // https://developer.mozilla.org/en-US/docs/Web/Events#Standard_events
     Prism.languages.markup.tag.addAttribute(
       /on(?:abort|blur|change|click|composition(?:end|start|update)|dblclick|error|focus(?:in|out)?|key(?:down|up)|load|mouse(?:down|enter|leave|move|out|over|up)|reset|resize|scroll|select|slotchange|submit|unload|wheel)/
@@ -34723,18 +40049,24 @@ function javascript(Prism) {
 /*!*******************************************************!*\
   !*** ./node_modules/refractor/lang/javastacktrace.js ***!
   \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = javastacktrace
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return javastacktrace; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 javastacktrace.displayName = 'javastacktrace'
 javastacktrace.aliases = []
+
+/** @param {Refractor} Prism */
 function javastacktrace(Prism) {
   // Specification:
   // https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/lang/Throwable.html#printStackTrace()
+
   Prism.languages.javastacktrace = {
     // java.sql.SQLException: Violation of unique constraint MY_ENTITY_UK_1: duplicate value(s) for column(s) MY_COLUMN in statement [...]
     // Caused by: java.sql.SQLException: Violation of unique constraint MY_ENTITY_UK_1: duplicate value(s) for column(s) MY_COLUMN in statement [...]
@@ -34816,7 +40148,8 @@ function javastacktrace(Prism) {
                 alias: 'number'
               }
             }
-          }, // (Unknown Source)
+          },
+          // (Unknown Source)
           // (Native Method)
           // (...something...)
           {
@@ -34879,15 +40212,20 @@ function javastacktrace(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/jexl.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = jexl
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return jexl; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 jexl.displayName = 'jexl'
 jexl.aliases = []
+
+/** @param {Refractor} Prism */
 function jexl(Prism) {
   Prism.languages.jexl = {
     string: /(["'])(?:\\[\s\S]|(?!\1)[^\\])*\1/,
@@ -34914,16 +40252,24 @@ function jexl(Prism) {
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/jolie.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return jolie; });
+/* harmony import */ var _clike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clike.js */ "./node_modules/refractor/lang/clike.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = jolie
 jolie.displayName = 'jolie'
 jolie.aliases = []
+
+/** @param {Refractor} Prism */
 function jolie(Prism) {
+  Prism.register(_clike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   Prism.languages.jolie = Prism.languages.extend('clike', {
     string: {
       pattern: /(^|[^\\])"(?:\\[\s\S]|[^"\\])*"/,
@@ -34979,15 +40325,20 @@ function jolie(Prism) {
 /*!*******************************************!*\
   !*** ./node_modules/refractor/lang/jq.js ***!
   \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = jq
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return jq; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 jq.displayName = 'jq'
 jq.aliases = []
+
+/** @param {Refractor} Prism */
 function jq(Prism) {
   ;(function (Prism) {
     var interpolation = /\\\((?:[^()]|\([^()]*\))*\)/.source
@@ -35068,16 +40419,24 @@ function jq(Prism) {
 /*!**************************************************!*\
   !*** ./node_modules/refractor/lang/js-extras.js ***!
   \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return jsExtras; });
+/* harmony import */ var _javascript_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./javascript.js */ "./node_modules/refractor/lang/javascript.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = jsExtras
-jsExtras.displayName = 'jsExtras'
+jsExtras.displayName = 'js-extras'
 jsExtras.aliases = []
+
+/** @param {Refractor} Prism */
 function jsExtras(Prism) {
+  Prism.register(_javascript_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   ;(function (Prism) {
     Prism.languages.insertBefore('javascript', 'function-variable', {
       'method-variable': {
@@ -35114,6 +40473,7 @@ function jsExtras(Prism) {
         }
       ]
     })
+
     /**
      * Replaces the `<ID>` placeholder in the given pattern with a pattern for general JS identifiers.
      *
@@ -35197,7 +40557,9 @@ function jsExtras(Prism) {
         pattern: /\bconsole(?=\s*\.)/,
         alias: 'class-name'
       }
-    }) // add 'maybe-class-name' to tokens which might be a class name
+    })
+
+    // add 'maybe-class-name' to tokens which might be a class name
     var maybeClassNameTokens = [
       'function',
       'function-variable',
@@ -35207,12 +40569,17 @@ function jsExtras(Prism) {
     ]
     for (var i = 0; i < maybeClassNameTokens.length; i++) {
       var token = maybeClassNameTokens[i]
-      var value = Prism.languages.javascript[token] // convert regex to object
+      var value = Prism.languages.javascript[token]
+
+      // convert regex to object
       if (Prism.util.type(value) === 'RegExp') {
         value = Prism.languages.javascript[token] = {
           pattern: value
         }
-      } // keep in mind that we don't support arrays
+      }
+
+      // keep in mind that we don't support arrays
+
       var inside = value.inside || {}
       value.inside = inside
       inside['maybe-class-name'] = /^[A-Z][\s\S]*/
@@ -35227,23 +40594,34 @@ function jsExtras(Prism) {
 /*!*****************************************************!*\
   !*** ./node_modules/refractor/lang/js-templates.js ***!
   \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return jsTemplates; });
+/* harmony import */ var _javascript_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./javascript.js */ "./node_modules/refractor/lang/javascript.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = jsTemplates
-jsTemplates.displayName = 'jsTemplates'
+jsTemplates.displayName = 'js-templates'
 jsTemplates.aliases = []
+
+/** @param {Refractor} Prism */
 function jsTemplates(Prism) {
+  Prism.register(_javascript_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   ;(function (Prism) {
-    var templateString = Prism.languages.javascript['template-string'] // see the pattern in prism-javascript.js
+    var templateString = Prism.languages.javascript['template-string']
+
+    // see the pattern in prism-javascript.js
     var templateLiteralPattern = templateString.pattern.source
     var interpolationObject = templateString.inside['interpolation']
     var interpolationPunctuationObject =
       interpolationObject.inside['interpolation-punctuation']
     var interpolationPattern = interpolationObject.pattern.source
+
     /**
      * Creates a new pattern to match a template string with a special tag.
      *
@@ -35284,18 +40662,25 @@ function jsTemplates(Prism) {
         'css',
         /\b(?:styled(?:\([^)]*\))?(?:\s*\.\s*\w+(?:\([^)]*\))*)*|css(?:\s*\.\s*(?:global|resolve))?|createGlobalStyle|keyframes)/
           .source
-      ), // html`<p></p>`
+      ),
+      // html`<p></p>`
       // div.innerHTML = `<p></p>`
-      createTemplate('html', /\bhtml|\.\s*(?:inner|outer)HTML\s*\+?=/.source), // svg`<path fill="#fff" d="M55.37 ..."/>`
-      createTemplate('svg', /\bsvg/.source), // md`# h1`, markdown`## h2`
-      createTemplate('markdown', /\b(?:markdown|md)/.source), // gql`...`, graphql`...`, graphql.experimental`...`
+      createTemplate('html', /\bhtml|\.\s*(?:inner|outer)HTML\s*\+?=/.source),
+      // svg`<path fill="#fff" d="M55.37 ..."/>`
+      createTemplate('svg', /\bsvg/.source),
+      // md`# h1`, markdown`## h2`
+      createTemplate('markdown', /\b(?:markdown|md)/.source),
+      // gql`...`, graphql`...`, graphql.experimental`...`
       createTemplate(
         'graphql',
         /\b(?:gql|graphql(?:\s*\.\s*experimental)?)/.source
-      ), // sql`...`
-      createTemplate('sql', /\bsql/.source), // vanilla template string
+      ),
+      // sql`...`
+      createTemplate('sql', /\bsql/.source),
+      // vanilla template string
       templateString
     ].filter(Boolean)
+
     /**
      * Returns a specific placeholder literal for the given language.
      *
@@ -35306,6 +40691,7 @@ function jsTemplates(Prism) {
     function getPlaceholder(counter, language) {
       return '___' + language.toUpperCase() + '_' + counter + '___'
     }
+
     /**
      * Returns the tokens of `Prism.tokenize` but also runs the `before-tokenize` and `after-tokenize` hooks.
      *
@@ -35325,6 +40711,7 @@ function jsTemplates(Prism) {
       Prism.hooks.run('after-tokenize', env)
       return env.tokens
     }
+
     /**
      * Returns the token of the given JavaScript interpolation expression.
      *
@@ -35334,6 +40721,7 @@ function jsTemplates(Prism) {
     function tokenizeInterpolationExpression(expression) {
       var tempGrammar = {}
       tempGrammar['interpolation-punctuation'] = interpolationPunctuationObject
+
       /** @type {Array} */
       var tokens = Prism.tokenize(expression, tempGrammar)
       if (tokens.length === 3) {
@@ -35345,6 +40733,7 @@ function jsTemplates(Prism) {
          *     ["interpolation-punctuation", "}"]
          * ]
          */
+
         var args = [1, 1]
         args.push.apply(
           args,
@@ -35359,6 +40748,7 @@ function jsTemplates(Prism) {
         expression
       )
     }
+
     /**
      * Tokenizes the given code with support for JavaScript interpolation expressions mixed in.
      *
@@ -35378,6 +40768,7 @@ function jsTemplates(Prism) {
      */
     function tokenizeEmbedded(code, grammar, language) {
       // 1. First filter out all interpolations
+
       // because they might be escaped, we need a lookbehind, so we use Prism
       /** @type {(Token|string)[]} */
       var _tokens = Prism.tokenize(code, {
@@ -35385,7 +40776,9 @@ function jsTemplates(Prism) {
           pattern: RegExp(interpolationPattern),
           lookbehind: true
         }
-      }) // replace all interpolations with a placeholder which is not in the code already
+      })
+
+      // replace all interpolations with a placeholder which is not in the code already
       var placeholderCounter = 0
       /** @type {Object<string, string>} */
       var placeholderMap = {}
@@ -35407,10 +40800,17 @@ function jsTemplates(Prism) {
             return placeholder
           }
         })
-        .join('') // 2. Tokenize the embedded code
-      var embeddedTokens = tokenizeWithHooks(embeddedCode, grammar, language) // 3. Re-insert the interpolation
+        .join('')
+
+      // 2. Tokenize the embedded code
+
+      var embeddedTokens = tokenizeWithHooks(embeddedCode, grammar, language)
+
+      // 3. Re-insert the interpolation
+
       var placeholders = Object.keys(placeholderMap)
       placeholderCounter = 0
+
       /**
        *
        * @param {(Token|string)[]} tokens
@@ -35427,8 +40827,7 @@ function jsTemplates(Prism) {
             var s =
               typeof token === 'string'
                 ? token
-                : /** @type {string} */
-                  token.content
+                : /** @type {string} */ token.content
             var index = s.indexOf(placeholder)
             if (index !== -1) {
               ++placeholderCounter
@@ -35472,6 +40871,7 @@ function jsTemplates(Prism) {
         code
       )
     }
+
     /**
      * The languages for which JS templating will handle tagged template literals.
      *
@@ -35489,6 +40889,7 @@ function jsTemplates(Prism) {
       if (!(env.language in supportedLanguages)) {
         return
       }
+
       /**
        * Finds and tokenizes all template strings with an embedded languages.
        *
@@ -35523,6 +40924,7 @@ function jsTemplates(Prism) {
              *     ["template-punctuation", "`"]
              * ]]
              */
+
             var embedded = content[1]
             if (
               content.length === 3 &&
@@ -35547,6 +40949,7 @@ function jsTemplates(Prism) {
       }
       findTemplateStrings(env.tokens)
     })
+
     /**
      * Returns the string content of a token or token stream.
      *
@@ -35572,19 +40975,30 @@ function jsTemplates(Prism) {
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/jsdoc.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return jsdoc; });
+/* harmony import */ var _javadoclike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./javadoclike.js */ "./node_modules/refractor/lang/javadoclike.js");
+/* harmony import */ var _javascript_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./javascript.js */ "./node_modules/refractor/lang/javascript.js");
+/* harmony import */ var _typescript_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./typescript.js */ "./node_modules/refractor/lang/typescript.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorJavadoclike = __webpack_require__(/*! ./javadoclike.js */ "./node_modules/refractor/lang/javadoclike.js")
-var refractorTypescript = __webpack_require__(/*! ./typescript.js */ "./node_modules/refractor/lang/typescript.js")
-module.exports = jsdoc
+
+
 jsdoc.displayName = 'jsdoc'
 jsdoc.aliases = []
+
+/** @param {Refractor} Prism */
 function jsdoc(Prism) {
-  Prism.register(refractorJavadoclike)
-  Prism.register(refractorTypescript)
+  Prism.register(_javadoclike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+  Prism.register(_javascript_js__WEBPACK_IMPORTED_MODULE_1__["default"])
+  Prism.register(_typescript_js__WEBPACK_IMPORTED_MODULE_2__["default"])
   ;(function (Prism) {
     var javascript = Prism.languages.javascript
     var type = /\{(?:[^{}]|\{(?:[^{}]|\{[^{}]*\})*\})+\}/.source
@@ -35680,15 +41094,20 @@ function jsdoc(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/json.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = json
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return json; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 json.displayName = 'json'
 json.aliases = ['webmanifest']
+
+/** @param {Refractor} Prism */
 function json(Prism) {
   // https://www.json.org/json-en.html
   Prism.languages.json = {
@@ -35725,17 +41144,24 @@ function json(Prism) {
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/json5.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return json5; });
+/* harmony import */ var _json_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./json.js */ "./node_modules/refractor/lang/json.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorJson = __webpack_require__(/*! ./json.js */ "./node_modules/refractor/lang/json.js")
-module.exports = json5
 json5.displayName = 'json5'
 json5.aliases = []
+
+/** @param {Refractor} Prism */
 function json5(Prism) {
-  Prism.register(refractorJson)
+  Prism.register(_json_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   ;(function (Prism) {
     var string = /("|')(?:\\(?:\r\n?|\n|.)|(?!\1)[^\\\r\n])*\1/
     Prism.languages.json5 = Prism.languages.extend('json', {
@@ -35767,17 +41193,24 @@ function json5(Prism) {
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/jsonp.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return jsonp; });
+/* harmony import */ var _json_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./json.js */ "./node_modules/refractor/lang/json.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorJson = __webpack_require__(/*! ./json.js */ "./node_modules/refractor/lang/json.js")
-module.exports = jsonp
 jsonp.displayName = 'jsonp'
 jsonp.aliases = []
+
+/** @param {Refractor} Prism */
 function jsonp(Prism) {
-  Prism.register(refractorJson)
+  Prism.register(_json_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   Prism.languages.jsonp = Prism.languages.extend('json', {
     punctuation: /[{}[\]();,.]/
   })
@@ -35793,15 +41226,20 @@ function jsonp(Prism) {
 /*!*****************************************************!*\
   !*** ./node_modules/refractor/lang/jsstacktrace.js ***!
   \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = jsstacktrace
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return jsstacktrace; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 jsstacktrace.displayName = 'jsstacktrace'
 jsstacktrace.aliases = []
+
+/** @param {Refractor} Prism */
 function jsstacktrace(Prism) {
   Prism.languages.jsstacktrace = {
     'error-message': {
@@ -35855,21 +41293,33 @@ function jsstacktrace(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/jsx.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return jsx; });
+/* harmony import */ var _javascript_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./javascript.js */ "./node_modules/refractor/lang/javascript.js");
+/* harmony import */ var _markup_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./markup.js */ "./node_modules/refractor/lang/markup.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
 
-module.exports = jsx
 jsx.displayName = 'jsx'
 jsx.aliases = []
+
+/** @param {Refractor} Prism */
 function jsx(Prism) {
+  Prism.register(_javascript_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+  Prism.register(_markup_js__WEBPACK_IMPORTED_MODULE_1__["default"])
   ;(function (Prism) {
     var javascript = Prism.util.clone(Prism.languages.javascript)
     var space = /(?:\s|\/\/.*(?!.)|\/\*(?:[^*]|\*(?!\/))\*\/)/.source
     var braces = /(?:\{(?:\{(?:\{[^{}]*\}|[^{}])*\}|[^{}])*\})/.source
     var spread = /(?:\{<S>*\.{3}(?:[^{}]|<BRACES>)*\})/.source
+
     /**
      * @param {string} source
      * @param {string} [flags]
@@ -35928,7 +41378,9 @@ function jsx(Prism) {
         }
       },
       Prism.languages.jsx.tag
-    ) // The following will handle plain text inside tags
+    )
+
+    // The following will handle plain text inside tags
     var stringifyToken = function (token) {
       if (!token) {
         return ''
@@ -35953,6 +41405,7 @@ function jsx(Prism) {
             token.content[0].type === 'tag'
           ) {
             // We found a tag, now find its kind
+
             if (token.content[0].content[0].content === '</') {
               // Closing tag
               if (
@@ -36000,7 +41453,9 @@ function jsx(Prism) {
           ) {
             // Here we are inside a tag, and not inside a JSX context.
             // That's plain text: drop any tokens matched.
-            var plainText = stringifyToken(token) // And merge text with adjacent text
+            var plainText = stringifyToken(token)
+
+            // And merge text with adjacent text
             if (
               i < tokens.length - 1 &&
               (typeof tokens[i + 1] === 'string' ||
@@ -36047,15 +41502,20 @@ function jsx(Prism) {
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/julia.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = julia
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return julia; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 julia.displayName = 'julia'
 julia.aliases = []
+
+/** @param {Refractor} Prism */
 function julia(Prism) {
   Prism.languages.julia = {
     comment: {
@@ -36106,15 +41566,20 @@ function julia(Prism) {
 /*!***************************************************!*\
   !*** ./node_modules/refractor/lang/keepalived.js ***!
   \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = keepalived
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return keepalived; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 keepalived.displayName = 'keepalived'
 keepalived.aliases = []
+
+/** @param {Refractor} Prism */
 function keepalived(Prism) {
   Prism.languages.keepalived = {
     comment: {
@@ -36178,15 +41643,20 @@ function keepalived(Prism) {
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/keyman.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = keyman
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return keyman; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 keyman.displayName = 'keyman'
 keyman.aliases = []
+
+/** @param {Refractor} Prism */
 function keyman(Prism) {
   Prism.languages.keyman = {
     comment: {
@@ -36219,7 +41689,8 @@ function keyman(Prism) {
       alias: 'keyword'
     },
     'structural-keyword': {
-      pattern: /\b(?:ansi|begin|group|match|nomatch|unicode|using keys)\b/i,
+      pattern:
+        /\b(?:ansi|begin|group|match|newcontext|nomatch|postkeystroke|readonly|unicode|using keys)\b/i,
       alias: 'keyword'
     },
     'compile-target': {
@@ -36240,16 +41711,24 @@ function keyman(Prism) {
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/kotlin.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return kotlin; });
+/* harmony import */ var _clike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clike.js */ "./node_modules/refractor/lang/clike.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = kotlin
 kotlin.displayName = 'kotlin'
 kotlin.aliases = ['kt', 'kts']
+
+/** @param {Refractor} Prism */
 function kotlin(Prism) {
+  Prism.register(_clike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   ;(function (Prism) {
     Prism.languages.kotlin = Prism.languages.extend('clike', {
       keyword: {
@@ -36343,15 +41822,20 @@ function kotlin(Prism) {
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/kumir.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = kumir
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return kumir; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 kumir.displayName = 'kumir'
 kumir.aliases = ['kum']
+
+/** @param {Refractor} Prism */
 function kumir(Prism) {
   /* eslint-disable regexp/no-dupe-characters-character-class */
   ;(function (Prism) {
@@ -36361,6 +41845,7 @@ function kumir(Prism) {
      * @type {string}
      */
     var nonId = /\s\x00-\x1f\x22-\x2f\x3a-\x3f\x5b-\x5e\x60\x7b-\x7e/.source
+
     /**
      * Surround a regular expression for IDs with patterns for non-ID sequences.
      *
@@ -36467,15 +41952,20 @@ function kumir(Prism) {
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/kusto.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = kusto
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return kusto; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 kusto.displayName = 'kusto'
 kusto.aliases = []
+
+/** @param {Refractor} Prism */
 function kusto(Prism) {
   Prism.languages.kusto = {
     comment: {
@@ -36530,15 +42020,20 @@ function kusto(Prism) {
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/latex.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = latex
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return latex; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 latex.displayName = 'latex'
-latex.aliases = ['tex', 'context']
+latex.aliases = ['context', 'tex']
+
+/** @param {Refractor} Prism */
 function latex(Prism) {
   ;(function (Prism) {
     var funcPattern = /\\(?:[^a-z()[\]]|[a-z*]+)/i
@@ -36616,19 +42111,30 @@ function latex(Prism) {
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/latte.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return latte; });
+/* harmony import */ var _clike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clike.js */ "./node_modules/refractor/lang/clike.js");
+/* harmony import */ var _markup_templating_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./markup-templating.js */ "./node_modules/refractor/lang/markup-templating.js");
+/* harmony import */ var _php_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./php.js */ "./node_modules/refractor/lang/php.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorMarkupTemplating = __webpack_require__(/*! ./markup-templating.js */ "./node_modules/refractor/lang/markup-templating.js")
-var refractorPhp = __webpack_require__(/*! ./php.js */ "./node_modules/refractor/lang/php.js")
-module.exports = latte
+
+
 latte.displayName = 'latte'
 latte.aliases = []
+
+/** @param {Refractor} Prism */
 function latte(Prism) {
-  Prism.register(refractorMarkupTemplating)
-  Prism.register(refractorPhp)
+  Prism.register(_clike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+  Prism.register(_markup_templating_js__WEBPACK_IMPORTED_MODULE_1__["default"])
+  Prism.register(_php_js__WEBPACK_IMPORTED_MODULE_2__["default"])
   ;(function (Prism) {
     Prism.languages.latte = {
       comment: /^\{\*[\s\S]*/,
@@ -36707,16 +42213,24 @@ function latte(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/less.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return less; });
+/* harmony import */ var _css_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css.js */ "./node_modules/refractor/lang/css.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = less
 less.displayName = 'less'
 less.aliases = []
+
+/** @param {Refractor} Prism */
 function less(Prism) {
+  Prism.register(_css_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   /* FIXME :
 :extend() is not handled specifically : its highlighting is buggy.
 Mixin usage must be inside a ruleset to be highlighted.
@@ -36724,6 +42238,7 @@ At-rules (e.g. import) containing interpolations are buggy.
 Detached rulesets are highlighted as at-rules.
 A comment before a mixin usage prevents the latter to be properly highlighted.
 */
+
   Prism.languages.less = Prism.languages.extend('css', {
     comment: [
       /\/\*[\s\S]*?\*\//,
@@ -36759,7 +42274,8 @@ A comment before a mixin usage prevents the latter to be properly highlighted.
         inside: {
           punctuation: /:/
         }
-      }, // Variable usage
+      },
+      // Variable usage
       /@@?[\w-]+/
     ],
     'mixin-usage': {
@@ -36777,21 +42293,29 @@ A comment before a mixin usage prevents the latter to be properly highlighted.
 /*!*************************************************!*\
   !*** ./node_modules/refractor/lang/lilypond.js ***!
   \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return lilypond; });
+/* harmony import */ var _scheme_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scheme.js */ "./node_modules/refractor/lang/scheme.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorScheme = __webpack_require__(/*! ./scheme.js */ "./node_modules/refractor/lang/scheme.js")
-module.exports = lilypond
 lilypond.displayName = 'lilypond'
-lilypond.aliases = []
+lilypond.aliases = ['ly']
+
+/** @param {Refractor} Prism */
 function lilypond(Prism) {
-  Prism.register(refractorScheme)
+  Prism.register(_scheme_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   ;(function (Prism) {
     var schemeExpression =
       /\((?:[^();"#\\]|\\[\s\S]|;.*(?!.)|"(?:[^"\\]|\\.)*"|#(?:\{(?:(?!#\})[\s\S])*#\}|[^{])|<expr>)*\)/
-        .source // allow for up to pow(2, recursivenessLog2) many levels of recursive brace expressions
+        .source
+    // allow for up to pow(2, recursivenessLog2) many levels of recursive brace expressions
     // For some reason, this can't be 4
     var recursivenessLog2 = 5
     for (var i = 0; i < recursivenessLog2; i++) {
@@ -36870,21 +42394,77 @@ function lilypond(Prism) {
 
 /***/ }),
 
+/***/ "./node_modules/refractor/lang/linker-script.js":
+/*!******************************************************!*\
+  !*** ./node_modules/refractor/lang/linker-script.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return linkerScript; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
+linkerScript.displayName = 'linker-script'
+linkerScript.aliases = ['ld']
+
+/** @param {Refractor} Prism */
+function linkerScript(Prism) {
+  Prism.languages['linker-script'] = {
+    comment: {
+      pattern: /(^|\s)\/\*[\s\S]*?(?:$|\*\/)/,
+      lookbehind: true,
+      greedy: true
+    },
+    identifier: {
+      pattern: /"[^"\r\n]*"/,
+      greedy: true
+    },
+    'location-counter': {
+      pattern: /\B\.\B/,
+      alias: 'important'
+    },
+    section: {
+      pattern: /(^|[^\w*])\.\w+\b/,
+      lookbehind: true,
+      alias: 'keyword'
+    },
+    function: /\b[A-Z][A-Z_]*(?=\s*\()/,
+    number: /\b(?:0[xX][a-fA-F0-9]+|\d+)[KM]?\b/,
+    operator: />>=?|<<=?|->|\+\+|--|&&|\|\||::|[?:~]|[-+*/%&|^!=<>]=?/,
+    punctuation: /[(){},;]/
+  }
+  Prism.languages['ld'] = Prism.languages['linker-script']
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/refractor/lang/liquid.js":
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/liquid.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return liquid; });
+/* harmony import */ var _markup_templating_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./markup-templating.js */ "./node_modules/refractor/lang/markup-templating.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorMarkupTemplating = __webpack_require__(/*! ./markup-templating.js */ "./node_modules/refractor/lang/markup-templating.js")
-module.exports = liquid
 liquid.displayName = 'liquid'
 liquid.aliases = []
+
+/** @param {Refractor} Prism */
 function liquid(Prism) {
-  Prism.register(refractorMarkupTemplating)
+  Prism.register(_markup_templating_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   Prism.languages.liquid = {
     comment: {
       pattern: /(^\{%\s*comment\s*%\})[\s\S]+(?=\{%\s*endcomment\s*%\}$)/,
@@ -36964,15 +42544,20 @@ function liquid(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/lisp.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = lisp
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return lisp; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 lisp.displayName = 'lisp'
-lisp.aliases = []
+lisp.aliases = ['elisp', 'emacs', 'emacs-lisp']
+
+/** @param {Refractor} Prism */
 function lisp(Prism) {
   ;(function (Prism) {
     /**
@@ -36995,13 +42580,19 @@ function lisp(Prism) {
       return RegExp(
         /([\s([])/.source + '(?:' + pattern + ')' + /(?=[\s)])/.source
       )
-    } // Patterns in regular expressions
+    }
+
+    // Patterns in regular expressions
+
     // Symbol name. See https://www.gnu.org/software/emacs/manual/html_node/elisp/Symbol-Type.html
     // & and : are excluded as they are usually used for special purposes
-    var symbol = /(?!\d)[-+*/~!@$%^=<>{}\w]+/.source // symbol starting with & used in function arguments
-    var marker = '&' + symbol // Open parenthesis for look-behind
+    var symbol = /(?!\d)[-+*/~!@$%^=<>{}\w]+/.source
+    // symbol starting with & used in function arguments
+    var marker = '&' + symbol
+    // Open parenthesis for look-behind
     var par = '(\\()'
-    var endpar = '(?=\\))' // End the pattern with look-ahead space
+    var endpar = '(?=\\))'
+    // End the pattern with look-ahead space
     var space = '(?=\\s)'
     var nestedPar =
       /(?:[^()]|\((?:[^()]|\((?:[^()]|\((?:[^()]|\((?:[^()]|\([^()]*\))*\))*\))*\))*\))*/
@@ -37126,7 +42717,8 @@ function lisp(Prism) {
       },
       punctuation: [
         // open paren, brackets, and close paren
-        /(?:['`,]?\(|[)\[\]])/, // cons
+        /(?:['`,]?\(|[)\[\]])/,
+        // cons
         {
           pattern: /(\s)\.(?=\s)/,
           lookbehind: true
@@ -37189,15 +42781,20 @@ function lisp(Prism) {
 /*!***************************************************!*\
   !*** ./node_modules/refractor/lang/livescript.js ***!
   \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = livescript
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return livescript; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 livescript.displayName = 'livescript'
 livescript.aliases = []
+
+/** @param {Refractor} Prism */
 function livescript(Prism) {
   Prism.languages.livescript = {
     comment: [
@@ -37228,7 +42825,8 @@ function livescript(Prism) {
             'interpolation-punctuation': {
               pattern: /^#\{|\}$/,
               alias: 'variable'
-            } // See rest below
+            }
+            // See rest below
           }
         },
         string: /[\s\S]+/
@@ -37289,7 +42887,8 @@ function livescript(Prism) {
       {
         pattern: /( )\.(?= )/,
         lookbehind: true
-      }, // Full list, in order:
+      },
+      // Full list, in order:
       // .= .~ .. ...
       // .&. .^. .<<. .>>. .>>>.
       // := :: ::=
@@ -37328,15 +42927,20 @@ function livescript(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/llvm.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = llvm
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return llvm; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 llvm.displayName = 'llvm'
 llvm.aliases = []
+
+/** @param {Refractor} Prism */
 function llvm(Prism) {
   ;(function (Prism) {
     Prism.languages.llvm = {
@@ -37368,20 +42972,26 @@ function llvm(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/log.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = log
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return log; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 log.displayName = 'log'
 log.aliases = []
+
+/** @param {Refractor} Prism */
 function log(Prism) {
   // This is a language definition for generic log files.
   // Since there is no one log format, this language definition has to support all formats to some degree.
   //
   // Based on https://github.com/MTDL9/vim-log-highlighting
+
   Prism.languages.log = {
     string: {
       // Single-quoted strings must not be confused with plain text. E.g. Can't isn't Susan's Chris' toy
@@ -37505,15 +43115,20 @@ function log(Prism) {
 /*!************************************************!*\
   !*** ./node_modules/refractor/lang/lolcode.js ***!
   \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = lolcode
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return lolcode; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 lolcode.displayName = 'lolcode'
 lolcode.aliases = []
+
+/** @param {Refractor} Prism */
 function lolcode(Prism) {
   Prism.languages.lolcode = {
     comment: [/\bOBTW\s[\s\S]*?\sTLDR\b/, /\bBTW.+/],
@@ -37574,15 +43189,20 @@ function lolcode(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/lua.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = lua
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return lua; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 lua.displayName = 'lua'
 lua.aliases = []
+
+/** @param {Refractor} Prism */
 function lua(Prism) {
   Prism.languages.lua = {
     comment: /^#!.+|--(?:\[(=*)\[[\s\S]*?\]\1\]|.*)/m,
@@ -37616,15 +43236,20 @@ function lua(Prism) {
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/magma.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = magma
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return magma; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 magma.displayName = 'magma'
 magma.aliases = []
+
+/** @param {Refractor} Prism */
 function magma(Prism) {
   Prism.languages.magma = {
     output: {
@@ -37668,15 +43293,20 @@ function magma(Prism) {
 /*!*************************************************!*\
   !*** ./node_modules/refractor/lang/makefile.js ***!
   \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = makefile
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return makefile; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 makefile.displayName = 'makefile'
 makefile.aliases = []
+
+/** @param {Refractor} Prism */
 function makefile(Prism) {
   Prism.languages.makefile = {
     comment: {
@@ -37719,19 +43349,28 @@ function makefile(Prism) {
 /*!*************************************************!*\
   !*** ./node_modules/refractor/lang/markdown.js ***!
   \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return markdown; });
+/* harmony import */ var _markup_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./markup.js */ "./node_modules/refractor/lang/markup.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = markdown
 markdown.displayName = 'markdown'
 markdown.aliases = ['md']
+
+/** @param {Refractor} Prism */
 function markdown(Prism) {
+  Prism.register(_markup_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   ;(function (Prism) {
     // Allow only one line break
     var inner = /(?:\\.|[^\\\n\r]|(?:\n|\r\n?)(?![\r\n]))/.source
+
     /**
      * This function is intended for the creation of the bold or italic pattern.
      *
@@ -37850,6 +43489,7 @@ function markdown(Prism) {
         {
           // title 1
           // =======
+
           // title 2
           // -------
           pattern: /\S.*(?:\n|\r\n?)(?:==+|--+)(?=[ \t]*$)/m,
@@ -37908,6 +43548,7 @@ function markdown(Prism) {
       bold: {
         // **strong**
         // __strong__
+
         // allow one nested instance of italic text using the same delimiter
         pattern: createInline(
           /\b__(?:(?!_)<inner>|_(?:(?!_)<inner>)+_)+__\b|\*\*(?:(?!\*)<inner>|\*(?:(?!\*)<inner>)+\*)+\*\*/
@@ -37927,6 +43568,7 @@ function markdown(Prism) {
       italic: {
         // *em*
         // _em_
+
         // allow one nested instance of bold text using the same delimiter
         pattern: createInline(
           /\b_(?:(?!_)<inner>|__(?:(?!_)<inner>)+__)+_\b|\*(?:(?!\*)<inner>|\*\*(?:(?!\*)<inner>)+\*\*)+\*/
@@ -38001,14 +43643,14 @@ function markdown(Prism) {
       }
     })
     ;['url', 'bold', 'italic', 'strike'].forEach(function (token) {
-      ;['url', 'bold', 'italic', 'strike', 'code-snippet'].forEach(function (
-        inside
-      ) {
-        if (token !== inside) {
-          Prism.languages.markdown[token].inside.content.inside[inside] =
-            Prism.languages.markdown[inside]
+      ;['url', 'bold', 'italic', 'strike', 'code-snippet'].forEach(
+        function (inside) {
+          if (token !== inside) {
+            Prism.languages.markdown[token].inside.content.inside[inside] =
+              Prism.languages.markdown[inside]
+          }
         }
-      })
+      )
     })
     Prism.hooks.add('after-tokenize', function (env) {
       if (env.language !== 'markdown' && env.language !== 'md') {
@@ -38024,6 +43666,7 @@ function markdown(Prism) {
             walkTokens(token.content)
             continue
           }
+
           /*
            * Add the correct `language-xxxx` class to this code block. Keep in mind that the `code-language` token
            * is optional. But the grammar is defined so that there is only one case we have to handle:
@@ -38037,6 +43680,7 @@ function markdown(Prism) {
            *     <span class="punctuation">```</span>
            * ];
            */
+
           var codeLang = token.content[1]
           var codeBlock = token.content[3]
           if (
@@ -38047,12 +43691,16 @@ function markdown(Prism) {
             typeof codeLang.content === 'string'
           ) {
             // this might be a language that Prism does not support
+
             // do some replacements to support C++, C#, and F#
             var lang = codeLang.content
               .replace(/\b#/g, 'sharp')
-              .replace(/\b\+\+/g, 'pp') // only use the first word
+              .replace(/\b\+\+/g, 'pp')
+            // only use the first word
             lang = (/[a-z][\w-]*/i.exec(lang) || [''])[0].toLowerCase()
-            var alias = 'language-' + lang // add alias
+            var alias = 'language-' + lang
+
+            // add alias
             if (!codeBlock.alias) {
               codeBlock.alias = [alias]
             } else if (typeof codeBlock.alias === 'string') {
@@ -38099,14 +43747,11 @@ function markdown(Prism) {
           })
         }
       } else {
-        env.content = Prism.highlight(
-          textContent(env.content.value),
-          grammar,
-          codeLang
-        )
+        env.content = Prism.highlight(env.content.value, grammar, codeLang)
       }
     })
     var tagPattern = RegExp(Prism.languages.markup.tag.pattern.source, 'gi')
+
     /**
      * A list of known entity names.
      *
@@ -38119,8 +43764,11 @@ function markdown(Prism) {
       lt: '<',
       gt: '>',
       quot: '"'
-    } // IE 11 doesn't support `String.fromCodePoint`
+    }
+
+    // IE 11 doesn't support `String.fromCodePoint`
     var fromCodePoint = String.fromCodePoint || String.fromCharCode
+
     /**
      * Returns the text content of a given HTML source code string.
      *
@@ -38129,7 +43777,9 @@ function markdown(Prism) {
      */
     function textContent(html) {
       // remove all tags
-      var text = html.replace(tagPattern, '') // decode known entities
+      var text = html.replace(tagPattern, '')
+
+      // decode known entities
       text = text.replace(/&(\w{1,8}|#x?[\da-f]{1,8});/gi, function (m, code) {
         code = code.toLowerCase()
         if (code[0] === '#') {
@@ -38144,7 +43794,9 @@ function markdown(Prism) {
           var known = KNOWN_ENTITY_NAMES[code]
           if (known) {
             return known
-          } // unable to decode
+          }
+
+          // unable to decode
           return m
         }
       })
@@ -38161,16 +43813,24 @@ function markdown(Prism) {
 /*!**********************************************************!*\
   !*** ./node_modules/refractor/lang/markup-templating.js ***!
   \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return markupTemplating; });
+/* harmony import */ var _markup_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./markup.js */ "./node_modules/refractor/lang/markup.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = markupTemplating
-markupTemplating.displayName = 'markupTemplating'
+markupTemplating.displayName = 'markup-templating'
 markupTemplating.aliases = []
+
+/** @param {Refractor} Prism */
 function markupTemplating(Prism) {
+  Prism.register(_markup_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   ;(function (Prism) {
     /**
      * Returns the placeholder for the given language id and index.
@@ -38205,16 +43865,22 @@ function markupTemplating(Prism) {
               return match
             }
             var i = tokenStack.length
-            var placeholder // Check for existing strings
+            var placeholder
+
+            // Check for existing strings
             while (
               env.code.indexOf((placeholder = getPlaceholder(language, i))) !==
               -1
             ) {
               ++i
-            } // Create a sparse array
+            }
+
+            // Create a sparse array
             tokenStack[i] = match
             return placeholder
-          }) // Switch the grammar to markup
+          })
+
+          // Switch the grammar to markup
           env.grammar = Prism.languages.markup
         }
       },
@@ -38228,7 +43894,9 @@ function markupTemplating(Prism) {
         value: function (env, language) {
           if (env.language !== language || !env.tokenStack) {
             return
-          } // Switch the grammar back
+          }
+
+          // Switch the grammar back
           env.grammar = Prism.languages[language]
           var j = 0
           var keys = Object.keys(env.tokenStack)
@@ -38273,8 +43941,7 @@ function markupTemplating(Prism) {
                   }
                 }
               } else if (
-                token.content
-                /* && typeof token.content !== 'string' */
+                token.content /* && typeof token.content !== 'string' */
               ) {
                 walkTokens(token.content)
               }
@@ -38295,15 +43962,20 @@ function markupTemplating(Prism) {
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/markup.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = markup
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return markup; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 markup.displayName = 'markup'
-markup.aliases = ['html', 'mathml', 'svg', 'xml', 'ssml', 'atom', 'rss']
+markup.aliases = ['atom', 'html', 'mathml', 'rss', 'ssml', 'svg', 'xml']
+
+/** @param {Refractor} Prism */
 function markup(Prism) {
   Prism.languages.markup = {
     comment: {
@@ -38360,7 +44032,10 @@ function markup(Prism) {
                 pattern: /^=/,
                 alias: 'attr-equals'
               },
-              /"|'/
+              {
+                pattern: /^(\s*)["']|["']$/,
+                lookbehind: true
+              }
             ]
           }
         },
@@ -38384,7 +44059,9 @@ function markup(Prism) {
   Prism.languages.markup['tag'].inside['attr-value'].inside['entity'] =
     Prism.languages.markup['entity']
   Prism.languages.markup['doctype'].inside['internal-subset'].inside =
-    Prism.languages.markup // Plugin to make entity title show the real entity, idea by Roman Komarov
+    Prism.languages.markup
+
+  // Plugin to make entity title show the real entity, idea by Roman Komarov
   Prism.hooks.add('wrap', function (env) {
     if (env.type === 'entity') {
       env.attributes['title'] = env.content.value.replace(/&amp;/, '&')
@@ -38497,19 +44174,97 @@ function markup(Prism) {
 
 /***/ }),
 
+/***/ "./node_modules/refractor/lang/mata.js":
+/*!*********************************************!*\
+  !*** ./node_modules/refractor/lang/mata.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return mata; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
+mata.displayName = 'mata'
+mata.aliases = []
+
+/** @param {Refractor} Prism */
+function mata(Prism) {
+  // https://www.stata.com/manuals/m.pdf
+
+  ;(function (Prism) {
+    var orgType = /\b(?:(?:col|row)?vector|matrix|scalar)\b/.source
+    var type =
+      /\bvoid\b|<org>|\b(?:complex|numeric|pointer(?:\s*\([^()]*\))?|real|string|(?:class|struct)\s+\w+|transmorphic)(?:\s*<org>)?/.source.replace(
+        /<org>/g,
+        orgType
+      )
+    Prism.languages.mata = {
+      comment: {
+        pattern:
+          /\/\/.*|\/\*(?:[^*/]|\*(?!\/)|\/(?!\*)|\/\*(?:[^*]|\*(?!\/))*\*\/)*\*\//,
+        greedy: true
+      },
+      string: {
+        pattern: /"[^"\r\n]*"|[‘`']".*?"[’`']/,
+        greedy: true
+      },
+      'class-name': {
+        pattern: /(\b(?:class|extends|struct)\s+)\w+(?=\s*(?:\{|\bextends\b))/,
+        lookbehind: true
+      },
+      type: {
+        pattern: RegExp(type),
+        alias: 'class-name',
+        inside: {
+          punctuation: /[()]/,
+          keyword: /\b(?:class|function|struct|void)\b/
+        }
+      },
+      keyword:
+        /\b(?:break|class|continue|do|else|end|extends|external|final|for|function|goto|if|pragma|private|protected|public|return|static|struct|unset|unused|version|virtual|while)\b/,
+      constant: /\bNULL\b/,
+      number: {
+        pattern:
+          /(^|[^\w.])(?:\d+(?:\.\d+)?(?:e[+-]?\d+)?|\d[a-f0-9]*(?:\.[a-f0-9]+)?x[+-]?\d+)i?(?![\w.])/i,
+        lookbehind: true
+      },
+      missing: {
+        pattern: /(^|[^\w.])(?:\.[a-z]?)(?![\w.])/,
+        lookbehind: true,
+        alias: 'symbol'
+      },
+      function: /\b[a-z_]\w*(?=\s*\()/i,
+      operator: /\.\.|\+\+|--|&&|\|\||:?(?:[!=<>]=|[+\-*/^<>&|:])|[!?=\\#’`']/,
+      punctuation: /[()[\]{},;.]/
+    }
+  })(Prism)
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/refractor/lang/matlab.js":
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/matlab.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = matlab
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return matlab; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 matlab.displayName = 'matlab'
 matlab.aliases = []
+
+/** @param {Refractor} Prism */
 function matlab(Prism) {
   Prism.languages.matlab = {
     comment: [/%\{[\s\S]*?\}%/, /%.+/],
@@ -38534,15 +44289,20 @@ function matlab(Prism) {
 /*!**************************************************!*\
   !*** ./node_modules/refractor/lang/maxscript.js ***!
   \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = maxscript
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return maxscript; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 maxscript.displayName = 'maxscript'
 maxscript.aliases = []
+
+/** @param {Refractor} Prism */
 function maxscript(Prism) {
   ;(function (Prism) {
     var keywords =
@@ -38564,11 +44324,14 @@ function maxscript(Prism) {
       },
       'function-call': {
         pattern: RegExp(
-          '((?:' + // start of line
+          '((?:' +
+            // start of line
             (/^/.source +
-              '|' + // operators and other language constructs
+              '|' +
+              // operators and other language constructs
               /[;=<>+\-*/^({\[]/.source +
-              '|' + // keywords as part of statements
+              '|' +
+              // keywords as part of statements
               /\b(?:and|by|case|catch|collect|do|else|if|in|not|or|return|then|to|try|where|while|with)\b/
                 .source) +
             ')[ \t]*)' +
@@ -38576,14 +44339,17 @@ function maxscript(Prism) {
             keywords.source +
             ')' +
             /[a-z_]\w*\b/.source +
-            '(?=[ \t]*(?:' + // variable
+            '(?=[ \t]*(?:' +
+            // variable
             ('(?!' +
               keywords.source +
               ')' +
               /[a-z_]/.source +
-              '|' + // number
+              '|' +
+              // number
               /\d|-\.?\d/.source +
-              '|' + // other expressions or literals
+              '|' +
+              // other expressions or literals
               /[({'"$@#?]/.source) +
             '))',
           'im'
@@ -38635,27 +44401,39 @@ function maxscript(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/mel.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = mel
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return mel; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 mel.displayName = 'mel'
 mel.aliases = []
+
+/** @param {Refractor} Prism */
 function mel(Prism) {
   Prism.languages.mel = {
-    comment: /\/\/.*/,
+    comment: {
+      pattern: /\/\/.*|\/\*[\s\S]*?\*\//,
+      greedy: true
+    },
     code: {
-      pattern: /`(?:\\.|[^\\`\r\n])*`/,
+      pattern: /`(?:\\.|[^\\`])*`/,
       greedy: true,
       alias: 'italic',
       inside: {
         delimiter: {
           pattern: /^`|`$/,
           alias: 'punctuation'
-        } // See rest below
+        },
+        statement: {
+          pattern: /[\s\S]+/,
+          inside: null // see below
+        }
       }
     },
     string: {
@@ -38670,24 +44448,20 @@ function mel(Prism) {
     },
     keyword:
       /\b(?:break|case|continue|default|do|else|float|for|global|if|in|int|matrix|proc|return|string|switch|vector|while)\b/,
-    function:
-      /\b\w+(?=\()|\b(?:CBG|HfAddAttractorToAS|HfAssignAS|HfBuildEqualMap|HfBuildFurFiles|HfBuildFurImages|HfCancelAFR|HfConnectASToHF|HfCreateAttractor|HfDeleteAS|HfEditAS|HfPerformCreateAS|HfRemoveAttractorFromAS|HfSelectAttached|HfSelectAttractors|HfUnAssignAS|Mayatomr|about|abs|addAttr|addAttributeEditorNodeHelp|addDynamic|addNewShelfTab|addPP|addPanelCategory|addPrefixToName|advanceToNextDrivenKey|affectedNet|affects|aimConstraint|air|alias|aliasAttr|align|alignCtx|alignCurve|alignSurface|allViewFit|ambientLight|angle|angleBetween|animCone|animCurveEditor|animDisplay|animView|annotate|appendStringArray|applicationName|applyAttrPreset|applyTake|arcLenDimContext|arcLengthDimension|arclen|arrayMapper|art3dPaintCtx|artAttrCtx|artAttrPaintVertexCtx|artAttrSkinPaintCtx|artAttrTool|artBuildPaintMenu|artFluidAttrCtx|artPuttyCtx|artSelectCtx|artSetPaintCtx|artUserPaintCtx|assignCommand|assignInputDevice|assignViewportFactories|attachCurve|attachDeviceAttr|attachSurface|attrColorSliderGrp|attrCompatibility|attrControlGrp|attrEnumOptionMenu|attrEnumOptionMenuGrp|attrFieldGrp|attrFieldSliderGrp|attrNavigationControlGrp|attrPresetEditWin|attributeExists|attributeInfo|attributeMenu|attributeQuery|autoKeyframe|autoPlace|bakeClip|bakeFluidShading|bakePartialHistory|bakeResults|bakeSimulation|basename|basenameEx|batchRender|bessel|bevel|bevelPlus|binMembership|bindSkin|blend2|blendShape|blendShapeEditor|blendShapePanel|blendTwoAttr|blindDataType|boneLattice|boundary|boxDollyCtx|boxZoomCtx|bufferCurve|buildBookmarkMenu|buildKeyframeMenu|button|buttonManip|cacheFile|cacheFileCombine|cacheFileMerge|cacheFileTrack|camera|cameraView|canCreateManip|canvas|capitalizeString|catch|catchQuiet|ceil|changeSubdivComponentDisplayLevel|changeSubdivRegion|channelBox|character|characterMap|characterOutlineEditor|characterize|chdir|checkBox|checkBoxGrp|checkDefaultRenderGlobals|choice|circle|circularFillet|clamp|clear|clearCache|clip|clipEditor|clipEditorCurrentTimeCtx|clipSchedule|clipSchedulerOutliner|clipTrimBefore|closeCurve|closeSurface|cluster|cmdFileOutput|cmdScrollFieldExecuter|cmdScrollFieldReporter|cmdShell|coarsenSubdivSelectionList|collision|color|colorAtPoint|colorEditor|colorIndex|colorIndexSliderGrp|colorSliderButtonGrp|colorSliderGrp|columnLayout|commandEcho|commandLine|commandPort|compactHairSystem|componentEditor|compositingInterop|computePolysetVolume|condition|cone|confirmDialog|connectAttr|connectControl|connectDynamic|connectJoint|connectionInfo|constrain|constrainValue|constructionHistory|container|containsMultibyte|contextInfo|control|convertFromOldLayers|convertIffToPsd|convertLightmap|convertSolidTx|convertTessellation|convertUnit|copyArray|copyFlexor|copyKey|copySkinWeights|cos|cpButton|cpCache|cpClothSet|cpCollision|cpConstraint|cpConvClothToMesh|cpForces|cpGetSolverAttr|cpPanel|cpProperty|cpRigidCollisionFilter|cpSeam|cpSetEdit|cpSetSolverAttr|cpSolver|cpSolverTypes|cpTool|cpUpdateClothUVs|createDisplayLayer|createDrawCtx|createEditor|createLayeredPsdFile|createMotionField|createNewShelf|createNode|createRenderLayer|createSubdivRegion|cross|crossProduct|ctxAbort|ctxCompletion|ctxEditMode|ctxTraverse|currentCtx|currentTime|currentTimeCtx|currentUnit|curve|curveAddPtCtx|curveCVCtx|curveEPCtx|curveEditorCtx|curveIntersect|curveMoveEPCtx|curveOnSurface|curveSketchCtx|cutKey|cycleCheck|cylinder|dagPose|date|defaultLightListCheckBox|defaultNavigation|defineDataServer|defineVirtualDevice|deformer|deg_to_rad|delete|deleteAttr|deleteShadingGroupsAndMaterials|deleteShelfTab|deleteUI|deleteUnusedBrushes|delrandstr|detachCurve|detachDeviceAttr|detachSurface|deviceEditor|devicePanel|dgInfo|dgdirty|dgeval|dgtimer|dimWhen|directKeyCtx|directionalLight|dirmap|dirname|disable|disconnectAttr|disconnectJoint|diskCache|displacementToPoly|displayAffected|displayColor|displayCull|displayLevelOfDetail|displayPref|displayRGBColor|displaySmoothness|displayStats|displayString|displaySurface|distanceDimContext|distanceDimension|doBlur|dolly|dollyCtx|dopeSheetEditor|dot|dotProduct|doubleProfileBirailSurface|drag|dragAttrContext|draggerContext|dropoffLocator|duplicate|duplicateCurve|duplicateSurface|dynCache|dynControl|dynExport|dynExpression|dynGlobals|dynPaintEditor|dynParticleCtx|dynPref|dynRelEdPanel|dynRelEditor|dynamicLoad|editAttrLimits|editDisplayLayerGlobals|editDisplayLayerMembers|editRenderLayerAdjustment|editRenderLayerGlobals|editRenderLayerMembers|editor|editorTemplate|effector|emit|emitter|enableDevice|encodeString|endString|endsWith|env|equivalent|equivalentTol|erf|error|eval|evalDeferred|evalEcho|event|exactWorldBoundingBox|exclusiveLightCheckBox|exec|executeForEachObject|exists|exp|expression|expressionEditorListen|extendCurve|extendSurface|extrude|fcheck|fclose|feof|fflush|fgetline|fgetword|file|fileBrowserDialog|fileDialog|fileExtension|fileInfo|filetest|filletCurve|filter|filterCurve|filterExpand|filterStudioImport|findAllIntersections|findAnimCurves|findKeyframe|findMenuItem|findRelatedSkinCluster|finder|firstParentOf|fitBspline|flexor|floatEq|floatField|floatFieldGrp|floatScrollBar|floatSlider|floatSlider2|floatSliderButtonGrp|floatSliderGrp|floor|flow|fluidCacheInfo|fluidEmitter|fluidVoxelInfo|flushUndo|fmod|fontDialog|fopen|formLayout|format|fprint|frameLayout|fread|freeFormFillet|frewind|fromNativePath|fwrite|gamma|gauss|geometryConstraint|getApplicationVersionAsFloat|getAttr|getClassification|getDefaultBrush|getFileList|getFluidAttr|getInputDeviceRange|getMayaPanelTypes|getModifiers|getPanel|getParticleAttr|getPluginResource|getenv|getpid|glRender|glRenderEditor|globalStitch|gmatch|goal|gotoBindPose|grabColor|gradientControl|gradientControlNoAttr|graphDollyCtx|graphSelectContext|graphTrackCtx|gravity|grid|gridLayout|group|groupObjectsByName|hardenPointCurve|hardware|hardwareRenderPanel|headsUpDisplay|headsUpMessage|help|helpLine|hermite|hide|hilite|hitTest|hotBox|hotkey|hotkeyCheck|hsv_to_rgb|hudButton|hudSlider|hudSliderButton|hwReflectionMap|hwRender|hwRenderLoad|hyperGraph|hyperPanel|hyperShade|hypot|iconTextButton|iconTextCheckBox|iconTextRadioButton|iconTextRadioCollection|iconTextScrollList|iconTextStaticLabel|ikHandle|ikHandleCtx|ikHandleDisplayScale|ikSolver|ikSplineHandleCtx|ikSystem|ikSystemInfo|ikfkDisplayMethod|illustratorCurves|image|imfPlugins|inheritTransform|insertJoint|insertJointCtx|insertKeyCtx|insertKnotCurve|insertKnotSurface|instance|instanceable|instancer|intField|intFieldGrp|intScrollBar|intSlider|intSliderGrp|interToUI|internalVar|intersect|iprEngine|isAnimCurve|isConnected|isDirty|isParentOf|isSameObject|isTrue|isValidObjectName|isValidString|isValidUiName|isolateSelect|itemFilter|itemFilterAttr|itemFilterRender|itemFilterType|joint|jointCluster|jointCtx|jointDisplayScale|jointLattice|keyTangent|keyframe|keyframeOutliner|keyframeRegionCurrentTimeCtx|keyframeRegionDirectKeyCtx|keyframeRegionDollyCtx|keyframeRegionInsertKeyCtx|keyframeRegionMoveKeyCtx|keyframeRegionScaleKeyCtx|keyframeRegionSelectKeyCtx|keyframeRegionSetKeyCtx|keyframeRegionTrackCtx|keyframeStats|lassoContext|lattice|latticeDeformKeyCtx|launch|launchImageEditor|layerButton|layeredShaderPort|layeredTexturePort|layout|layoutDialog|lightList|lightListEditor|lightListPanel|lightlink|lineIntersection|linearPrecision|linstep|listAnimatable|listAttr|listCameras|listConnections|listDeviceAttachments|listHistory|listInputDeviceAxes|listInputDeviceButtons|listInputDevices|listMenuAnnotation|listNodeTypes|listPanelCategories|listRelatives|listSets|listTransforms|listUnselected|listerEditor|loadFluid|loadNewShelf|loadPlugin|loadPluginLanguageResources|loadPrefObjects|localizedPanelLabel|lockNode|loft|log|longNameOf|lookThru|ls|lsThroughFilter|lsType|lsUI|mag|makeIdentity|makeLive|makePaintable|makeRoll|makeSingleSurface|makeTubeOn|makebot|manipMoveContext|manipMoveLimitsCtx|manipOptions|manipRotateContext|manipRotateLimitsCtx|manipScaleContext|manipScaleLimitsCtx|marker|match|max|memory|menu|menuBarLayout|menuEditor|menuItem|menuItemToShelf|menuSet|menuSetPref|messageLine|min|minimizeApp|mirrorJoint|modelCurrentTimeCtx|modelEditor|modelPanel|mouse|movIn|movOut|move|moveIKtoFK|moveKeyCtx|moveVertexAlongDirection|multiProfileBirailSurface|mute|nParticle|nameCommand|nameField|namespace|namespaceInfo|newPanelItems|newton|nodeCast|nodeIconButton|nodeOutliner|nodePreset|nodeType|noise|nonLinear|normalConstraint|normalize|nurbsBoolean|nurbsCopyUVSet|nurbsCube|nurbsEditUV|nurbsPlane|nurbsSelect|nurbsSquare|nurbsToPoly|nurbsToPolygonsPref|nurbsToSubdiv|nurbsToSubdivPref|nurbsUVSet|nurbsViewDirectionVector|objExists|objectCenter|objectLayer|objectType|objectTypeUI|obsoleteProc|oceanNurbsPreviewPlane|offsetCurve|offsetCurveOnSurface|offsetSurface|openGLExtension|openMayaPref|optionMenu|optionMenuGrp|optionVar|orbit|orbitCtx|orientConstraint|outlinerEditor|outlinerPanel|overrideModifier|paintEffectsDisplay|pairBlend|palettePort|paneLayout|panel|panelConfiguration|panelHistory|paramDimContext|paramDimension|paramLocator|parent|parentConstraint|particle|particleExists|particleInstancer|particleRenderInfo|partition|pasteKey|pathAnimation|pause|pclose|percent|performanceOptions|pfxstrokes|pickWalk|picture|pixelMove|planarSrf|plane|play|playbackOptions|playblast|plugAttr|plugNode|pluginInfo|pluginResourceUtil|pointConstraint|pointCurveConstraint|pointLight|pointMatrixMult|pointOnCurve|pointOnSurface|pointPosition|poleVectorConstraint|polyAppend|polyAppendFacetCtx|polyAppendVertex|polyAutoProjection|polyAverageNormal|polyAverageVertex|polyBevel|polyBlendColor|polyBlindData|polyBoolOp|polyBridgeEdge|polyCacheMonitor|polyCheck|polyChipOff|polyClipboard|polyCloseBorder|polyCollapseEdge|polyCollapseFacet|polyColorBlindData|polyColorDel|polyColorPerVertex|polyColorSet|polyCompare|polyCone|polyCopyUV|polyCrease|polyCreaseCtx|polyCreateFacet|polyCreateFacetCtx|polyCube|polyCut|polyCutCtx|polyCylinder|polyCylindricalProjection|polyDelEdge|polyDelFacet|polyDelVertex|polyDuplicateAndConnect|polyDuplicateEdge|polyEditUV|polyEditUVShell|polyEvaluate|polyExtrudeEdge|polyExtrudeFacet|polyExtrudeVertex|polyFlipEdge|polyFlipUV|polyForceUV|polyGeoSampler|polyHelix|polyInfo|polyInstallAction|polyLayoutUV|polyListComponentConversion|polyMapCut|polyMapDel|polyMapSew|polyMapSewMove|polyMergeEdge|polyMergeEdgeCtx|polyMergeFacet|polyMergeFacetCtx|polyMergeUV|polyMergeVertex|polyMirrorFace|polyMoveEdge|polyMoveFacet|polyMoveFacetUV|polyMoveUV|polyMoveVertex|polyNormal|polyNormalPerVertex|polyNormalizeUV|polyOptUvs|polyOptions|polyOutput|polyPipe|polyPlanarProjection|polyPlane|polyPlatonicSolid|polyPoke|polyPrimitive|polyPrism|polyProjection|polyPyramid|polyQuad|polyQueryBlindData|polyReduce|polySelect|polySelectConstraint|polySelectConstraintMonitor|polySelectCtx|polySelectEditCtx|polySeparate|polySetToFaceNormal|polySewEdge|polyShortestPathCtx|polySmooth|polySoftEdge|polySphere|polySphericalProjection|polySplit|polySplitCtx|polySplitEdge|polySplitRing|polySplitVertex|polyStraightenUVBorder|polySubdivideEdge|polySubdivideFacet|polyToSubdiv|polyTorus|polyTransfer|polyTriangulate|polyUVSet|polyUnite|polyWedgeFace|popen|popupMenu|pose|pow|preloadRefEd|print|progressBar|progressWindow|projFileViewer|projectCurve|projectTangent|projectionContext|projectionManip|promptDialog|propModCtx|propMove|psdChannelOutliner|psdEditTextureFile|psdExport|psdTextureFile|putenv|pwd|python|querySubdiv|quit|rad_to_deg|radial|radioButton|radioButtonGrp|radioCollection|radioMenuItemCollection|rampColorPort|rand|randomizeFollicles|randstate|rangeControl|readTake|rebuildCurve|rebuildSurface|recordAttr|recordDevice|redo|reference|referenceEdit|referenceQuery|refineSubdivSelectionList|refresh|refreshAE|registerPluginResource|rehash|reloadImage|removeJoint|removeMultiInstance|removePanelCategory|rename|renameAttr|renameSelectionList|renameUI|render|renderGlobalsNode|renderInfo|renderLayerButton|renderLayerParent|renderLayerPostProcess|renderLayerUnparent|renderManip|renderPartition|renderQualityNode|renderSettings|renderThumbnailUpdate|renderWindowEditor|renderWindowSelectContext|renderer|reorder|reorderDeformers|requires|reroot|resampleFluid|resetAE|resetPfxToPolyCamera|resetTool|resolutionNode|retarget|reverseCurve|reverseSurface|revolve|rgb_to_hsv|rigidBody|rigidSolver|roll|rollCtx|rootOf|rot|rotate|rotationInterpolation|roundConstantRadius|rowColumnLayout|rowLayout|runTimeCommand|runup|sampleImage|saveAllShelves|saveAttrPreset|saveFluid|saveImage|saveInitialState|saveMenu|savePrefObjects|savePrefs|saveShelf|saveToolSettings|scale|scaleBrushBrightness|scaleComponents|scaleConstraint|scaleKey|scaleKeyCtx|sceneEditor|sceneUIReplacement|scmh|scriptCtx|scriptEditorInfo|scriptJob|scriptNode|scriptTable|scriptToShelf|scriptedPanel|scriptedPanelType|scrollField|scrollLayout|sculpt|searchPathArray|seed|selLoadSettings|select|selectContext|selectCurveCV|selectKey|selectKeyCtx|selectKeyframeRegionCtx|selectMode|selectPref|selectPriority|selectType|selectedNodes|selectionConnection|separator|setAttr|setAttrEnumResource|setAttrMapping|setAttrNiceNameResource|setConstraintRestPosition|setDefaultShadingGroup|setDrivenKeyframe|setDynamic|setEditCtx|setEditor|setFluidAttr|setFocus|setInfinity|setInputDeviceMapping|setKeyCtx|setKeyPath|setKeyframe|setKeyframeBlendshapeTargetWts|setMenuMode|setNodeNiceNameResource|setNodeTypeFlag|setParent|setParticleAttr|setPfxToPolyCamera|setPluginResource|setProject|setStampDensity|setStartupMessage|setState|setToolTo|setUITemplate|setXformManip|sets|shadingConnection|shadingGeometryRelCtx|shadingLightRelCtx|shadingNetworkCompare|shadingNode|shapeCompare|shelfButton|shelfLayout|shelfTabLayout|shellField|shortNameOf|showHelp|showHidden|showManipCtx|showSelectionInTitle|showShadingGroupAttrEditor|showWindow|sign|simplify|sin|singleProfileBirailSurface|size|sizeBytes|skinCluster|skinPercent|smoothCurve|smoothTangentSurface|smoothstep|snap2to2|snapKey|snapMode|snapTogetherCtx|snapshot|soft|softMod|softModCtx|sort|sound|soundControl|source|spaceLocator|sphere|sphrand|spotLight|spotLightPreviewPort|spreadSheetEditor|spring|sqrt|squareSurface|srtContext|stackTrace|startString|startsWith|stitchAndExplodeShell|stitchSurface|stitchSurfacePoints|strcmp|stringArrayCatenate|stringArrayContains|stringArrayCount|stringArrayInsertAtIndex|stringArrayIntersector|stringArrayRemove|stringArrayRemoveAtIndex|stringArrayRemoveDuplicates|stringArrayRemoveExact|stringArrayToString|stringToStringArray|strip|stripPrefixFromName|stroke|subdAutoProjection|subdCleanTopology|subdCollapse|subdDuplicateAndConnect|subdEditUV|subdListComponentConversion|subdMapCut|subdMapSewMove|subdMatchTopology|subdMirror|subdToBlind|subdToPoly|subdTransferUVsToCache|subdiv|subdivCrease|subdivDisplaySmoothness|substitute|substituteAllString|substituteGeometry|substring|surface|surfaceSampler|surfaceShaderList|swatchDisplayPort|switchTable|symbolButton|symbolCheckBox|sysFile|system|tabLayout|tan|tangentConstraint|texLatticeDeformContext|texManipContext|texMoveContext|texMoveUVShellContext|texRotateContext|texScaleContext|texSelectContext|texSelectShortestPathCtx|texSmudgeUVContext|texWinToolCtx|text|textCurves|textField|textFieldButtonGrp|textFieldGrp|textManip|textScrollList|textToShelf|textureDisplacePlane|textureHairColor|texturePlacementContext|textureWindow|threadCount|threePointArcCtx|timeControl|timePort|timerX|toNativePath|toggle|toggleAxis|toggleWindowVisibility|tokenize|tokenizeList|tolerance|tolower|toolButton|toolCollection|toolDropped|toolHasOptions|toolPropertyWindow|torus|toupper|trace|track|trackCtx|transferAttributes|transformCompare|transformLimits|translator|trim|trunc|truncateFluidCache|truncateHairCache|tumble|tumbleCtx|turbulence|twoPointArcCtx|uiRes|uiTemplate|unassignInputDevice|undo|undoInfo|ungroup|uniform|unit|unloadPlugin|untangleUV|untitledFileName|untrim|upAxis|updateAE|userCtx|uvLink|uvSnapshot|validateShelfName|vectorize|view2dToolCtx|viewCamera|viewClipPlane|viewFit|viewHeadOn|viewLookAt|viewManip|viewPlace|viewSet|visor|volumeAxis|vortex|waitCursor|warning|webBrowser|webBrowserPrefs|whatIs|window|windowPref|wire|wireContext|workspace|wrinkle|wrinkleContext|writeTake|xbmLangPathList|xform)\b/,
-    operator: [
-      /\+[+=]?|-[-=]?|&&|\|\||[<>]=|[*\/!=]=?|[%^]/,
-      {
-        // We don't want to match <<
-        pattern: /(^|[^<])<(?!<)/,
-        lookbehind: true
-      },
-      {
-        // We don't want to match >>
-        pattern: /(^|[^>])>(?!>)/,
-        lookbehind: true
-      }
-    ],
-    punctuation: /<<|>>|[.,:;?\[\](){}]/
+    function: {
+      pattern:
+        /((?:^|[{;])[ \t]*)[a-z_]\w*\b(?!\s*(?:\.(?!\.)|[[{=]))|\b[a-z_]\w*(?=[ \t]*\()/im,
+      lookbehind: true,
+      greedy: true
+    },
+    'tensor-punctuation': {
+      pattern: /<<|>>/,
+      alias: 'punctuation'
+    },
+    operator: /\+[+=]?|-[-=]?|&&|\|\||[<>]=?|[*\/!=]=?|[%^]/,
+    punctuation: /[.,:;?\[\](){}]/
   }
-  Prism.languages.mel['code'].inside.rest = Prism.languages.mel
+  Prism.languages.mel['code'].inside['statement'].inside = Prism.languages.mel
 }
 
 
@@ -38697,15 +44471,20 @@ function mel(Prism) {
 /*!************************************************!*\
   !*** ./node_modules/refractor/lang/mermaid.js ***!
   \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = mermaid
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return mermaid; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 mermaid.displayName = 'mermaid'
 mermaid.aliases = []
+
+/** @param {Refractor} Prism */
 function mermaid(Prism) {
   Prism.languages.mermaid = {
     comment: {
@@ -38824,19 +44603,140 @@ function mermaid(Prism) {
 
 /***/ }),
 
+/***/ "./node_modules/refractor/lang/metafont.js":
+/*!*************************************************!*\
+  !*** ./node_modules/refractor/lang/metafont.js ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return metafont; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
+metafont.displayName = 'metafont'
+metafont.aliases = []
+
+/** @param {Refractor} Prism */
+function metafont(Prism) {
+  Prism.languages.metafont = {
+    // Syntax of METAFONT with the added (public) elements of PlainMETAFONT. Except for internal quantities they are expected to be rarely redefined. Freely inspired by the syntax of Christophe Grandsire for the Crimson Editor.
+    comment: {
+      pattern: /%.*/,
+      greedy: true
+    },
+    string: {
+      pattern: /"[^\r\n"]*"/,
+      greedy: true
+    },
+    number: /\d*\.?\d+/,
+    boolean: /\b(?:false|true)\b/,
+    punctuation: [
+      /[,;()]/,
+      {
+        pattern: /(^|[^{}])(?:\{|\})(?![{}])/,
+        lookbehind: true
+      },
+      {
+        pattern: /(^|[^[])\[(?!\[)/,
+        lookbehind: true
+      },
+      {
+        pattern: /(^|[^\]])\](?!\])/,
+        lookbehind: true
+      }
+    ],
+    constant: [
+      {
+        pattern: /(^|[^!?])\?\?\?(?![!?])/,
+        lookbehind: true
+      },
+      {
+        pattern: /(^|[^/*\\])(?:\\|\\\\)(?![/*\\])/,
+        lookbehind: true
+      },
+      /\b(?:_|blankpicture|bp|cc|cm|dd|ditto|down|eps|epsilon|fullcircle|halfcircle|identity|in|infinity|left|mm|nullpen|nullpicture|origin|pc|penrazor|penspeck|pensquare|penstroke|proof|pt|quartercircle|relax|right|smoke|unitpixel|unitsquare|up)\b/
+    ],
+    quantity: {
+      pattern:
+        /\b(?:autorounding|blacker|boundarychar|charcode|chardp|chardx|chardy|charext|charht|charic|charwd|currentwindow|day|designsize|displaying|fillin|fontmaking|granularity|hppp|join_radius|month|o_correction|pausing|pen_(?:bot|lft|rt|top)|pixels_per_inch|proofing|showstopping|smoothing|time|tolerance|tracingcapsules|tracingchoices|tracingcommands|tracingedges|tracingequations|tracingmacros|tracingonline|tracingoutput|tracingpens|tracingrestores|tracingspecs|tracingstats|tracingtitles|turningcheck|vppp|warningcheck|xoffset|year|yoffset)\b/,
+      alias: 'keyword'
+    },
+    command: {
+      pattern:
+        /\b(?:addto|batchmode|charlist|cull|display|errhelp|errmessage|errorstopmode|everyjob|extensible|fontdimen|headerbyte|inner|interim|let|ligtable|message|newinternal|nonstopmode|numspecial|openwindow|outer|randomseed|save|scrollmode|shipout|show|showdependencies|showstats|showtoken|showvariable|special)\b/,
+      alias: 'builtin'
+    },
+    operator: [
+      {
+        pattern:
+          /(^|[^>=<:|])(?:<|<=|=|=:|\|=:|\|=:>|=:\|>|=:\||\|=:\||\|=:\|>|\|=:\|>>|>|>=|:|:=|<>|::|\|\|:)(?![>=<:|])/,
+        lookbehind: true
+      },
+      {
+        pattern: /(^|[^+-])(?:\+|\+\+|-{1,3}|\+-\+)(?![+-])/,
+        lookbehind: true
+      },
+      {
+        pattern: /(^|[^/*\\])(?:\*|\*\*|\/)(?![/*\\])/,
+        lookbehind: true
+      },
+      {
+        pattern: /(^|[^.])(?:\.{2,3})(?!\.)/,
+        lookbehind: true
+      },
+      {
+        pattern: /(^|[^@#&$])&(?![@#&$])/,
+        lookbehind: true
+      },
+      /\b(?:and|not|or)\b/
+    ],
+    macro: {
+      pattern:
+        /\b(?:abs|beginchar|bot|byte|capsule_def|ceiling|change_width|clear_pen_memory|clearit|clearpen|clearxy|counterclockwise|cullit|cutdraw|cutoff|decr|define_blacker_pixels|define_corrected_pixels|define_good_x_pixels|define_good_y_pixels|define_horizontal_corrected_pixels|define_pixels|define_whole_blacker_pixels|define_whole_pixels|define_whole_vertical_blacker_pixels|define_whole_vertical_pixels|dir|direction|directionpoint|div|dotprod|downto|draw|drawdot|endchar|erase|fill|filldraw|fix_units|flex|font_coding_scheme|font_extra_space|font_identifier|font_normal_shrink|font_normal_space|font_normal_stretch|font_quad|font_size|font_slant|font_x_height|gfcorners|gobble|gobbled|good\.(?:bot|lft|rt|top|x|y)|grayfont|hide|hround|imagerules|incr|interact|interpath|intersectionpoint|inverse|italcorr|killtext|labelfont|labels|lft|loggingall|lowres_fix|makegrid|makelabel(?:\.(?:bot|lft|rt|top)(?:\.nodot)?)?|max|min|mod|mode_def|mode_setup|nodisplays|notransforms|numtok|openit|penlabels|penpos|pickup|proofoffset|proofrule|proofrulethickness|range|reflectedabout|rotatedabout|rotatedaround|round|rt|savepen|screenchars|screenrule|screenstrokes|shipit|showit|slantfont|softjoin|solve|stop|superellipse|tensepath|thru|titlefont|top|tracingall|tracingnone|undraw|undrawdot|unfill|unfilldraw|upto|vround)\b/,
+      alias: 'function'
+    },
+    builtin:
+      /\b(?:ASCII|angle|char|cosd|decimal|directiontime|floor|hex|intersectiontimes|jobname|known|length|makepath|makepen|mexp|mlog|normaldeviate|oct|odd|pencircle|penoffset|point|postcontrol|precontrol|reverse|rotated|sind|sqrt|str|subpath|substring|totalweight|turningnumber|uniformdeviate|unknown|xpart|xxpart|xypart|ypart|yxpart|yypart)\b/,
+    keyword:
+      /\b(?:also|at|atleast|begingroup|charexists|contour|controls|curl|cycle|def|delimiters|doublepath|dropping|dump|else|elseif|end|enddef|endfor|endgroup|endinput|exitif|exitunless|expandafter|fi|for|forever|forsuffixes|from|if|input|inwindow|keeping|kern|of|primarydef|quote|readstring|scaled|scantokens|secondarydef|shifted|skipto|slanted|step|tension|tertiarydef|to|transformed|until|vardef|withpen|withweight|xscaled|yscaled|zscaled)\b/,
+    type: {
+      pattern:
+        /\b(?:boolean|expr|numeric|pair|path|pen|picture|primary|secondary|string|suffix|tertiary|text|transform)\b/,
+      alias: 'property'
+    },
+    variable: {
+      pattern:
+        /(^|[^@#&$])(?:@#|#@|#|@)(?![@#&$])|\b(?:aspect_ratio|currentpen|currentpicture|currenttransform|d|extra_beginchar|extra_endchar|extra_setup|h|localfont|mag|mode|screen_cols|screen_rows|w|whatever|x|y|z)\b/,
+      lookbehind: true
+    }
+  }
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/refractor/lang/mizar.js":
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/mizar.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = mizar
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return mizar; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 mizar.displayName = 'mizar'
 mizar.aliases = []
+
+/** @param {Refractor} Prism */
 function mizar(Prism) {
   Prism.languages.mizar = {
     comment: /::.+/,
@@ -38860,16 +44760,24 @@ function mizar(Prism) {
 /*!************************************************!*\
   !*** ./node_modules/refractor/lang/mongodb.js ***!
   \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return mongodb; });
+/* harmony import */ var _javascript_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./javascript.js */ "./node_modules/refractor/lang/javascript.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = mongodb
 mongodb.displayName = 'mongodb'
 mongodb.aliases = []
+
+/** @param {Refractor} Prism */
 function mongodb(Prism) {
+  Prism.register(_javascript_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   ;(function (Prism) {
     var operators = [
       // query and projection
@@ -38907,7 +44815,8 @@ function mongodb(Prism) {
       '$comment',
       '$elemMatch',
       '$meta',
-      '$slice', // update
+      '$slice',
+      // update
       '$currentDate',
       '$inc',
       '$min',
@@ -38926,7 +44835,8 @@ function mongodb(Prism) {
       '$position',
       '$slice',
       '$sort',
-      '$bit', // aggregation pipeline stages
+      '$bit',
+      // aggregation pipeline stages
       '$addFields',
       '$bucket',
       '$bucketAuto',
@@ -38958,7 +44868,8 @@ function mongodb(Prism) {
       '$unionWith',
       '$unset',
       '$unwind',
-      '$setWindowFields', // aggregation pipeline operators
+      '$setWindowFields',
+      // aggregation pipeline operators
       '$abs',
       '$accumulator',
       '$acos',
@@ -39098,7 +45009,8 @@ function mongodb(Prism) {
       '$rand',
       '$sampleRate',
       '$setField',
-      '$unsetField', // aggregation pipeline query modifiers
+      '$unsetField',
+      // aggregation pipeline query modifiers
       '$comment',
       '$explain',
       '$hint',
@@ -39170,15 +45082,20 @@ function mongodb(Prism) {
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/monkey.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = monkey
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return monkey; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 monkey.displayName = 'monkey'
 monkey.aliases = []
+
+/** @param {Refractor} Prism */
 function monkey(Prism) {
   Prism.languages.monkey = {
     comment: {
@@ -39220,15 +45137,20 @@ function monkey(Prism) {
 /*!***************************************************!*\
   !*** ./node_modules/refractor/lang/moonscript.js ***!
   \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = moonscript
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return moonscript; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 moonscript.displayName = 'moonscript'
 moonscript.aliases = ['moon']
+
+/** @param {Refractor} Prism */
 function moonscript(Prism) {
   Prism.languages.moonscript = {
     comment: /--.*/,
@@ -39262,7 +45184,8 @@ function moonscript(Prism) {
       {
         pattern: /(\b(?:class|extends)[ \t]+)\w+/,
         lookbehind: true
-      }, // class-like names start with a capital letter
+      },
+      // class-like names start with a capital letter
       /\b[A-Z]\w*/
     ],
     keyword:
@@ -39298,17 +45221,23 @@ function moonscript(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/n1ql.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = n1ql
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return n1ql; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 n1ql.displayName = 'n1ql'
 n1ql.aliases = []
+
+/** @param {Refractor} Prism */
 function n1ql(Prism) {
   // https://docs.couchbase.com/server/current/n1ql/n1ql-language-reference/index.html
+
   Prism.languages.n1ql = {
     comment: {
       pattern: /\/\*[\s\S]*?(?:$|\*\/)|--.*/,
@@ -39342,16 +45271,24 @@ function n1ql(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/n4js.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return n4js; });
+/* harmony import */ var _javascript_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./javascript.js */ "./node_modules/refractor/lang/javascript.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = n4js
 n4js.displayName = 'n4js'
 n4js.aliases = ['n4jsd']
+
+/** @param {Refractor} Prism */
 function n4js(Prism) {
+  Prism.register(_javascript_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   Prism.languages.n4js = Prism.languages.extend('javascript', {
     // Keywords from N4JS language spec: https://numberfour.github.io/n4js/spec/N4JSSpec.html
     keyword:
@@ -39374,15 +45311,20 @@ function n4js(Prism) {
 /*!********************************************************!*\
   !*** ./node_modules/refractor/lang/nand2tetris-hdl.js ***!
   \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = nand2tetrisHdl
-nand2tetrisHdl.displayName = 'nand2tetrisHdl'
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return nand2tetrisHdl; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
+nand2tetrisHdl.displayName = 'nand2tetris-hdl'
 nand2tetrisHdl.aliases = []
+
+/** @param {Refractor} Prism */
 function nand2tetrisHdl(Prism) {
   Prism.languages['nand2tetris-hdl'] = {
     comment: /\/\/.*|\/\*[\s\S]*?(?:\*\/|$)/,
@@ -39402,15 +45344,20 @@ function nand2tetrisHdl(Prism) {
 /*!***************************************************!*\
   !*** ./node_modules/refractor/lang/naniscript.js ***!
   \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = naniscript
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return naniscript; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 naniscript.displayName = 'naniscript'
-naniscript.aliases = []
+naniscript.aliases = ['nani']
+
+/** @param {Refractor} Prism */
 function naniscript(Prism) {
   ;(function (Prism) {
     var expressionDef = /\{[^\r\n\[\]{}]*\}/
@@ -39522,7 +45469,9 @@ function naniscript(Prism) {
       }
     }
     Prism.languages.nani = Prism.languages['naniscript']
+
     /** @typedef {InstanceType<import("./prism-core")["Token"]>} Token */
+
     /**
      * This hook is used to validate generic-text tokens for balanced brackets.
      * Mark token as bad-line when contains not balanced brackets: {},[]
@@ -39540,6 +45489,7 @@ function naniscript(Prism) {
         }
       })
     })
+
     /**
      * @param {string} input
      * @returns {boolean}
@@ -39560,6 +45510,7 @@ function naniscript(Prism) {
       }
       return stack.length === 0
     }
+
     /**
      * @param {string | Token | (string | Token)[]} token
      * @returns {string}
@@ -39583,15 +45534,20 @@ function naniscript(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/nasm.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = nasm
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return nasm; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 nasm.displayName = 'nasm'
 nasm.aliases = []
+
+/** @param {Refractor} Prism */
 function nasm(Prism) {
   Prism.languages.nasm = {
     comment: /;.*$/m,
@@ -39628,15 +45584,20 @@ function nasm(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/neon.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = neon
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return neon; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 neon.displayName = 'neon'
 neon.aliases = []
+
+/** @param {Refractor} Prism */
 function neon(Prism) {
   Prism.languages.neon = {
     comment: {
@@ -39652,7 +45613,7 @@ function neon(Prism) {
     key: {
       pattern: /(^|[[{(,\s])[^,:=[\]{}()'"\s]+(?=\s*:(?:$|[\]}),\s])|\s*=)/,
       lookbehind: true,
-      alias: 'atrule'
+      alias: 'property'
     },
     number: {
       pattern:
@@ -39691,15 +45652,20 @@ function neon(Prism) {
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/nevod.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = nevod
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return nevod; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 nevod.displayName = 'nevod'
 nevod.aliases = []
+
+/** @param {Refractor} Prism */
 function nevod(Prism) {
   Prism.languages.nevod = {
     comment: /\/\/.*|(?:\/\*[\s\S]*?(?:\*\/|$))/,
@@ -39839,15 +45805,20 @@ function nevod(Prism) {
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/nginx.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = nginx
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return nginx; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 nginx.displayName = 'nginx'
 nginx.aliases = []
+
+/** @param {Refractor} Prism */
 function nginx(Prism) {
   ;(function (Prism) {
     var variable =
@@ -39887,6 +45858,7 @@ function nginx(Prism) {
             greedy: true
           },
           // other patterns
+
           boolean: {
             pattern: /(\s)(?:off|on)(?!\S)/,
             lookbehind: true
@@ -39910,15 +45882,20 @@ function nginx(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/nim.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = nim
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return nim; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 nim.displayName = 'nim'
 nim.aliases = []
+
+/** @param {Refractor} Prism */
 function nim(Prism) {
   Prism.languages.nim = {
     comment: {
@@ -39976,15 +45953,20 @@ function nim(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/nix.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = nix
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return nix; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 nix.displayName = 'nix'
 nix.aliases = []
+
+/** @param {Refractor} Prism */
 function nix(Prism) {
   Prism.languages.nix = {
     comment: {
@@ -40033,15 +46015,20 @@ function nix(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/nsis.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = nsis
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return nsis; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 nsis.displayName = 'nsis'
 nsis.aliases = []
+
+/** @param {Refractor} Prism */
 function nsis(Prism) {
   /**
    * Original by Jan T. Sott (http://github.com/idleberg)
@@ -40060,7 +46047,7 @@ function nsis(Prism) {
     },
     keyword: {
       pattern:
-        /(^[\t ]*)(?:Abort|Add(?:BrandingImage|Size)|AdvSplash|Allow(?:RootDirInstall|SkipFiles)|AutoCloseWindow|BG(?:Font|Gradient|Image)|Banner|BrandingText|BringToFront|CRCCheck|Call(?:InstDLL)?|Caption|ChangeUI|CheckBitmap|ClearErrors|CompletedText|ComponentText|CopyFiles|Create(?:Directory|Font|ShortCut)|Delete(?:INISec|INIStr|RegKey|RegValue)?|Detail(?:Print|sButtonText)|Dialer|Dir(?:Text|Var|Verify)|EnableWindow|Enum(?:RegKey|RegValue)|Exch|Exec(?:Shell(?:Wait)?|Wait)?|ExpandEnvStrings|File(?:BufSize|Close|ErrorText|Open|Read|ReadByte|ReadUTF16LE|ReadWord|Seek|Write|WriteByte|WriteUTF16LE|WriteWord)?|Find(?:Close|First|Next|Window)|FlushINI|Get(?:CurInstType|CurrentAddress|DLLVersion(?:Local)?|DlgItem|ErrorLevel|FileTime(?:Local)?|FullPathName|Function(?:Address|End)?|InstDirError|LabelAddress|TempFileName)|Goto|HideWindow|Icon|If(?:Abort|Errors|FileExists|RebootFlag|Silent)|InitPluginsDir|InstProgressFlags|Inst(?:Type(?:GetText|SetText)?)|Install(?:ButtonText|Colors|Dir(?:RegKey)?)|Int(?:64|Ptr)?CmpU?|Int(?:64)?Fmt|Int(?:Ptr)?Op|IsWindow|Lang(?:DLL|String)|License(?:BkColor|Data|ForceSelection|LangString|Text)|LoadLanguageFile|LockWindow|Log(?:Set|Text)|Manifest(?:DPIAware|SupportedOS)|Math|MessageBox|MiscButtonText|NSISdl|Name|Nop|OutFile|PE(?:DllCharacteristics|SubsysVer)|Page(?:Callbacks)?|Pop|Push|Quit|RMDir|Read(?:EnvStr|INIStr|RegDWORD|RegStr)|Reboot|RegDLL|Rename|RequestExecutionLevel|ReserveFile|Return|SearchPath|Section(?:End|GetFlags|GetInstTypes|GetSize|GetText|Group|In|SetFlags|SetInstTypes|SetSize|SetText)?|SendMessage|Set(?:AutoClose|BrandingImage|Compress|Compressor(?:DictSize)?|CtlColors|CurInstType|DatablockOptimize|DateSave|Details(?:Print|View)|ErrorLevel|Errors|FileAttributes|Font|OutPath|Overwrite|PluginUnload|RebootFlag|RegView|ShellVarContext|Silent)|Show(?:InstDetails|UninstDetails|Window)|Silent(?:Install|UnInstall)|Sleep|SpaceTexts|Splash|StartMenu|Str(?:CmpS?|Cpy|Len)|SubCaption|System|UnRegDLL|Unicode|UninstPage|Uninstall(?:ButtonText|Caption|Icon|SubCaption|Text)|UserInfo|VI(?:AddVersionKey|FileVersion|ProductVersion)|VPatch|Var|WindowIcon|Write(?:INIStr|Reg(?:Bin|DWORD|ExpandStr|MultiStr|None|Str)|Uninstaller)|XPStyle|ns(?:Dialogs|Exec))\b/m,
+        /(^[\t ]*)(?:Abort|Add(?:BrandingImage|Size)|AdvSplash|Allow(?:RootDirInstall|SkipFiles)|AutoCloseWindow|BG(?:Font|Gradient|Image)|Banner|BrandingText|BringToFront|CRCCheck|Call(?:InstDLL)?|Caption|ChangeUI|CheckBitmap|ClearErrors|CompletedText|ComponentText|CopyFiles|Create(?:Directory|Font|ShortCut)|Delete(?:INISec|INIStr|RegKey|RegValue)?|Detail(?:Print|sButtonText)|Dialer|Dir(?:Text|Var|Verify)|EnableWindow|Enum(?:RegKey|RegValue)|Exch|Exec(?:Shell(?:Wait)?|Wait)?|ExpandEnvStrings|File(?:BufSize|Close|ErrorText|Open|Read|ReadByte|ReadUTF16LE|ReadWord|Seek|Write|WriteByte|WriteUTF16LE|WriteWord)?|Find(?:Close|First|Next|Window)|FlushINI|Get(?:CurInstType|CurrentAddress|DLLVersion(?:Local)?|DlgItem|ErrorLevel|FileTime(?:Local)?|FullPathName|Function(?:Address|End)?|InstDirError|KnownFolderPath|LabelAddress|TempFileName|WinVer)|Goto|HideWindow|Icon|If(?:Abort|Errors|FileExists|RebootFlag|RtlLanguage|ShellVarContextAll|Silent)|InitPluginsDir|InstProgressFlags|Inst(?:Type(?:GetText|SetText)?)|Install(?:ButtonText|Colors|Dir(?:RegKey)?)|Int(?:64|Ptr)?CmpU?|Int(?:64)?Fmt|Int(?:Ptr)?Op|IsWindow|Lang(?:DLL|String)|License(?:BkColor|Data|ForceSelection|LangString|Text)|LoadLanguageFile|LockWindow|Log(?:Set|Text)|Manifest(?:DPIAware|SupportedOS)|Math|MessageBox|MiscButtonText|NSISdl|Name|Nop|OutFile|PE(?:DllCharacteristics|SubsysVer)|Page(?:Callbacks)?|Pop|Push|Quit|RMDir|Read(?:EnvStr|INIStr|RegDWORD|RegStr)|Reboot|RegDLL|Rename|RequestExecutionLevel|ReserveFile|Return|SearchPath|Section(?:End|GetFlags|GetInstTypes|GetSize|GetText|Group|In|SetFlags|SetInstTypes|SetSize|SetText)?|SendMessage|Set(?:AutoClose|BrandingImage|Compress|Compressor(?:DictSize)?|CtlColors|CurInstType|DatablockOptimize|DateSave|Details(?:Print|View)|ErrorLevel|Errors|FileAttributes|Font|OutPath|Overwrite|PluginUnload|RebootFlag|RegView|ShellVarContext|Silent)|Show(?:InstDetails|UninstDetails|Window)|Silent(?:Install|UnInstall)|Sleep|SpaceTexts|Splash|StartMenu|Str(?:CmpS?|Cpy|Len)|SubCaption|System|Target|UnRegDLL|Unicode|UninstPage|Uninstall(?:ButtonText|Caption|Icon|SubCaption|Text)|UserInfo|VI(?:AddVersionKey|FileVersion|ProductVersion)|VPatch|Var|WindowIcon|Write(?:INIStr|Reg(?:Bin|DWORD|ExpandStr|MultiStr|None|Str)|Uninstaller)|XPStyle|ns(?:Dialogs|Exec))\b/m,
       lookbehind: true
     },
     property:
@@ -40085,17 +46072,24 @@ function nsis(Prism) {
 /*!***************************************************!*\
   !*** ./node_modules/refractor/lang/objectivec.js ***!
   \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return objectivec; });
+/* harmony import */ var _c_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./c.js */ "./node_modules/refractor/lang/c.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorC = __webpack_require__(/*! ./c.js */ "./node_modules/refractor/lang/c.js")
-module.exports = objectivec
 objectivec.displayName = 'objectivec'
 objectivec.aliases = ['objc']
+
+/** @param {Refractor} Prism */
 function objectivec(Prism) {
-  Prism.register(refractorC)
+  Prism.register(_c_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   Prism.languages.objectivec = Prism.languages.extend('c', {
     string: {
       pattern: /@?"(?:\\(?:\r\n|[\s\S])|[^"\\\r\n])*"/,
@@ -40116,17 +46110,23 @@ function objectivec(Prism) {
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/ocaml.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = ocaml
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ocaml; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 ocaml.displayName = 'ocaml'
 ocaml.aliases = []
+
+/** @param {Refractor} Prism */
 function ocaml(Prism) {
   // https://ocaml.org/manual/lex.html
+
   Prism.languages.ocaml = {
     comment: {
       pattern: /\(\*[\s\S]*?\*\)/,
@@ -40148,8 +46148,10 @@ function ocaml(Prism) {
     ],
     number: [
       // binary and octal
-      /\b(?:0b[01][01_]*|0o[0-7][0-7_]*)\b/i, // hexadecimal
-      /\b0x[a-f0-9][a-f0-9_]*(?:\.[a-f0-9_]*)?(?:p[+-]?\d[\d_]*)?(?!\w)/i, // decimal
+      /\b(?:0b[01][01_]*|0o[0-7][0-7_]*)\b/i,
+      // hexadecimal
+      /\b0x[a-f0-9][a-f0-9_]*(?:\.[a-f0-9_]*)?(?:p[+-]?\d[\d_]*)?(?!\w)/i,
+      // decimal
       /\b\d[\d_]*(?:\.[\d_]*)?(?:e[+-]?\d[\d_]*)?(?!\w)/i
     ],
     directive: {
@@ -40187,21 +46189,140 @@ function ocaml(Prism) {
 
 /***/ }),
 
+/***/ "./node_modules/refractor/lang/odin.js":
+/*!*********************************************!*\
+  !*** ./node_modules/refractor/lang/odin.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return odin; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
+odin.displayName = 'odin'
+odin.aliases = []
+
+/** @param {Refractor} Prism */
+function odin(Prism) {
+  ;(function (Prism) {
+    var escapes =
+      /\\(?:["'\\abefnrtv]|0[0-7]{2}|U[\dA-Fa-f]{6}|u[\dA-Fa-f]{4}|x[\dA-Fa-f]{2})/
+    Prism.languages.odin = {
+      /**
+       * The current implementation supports only 1 level of nesting.
+       *
+       * @author Michael Schmidt
+       * @author edukisto
+       */
+      comment: [
+        {
+          pattern:
+            /\/\*(?:[^/*]|\/(?!\*)|\*(?!\/)|\/\*(?:\*(?!\/)|[^*])*(?:\*\/|$))*(?:\*\/|$)/,
+          greedy: true
+        },
+        {
+          pattern: /#![^\n\r]*/,
+          greedy: true
+        },
+        {
+          pattern: /\/\/[^\n\r]*/,
+          greedy: true
+        }
+      ],
+      /**
+       * Should be found before strings because of '"'"- and '`'`-like sequences.
+       */
+      char: {
+        pattern: /'(?:\\(?:.|[0Uux][0-9A-Fa-f]{1,6})|[^\n\r'\\])'/,
+        greedy: true,
+        inside: {
+          symbol: escapes
+        }
+      },
+      string: [
+        {
+          pattern: /`[^`]*`/,
+          greedy: true
+        },
+        {
+          pattern: /"(?:\\.|[^\n\r"\\])*"/,
+          greedy: true,
+          inside: {
+            symbol: escapes
+          }
+        }
+      ],
+      directive: {
+        pattern: /#\w+/,
+        alias: 'property'
+      },
+      number:
+        /\b0(?:b[01_]+|d[\d_]+|h_*(?:(?:(?:[\dA-Fa-f]_*){8}){1,2}|(?:[\dA-Fa-f]_*){4})|o[0-7_]+|x[\dA-F_a-f]+|z[\dAB_ab]+)\b|(?:\b\d+(?:\.(?!\.)\d*)?|\B\.\d+)(?:[Ee][+-]?\d*)?[ijk]?(?!\w)/,
+      discard: {
+        pattern: /\b_\b/,
+        alias: 'keyword'
+      },
+      'procedure-definition': {
+        pattern: /\b\w+(?=[ \t]*(?::\s*){2}proc\b)/,
+        alias: 'function'
+      },
+      keyword:
+        /\b(?:asm|auto_cast|bit_set|break|case|cast|context|continue|defer|distinct|do|dynamic|else|enum|fallthrough|for|foreign|if|import|in|map|matrix|not_in|or_else|or_return|package|proc|return|struct|switch|transmute|typeid|union|using|when|where)\b/,
+      /**
+       * false, nil, true can be used as procedure names. "_" and keywords can't.
+       */
+      'procedure-name': {
+        pattern: /\b\w+(?=[ \t]*\()/,
+        alias: 'function'
+      },
+      boolean: /\b(?:false|nil|true)\b/,
+      'constant-parameter-sign': {
+        pattern: /\$/,
+        alias: 'important'
+      },
+      undefined: {
+        pattern: /---/,
+        alias: 'operator'
+      },
+      arrow: {
+        pattern: /->/,
+        alias: 'punctuation'
+      },
+      operator: /\+\+|--|\.\.[<=]?|(?:&~|[-!*+/=~]|[%&<>|]{1,2})=?|[?^]/,
+      punctuation: /[(),.:;@\[\]{}]/
+    }
+  })(Prism)
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/refractor/lang/opencl.js":
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/opencl.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return opencl; });
+/* harmony import */ var _c_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./c.js */ "./node_modules/refractor/lang/c.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorC = __webpack_require__(/*! ./c.js */ "./node_modules/refractor/lang/c.js")
-module.exports = opencl
 opencl.displayName = 'opencl'
 opencl.aliases = []
+
+/** @param {Refractor} Prism */
 function opencl(Prism) {
-  Prism.register(refractorC)
+  Prism.register(_c_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   ;(function (Prism) {
     /* OpenCL kernel language */
     Prism.languages.opencl = Prism.languages.extend('c', {
@@ -40253,8 +46374,11 @@ function opencl(Prism) {
         alias: 'function'
       }
     }
+
     /* OpenCL host API */
-    Prism.languages.insertBefore('c', 'keyword', attributes) // C++ includes everything from the OpenCL C host API plus the classes defined in cl2.h
+    Prism.languages.insertBefore('c', 'keyword', attributes)
+
+    // C++ includes everything from the OpenCL C host API plus the classes defined in cl2.h
     if (Prism.languages.cpp) {
       // Extracted from doxygen class list http://github.khronos.org/OpenCL-CLHPP/annotated.html
       attributes['type-opencl-host-cpp'] = {
@@ -40274,17 +46398,23 @@ function opencl(Prism) {
 /*!*************************************************!*\
   !*** ./node_modules/refractor/lang/openqasm.js ***!
   \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = openqasm
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return openqasm; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 openqasm.displayName = 'openqasm'
 openqasm.aliases = ['qasm']
+
+/** @param {Refractor} Prism */
 function openqasm(Prism) {
   // https://qiskit.github.io/openqasm/grammar/index.html
+
   Prism.languages.openqasm = {
     comment: /\/\*[\s\S]*?\*\/|\/\/.*/,
     string: {
@@ -40315,15 +46445,20 @@ function openqasm(Prism) {
 /*!*******************************************!*\
   !*** ./node_modules/refractor/lang/oz.js ***!
   \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = oz
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return oz; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 oz.displayName = 'oz'
 oz.aliases = []
+
+/** @param {Refractor} Prism */
 function oz(Prism) {
   Prism.languages.oz = {
     comment: {
@@ -40365,15 +46500,20 @@ function oz(Prism) {
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/parigp.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = parigp
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return parigp; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 parigp.displayName = 'parigp'
 parigp.aliases = []
+
+/** @param {Refractor} Prism */
 function parigp(Prism) {
   Prism.languages.parigp = {
     comment: /\/\*[\s\S]*?\*\/|\\\\.*/,
@@ -40437,16 +46577,24 @@ function parigp(Prism) {
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/parser.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return parser; });
+/* harmony import */ var _markup_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./markup.js */ "./node_modules/refractor/lang/markup.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = parser
 parser.displayName = 'parser'
 parser.aliases = []
+
+/** @param {Refractor} Prism */
 function parser(Prism) {
+  Prism.register(_markup_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   ;(function (Prism) {
     var parser = (Prism.languages.parser = Prism.languages.extend('markup', {
       keyword: {
@@ -40532,20 +46680,27 @@ function parser(Prism) {
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/pascal.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = pascal
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return pascal; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 pascal.displayName = 'pascal'
 pascal.aliases = ['objectpascal']
+
+/** @param {Refractor} Prism */
 function pascal(Prism) {
   // Based on Free Pascal
+
   /* TODO
 Support inline asm ?
 */
+
   Prism.languages.pascal = {
     directive: {
       pattern: /\{\$[\s\S]*?\}/,
@@ -40593,7 +46748,8 @@ Support inline asm ?
     ],
     number: [
       // Hexadecimal, octal and binary
-      /(?:[&%]\d+|\$[a-f\d]+)/i, // Decimal
+      /(?:[&%]\d+|\$[a-f\d]+)/i,
+      // Decimal
       /\b\d+(?:\.\d+)?(?:e[+-]?\d+)?/i
     ],
     operator: [
@@ -40621,18 +46777,24 @@ Support inline asm ?
 /*!**************************************************!*\
   !*** ./node_modules/refractor/lang/pascaligo.js ***!
   \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = pascaligo
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return pascaligo; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 pascaligo.displayName = 'pascaligo'
 pascaligo.aliases = []
+
+/** @param {Refractor} Prism */
 function pascaligo(Prism) {
   ;(function (Prism) {
     // Pascaligo is a layer 2 smart contract language for the tezos blockchain
+
     var braces = /\((?:[^()]|\((?:[^()]|\([^()]*\))*\))*\)/.source
     var type = /(?:\b\w+(?:<braces>)?|<braces>)/.source.replace(
       /<braces>/g,
@@ -40695,7 +46857,8 @@ function pascaligo(Prism) {
       function: /\b\w+(?=\s*\()/,
       number: [
         // Hexadecimal, octal and binary
-        /%[01]+|&[0-7]+|\$[a-f\d]+/i, // Decimal
+        /%[01]+|&[0-7]+|\$[a-f\d]+/i,
+        // Decimal
         /\b\d+(?:\.\d+)?(?:e[+-]?\d+)?(?:mtz|n)?/i
       ],
       operator:
@@ -40725,15 +46888,20 @@ function pascaligo(Prism) {
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/pcaxis.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = pcaxis
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return pcaxis; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 pcaxis.displayName = 'pcaxis'
 pcaxis.aliases = ['px']
+
+/** @param {Refractor} Prism */
 function pcaxis(Prism) {
   Prism.languages.pcaxis = {
     string: /"[^"]*"/,
@@ -40798,23 +46966,31 @@ function pcaxis(Prism) {
 /*!***************************************************!*\
   !*** ./node_modules/refractor/lang/peoplecode.js ***!
   \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = peoplecode
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return peoplecode; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 peoplecode.displayName = 'peoplecode'
 peoplecode.aliases = ['pcode']
+
+/** @param {Refractor} Prism */
 function peoplecode(Prism) {
   Prism.languages.peoplecode = {
     comment: RegExp(
       [
         // C-style multiline comments
-        /\/\*[\s\S]*?\*\//.source, // REM comments
-        /\bREM[^;]*;/.source, // Nested <* *> comments
-        /<\*(?:[^<*]|\*(?!>)|<(?!\*)|<\*(?:(?!\*>)[\s\S])*\*>)*\*>/.source, // /+ +/ comments
+        /\/\*[\s\S]*?\*\//.source,
+        // REM comments
+        /\bREM[^;]*;/.source,
+        // Nested <* *> comments
+        /<\*(?:[^<*]|\*(?!>)|<(?!\*)|<\*(?:(?!\*>)[\s\S])*\*>)*\*>/.source,
+        // /+ +/ comments
         /\/\+[\s\S]*?\+\//.source
       ].join('|')
     ),
@@ -40858,15 +47034,20 @@ function peoplecode(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/perl.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = perl
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return perl; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 perl.displayName = 'perl'
 perl.aliases = []
+
+/** @param {Refractor} Prism */
 function perl(Prism) {
   ;(function (Prism) {
     var brackets =
@@ -40894,9 +47075,11 @@ function perl(Prism) {
               '(?:' +
               [
                 // q/.../
-                /([^a-zA-Z0-9\s{(\[<])(?:(?!\1)[^\\]|\\[\s\S])*\1/.source, // q a...a
+                /([^a-zA-Z0-9\s{(\[<])(?:(?!\1)[^\\]|\\[\s\S])*\1/.source,
+                // q a...a
                 // eslint-disable-next-line regexp/strict
-                /([a-zA-Z0-9])(?:(?!\2)[^\\]|\\[\s\S])*\2/.source, // q(...)
+                /([a-zA-Z0-9])(?:(?!\2)[^\\]|\\[\s\S])*\2/.source,
+                // q(...)
                 // q{...}
                 // q[...]
                 // q<...>
@@ -40905,11 +47088,13 @@ function perl(Prism) {
               ')'
           ),
           greedy: true
-        }, // "...", `...`
+        },
+        // "...", `...`
         {
           pattern: /("|`)(?:(?!\1)[^\\]|\\[\s\S])*\1/,
           greedy: true
-        }, // '...'
+        },
+        // '...'
         // FIXME Multi-line single-quoted strings are not supported as they would break variables containing '
         {
           pattern: /'(?:[^'\\\r\n]|\\.)*'/,
@@ -40923,9 +47108,11 @@ function perl(Prism) {
               '(?:' +
               [
                 // m/.../
-                /([^a-zA-Z0-9\s{(\[<])(?:(?!\1)[^\\]|\\[\s\S])*\1/.source, // m a...a
+                /([^a-zA-Z0-9\s{(\[<])(?:(?!\1)[^\\]|\\[\s\S])*\1/.source,
+                // m a...a
                 // eslint-disable-next-line regexp/strict
-                /([a-zA-Z0-9])(?:(?!\2)[^\\]|\\[\s\S])*\2/.source, // m(...)
+                /([a-zA-Z0-9])(?:(?!\2)[^\\]|\\[\s\S])*\2/.source,
+                // m(...)
                 // m{...}
                 // m[...]
                 // m<...>
@@ -40935,7 +47122,8 @@ function perl(Prism) {
               /[msixpodualngc]*/.source
           ),
           greedy: true
-        }, // The lookbehinds prevent -s from breaking
+        },
+        // The lookbehinds prevent -s from breaking
         {
           pattern: RegExp(
             /(^|[^-])\b(?:s|tr|y)(?![a-zA-Z0-9])\s*/.source +
@@ -40944,10 +47132,12 @@ function perl(Prism) {
                 // s/.../.../
                 // eslint-disable-next-line regexp/strict
                 /([^a-zA-Z0-9\s{(\[<])(?:(?!\2)[^\\]|\\[\s\S])*\2(?:(?!\2)[^\\]|\\[\s\S])*\2/
-                  .source, // s a...a...a
+                  .source,
+                // s a...a...a
                 // eslint-disable-next-line regexp/strict
                 /([a-zA-Z0-9])(?:(?!\3)[^\\]|\\[\s\S])*\3(?:(?!\3)[^\\]|\\[\s\S])*\3/
-                  .source, // s(...)(...)
+                  .source,
+                // s(...)(...)
                 // s{...}{...}
                 // s[...][...]
                 // s<...><...>
@@ -40959,7 +47149,8 @@ function perl(Prism) {
           ),
           lookbehind: true,
           greedy: true
-        }, // /.../
+        },
+        // /.../
         // The look-ahead tries to prevent two divisions on
         // the same line from being highlighted as regex.
         // This does not support multi-line regex.
@@ -40972,11 +47163,16 @@ function perl(Prism) {
       // FIXME Not sure about the handling of ::, ', and #
       variable: [
         // ${^POSTMATCH}
-        /[&*$@%]\{\^[A-Z]+\}/, // $^V
-        /[&*$@%]\^[A-Z_]/, // ${...}
-        /[&*$@%]#?(?=\{)/, // $foo
-        /[&*$@%]#?(?:(?:::)*'?(?!\d)[\w$]+(?![\w$]))+(?:::)*/, // $1
-        /[&*$@%]\d+/, // $_, @_, %!
+        /[&*$@%]\{\^[A-Z]+\}/,
+        // $^V
+        /[&*$@%]\^[A-Z_]/,
+        // ${...}
+        /[&*$@%]#?(?=\{)/,
+        // $foo
+        /[&*$@%]#?(?:(?:::)*'?(?!\d)[\w$]+(?![\w$]))+(?:::)*/,
+        // $1
+        /[&*$@%]\d+/,
+        // $_, @_, %!
         // The negative lookahead prevents from breaking the %= operator
         /(?!%=)[$@%][!"#$%&'()*+,\-.\/:;<=>?@[\\\]^_`{|}~]/
       ],
@@ -41012,17 +47208,24 @@ function perl(Prism) {
 /*!***************************************************!*\
   !*** ./node_modules/refractor/lang/php-extras.js ***!
   \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return phpExtras; });
+/* harmony import */ var _php_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./php.js */ "./node_modules/refractor/lang/php.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorPhp = __webpack_require__(/*! ./php.js */ "./node_modules/refractor/lang/php.js")
-module.exports = phpExtras
-phpExtras.displayName = 'phpExtras'
+phpExtras.displayName = 'php-extras'
 phpExtras.aliases = []
+
+/** @param {Refractor} Prism */
 function phpExtras(Prism) {
-  Prism.register(refractorPhp)
+  Prism.register(_php_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   Prism.languages.insertBefore('php', 'variable', {
     this: {
       pattern: /\$this\b/,
@@ -41047,17 +47250,24 @@ function phpExtras(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/php.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return php; });
+/* harmony import */ var _markup_templating_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./markup-templating.js */ "./node_modules/refractor/lang/markup-templating.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorMarkupTemplating = __webpack_require__(/*! ./markup-templating.js */ "./node_modules/refractor/lang/markup-templating.js")
-module.exports = php
 php.displayName = 'php'
 php.aliases = []
+
+/** @param {Refractor} Prism */
 function php(Prism) {
-  Prism.register(refractorMarkupTemplating)
+  Prism.register(_markup_templating_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   /**
    * Original by Aaron Harun: http://aahacreative.com/2012/07/31/php-syntax-highlighting-prism/
    * Modified by Miles Johnson: http://milesj.me
@@ -41132,7 +47342,7 @@ function php(Prism) {
         },
         {
           pattern:
-            /(\)\s*:\s*(?:\?\s*)?)\b(?:array(?!\s*\()|bool|callable|(?:false|null)(?=\s*\|)|float|int|iterable|mixed|object|self|static|string|void)\b/i,
+            /(\)\s*:\s*(?:\?\s*)?)\b(?:array(?!\s*\()|bool|callable|(?:false|null)(?=\s*\|)|float|int|iterable|mixed|never|object|self|static|string|void)\b/i,
           alias: 'return-type',
           greedy: true,
           lookbehind: true
@@ -41158,7 +47368,8 @@ function php(Prism) {
           // yield from
           pattern: /(\byield\s+)from\b/i,
           lookbehind: true
-        }, // `class` is always a keyword unlike other keywords
+        },
+        // `class` is always a keyword unlike other keywords
         /\bclass\b/i,
         {
           // https://www.php.net/manual/en/reserved.keywords.php
@@ -41166,12 +47377,12 @@ function php(Prism) {
           // keywords cannot be preceded by "->"
           // the complex lookbehind means `(?<!(?:->|::)\s*)`
           pattern:
-            /((?:^|[^\s>:]|(?:^|[^-])>|(?:^|[^:]):)\s*)\b(?:abstract|and|array|as|break|callable|case|catch|clone|const|continue|declare|default|die|do|echo|else|elseif|empty|enddeclare|endfor|endforeach|endif|endswitch|endwhile|enum|eval|exit|extends|final|finally|fn|for|foreach|function|global|goto|if|implements|include|include_once|instanceof|insteadof|interface|isset|list|match|namespace|new|or|parent|print|private|protected|public|require|require_once|return|self|static|switch|throw|trait|try|unset|use|var|while|xor|yield|__halt_compiler)\b/i,
+            /((?:^|[^\s>:]|(?:^|[^-])>|(?:^|[^:]):)\s*)\b(?:abstract|and|array|as|break|callable|case|catch|clone|const|continue|declare|default|die|do|echo|else|elseif|empty|enddeclare|endfor|endforeach|endif|endswitch|endwhile|enum|eval|exit|extends|final|finally|fn|for|foreach|function|global|goto|if|implements|include|include_once|instanceof|insteadof|interface|isset|list|match|namespace|never|new|or|parent|print|private|protected|public|readonly|require|require_once|return|self|static|switch|throw|trait|try|unset|use|var|while|xor|yield|__halt_compiler)\b/i,
           lookbehind: true
         }
       ],
       'argument-name': {
-        pattern: /([(,]\s+)\b[a-z_]\w*(?=\s*:(?!:))/i,
+        pattern: /([(,]\s*)\b[a-z_]\w*(?=\s*:(?!:))/i,
         lookbehind: true
       },
       'class-name': [
@@ -41415,19 +47626,27 @@ function php(Prism) {
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/phpdoc.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return phpdoc; });
+/* harmony import */ var _javadoclike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./javadoclike.js */ "./node_modules/refractor/lang/javadoclike.js");
+/* harmony import */ var _php_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./php.js */ "./node_modules/refractor/lang/php.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorPhp = __webpack_require__(/*! ./php.js */ "./node_modules/refractor/lang/php.js")
-var refractorJavadoclike = __webpack_require__(/*! ./javadoclike.js */ "./node_modules/refractor/lang/javadoclike.js")
-module.exports = phpdoc
+
 phpdoc.displayName = 'phpdoc'
 phpdoc.aliases = []
+
+/** @param {Refractor} Prism */
 function phpdoc(Prism) {
-  Prism.register(refractorPhp)
-  Prism.register(refractorJavadoclike)
+  Prism.register(_javadoclike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+  Prism.register(_php_js__WEBPACK_IMPORTED_MODULE_1__["default"])
   ;(function (Prism) {
     var typeExpression = /(?:\b[a-zA-Z]\w*|[|\\[\]])+/.source
     Prism.languages.phpdoc = Prism.languages.extend('javadoclike', {
@@ -41463,21 +47682,165 @@ function phpdoc(Prism) {
 
 /***/ }),
 
+/***/ "./node_modules/refractor/lang/plant-uml.js":
+/*!**************************************************!*\
+  !*** ./node_modules/refractor/lang/plant-uml.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return plantUml; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
+plantUml.displayName = 'plant-uml'
+plantUml.aliases = ['plantuml']
+
+/** @param {Refractor} Prism */
+function plantUml(Prism) {
+  ;(function (Prism) {
+    var variable = /\$\w+|%[a-z]+%/
+    var arrowAttr = /\[[^[\]]*\]/.source
+    var arrowDirection = /(?:[drlu]|do|down|le|left|ri|right|up)/.source
+    var arrowBody =
+      '(?:-+' +
+      arrowDirection +
+      '-+|\\.+' +
+      arrowDirection +
+      '\\.+|-+(?:' +
+      arrowAttr +
+      '-*)?|' +
+      arrowAttr +
+      '-+|\\.+(?:' +
+      arrowAttr +
+      '\\.*)?|' +
+      arrowAttr +
+      '\\.+)'
+    var arrowLeft = /(?:<{1,2}|\/{1,2}|\\{1,2}|<\||[#*^+}xo])/.source
+    var arrowRight = /(?:>{1,2}|\/{1,2}|\\{1,2}|\|>|[#*^+{xo])/.source
+    var arrowPrefix = /[[?]?[ox]?/.source
+    var arrowSuffix = /[ox]?[\]?]?/.source
+    var arrow =
+      arrowPrefix +
+      '(?:' +
+      arrowBody +
+      arrowRight +
+      '|' +
+      arrowLeft +
+      arrowBody +
+      '(?:' +
+      arrowRight +
+      ')?' +
+      ')' +
+      arrowSuffix
+    Prism.languages['plant-uml'] = {
+      comment: {
+        pattern: /(^[ \t]*)(?:'.*|\/'[\s\S]*?'\/)/m,
+        lookbehind: true,
+        greedy: true
+      },
+      preprocessor: {
+        pattern: /(^[ \t]*)!.*/m,
+        lookbehind: true,
+        greedy: true,
+        alias: 'property',
+        inside: {
+          variable: variable
+        }
+      },
+      delimiter: {
+        pattern: /(^[ \t]*)@(?:end|start)uml\b/m,
+        lookbehind: true,
+        greedy: true,
+        alias: 'punctuation'
+      },
+      arrow: {
+        pattern: RegExp(
+          /(^|[^-.<>?|\\[\]ox])/.source + arrow + /(?![-.<>?|\\\]ox])/.source
+        ),
+        lookbehind: true,
+        greedy: true,
+        alias: 'operator',
+        inside: {
+          expression: {
+            pattern: /(\[)[^[\]]+(?=\])/,
+            lookbehind: true,
+            inside: null // see below
+          },
+          punctuation: /\[(?=$|\])|^\]/
+        }
+      },
+      string: {
+        pattern: /"[^"]*"/,
+        greedy: true
+      },
+      text: {
+        pattern: /(\[[ \t]*[\r\n]+(?![\r\n]))[^\]]*(?=\])/,
+        lookbehind: true,
+        greedy: true,
+        alias: 'string'
+      },
+      keyword: [
+        {
+          pattern:
+            /^([ \t]*)(?:abstract\s+class|end\s+(?:box|fork|group|merge|note|ref|split|title)|(?:fork|split)(?:\s+again)?|activate|actor|agent|alt|annotation|artifact|autoactivate|autonumber|backward|binary|boundary|box|break|caption|card|case|circle|class|clock|cloud|collections|component|concise|control|create|critical|database|deactivate|destroy|detach|diamond|else|elseif|end|end[hr]note|endif|endswitch|endwhile|entity|enum|file|folder|footer|frame|group|[hr]?note|header|hexagon|hide|if|interface|label|legend|loop|map|namespace|network|newpage|node|nwdiag|object|opt|package|page|par|participant|person|queue|rectangle|ref|remove|repeat|restore|return|robust|scale|set|show|skinparam|stack|start|state|stop|storage|switch|title|together|usecase|usecase\/|while)(?=\s|$)/m,
+          lookbehind: true,
+          greedy: true
+        },
+        /\b(?:elseif|equals|not|while)(?=\s*\()/,
+        /\b(?:as|is|then)\b/
+      ],
+      divider: {
+        pattern: /^==.+==$/m,
+        greedy: true,
+        alias: 'important'
+      },
+      time: {
+        pattern: /@(?:\d+(?:[:/]\d+){2}|[+-]?\d+|:[a-z]\w*(?:[+-]\d+)?)\b/i,
+        greedy: true,
+        alias: 'number'
+      },
+      color: {
+        pattern: /#(?:[a-z_]+|[a-fA-F0-9]+)\b/,
+        alias: 'symbol'
+      },
+      variable: variable,
+      punctuation: /[:,;()[\]{}]|\.{3}/
+    }
+    Prism.languages['plant-uml'].arrow.inside.expression.inside =
+      Prism.languages['plant-uml']
+    Prism.languages['plantuml'] = Prism.languages['plant-uml']
+  })(Prism)
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/refractor/lang/plsql.js":
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/plsql.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return plsql; });
+/* harmony import */ var _sql_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sql.js */ "./node_modules/refractor/lang/sql.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorSql = __webpack_require__(/*! ./sql.js */ "./node_modules/refractor/lang/sql.js")
-module.exports = plsql
 plsql.displayName = 'plsql'
 plsql.aliases = []
+
+/** @param {Refractor} Prism */
 function plsql(Prism) {
-  Prism.register(refractorSql)
+  Prism.register(_sql_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   Prism.languages.plsql = Prism.languages.extend('sql', {
     comment: {
       pattern: /\/\*[\s\S]*?\*\/|--.*/,
@@ -41504,17 +47867,23 @@ function plsql(Prism) {
 /*!***************************************************!*\
   !*** ./node_modules/refractor/lang/powerquery.js ***!
   \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = powerquery
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return powerquery; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 powerquery.displayName = 'powerquery'
-powerquery.aliases = []
+powerquery.aliases = ['mscript', 'pq']
+
+/** @param {Refractor} Prism */
 function powerquery(Prism) {
   // https://docs.microsoft.com/en-us/powerquery-m/power-query-m-language-specification
+
   Prism.languages.powerquery = {
     comment: {
       pattern: /(^|[^\\])(?:\/\*[\s\S]*?\*\/|\/\/.*)/,
@@ -41579,15 +47948,20 @@ function powerquery(Prism) {
 /*!***************************************************!*\
   !*** ./node_modules/refractor/lang/powershell.js ***!
   \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = powershell
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return powershell; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 powershell.displayName = 'powershell'
 powershell.aliases = []
+
+/** @param {Refractor} Prism */
 function powershell(Prism) {
   ;(function (Prism) {
     var powershell = (Prism.languages.powershell = {
@@ -41633,7 +48007,9 @@ function powershell(Prism) {
         lookbehind: true
       },
       punctuation: /[|{}[\];(),.]/
-    }) // Variable interpolation inside strings, and nested expressions
+    })
+
+    // Variable interpolation inside strings, and nested expressions
     powershell.string[0].inside = {
       function: {
         // Allow for one level of nesting
@@ -41654,16 +48030,24 @@ function powershell(Prism) {
 /*!***************************************************!*\
   !*** ./node_modules/refractor/lang/processing.js ***!
   \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return processing; });
+/* harmony import */ var _clike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clike.js */ "./node_modules/refractor/lang/clike.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = processing
 processing.displayName = 'processing'
 processing.aliases = []
+
+/** @param {Refractor} Prism */
 function processing(Prism) {
+  Prism.register(_clike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   Prism.languages.processing = Prism.languages.extend('clike', {
     keyword:
       /\b(?:break|case|catch|class|continue|default|else|extends|final|for|if|implements|import|new|null|private|public|return|static|super|switch|this|try|void|while)\b/,
@@ -41688,15 +48072,20 @@ function processing(Prism) {
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/prolog.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = prolog
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return prolog; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 prolog.displayName = 'prolog'
 prolog.aliases = []
+
+/** @param {Refractor} Prism */
 function prolog(Prism) {
   Prism.languages.prolog = {
     // Syntax depends on the implementation
@@ -41726,18 +48115,24 @@ function prolog(Prism) {
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/promql.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = promql
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return promql; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 promql.displayName = 'promql'
 promql.aliases = []
+
+/** @param {Refractor} Prism */
 function promql(Prism) {
   // Thanks to: https://github.com/prometheus-community/monaco-promql/blob/master/src/promql/promql.ts
   // As well as: https://kausal.co/blog/slate-prism-add-new-syntax-promql/
+
   ;(function (Prism) {
     // PromQL Aggregation Operators
     // (https://prometheus.io/docs/prometheus/latest/querying/operators/#aggregation-operators)
@@ -41754,7 +48149,9 @@ function promql(Prism) {
       'bottomk',
       'topk',
       'quantile'
-    ] // PromQL vector matching + the by and without clauses
+    ]
+
+    // PromQL vector matching + the by and without clauses
     // (https://prometheus.io/docs/prometheus/latest/querying/operators/#vector-matching)
     var vectorMatching = [
       'on',
@@ -41763,7 +48160,9 @@ function promql(Prism) {
       'group_left',
       'by',
       'without'
-    ] // PromQL offset modifier
+    ]
+
+    // PromQL offset modifier
     // (https://prometheus.io/docs/prometheus/latest/querying/basics/#offset-modifier)
     var offsetModifier = ['offset']
     var keywords = aggregations.concat(vectorMatching, offsetModifier)
@@ -41842,24 +48241,33 @@ function promql(Prism) {
 /*!***************************************************!*\
   !*** ./node_modules/refractor/lang/properties.js ***!
   \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = properties
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return properties; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 properties.displayName = 'properties'
 properties.aliases = []
+
+/** @param {Refractor} Prism */
 function properties(Prism) {
   Prism.languages.properties = {
     comment: /^[ \t]*[#!].*$/m,
-    'attr-value': {
+    value: {
       pattern:
         /(^[ \t]*(?:\\(?:\r\n|[\s\S])|[^\\\s:=])+(?: *[=:] *(?! )| ))(?:\\(?:\r\n|[\s\S])|[^\\\r\n])+/m,
-      lookbehind: true
+      lookbehind: true,
+      alias: 'attr-value'
     },
-    'attr-name': /^[ \t]*(?:\\(?:\r\n|[\s\S])|[^\\\s:=])+(?= *[=:]| )/m,
+    key: {
+      pattern: /^[ \t]*(?:\\(?:\r\n|[\s\S])|[^\\\s:=])+(?= *[=:]| )/m,
+      alias: 'attr-name'
+    },
     punctuation: /[=:]/
   }
 }
@@ -41871,16 +48279,24 @@ function properties(Prism) {
 /*!*************************************************!*\
   !*** ./node_modules/refractor/lang/protobuf.js ***!
   \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return protobuf; });
+/* harmony import */ var _clike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clike.js */ "./node_modules/refractor/lang/clike.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = protobuf
 protobuf.displayName = 'protobuf'
 protobuf.aliases = []
+
+/** @param {Refractor} Prism */
 function protobuf(Prism) {
+  Prism.register(_clike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   ;(function (Prism) {
     var builtinTypes =
       /\b(?:bool|bytes|double|s?fixed(?:32|64)|float|[su]?int(?:32|64)|string)\b/
@@ -41933,15 +48349,20 @@ function protobuf(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/psl.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = psl
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return psl; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 psl.displayName = 'psl'
 psl.aliases = []
+
+/** @param {Refractor} Prism */
 function psl(Prism) {
   Prism.languages.psl = {
     comment: {
@@ -41991,16 +48412,27 @@ function psl(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/pug.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return pug; });
+/* harmony import */ var _javascript_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./javascript.js */ "./node_modules/refractor/lang/javascript.js");
+/* harmony import */ var _markup_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./markup.js */ "./node_modules/refractor/lang/markup.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
 
-module.exports = pug
 pug.displayName = 'pug'
 pug.aliases = []
+
+/** @param {Refractor} Prism */
 function pug(Prism) {
+  Prism.register(_javascript_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+  Prism.register(_markup_js__WEBPACK_IMPORTED_MODULE_1__["default"])
   ;(function (Prism) {
     // TODO:
     // - Add CSS highlighting inside <style> tags
@@ -42009,8 +48441,10 @@ function pug(Prism) {
     // - Add support for tag interpolation #[]
     // - Add explicit support for plain text using |
     // - Add support for markup embedded in plain text
+
     Prism.languages.pug = {
       // Multiline stuff should appear before the rest
+
       // This handles both single-line and multi-line comments
       comment: {
         pattern: /(^([\t ]*))\/\/.*(?:(?:\r?\n|\r)\2[\t ].+)*/m,
@@ -42085,7 +48519,8 @@ function pug(Prism) {
             function: /\w+(?=\s*\(|\s*$)/,
             punctuation: /[(),.]/
           }
-        }, // Usage
+        },
+        // Usage
         {
           pattern: /(^[\t ]*)\+.+/m,
           lookbehind: true,
@@ -42146,7 +48581,9 @@ function pug(Prism) {
     }
     var filter_pattern =
       /(^([\t ]*)):<filter_name>(?:(?:\r?\n|\r(?!\n))(?:\2[\t ].+|\s*?(?=\r?\n|\r)))+/
-        .source // Non exhaustive list of available filters and associated languages
+        .source
+
+    // Non exhaustive list of available filters and associated languages
     var filters = [
       {
         filter: 'atpl',
@@ -42211,15 +48648,20 @@ function pug(Prism) {
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/puppet.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = puppet
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return puppet; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 puppet.displayName = 'puppet'
 puppet.aliases = []
+
+/** @param {Refractor} Prism */
 function puppet(Prism) {
   ;(function (Prism) {
     Prism.languages.puppet = {
@@ -42232,9 +48674,11 @@ function puppet(Prism) {
           alias: 'string',
           inside: {
             // Matches the end tag
-            punctuation: /(?=\S).*\S(?= *$)/ // See interpolation below
+            punctuation: /(?=\S).*\S(?= *$)/
+            // See interpolation below
           }
-        }, // Matches the content of an unquoted heredoc string (no interpolation)
+        },
+        // Matches the content of an unquoted heredoc string (no interpolation)
         {
           pattern:
             /(@\(([^"\r\n\/):]+)(?:\/[nrts$uL]*)?\).*(?:\r?\n|\r))(?:.*(?:\r?\n|\r(?!\n)))*?[ \t]*(?:\|[ \t]*)?(?:-[ \t]*)?\2/,
@@ -42245,7 +48689,8 @@ function puppet(Prism) {
             // Matches the end tag
             punctuation: /(?=\S).*\S(?= *$)/
           }
-        }, // Matches the start tag of heredoc strings
+        },
+        // Matches the start tag of heredoc strings
         {
           pattern: /@\("?(?:[^"\r\n\/):]+)"?(?:\/[nrts$uL]*)?\)/,
           alias: 'string',
@@ -42372,18 +48817,24 @@ function puppet(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/pure.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = pure
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return pure; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 pure.displayName = 'pure'
 pure.aliases = []
+
+/** @param {Refractor} Prism */
 function pure(Prism) {
   ;(function (Prism) {
     // https://agraef.github.io/pure-docs/pure.html#lexical-matters
+
     Prism.languages.pure = {
       comment: [
         {
@@ -42468,7 +48919,9 @@ function pure(Prism) {
         )
         Prism.languages.insertBefore('pure', 'inline-lang', o)
       }
-    }) // C is the default inline language
+    })
+
+    // C is the default inline language
     if (Prism.languages.c) {
       Prism.languages.pure['inline-lang'].inside.rest = Prism.util.clone(
         Prism.languages.c
@@ -42484,22 +48937,31 @@ function pure(Prism) {
 /*!**************************************************!*\
   !*** ./node_modules/refractor/lang/purebasic.js ***!
   \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return purebasic; });
+/* harmony import */ var _clike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clike.js */ "./node_modules/refractor/lang/clike.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = purebasic
 purebasic.displayName = 'purebasic'
-purebasic.aliases = []
+purebasic.aliases = ['pbfasm']
+
+/** @param {Refractor} Prism */
 function purebasic(Prism) {
+  Prism.register(_clike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   /*
 Original Code by Bas Groothedde
 !!MANY THANKS!! I never would have made this, regex and me will never be best friends ;)
 ==> https://codepen.io/ImagineProgramming/details/JYydBy/
 slightly changed to pass all tests
 */
+
   // PureBasic support, steal stuff from ansi-c
   Prism.languages.purebasic = Prism.languages.extend('clike', {
     comment: /;.*/,
@@ -42508,7 +48970,7 @@ slightly changed to pass all tests
     function: /\b\w+(?:\.\w+)?\s*(?=\()/,
     number: /(?:\$[\da-f]+|\b-?(?:\d+(?:\.\d+)?|\.\d+)(?:e[+-]?\d+)?)\b/i,
     operator:
-      /(?:@\*?|\?|\*)\w+|-[>-]?|\+\+?|!=?|<<?=?|>>?=?|==?|&&?|\|?\||[~^%?*/@]/
+      /(?:@\*?|\?|\*)\w+\$?|-[>-]?|\+\+?|!=?|<<?=?|>>?=?|==?|&&?|\|?\||[~^%?*/@]/
   })
   Prism.languages.insertBefore('purebasic', 'keyword', {
     tag: /#\w+\$?/,
@@ -42572,17 +49034,24 @@ slightly changed to pass all tests
 /*!***************************************************!*\
   !*** ./node_modules/refractor/lang/purescript.js ***!
   \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return purescript; });
+/* harmony import */ var _haskell_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./haskell.js */ "./node_modules/refractor/lang/haskell.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorHaskell = __webpack_require__(/*! ./haskell.js */ "./node_modules/refractor/lang/haskell.js")
-module.exports = purescript
 purescript.displayName = 'purescript'
 purescript.aliases = ['purs']
+
+/** @param {Refractor} Prism */
 function purescript(Prism) {
-  Prism.register(refractorHaskell)
+  Prism.register(_haskell_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   Prism.languages.purescript = Prism.languages.extend('haskell', {
     keyword:
       /\b(?:ado|case|class|data|derive|do|else|forall|if|in|infixl|infixr|instance|let|module|newtype|of|primitive|then|type|where)\b|∀/,
@@ -42603,8 +49072,10 @@ function purescript(Prism) {
       /\b(?:absurd|add|ap|append|apply|between|bind|bottom|clamp|compare|comparing|compose|conj|const|degree|discard|disj|div|eq|flap|flip|gcd|identity|ifM|join|lcm|liftA1|liftM1|map|max|mempty|min|mod|mul|negate|not|notEq|one|otherwise|recip|show|sub|top|unit|unless|unlessM|void|when|whenM|zero)\b/,
     operator: [
       // Infix operators
-      Prism.languages.haskell.operator[0], // ASCII operators
-      Prism.languages.haskell.operator[2], // All UTF16 Unicode operator symbols
+      Prism.languages.haskell.operator[0],
+      // ASCII operators
+      Prism.languages.haskell.operator[2],
+      // All UTF16 Unicode operator symbols
       // This regex is equivalent to /(?=[\x80-\uFFFF])[\p{gc=Math_Symbol}\p{gc=Currency_Symbol}\p{Modifier_Symbol}\p{Other_Symbol}]/u
       // See https://github.com/PrismJS/prism/issues/3006 for more details.
       /[\xa2-\xa6\xa8\xa9\xac\xae-\xb1\xb4\xb8\xd7\xf7\u02c2-\u02c5\u02d2-\u02df\u02e5-\u02eb\u02ed\u02ef-\u02ff\u0375\u0384\u0385\u03f6\u0482\u058d-\u058f\u0606-\u0608\u060b\u060e\u060f\u06de\u06e9\u06fd\u06fe\u07f6\u07fe\u07ff\u09f2\u09f3\u09fa\u09fb\u0af1\u0b70\u0bf3-\u0bfa\u0c7f\u0d4f\u0d79\u0e3f\u0f01-\u0f03\u0f13\u0f15-\u0f17\u0f1a-\u0f1f\u0f34\u0f36\u0f38\u0fbe-\u0fc5\u0fc7-\u0fcc\u0fce\u0fcf\u0fd5-\u0fd8\u109e\u109f\u1390-\u1399\u166d\u17db\u1940\u19de-\u19ff\u1b61-\u1b6a\u1b74-\u1b7c\u1fbd\u1fbf-\u1fc1\u1fcd-\u1fcf\u1fdd-\u1fdf\u1fed-\u1fef\u1ffd\u1ffe\u2044\u2052\u207a-\u207c\u208a-\u208c\u20a0-\u20bf\u2100\u2101\u2103-\u2106\u2108\u2109\u2114\u2116-\u2118\u211e-\u2123\u2125\u2127\u2129\u212e\u213a\u213b\u2140-\u2144\u214a-\u214d\u214f\u218a\u218b\u2190-\u2307\u230c-\u2328\u232b-\u2426\u2440-\u244a\u249c-\u24e9\u2500-\u2767\u2794-\u27c4\u27c7-\u27e5\u27f0-\u2982\u2999-\u29d7\u29dc-\u29fb\u29fe-\u2b73\u2b76-\u2b95\u2b97-\u2bff\u2ce5-\u2cea\u2e50\u2e51\u2e80-\u2e99\u2e9b-\u2ef3\u2f00-\u2fd5\u2ff0-\u2ffb\u3004\u3012\u3013\u3020\u3036\u3037\u303e\u303f\u309b\u309c\u3190\u3191\u3196-\u319f\u31c0-\u31e3\u3200-\u321e\u322a-\u3247\u3250\u3260-\u327f\u328a-\u32b0\u32c0-\u33ff\u4dc0-\u4dff\ua490-\ua4c6\ua700-\ua716\ua720\ua721\ua789\ua78a\ua828-\ua82b\ua836-\ua839\uaa77-\uaa79\uab5b\uab6a\uab6b\ufb29\ufbb2-\ufbc1\ufdfc\ufdfd\ufe62\ufe64-\ufe66\ufe69\uff04\uff0b\uff1c-\uff1e\uff3e\uff40\uff5c\uff5e\uffe0-\uffe6\uffe8-\uffee\ufffc\ufffd]/
@@ -42620,15 +49091,20 @@ function purescript(Prism) {
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/python.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = python
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return python; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 python.displayName = 'python'
 python.aliases = ['py']
+
+/** @param {Refractor} Prism */
 function python(Prism) {
   Prism.languages.python = {
     comment: {
@@ -42709,15 +49185,20 @@ function python(Prism) {
 /*!******************************************!*\
   !*** ./node_modules/refractor/lang/q.js ***!
   \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = q
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return q; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 q.displayName = 'q'
 q.aliases = []
+
+/** @param {Refractor} Prism */
 function q(Prism) {
   Prism.languages.q = {
     string: /"(?:\\.|[^"\\\r\n])*"/,
@@ -42728,7 +49209,8 @@ function q(Prism) {
         pattern: /([\t )\]}])\/.*/,
         lookbehind: true,
         greedy: true
-      }, // From http://code.kx.com/wiki/Reference/Slash:
+      },
+      // From http://code.kx.com/wiki/Reference/Slash:
       // A line which has / as its first character and contains at least one other non-whitespace character is a whole-line comment and is ignored entirely.
       // A / on a line by itself begins a multiline comment which is terminated by the next \ on a line by itself.
       // If a / is not matched by a \, the multiline comment is unterminated and continues to end of file.
@@ -42738,7 +49220,8 @@ function q(Prism) {
           /(^|\r?\n|\r)\/[\t ]*(?:(?:\r?\n|\r)(?:.*(?:\r?\n|\r(?!\n)))*?(?:\\(?=[\t ]*(?:\r?\n|\r))|$)|\S.*)/,
         lookbehind: true,
         greedy: true
-      }, // From http://code.kx.com/wiki/Reference/Slash:
+      },
+      // From http://code.kx.com/wiki/Reference/Slash:
       // A \ on a line by itself with no preceding matching / will comment to end of file.
       {
         pattern: /^\\[\t ]*(?:\r?\n|\r)[\s\S]+/m,
@@ -42780,16 +49263,24 @@ function q(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/qml.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return qml; });
+/* harmony import */ var _javascript_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./javascript.js */ "./node_modules/refractor/lang/javascript.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = qml
 qml.displayName = 'qml'
 qml.aliases = []
+
+/** @param {Refractor} Prism */
 function qml(Prism) {
+  Prism.register(_javascript_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   ;(function (Prism) {
     var jsString = /"(?:\\.|[^\\"\r\n])*"|'(?:\\.|[^\\'\r\n])*'/.source
     var jsComment = /\/\/.*(?!.)|\/\*(?:[^*]|\*(?!\/))*\*\//.source
@@ -42800,7 +49291,9 @@ function qml(Prism) {
         })
         .replace(/<comment>/g, function () {
           return jsComment
-        }) // the pattern will blow up, so only a few iterations
+        })
+
+    // the pattern will blow up, so only a few iterations
     for (var i = 0; i < 2; i++) {
       jsExpr = jsExpr.replace(/<expr>/g, function () {
         return jsExpr
@@ -42878,16 +49371,24 @@ function qml(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/qore.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return qore; });
+/* harmony import */ var _clike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clike.js */ "./node_modules/refractor/lang/clike.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = qore
 qore.displayName = 'qore'
 qore.aliases = []
+
+/** @param {Refractor} Prism */
 function qore(Prism) {
+  Prism.register(_clike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   Prism.languages.qore = Prism.languages.extend('clike', {
     comment: {
       pattern: /(^|[^\\])(?:\/\*[\s\S]*?\*\/|(?:\/\/|#).*)/,
@@ -42920,16 +49421,24 @@ function qore(Prism) {
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/qsharp.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return qsharp; });
+/* harmony import */ var _clike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clike.js */ "./node_modules/refractor/lang/clike.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = qsharp
 qsharp.displayName = 'qsharp'
 qsharp.aliases = ['qs']
+
+/** @param {Refractor} Prism */
 function qsharp(Prism) {
+  Prism.register(_clike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   ;(function (Prism) {
     /**
      * Replaces all placeholders "<<n>>" of given pattern with the n-th replacement (zero based).
@@ -42955,6 +49464,7 @@ function qsharp(Prism) {
     function re(pattern, replacements, flags) {
       return RegExp(replace(pattern, replacements), flags || '')
     }
+
     /**
      * Creates a nested pattern where all occurrences of the string `<<self>>` are replaced with the pattern itself.
      *
@@ -42969,7 +49479,9 @@ function qsharp(Prism) {
         })
       }
       return pattern.replace(/<<self>>/g, '[^\\s\\S]')
-    } // https://docs.microsoft.com/en-us/azure/quantum/user-guide/language/typesystem/
+    }
+
+    // https://docs.microsoft.com/en-us/azure/quantum/user-guide/language/typesystem/
     // https://github.com/microsoft/qsharp-language/tree/main/Specifications/Language/5_Grammar
     var keywordKinds = {
       // keywords which represent a return or variable type
@@ -42977,19 +49489,24 @@ function qsharp(Prism) {
       // all other keywords
       other:
         'Adjoint adjoint apply as auto body borrow borrowing Controlled controlled distribute elif else fail fixup for function if in internal intrinsic invert is let mutable namespace new newtype open operation repeat return self set until use using while within'
-    } // keywords
+    }
+    // keywords
     function keywordsToPattern(words) {
       return '\\b(?:' + words.trim().replace(/ /g, '|') + ')\\b'
     }
     var keywords = RegExp(
       keywordsToPattern(keywordKinds.type + ' ' + keywordKinds.other)
-    ) // types
+    )
+
+    // types
     var identifier = /\b[A-Za-z_]\w*\b/.source
     var qualifiedName = replace(/<<0>>(?:\s*\.\s*<<0>>)*/.source, [identifier])
     var typeInside = {
       keyword: keywords,
       punctuation: /[<>()?,.:[\]]/
-    } // strings
+    }
+
+    // strings
     var regularString = /"(?:\\.|[^\\"])*"/.source
     Prism.languages.qsharp = Prism.languages.extend('clike', {
       comment: /\/\/.*/,
@@ -43029,7 +49546,9 @@ function qsharp(Prism) {
         pattern: /\.\./,
         alias: 'operator'
       }
-    }) // single line
+    })
+
+    // single line
     var interpolationExpr = nested(
       replace(/\{(?:[^"{}]|<<0>>|<<self>>)*\}/.source, [regularString]),
       2
@@ -43068,15 +49587,20 @@ function qsharp(Prism) {
 /*!******************************************!*\
   !*** ./node_modules/refractor/lang/r.js ***!
   \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = r
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return r; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 r.displayName = 'r'
 r.aliases = []
+
+/** @param {Refractor} Prism */
 function r(Prism) {
   Prism.languages.r = {
     comment: /#.*/,
@@ -43110,17 +49634,24 @@ function r(Prism) {
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/racket.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return racket; });
+/* harmony import */ var _scheme_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scheme.js */ "./node_modules/refractor/lang/scheme.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorScheme = __webpack_require__(/*! ./scheme.js */ "./node_modules/refractor/lang/scheme.js")
-module.exports = racket
 racket.displayName = 'racket'
 racket.aliases = ['rkt']
+
+/** @param {Refractor} Prism */
 function racket(Prism) {
-  Prism.register(refractorScheme)
+  Prism.register(_scheme_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   Prism.languages.racket = Prism.languages.extend('scheme', {
     'lambda-parameter': {
       // the racket lambda syntax is a lot more complex, so we won't even attempt to capture it.
@@ -43146,16 +49677,24 @@ function racket(Prism) {
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/reason.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return reason; });
+/* harmony import */ var _clike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clike.js */ "./node_modules/refractor/lang/clike.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = reason
 reason.displayName = 'reason'
 reason.aliases = []
+
+/** @param {Refractor} Prism */
 function reason(Prism) {
+  Prism.register(_clike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   Prism.languages.reason = Prism.languages.extend('clike', {
     string: {
       pattern: /"(?:\\(?:\r\n|[\s\S])|[^\\\r\n"])*"/,
@@ -43179,7 +49718,9 @@ function reason(Prism) {
       pattern: /\b[a-z]\w*(?=::)/,
       alias: 'symbol'
     }
-  }) // We can't match functions property, so let's not even try.
+  })
+
+  // We can't match functions property, so let's not even try.
   delete Prism.languages.reason.function
 }
 
@@ -43190,15 +49731,20 @@ function reason(Prism) {
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/regex.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = regex
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return regex; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 regex.displayName = 'regex'
 regex.aliases = []
+
+/** @param {Refractor} Prism */
 function regex(Prism) {
   ;(function (Prism) {
     var specialEscape = {
@@ -43216,7 +49762,9 @@ function regex(Prism) {
       alias: 'class-name'
     }
     var rangeChar = '(?:[^\\\\-]|' + escape.source + ')'
-    var range = RegExp(rangeChar + '-' + rangeChar) // the name of a capturing group
+    var range = RegExp(rangeChar + '-' + rangeChar)
+
+    // the name of a capturing group
     var groupName = {
       pattern: /(<|')[^<>']+(?=[>']$)/,
       lookbehind: true,
@@ -43276,6 +49824,7 @@ function regex(Prism) {
         {
           // https://docs.oracle.com/javase/10/docs/api/java/util/regex/Pattern.html
           // https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference?view=netframework-4.7.2#grouping-constructs
+
           // (), (?<name>), (?'name'), (?>), (?:), (?=), (?!), (?<=), (?<!), (?is-m), (?i-m:)
           pattern:
             /\((?:\?(?:<[^<>']+>|'[^<>']+'|[>:]|<?[=!]|[idmnsuxU]+(?:-[idmnsuxU]+)?:?))?/,
@@ -43308,17 +49857,23 @@ function regex(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/rego.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = rego
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return rego; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 rego.displayName = 'rego'
 rego.aliases = []
+
+/** @param {Refractor} Prism */
 function rego(Prism) {
   // https://www.openpolicyagent.org/docs/latest/policy-reference/
+
   Prism.languages.rego = {
     comment: /#.*/,
     property: {
@@ -43355,15 +49910,20 @@ function rego(Prism) {
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/renpy.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = renpy
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return renpy; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 renpy.displayName = 'renpy'
 renpy.aliases = ['rpy']
+
+/** @param {Refractor} Prism */
 function renpy(Prism) {
   Prism.languages.renpy = {
     comment: {
@@ -43394,19 +49954,114 @@ function renpy(Prism) {
 
 /***/ }),
 
+/***/ "./node_modules/refractor/lang/rescript.js":
+/*!*************************************************!*\
+  !*** ./node_modules/refractor/lang/rescript.js ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return rescript; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
+rescript.displayName = 'rescript'
+rescript.aliases = ['res']
+
+/** @param {Refractor} Prism */
+function rescript(Prism) {
+  Prism.languages.rescript = {
+    comment: {
+      pattern: /\/\/.*|\/\*[\s\S]*?(?:\*\/|$)/,
+      greedy: true
+    },
+    char: {
+      pattern: /'(?:[^\r\n\\]|\\(?:.|\w+))'/,
+      greedy: true
+    },
+    string: {
+      pattern: /"(?:\\(?:\r\n|[\s\S])|[^\\\r\n"])*"/,
+      greedy: true
+    },
+    'class-name': /\b[A-Z]\w*|@[a-z.]*|#[A-Za-z]\w*|#\d/,
+    function: {
+      pattern: /[a-zA-Z]\w*(?=\()|(\.)[a-z]\w*/,
+      lookbehind: true
+    },
+    number:
+      /(?:\b0x(?:[\da-f]+(?:\.[\da-f]*)?|\.[\da-f]+)(?:p[+-]?\d+)?|(?:\b\d+(?:\.\d*)?|\B\.\d+)(?:e[+-]?\d+)?)[ful]{0,4}/i,
+    boolean: /\b(?:false|true)\b/,
+    'attr-value': /[A-Za-z]\w*(?==)/,
+    constant: {
+      pattern: /(\btype\s+)[a-z]\w*/,
+      lookbehind: true
+    },
+    tag: {
+      pattern: /(<)[a-z]\w*|(?:<\/)[a-z]\w*/,
+      lookbehind: true,
+      inside: {
+        operator: /<|>|\//
+      }
+    },
+    keyword:
+      /\b(?:and|as|assert|begin|bool|class|constraint|do|done|downto|else|end|exception|external|float|for|fun|function|if|in|include|inherit|initializer|int|lazy|let|method|module|mutable|new|nonrec|object|of|open|or|private|rec|string|switch|then|to|try|type|when|while|with)\b/,
+    operator:
+      /\.{3}|:[:=]?|\|>|->|=(?:==?|>)?|<=?|>=?|[|^?'#!~`]|[+\-*\/]\.?|\b(?:asr|land|lor|lsl|lsr|lxor|mod)\b/,
+    punctuation: /[(){}[\],;.]/
+  }
+  Prism.languages.insertBefore('rescript', 'string', {
+    'template-string': {
+      pattern:
+        /`(?:\\[\s\S]|\$\{(?:[^{}]|\{(?:[^{}]|\{[^}]*\})*\})+\}|(?!\$\{)[^\\`])*`/,
+      greedy: true,
+      inside: {
+        'template-punctuation': {
+          pattern: /^`|`$/,
+          alias: 'string'
+        },
+        interpolation: {
+          pattern:
+            /((?:^|[^\\])(?:\\{2})*)\$\{(?:[^{}]|\{(?:[^{}]|\{[^}]*\})*\})+\}/,
+          lookbehind: true,
+          inside: {
+            'interpolation-punctuation': {
+              pattern: /^\$\{|\}$/,
+              alias: 'tag'
+            },
+            rest: Prism.languages.rescript
+          }
+        },
+        string: /[\s\S]+/
+      }
+    }
+  })
+  Prism.languages.res = Prism.languages.rescript
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/refractor/lang/rest.js":
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/rest.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = rest
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return rest; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 rest.displayName = 'rest'
 rest.aliases = []
+
+/** @param {Refractor} Prism */
 function rest(Prism) {
   Prism.languages.rest = {
     table: [
@@ -43428,6 +50083,7 @@ function rest(Prism) {
       }
     ],
     // Directive-like patterns
+
     'substitution-def': {
       pattern: /(^[\t ]*\.\. )\|(?:[^|\s](?:[^|]*[^|\s])?)\| [^:]+::/m,
       lookbehind: true,
@@ -43491,7 +50147,8 @@ function rest(Prism) {
             /^[!"#$%&'()*+,\-.\/:;<=>?@\[\\\]^_`{|}~]+|[!"#$%&'()*+,\-.\/:;<=>?@\[\\\]^_`{|}~]+$/,
           important: /.+/
         }
-      }, // Underlined only
+      },
+      // Underlined only
       {
         pattern:
           /(^|(?:\r?\n|\r){2}).+(?:\r?\n|\r)([!"#$%&'()*+,\-.\/:;<=>?@\[\\\]^_`{|}~])\2+(?=\r?\n|\r|$)/,
@@ -43626,15 +50283,20 @@ function rest(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/rip.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = rip
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return rip; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 rip.displayName = 'rip'
 rip.aliases = []
+
+/** @param {Refractor} Prism */
 function rip(Prism) {
   Prism.languages.rip = {
     comment: {
@@ -43676,15 +50338,20 @@ function rip(Prism) {
 /*!*************************************************!*\
   !*** ./node_modules/refractor/lang/roboconf.js ***!
   \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = roboconf
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return roboconf; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 roboconf.displayName = 'roboconf'
 roboconf.aliases = []
+
+/** @param {Refractor} Prism */
 function roboconf(Prism) {
   Prism.languages.roboconf = {
     comment: /#.*/,
@@ -43723,15 +50390,20 @@ function roboconf(Prism) {
 /*!*******************************************************!*\
   !*** ./node_modules/refractor/lang/robotframework.js ***!
   \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = robotframework
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return robotframework; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 robotframework.displayName = 'robotframework'
-robotframework.aliases = []
+robotframework.aliases = ['robot']
+
+/** @param {Refractor} Prism */
 function robotframework(Prism) {
   ;(function (Prism) {
     var comment = {
@@ -43751,7 +50423,9 @@ function robotframework(Prism) {
       extendecInside['section-header'] = {
         pattern: /^ ?\*{3}.+?\*{3}/,
         alias: 'keyword'
-      } // copy inside tokens
+      }
+
+      // copy inside tokens
       for (var token in inside) {
         extendecInside[token] = inside[token]
       }
@@ -43841,16 +50515,24 @@ function robotframework(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/ruby.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ruby; });
+/* harmony import */ var _clike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clike.js */ "./node_modules/refractor/lang/clike.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = ruby
 ruby.displayName = 'ruby'
 ruby.aliases = ['rb']
+
+/** @param {Refractor} Prism */
 function ruby(Prism) {
+  Prism.register(_clike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   /**
    * Original by Samuel Flores
    *
@@ -44054,15 +50736,20 @@ function ruby(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/rust.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = rust
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return rust; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 rust.displayName = 'rust'
 rust.aliases = []
+
+/** @param {Refractor} Prism */
 function rust(Prism) {
   ;(function (Prism) {
     var multilineComment = /\/\*(?:[^*/]|\*(?!\/)|\/(?!\*)|<self>)*\*\//.source
@@ -44156,7 +50843,8 @@ function rust(Prism) {
       ],
       keyword: [
         // https://github.com/rust-lang/reference/blob/master/src/keywords.md
-        /\b(?:Self|abstract|as|async|await|become|box|break|const|continue|crate|do|dyn|else|enum|extern|final|fn|for|if|impl|in|let|loop|macro|match|mod|move|mut|override|priv|pub|ref|return|self|static|struct|super|trait|try|type|typeof|union|unsafe|unsized|use|virtual|where|while|yield)\b/, // primitives and str
+        /\b(?:Self|abstract|as|async|await|become|box|break|const|continue|crate|do|dyn|else|enum|extern|final|fn|for|if|impl|in|let|loop|macro|match|mod|move|mut|override|priv|pub|ref|return|self|static|struct|super|trait|try|type|typeof|union|unsafe|unsized|use|virtual|where|while|yield)\b/,
+        // primitives and str
         // https://doc.rust-lang.org/stable/rust-by-example/primitives.html
         /\b(?:bool|char|f(?:32|64)|[ui](?:8|16|32|64|128|size)|str)\b/
       ],
@@ -44196,15 +50884,20 @@ function rust(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/sas.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = sas
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return sas; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 sas.displayName = 'sas'
 sas.aliases = []
+
+/** @param {Refractor} Prism */
 function sas(Prism) {
   ;(function (Prism) {
     var stringPattern = /(?:"(?:""|[^"])*"(?!")|'(?:''|[^'])*'(?!'))/.source
@@ -44573,16 +51266,24 @@ function sas(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/sass.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return sass; });
+/* harmony import */ var _css_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css.js */ "./node_modules/refractor/lang/css.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = sass
 sass.displayName = 'sass'
 sass.aliases = []
+
+/** @param {Refractor} Prism */
 function sass(Prism) {
+  Prism.register(_css_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   ;(function (Prism) {
     Prism.languages.sass = Prism.languages.extend('css', {
       // Sass comments don't need to be closed, only indented
@@ -44643,7 +51344,9 @@ function sass(Prism) {
       }
     })
     delete Prism.languages.sass.property
-    delete Prism.languages.sass.important // Now that whole lines for other patterns are consumed,
+    delete Prism.languages.sass.important
+
+    // Now that whole lines for other patterns are consumed,
     // what's left should be selectors
     Prism.languages.insertBefore('sass', 'punctuation', {
       selector: {
@@ -44663,17 +51366,24 @@ function sass(Prism) {
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/scala.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return scala; });
+/* harmony import */ var _java_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./java.js */ "./node_modules/refractor/lang/java.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorJava = __webpack_require__(/*! ./java.js */ "./node_modules/refractor/lang/java.js")
-module.exports = scala
 scala.displayName = 'scala'
 scala.aliases = []
+
+/** @param {Refractor} Prism */
 function scala(Prism) {
-  Prism.register(refractorJava)
+  Prism.register(_java_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   Prism.languages.scala = Prism.languages.extend('java', {
     'triple-quoted-string': {
       pattern: /"""[\s\S]*?"""/,
@@ -44685,7 +51395,7 @@ function scala(Prism) {
       greedy: true
     },
     keyword:
-      /<-|=>|\b(?:abstract|case|catch|class|def|do|else|extends|final|finally|for|forSome|if|implicit|import|lazy|match|new|null|object|override|package|private|protected|return|sealed|self|super|this|throw|trait|try|type|val|var|while|with|yield)\b/,
+      /<-|=>|\b(?:abstract|case|catch|class|def|derives|do|else|enum|extends|extension|final|finally|for|forSome|given|if|implicit|import|infix|inline|lazy|match|new|null|object|opaque|open|override|package|private|protected|return|sealed|self|super|this|throw|trait|transparent|try|type|using|val|var|while|with|yield)\b/,
     number:
       /\b0x(?:[\da-f]*\.)?[\da-f]+|(?:\b\d+(?:\.\d*)?|\B\.\d+)(?:e\d+)?[dfl]?/i,
     builtin:
@@ -44725,6 +51435,7 @@ function scala(Prism) {
   })
   delete Prism.languages.scala['class-name']
   delete Prism.languages.scala['function']
+  delete Prism.languages.scala['constant']
 }
 
 
@@ -44734,15 +51445,20 @@ function scala(Prism) {
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/scheme.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = scheme
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return scheme; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 scheme.displayName = 'scheme'
 scheme.aliases = []
+
+/** @param {Refractor} Prism */
 function scheme(Prism) {
   ;(function (Prism) {
     Prism.languages.scheme = {
@@ -44860,6 +51576,7 @@ function scheme(Prism) {
       },
       punctuation: /[()\[\]']/
     }
+
     /**
      * Given a topologically sorted BNF grammar, this will return the RegExp source of last rule of the grammar.
      *
@@ -44871,7 +51588,8 @@ function scheme(Prism) {
         grammar[key] = grammar[key].replace(/<[\w\s]+>/g, function (key) {
           return '(?:' + grammar[key].trim() + ')'
         })
-      } // return the last item
+      }
+      // return the last item
       return grammar[key]
     }
   })(Prism)
@@ -44884,16 +51602,24 @@ function scheme(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/scss.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return scss; });
+/* harmony import */ var _css_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css.js */ "./node_modules/refractor/lang/css.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = scss
 scss.displayName = 'scss'
 scss.aliases = []
+
+/** @param {Refractor} Prism */
 function scss(Prism) {
+  Prism.register(_css_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   Prism.languages.scss = Prism.languages.extend('css', {
     comment: {
       pattern: /(^|[^\\])(?:\/\*[\s\S]*?\*\/|\/\/.*)/,
@@ -44902,7 +51628,8 @@ function scss(Prism) {
     atrule: {
       pattern: /@[\w-](?:\([^()]+\)|[^()\s]|\s+(?!\s))*?(?=\s+[{;])/,
       inside: {
-        rule: /@[\w-]+/ // See rest below
+        rule: /@[\w-]+/
+        // See rest below
       }
     },
     // url, compassified
@@ -44980,25 +51707,34 @@ function scss(Prism) {
 /*!******************************************************!*\
   !*** ./node_modules/refractor/lang/shell-session.js ***!
   \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return shellSession; });
+/* harmony import */ var _bash_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bash.js */ "./node_modules/refractor/lang/bash.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorBash = __webpack_require__(/*! ./bash.js */ "./node_modules/refractor/lang/bash.js")
-module.exports = shellSession
-shellSession.displayName = 'shellSession'
-shellSession.aliases = []
+shellSession.displayName = 'shell-session'
+shellSession.aliases = ['sh-session', 'shellsession']
+
+/** @param {Refractor} Prism */
 function shellSession(Prism) {
-  Prism.register(refractorBash)
+  Prism.register(_bash_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   ;(function (Prism) {
     // CAREFUL!
     // The following patterns are concatenated, so the group referenced by a back reference is non-obvious!
+
     var strings = [
       // normal string
       /"(?:\\[\s\S]|\$\([^)]+\)|\$(?!\()|`[^`]+`|[^"\\`$])*"/.source,
       /'[^']*'/.source,
-      /\$'(?:[^'\\]|\\[\s\S])*'/.source, // here doc
+      /\$'(?:[^'\\]|\\[\s\S])*'/.source,
+      // here doc
       // 2 capturing groups
       /<<-?\s*(["']?)(\w+)\1\s[\s\S]*?[\r\n]\2/.source
     ].join('|')
@@ -45007,15 +51743,19 @@ function shellSession(Prism) {
         pattern: RegExp(
           // user info
           /^/.source +
-            '(?:' + // <user> ":" ( <path> )?
+            '(?:' +
+            // <user> ":" ( <path> )?
             (/[^\s@:$#%*!/\\]+@[^\r\n@:$#%*!/\\]+(?::[^\0-\x1F$#%*?"<>:;|]+)?/
               .source +
-              '|' + // <path>
+              '|' +
+              // <path>
               // Since the path pattern is quite general, we will require it to start with a special character to
               // prevent false positives.
               /[/~.][^\0-\x1F$#%*?"<>@:;|]*/.source) +
-            ')?' + // shell symbol
-            /[$#%](?=\s)/.source + // bash command
+            ')?' +
+            // shell symbol
+            /[$#%](?=\s)/.source +
+            // bash command
             /(?:[^\\\r\n \t'"<$]|[ \t](?:(?!#)|#.*$)|\\(?:[^\r]|\r\n?)|\$(?!')|<(?!<)|<<str>>)+/.source.replace(
               /<<str>>/g,
               function () {
@@ -45064,18 +51804,24 @@ function shellSession(Prism) {
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/smali.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = smali
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return smali; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 smali.displayName = 'smali'
 smali.aliases = []
+
+/** @param {Refractor} Prism */
 function smali(Prism) {
   // Test files for the parser itself:
   // https://github.com/JesusFreke/smali/tree/master/smali/src/test/resources/LexerTest
+
   Prism.languages.smali = {
     comment: /#.*/,
     string: {
@@ -45167,15 +51913,20 @@ function smali(Prism) {
 /*!**************************************************!*\
   !*** ./node_modules/refractor/lang/smalltalk.js ***!
   \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = smalltalk
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return smalltalk; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 smalltalk.displayName = 'smalltalk'
 smalltalk.aliases = []
+
+/** @param {Refractor} Prism */
 function smalltalk(Prism) {
   Prism.languages.smalltalk = {
     comment: {
@@ -45224,17 +51975,24 @@ function smalltalk(Prism) {
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/smarty.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return smarty; });
+/* harmony import */ var _markup_templating_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./markup-templating.js */ "./node_modules/refractor/lang/markup-templating.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorMarkupTemplating = __webpack_require__(/*! ./markup-templating.js */ "./node_modules/refractor/lang/markup-templating.js")
-module.exports = smarty
 smarty.displayName = 'smarty'
 smarty.aliases = []
+
+/** @param {Refractor} Prism */
 function smarty(Prism) {
-  Prism.register(refractorMarkupTemplating)
+  Prism.register(_markup_templating_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   ;(function (Prism) {
     Prism.languages.smarty = {
       comment: {
@@ -45326,9 +52084,11 @@ function smarty(Prism) {
     var smartyPattern = RegExp(
       // comments
       /\{\*[\s\S]*?\*\}/.source +
-        '|' + // php tags
+        '|' +
+        // php tags
         /\{php\}[\s\S]*?\{\/php\}/.source +
-        '|' + // smarty blocks
+        '|' +
+        // smarty blocks
         /\{(?:[^{}"']|<str>|\{(?:[^{}"']|<str>|\{(?:[^{}"']|<str>)*\})*\})*\}/.source.replace(
           /<str>/g,
           function () {
@@ -45336,7 +52096,9 @@ function smarty(Prism) {
           }
         ),
       'g'
-    ) // Tokenize all inline Smarty expressions
+    )
+
+    // Tokenize all inline Smarty expressions
     Prism.hooks.add('before-tokenize', function (env) {
       var smartyLiteralStart = '{literal}'
       var smartyLiteralEnd = '{/literal}'
@@ -45359,7 +52121,9 @@ function smarty(Prism) {
           return false
         }
       )
-    }) // Re-insert the tokens after tokenizing
+    })
+
+    // Re-insert the tokens after tokenizing
     Prism.hooks.add('after-tokenize', function (env) {
       Prism.languages['markup-templating'].tokenizePlaceholders(env, 'smarty')
     })
@@ -45373,15 +52137,20 @@ function smarty(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/sml.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = sml
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return sml; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 sml.displayName = 'sml'
 sml.aliases = ['smlnj']
+
+/** @param {Refractor} Prism */
 function sml(Prism) {
   // https://smlfamily.github.io/sml97-defn.pdf
   // https://people.mpi-sws.org/~rossberg/sml.html
@@ -45461,16 +52230,24 @@ function sml(Prism) {
 /*!*************************************************!*\
   !*** ./node_modules/refractor/lang/solidity.js ***!
   \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return solidity; });
+/* harmony import */ var _clike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clike.js */ "./node_modules/refractor/lang/clike.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = solidity
 solidity.displayName = 'solidity'
 solidity.aliases = ['sol']
+
+/** @param {Refractor} Prism */
 function solidity(Prism) {
+  Prism.register(_clike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   Prism.languages.solidity = Prism.languages.extend('clike', {
     'class-name': {
       pattern:
@@ -45502,15 +52279,20 @@ function solidity(Prism) {
 /*!******************************************************!*\
   !*** ./node_modules/refractor/lang/solution-file.js ***!
   \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return solutionFile; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
+solutionFile.displayName = 'solution-file'
+solutionFile.aliases = ['sln']
 
-
-module.exports = solutionFile
-solutionFile.displayName = 'solutionFile'
-solutionFile.aliases = []
+/** @param {Refractor} Prism */
 function solutionFile(Prism) {
   ;(function (Prism) {
     var guid = {
@@ -45569,17 +52351,24 @@ function solutionFile(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/soy.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return soy; });
+/* harmony import */ var _markup_templating_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./markup-templating.js */ "./node_modules/refractor/lang/markup-templating.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorMarkupTemplating = __webpack_require__(/*! ./markup-templating.js */ "./node_modules/refractor/lang/markup-templating.js")
-module.exports = soy
 soy.displayName = 'soy'
 soy.aliases = []
+
+/** @param {Refractor} Prism */
 function soy(Prism) {
-  Prism.register(refractorMarkupTemplating)
+  Prism.register(_markup_templating_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   ;(function (Prism) {
     var stringPattern = /(["'])(?:\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/
     var numberPattern = /\b\d+(?:\.\d+)?(?:[eE][+-]?\d+)?\b|\b0x[\dA-F]+\b/
@@ -45645,7 +52434,9 @@ function soy(Prism) {
       number: numberPattern,
       operator: /\?:?|<=?|>=?|==?|!=|[+*/%-]|\b(?:and|not|or)\b/,
       punctuation: /[{}()\[\]|.,:]/
-    } // Tokenize all inline Soy expressions
+    }
+
+    // Tokenize all inline Soy expressions
     Prism.hooks.add('before-tokenize', function (env) {
       var soyPattern = /\{\{.+?\}\}|\{.+?\}|\s\/\/.*|\/\*[\s\S]*?\*\//g
       var soyLitteralStart = '{literal}'
@@ -45669,7 +52460,9 @@ function soy(Prism) {
           return false
         }
       )
-    }) // Re-insert the tokens after tokenizing
+    })
+
+    // Re-insert the tokens after tokenizing
     Prism.hooks.add('after-tokenize', function (env) {
       Prism.languages['markup-templating'].tokenizePlaceholders(env, 'soy')
     })
@@ -45683,17 +52476,24 @@ function soy(Prism) {
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/sparql.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return sparql; });
+/* harmony import */ var _turtle_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./turtle.js */ "./node_modules/refractor/lang/turtle.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorTurtle = __webpack_require__(/*! ./turtle.js */ "./node_modules/refractor/lang/turtle.js")
-module.exports = sparql
 sparql.displayName = 'sparql'
 sparql.aliases = ['rq']
+
+/** @param {Refractor} Prism */
 function sparql(Prism) {
-  Prism.register(refractorTurtle)
+  Prism.register(_turtle_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   Prism.languages.sparql = Prism.languages.extend('turtle', {
     boolean: /\b(?:false|true)\b/i,
     variable: {
@@ -45718,15 +52518,20 @@ function sparql(Prism) {
 /*!***************************************************!*\
   !*** ./node_modules/refractor/lang/splunk-spl.js ***!
   \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = splunkSpl
-splunkSpl.displayName = 'splunkSpl'
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return splunkSpl; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
+splunkSpl.displayName = 'splunk-spl'
 splunkSpl.aliases = []
+
+/** @param {Refractor} Prism */
 function splunkSpl(Prism) {
   Prism.languages['splunk-spl'] = {
     comment: /`comment\("(?:\\.|[^\\"])*"\)`/,
@@ -45762,16 +52567,24 @@ function splunkSpl(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/sqf.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return sqf; });
+/* harmony import */ var _clike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clike.js */ "./node_modules/refractor/lang/clike.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = sqf
 sqf.displayName = 'sqf'
 sqf.aliases = []
+
+/** @param {Refractor} Prism */
 function sqf(Prism) {
+  Prism.register(_clike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   Prism.languages.sqf = Prism.languages.extend('clike', {
     string: {
       pattern: /"(?:(?:"")?[^"])*"(?!")|'(?:[^'])*'/,
@@ -45817,15 +52630,20 @@ function sqf(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/sql.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = sql
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return sql; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 sql.displayName = 'sql'
 sql.aliases = []
+
+/** @param {Refractor} Prism */
 function sql(Prism) {
   Prism.languages.sql = {
     comment: {
@@ -45872,16 +52690,24 @@ function sql(Prism) {
 /*!*************************************************!*\
   !*** ./node_modules/refractor/lang/squirrel.js ***!
   \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return squirrel; });
+/* harmony import */ var _clike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clike.js */ "./node_modules/refractor/lang/clike.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = squirrel
 squirrel.displayName = 'squirrel'
 squirrel.aliases = []
+
+/** @param {Refractor} Prism */
 function squirrel(Prism) {
+  Prism.register(_clike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   Prism.languages.squirrel = Prism.languages.extend('clike', {
     comment: [
       Prism.languages.clike['comment'][0],
@@ -45935,18 +52761,24 @@ function squirrel(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/stan.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = stan
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return stan; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 stan.displayName = 'stan'
 stan.aliases = []
+
+/** @param {Refractor} Prism */
 function stan(Prism) {
   ;(function (Prism) {
     // https://mc-stan.org/docs/2_28/reference-manual/bnf-grammars.html
+
     var higherOrderFunctions =
       /\b(?:algebra_solver|algebra_solver_newton|integrate_1d|integrate_ode|integrate_ode_bdf|integrate_ode_rk45|map_rect|ode_(?:adams|bdf|ckrk|rk45)(?:_tol)?|ode_adjoint_tol_ctl|reduce_sum|reduce_sum_static)\b/
     Prism.languages.stan = {
@@ -45993,7 +52825,8 @@ function stan(Prism) {
             /\bdata(?=\s*\{)|\b(?:functions|generated|model|parameters|quantities|transformed)\b/,
           alias: 'program-block'
         },
-        /\b(?:array|break|cholesky_factor_corr|cholesky_factor_cov|complex|continue|corr_matrix|cov_matrix|data|else|for|if|in|increment_log_prob|int|matrix|ordered|positive_ordered|print|real|reject|return|row_vector|simplex|target|unit_vector|vector|void|while)\b/, // these are functions that are known to take another function as their first argument.
+        /\b(?:array|break|cholesky_factor_corr|cholesky_factor_cov|complex|continue|corr_matrix|cov_matrix|data|else|for|if|in|increment_log_prob|int|matrix|ordered|positive_ordered|print|real|reject|return|row_vector|simplex|target|unit_vector|vector|void|while)\b/,
+        // these are functions that are known to take another function as their first argument.
         higherOrderFunctions
       ],
       function: /\b[a-z]\w*(?=\s*\()/i,
@@ -46011,25 +52844,137 @@ function stan(Prism) {
 
 /***/ }),
 
+/***/ "./node_modules/refractor/lang/stata.js":
+/*!**********************************************!*\
+  !*** ./node_modules/refractor/lang/stata.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return stata; });
+/* harmony import */ var _java_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./java.js */ "./node_modules/refractor/lang/java.js");
+/* harmony import */ var _mata_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./mata.js */ "./node_modules/refractor/lang/mata.js");
+/* harmony import */ var _python_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./python.js */ "./node_modules/refractor/lang/python.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
+
+
+
+stata.displayName = 'stata'
+stata.aliases = []
+
+/** @param {Refractor} Prism */
+function stata(Prism) {
+  Prism.register(_java_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+  Prism.register(_mata_js__WEBPACK_IMPORTED_MODULE_1__["default"])
+  Prism.register(_python_js__WEBPACK_IMPORTED_MODULE_2__["default"])
+  // https://www.stata.com/manuals/u.pdf
+  // https://www.stata.com/manuals/p.pdf
+
+  Prism.languages.stata = {
+    comment: [
+      {
+        pattern: /(^[ \t]*)\*.*/m,
+        lookbehind: true,
+        greedy: true
+      },
+      {
+        pattern: /(^|\s)\/\/.*|\/\*[\s\S]*?\*\//,
+        lookbehind: true,
+        greedy: true
+      }
+    ],
+    'string-literal': {
+      pattern: /"[^"\r\n]*"|[‘`']".*?"[’`']/,
+      greedy: true,
+      inside: {
+        interpolation: {
+          pattern: /\$\{[^{}]*\}|[‘`']\w[^’`'\r\n]*[’`']/,
+          inside: {
+            punctuation: /^\$\{|\}$/,
+            expression: {
+              pattern: /[\s\S]+/,
+              inside: null // see below
+            }
+          }
+        },
+        string: /[\s\S]+/
+      }
+    },
+    mata: {
+      pattern: /(^[ \t]*mata[ \t]*:)[\s\S]+?(?=^end\b)/m,
+      lookbehind: true,
+      greedy: true,
+      alias: 'language-mata',
+      inside: Prism.languages.mata
+    },
+    java: {
+      pattern: /(^[ \t]*java[ \t]*:)[\s\S]+?(?=^end\b)/m,
+      lookbehind: true,
+      greedy: true,
+      alias: 'language-java',
+      inside: Prism.languages.java
+    },
+    python: {
+      pattern: /(^[ \t]*python[ \t]*:)[\s\S]+?(?=^end\b)/m,
+      lookbehind: true,
+      greedy: true,
+      alias: 'language-python',
+      inside: Prism.languages.python
+    },
+    command: {
+      pattern:
+        /(^[ \t]*(?:\.[ \t]+)?(?:(?:bayes|bootstrap|by|bysort|capture|collect|fmm|fp|frame|jackknife|mfp|mi|nestreg|noisily|permute|quietly|rolling|simulate|statsby|stepwise|svy|version|xi)\b[^:\r\n]*:[ \t]*|(?:capture|noisily|quietly|version)[ \t]+)?)[a-zA-Z]\w*/m,
+      lookbehind: true,
+      greedy: true,
+      alias: 'keyword'
+    },
+    variable: /\$\w+|[‘`']\w[^’`'\r\n]*[’`']/,
+    keyword:
+      /\b(?:bayes|bootstrap|by|bysort|capture|clear|collect|fmm|fp|frame|if|in|jackknife|mi[ \t]+estimate|mfp|nestreg|noisily|of|permute|quietly|rolling|simulate|sort|statsby|stepwise|svy|varlist|version|xi)\b/,
+    boolean: /\b(?:off|on)\b/,
+    number: /\b\d+(?:\.\d+)?\b|\B\.\d+/,
+    function: /\b[a-z_]\w*(?=\()/i,
+    operator: /\+\+|--|##?|[<>!=~]=?|[+\-*^&|/]/,
+    punctuation: /[(){}[\],:]/
+  }
+  Prism.languages.stata[
+    'string-literal'
+  ].inside.interpolation.inside.expression.inside = Prism.languages.stata
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/refractor/lang/stylus.js":
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/stylus.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = stylus
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return stylus; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 stylus.displayName = 'stylus'
 stylus.aliases = []
+
+/** @param {Refractor} Prism */
 function stylus(Prism) {
   ;(function (Prism) {
     var unit = {
       pattern: /(\b\d+)(?:%|[a-z]+)/,
       lookbehind: true
-    } // 123 -123 .123 -.123 12.3 -12.3
+    }
+    // 123 -123 .123 -.123 12.3 -12.3
     var number = {
       pattern: /(^|[^\w.-])-?(?:\d+(?:\.\d+)?|\.\d+)/,
       lookbehind: true
@@ -46169,19 +53114,82 @@ function stylus(Prism) {
 
 /***/ }),
 
+/***/ "./node_modules/refractor/lang/supercollider.js":
+/*!******************************************************!*\
+  !*** ./node_modules/refractor/lang/supercollider.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return supercollider; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
+supercollider.displayName = 'supercollider'
+supercollider.aliases = ['sclang']
+
+/** @param {Refractor} Prism */
+function supercollider(Prism) {
+  Prism.languages.supercollider = {
+    comment: {
+      pattern:
+        /\/\/.*|\/\*(?:[^*/]|\*(?!\/)|\/(?!\*)|\/\*(?:[^*]|\*(?!\/))*\*\/)*\*\//,
+      greedy: true
+    },
+    string: {
+      pattern: /(^|[^\\])"(?:[^"\\]|\\[\s\S])*"/,
+      lookbehind: true,
+      greedy: true
+    },
+    char: {
+      pattern: /\$(?:[^\\\r\n]|\\.)/,
+      greedy: true
+    },
+    symbol: {
+      pattern: /(^|[^\\])'(?:[^'\\]|\\[\s\S])*'|\\\w+/,
+      lookbehind: true,
+      greedy: true
+    },
+    keyword: /\b(?:_|arg|classvar|const|nil|var|while)\b/,
+    boolean: /\b(?:false|true)\b/,
+    label: {
+      pattern: /\b[a-z_]\w*(?=\s*:)/,
+      alias: 'property'
+    },
+    number:
+      /\b(?:inf|pi|0x[0-9a-fA-F]+|\d+(?:\.\d+)?(?:[eE][+-]?\d+)?(?:pi)?|\d+r[0-9a-zA-Z]+(?:\.[0-9a-zA-Z]+)?|\d+[sb]{1,4}\d*)\b/,
+    'class-name': /\b[A-Z]\w*\b/,
+    operator:
+      /\.{2,3}|#(?![[{])|&&|[!=]==?|\+>>|\+{1,3}|-[->]|=>|>>|\?\?|@\|?@|\|(?:@|[!=]=)?\||!\?|<[!=>]|\*{1,2}|<{2,3}\*?|[-!%&/<>?@|=`]/,
+    punctuation: /[{}()[\].:,;]|#[[{]/
+  }
+  Prism.languages.sclang = Prism.languages.supercollider
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/refractor/lang/swift.js":
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/swift.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = swift
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return swift; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 swift.displayName = 'swift'
 swift.aliases = []
+
+/** @param {Refractor} Prism */
 function swift(Prism) {
   Prism.languages.swift = {
     comment: {
@@ -46196,10 +53204,12 @@ function swift(Prism) {
       {
         pattern: RegExp(
           /(^|[^"#])/.source +
-            '(?:' + // single-line string
+            '(?:' +
+            // single-line string
             /"(?:\\(?:\((?:[^()]|\([^()]*\))*\)|\r\n|[^(])|[^\\\r\n"])*"/
               .source +
-            '|' + // multi-line string
+            '|' +
+            // multi-line string
             /"""(?:\\(?:\((?:[^()]|\([^()]*\))*\)|[^(])|[^\\"]|"(?!""))*"""/
               .source +
             ')' +
@@ -46224,10 +53234,12 @@ function swift(Prism) {
       {
         pattern: RegExp(
           /(^|[^"#])(#+)/.source +
-            '(?:' + // single-line string
+            '(?:' +
+            // single-line string
             /"(?:\\(?:#+\((?:[^()]|\([^()]*\))*\)|\r\n|[^#])|[^\\\r\n])*?"/
               .source +
-            '|' + // multi-line string
+            '|' +
+            // multi-line string
             /"""(?:\\(?:#+\((?:[^()]|\([^()]*\))*\)|[^#])|[^\\])*?"""/.source +
             ')' +
             '\\2'
@@ -46254,7 +53266,8 @@ function swift(Prism) {
         /#/.source +
           '(?:' +
           (/(?:elseif|if)\b/.source +
-            '(?:[ \t]*' + // This regex is a little complex. It's equivalent to this:
+            '(?:[ \t]*' +
+            // This regex is a little complex. It's equivalent to this:
             //   (?:![ \t]*)?(?:\b\w+\b(?:[ \t]*<round>)?|<round>)(?:[ \t]*(?:&&|\|\|))?
             // where <round> is a general parentheses expression.
             /(?:![ \t]*)?(?:\b\w+\b(?:[ \t]*\((?:[^()]|\([^()]*\))*\))?|\((?:[^()]|\([^()]*\))*\))(?:[ \t]*(?:&&|\|\|))?/
@@ -46334,17 +53347,23 @@ function swift(Prism) {
 /*!************************************************!*\
   !*** ./node_modules/refractor/lang/systemd.js ***!
   \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = systemd
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return systemd; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 systemd.displayName = 'systemd'
 systemd.aliases = []
+
+/** @param {Refractor} Prism */
 function systemd(Prism) {
   // https://www.freedesktop.org/software/systemd/man/systemd.syntax.html
+
   ;(function (Prism) {
     var comment = {
       pattern: /^[;#].*/m,
@@ -46376,16 +53395,20 @@ function systemd(Prism) {
         //  2) Line continuations.
         //     After line continuations, empty lines and comments are ignored so we have to consume them.
         pattern: RegExp(
-          /(=[ \t]*(?!\s))/.source + // the value either starts with quotes or not
+          /(=[ \t]*(?!\s))/.source +
+            // the value either starts with quotes or not
             '(?:' +
             quotesSource +
-            '|(?=[^"\r\n]))' + // main loop
+            '|(?=[^"\r\n]))' +
+            // main loop
             '(?:' +
-            (/[^\s\\]/.source + // handle spaces separately because of quotes
+            (/[^\s\\]/.source +
+              // handle spaces separately because of quotes
               '|' +
               '[ \t]+(?:(?![ \t"])|' +
               quotesSource +
-              ')' + // line continuation
+              ')' +
+              // line continuation
               '|' +
               /\\[\r\n]+(?:[#;].*[\r\n]+)*(?![#;])/.source) +
             ')*'
@@ -46419,19 +53442,27 @@ function systemd(Prism) {
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/t4-cs.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return t4Cs; });
+/* harmony import */ var _csharp_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./csharp.js */ "./node_modules/refractor/lang/csharp.js");
+/* harmony import */ var _t4_templating_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./t4-templating.js */ "./node_modules/refractor/lang/t4-templating.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorT4Templating = __webpack_require__(/*! ./t4-templating.js */ "./node_modules/refractor/lang/t4-templating.js")
-var refractorCsharp = __webpack_require__(/*! ./csharp.js */ "./node_modules/refractor/lang/csharp.js")
-module.exports = t4Cs
-t4Cs.displayName = 't4Cs'
-t4Cs.aliases = []
+
+t4Cs.displayName = 't4-cs'
+t4Cs.aliases = ['t4']
+
+/** @param {Refractor} Prism */
 function t4Cs(Prism) {
-  Prism.register(refractorT4Templating)
-  Prism.register(refractorCsharp)
+  Prism.register(_csharp_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+  Prism.register(_t4_templating_js__WEBPACK_IMPORTED_MODULE_1__["default"])
   Prism.languages.t4 = Prism.languages['t4-cs'] =
     Prism.languages['t4-templating'].createT4('csharp')
 }
@@ -46443,15 +53474,20 @@ function t4Cs(Prism) {
 /*!******************************************************!*\
   !*** ./node_modules/refractor/lang/t4-templating.js ***!
   \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = t4Templating
-t4Templating.displayName = 't4Templating'
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return t4Templating; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
+t4Templating.displayName = 't4-templating'
 t4Templating.aliases = []
+
+/** @param {Refractor} Prism */
 function t4Templating(Prism) {
   ;(function (Prism) {
     function createBlock(prefix, inside, contentAlias) {
@@ -46508,19 +53544,27 @@ function t4Templating(Prism) {
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/t4-vb.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return t4Vb; });
+/* harmony import */ var _t4_templating_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./t4-templating.js */ "./node_modules/refractor/lang/t4-templating.js");
+/* harmony import */ var _vbnet_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./vbnet.js */ "./node_modules/refractor/lang/vbnet.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorT4Templating = __webpack_require__(/*! ./t4-templating.js */ "./node_modules/refractor/lang/t4-templating.js")
-var refractorVbnet = __webpack_require__(/*! ./vbnet.js */ "./node_modules/refractor/lang/vbnet.js")
-module.exports = t4Vb
-t4Vb.displayName = 't4Vb'
+
+t4Vb.displayName = 't4-vb'
 t4Vb.aliases = []
+
+/** @param {Refractor} Prism */
 function t4Vb(Prism) {
-  Prism.register(refractorT4Templating)
-  Prism.register(refractorVbnet)
+  Prism.register(_t4_templating_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+  Prism.register(_vbnet_js__WEBPACK_IMPORTED_MODULE_1__["default"])
   Prism.languages['t4-vb'] = Prism.languages['t4-templating'].createT4('vbnet')
 }
 
@@ -46531,18 +53575,26 @@ function t4Vb(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/tap.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return tap; });
+/* harmony import */ var _yaml_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./yaml.js */ "./node_modules/refractor/lang/yaml.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorYaml = __webpack_require__(/*! ./yaml.js */ "./node_modules/refractor/lang/yaml.js")
-module.exports = tap
 tap.displayName = 'tap'
 tap.aliases = []
+
+/** @param {Refractor} Prism */
 function tap(Prism) {
-  Prism.register(refractorYaml)
+  Prism.register(_yaml_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   // https://en.wikipedia.org/wiki/Test_Anything_Protocol
+
   Prism.languages.tap = {
     fail: /not ok[^#{\n\r]*/,
     pass: /ok[^#{\n\r]*/,
@@ -46572,15 +53624,20 @@ function tap(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/tcl.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = tcl
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return tcl; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 tcl.displayName = 'tcl'
 tcl.aliases = []
+
+/** @param {Refractor} Prism */
 function tcl(Prism) {
   Prism.languages.tcl = {
     comment: {
@@ -46640,20 +53697,29 @@ function tcl(Prism) {
 /*!************************************************!*\
   !*** ./node_modules/refractor/lang/textile.js ***!
   \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return textile; });
+/* harmony import */ var _markup_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./markup.js */ "./node_modules/refractor/lang/markup.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = textile
 textile.displayName = 'textile'
 textile.aliases = []
+
+/** @param {Refractor} Prism */
 function textile(Prism) {
+  Prism.register(_markup_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   ;(function (Prism) {
     // We don't allow for pipes inside parentheses
     // to not break table pattern |(. foo |). bar |
-    var modifierRegex = /\([^|()\n]+\)|\[[^\]\n]+\]|\{[^}\n]+\}/.source // Opening and closing parentheses which are not a modifier
+    var modifierRegex = /\([^|()\n]+\)|\[[^\]\n]+\]|\{[^}\n]+\}/.source
+    // Opening and closing parentheses which are not a modifier
     // This pattern is necessary to prevent exponential backtracking
     var parenthesesRegex = /\)|\((?![^|()\n]+\))/.source
     /**
@@ -46757,6 +53823,7 @@ function textile(Prism) {
             lookbehind: true,
             inside: {
               // Note: superscripts and subscripts are not handled specifically
+
               // *bold*, **bold**
               bold: {
                 // eslint-disable-next-line regexp/no-super-linear-backtracking
@@ -46917,15 +53984,21 @@ function textile(Prism) {
       footnote: phraseInside['footnote'],
       acronym: phraseInside['acronym'],
       mark: phraseInside['mark']
-    } // Only allow alpha-numeric HTML tags, not XML tags
+    }
+
+    // Only allow alpha-numeric HTML tags, not XML tags
     textile.tag.pattern =
-      /<\/?(?!\d)[a-z0-9]+(?:\s+[^\s>\/=]+(?:=(?:("|')(?:\\[\s\S]|(?!\1)[^\\])*\1|[^\s'">=]+))?)*\s*\/?>/i // Allow some nesting
+      /<\/?(?!\d)[a-z0-9]+(?:\s+[^\s>\/=]+(?:=(?:("|')(?:\\[\s\S]|(?!\1)[^\\])*\1|[^\s'">=]+))?)*\s*\/?>/i
+
+    // Allow some nesting
     var phraseInlineInside = phraseInside['inline'].inside
     phraseInlineInside['bold'].inside = nestedPatterns
     phraseInlineInside['italic'].inside = nestedPatterns
     phraseInlineInside['inserted'].inside = nestedPatterns
     phraseInlineInside['deleted'].inside = nestedPatterns
-    phraseInlineInside['span'].inside = nestedPatterns // Allow some styles inside table cells
+    phraseInlineInside['span'].inside = nestedPatterns
+
+    // Allow some styles inside table cells
     var phraseTableInside = phraseInside['table'].inside
     phraseTableInside['inline'] = nestedPatterns['inline']
     phraseTableInside['link'] = nestedPatterns['link']
@@ -46943,18 +54016,24 @@ function textile(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/toml.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = toml
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return toml; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 toml.displayName = 'toml'
 toml.aliases = []
+
+/** @param {Refractor} Prism */
 function toml(Prism) {
   ;(function (Prism) {
     var key = /(?:[\w-]+|'[^'\n\r]*'|"(?:\\.|[^\\"\r\n])*")/.source
+
     /**
      * @param {string} pattern
      */
@@ -47021,15 +54100,20 @@ function toml(Prism) {
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/tremor.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = tremor
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return tremor; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 tremor.displayName = 'tremor'
-tremor.aliases = []
+tremor.aliases = ['trickle', 'troy']
+
+/** @param {Refractor} Prism */
 function tremor(Prism) {
   ;(function (Prism) {
     Prism.languages.tremor = {
@@ -47116,24 +54200,36 @@ function tremor(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/tsx.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return tsx; });
+/* harmony import */ var _jsx_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./jsx.js */ "./node_modules/refractor/lang/jsx.js");
+/* harmony import */ var _typescript_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./typescript.js */ "./node_modules/refractor/lang/typescript.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorJsx = __webpack_require__(/*! ./jsx.js */ "./node_modules/refractor/lang/jsx.js")
-var refractorTypescript = __webpack_require__(/*! ./typescript.js */ "./node_modules/refractor/lang/typescript.js")
-module.exports = tsx
+
 tsx.displayName = 'tsx'
 tsx.aliases = []
+
+/** @param {Refractor} Prism */
 function tsx(Prism) {
-  Prism.register(refractorJsx)
-  Prism.register(refractorTypescript)
+  Prism.register(_jsx_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+  Prism.register(_typescript_js__WEBPACK_IMPORTED_MODULE_1__["default"])
   ;(function (Prism) {
     var typescript = Prism.util.clone(Prism.languages.typescript)
-    Prism.languages.tsx = Prism.languages.extend('jsx', typescript) // doesn't work with TS because TS is too complex
+    Prism.languages.tsx = Prism.languages.extend('jsx', typescript)
+
+    // doesn't work with TS because TS is too complex
     delete Prism.languages.tsx['parameter']
-    delete Prism.languages.tsx['literal-property'] // This will prevent collisions between TSX tags and TS generic types.
+    delete Prism.languages.tsx['literal-property']
+
+    // This will prevent collisions between TSX tags and TS generic types.
     // Idea by https://github.com/karlhorky
     // Discussion: https://github.com/PrismJS/prism/issues/2594#issuecomment-710666928
     var tag = Prism.languages.tsx.tag
@@ -47152,17 +54248,27 @@ function tsx(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/tt2.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return tt2; });
+/* harmony import */ var _clike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clike.js */ "./node_modules/refractor/lang/clike.js");
+/* harmony import */ var _markup_templating_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./markup-templating.js */ "./node_modules/refractor/lang/markup-templating.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorMarkupTemplating = __webpack_require__(/*! ./markup-templating.js */ "./node_modules/refractor/lang/markup-templating.js")
-module.exports = tt2
+
 tt2.displayName = 'tt2'
 tt2.aliases = []
+
+/** @param {Refractor} Prism */
 function tt2(Prism) {
-  Prism.register(refractorMarkupTemplating)
+  Prism.register(_clike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+  Prism.register(_markup_templating_js__WEBPACK_IMPORTED_MODULE_1__["default"])
   ;(function (Prism) {
     Prism.languages.tt2 = Prism.languages.extend('clike', {
       comment: /#.*|\[%#[\s\S]*?%\]/,
@@ -47198,7 +54304,9 @@ function tt2(Prism) {
           }
         }
       }
-    }) // The different types of TT2 strings "replace" the C-like standard string
+    })
+
+    // The different types of TT2 strings "replace" the C-like standard string
     delete Prism.languages.tt2.string
     Prism.hooks.add('before-tokenize', function (env) {
       var tt2Pattern = /\[%[\s\S]+?%\]/g
@@ -47221,15 +54329,20 @@ function tt2(Prism) {
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/turtle.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = turtle
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return turtle; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 turtle.displayName = 'turtle'
-turtle.aliases = []
+turtle.aliases = ['trig']
+
+/** @param {Refractor} Prism */
 function turtle(Prism) {
   Prism.languages.turtle = {
     comment: {
@@ -47294,17 +54407,24 @@ function turtle(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/twig.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return twig; });
+/* harmony import */ var _markup_templating_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./markup-templating.js */ "./node_modules/refractor/lang/markup-templating.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorMarkupTemplating = __webpack_require__(/*! ./markup-templating.js */ "./node_modules/refractor/lang/markup-templating.js")
-module.exports = twig
 twig.displayName = 'twig'
 twig.aliases = []
+
+/** @param {Refractor} Prism */
 function twig(Prism) {
-  Prism.register(refractorMarkupTemplating)
+  Prism.register(_markup_templating_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   Prism.languages.twig = {
     comment: /^\{#[\s\S]*?#\}$/,
     'tag-name': {
@@ -47354,16 +54474,24 @@ function twig(Prism) {
 /*!***************************************************!*\
   !*** ./node_modules/refractor/lang/typescript.js ***!
   \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return typescript; });
+/* harmony import */ var _javascript_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./javascript.js */ "./node_modules/refractor/lang/javascript.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = typescript
 typescript.displayName = 'typescript'
 typescript.aliases = ['ts']
+
+/** @param {Refractor} Prism */
 function typescript(Prism) {
+  Prism.register(_javascript_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   ;(function (Prism) {
     Prism.languages.typescript = Prism.languages.extend('javascript', {
       'class-name': {
@@ -47375,14 +54503,22 @@ function typescript(Prism) {
       },
       builtin:
         /\b(?:Array|Function|Promise|any|boolean|console|never|number|string|symbol|unknown)\b/
-    }) // The keywords TypeScript adds to JavaScript
+    })
+
+    // The keywords TypeScript adds to JavaScript
     Prism.languages.typescript.keyword.push(
-      /\b(?:abstract|declare|is|keyof|readonly|require)\b/, // keywords that have to be followed by an identifier
-      /\b(?:asserts|infer|interface|module|namespace|type)\b(?=\s*(?:[{_$a-zA-Z\xA0-\uFFFF]|$))/, // This is for `import type *, {}`
+      /\b(?:abstract|declare|is|keyof|readonly|require)\b/,
+      // keywords that have to be followed by an identifier
+      /\b(?:asserts|infer|interface|module|namespace|type)\b(?=\s*(?:[{_$a-zA-Z\xA0-\uFFFF]|$))/,
+      // This is for `import type *, {}`
       /\btype\b(?=\s*(?:[\{*]|$))/
-    ) // doesn't work with TS because TS is too complex
+    )
+
+    // doesn't work with TS because TS is too complex
     delete Prism.languages.typescript['parameter']
-    delete Prism.languages.typescript['literal-property'] // a version of typescript specifically for highlighting types
+    delete Prism.languages.typescript['literal-property']
+
+    // a version of typescript specifically for highlighting types
     var typeInside = Prism.languages.extend('typescript', {})
     delete typeInside['class-name']
     Prism.languages.typescript['class-name'].inside = typeInside
@@ -47424,15 +54560,20 @@ function typescript(Prism) {
 /*!***************************************************!*\
   !*** ./node_modules/refractor/lang/typoscript.js ***!
   \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = typoscript
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return typoscript; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 typoscript.displayName = 'typoscript'
 typoscript.aliases = ['tsconfig']
+
+/** @param {Refractor} Prism */
 function typoscript(Prism) {
   ;(function (Prism) {
     var keywords =
@@ -47522,15 +54663,20 @@ function typoscript(Prism) {
 /*!*****************************************************!*\
   !*** ./node_modules/refractor/lang/unrealscript.js ***!
   \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = unrealscript
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return unrealscript; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 unrealscript.displayName = 'unrealscript'
 unrealscript.aliases = ['uc', 'uscript']
+
+/** @param {Refractor} Prism */
 function unrealscript(Prism) {
   Prism.languages.unrealscript = {
     comment: /\/\/.*|\/\*[\s\S]*?\*\//,
@@ -47584,15 +54730,20 @@ function unrealscript(Prism) {
 /*!************************************************!*\
   !*** ./node_modules/refractor/lang/uorazor.js ***!
   \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = uorazor
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return uorazor; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 uorazor.displayName = 'uorazor'
 uorazor.aliases = []
+
+/** @param {Refractor} Prism */
 function uorazor(Prism) {
   Prism.languages.uorazor = {
     'comment-hash': {
@@ -47656,17 +54807,23 @@ function uorazor(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/uri.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = uri
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return uri; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 uri.displayName = 'uri'
 uri.aliases = ['url']
+
+/** @param {Refractor} Prism */
 function uri(Prism) {
   // https://tools.ietf.org/html/rfc3986#appendix-A
+
   Prism.languages.uri = {
     scheme: {
       pattern: /^[a-z][a-z0-9+.-]*:/im,
@@ -47703,14 +54860,19 @@ function uri(Prism) {
     },
     authority: {
       pattern: RegExp(
-        /^\/\//.source + // [ userinfo "@" ]
-          /(?:[\w\-.~!$&'()*+,;=%:]*@)?/.source + // host
-          ('(?:' + // IP-literal
+        /^\/\//.source +
+          // [ userinfo "@" ]
+          /(?:[\w\-.~!$&'()*+,;=%:]*@)?/.source +
+          // host
+          ('(?:' +
+            // IP-literal
             /\[(?:[0-9a-fA-F:.]{2,48}|v[0-9a-fA-F]+\.[\w\-.~!$&'()*+,;=]+)\]/
               .source +
-            '|' + // IPv4address or registered name
+            '|' +
+            // IPv4address or registered name
             /[\w\-.~!$&'()*+,;=%]*/.source +
-            ')') + // [ ":" port ]
+            ')') +
+          // [ ":" port ]
           /(?::\d*)?/.source,
         'm'
       ),
@@ -47764,16 +54926,24 @@ function uri(Prism) {
 /*!******************************************!*\
   !*** ./node_modules/refractor/lang/v.js ***!
   \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return v; });
+/* harmony import */ var _clike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clike.js */ "./node_modules/refractor/lang/clike.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = v
 v.displayName = 'v'
 v.aliases = []
+
+/** @param {Refractor} Prism */
 function v(Prism) {
+  Prism.register(_clike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   ;(function (Prism) {
     var interpolationExpr = {
       pattern: /[\s\S]+/,
@@ -47866,16 +55036,24 @@ function v(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/vala.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return vala; });
+/* harmony import */ var _clike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clike.js */ "./node_modules/refractor/lang/clike.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = vala
 vala.displayName = 'vala'
 vala.aliases = []
+
+/** @param {Refractor} Prism */
 function vala(Prism) {
+  Prism.register(_clike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   Prism.languages.vala = Prism.languages.extend('clike', {
     // Classes copied from prism-csharp
     'class-name': [
@@ -47973,17 +55151,24 @@ function vala(Prism) {
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/vbnet.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return vbnet; });
+/* harmony import */ var _basic_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./basic.js */ "./node_modules/refractor/lang/basic.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-var refractorBasic = __webpack_require__(/*! ./basic.js */ "./node_modules/refractor/lang/basic.js")
-module.exports = vbnet
 vbnet.displayName = 'vbnet'
 vbnet.aliases = []
+
+/** @param {Refractor} Prism */
 function vbnet(Prism) {
-  Prism.register(refractorBasic)
+  Prism.register(_basic_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   Prism.languages.vbnet = Prism.languages.extend('basic', {
     comment: [
       {
@@ -48016,16 +55201,24 @@ function vbnet(Prism) {
 /*!*************************************************!*\
   !*** ./node_modules/refractor/lang/velocity.js ***!
   \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return velocity; });
+/* harmony import */ var _markup_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./markup.js */ "./node_modules/refractor/lang/markup.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = velocity
 velocity.displayName = 'velocity'
 velocity.aliases = []
+
+/** @param {Refractor} Prism */
 function velocity(Prism) {
+  Prism.register(_markup_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   ;(function (Prism) {
     Prism.languages.velocity = Prism.languages.extend('markup', {})
     var velocity = {
@@ -48106,15 +55299,20 @@ function velocity(Prism) {
 /*!************************************************!*\
   !*** ./node_modules/refractor/lang/verilog.js ***!
   \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = verilog
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return verilog; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 verilog.displayName = 'verilog'
 verilog.aliases = []
+
+/** @param {Refractor} Prism */
 function verilog(Prism) {
   Prism.languages.verilog = {
     comment: {
@@ -48153,15 +55351,20 @@ function verilog(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/vhdl.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = vhdl
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return vhdl; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 vhdl.displayName = 'vhdl'
 vhdl.aliases = []
+
+/** @param {Refractor} Prism */
 function vhdl(Prism) {
   Prism.languages.vhdl = {
     comment: /--.+/,
@@ -48176,10 +55379,13 @@ function vhdl(Prism) {
       alias: 'function'
     },
     string: /"(?:[^\\"\r\n]|\\(?:\r\n|[\s\S]))*"/,
-    constant: /\b(?:library|use)\b/i,
+    attribute: {
+      pattern: /\b'\w+/,
+      alias: 'attr-name'
+    },
     // support for predefined attributes included
     keyword:
-      /\b(?:'active|'ascending|'base|'delayed|'driving|'driving_value|'event|'high|'image|'instance_name|'last_active|'last_event|'last_value|'left|'leftof|'length|'low|'path_name|'pos|'pred|'quiet|'range|'reverse_range|'right|'rightof|'simple_name|'stable|'succ|'transaction|'val|'value|access|after|alias|all|architecture|array|assert|attribute|begin|block|body|buffer|bus|case|component|configuration|constant|disconnect|downto|else|elsif|end|entity|exit|file|for|function|generate|generic|group|guarded|if|impure|in|inertial|inout|is|label|library|linkage|literal|loop|map|new|next|null|of|on|open|others|out|package|port|postponed|procedure|process|pure|range|record|register|reject|report|return|select|severity|shared|signal|subtype|then|to|transport|type|unaffected|units|until|use|variable|wait|when|while|with)\b/i,
+      /\b(?:access|after|alias|all|architecture|array|assert|attribute|begin|block|body|buffer|bus|case|component|configuration|constant|disconnect|downto|else|elsif|end|entity|exit|file|for|function|generate|generic|group|guarded|if|impure|in|inertial|inout|is|label|library|linkage|literal|loop|map|new|next|null|of|on|open|others|out|package|port|postponed|private|procedure|process|pure|range|record|register|reject|report|return|select|severity|shared|signal|subtype|then|to|transport|type|unaffected|units|until|use|variable|view|wait|when|while|with)\b/i,
     boolean: /\b(?:false|true)\b/i,
     function: /\w+(?=\()/,
     // decimal, based, physical, and exponential numbers supported
@@ -48197,15 +55403,20 @@ function vhdl(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/vim.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = vim
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return vim; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 vim.displayName = 'vim'
 vim.aliases = []
+
+/** @param {Refractor} Prism */
 function vim(Prism) {
   Prism.languages.vim = {
     string: /"(?:[^"\\\r\n]|\\.)*"|'(?:[^'\r\n]|'')*'/,
@@ -48229,15 +55440,20 @@ function vim(Prism) {
 /*!*****************************************************!*\
   !*** ./node_modules/refractor/lang/visual-basic.js ***!
   \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return visualBasic; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
+visualBasic.displayName = 'visual-basic'
+visualBasic.aliases = ['vb', 'vba']
 
-
-module.exports = visualBasic
-visualBasic.displayName = 'visualBasic'
-visualBasic.aliases = []
+/** @param {Refractor} Prism */
 function visualBasic(Prism) {
   Prism.languages['visual-basic'] = {
     comment: {
@@ -48280,15 +55496,20 @@ function visualBasic(Prism) {
 /*!***************************************************!*\
   !*** ./node_modules/refractor/lang/warpscript.js ***!
   \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = warpscript
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return warpscript; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 warpscript.displayName = 'warpscript'
 warpscript.aliases = []
+
+/** @param {Refractor} Prism */
 function warpscript(Prism) {
   Prism.languages.warpscript = {
     comment: /#.*|\/\/.*|\/\*[\s\S]*?\*\//,
@@ -48324,15 +55545,20 @@ function warpscript(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/wasm.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = wasm
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return wasm; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 wasm.displayName = 'wasm'
 wasm.aliases = []
+
+/** @param {Refractor} Prism */
 function wasm(Prism) {
   Prism.languages.wasm = {
     comment: [
@@ -48376,15 +55602,20 @@ function wasm(Prism) {
 /*!************************************************!*\
   !*** ./node_modules/refractor/lang/web-idl.js ***!
   \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return webIdl; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
+webIdl.displayName = 'web-idl'
+webIdl.aliases = ['webidl']
 
-
-module.exports = webIdl
-webIdl.displayName = 'webIdl'
-webIdl.aliases = []
+/** @param {Refractor} Prism */
 function webIdl(Prism) {
   ;(function (Prism) {
     var id = /(?:\B-|\b_|\b)[A-Za-z][\w-]*(?![\w-])/.source
@@ -48453,7 +55684,8 @@ function webIdl(Prism) {
           // inheritance
           pattern: RegExp(/(:\s*)/.source + id),
           lookbehind: true
-        }, // includes and implements
+        },
+        // includes and implements
         RegExp(id + /(?=\s+(?:implements|includes)\b)/.source),
         {
           pattern: RegExp(/(\b(?:implements|includes)\s+)/.source + id),
@@ -48475,7 +55707,8 @@ function webIdl(Prism) {
       builtin:
         /\b(?:ArrayBuffer|BigInt64Array|BigUint64Array|ByteString|DOMString|DataView|Float32Array|Float64Array|FrozenArray|Int16Array|Int32Array|Int8Array|ObservableArray|Promise|USVString|Uint16Array|Uint32Array|Uint8Array|Uint8ClampedArray)\b/,
       keyword: [
-        /\b(?:async|attribute|callback|const|constructor|deleter|dictionary|enum|getter|implements|includes|inherit|interface|mixin|namespace|null|optional|or|partial|readonly|required|setter|static|stringifier|typedef|unrestricted)\b/, // type keywords
+        /\b(?:async|attribute|callback|const|constructor|deleter|dictionary|enum|getter|implements|includes|inherit|interface|mixin|namespace|null|optional|or|partial|readonly|required|setter|static|stringifier|typedef|unrestricted)\b/,
+        // type keywords
         /\b(?:any|bigint|boolean|byte|double|float|iterable|long|maplike|object|octet|record|sequence|setlike|short|symbol|undefined|unsigned|void)\b/
       ],
       boolean: /\b(?:false|true)\b/,
@@ -48499,20 +55732,154 @@ function webIdl(Prism) {
 
 /***/ }),
 
+/***/ "./node_modules/refractor/lang/wgsl.js":
+/*!*********************************************!*\
+  !*** ./node_modules/refractor/lang/wgsl.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return wgsl; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
+wgsl.displayName = 'wgsl'
+wgsl.aliases = []
+
+/** @param {Refractor} Prism */
+function wgsl(Prism) {
+  Prism.languages.wgsl = {
+    comment: {
+      pattern: /\/\/.*|\/\*[\s\S]*?(?:\*\/|$)/,
+      greedy: true
+    },
+    'builtin-attribute': {
+      pattern: /(@)builtin\(.*?\)/,
+      lookbehind: true,
+      inside: {
+        attribute: {
+          pattern: /^builtin/,
+          alias: 'attr-name'
+        },
+        punctuation: /[(),]/,
+        'built-in-values': {
+          pattern:
+            /\b(?:frag_depth|front_facing|global_invocation_id|instance_index|local_invocation_id|local_invocation_index|num_workgroups|position|sample_index|sample_mask|vertex_index|workgroup_id)\b/,
+          alias: 'attr-value'
+        }
+      }
+    },
+    attributes: {
+      pattern:
+        /(@)(?:align|binding|compute|const|fragment|group|id|interpolate|invariant|location|size|vertex|workgroup_size)/i,
+      lookbehind: true,
+      alias: 'attr-name'
+    },
+    functions: {
+      pattern: /\b(fn\s+)[_a-zA-Z]\w*(?=[(<])/,
+      lookbehind: true,
+      alias: 'function'
+    },
+    keyword:
+      /\b(?:bitcast|break|case|const|continue|continuing|default|discard|else|enable|fallthrough|fn|for|function|if|let|loop|private|return|storage|struct|switch|type|uniform|var|while|workgroup)\b/,
+    builtin:
+      /\b(?:abs|acos|acosh|all|any|array|asin|asinh|atan|atan2|atanh|atomic|atomicAdd|atomicAnd|atomicCompareExchangeWeak|atomicExchange|atomicLoad|atomicMax|atomicMin|atomicOr|atomicStore|atomicSub|atomicXor|bool|ceil|clamp|cos|cosh|countLeadingZeros|countOneBits|countTrailingZeros|cross|degrees|determinant|distance|dot|dpdx|dpdxCoarse|dpdxFine|dpdy|dpdyCoarse|dpdyFine|exp|exp2|extractBits|f32|f64|faceForward|firstLeadingBit|floor|fma|fract|frexp|fwidth|fwidthCoarse|fwidthFine|i32|i64|insertBits|inverseSqrt|ldexp|length|log|log2|mat[2-4]x[2-4]|max|min|mix|modf|normalize|override|pack2x16float|pack2x16snorm|pack2x16unorm|pack4x8snorm|pack4x8unorm|pow|ptr|quantizeToF16|radians|reflect|refract|reverseBits|round|sampler|sampler_comparison|select|shiftLeft|shiftRight|sign|sin|sinh|smoothstep|sqrt|staticAssert|step|storageBarrier|tan|tanh|textureDimensions|textureGather|textureGatherCompare|textureLoad|textureNumLayers|textureNumLevels|textureNumSamples|textureSample|textureSampleBias|textureSampleCompare|textureSampleCompareLevel|textureSampleGrad|textureSampleLevel|textureStore|texture_1d|texture_2d|texture_2d_array|texture_3d|texture_cube|texture_cube_array|texture_depth_2d|texture_depth_2d_array|texture_depth_cube|texture_depth_cube_array|texture_depth_multisampled_2d|texture_multisampled_2d|texture_storage_1d|texture_storage_2d|texture_storage_2d_array|texture_storage_3d|transpose|trunc|u32|u64|unpack2x16float|unpack2x16snorm|unpack2x16unorm|unpack4x8snorm|unpack4x8unorm|vec[2-4]|workgroupBarrier)\b/,
+    'function-calls': {
+      pattern: /\b[_a-z]\w*(?=\()/i,
+      alias: 'function'
+    },
+    'class-name': /\b(?:[A-Z][A-Za-z0-9]*)\b/,
+    'bool-literal': {
+      pattern: /\b(?:false|true)\b/,
+      alias: 'boolean'
+    },
+    'hex-int-literal': {
+      pattern: /\b0[xX][0-9a-fA-F]+[iu]?\b(?![.pP])/,
+      alias: 'number'
+    },
+    'hex-float-literal': {
+      pattern: /\b0[xX][0-9a-fA-F]*(?:\.[0-9a-fA-F]*)?(?:[pP][+-]?\d+[fh]?)?/,
+      alias: 'number'
+    },
+    'decimal-float-literal': [
+      {
+        pattern: /\d*\.\d+(?:[eE](?:\+|-)?\d+)?[fh]?/,
+        alias: 'number'
+      },
+      {
+        pattern: /\d+\.\d*(?:[eE](?:\+|-)?\d+)?[fh]?/,
+        alias: 'number'
+      },
+      {
+        pattern: /\d+[eE](?:\+|-)?\d+[fh]?/,
+        alias: 'number'
+      },
+      {
+        pattern: /\b\d+[fh]\b/,
+        alias: 'number'
+      }
+    ],
+    'int-literal': {
+      pattern: /\b\d+[iu]?\b/,
+      alias: 'number'
+    },
+    operator: [
+      {
+        pattern: /(?:\^|~|\|(?!\|)|\|\||&&|<<|>>|!)(?!=)/
+      },
+      {
+        pattern: /&(?![&=])/
+      },
+      {
+        pattern: /(?:\+=|-=|\*=|\/=|%=|\^=|&=|\|=|<<=|>>=)/
+      },
+      {
+        pattern: /(^|[^<>=!])=(?![=>])/,
+        lookbehind: true
+      },
+      {
+        pattern: /(?:==|!=|<=|\+\+|--|(^|[^=])>=)/,
+        lookbehind: true
+      },
+      {
+        pattern: /(?:(?:[+%]|(?:\*(?!\w)))(?!=))|(?:-(?!>))|(?:\/(?!\/))/
+      },
+      {
+        pattern: /->/
+      }
+    ],
+    punctuation: /[@(){}[\],;<>:.]/
+  }
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/refractor/lang/wiki.js":
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/wiki.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return wiki; });
+/* harmony import */ var _markup_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./markup.js */ "./node_modules/refractor/lang/markup.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = wiki
 wiki.displayName = 'wiki'
 wiki.aliases = []
+
+/** @param {Refractor} Prism */
 function wiki(Prism) {
+  Prism.register(_markup_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   Prism.languages.wiki = Prism.languages.extend('markup', {
     'block-comment': {
       pattern: /(^|[^\\])\/\*[\s\S]*?\*\//,
@@ -48555,7 +55922,8 @@ function wiki(Prism) {
       /\[\[.+?\]\]|\[.+?\]/
     ],
     variable: [
-      /__[A-Z]+__/, // FIXME Nested structures should be handled
+      /__[A-Z]+__/,
+      // FIXME Nested structures should be handled
       // {{formatnum:{{#expr:{{{3}}}}}}}
       /\{{3}.+?\}{3}/,
       /\{\{.+?\}\}/
@@ -48599,19 +55967,25 @@ function wiki(Prism) {
 /*!************************************************!*\
   !*** ./node_modules/refractor/lang/wolfram.js ***!
   \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = wolfram
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return wolfram; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 wolfram.displayName = 'wolfram'
-wolfram.aliases = ['mathematica', 'wl', 'nb']
+wolfram.aliases = ['mathematica', 'nb', 'wl']
+
+/** @param {Refractor} Prism */
 function wolfram(Prism) {
   Prism.languages.wolfram = {
-    // Allow one level of nesting - note: regex taken from applescipt
-    comment: /\(\*(?:\(\*(?:[^*]|\*(?!\)))*\*\)|(?!\(\*)[\s\S])*?\*\)/,
+    comment:
+      // Allow one level of nesting - note: regex taken from applescipt
+      /\(\*(?:\(\*(?:[^*]|\*(?!\)))*\*\)|(?!\(\*)[\s\S])*?\*\)/,
     string: {
       pattern: /"(?:\\.|[^"\\\r\n])*"/,
       greedy: true
@@ -48634,7 +56008,7 @@ function wolfram(Prism) {
     number:
       /(?:\b(?=\d)|\B(?=\.))(?:0[bo])?(?:(?:\d|0x[\da-f])[\da-f]*(?:\.\d*)?|\.\d+)(?:e[+-]?\d+)?j?\b/i,
     operator:
-      /\/\.|;|=\.|\^=|\^:=|:=|<<|>>|<\||\|>|:>|\|->|->|<-|@@@|@@|@|\/@|=!=|===|==|=|\+|-|\^|\[\/-+%=\]=?|!=|\*\*?=?|\/\/?=?|<[<=>]?|>[=>]?|[&|^~]/,
+      /\/\.|;|=\.|\^=|\^:=|:=|<<|>>|<\||\|>|:>|\|->|->|<-|@@@|@@|@|\/@|=!=|===|==|=|\+|-|\[\/-+%=\]=?|!=|\*\*?=?|\/\/?=?|<[<=>]?|>[=>]?|[&|^~]/,
     punctuation: /[{}[\];(),.:]/
   }
   Prism.languages.mathematica = Prism.languages.wolfram
@@ -48649,17 +56023,23 @@ function wolfram(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/wren.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = wren
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return wren; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 wren.displayName = 'wren'
 wren.aliases = []
+
+/** @param {Refractor} Prism */
 function wren(Prism) {
   // https://wren.io/
+
   Prism.languages.wren = {
     // Multiline comments in Wren can have nested multiline comments
     // Comments: // and /* */
@@ -48706,7 +56086,8 @@ function wren(Prism) {
         // class Meta {}
         pattern: /(\bclass\s+)\w+/,
         lookbehind: true
-      }, // A class must always start with an uppercase.
+      },
+      // A class must always start with an uppercase.
       // File.read
       /\b[A-Z][a-z\d_]*\b/
     ],
@@ -48761,16 +56142,24 @@ function wren(Prism) {
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/xeora.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return xeora; });
+/* harmony import */ var _markup_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./markup.js */ "./node_modules/refractor/lang/markup.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = xeora
 xeora.displayName = 'xeora'
 xeora.aliases = ['xeoracube']
+
+/** @param {Refractor} Prism */
 function xeora(Prism) {
+  Prism.register(_markup_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   ;(function (Prism) {
     Prism.languages.xeora = Prism.languages.extend('markup', {
       constant: {
@@ -48899,16 +56288,24 @@ function xeora(Prism) {
 /*!************************************************!*\
   !*** ./node_modules/refractor/lang/xml-doc.js ***!
   \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return xmlDoc; });
+/* harmony import */ var _markup_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./markup.js */ "./node_modules/refractor/lang/markup.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = xmlDoc
-xmlDoc.displayName = 'xmlDoc'
+xmlDoc.displayName = 'xml-doc'
 xmlDoc.aliases = []
+
+/** @param {Refractor} Prism */
 function xmlDoc(Prism) {
+  Prism.register(_markup_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   ;(function (Prism) {
     /**
      * If the given language is present, it will insert the given doc comment grammar token into it.
@@ -48953,15 +56350,20 @@ function xmlDoc(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/xojo.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = xojo
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return xojo; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 xojo.displayName = 'xojo'
 xojo.aliases = []
+
+/** @param {Refractor} Prism */
 function xojo(Prism) {
   Prism.languages.xojo = {
     comment: {
@@ -48992,16 +56394,24 @@ function xojo(Prism) {
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/xquery.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return xquery; });
+/* harmony import */ var _markup_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./markup.js */ "./node_modules/refractor/lang/markup.js");
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 
-
-module.exports = xquery
 xquery.displayName = 'xquery'
 xquery.aliases = []
+
+/** @param {Refractor} Prism */
 function xquery(Prism) {
+  Prism.register(_markup_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   ;(function (Prism) {
     Prism.languages.xquery = Prism.languages.extend('markup', {
       'xquery-comment': {
@@ -49072,7 +56482,9 @@ function xquery(Prism) {
       pattern: /\{(?!\{)(?:\{(?:\{[^{}]*\}|[^{}])*\}|[^{}])+\}/,
       inside: Prism.languages.xquery,
       alias: 'language-xquery'
-    } // The following will handle plain text inside tags
+    }
+
+    // The following will handle plain text inside tags
     var stringifyToken = function (token) {
       if (typeof token === 'string') {
         return token
@@ -49094,6 +56506,7 @@ function xquery(Prism) {
             token.content[0].type === 'tag'
           ) {
             // We found a tag, now find its kind
+
             if (token.content[0].content[0].content === '</') {
               // Closing tag
               if (
@@ -49118,7 +56531,8 @@ function xquery(Prism) {
           } else if (
             openedTags.length > 0 &&
             token.type === 'punctuation' &&
-            token.content === '{' && // Ignore `{{`
+            token.content === '{' &&
+            // Ignore `{{`
             (!tokens[i + 1] ||
               tokens[i + 1].type !== 'punctuation' ||
               tokens[i + 1].content !== '{') &&
@@ -49147,7 +56561,9 @@ function xquery(Prism) {
           ) {
             // Here we are inside a tag, and not inside an XQuery expression.
             // That's plain text: drop any tokens matched.
-            var plainText = stringifyToken(token) // And merge text with adjacent text
+            var plainText = stringifyToken(token)
+
+            // And merge text with adjacent text
             if (
               i < tokens.length - 1 &&
               (typeof tokens[i + 1] === 'string' ||
@@ -49198,22 +56614,29 @@ function xquery(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/yaml.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = yaml
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return yaml; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 yaml.displayName = 'yaml'
 yaml.aliases = ['yml']
+
+/** @param {Refractor} Prism */
 function yaml(Prism) {
   ;(function (Prism) {
     // https://yaml.org/spec/1.2/spec.html#c-ns-anchor-property
     // https://yaml.org/spec/1.2/spec.html#c-ns-alias-node
-    var anchorOrAlias = /[*&][^\s[\]{},]+/ // https://yaml.org/spec/1.2/spec.html#c-ns-tag-property
+    var anchorOrAlias = /[*&][^\s[\]{},]+/
+    // https://yaml.org/spec/1.2/spec.html#c-ns-tag-property
     var tag =
-      /!(?:<[\w\-%#;/?:@&=+$,.!~*'()[\]]+>|(?:[a-zA-Z\d-]*!)?[\w\-%#;/?:@&=+$.~*'()]+)?/ // https://yaml.org/spec/1.2/spec.html#c-ns-properties(n,c)
+      /!(?:<[\w\-%#;/?:@&=+$,.!~*'()[\]]+>|(?:[a-zA-Z\d-]*!)?[\w\-%#;/?:@&=+$.~*'()]+)?/
+    // https://yaml.org/spec/1.2/spec.html#c-ns-properties(n,c)
     var properties =
       '(?:' +
       tag.source +
@@ -49223,7 +56646,8 @@ function yaml(Prism) {
       anchorOrAlias.source +
       '(?:[ \t]+' +
       tag.source +
-      ')?)' // https://yaml.org/spec/1.2/spec.html#ns-plain(n,c)
+      ')?)'
+    // https://yaml.org/spec/1.2/spec.html#ns-plain(n,c)
     // This is a simplified version that doesn't support "#" and multiline keys
     // All these long scarry character classes are simplified versions of YAML's characters
     var plainKey =
@@ -49235,6 +56659,7 @@ function yaml(Prism) {
         }
       )
     var string = /"(?:[^"\\\r\n]|\\.)*"|'(?:[^'\\\r\n]|\\.)*'/.source
+
     /**
      *
      * @param {string} value
@@ -49332,15 +56757,20 @@ function yaml(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/yang.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = yang
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return yang; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 yang.displayName = 'yang'
 yang.aliases = []
+
+/** @param {Refractor} Prism */
 function yang(Prism) {
   Prism.languages.yang = {
     // https://tools.ietf.org/html/rfc6020#page-34
@@ -49371,15 +56801,20 @@ function yang(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/zig.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = zig
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return zig; });
+// @ts-nocheck
+/**
+ * @import {Refractor} from '../lib/core.js'
+ */
 zig.displayName = 'zig'
 zig.aliases = []
+
+/** @param {Refractor} Prism */
 function zig(Prism) {
   ;(function (Prism) {
     function literal(str) {
@@ -49403,6 +56838,7 @@ function zig(Prism) {
       )
     var TYPE =
       '(?!\\s)(?:!?\\s*(?:' + PREFIX_TYPE_OP + '\\s*)*' + SUFFIX_EXPR + ')+'
+
     /*
      * A simplified grammar for Zig compile time type literals:
      *
@@ -49419,6 +56855,7 @@ function zig(Prism) {
      * IDENTIFIER = \b (?! KEYWORD ) [a-zA-Z_] \w* \b
      *
      */
+
     Prism.languages.zig = {
       comment: [
         {
@@ -49509,87 +56946,36 @@ function zig(Prism) {
 /*!******************************************************!*\
   !*** ./node_modules/space-separated-tokens/index.js ***!
   \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: parse, stringify */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-exports.parse = parse
-exports.stringify = stringify
-
-var empty = ''
-var space = ' '
-var whiteSpace = /[ \t\n\r\f]+/g
-
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "parse", function() { return parse; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "stringify", function() { return stringify; });
+/**
+ * Parse space-separated tokens to an array of strings.
+ *
+ * @param {string} value
+ *   Space-separated tokens.
+ * @returns {Array<string>}
+ *   List of tokens.
+ */
 function parse(value) {
-  var input = String(value || empty).trim()
-  return input === empty ? [] : input.split(whiteSpace)
+  const input = String(value || '').trim()
+  return input ? input.split(/[ \t\n\r\f]+/g) : []
 }
 
+/**
+ * Serialize an array of strings as space separated-tokens.
+ *
+ * @param {Array<string|number>} values
+ *   List of tokens.
+ * @returns {string}
+ *   Space-separated tokens.
+ */
 function stringify(values) {
-  return values.join(space).trim()
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/webpack/buildin/global.js":
-/*!***********************************!*\
-  !*** (webpack)/buildin/global.js ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-var g;
-
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || new Function("return this")();
-} catch (e) {
-	// This works if the window reference is available
-	if (typeof window === "object") g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
-
-
-/***/ }),
-
-/***/ "./node_modules/xtend/immutable.js":
-/*!*****************************************!*\
-  !*** ./node_modules/xtend/immutable.js ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = extend
-
-var hasOwnProperty = Object.prototype.hasOwnProperty;
-
-function extend() {
-    var target = {}
-
-    for (var i = 0; i < arguments.length; i++) {
-        var source = arguments[i]
-
-        for (var key in source) {
-            if (hasOwnProperty.call(source, key)) {
-                target[key] = source[key]
-            }
-        }
-    }
-
-    return target
+  return values.join(' ').trim()
 }
 
 
@@ -50156,7 +57542,7 @@ __webpack_require__.r(__webpack_exports__);
 // This file has been auto-generated by the `npm run build-languages-prism` task
 //
 
-/* harmony default export */ __webpack_exports__["default"] = (['abap', 'abnf', 'actionscript', 'ada', 'agda', 'al', 'antlr4', 'apacheconf', 'apex', 'apl', 'applescript', 'aql', 'arduino', 'arff', 'asciidoc', 'asm6502', 'asmatmel', 'aspnet', 'autohotkey', 'autoit', 'avisynth', 'avro-idl', 'bash', 'basic', 'batch', 'bbcode', 'bicep', 'birb', 'bison', 'bnf', 'brainfuck', 'brightscript', 'bro', 'bsl', 'c', 'cfscript', 'chaiscript', 'cil', 'clike', 'clojure', 'cmake', 'cobol', 'coffeescript', 'concurnas', 'coq', 'cpp', 'crystal', 'csharp', 'cshtml', 'csp', 'css-extras', 'css', 'csv', 'cypher', 'd', 'dart', 'dataweave', 'dax', 'dhall', 'diff', 'django', 'dns-zone-file', 'docker', 'dot', 'ebnf', 'editorconfig', 'eiffel', 'ejs', 'elixir', 'elm', 'erb', 'erlang', 'etlua', 'excel-formula', 'factor', 'false', 'firestore-security-rules', 'flow', 'fortran', 'fsharp', 'ftl', 'gap', 'gcode', 'gdscript', 'gedcom', 'gherkin', 'git', 'glsl', 'gml', 'gn', 'go-module', 'go', 'graphql', 'groovy', 'haml', 'handlebars', 'haskell', 'haxe', 'hcl', 'hlsl', 'hoon', 'hpkp', 'hsts', 'http', 'ichigojam', 'icon', 'icu-message-format', 'idris', 'iecst', 'ignore', 'inform7', 'ini', 'io', 'j', 'java', 'javadoc', 'javadoclike', 'javascript', 'javastacktrace', 'jexl', 'jolie', 'jq', 'js-extras', 'js-templates', 'jsdoc', 'json', 'json5', 'jsonp', 'jsstacktrace', 'jsx', 'julia', 'keepalived', 'keyman', 'kotlin', 'kumir', 'kusto', 'latex', 'latte', 'less', 'lilypond', 'liquid', 'lisp', 'livescript', 'llvm', 'log', 'lolcode', 'lua', 'magma', 'makefile', 'markdown', 'markup-templating', 'markup', 'matlab', 'maxscript', 'mel', 'mermaid', 'mizar', 'mongodb', 'monkey', 'moonscript', 'n1ql', 'n4js', 'nand2tetris-hdl', 'naniscript', 'nasm', 'neon', 'nevod', 'nginx', 'nim', 'nix', 'nsis', 'objectivec', 'ocaml', 'opencl', 'openqasm', 'oz', 'parigp', 'parser', 'pascal', 'pascaligo', 'pcaxis', 'peoplecode', 'perl', 'php-extras', 'php', 'phpdoc', 'plsql', 'powerquery', 'powershell', 'processing', 'prolog', 'promql', 'properties', 'protobuf', 'psl', 'pug', 'puppet', 'pure', 'purebasic', 'purescript', 'python', 'q', 'qml', 'qore', 'qsharp', 'r', 'racket', 'reason', 'regex', 'rego', 'renpy', 'rest', 'rip', 'roboconf', 'robotframework', 'ruby', 'rust', 'sas', 'sass', 'scala', 'scheme', 'scss', 'shell-session', 'smali', 'smalltalk', 'smarty', 'sml', 'solidity', 'solution-file', 'soy', 'sparql', 'splunk-spl', 'sqf', 'sql', 'squirrel', 'stan', 'stylus', 'swift', 'systemd', 't4-cs', 't4-templating', 't4-vb', 'tap', 'tcl', 'textile', 'toml', 'tremor', 'tsx', 'tt2', 'turtle', 'twig', 'typescript', 'typoscript', 'unrealscript', 'uorazor', 'uri', 'v', 'vala', 'vbnet', 'velocity', 'verilog', 'vhdl', 'vim', 'visual-basic', 'warpscript', 'wasm', 'web-idl', 'wiki', 'wolfram', 'wren', 'xeora', 'xml-doc', 'xojo', 'xquery', 'yaml', 'yang', 'zig']);
+/* harmony default export */ __webpack_exports__["default"] = (['abap', 'abnf', 'actionscript', 'ada', 'agda', 'al', 'antlr4', 'apacheconf', 'apex', 'apl', 'applescript', 'aql', 'arduino', 'arff', 'armasm', 'arturo', 'asciidoc', 'asm6502', 'asmatmel', 'aspnet', 'autohotkey', 'autoit', 'avisynth', 'avro-idl', 'awk', 'bash', 'basic', 'batch', 'bbcode', 'bbj', 'bicep', 'birb', 'bison', 'bnf', 'bqn', 'brainfuck', 'brightscript', 'bro', 'bsl', 'c', 'cfscript', 'chaiscript', 'cil', 'cilkc', 'cilkcpp', 'clike', 'clojure', 'cmake', 'cobol', 'coffeescript', 'concurnas', 'cooklang', 'coq', 'cpp', 'crystal', 'csharp', 'cshtml', 'csp', 'css-extras', 'css', 'csv', 'cue', 'cypher', 'd', 'dart', 'dataweave', 'dax', 'dhall', 'diff', 'django', 'dns-zone-file', 'docker', 'dot', 'ebnf', 'editorconfig', 'eiffel', 'ejs', 'elixir', 'elm', 'erb', 'erlang', 'etlua', 'excel-formula', 'factor', 'false', 'firestore-security-rules', 'flow', 'fortran', 'fsharp', 'ftl', 'gap', 'gcode', 'gdscript', 'gedcom', 'gettext', 'gherkin', 'git', 'glsl', 'gml', 'gn', 'go-module', 'go', 'gradle', 'graphql', 'groovy', 'haml', 'handlebars', 'haskell', 'haxe', 'hcl', 'hlsl', 'hoon', 'hpkp', 'hsts', 'http', 'ichigojam', 'icon', 'icu-message-format', 'idris', 'iecst', 'ignore', 'inform7', 'ini', 'io', 'j', 'java', 'javadoc', 'javadoclike', 'javascript', 'javastacktrace', 'jexl', 'jolie', 'jq', 'js-extras', 'js-templates', 'jsdoc', 'json', 'json5', 'jsonp', 'jsstacktrace', 'jsx', 'julia', 'keepalived', 'keyman', 'kotlin', 'kumir', 'kusto', 'latex', 'latte', 'less', 'lilypond', 'linker-script', 'liquid', 'lisp', 'livescript', 'llvm', 'log', 'lolcode', 'lua', 'magma', 'makefile', 'markdown', 'markup-templating', 'markup', 'mata', 'matlab', 'maxscript', 'mel', 'mermaid', 'metafont', 'mizar', 'mongodb', 'monkey', 'moonscript', 'n1ql', 'n4js', 'nand2tetris-hdl', 'naniscript', 'nasm', 'neon', 'nevod', 'nginx', 'nim', 'nix', 'nsis', 'objectivec', 'ocaml', 'odin', 'opencl', 'openqasm', 'oz', 'parigp', 'parser', 'pascal', 'pascaligo', 'pcaxis', 'peoplecode', 'perl', 'php-extras', 'php', 'phpdoc', 'plant-uml', 'plsql', 'powerquery', 'powershell', 'processing', 'prolog', 'promql', 'properties', 'protobuf', 'psl', 'pug', 'puppet', 'pure', 'purebasic', 'purescript', 'python', 'q', 'qml', 'qore', 'qsharp', 'r', 'racket', 'reason', 'regex', 'rego', 'renpy', 'rescript', 'rest', 'rip', 'roboconf', 'robotframework', 'ruby', 'rust', 'sas', 'sass', 'scala', 'scheme', 'scss', 'shell-session', 'smali', 'smalltalk', 'smarty', 'sml', 'solidity', 'solution-file', 'soy', 'sparql', 'splunk-spl', 'sqf', 'sql', 'squirrel', 'stan', 'stata', 'stylus', 'supercollider', 'swift', 'systemd', 't4-cs', 't4-templating', 't4-vb', 'tap', 'tcl', 'textile', 'toml', 'tremor', 'tsx', 'tt2', 'turtle', 'twig', 'typescript', 'typoscript', 'unrealscript', 'uorazor', 'uri', 'v', 'vala', 'vbnet', 'velocity', 'verilog', 'vhdl', 'vim', 'visual-basic', 'warpscript', 'wasm', 'web-idl', 'wgsl', 'wiki', 'wolfram', 'wren', 'xeora', 'xml-doc', 'xojo', 'xquery', 'yaml', 'yang', 'zig']);
 
 /***/ }),
 
@@ -50171,14 +57557,13 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _highlight__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./highlight */ "./src/highlight.js");
 /* harmony import */ var _styles_prism_prism__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/prism/prism */ "./src/styles/prism/prism.js");
-/* harmony import */ var refractor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! refractor */ "./node_modules/refractor/index.js");
-/* harmony import */ var refractor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(refractor__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var refractor_lib_all__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! refractor/lib/all */ "./node_modules/refractor/lib/all.js");
 /* harmony import */ var _languages_prism_supported_languages__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./languages/prism/supported-languages */ "./src/languages/prism/supported-languages.js");
 
 
 
 
-var highlighter = Object(_highlight__WEBPACK_IMPORTED_MODULE_0__["default"])(refractor__WEBPACK_IMPORTED_MODULE_2___default.a, _styles_prism_prism__WEBPACK_IMPORTED_MODULE_1__["default"]);
+var highlighter = Object(_highlight__WEBPACK_IMPORTED_MODULE_0__["default"])(refractor_lib_all__WEBPACK_IMPORTED_MODULE_2__["refractor"], _styles_prism_prism__WEBPACK_IMPORTED_MODULE_1__["default"]);
 highlighter.supportedLanguages = _languages_prism_supported_languages__WEBPACK_IMPORTED_MODULE_3__["default"];
 /* harmony default export */ __webpack_exports__["default"] = (highlighter);
 
