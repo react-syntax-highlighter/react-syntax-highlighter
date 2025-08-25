@@ -101,11 +101,18 @@ function createLineElement({
   lineProps = {},
   className = [],
   showLineNumbers,
-  wrapLongLines
+  wrapLongLines,
+  wrapLines = false
 }) {
-  const properties =
-    typeof lineProps === 'function' ? lineProps(lineNumber) : lineProps;
-  properties['className'] = className;
+  const properties = wrapLines
+    ? {
+        ...(typeof lineProps === 'function' ? lineProps(lineNumber) : lineProps)
+      }
+    : {};
+
+  properties['className'] = properties['className']
+    ? [...properties['className'].trim().split(/\s+/), ...className]
+    : className;
 
   if (lineNumber && showInlineLineNumbers) {
     const inlineLineNumberStyle = assembleLineNumberStyles(
@@ -117,7 +124,7 @@ function createLineElement({
   }
 
   if (wrapLongLines & showLineNumbers) {
-    properties.style = { ...properties.style, display: 'flex' };
+    properties.style = { display: 'flex', ...properties.style };
   }
 
   return {
@@ -172,7 +179,8 @@ function processLines(
       lineProps,
       className,
       showLineNumbers,
-      wrapLongLines
+      wrapLongLines,
+      wrapLines
     });
   }
 
@@ -275,7 +283,7 @@ function defaultRenderer({ rows, stylesheet, useInlineStyles }) {
       node,
       stylesheet,
       useInlineStyles,
-      key: `code-segement${i}`
+      key: `code-segment-${i}`
     })
   );
 }
@@ -367,9 +375,9 @@ export default function(defaultAstGenerator, defaultStyle) {
         });
 
     if (wrapLongLines) {
-      codeTagProps.style = { ...codeTagProps.style, whiteSpace: 'pre-wrap' };
+      codeTagProps.style = { whiteSpace: 'pre-wrap', ...codeTagProps.style };
     } else {
-      codeTagProps.style = { ...codeTagProps.style, whiteSpace: 'pre' };
+      codeTagProps.style = { whiteSpace: 'pre', ...codeTagProps.style };
     }
 
     if (!astGenerator) {
@@ -400,13 +408,9 @@ export default function(defaultAstGenerator, defaultStyle) {
       codeTree.value = defaultCodeValue;
     }
 
-    // determine largest line number so that we can force minWidth on all linenumber elements
-    let lineCount = codeTree.value.length;
-    if (lineCount === 1 && codeTree.value[0].type === 'text') {
-      // Since codeTree for an unparsable text (e.g. 'a\na\na') is [{ type: 'text', value: 'a\na\na' }]
-      lineCount = codeTree.value[0].value.split('\n').length;
-    }
-    const largestLineNumber = lineCount + startingLineNumber;
+    // pre-determine largest line number so that we can force minWidth on all linenumber elements
+    const lineBreakCount = code.match(/\n/g)?.length ?? 0;
+    const largestLineNumber = startingLineNumber + lineBreakCount;
 
     const rows = processLines(
       codeTree,

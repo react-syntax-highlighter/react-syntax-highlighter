@@ -98,7 +98,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/react.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
-
 var ExamplesLinks = function ExamplesLinks() {
   var demos = [{
     label: 'Highlight.js (default)',
@@ -123,7 +122,7 @@ var ExamplesLinks = function ExamplesLinks() {
     className: "demo-nav__ul"
   }, demos.map(function (demo) {
     var label = demo.label,
-        path = demo.path;
+      path = demo.path;
     var currentPath = new URL(window.location.href).pathname.split('/').filter(Boolean).pop();
     var isCurrent = path === "./".concat(currentPath) || !path && currentPath === 'demo';
     var itemClass = isCurrent ? "".concat(baseLiClass, " ").concat(baseLiClass, "--current") : baseLiClass;
@@ -135,7 +134,6 @@ var ExamplesLinks = function ExamplesLinks() {
     }, label));
   })));
 };
-
 /* harmony default export */ __webpack_exports__["default"] = (ExamplesLinks);
 
 /***/ }),
@@ -153,12 +151,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/react.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
@@ -172,11 +170,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default()(this, result); }; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
+function _callSuper(t, o, e) { return o = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(o), _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(t, _isNativeReflectConstruct() ? Reflect.construct(o, e || [], _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(t).constructor) : o.apply(t, e)); }
+function _isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); } catch (t) {} return (_isNativeReflectConstruct = function _isNativeReflectConstruct() { return !!t; })(); }
 
 
 
@@ -185,18 +180,11 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 var availableStyles = _styles_prism__WEBPACK_IMPORTED_MODULE_9__["default"];
 var availableLanguages = _src_languages_prism_supported_languages__WEBPACK_IMPORTED_MODULE_10__["default"];
-
 var Component = /*#__PURE__*/function (_React$Component) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2___default()(Component, _React$Component);
-
-  var _super = _createSuper(Component);
-
   function Component() {
     var _this;
-
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Component);
-
-    _this = _super.call(this);
+    _this = _callSuper(this, Component);
     var initialCodeString = "import React from \"react\";\nimport uniquePropHOC from \"./lib/unique-prop-hoc\";\n\n// this comment is here to demonstrate an extremely long line length, well beyond what you should probably allow in your own code, though sometimes you'll be highlighting code you can't refactor, which is unfortunate but should be handled gracefully\n\nclass Expire extends React.Component {\n    constructor(props) {\n        super(props);\n        this.state = { component: props.children }\n    }\n    componentDidMount() {\n        setTimeout(() => {\n            this.setState({\n                component: null\n            });\n        }, this.props.time || this.props.seconds * 1000);\n    }\n    render() {\n        return this.state.component;\n    }\n}\n\nexport default uniquePropHOC([\"time\", \"seconds\"])(Expire);\n";
     _this.state = {
       language: 'javascript',
@@ -208,12 +196,11 @@ var Component = /*#__PURE__*/function (_React$Component) {
     };
     return _this;
   }
-
-  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Component, [{
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default()(Component, _React$Component);
+  return _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Component, [{
     key: "render",
     value: function render() {
       var _this2 = this;
-
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "demo__root demo__root--default"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", null, "React Syntax Highlighter Demo"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_examples_links__WEBPACK_IMPORTED_MODULE_8__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("aside", {
@@ -306,10 +293,7 @@ var Component = /*#__PURE__*/function (_React$Component) {
       }, this.state.code))));
     }
   }]);
-
-  return Component;
 }(react__WEBPACK_IMPORTED_MODULE_5___default.a.Component);
-
 Object(react_dom__WEBPACK_IMPORTED_MODULE_6__["render"])( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(Component, null), document.getElementById('app'));
 
 /***/ }),
@@ -326,6 +310,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 // This file has been auto-generated by the `npm run build-styles-prism` task
 //
+
 /* harmony default export */ __webpack_exports__["default"] = (['a11y-dark', 'atom-dark', 'base16-ateliersulphurpool.light', 'cb', 'coldark-cold', 'coldark-dark', 'coy', 'coy-without-shadows', 'darcula', 'dark', 'dracula', 'duotone-dark', 'duotone-earth', 'duotone-forest', 'duotone-light', 'duotone-sea', 'duotone-space', 'funky', 'ghcolors', 'gruvbox-dark', 'gruvbox-light', 'holi-theme', 'hopscotch', 'lucario', 'material-dark', 'material-light', 'material-oceanic', 'night-owl', 'nord', 'okaidia', 'one-dark', 'one-light', 'pojoaque', 'prism', 'shades-of-purple', 'solarized-dark-atom', 'solarizedlight', 'synthwave84', 'tomorrow', 'twilight', 'vs', 'vsc-dark-plus', 'xonokai', 'z-touch']);
 
 /***/ }),
@@ -4050,7 +4035,7 @@ var Prism = (function (_self) {
 				if (typeof document === 'undefined') {
 					return null;
 				}
-				if ('currentScript' in document && 1 < 2 /* hack to trip TS' flow analysis */) {
+				if (document.currentScript && document.currentScript.tagName === 'SCRIPT' && 1 < 2 /* hack to trip TS' flow analysis */) {
 					return /** @type {any} */ (document.currentScript);
 				}
 
@@ -49647,49 +49632,39 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
 
 
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1___default()(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1___default()(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-
- // Get all possible permutations of all power sets
+// Get all possible permutations of all power sets
 //
 // Super simple, non-algorithmic solution since the
 // number of class names will not be greater than 4
-
 function powerSetPermutations(arr) {
   var arrLength = arr.length;
   if (arrLength === 0 || arrLength === 1) return arr;
-
   if (arrLength === 2) {
     // prettier-ignore
     return [arr[0], arr[1], "".concat(arr[0], ".").concat(arr[1]), "".concat(arr[1], ".").concat(arr[0])];
   }
-
   if (arrLength === 3) {
     return [arr[0], arr[1], arr[2], "".concat(arr[0], ".").concat(arr[1]), "".concat(arr[0], ".").concat(arr[2]), "".concat(arr[1], ".").concat(arr[0]), "".concat(arr[1], ".").concat(arr[2]), "".concat(arr[2], ".").concat(arr[0]), "".concat(arr[2], ".").concat(arr[1]), "".concat(arr[0], ".").concat(arr[1], ".").concat(arr[2]), "".concat(arr[0], ".").concat(arr[2], ".").concat(arr[1]), "".concat(arr[1], ".").concat(arr[0], ".").concat(arr[2]), "".concat(arr[1], ".").concat(arr[2], ".").concat(arr[0]), "".concat(arr[2], ".").concat(arr[0], ".").concat(arr[1]), "".concat(arr[2], ".").concat(arr[1], ".").concat(arr[0])];
   }
-
   if (arrLength >= 4) {
     // Currently does not support more than 4 extra
     // class names (after `.token` has been removed)
     return [arr[0], arr[1], arr[2], arr[3], "".concat(arr[0], ".").concat(arr[1]), "".concat(arr[0], ".").concat(arr[2]), "".concat(arr[0], ".").concat(arr[3]), "".concat(arr[1], ".").concat(arr[0]), "".concat(arr[1], ".").concat(arr[2]), "".concat(arr[1], ".").concat(arr[3]), "".concat(arr[2], ".").concat(arr[0]), "".concat(arr[2], ".").concat(arr[1]), "".concat(arr[2], ".").concat(arr[3]), "".concat(arr[3], ".").concat(arr[0]), "".concat(arr[3], ".").concat(arr[1]), "".concat(arr[3], ".").concat(arr[2]), "".concat(arr[0], ".").concat(arr[1], ".").concat(arr[2]), "".concat(arr[0], ".").concat(arr[1], ".").concat(arr[3]), "".concat(arr[0], ".").concat(arr[2], ".").concat(arr[1]), "".concat(arr[0], ".").concat(arr[2], ".").concat(arr[3]), "".concat(arr[0], ".").concat(arr[3], ".").concat(arr[1]), "".concat(arr[0], ".").concat(arr[3], ".").concat(arr[2]), "".concat(arr[1], ".").concat(arr[0], ".").concat(arr[2]), "".concat(arr[1], ".").concat(arr[0], ".").concat(arr[3]), "".concat(arr[1], ".").concat(arr[2], ".").concat(arr[0]), "".concat(arr[1], ".").concat(arr[2], ".").concat(arr[3]), "".concat(arr[1], ".").concat(arr[3], ".").concat(arr[0]), "".concat(arr[1], ".").concat(arr[3], ".").concat(arr[2]), "".concat(arr[2], ".").concat(arr[0], ".").concat(arr[1]), "".concat(arr[2], ".").concat(arr[0], ".").concat(arr[3]), "".concat(arr[2], ".").concat(arr[1], ".").concat(arr[0]), "".concat(arr[2], ".").concat(arr[1], ".").concat(arr[3]), "".concat(arr[2], ".").concat(arr[3], ".").concat(arr[0]), "".concat(arr[2], ".").concat(arr[3], ".").concat(arr[1]), "".concat(arr[3], ".").concat(arr[0], ".").concat(arr[1]), "".concat(arr[3], ".").concat(arr[0], ".").concat(arr[2]), "".concat(arr[3], ".").concat(arr[1], ".").concat(arr[0]), "".concat(arr[3], ".").concat(arr[1], ".").concat(arr[2]), "".concat(arr[3], ".").concat(arr[2], ".").concat(arr[0]), "".concat(arr[3], ".").concat(arr[2], ".").concat(arr[1]), "".concat(arr[0], ".").concat(arr[1], ".").concat(arr[2], ".").concat(arr[3]), "".concat(arr[0], ".").concat(arr[1], ".").concat(arr[3], ".").concat(arr[2]), "".concat(arr[0], ".").concat(arr[2], ".").concat(arr[1], ".").concat(arr[3]), "".concat(arr[0], ".").concat(arr[2], ".").concat(arr[3], ".").concat(arr[1]), "".concat(arr[0], ".").concat(arr[3], ".").concat(arr[1], ".").concat(arr[2]), "".concat(arr[0], ".").concat(arr[3], ".").concat(arr[2], ".").concat(arr[1]), "".concat(arr[1], ".").concat(arr[0], ".").concat(arr[2], ".").concat(arr[3]), "".concat(arr[1], ".").concat(arr[0], ".").concat(arr[3], ".").concat(arr[2]), "".concat(arr[1], ".").concat(arr[2], ".").concat(arr[0], ".").concat(arr[3]), "".concat(arr[1], ".").concat(arr[2], ".").concat(arr[3], ".").concat(arr[0]), "".concat(arr[1], ".").concat(arr[3], ".").concat(arr[0], ".").concat(arr[2]), "".concat(arr[1], ".").concat(arr[3], ".").concat(arr[2], ".").concat(arr[0]), "".concat(arr[2], ".").concat(arr[0], ".").concat(arr[1], ".").concat(arr[3]), "".concat(arr[2], ".").concat(arr[0], ".").concat(arr[3], ".").concat(arr[1]), "".concat(arr[2], ".").concat(arr[1], ".").concat(arr[0], ".").concat(arr[3]), "".concat(arr[2], ".").concat(arr[1], ".").concat(arr[3], ".").concat(arr[0]), "".concat(arr[2], ".").concat(arr[3], ".").concat(arr[0], ".").concat(arr[1]), "".concat(arr[2], ".").concat(arr[3], ".").concat(arr[1], ".").concat(arr[0]), "".concat(arr[3], ".").concat(arr[0], ".").concat(arr[1], ".").concat(arr[2]), "".concat(arr[3], ".").concat(arr[0], ".").concat(arr[2], ".").concat(arr[1]), "".concat(arr[3], ".").concat(arr[1], ".").concat(arr[0], ".").concat(arr[2]), "".concat(arr[3], ".").concat(arr[1], ".").concat(arr[2], ".").concat(arr[0]), "".concat(arr[3], ".").concat(arr[2], ".").concat(arr[0], ".").concat(arr[1]), "".concat(arr[3], ".").concat(arr[2], ".").concat(arr[1], ".").concat(arr[0])];
   }
 }
-
 var classNameCombinations = {};
-
 function getClassNameCombinations(classNames) {
   if (classNames.length === 0 || classNames.length === 1) return classNames;
   var key = classNames.join('.');
-
   if (!classNameCombinations[key]) {
     classNameCombinations[key] = powerSetPermutations(classNames);
   }
-
   return classNameCombinations[key];
 }
-
 function createStyleObject(classNames) {
   var elementStyle = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
   var stylesheet = arguments.length > 2 ? arguments[2] : undefined;
@@ -49720,22 +49695,20 @@ function createChildren(stylesheet, useInlineStyles) {
 }
 function createElement(_ref) {
   var node = _ref.node,
-      stylesheet = _ref.stylesheet,
-      _ref$style = _ref.style,
-      style = _ref$style === void 0 ? {} : _ref$style,
-      useInlineStyles = _ref.useInlineStyles,
-      key = _ref.key;
+    stylesheet = _ref.stylesheet,
+    _ref$style = _ref.style,
+    style = _ref$style === void 0 ? {} : _ref$style,
+    useInlineStyles = _ref.useInlineStyles,
+    key = _ref.key;
   var properties = node.properties,
-      type = node.type,
-      TagName = node.tagName,
-      value = node.value;
-
+    type = node.type,
+    TagName = node.tagName,
+    value = node.value;
   if (type === 'text') {
     return value;
   } else if (TagName) {
     var childrenCreator = createChildren(stylesheet, useInlineStyles);
     var props;
-
     if (!useInlineStyles) {
       props = _objectSpread(_objectSpread({}, properties), {}, {
         className: createClassNameString(properties.className)
@@ -49746,8 +49719,9 @@ function createElement(_ref) {
           if (!classes.includes(className)) classes.push(className);
         });
         return classes;
-      }, []); // For compatibility with older versions of react-syntax-highlighter
+      }, []);
 
+      // For compatibility with older versions of react-syntax-highlighter
       var startingClassName = properties.className && properties.className.includes('token') ? ['token'] : [];
       var className = properties.className && startingClassName.concat(properties.className.filter(function (className) {
         return !allStylesheetSelectors.includes(className);
@@ -49757,7 +49731,6 @@ function createElement(_ref) {
         style: createStyleObject(properties.className, Object.assign({}, properties.style, style), stylesheet)
       });
     }
-
     var children = childrenCreator(node.children);
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(TagName, _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({
       key: key
@@ -49790,24 +49763,19 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _excluded = ["language", "children", "style", "customStyle", "codeTagProps", "useInlineStyles", "showLineNumbers", "showInlineLineNumbers", "startingLineNumber", "lineNumberContainerStyle", "lineNumberStyle", "wrapLines", "wrapLongLines", "lineProps", "renderer", "PreTag", "CodeTag", "code", "astGenerator"];
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
 
 
 
 var newLineRegex = /\n/g;
-
 function getNewLines(str) {
   return str.match(newLineRegex);
 }
-
 function getAllLineNumbers(_ref) {
   var lines = _ref.lines,
-      startingLineNumber = _ref.startingLineNumber,
-      style = _ref.style;
+    startingLineNumber = _ref.startingLineNumber,
+    style = _ref.style;
   return lines.map(function (_, i) {
     var number = i + startingLineNumber;
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
@@ -49817,18 +49785,17 @@ function getAllLineNumbers(_ref) {
     }, "".concat(number, "\n"));
   });
 }
-
 function AllLineNumbers(_ref2) {
   var codeString = _ref2.codeString,
-      codeStyle = _ref2.codeStyle,
-      _ref2$containerStyle = _ref2.containerStyle,
-      containerStyle = _ref2$containerStyle === void 0 ? {
-    "float": 'left',
-    paddingRight: '10px'
-  } : _ref2$containerStyle,
-      _ref2$numberStyle = _ref2.numberStyle,
-      numberStyle = _ref2$numberStyle === void 0 ? {} : _ref2$numberStyle,
-      startingLineNumber = _ref2.startingLineNumber;
+    codeStyle = _ref2.codeStyle,
+    _ref2$containerStyle = _ref2.containerStyle,
+    containerStyle = _ref2$containerStyle === void 0 ? {
+      "float": 'left',
+      paddingRight: '10px'
+    } : _ref2$containerStyle,
+    _ref2$numberStyle = _ref2.numberStyle,
+    numberStyle = _ref2$numberStyle === void 0 ? {} : _ref2$numberStyle,
+    startingLineNumber = _ref2.startingLineNumber;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("code", {
     style: Object.assign({}, codeStyle, containerStyle)
   }, getAllLineNumbers({
@@ -49837,11 +49804,9 @@ function AllLineNumbers(_ref2) {
     startingLineNumber: startingLineNumber
   }));
 }
-
 function getEmWidthOfNumber(num) {
   return "".concat(num.toString().length, ".25em");
 }
-
 function getInlineLineNumber(lineNumber, inlineLineNumberStyle) {
   return {
     type: 'element',
@@ -49857,7 +49822,6 @@ function getInlineLineNumber(lineNumber, inlineLineNumberStyle) {
     }]
   };
 }
-
 function assembleLineNumberStyles(lineNumberStyle, lineNumber, largestLineNumber) {
   // minimally necessary styling for line numbers
   var defaultLineNumberStyle = {
@@ -49866,41 +49830,38 @@ function assembleLineNumberStyles(lineNumberStyle, lineNumber, largestLineNumber
     paddingRight: '1em',
     textAlign: 'right',
     userSelect: 'none'
-  }; // prep custom styling
-
-  var customLineNumberStyle = typeof lineNumberStyle === 'function' ? lineNumberStyle(lineNumber) : lineNumberStyle; // combine
-
+  };
+  // prep custom styling
+  var customLineNumberStyle = typeof lineNumberStyle === 'function' ? lineNumberStyle(lineNumber) : lineNumberStyle;
+  // combine
   var assembledStyle = _objectSpread(_objectSpread({}, defaultLineNumberStyle), customLineNumberStyle);
-
   return assembledStyle;
 }
-
 function createLineElement(_ref3) {
   var children = _ref3.children,
-      lineNumber = _ref3.lineNumber,
-      lineNumberStyle = _ref3.lineNumberStyle,
-      largestLineNumber = _ref3.largestLineNumber,
-      showInlineLineNumbers = _ref3.showInlineLineNumbers,
-      _ref3$lineProps = _ref3.lineProps,
-      lineProps = _ref3$lineProps === void 0 ? {} : _ref3$lineProps,
-      _ref3$className = _ref3.className,
-      className = _ref3$className === void 0 ? [] : _ref3$className,
-      showLineNumbers = _ref3.showLineNumbers,
-      wrapLongLines = _ref3.wrapLongLines;
-  var properties = typeof lineProps === 'function' ? lineProps(lineNumber) : lineProps;
-  properties['className'] = className;
-
+    lineNumber = _ref3.lineNumber,
+    lineNumberStyle = _ref3.lineNumberStyle,
+    largestLineNumber = _ref3.largestLineNumber,
+    showInlineLineNumbers = _ref3.showInlineLineNumbers,
+    _ref3$lineProps = _ref3.lineProps,
+    lineProps = _ref3$lineProps === void 0 ? {} : _ref3$lineProps,
+    _ref3$className = _ref3.className,
+    className = _ref3$className === void 0 ? [] : _ref3$className,
+    showLineNumbers = _ref3.showLineNumbers,
+    wrapLongLines = _ref3.wrapLongLines,
+    _ref3$wrapLines = _ref3.wrapLines,
+    wrapLines = _ref3$wrapLines === void 0 ? false : _ref3$wrapLines;
+  var properties = wrapLines ? _objectSpread({}, typeof lineProps === 'function' ? lineProps(lineNumber) : lineProps) : {};
+  properties['className'] = properties['className'] ? [].concat(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1___default()(properties['className'].trim().split(/\s+/)), _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1___default()(className)) : className;
   if (lineNumber && showInlineLineNumbers) {
     var inlineLineNumberStyle = assembleLineNumberStyles(lineNumberStyle, lineNumber, largestLineNumber);
     children.unshift(getInlineLineNumber(lineNumber, inlineLineNumberStyle));
   }
-
   if (wrapLongLines & showLineNumbers) {
-    properties.style = _objectSpread(_objectSpread({}, properties.style), {}, {
+    properties.style = _objectSpread({
       display: 'flex'
-    });
+    }, properties.style);
   }
-
   return {
     type: 'element',
     tagName: 'span',
@@ -49908,14 +49869,11 @@ function createLineElement(_ref3) {
     children: children
   };
 }
-
 function flattenCodeTree(tree) {
   var className = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
   var newTree = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : [];
-
   for (var i = 0; i < tree.length; i++) {
     var node = tree[i];
-
     if (node.type === 'text') {
       newTree.push(createLineElement({
         children: [node],
@@ -49928,18 +49886,14 @@ function flattenCodeTree(tree) {
       });
     }
   }
-
   return newTree;
 }
-
 function processLines(codeTree, wrapLines, lineProps, showLineNumbers, showInlineLineNumbers, startingLineNumber, largestLineNumber, lineNumberStyle, wrapLongLines) {
   var _ref4;
-
   var tree = flattenCodeTree(codeTree.value);
   var newTree = [];
   var lastLineBreakIndex = -1;
   var index = 0;
-
   function createWrappedLine(children, lineNumber) {
     var className = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : [];
     return createLineElement({
@@ -49951,29 +49905,25 @@ function processLines(codeTree, wrapLines, lineProps, showLineNumbers, showInlin
       lineProps: lineProps,
       className: className,
       showLineNumbers: showLineNumbers,
-      wrapLongLines: wrapLongLines
+      wrapLongLines: wrapLongLines,
+      wrapLines: wrapLines
     });
   }
-
   function createUnwrappedLine(children, lineNumber) {
     if (showLineNumbers && lineNumber && showInlineLineNumbers) {
       var inlineLineNumberStyle = assembleLineNumberStyles(lineNumberStyle, lineNumber, largestLineNumber);
       children.unshift(getInlineLineNumber(lineNumber, inlineLineNumberStyle));
     }
-
     return children;
   }
-
   function createLine(children, lineNumber) {
     var className = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : [];
     return wrapLines || className.length > 0 ? createWrappedLine(children, lineNumber, className) : createUnwrappedLine(children, lineNumber);
   }
-
   var _loop = function _loop() {
     var node = tree[index];
     var value = node.children[0].value;
     var newLines = getNewLines(value);
-
     if (newLines) {
       var splitValue = value.split('\n');
       splitValue.forEach(function (text, i) {
@@ -49981,24 +49931,24 @@ function processLines(codeTree, wrapLines, lineProps, showLineNumbers, showInlin
         var newChild = {
           type: 'text',
           value: "".concat(text, "\n")
-        }; // if it's the first line
+        };
 
+        // if it's the first line
         if (i === 0) {
           var _children = tree.slice(lastLineBreakIndex + 1, index).concat(createLineElement({
             children: [newChild],
             className: node.properties.className
           }));
-
           var _line = createLine(_children, lineNumber);
+          newTree.push(_line);
 
-          newTree.push(_line); // if it's the last line
+          // if it's the last line
         } else if (i === splitValue.length - 1) {
           var stringChild = tree[index + 1] && tree[index + 1].children && tree[index + 1].children[0];
           var lastLineInPreviousSpan = {
             type: 'text',
             value: "".concat(text)
           };
-
           if (stringChild) {
             var newElem = createLineElement({
               children: [lastLineInPreviousSpan],
@@ -50007,74 +49957,63 @@ function processLines(codeTree, wrapLines, lineProps, showLineNumbers, showInlin
             tree.splice(index + 1, 0, newElem);
           } else {
             var _children2 = [lastLineInPreviousSpan];
-
             var _line2 = createLine(_children2, lineNumber, node.properties.className);
-
             newTree.push(_line2);
-          } // if it's neither the first nor the last line
+          }
 
+          // if it's neither the first nor the last line
         } else {
           var _children3 = [newChild];
-
           var _line3 = createLine(_children3, lineNumber, node.properties.className);
-
           newTree.push(_line3);
         }
       });
       lastLineBreakIndex = index;
     }
-
     index++;
   };
-
   while (index < tree.length) {
     _loop();
   }
-
   if (lastLineBreakIndex !== tree.length - 1) {
     var children = tree.slice(lastLineBreakIndex + 1, tree.length);
-
     if (children && children.length) {
       var lineNumber = showLineNumbers && newTree.length + startingLineNumber;
       var line = createLine(children, lineNumber);
       newTree.push(line);
     }
   }
-
   return wrapLines ? newTree : (_ref4 = []).concat.apply(_ref4, newTree);
 }
-
 function defaultRenderer(_ref5) {
   var rows = _ref5.rows,
-      stylesheet = _ref5.stylesheet,
-      useInlineStyles = _ref5.useInlineStyles;
+    stylesheet = _ref5.stylesheet,
+    useInlineStyles = _ref5.useInlineStyles;
   return rows.map(function (node, i) {
     return Object(_create_element__WEBPACK_IMPORTED_MODULE_4__["default"])({
       node: node,
       stylesheet: stylesheet,
       useInlineStyles: useInlineStyles,
-      key: "code-segement".concat(i)
+      key: "code-segment-".concat(i)
     });
   });
-} // only highlight.js has the highlightAuto method
+}
 
-
+// only highlight.js has the highlightAuto method
 function isHighlightJs(astGenerator) {
   return astGenerator && typeof astGenerator.highlightAuto !== 'undefined';
 }
-
 function getCodeTree(_ref6) {
   var astGenerator = _ref6.astGenerator,
-      language = _ref6.language,
-      code = _ref6.code,
-      defaultCodeValue = _ref6.defaultCodeValue;
-
+    language = _ref6.language,
+    code = _ref6.code,
+    defaultCodeValue = _ref6.defaultCodeValue;
   // figure out whether we're using lowlight/highlight or refractor/prism
   // then attempt highlighting accordingly
+
   // lowlight/highlight?
   if (isHighlightJs(astGenerator)) {
     var hasLanguage = Object(_checkForListedLanguage__WEBPACK_IMPORTED_MODULE_5__["default"])(astGenerator, language);
-
     if (language === 'text') {
       return {
         value: defaultCodeValue,
@@ -50085,9 +50024,9 @@ function getCodeTree(_ref6) {
     } else {
       return astGenerator.highlightAuto(code);
     }
-  } // must be refractor/prism, then
+  }
 
-
+  // must be refractor/prism, then
   try {
     return language && language !== 'text' ? {
       value: astGenerator.highlight(code, language)
@@ -50100,46 +50039,45 @@ function getCodeTree(_ref6) {
     };
   }
 }
-
 /* harmony default export */ __webpack_exports__["default"] = (function (defaultAstGenerator, defaultStyle) {
   return function SyntaxHighlighter(_ref7) {
+    var _code$match$length, _code$match;
     var language = _ref7.language,
-        children = _ref7.children,
-        _ref7$style = _ref7.style,
-        style = _ref7$style === void 0 ? defaultStyle : _ref7$style,
-        _ref7$customStyle = _ref7.customStyle,
-        customStyle = _ref7$customStyle === void 0 ? {} : _ref7$customStyle,
-        _ref7$codeTagProps = _ref7.codeTagProps,
-        codeTagProps = _ref7$codeTagProps === void 0 ? {
-      className: language ? "language-".concat(language) : undefined,
-      style: _objectSpread(_objectSpread({}, style['code[class*="language-"]']), style["code[class*=\"language-".concat(language, "\"]")])
-    } : _ref7$codeTagProps,
-        _ref7$useInlineStyles = _ref7.useInlineStyles,
-        useInlineStyles = _ref7$useInlineStyles === void 0 ? true : _ref7$useInlineStyles,
-        _ref7$showLineNumbers = _ref7.showLineNumbers,
-        showLineNumbers = _ref7$showLineNumbers === void 0 ? false : _ref7$showLineNumbers,
-        _ref7$showInlineLineN = _ref7.showInlineLineNumbers,
-        showInlineLineNumbers = _ref7$showInlineLineN === void 0 ? true : _ref7$showInlineLineN,
-        _ref7$startingLineNum = _ref7.startingLineNumber,
-        startingLineNumber = _ref7$startingLineNum === void 0 ? 1 : _ref7$startingLineNum,
-        lineNumberContainerStyle = _ref7.lineNumberContainerStyle,
-        _ref7$lineNumberStyle = _ref7.lineNumberStyle,
-        lineNumberStyle = _ref7$lineNumberStyle === void 0 ? {} : _ref7$lineNumberStyle,
-        wrapLines = _ref7.wrapLines,
-        _ref7$wrapLongLines = _ref7.wrapLongLines,
-        wrapLongLines = _ref7$wrapLongLines === void 0 ? false : _ref7$wrapLongLines,
-        _ref7$lineProps = _ref7.lineProps,
-        lineProps = _ref7$lineProps === void 0 ? {} : _ref7$lineProps,
-        renderer = _ref7.renderer,
-        _ref7$PreTag = _ref7.PreTag,
-        PreTag = _ref7$PreTag === void 0 ? 'pre' : _ref7$PreTag,
-        _ref7$CodeTag = _ref7.CodeTag,
-        CodeTag = _ref7$CodeTag === void 0 ? 'code' : _ref7$CodeTag,
-        _ref7$code = _ref7.code,
-        code = _ref7$code === void 0 ? (Array.isArray(children) ? children[0] : children) || '' : _ref7$code,
-        astGenerator = _ref7.astGenerator,
-        rest = _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0___default()(_ref7, _excluded);
-
+      children = _ref7.children,
+      _ref7$style = _ref7.style,
+      style = _ref7$style === void 0 ? defaultStyle : _ref7$style,
+      _ref7$customStyle = _ref7.customStyle,
+      customStyle = _ref7$customStyle === void 0 ? {} : _ref7$customStyle,
+      _ref7$codeTagProps = _ref7.codeTagProps,
+      codeTagProps = _ref7$codeTagProps === void 0 ? {
+        className: language ? "language-".concat(language) : undefined,
+        style: _objectSpread(_objectSpread({}, style['code[class*="language-"]']), style["code[class*=\"language-".concat(language, "\"]")])
+      } : _ref7$codeTagProps,
+      _ref7$useInlineStyles = _ref7.useInlineStyles,
+      useInlineStyles = _ref7$useInlineStyles === void 0 ? true : _ref7$useInlineStyles,
+      _ref7$showLineNumbers = _ref7.showLineNumbers,
+      showLineNumbers = _ref7$showLineNumbers === void 0 ? false : _ref7$showLineNumbers,
+      _ref7$showInlineLineN = _ref7.showInlineLineNumbers,
+      showInlineLineNumbers = _ref7$showInlineLineN === void 0 ? true : _ref7$showInlineLineN,
+      _ref7$startingLineNum = _ref7.startingLineNumber,
+      startingLineNumber = _ref7$startingLineNum === void 0 ? 1 : _ref7$startingLineNum,
+      lineNumberContainerStyle = _ref7.lineNumberContainerStyle,
+      _ref7$lineNumberStyle = _ref7.lineNumberStyle,
+      lineNumberStyle = _ref7$lineNumberStyle === void 0 ? {} : _ref7$lineNumberStyle,
+      wrapLines = _ref7.wrapLines,
+      _ref7$wrapLongLines = _ref7.wrapLongLines,
+      wrapLongLines = _ref7$wrapLongLines === void 0 ? false : _ref7$wrapLongLines,
+      _ref7$lineProps = _ref7.lineProps,
+      lineProps = _ref7$lineProps === void 0 ? {} : _ref7$lineProps,
+      renderer = _ref7.renderer,
+      _ref7$PreTag = _ref7.PreTag,
+      PreTag = _ref7$PreTag === void 0 ? 'pre' : _ref7$PreTag,
+      _ref7$CodeTag = _ref7.CodeTag,
+      CodeTag = _ref7$CodeTag === void 0 ? 'code' : _ref7$CodeTag,
+      _ref7$code = _ref7.code,
+      code = _ref7$code === void 0 ? (Array.isArray(children) ? children[0] : children) || '' : _ref7$code,
+      astGenerator = _ref7.astGenerator,
+      rest = _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0___default()(_ref7, _excluded);
     astGenerator = astGenerator || defaultAstGenerator;
     var allLineNumbers = showLineNumbers ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(AllLineNumbers, {
       containerStyle: lineNumberContainerStyle,
@@ -50158,26 +50096,23 @@ function getCodeTree(_ref6) {
       className: rest.className ? "".concat(generatorClassName, " ").concat(rest.className) : generatorClassName,
       style: Object.assign({}, customStyle)
     });
-
     if (wrapLongLines) {
-      codeTagProps.style = _objectSpread(_objectSpread({}, codeTagProps.style), {}, {
+      codeTagProps.style = _objectSpread({
         whiteSpace: 'pre-wrap'
-      });
+      }, codeTagProps.style);
     } else {
-      codeTagProps.style = _objectSpread(_objectSpread({}, codeTagProps.style), {}, {
+      codeTagProps.style = _objectSpread({
         whiteSpace: 'pre'
-      });
+      }, codeTagProps.style);
     }
-
     if (!astGenerator) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(PreTag, preProps, allLineNumbers, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(CodeTag, codeTagProps, code));
     }
+
     /*
      * Some custom renderers rely on individual row elements so we need to turn wrapLines on
      * if renderer is provided and wrapLines is undefined.
      */
-
-
     if (wrapLines === undefined && renderer || wrapLongLines) wrapLines = true;
     renderer = renderer || defaultRenderer;
     var defaultCodeValue = [{
@@ -50190,13 +50125,13 @@ function getCodeTree(_ref6) {
       code: code,
       defaultCodeValue: defaultCodeValue
     });
-
     if (codeTree.language === null) {
       codeTree.value = defaultCodeValue;
-    } // determine largest line number so that we can force minWidth on all linenumber elements
+    }
 
-
-    var largestLineNumber = codeTree.value.length + startingLineNumber;
+    // pre-determine largest line number so that we can force minWidth on all linenumber elements
+    var lineBreakCount = (_code$match$length = (_code$match = code.match(/\n/g)) === null || _code$match === void 0 ? void 0 : _code$match.length) !== null && _code$match$length !== void 0 ? _code$match$length : 0;
+    var largestLineNumber = startingLineNumber + lineBreakCount;
     var rows = processLines(codeTree, wrapLines, lineProps, showLineNumbers, showInlineLineNumbers, startingLineNumber, largestLineNumber, lineNumberStyle, wrapLongLines);
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(PreTag, preProps, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(CodeTag, codeTagProps, !showInlineLineNumbers && allLineNumbers, renderer({
       rows: rows,
@@ -50220,6 +50155,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 // This file has been auto-generated by the `npm run build-languages-prism` task
 //
+
 /* harmony default export */ __webpack_exports__["default"] = (['abap', 'abnf', 'actionscript', 'ada', 'agda', 'al', 'antlr4', 'apacheconf', 'apex', 'apl', 'applescript', 'aql', 'arduino', 'arff', 'asciidoc', 'asm6502', 'asmatmel', 'aspnet', 'autohotkey', 'autoit', 'avisynth', 'avro-idl', 'bash', 'basic', 'batch', 'bbcode', 'bicep', 'birb', 'bison', 'bnf', 'brainfuck', 'brightscript', 'bro', 'bsl', 'c', 'cfscript', 'chaiscript', 'cil', 'clike', 'clojure', 'cmake', 'cobol', 'coffeescript', 'concurnas', 'coq', 'cpp', 'crystal', 'csharp', 'cshtml', 'csp', 'css-extras', 'css', 'csv', 'cypher', 'd', 'dart', 'dataweave', 'dax', 'dhall', 'diff', 'django', 'dns-zone-file', 'docker', 'dot', 'ebnf', 'editorconfig', 'eiffel', 'ejs', 'elixir', 'elm', 'erb', 'erlang', 'etlua', 'excel-formula', 'factor', 'false', 'firestore-security-rules', 'flow', 'fortran', 'fsharp', 'ftl', 'gap', 'gcode', 'gdscript', 'gedcom', 'gherkin', 'git', 'glsl', 'gml', 'gn', 'go-module', 'go', 'graphql', 'groovy', 'haml', 'handlebars', 'haskell', 'haxe', 'hcl', 'hlsl', 'hoon', 'hpkp', 'hsts', 'http', 'ichigojam', 'icon', 'icu-message-format', 'idris', 'iecst', 'ignore', 'inform7', 'ini', 'io', 'j', 'java', 'javadoc', 'javadoclike', 'javascript', 'javastacktrace', 'jexl', 'jolie', 'jq', 'js-extras', 'js-templates', 'jsdoc', 'json', 'json5', 'jsonp', 'jsstacktrace', 'jsx', 'julia', 'keepalived', 'keyman', 'kotlin', 'kumir', 'kusto', 'latex', 'latte', 'less', 'lilypond', 'liquid', 'lisp', 'livescript', 'llvm', 'log', 'lolcode', 'lua', 'magma', 'makefile', 'markdown', 'markup-templating', 'markup', 'matlab', 'maxscript', 'mel', 'mermaid', 'mizar', 'mongodb', 'monkey', 'moonscript', 'n1ql', 'n4js', 'nand2tetris-hdl', 'naniscript', 'nasm', 'neon', 'nevod', 'nginx', 'nim', 'nix', 'nsis', 'objectivec', 'ocaml', 'opencl', 'openqasm', 'oz', 'parigp', 'parser', 'pascal', 'pascaligo', 'pcaxis', 'peoplecode', 'perl', 'php-extras', 'php', 'phpdoc', 'plsql', 'powerquery', 'powershell', 'processing', 'prolog', 'promql', 'properties', 'protobuf', 'psl', 'pug', 'puppet', 'pure', 'purebasic', 'purescript', 'python', 'q', 'qml', 'qore', 'qsharp', 'r', 'racket', 'reason', 'regex', 'rego', 'renpy', 'rest', 'rip', 'roboconf', 'robotframework', 'ruby', 'rust', 'sas', 'sass', 'scala', 'scheme', 'scss', 'shell-session', 'smali', 'smalltalk', 'smarty', 'sml', 'solidity', 'solution-file', 'soy', 'sparql', 'splunk-spl', 'sqf', 'sql', 'squirrel', 'stan', 'stylus', 'swift', 'systemd', 't4-cs', 't4-templating', 't4-vb', 'tap', 'tcl', 'textile', 'toml', 'tremor', 'tsx', 'tt2', 'turtle', 'twig', 'typescript', 'typoscript', 'unrealscript', 'uorazor', 'uri', 'v', 'vala', 'vbnet', 'velocity', 'verilog', 'vhdl', 'vim', 'visual-basic', 'warpscript', 'wasm', 'web-idl', 'wiki', 'wolfram', 'wren', 'xeora', 'xml-doc', 'xojo', 'xquery', 'yaml', 'yang', 'zig']);
 
 /***/ }),
@@ -50259,184 +50195,98 @@ var map = {
 	"./": "./src/styles/prism/index.js",
 	"./a11y-dark": "./src/styles/prism/a11y-dark.js",
 	"./a11y-dark.js": "./src/styles/prism/a11y-dark.js",
-	"./a11y-dark.min": "./src/styles/prism/a11y-dark.min.js",
-	"./a11y-dark.min.js": "./src/styles/prism/a11y-dark.min.js",
+	"./a11y-one-light": "./src/styles/prism/a11y-one-light.js",
+	"./a11y-one-light.js": "./src/styles/prism/a11y-one-light.js",
 	"./atom-dark": "./src/styles/prism/atom-dark.js",
 	"./atom-dark.js": "./src/styles/prism/atom-dark.js",
-	"./atom-dark.min": "./src/styles/prism/atom-dark.min.js",
-	"./atom-dark.min.js": "./src/styles/prism/atom-dark.min.js",
 	"./base16-ateliersulphurpool.light": "./src/styles/prism/base16-ateliersulphurpool.light.js",
 	"./base16-ateliersulphurpool.light.js": "./src/styles/prism/base16-ateliersulphurpool.light.js",
-	"./base16-ateliersulphurpool.light.min": "./src/styles/prism/base16-ateliersulphurpool.light.min.js",
-	"./base16-ateliersulphurpool.light.min.js": "./src/styles/prism/base16-ateliersulphurpool.light.min.js",
 	"./cb": "./src/styles/prism/cb.js",
 	"./cb.js": "./src/styles/prism/cb.js",
-	"./cb.min": "./src/styles/prism/cb.min.js",
-	"./cb.min.js": "./src/styles/prism/cb.min.js",
 	"./coldark-cold": "./src/styles/prism/coldark-cold.js",
 	"./coldark-cold.js": "./src/styles/prism/coldark-cold.js",
-	"./coldark-cold.min": "./src/styles/prism/coldark-cold.min.js",
-	"./coldark-cold.min.js": "./src/styles/prism/coldark-cold.min.js",
 	"./coldark-dark": "./src/styles/prism/coldark-dark.js",
 	"./coldark-dark.js": "./src/styles/prism/coldark-dark.js",
-	"./coldark-dark.min": "./src/styles/prism/coldark-dark.min.js",
-	"./coldark-dark.min.js": "./src/styles/prism/coldark-dark.min.js",
 	"./coy": "./src/styles/prism/coy.js",
 	"./coy-without-shadows": "./src/styles/prism/coy-without-shadows.js",
 	"./coy-without-shadows.js": "./src/styles/prism/coy-without-shadows.js",
-	"./coy-without-shadows.min": "./src/styles/prism/coy-without-shadows.min.js",
-	"./coy-without-shadows.min.js": "./src/styles/prism/coy-without-shadows.min.js",
 	"./coy.js": "./src/styles/prism/coy.js",
-	"./coy.min": "./src/styles/prism/coy.min.js",
-	"./coy.min.js": "./src/styles/prism/coy.min.js",
 	"./darcula": "./src/styles/prism/darcula.js",
 	"./darcula.js": "./src/styles/prism/darcula.js",
-	"./darcula.min": "./src/styles/prism/darcula.min.js",
-	"./darcula.min.js": "./src/styles/prism/darcula.min.js",
 	"./dark": "./src/styles/prism/dark.js",
 	"./dark.js": "./src/styles/prism/dark.js",
-	"./dark.min": "./src/styles/prism/dark.min.js",
-	"./dark.min.js": "./src/styles/prism/dark.min.js",
 	"./dracula": "./src/styles/prism/dracula.js",
 	"./dracula.js": "./src/styles/prism/dracula.js",
-	"./dracula.min": "./src/styles/prism/dracula.min.js",
-	"./dracula.min.js": "./src/styles/prism/dracula.min.js",
 	"./duotone-dark": "./src/styles/prism/duotone-dark.js",
 	"./duotone-dark.js": "./src/styles/prism/duotone-dark.js",
-	"./duotone-dark.min": "./src/styles/prism/duotone-dark.min.js",
-	"./duotone-dark.min.js": "./src/styles/prism/duotone-dark.min.js",
 	"./duotone-earth": "./src/styles/prism/duotone-earth.js",
 	"./duotone-earth.js": "./src/styles/prism/duotone-earth.js",
-	"./duotone-earth.min": "./src/styles/prism/duotone-earth.min.js",
-	"./duotone-earth.min.js": "./src/styles/prism/duotone-earth.min.js",
 	"./duotone-forest": "./src/styles/prism/duotone-forest.js",
 	"./duotone-forest.js": "./src/styles/prism/duotone-forest.js",
-	"./duotone-forest.min": "./src/styles/prism/duotone-forest.min.js",
-	"./duotone-forest.min.js": "./src/styles/prism/duotone-forest.min.js",
 	"./duotone-light": "./src/styles/prism/duotone-light.js",
 	"./duotone-light.js": "./src/styles/prism/duotone-light.js",
-	"./duotone-light.min": "./src/styles/prism/duotone-light.min.js",
-	"./duotone-light.min.js": "./src/styles/prism/duotone-light.min.js",
 	"./duotone-sea": "./src/styles/prism/duotone-sea.js",
 	"./duotone-sea.js": "./src/styles/prism/duotone-sea.js",
-	"./duotone-sea.min": "./src/styles/prism/duotone-sea.min.js",
-	"./duotone-sea.min.js": "./src/styles/prism/duotone-sea.min.js",
 	"./duotone-space": "./src/styles/prism/duotone-space.js",
 	"./duotone-space.js": "./src/styles/prism/duotone-space.js",
-	"./duotone-space.min": "./src/styles/prism/duotone-space.min.js",
-	"./duotone-space.min.js": "./src/styles/prism/duotone-space.min.js",
 	"./funky": "./src/styles/prism/funky.js",
 	"./funky.js": "./src/styles/prism/funky.js",
-	"./funky.min": "./src/styles/prism/funky.min.js",
-	"./funky.min.js": "./src/styles/prism/funky.min.js",
 	"./ghcolors": "./src/styles/prism/ghcolors.js",
 	"./ghcolors.js": "./src/styles/prism/ghcolors.js",
-	"./ghcolors.min": "./src/styles/prism/ghcolors.min.js",
-	"./ghcolors.min.js": "./src/styles/prism/ghcolors.min.js",
 	"./gruvbox-dark": "./src/styles/prism/gruvbox-dark.js",
 	"./gruvbox-dark.js": "./src/styles/prism/gruvbox-dark.js",
-	"./gruvbox-dark.min": "./src/styles/prism/gruvbox-dark.min.js",
-	"./gruvbox-dark.min.js": "./src/styles/prism/gruvbox-dark.min.js",
 	"./gruvbox-light": "./src/styles/prism/gruvbox-light.js",
 	"./gruvbox-light.js": "./src/styles/prism/gruvbox-light.js",
-	"./gruvbox-light.min": "./src/styles/prism/gruvbox-light.min.js",
-	"./gruvbox-light.min.js": "./src/styles/prism/gruvbox-light.min.js",
 	"./holi-theme": "./src/styles/prism/holi-theme.js",
 	"./holi-theme.js": "./src/styles/prism/holi-theme.js",
-	"./holi-theme.min": "./src/styles/prism/holi-theme.min.js",
-	"./holi-theme.min.js": "./src/styles/prism/holi-theme.min.js",
 	"./hopscotch": "./src/styles/prism/hopscotch.js",
 	"./hopscotch.js": "./src/styles/prism/hopscotch.js",
-	"./hopscotch.min": "./src/styles/prism/hopscotch.min.js",
-	"./hopscotch.min.js": "./src/styles/prism/hopscotch.min.js",
 	"./index": "./src/styles/prism/index.js",
 	"./index.js": "./src/styles/prism/index.js",
 	"./lucario": "./src/styles/prism/lucario.js",
 	"./lucario.js": "./src/styles/prism/lucario.js",
-	"./lucario.min": "./src/styles/prism/lucario.min.js",
-	"./lucario.min.js": "./src/styles/prism/lucario.min.js",
 	"./material-dark": "./src/styles/prism/material-dark.js",
 	"./material-dark.js": "./src/styles/prism/material-dark.js",
-	"./material-dark.min": "./src/styles/prism/material-dark.min.js",
-	"./material-dark.min.js": "./src/styles/prism/material-dark.min.js",
 	"./material-light": "./src/styles/prism/material-light.js",
 	"./material-light.js": "./src/styles/prism/material-light.js",
-	"./material-light.min": "./src/styles/prism/material-light.min.js",
-	"./material-light.min.js": "./src/styles/prism/material-light.min.js",
 	"./material-oceanic": "./src/styles/prism/material-oceanic.js",
 	"./material-oceanic.js": "./src/styles/prism/material-oceanic.js",
-	"./material-oceanic.min": "./src/styles/prism/material-oceanic.min.js",
-	"./material-oceanic.min.js": "./src/styles/prism/material-oceanic.min.js",
 	"./night-owl": "./src/styles/prism/night-owl.js",
 	"./night-owl.js": "./src/styles/prism/night-owl.js",
-	"./night-owl.min": "./src/styles/prism/night-owl.min.js",
-	"./night-owl.min.js": "./src/styles/prism/night-owl.min.js",
 	"./nord": "./src/styles/prism/nord.js",
 	"./nord.js": "./src/styles/prism/nord.js",
-	"./nord.min": "./src/styles/prism/nord.min.js",
-	"./nord.min.js": "./src/styles/prism/nord.min.js",
 	"./okaidia": "./src/styles/prism/okaidia.js",
 	"./okaidia.js": "./src/styles/prism/okaidia.js",
-	"./okaidia.min": "./src/styles/prism/okaidia.min.js",
-	"./okaidia.min.js": "./src/styles/prism/okaidia.min.js",
 	"./one-dark": "./src/styles/prism/one-dark.js",
 	"./one-dark.js": "./src/styles/prism/one-dark.js",
-	"./one-dark.min": "./src/styles/prism/one-dark.min.js",
-	"./one-dark.min.js": "./src/styles/prism/one-dark.min.js",
 	"./one-light": "./src/styles/prism/one-light.js",
 	"./one-light.js": "./src/styles/prism/one-light.js",
-	"./one-light.min": "./src/styles/prism/one-light.min.js",
-	"./one-light.min.js": "./src/styles/prism/one-light.min.js",
 	"./pojoaque": "./src/styles/prism/pojoaque.js",
 	"./pojoaque.js": "./src/styles/prism/pojoaque.js",
-	"./pojoaque.min": "./src/styles/prism/pojoaque.min.js",
-	"./pojoaque.min.js": "./src/styles/prism/pojoaque.min.js",
 	"./prism": "./src/styles/prism/prism.js",
 	"./prism.js": "./src/styles/prism/prism.js",
-	"./prism.min": "./src/styles/prism/prism.min.js",
-	"./prism.min.js": "./src/styles/prism/prism.min.js",
 	"./shades-of-purple": "./src/styles/prism/shades-of-purple.js",
 	"./shades-of-purple.js": "./src/styles/prism/shades-of-purple.js",
-	"./shades-of-purple.min": "./src/styles/prism/shades-of-purple.min.js",
-	"./shades-of-purple.min.js": "./src/styles/prism/shades-of-purple.min.js",
 	"./solarized-dark-atom": "./src/styles/prism/solarized-dark-atom.js",
 	"./solarized-dark-atom.js": "./src/styles/prism/solarized-dark-atom.js",
-	"./solarized-dark-atom.min": "./src/styles/prism/solarized-dark-atom.min.js",
-	"./solarized-dark-atom.min.js": "./src/styles/prism/solarized-dark-atom.min.js",
 	"./solarizedlight": "./src/styles/prism/solarizedlight.js",
 	"./solarizedlight.js": "./src/styles/prism/solarizedlight.js",
-	"./solarizedlight.min": "./src/styles/prism/solarizedlight.min.js",
-	"./solarizedlight.min.js": "./src/styles/prism/solarizedlight.min.js",
 	"./synthwave84": "./src/styles/prism/synthwave84.js",
 	"./synthwave84.js": "./src/styles/prism/synthwave84.js",
-	"./synthwave84.min": "./src/styles/prism/synthwave84.min.js",
-	"./synthwave84.min.js": "./src/styles/prism/synthwave84.min.js",
 	"./tomorrow": "./src/styles/prism/tomorrow.js",
 	"./tomorrow.js": "./src/styles/prism/tomorrow.js",
-	"./tomorrow.min": "./src/styles/prism/tomorrow.min.js",
-	"./tomorrow.min.js": "./src/styles/prism/tomorrow.min.js",
 	"./twilight": "./src/styles/prism/twilight.js",
 	"./twilight.js": "./src/styles/prism/twilight.js",
-	"./twilight.min": "./src/styles/prism/twilight.min.js",
-	"./twilight.min.js": "./src/styles/prism/twilight.min.js",
 	"./vs": "./src/styles/prism/vs.js",
 	"./vs-dark": "./src/styles/prism/vs-dark.js",
 	"./vs-dark.js": "./src/styles/prism/vs-dark.js",
 	"./vs.js": "./src/styles/prism/vs.js",
-	"./vs.min": "./src/styles/prism/vs.min.js",
-	"./vs.min.js": "./src/styles/prism/vs.min.js",
 	"./vsc-dark-plus": "./src/styles/prism/vsc-dark-plus.js",
 	"./vsc-dark-plus.js": "./src/styles/prism/vsc-dark-plus.js",
-	"./vsc-dark-plus.min": "./src/styles/prism/vsc-dark-plus.min.js",
-	"./vsc-dark-plus.min.js": "./src/styles/prism/vsc-dark-plus.min.js",
 	"./xonokai": "./src/styles/prism/xonokai.js",
 	"./xonokai.js": "./src/styles/prism/xonokai.js",
-	"./xonokai.min": "./src/styles/prism/xonokai.min.js",
-	"./xonokai.min.js": "./src/styles/prism/xonokai.min.js",
 	"./z-touch": "./src/styles/prism/z-touch.js",
-	"./z-touch.js": "./src/styles/prism/z-touch.js",
-	"./z-touch.min": "./src/styles/prism/z-touch.min.js",
-	"./z-touch.min.js": "./src/styles/prism/z-touch.min.js"
+	"./z-touch.js": "./src/styles/prism/z-touch.js"
 };
 
 
@@ -50619,159 +50469,513 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/styles/prism/a11y-dark.min.js":
-/*!*******************************************!*\
-  !*** ./src/styles/prism/a11y-dark.min.js ***!
-  \*******************************************/
+/***/ "./src/styles/prism/a11y-one-light.js":
+/*!********************************************!*\
+  !*** ./src/styles/prism/a11y-one-light.js ***!
+  \********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+var BACKGROUND_PRIMARY = '#ffffff';
+var PRIMARY_TEXT = '#111827';
+var SECONDARY_TEXT = '#6b7280';
+var SYNTAX_1 = '#b45309';
+var SYNTAX_2 = '#a21caf';
+var SYNTAX_3 = '#c2410c';
+var SYNTAX_4 = '#be123c';
+var SYNTAX_5 = '#1d4ed8';
+var SYNTAX_6 = '#0369a1';
+var SYNTAX_7 = '#4d7c0f';
+var LINE_NUMBER_COLOR = '#6b7280';
 /* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "color": "#f8f8f2",
-    "background": "0 0",
-    "fontFamily": "Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none"
+  'code[class*="language-"]': {
+    background: BACKGROUND_PRIMARY,
+    color: PRIMARY_TEXT,
+    fontFamily: '"Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace',
+    direction: 'ltr',
+    textAlign: 'left',
+    whiteSpace: 'pre',
+    wordSpacing: 'normal',
+    wordBreak: 'normal',
+    lineHeight: '1.5',
+    MozTabSize: '2',
+    OTabSize: '2',
+    tabSize: '2',
+    WebkitHyphens: 'none',
+    MozHyphens: 'none',
+    msHyphens: 'none',
+    hyphens: 'none'
   },
-  "pre[class*=language-]": {
-    "color": "#f8f8f2",
-    "background": "#2b2b2b",
-    "fontFamily": "Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "padding": "1em",
-    "margin": ".5em 0",
-    "overflow": "auto",
-    "borderRadius": ".3em"
+  'pre[class*="language-"]': {
+    background: BACKGROUND_PRIMARY,
+    color: PRIMARY_TEXT,
+    fontFamily: '"Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace',
+    direction: 'ltr',
+    textAlign: 'left',
+    whiteSpace: 'pre',
+    wordSpacing: 'normal',
+    wordBreak: 'normal',
+    lineHeight: '1.5',
+    MozTabSize: '2',
+    OTabSize: '2',
+    tabSize: '2',
+    WebkitHyphens: 'none',
+    MozHyphens: 'none',
+    msHyphens: 'none',
+    hyphens: 'none',
+    padding: '1em',
+    margin: '0.5em 0',
+    overflow: 'auto',
+    borderRadius: '0.3em'
   },
-  ":not(pre)>code[class*=language-]": {
-    "background": "#2b2b2b",
-    "padding": ".1em",
-    "borderRadius": ".3em",
-    "whiteSpace": "normal"
+  'code[class*="language-"]::-moz-selection': {
+    background: BACKGROUND_PRIMARY,
+    color: 'inherit'
   },
-  "cdata": {
-    "color": "#d4d0ab"
+  'code[class*="language-"] *::-moz-selection': {
+    background: BACKGROUND_PRIMARY,
+    color: 'inherit'
   },
-  "comment": {
-    "color": "#d4d0ab"
+  'pre[class*="language-"] *::-moz-selection': {
+    background: BACKGROUND_PRIMARY,
+    color: 'inherit'
   },
-  "doctype": {
-    "color": "#d4d0ab"
+  'code[class*="language-"]::selection': {
+    background: BACKGROUND_PRIMARY,
+    color: 'inherit'
   },
-  "prolog": {
-    "color": "#d4d0ab"
+  'code[class*="language-"] *::selection': {
+    background: BACKGROUND_PRIMARY,
+    color: 'inherit'
   },
-  "punctuation": {
-    "color": "#fefefe"
+  'pre[class*="language-"] *::selection': {
+    background: BACKGROUND_PRIMARY,
+    color: 'inherit'
   },
-  "constant": {
-    "color": "#ffa07a"
+  ':not(pre) > code[class*="language-"]': {
+    padding: '0.2em 0.3em',
+    borderRadius: '0.3em',
+    whiteSpace: 'normal'
   },
-  "deleted": {
-    "color": "#ffa07a"
+  comment: {
+    color: SECONDARY_TEXT,
+    fontStyle: 'italic'
   },
-  "property": {
-    "color": "#ffa07a"
+  prolog: {
+    color: SECONDARY_TEXT
   },
-  "symbol": {
-    "color": "#ffa07a"
+  cdata: {
+    color: SECONDARY_TEXT
   },
-  "tag": {
-    "color": "#ffa07a"
+  doctype: {
+    color: PRIMARY_TEXT
+  },
+  punctuation: {
+    color: PRIMARY_TEXT
+  },
+  entity: {
+    color: PRIMARY_TEXT,
+    cursor: 'help'
+  },
+  'attr-name': {
+    color: SYNTAX_1
+  },
+  'class-name': {
+    color: SYNTAX_1
   },
   "boolean": {
-    "color": "#00e0e0"
+    color: SYNTAX_1
   },
-  "number": {
-    "color": "#00e0e0"
+  constant: {
+    color: SYNTAX_1
   },
-  "attr-name": {
-    "color": "#abe338"
+  number: {
+    color: SYNTAX_1
   },
-  "builtin": {
-    "color": "#abe338"
+  atrule: {
+    color: SYNTAX_1
+  },
+  keyword: {
+    color: SYNTAX_2
+  },
+  property: {
+    color: SYNTAX_3
+  },
+  tag: {
+    color: SYNTAX_3
+  },
+  symbol: {
+    color: SYNTAX_3
+  },
+  deleted: {
+    color: SYNTAX_3
+  },
+  important: {
+    color: SYNTAX_3
+  },
+  selector: {
+    color: SYNTAX_7
+  },
+  string: {
+    color: SYNTAX_7
   },
   "char": {
-    "color": "#abe338"
+    color: SYNTAX_7
   },
-  "inserted": {
-    "color": "#abe338"
+  builtin: {
+    color: SYNTAX_7
   },
-  "selector": {
-    "color": "#abe338"
+  inserted: {
+    color: SYNTAX_7
   },
-  "string": {
-    "color": "#abe338"
+  regex: {
+    color: SYNTAX_7
   },
-  ".language-css .token.string": {
-    "color": "#00e0e0"
+  'attr-value': {
+    color: SYNTAX_7
   },
-  ".style .token.string": {
-    "color": "#00e0e0"
+  'attr-value > .token.punctuation': {
+    color: SYNTAX_7
   },
-  "entity": {
-    "color": "#00e0e0",
-    "cursor": "help"
+  variable: {
+    color: SYNTAX_5
   },
-  "operator": {
-    "color": "#00e0e0"
-  },
-  "url": {
-    "color": "#00e0e0"
-  },
-  "variable": {
-    "color": "#00e0e0"
-  },
-  "atrule": {
-    "color": "gold"
-  },
-  "attr-value": {
-    "color": "gold"
+  operator: {
+    color: SYNTAX_5
   },
   "function": {
-    "color": "gold"
+    color: SYNTAX_5
   },
-  "keyword": {
-    "color": "#00e0e0"
+  url: {
+    color: SYNTAX_6
   },
-  "important": {
-    "color": "gold",
-    "fontWeight": "700"
+  'attr-value > .token.punctuation.attr-equals': {
+    color: PRIMARY_TEXT
   },
-  "regex": {
-    "color": "gold"
+  'special-attr > .token.attr-value > .token.value.css': {
+    color: PRIMARY_TEXT
   },
-  "bold": {
-    "fontWeight": "700"
+  '.language-css .token.selector': {
+    color: SYNTAX_3
   },
-  "italic": {
-    "fontStyle": "italic"
+  '.language-css .token.property': {
+    color: PRIMARY_TEXT
+  },
+  '.language-css .token.function': {
+    color: SYNTAX_6
+  },
+  '.language-css .token.url > .token.function': {
+    color: SYNTAX_6
+  },
+  '.language-css .token.url > .token.string.url': {
+    color: SYNTAX_7
+  },
+  '.language-css .token.important': {
+    color: SYNTAX_2
+  },
+  '.language-css .token.atrule .token.rule': {
+    color: SYNTAX_2
+  },
+  '.language-javascript .token.operator': {
+    color: SYNTAX_2
+  },
+  '.language-javascript .token.template-string > .token.interpolation > .token.interpolation-punctuation.punctuation': {
+    color: SYNTAX_4
+  },
+  '.language-json .token.operator': {
+    color: PRIMARY_TEXT
+  },
+  '.language-json .token.null.keyword': {
+    color: SYNTAX_1
+  },
+  '.language-markdown .token.url': {
+    color: PRIMARY_TEXT
+  },
+  '.language-markdown .token.url > .token.operator': {
+    color: PRIMARY_TEXT
+  },
+  '.language-markdown .token.url-reference.url > .token.string': {
+    color: PRIMARY_TEXT
+  },
+  '.language-markdown .token.url > .token.content': {
+    color: SYNTAX_5
+  },
+  '.language-markdown .token.url > .token.url': {
+    color: SYNTAX_6
+  },
+  '.language-markdown .token.url-reference.url': {
+    color: SYNTAX_6
+  },
+  '.language-markdown .token.blockquote.punctuation': {
+    color: SECONDARY_TEXT,
+    fontStyle: 'italic'
+  },
+  '.language-markdown .token.hr.punctuation': {
+    color: SECONDARY_TEXT,
+    fontStyle: 'italic'
+  },
+  '.language-markdown .token.code-snippet': {
+    color: SYNTAX_7
+  },
+  '.language-markdown .token.bold .token.content': {
+    color: SYNTAX_1
+  },
+  '.language-markdown .token.italic .token.content': {
+    color: SYNTAX_2
+  },
+  '.language-markdown .token.strike .token.content': {
+    color: SYNTAX_3
+  },
+  '.language-markdown .token.strike .token.punctuation': {
+    color: SYNTAX_3
+  },
+  '.language-markdown .token.list.punctuation': {
+    color: SYNTAX_3
+  },
+  '.language-markdown .token.title.important > .token.punctuation': {
+    color: SYNTAX_3
+  },
+  bold: {
+    fontWeight: 'bold'
+  },
+  italic: {
+    fontStyle: 'italic'
+  },
+  namespace: {
+    Opacity: '0.8'
+  },
+  'token.tab:not(:empty):before': {
+    color: 'hsla(230, 8%, 24%, 0.2)'
+  },
+  'token.cr:before': {
+    color: 'hsla(230, 8%, 24%, 0.2)'
+  },
+  'token.lf:before': {
+    color: 'hsla(230, 8%, 24%, 0.2)'
+  },
+  'token.space:before': {
+    color: 'hsla(230, 8%, 24%, 0.2)'
+  },
+  'div.code-toolbar > .toolbar.toolbar > .toolbar-item': {
+    marginRight: '0.4em'
+  },
+  'div.code-toolbar > .toolbar.toolbar > .toolbar-item > button': {
+    background: BACKGROUND_PRIMARY,
+    color: 'hsl(230, 6%, 44%)',
+    padding: '0.1em 0.4em',
+    borderRadius: '0.3em'
+  },
+  'div.code-toolbar > .toolbar.toolbar > .toolbar-item > a': {
+    background: BACKGROUND_PRIMARY,
+    color: 'hsl(230, 6%, 44%)',
+    padding: '0.1em 0.4em',
+    borderRadius: '0.3em'
+  },
+  'div.code-toolbar > .toolbar.toolbar > .toolbar-item > span': {
+    background: BACKGROUND_PRIMARY,
+    color: 'hsl(230, 6%, 44%)',
+    padding: '0.1em 0.4em',
+    borderRadius: '0.3em'
+  },
+  'div.code-toolbar > .toolbar.toolbar > .toolbar-item > button:hover': {
+    background: 'hsl(230, 1%, 78%)',
+    color: PRIMARY_TEXT
+  },
+  'div.code-toolbar > .toolbar.toolbar > .toolbar-item > button:focus': {
+    background: 'hsl(230, 1%, 78%)',
+    color: PRIMARY_TEXT
+  },
+  'div.code-toolbar > .toolbar.toolbar > .toolbar-item > a:hover': {
+    background: 'hsl(230, 1%, 78%)',
+    color: PRIMARY_TEXT
+  },
+  'div.code-toolbar > .toolbar.toolbar > .toolbar-item > a:focus': {
+    background: 'hsl(230, 1%, 78%)',
+    color: PRIMARY_TEXT
+  },
+  'div.code-toolbar > .toolbar.toolbar > .toolbar-item > span:hover': {
+    background: 'hsl(230, 1%, 78%)',
+    color: PRIMARY_TEXT
+  },
+  'div.code-toolbar > .toolbar.toolbar > .toolbar-item > span:focus': {
+    background: 'hsl(230, 1%, 78%)',
+    color: PRIMARY_TEXT
+  },
+  '.line-highlight.line-highlight': {
+    background: 'hsla(230, 8%, 24%, 0.05)'
+  },
+  '.line-highlight.line-highlight:before': {
+    background: BACKGROUND_PRIMARY,
+    color: PRIMARY_TEXT,
+    padding: '0.1em 0.6em',
+    borderRadius: '0.3em',
+    boxShadow: '0 2px 0 0 rgba(0, 0, 0, 0.2)'
+  },
+  '.line-highlight.line-highlight[data-end]:after': {
+    background: BACKGROUND_PRIMARY,
+    color: PRIMARY_TEXT,
+    padding: '0.1em 0.6em',
+    borderRadius: '0.3em',
+    boxShadow: '0 2px 0 0 rgba(0, 0, 0, 0.2)'
+  },
+  'pre[id].linkable-line-numbers.linkable-line-numbers span.line-numbers-rows > span:hover:before': {
+    backgroundColor: 'hsla(230, 8%, 24%, 0.05)'
+  },
+  '.line-numbers.line-numbers .line-numbers-rows': {
+    borderRightColor: 'hsla(230, 8%, 24%, 0.2)'
+  },
+  '.command-line .command-line-prompt': {
+    borderRightColor: 'hsla(230, 8%, 24%, 0.2)'
+  },
+  '.line-numbers .line-numbers-rows > span:before': {
+    color: LINE_NUMBER_COLOR
+  },
+  '.command-line .command-line-prompt > span:before': {
+    color: LINE_NUMBER_COLOR
+  },
+  '.rainbow-braces .token.token.punctuation.brace-level-1': {
+    color: SYNTAX_3
+  },
+  '.rainbow-braces .token.token.punctuation.brace-level-5': {
+    color: SYNTAX_3
+  },
+  '.rainbow-braces .token.token.punctuation.brace-level-9': {
+    color: SYNTAX_3
+  },
+  '.rainbow-braces .token.token.punctuation.brace-level-2': {
+    color: SYNTAX_7
+  },
+  '.rainbow-braces .token.token.punctuation.brace-level-6': {
+    color: SYNTAX_7
+  },
+  '.rainbow-braces .token.token.punctuation.brace-level-10': {
+    color: SYNTAX_7
+  },
+  '.rainbow-braces .token.token.punctuation.brace-level-3': {
+    color: SYNTAX_5
+  },
+  '.rainbow-braces .token.token.punctuation.brace-level-7': {
+    color: SYNTAX_5
+  },
+  '.rainbow-braces .token.token.punctuation.brace-level-11': {
+    color: SYNTAX_5
+  },
+  '.rainbow-braces .token.token.punctuation.brace-level-4': {
+    color: SYNTAX_2
+  },
+  '.rainbow-braces .token.token.punctuation.brace-level-8': {
+    color: SYNTAX_2
+  },
+  '.rainbow-braces .token.token.punctuation.brace-level-12': {
+    color: SYNTAX_2
+  },
+  'pre.diff-highlight > code .token.token.deleted:not(.prefix)': {
+    backgroundColor: 'hsla(353, 100%, 66%, 0.15)'
+  },
+  'pre > code.diff-highlight .token.token.deleted:not(.prefix)': {
+    backgroundColor: 'hsla(353, 100%, 66%, 0.15)'
+  },
+  'pre.diff-highlight > code .token.token.deleted:not(.prefix)::-moz-selection': {
+    backgroundColor: 'hsla(353, 95%, 66%, 0.25)'
+  },
+  'pre.diff-highlight > code .token.token.deleted:not(.prefix) *::-moz-selection': {
+    backgroundColor: 'hsla(353, 95%, 66%, 0.25)'
+  },
+  'pre > code.diff-highlight .token.token.deleted:not(.prefix)::-moz-selection': {
+    backgroundColor: 'hsla(353, 95%, 66%, 0.25)'
+  },
+  'pre > code.diff-highlight .token.token.deleted:not(.prefix) *::-moz-selection': {
+    backgroundColor: 'hsla(353, 95%, 66%, 0.25)'
+  },
+  'pre.diff-highlight > code .token.token.deleted:not(.prefix)::selection': {
+    backgroundColor: 'hsla(353, 95%, 66%, 0.25)'
+  },
+  'pre.diff-highlight > code .token.token.deleted:not(.prefix) *::selection': {
+    backgroundColor: 'hsla(353, 95%, 66%, 0.25)'
+  },
+  'pre > code.diff-highlight .token.token.deleted:not(.prefix)::selection': {
+    backgroundColor: 'hsla(353, 95%, 66%, 0.25)'
+  },
+  'pre > code.diff-highlight .token.token.deleted:not(.prefix) *::selection': {
+    backgroundColor: 'hsla(353, 95%, 66%, 0.25)'
+  },
+  'pre.diff-highlight > code .token.token.inserted:not(.prefix)': {
+    backgroundColor: 'hsla(137, 100%, 55%, 0.15)'
+  },
+  'pre > code.diff-highlight .token.token.inserted:not(.prefix)': {
+    backgroundColor: 'hsla(137, 100%, 55%, 0.15)'
+  },
+  'pre.diff-highlight > code .token.token.inserted:not(.prefix)::-moz-selection': {
+    backgroundColor: 'hsla(135, 73%, 55%, 0.25)'
+  },
+  'pre.diff-highlight > code .token.token.inserted:not(.prefix) *::-moz-selection': {
+    backgroundColor: 'hsla(135, 73%, 55%, 0.25)'
+  },
+  'pre > code.diff-highlight .token.token.inserted:not(.prefix)::-moz-selection': {
+    backgroundColor: 'hsla(135, 73%, 55%, 0.25)'
+  },
+  'pre > code.diff-highlight .token.token.inserted:not(.prefix) *::-moz-selection': {
+    backgroundColor: 'hsla(135, 73%, 55%, 0.25)'
+  },
+  'pre.diff-highlight > code .token.token.inserted:not(.prefix)::selection': {
+    backgroundColor: 'hsla(135, 73%, 55%, 0.25)'
+  },
+  'pre.diff-highlight > code .token.token.inserted:not(.prefix) *::selection': {
+    backgroundColor: 'hsla(135, 73%, 55%, 0.25)'
+  },
+  'pre > code.diff-highlight .token.token.inserted:not(.prefix)::selection': {
+    backgroundColor: 'hsla(135, 73%, 55%, 0.25)'
+  },
+  'pre > code.diff-highlight .token.token.inserted:not(.prefix) *::selection': {
+    backgroundColor: 'hsla(135, 73%, 55%, 0.25)'
+  },
+  '.prism-previewer.prism-previewer:before': {
+    borderColor: 'hsl(0, 0, 95%)'
+  },
+  '.prism-previewer-gradient.prism-previewer-gradient div': {
+    borderColor: 'hsl(0, 0, 95%)',
+    borderRadius: '0.3em'
+  },
+  '.prism-previewer-color.prism-previewer-color:before': {
+    borderRadius: '0.3em'
+  },
+  '.prism-previewer-easing.prism-previewer-easing:before': {
+    borderRadius: '0.3em'
+  },
+  '.prism-previewer.prism-previewer:after': {
+    borderTopColor: 'hsl(0, 0, 95%)'
+  },
+  '.prism-previewer-flipped.prism-previewer-flipped.after': {
+    borderBottomColor: 'hsl(0, 0, 95%)'
+  },
+  '.prism-previewer-angle.prism-previewer-angle:before': {
+    background: 'hsl(0, 0%, 100%)'
+  },
+  '.prism-previewer-time.prism-previewer-time:before': {
+    background: 'hsl(0, 0%, 100%)'
+  },
+  '.prism-previewer-easing.prism-previewer-easing': {
+    background: 'hsl(0, 0%, 100%)'
+  },
+  '.prism-previewer-angle.prism-previewer-angle circle': {
+    stroke: PRIMARY_TEXT,
+    strokeOpacity: '1'
+  },
+  '.prism-previewer-time.prism-previewer-time circle': {
+    stroke: PRIMARY_TEXT,
+    strokeOpacity: '1'
+  },
+  '.prism-previewer-easing.prism-previewer-easing circle': {
+    stroke: PRIMARY_TEXT,
+    fill: 'transparent'
+  },
+  '.prism-previewer-easing.prism-previewer-easing path': {
+    stroke: PRIMARY_TEXT
+  },
+  '.prism-previewer-easing.prism-previewer-easing line': {
+    stroke: PRIMARY_TEXT
   }
 });
 
@@ -50934,171 +51138,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   "bold": {
     "fontWeight": "bold"
-  },
-  "italic": {
-    "fontStyle": "italic"
-  }
-});
-
-/***/ }),
-
-/***/ "./src/styles/prism/atom-dark.min.js":
-/*!*******************************************!*\
-  !*** ./src/styles/prism/atom-dark.min.js ***!
-  \*******************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "color": "#c5c8c6",
-    "textShadow": "0 1px rgba(0,0,0,.3)",
-    "fontFamily": "Inconsolata,Monaco,Consolas,'Courier New',Courier,monospace",
-    "direction": "ltr",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none"
-  },
-  "pre[class*=language-]": {
-    "color": "#c5c8c6",
-    "textShadow": "0 1px rgba(0,0,0,.3)",
-    "fontFamily": "Inconsolata,Monaco,Consolas,'Courier New',Courier,monospace",
-    "direction": "ltr",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "padding": "1em",
-    "margin": ".5em 0",
-    "overflow": "auto",
-    "borderRadius": ".3em",
-    "background": "#1d1f21"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "background": "#1d1f21",
-    "padding": ".1em",
-    "borderRadius": ".3em"
-  },
-  "cdata": {
-    "color": "#7c7c7c"
-  },
-  "comment": {
-    "color": "#7c7c7c"
-  },
-  "doctype": {
-    "color": "#7c7c7c"
-  },
-  "prolog": {
-    "color": "#7c7c7c"
-  },
-  "punctuation": {
-    "color": "#c5c8c6"
-  },
-  ".namespace": {
-    "Opacity": ".7"
-  },
-  "keyword": {
-    "color": "#96cbfe"
-  },
-  "property": {
-    "color": "#96cbfe"
-  },
-  "tag": {
-    "color": "#96cbfe"
-  },
-  "class-name": {
-    "color": "#ffffb6",
-    "textDecoration": "underline"
-  },
-  "boolean": {
-    "color": "#9c9"
-  },
-  "constant": {
-    "color": "#9c9"
-  },
-  "deleted": {
-    "color": "#f92672"
-  },
-  "symbol": {
-    "color": "#f92672"
-  },
-  "number": {
-    "color": "#ff73fd"
-  },
-  "attr-name": {
-    "color": "#a8ff60"
-  },
-  "builtin": {
-    "color": "#a8ff60"
-  },
-  "char": {
-    "color": "#a8ff60"
-  },
-  "inserted": {
-    "color": "#a8ff60"
-  },
-  "selector": {
-    "color": "#a8ff60"
-  },
-  "string": {
-    "color": "#a8ff60"
-  },
-  "variable": {
-    "color": "#c6c5fe"
-  },
-  "operator": {
-    "color": "#ededed"
-  },
-  "entity": {
-    "color": "#ffffb6",
-    "cursor": "help"
-  },
-  "url": {
-    "color": "#96cbfe"
-  },
-  ".language-css .token.string": {
-    "color": "#87c38a"
-  },
-  ".style .token.string": {
-    "color": "#87c38a"
-  },
-  "atrule": {
-    "color": "#f9ee98"
-  },
-  "attr-value": {
-    "color": "#f9ee98"
-  },
-  "function": {
-    "color": "#dad085"
-  },
-  "regex": {
-    "color": "#e9c062"
-  },
-  "important": {
-    "color": "#fd971f",
-    "fontWeight": "700"
-  },
-  "bold": {
-    "fontWeight": "700"
   },
   "italic": {
     "fontStyle": "italic"
@@ -51316,215 +51355,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/styles/prism/base16-ateliersulphurpool.light.min.js":
-/*!*****************************************************************!*\
-  !*** ./src/styles/prism/base16-ateliersulphurpool.light.min.js ***!
-  \*****************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "fontFamily": "Consolas,Menlo,Monaco,\"Andale Mono WT\",\"Andale Mono\",\"Lucida Console\",\"Lucida Sans Typewriter\",\"DejaVu Sans Mono\",\"Bitstream Vera Sans Mono\",\"Liberation Mono\",\"Nimbus Mono L\",\"Courier New\",Courier,monospace",
-    "fontSize": "14px",
-    "lineHeight": "1.375",
-    "direction": "ltr",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "background": "#f5f7ff",
-    "color": "#5e6687"
-  },
-  "pre[class*=language-]": {
-    "fontFamily": "Consolas,Menlo,Monaco,\"Andale Mono WT\",\"Andale Mono\",\"Lucida Console\",\"Lucida Sans Typewriter\",\"DejaVu Sans Mono\",\"Bitstream Vera Sans Mono\",\"Liberation Mono\",\"Nimbus Mono L\",\"Courier New\",Courier,monospace",
-    "fontSize": "14px",
-    "lineHeight": "1.375",
-    "direction": "ltr",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "background": "#f5f7ff",
-    "color": "#5e6687",
-    "padding": "1em",
-    "margin": ".5em 0",
-    "overflow": "auto"
-  },
-  "pre>code[class*=language-]": {
-    "fontSize": "1em"
-  },
-  "code[class*=language-] ::-moz-selection": {
-    "textShadow": "none",
-    "background": "#dfe2f1"
-  },
-  "code[class*=language-]::-moz-selection": {
-    "textShadow": "none",
-    "background": "#dfe2f1"
-  },
-  "pre[class*=language-] ::-moz-selection": {
-    "textShadow": "none",
-    "background": "#dfe2f1"
-  },
-  "pre[class*=language-]::-moz-selection": {
-    "textShadow": "none",
-    "background": "#dfe2f1"
-  },
-  "code[class*=language-] ::selection": {
-    "textShadow": "none",
-    "background": "#dfe2f1"
-  },
-  "code[class*=language-]::selection": {
-    "textShadow": "none",
-    "background": "#dfe2f1"
-  },
-  "pre[class*=language-] ::selection": {
-    "textShadow": "none",
-    "background": "#dfe2f1"
-  },
-  "pre[class*=language-]::selection": {
-    "textShadow": "none",
-    "background": "#dfe2f1"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "padding": ".1em",
-    "borderRadius": ".3em"
-  },
-  "cdata": {
-    "color": "#898ea4"
-  },
-  "comment": {
-    "color": "#898ea4"
-  },
-  "doctype": {
-    "color": "#898ea4"
-  },
-  "prolog": {
-    "color": "#898ea4"
-  },
-  "punctuation": {
-    "color": "#5e6687"
-  },
-  "namespace": {
-    "Opacity": ".7"
-  },
-  "boolean": {
-    "color": "#c76b29"
-  },
-  "number": {
-    "color": "#c76b29"
-  },
-  "operator": {
-    "color": "#c76b29"
-  },
-  "property": {
-    "color": "#c08b30"
-  },
-  "tag": {
-    "color": "#3d8fd1"
-  },
-  "string": {
-    "color": "#22a2c9"
-  },
-  "selector": {
-    "color": "#6679cc"
-  },
-  "attr-name": {
-    "color": "#c76b29"
-  },
-  ".language-css .token.string": {
-    "color": "#22a2c9"
-  },
-  ".style .token.string": {
-    "color": "#22a2c9"
-  },
-  "entity": {
-    "color": "#22a2c9",
-    "cursor": "help"
-  },
-  "url": {
-    "color": "#22a2c9"
-  },
-  "attr-value": {
-    "color": "#ac9739"
-  },
-  "control": {
-    "color": "#ac9739"
-  },
-  "directive": {
-    "color": "#ac9739"
-  },
-  "keyword": {
-    "color": "#ac9739"
-  },
-  "unit": {
-    "color": "#ac9739"
-  },
-  "atrule": {
-    "color": "#22a2c9"
-  },
-  "regex": {
-    "color": "#22a2c9"
-  },
-  "statement": {
-    "color": "#22a2c9"
-  },
-  "placeholder": {
-    "color": "#3d8fd1"
-  },
-  "variable": {
-    "color": "#3d8fd1"
-  },
-  "deleted": {
-    "textDecoration": "line-through"
-  },
-  "inserted": {
-    "borderBottom": "1px dotted #202746",
-    "textDecoration": "none"
-  },
-  "italic": {
-    "fontStyle": "italic"
-  },
-  "bold": {
-    "fontWeight": "700"
-  },
-  "important": {
-    "fontWeight": "700",
-    "color": "#c94922"
-  },
-  "pre>code.highlight": {
-    "Outline": ".4em solid #c94922",
-    "OutlineOffset": ".4em"
-  },
-  ".line-numbers.line-numbers .line-numbers-rows": {
-    "borderRightColor": "#dfe2f1"
-  },
-  ".line-numbers .line-numbers-rows>span:before": {
-    "color": "#979db4"
-  },
-  ".line-highlight.line-highlight": {
-    "background": "linear-gradient(to right,rgba(107,115,148,.2) 70%,rgba(107,115,148,0))"
-  }
-});
-
-/***/ }),
-
 /***/ "./src/styles/prism/cb.js":
 /*!********************************!*\
   !*** ./src/styles/prism/cb.js ***!
@@ -51692,179 +51522,6 @@ __webpack_require__.r(__webpack_exports__);
     "borderRadius": "8px"
   },
   ".line-numbers .line-numbers-rows > span": {
-    "borderRight": "3px #d9d336 solid"
-  }
-});
-
-/***/ }),
-
-/***/ "./src/styles/prism/cb.min.js":
-/*!************************************!*\
-  !*** ./src/styles/prism/cb.min.js ***!
-  \************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "color": "#fff",
-    "textShadow": "0 1px 1px #000",
-    "fontFamily": "Menlo,Monaco,\"Courier New\",monospace",
-    "direction": "ltr",
-    "textAlign": "left",
-    "wordSpacing": "normal",
-    "whiteSpace": "pre",
-    "wordWrap": "normal",
-    "lineHeight": "1.4",
-    "background": "0 0",
-    "border": "0",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none"
-  },
-  "pre[class*=language-]": {
-    "color": "#fff",
-    "textShadow": "0 1px 1px #000",
-    "fontFamily": "Menlo,Monaco,\"Courier New\",monospace",
-    "direction": "ltr",
-    "textAlign": "left",
-    "wordSpacing": "normal",
-    "whiteSpace": "pre",
-    "wordWrap": "normal",
-    "lineHeight": "1.4",
-    "background": "#222",
-    "border": "0",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "padding": "15px",
-    "margin": "1em 0",
-    "overflow": "auto",
-    "MozBorderRadius": "8px",
-    "WebkitBorderRadius": "8px",
-    "borderRadius": "8px"
-  },
-  "pre[class*=language-] code": {
-    "float": "left",
-    "padding": "0 15px 0 0"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "background": "#222",
-    "padding": "5px 10px",
-    "lineHeight": "1",
-    "MozBorderRadius": "3px",
-    "WebkitBorderRadius": "3px",
-    "borderRadius": "3px"
-  },
-  "cdata": {
-    "color": "#797979"
-  },
-  "comment": {
-    "color": "#797979"
-  },
-  "doctype": {
-    "color": "#797979"
-  },
-  "prolog": {
-    "color": "#797979"
-  },
-  "operator": {
-    "color": "#fff"
-  },
-  "punctuation": {
-    "color": "#fff"
-  },
-  "selector": {
-    "color": "#fff"
-  },
-  "namespace": {
-    "Opacity": ".7"
-  },
-  "boolean": {
-    "color": "#ffd893"
-  },
-  "tag": {
-    "color": "#ffd893"
-  },
-  "atrule": {
-    "color": "#b0c975"
-  },
-  "attr-value": {
-    "color": "#b0c975"
-  },
-  "hex": {
-    "color": "#b0c975"
-  },
-  "string": {
-    "color": "#b0c975"
-  },
-  "attr-name": {
-    "color": "#c27628"
-  },
-  "entity": {
-    "color": "#c27628",
-    "cursor": "help"
-  },
-  "keyword": {
-    "color": "#c27628"
-  },
-  "property": {
-    "color": "#c27628"
-  },
-  "url": {
-    "color": "#c27628"
-  },
-  "regex": {
-    "color": "#9b71c6"
-  },
-  "constant": {
-    "color": "#e5a638"
-  },
-  "function": {
-    "color": "#e5a638"
-  },
-  "variable": {
-    "color": "#fdfba8"
-  },
-  "number": {
-    "color": "#8799b0"
-  },
-  "deliminator": {
-    "color": "#e45734"
-  },
-  "important": {
-    "color": "#e45734"
-  },
-  ".line-highlight.line-highlight": {
-    "background": "rgba(255,255,255,.2)"
-  },
-  ".line-highlight.line-highlight:before": {
-    "top": ".3em",
-    "backgroundColor": "rgba(255,255,255,.3)",
-    "color": "#fff",
-    "MozBorderRadius": "8px",
-    "WebkitBorderRadius": "8px",
-    "borderRadius": "8px"
-  },
-  ".line-highlight.line-highlight[data-end]:after": {
-    "top": ".3em",
-    "backgroundColor": "rgba(255,255,255,.3)",
-    "color": "#fff",
-    "MozBorderRadius": "8px",
-    "WebkitBorderRadius": "8px",
-    "borderRadius": "8px"
-  },
-  ".line-numbers .line-numbers-rows>span": {
     "borderRight": "3px #d9d336 solid"
   }
 });
@@ -52269,404 +51926,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/styles/prism/coldark-cold.min.js":
-/*!**********************************************!*\
-  !*** ./src/styles/prism/coldark-cold.min.js ***!
-  \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "color": "#111b27",
-    "background": "0 0",
-    "fontFamily": "Consolas,Monaco,\"Andale Mono\",\"Ubuntu Mono\",monospace",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none"
-  },
-  "pre[class*=language-]": {
-    "color": "#111b27",
-    "background": "#e3eaf2",
-    "fontFamily": "Consolas,Monaco,\"Andale Mono\",\"Ubuntu Mono\",monospace",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "padding": "1em",
-    "margin": ".5em 0",
-    "overflow": "auto"
-  },
-  "code[class*=language-] ::-moz-selection": {
-    "background": "#8da1b9"
-  },
-  "code[class*=language-]::-moz-selection": {
-    "background": "#8da1b9"
-  },
-  "pre[class*=language-] ::-moz-selection": {
-    "background": "#8da1b9"
-  },
-  "pre[class*=language-]::-moz-selection": {
-    "background": "#8da1b9"
-  },
-  "code[class*=language-] ::selection": {
-    "background": "#8da1b9"
-  },
-  "code[class*=language-]::selection": {
-    "background": "#8da1b9"
-  },
-  "pre[class*=language-] ::selection": {
-    "background": "#8da1b9"
-  },
-  "pre[class*=language-]::selection": {
-    "background": "#8da1b9"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "background": "#e3eaf2",
-    "padding": ".1em .3em",
-    "borderRadius": ".3em",
-    "whiteSpace": "normal"
-  },
-  "cdata": {
-    "color": "#3c526d"
-  },
-  "comment": {
-    "color": "#3c526d"
-  },
-  "doctype": {
-    "color": "#3c526d"
-  },
-  "prolog": {
-    "color": "#3c526d"
-  },
-  "punctuation": {
-    "color": "#111b27"
-  },
-  "delimiter.important": {
-    "color": "#006d6d",
-    "fontWeight": "inherit"
-  },
-  "selector.parent": {
-    "color": "#006d6d"
-  },
-  "tag": {
-    "color": "#006d6d"
-  },
-  "tag.punctuation": {
-    "color": "#006d6d"
-  },
-  "attr-name": {
-    "color": "#755f00"
-  },
-  "boolean": {
-    "color": "#755f00"
-  },
-  "boolean.important": {
-    "color": "#755f00"
-  },
-  "constant": {
-    "color": "#755f00"
-  },
-  "number": {
-    "color": "#755f00"
-  },
-  "selector.attribute": {
-    "color": "#755f00"
-  },
-  "class-name": {
-    "color": "#005a8e"
-  },
-  "key": {
-    "color": "#005a8e"
-  },
-  "parameter": {
-    "color": "#005a8e"
-  },
-  "property": {
-    "color": "#005a8e"
-  },
-  "property-access": {
-    "color": "#005a8e"
-  },
-  "variable": {
-    "color": "#005a8e"
-  },
-  "attr-value": {
-    "color": "#116b00"
-  },
-  "color": {
-    "color": "#116b00"
-  },
-  "inserted": {
-    "color": "#116b00"
-  },
-  "selector.value": {
-    "color": "#116b00"
-  },
-  "string": {
-    "color": "#116b00"
-  },
-  "string.url-link": {
-    "color": "#116b00"
-  },
-  "builtin": {
-    "color": "#af00af"
-  },
-  "keyword-array": {
-    "color": "#af00af"
-  },
-  "package": {
-    "color": "#af00af"
-  },
-  "regex": {
-    "color": "#af00af"
-  },
-  "function": {
-    "color": "#7c00aa"
-  },
-  "selector.class": {
-    "color": "#7c00aa"
-  },
-  "selector.id": {
-    "color": "#7c00aa"
-  },
-  "atrule.rule": {
-    "color": "#a04900"
-  },
-  "combinator": {
-    "color": "#a04900"
-  },
-  "keyword": {
-    "color": "#a04900"
-  },
-  "operator": {
-    "color": "#a04900"
-  },
-  "pseudo-class": {
-    "color": "#a04900"
-  },
-  "pseudo-element": {
-    "color": "#a04900"
-  },
-  "selector": {
-    "color": "#a04900"
-  },
-  "unit": {
-    "color": "#a04900"
-  },
-  "deleted": {
-    "color": "#c22f2e"
-  },
-  "important": {
-    "color": "#c22f2e",
-    "fontWeight": "700"
-  },
-  "keyword-this": {
-    "color": "#005a8e",
-    "fontWeight": "700"
-  },
-  "this": {
-    "color": "#005a8e",
-    "fontWeight": "700"
-  },
-  "bold": {
-    "fontWeight": "700"
-  },
-  "italic": {
-    "fontStyle": "italic"
-  },
-  "entity": {
-    "cursor": "help"
-  },
-  ".language-markdown .token.title": {
-    "color": "#005a8e",
-    "fontWeight": "700"
-  },
-  ".language-markdown .token.title .token.punctuation": {
-    "color": "#005a8e",
-    "fontWeight": "700"
-  },
-  ".language-markdown .token.blockquote.punctuation": {
-    "color": "#af00af"
-  },
-  ".language-markdown .token.code": {
-    "color": "#006d6d"
-  },
-  ".language-markdown .token.hr.punctuation": {
-    "color": "#005a8e"
-  },
-  ".language-markdown .token.url>.token.content": {
-    "color": "#116b00"
-  },
-  ".language-markdown .token.url-link": {
-    "color": "#755f00"
-  },
-  ".language-markdown .token.list.punctuation": {
-    "color": "#af00af"
-  },
-  ".language-markdown .token.table-header": {
-    "color": "#111b27"
-  },
-  ".language-json .token.operator": {
-    "color": "#111b27"
-  },
-  ".language-scss .token.variable": {
-    "color": "#006d6d"
-  },
-  "token.cr:before": {
-    "color": "#3c526d"
-  },
-  "token.lf:before": {
-    "color": "#3c526d"
-  },
-  "token.space:before": {
-    "color": "#3c526d"
-  },
-  "token.tab:not(:empty):before": {
-    "color": "#3c526d"
-  },
-  "div.code-toolbar>.toolbar.toolbar>.toolbar-item>a": {
-    "color": "#e3eaf2",
-    "background": "#005a8e"
-  },
-  "div.code-toolbar>.toolbar.toolbar>.toolbar-item>button": {
-    "color": "#e3eaf2",
-    "background": "#005a8e"
-  },
-  "div.code-toolbar>.toolbar.toolbar>.toolbar-item>a:focus": {
-    "color": "#e3eaf2",
-    "background": "#005a8eda",
-    "textDecoration": "none"
-  },
-  "div.code-toolbar>.toolbar.toolbar>.toolbar-item>a:hover": {
-    "color": "#e3eaf2",
-    "background": "#005a8eda",
-    "textDecoration": "none"
-  },
-  "div.code-toolbar>.toolbar.toolbar>.toolbar-item>button:focus": {
-    "color": "#e3eaf2",
-    "background": "#005a8eda",
-    "textDecoration": "none"
-  },
-  "div.code-toolbar>.toolbar.toolbar>.toolbar-item>button:hover": {
-    "color": "#e3eaf2",
-    "background": "#005a8eda",
-    "textDecoration": "none"
-  },
-  "div.code-toolbar>.toolbar.toolbar>.toolbar-item>span": {
-    "color": "#e3eaf2",
-    "background": "#3c526d"
-  },
-  "div.code-toolbar>.toolbar.toolbar>.toolbar-item>span:focus": {
-    "color": "#e3eaf2",
-    "background": "#3c526d"
-  },
-  "div.code-toolbar>.toolbar.toolbar>.toolbar-item>span:hover": {
-    "color": "#e3eaf2",
-    "background": "#3c526d"
-  },
-  ".line-highlight.line-highlight": {
-    "background": "linear-gradient(to right,#8da1b92f 70%,#8da1b925)"
-  },
-  ".line-highlight.line-highlight:before": {
-    "backgroundColor": "#3c526d",
-    "color": "#e3eaf2",
-    "boxShadow": "0 1px #8da1b9"
-  },
-  ".line-highlight.line-highlight[data-end]:after": {
-    "backgroundColor": "#3c526d",
-    "color": "#e3eaf2",
-    "boxShadow": "0 1px #8da1b9"
-  },
-  "pre[id].linkable-line-numbers.linkable-line-numbers span.line-numbers-rows>span:hover:before": {
-    "backgroundColor": "#3c526d1f"
-  },
-  ".line-numbers.line-numbers .line-numbers-rows": {
-    "borderRight": "1px solid #8da1b97a",
-    "background": "#d0dae77a"
-  },
-  ".line-numbers .line-numbers-rows>span:before": {
-    "color": "#3c526dda"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-1": {
-    "color": "#755f00"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-5": {
-    "color": "#755f00"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-9": {
-    "color": "#755f00"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-10": {
-    "color": "#af00af"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-2": {
-    "color": "#af00af"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-6": {
-    "color": "#af00af"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-11": {
-    "color": "#005a8e"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-3": {
-    "color": "#005a8e"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-7": {
-    "color": "#005a8e"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-12": {
-    "color": "#7c00aa"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-4": {
-    "color": "#7c00aa"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-8": {
-    "color": "#7c00aa"
-  },
-  "pre.diff-highlight>code .token.token.deleted:not(.prefix)": {
-    "backgroundColor": "#c22f2e1f"
-  },
-  "pre>code.diff-highlight .token.token.deleted:not(.prefix)": {
-    "backgroundColor": "#c22f2e1f"
-  },
-  "pre.diff-highlight>code .token.token.inserted:not(.prefix)": {
-    "backgroundColor": "#116b001f"
-  },
-  "pre>code.diff-highlight .token.token.inserted:not(.prefix)": {
-    "backgroundColor": "#116b001f"
-  },
-  ".command-line .command-line-prompt": {
-    "borderRight": "1px solid #8da1b97a"
-  },
-  ".command-line .command-line-prompt>span:before": {
-    "color": "#3c526dda"
-  }
-});
-
-/***/ }),
-
 /***/ "./src/styles/prism/coldark-dark.js":
 /*!******************************************!*\
   !*** ./src/styles/prism/coldark-dark.js ***!
@@ -53065,404 +52324,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/styles/prism/coldark-dark.min.js":
-/*!**********************************************!*\
-  !*** ./src/styles/prism/coldark-dark.min.js ***!
-  \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "color": "#e3eaf2",
-    "background": "0 0",
-    "fontFamily": "Consolas,Monaco,\"Andale Mono\",\"Ubuntu Mono\",monospace",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none"
-  },
-  "pre[class*=language-]": {
-    "color": "#e3eaf2",
-    "background": "#111b27",
-    "fontFamily": "Consolas,Monaco,\"Andale Mono\",\"Ubuntu Mono\",monospace",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "padding": "1em",
-    "margin": ".5em 0",
-    "overflow": "auto"
-  },
-  "code[class*=language-] ::-moz-selection": {
-    "background": "#3c526d"
-  },
-  "code[class*=language-]::-moz-selection": {
-    "background": "#3c526d"
-  },
-  "pre[class*=language-] ::-moz-selection": {
-    "background": "#3c526d"
-  },
-  "pre[class*=language-]::-moz-selection": {
-    "background": "#3c526d"
-  },
-  "code[class*=language-] ::selection": {
-    "background": "#3c526d"
-  },
-  "code[class*=language-]::selection": {
-    "background": "#3c526d"
-  },
-  "pre[class*=language-] ::selection": {
-    "background": "#3c526d"
-  },
-  "pre[class*=language-]::selection": {
-    "background": "#3c526d"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "background": "#111b27",
-    "padding": ".1em .3em",
-    "borderRadius": ".3em",
-    "whiteSpace": "normal"
-  },
-  "cdata": {
-    "color": "#8da1b9"
-  },
-  "comment": {
-    "color": "#8da1b9"
-  },
-  "doctype": {
-    "color": "#8da1b9"
-  },
-  "prolog": {
-    "color": "#8da1b9"
-  },
-  "punctuation": {
-    "color": "#e3eaf2"
-  },
-  "delimiter.important": {
-    "color": "#6cc",
-    "fontWeight": "inherit"
-  },
-  "selector.parent": {
-    "color": "#6cc"
-  },
-  "tag": {
-    "color": "#6cc"
-  },
-  "tag.punctuation": {
-    "color": "#6cc"
-  },
-  "attr-name": {
-    "color": "#e6d37a"
-  },
-  "boolean": {
-    "color": "#e6d37a"
-  },
-  "boolean.important": {
-    "color": "#e6d37a"
-  },
-  "constant": {
-    "color": "#e6d37a"
-  },
-  "number": {
-    "color": "#e6d37a"
-  },
-  "selector.attribute": {
-    "color": "#e6d37a"
-  },
-  "class-name": {
-    "color": "#6cb8e6"
-  },
-  "key": {
-    "color": "#6cb8e6"
-  },
-  "parameter": {
-    "color": "#6cb8e6"
-  },
-  "property": {
-    "color": "#6cb8e6"
-  },
-  "property-access": {
-    "color": "#6cb8e6"
-  },
-  "variable": {
-    "color": "#6cb8e6"
-  },
-  "attr-value": {
-    "color": "#91d076"
-  },
-  "color": {
-    "color": "#91d076"
-  },
-  "inserted": {
-    "color": "#91d076"
-  },
-  "selector.value": {
-    "color": "#91d076"
-  },
-  "string": {
-    "color": "#91d076"
-  },
-  "string.url-link": {
-    "color": "#91d076"
-  },
-  "builtin": {
-    "color": "#f4adf4"
-  },
-  "keyword-array": {
-    "color": "#f4adf4"
-  },
-  "package": {
-    "color": "#f4adf4"
-  },
-  "regex": {
-    "color": "#f4adf4"
-  },
-  "function": {
-    "color": "#c699e3"
-  },
-  "selector.class": {
-    "color": "#c699e3"
-  },
-  "selector.id": {
-    "color": "#c699e3"
-  },
-  "atrule.rule": {
-    "color": "#e9ae7e"
-  },
-  "combinator": {
-    "color": "#e9ae7e"
-  },
-  "keyword": {
-    "color": "#e9ae7e"
-  },
-  "operator": {
-    "color": "#e9ae7e"
-  },
-  "pseudo-class": {
-    "color": "#e9ae7e"
-  },
-  "pseudo-element": {
-    "color": "#e9ae7e"
-  },
-  "selector": {
-    "color": "#e9ae7e"
-  },
-  "unit": {
-    "color": "#e9ae7e"
-  },
-  "deleted": {
-    "color": "#cd6660"
-  },
-  "important": {
-    "color": "#cd6660",
-    "fontWeight": "700"
-  },
-  "keyword-this": {
-    "color": "#6cb8e6",
-    "fontWeight": "700"
-  },
-  "this": {
-    "color": "#6cb8e6",
-    "fontWeight": "700"
-  },
-  "bold": {
-    "fontWeight": "700"
-  },
-  "italic": {
-    "fontStyle": "italic"
-  },
-  "entity": {
-    "cursor": "help"
-  },
-  ".language-markdown .token.title": {
-    "color": "#6cb8e6",
-    "fontWeight": "700"
-  },
-  ".language-markdown .token.title .token.punctuation": {
-    "color": "#6cb8e6",
-    "fontWeight": "700"
-  },
-  ".language-markdown .token.blockquote.punctuation": {
-    "color": "#f4adf4"
-  },
-  ".language-markdown .token.code": {
-    "color": "#6cc"
-  },
-  ".language-markdown .token.hr.punctuation": {
-    "color": "#6cb8e6"
-  },
-  ".language-markdown .token.url .token.content": {
-    "color": "#91d076"
-  },
-  ".language-markdown .token.url-link": {
-    "color": "#e6d37a"
-  },
-  ".language-markdown .token.list.punctuation": {
-    "color": "#f4adf4"
-  },
-  ".language-markdown .token.table-header": {
-    "color": "#e3eaf2"
-  },
-  ".language-json .token.operator": {
-    "color": "#e3eaf2"
-  },
-  ".language-scss .token.variable": {
-    "color": "#6cc"
-  },
-  "token.cr:before": {
-    "color": "#8da1b9"
-  },
-  "token.lf:before": {
-    "color": "#8da1b9"
-  },
-  "token.space:before": {
-    "color": "#8da1b9"
-  },
-  "token.tab:not(:empty):before": {
-    "color": "#8da1b9"
-  },
-  "div.code-toolbar>.toolbar.toolbar>.toolbar-item>a": {
-    "color": "#111b27",
-    "background": "#6cb8e6"
-  },
-  "div.code-toolbar>.toolbar.toolbar>.toolbar-item>button": {
-    "color": "#111b27",
-    "background": "#6cb8e6"
-  },
-  "div.code-toolbar>.toolbar.toolbar>.toolbar-item>a:focus": {
-    "color": "#111b27",
-    "background": "#6cb8e6da",
-    "textDecoration": "none"
-  },
-  "div.code-toolbar>.toolbar.toolbar>.toolbar-item>a:hover": {
-    "color": "#111b27",
-    "background": "#6cb8e6da",
-    "textDecoration": "none"
-  },
-  "div.code-toolbar>.toolbar.toolbar>.toolbar-item>button:focus": {
-    "color": "#111b27",
-    "background": "#6cb8e6da",
-    "textDecoration": "none"
-  },
-  "div.code-toolbar>.toolbar.toolbar>.toolbar-item>button:hover": {
-    "color": "#111b27",
-    "background": "#6cb8e6da",
-    "textDecoration": "none"
-  },
-  "div.code-toolbar>.toolbar.toolbar>.toolbar-item>span": {
-    "color": "#111b27",
-    "background": "#8da1b9"
-  },
-  "div.code-toolbar>.toolbar.toolbar>.toolbar-item>span:focus": {
-    "color": "#111b27",
-    "background": "#8da1b9"
-  },
-  "div.code-toolbar>.toolbar.toolbar>.toolbar-item>span:hover": {
-    "color": "#111b27",
-    "background": "#8da1b9"
-  },
-  ".line-highlight.line-highlight": {
-    "background": "linear-gradient(to right,#3c526d5f 70%,#3c526d55)"
-  },
-  ".line-highlight.line-highlight:before": {
-    "backgroundColor": "#8da1b9",
-    "color": "#111b27",
-    "boxShadow": "0 1px #3c526d"
-  },
-  ".line-highlight.line-highlight[data-end]:after": {
-    "backgroundColor": "#8da1b9",
-    "color": "#111b27",
-    "boxShadow": "0 1px #3c526d"
-  },
-  "pre[id].linkable-line-numbers.linkable-line-numbers span.line-numbers-rows>span:hover:before": {
-    "backgroundColor": "#8da1b918"
-  },
-  ".line-numbers.line-numbers .line-numbers-rows": {
-    "borderRight": "1px solid #0b121b",
-    "background": "#0b121b7a"
-  },
-  ".line-numbers .line-numbers-rows>span:before": {
-    "color": "#8da1b9da"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-1": {
-    "color": "#e6d37a"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-5": {
-    "color": "#e6d37a"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-9": {
-    "color": "#e6d37a"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-10": {
-    "color": "#f4adf4"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-2": {
-    "color": "#f4adf4"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-6": {
-    "color": "#f4adf4"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-11": {
-    "color": "#6cb8e6"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-3": {
-    "color": "#6cb8e6"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-7": {
-    "color": "#6cb8e6"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-12": {
-    "color": "#c699e3"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-4": {
-    "color": "#c699e3"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-8": {
-    "color": "#c699e3"
-  },
-  "pre.diff-highlight>code .token.token.deleted:not(.prefix)": {
-    "backgroundColor": "#cd66601f"
-  },
-  "pre>code.diff-highlight .token.token.deleted:not(.prefix)": {
-    "backgroundColor": "#cd66601f"
-  },
-  "pre.diff-highlight>code .token.token.inserted:not(.prefix)": {
-    "backgroundColor": "#91d0761f"
-  },
-  "pre>code.diff-highlight .token.token.inserted:not(.prefix)": {
-    "backgroundColor": "#91d0761f"
-  },
-  ".command-line .command-line-prompt": {
-    "borderRight": "1px solid #0b121b"
-  },
-  ".command-line .command-line-prompt>span:before": {
-    "color": "#8da1b9da"
-  }
-});
-
-/***/ }),
-
 /***/ "./src/styles/prism/coy-without-shadows.js":
 /*!*************************************************!*\
   !*** ./src/styles/prism/coy-without-shadows.js ***!
@@ -53646,200 +52507,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   "bold": {
     "fontWeight": "bold"
-  },
-  "italic": {
-    "fontStyle": "italic"
-  },
-  "namespace": {
-    "Opacity": ".7"
-  }
-});
-
-/***/ }),
-
-/***/ "./src/styles/prism/coy-without-shadows.min.js":
-/*!*****************************************************!*\
-  !*** ./src/styles/prism/coy-without-shadows.min.js ***!
-  \*****************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "color": "#000",
-    "background": "0 0",
-    "fontFamily": "Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace",
-    "fontSize": "1em",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none"
-  },
-  "pre[class*=language-]": {
-    "color": "#000",
-    "background": "0 0",
-    "fontFamily": "Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace",
-    "fontSize": "1em",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "position": "relative",
-    "borderLeft": "10px solid #358ccb",
-    "boxShadow": "-1px 0 0 0 #358ccb,0 0 0 1px #dfdfdf",
-    "backgroundColor": "#fdfdfd",
-    "backgroundImage": "linear-gradient(transparent 50%,rgba(69,142,209,.04) 50%)",
-    "backgroundSize": "3em 3em",
-    "backgroundOrigin": "content-box",
-    "backgroundAttachment": "local",
-    "margin": ".5em 0",
-    "padding": "0 1em"
-  },
-  "pre[class*=language-]>code": {
-    "display": "block"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "position": "relative",
-    "padding": ".2em",
-    "borderRadius": ".3em",
-    "color": "#c92c2c",
-    "border": "1px solid rgba(0,0,0,.1)",
-    "display": "inline",
-    "whiteSpace": "normal",
-    "backgroundColor": "#fdfdfd",
-    "WebkitBoxSizing": "border-box",
-    "MozBoxSizing": "border-box",
-    "boxSizing": "border-box"
-  },
-  "block-comment": {
-    "color": "#7d8b99"
-  },
-  "cdata": {
-    "color": "#7d8b99"
-  },
-  "comment": {
-    "color": "#7d8b99"
-  },
-  "doctype": {
-    "color": "#7d8b99"
-  },
-  "prolog": {
-    "color": "#7d8b99"
-  },
-  "punctuation": {
-    "color": "#5f6364"
-  },
-  "boolean": {
-    "color": "#c92c2c"
-  },
-  "constant": {
-    "color": "#c92c2c"
-  },
-  "deleted": {
-    "color": "#c92c2c"
-  },
-  "function-name": {
-    "color": "#c92c2c"
-  },
-  "number": {
-    "color": "#c92c2c"
-  },
-  "property": {
-    "color": "#c92c2c"
-  },
-  "symbol": {
-    "color": "#c92c2c"
-  },
-  "tag": {
-    "color": "#c92c2c"
-  },
-  "attr-name": {
-    "color": "#2f9c0a"
-  },
-  "builtin": {
-    "color": "#2f9c0a"
-  },
-  "char": {
-    "color": "#2f9c0a"
-  },
-  "function": {
-    "color": "#2f9c0a"
-  },
-  "inserted": {
-    "color": "#2f9c0a"
-  },
-  "selector": {
-    "color": "#2f9c0a"
-  },
-  "string": {
-    "color": "#2f9c0a"
-  },
-  "entity": {
-    "color": "#a67f59",
-    "background": "rgba(255,255,255,.5)",
-    "cursor": "help"
-  },
-  "operator": {
-    "color": "#a67f59",
-    "background": "rgba(255,255,255,.5)"
-  },
-  "url": {
-    "color": "#a67f59",
-    "background": "rgba(255,255,255,.5)"
-  },
-  "variable": {
-    "color": "#a67f59",
-    "background": "rgba(255,255,255,.5)"
-  },
-  "atrule": {
-    "color": "#1990b8"
-  },
-  "attr-value": {
-    "color": "#1990b8"
-  },
-  "class-name": {
-    "color": "#1990b8"
-  },
-  "keyword": {
-    "color": "#1990b8"
-  },
-  "important": {
-    "color": "#e90",
-    "fontWeight": "400"
-  },
-  "regex": {
-    "color": "#e90"
-  },
-  ".language-css .token.string": {
-    "color": "#a67f59",
-    "background": "rgba(255,255,255,.5)"
-  },
-  ".style .token.string": {
-    "color": "#a67f59",
-    "background": "rgba(255,255,255,.5)"
-  },
-  "bold": {
-    "fontWeight": "700"
   },
   "italic": {
     "fontStyle": "italic"
@@ -54112,267 +52779,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/styles/prism/coy.min.js":
-/*!*************************************!*\
-  !*** ./src/styles/prism/coy.min.js ***!
-  \*************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "color": "#000",
-    "background": "0 0",
-    "fontFamily": "Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace",
-    "fontSize": "1em",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "maxHeight": "inherit",
-    "height": "inherit",
-    "padding": "0 1em",
-    "display": "block",
-    "overflow": "auto"
-  },
-  "pre[class*=language-]": {
-    "color": "#000",
-    "background": "0 0",
-    "fontFamily": "Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace",
-    "fontSize": "1em",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "position": "relative",
-    "margin": ".5em 0",
-    "overflow": "visible",
-    "padding": "1px",
-    "backgroundColor": "#fdfdfd",
-    "WebkitBoxSizing": "border-box",
-    "MozBoxSizing": "border-box",
-    "boxSizing": "border-box",
-    "marginBottom": "1em"
-  },
-  "pre[class*=language-]>code": {
-    "position": "relative",
-    "zIndex": "1",
-    "borderLeft": "10px solid #358ccb",
-    "boxShadow": "-1px 0 0 0 #358ccb,0 0 0 1px #dfdfdf",
-    "backgroundColor": "#fdfdfd",
-    "backgroundImage": "linear-gradient(transparent 50%,rgba(69,142,209,.04) 50%)",
-    "backgroundSize": "3em 3em",
-    "backgroundOrigin": "content-box",
-    "backgroundAttachment": "local"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "backgroundColor": "#fdfdfd",
-    "WebkitBoxSizing": "border-box",
-    "MozBoxSizing": "border-box",
-    "boxSizing": "border-box",
-    "marginBottom": "1em",
-    "position": "relative",
-    "padding": ".2em",
-    "borderRadius": ".3em",
-    "color": "#c92c2c",
-    "border": "1px solid rgba(0,0,0,.1)",
-    "display": "inline",
-    "whiteSpace": "normal"
-  },
-  "pre[class*=language-]:after": {
-    "content": "''",
-    "display": "block",
-    "position": "absolute",
-    "bottom": ".75em",
-    "left": "auto",
-    "width": "40%",
-    "height": "20%",
-    "maxHeight": "13em",
-    "boxShadow": "0 13px 8px #979797",
-    "WebkitTransform": "rotate(2deg)",
-    "MozTransform": "rotate(2deg)",
-    "msTransform": "rotate(2deg)",
-    "OTransform": "rotate(2deg)",
-    "transform": "rotate(2deg)",
-    "right": ".75em"
-  },
-  "pre[class*=language-]:before": {
-    "content": "''",
-    "display": "block",
-    "position": "absolute",
-    "bottom": ".75em",
-    "left": ".18em",
-    "width": "40%",
-    "height": "20%",
-    "maxHeight": "13em",
-    "boxShadow": "0 13px 8px #979797",
-    "WebkitTransform": "rotate(-2deg)",
-    "MozTransform": "rotate(-2deg)",
-    "msTransform": "rotate(-2deg)",
-    "OTransform": "rotate(-2deg)",
-    "transform": "rotate(-2deg)"
-  },
-  "block-comment": {
-    "color": "#7d8b99"
-  },
-  "cdata": {
-    "color": "#7d8b99"
-  },
-  "comment": {
-    "color": "#7d8b99"
-  },
-  "doctype": {
-    "color": "#7d8b99"
-  },
-  "prolog": {
-    "color": "#7d8b99"
-  },
-  "punctuation": {
-    "color": "#5f6364"
-  },
-  "boolean": {
-    "color": "#c92c2c"
-  },
-  "constant": {
-    "color": "#c92c2c"
-  },
-  "deleted": {
-    "color": "#c92c2c"
-  },
-  "function-name": {
-    "color": "#c92c2c"
-  },
-  "number": {
-    "color": "#c92c2c"
-  },
-  "property": {
-    "color": "#c92c2c"
-  },
-  "symbol": {
-    "color": "#c92c2c"
-  },
-  "tag": {
-    "color": "#c92c2c"
-  },
-  "attr-name": {
-    "color": "#2f9c0a"
-  },
-  "builtin": {
-    "color": "#2f9c0a"
-  },
-  "char": {
-    "color": "#2f9c0a"
-  },
-  "function": {
-    "color": "#2f9c0a"
-  },
-  "inserted": {
-    "color": "#2f9c0a"
-  },
-  "selector": {
-    "color": "#2f9c0a"
-  },
-  "string": {
-    "color": "#2f9c0a"
-  },
-  "entity": {
-    "color": "#a67f59",
-    "background": "rgba(255,255,255,.5)",
-    "cursor": "help"
-  },
-  "operator": {
-    "color": "#a67f59",
-    "background": "rgba(255,255,255,.5)"
-  },
-  "url": {
-    "color": "#a67f59",
-    "background": "rgba(255,255,255,.5)"
-  },
-  "variable": {
-    "color": "#a67f59",
-    "background": "rgba(255,255,255,.5)"
-  },
-  "atrule": {
-    "color": "#1990b8"
-  },
-  "attr-value": {
-    "color": "#1990b8"
-  },
-  "class-name": {
-    "color": "#1990b8"
-  },
-  "keyword": {
-    "color": "#1990b8"
-  },
-  "important": {
-    "color": "#e90",
-    "fontWeight": "400"
-  },
-  "regex": {
-    "color": "#e90"
-  },
-  ".language-css .token.string": {
-    "color": "#a67f59",
-    "background": "rgba(255,255,255,.5)"
-  },
-  ".style .token.string": {
-    "color": "#a67f59",
-    "background": "rgba(255,255,255,.5)"
-  },
-  "bold": {
-    "fontWeight": "700"
-  },
-  "italic": {
-    "fontStyle": "italic"
-  },
-  "namespace": {
-    "Opacity": ".7"
-  },
-  "pre[class*=language-].line-numbers.line-numbers": {
-    "paddingLeft": "0"
-  },
-  "pre[class*=language-].line-numbers.line-numbers code": {
-    "paddingLeft": "3.8em"
-  },
-  "pre[class*=language-].line-numbers.line-numbers .line-numbers-rows": {
-    "left": "0"
-  },
-  "pre[class*=language-][data-line]": {
-    "paddingTop": "0",
-    "paddingBottom": "0",
-    "paddingLeft": "0"
-  },
-  "pre[data-line] code": {
-    "position": "relative",
-    "paddingLeft": "4em"
-  },
-  "pre .line-highlight": {
-    "marginTop": "0"
-  }
-});
-
-/***/ }),
-
 /***/ "./src/styles/prism/darcula.js":
 /*!*************************************!*\
   !*** ./src/styles/prism/darcula.js ***!
@@ -54586,219 +52992,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/styles/prism/darcula.min.js":
-/*!*****************************************!*\
-  !*** ./src/styles/prism/darcula.min.js ***!
-  \*****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "color": "#a9b7c6",
-    "fontFamily": "Consolas,Monaco,'Andale Mono',monospace",
-    "direction": "ltr",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none"
-  },
-  "pre[class*=language-]": {
-    "color": "#a9b7c6",
-    "fontFamily": "Consolas,Monaco,'Andale Mono',monospace",
-    "direction": "ltr",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "padding": "1em",
-    "margin": ".5em 0",
-    "overflow": "auto",
-    "background": "#2b2b2b"
-  },
-  "code[class*=language-] ::-moz-selection": {
-    "color": "inherit",
-    "background": "rgba(33,66,131,.85)"
-  },
-  "code[class*=language-]::-moz-selection": {
-    "color": "inherit",
-    "background": "rgba(33,66,131,.85)"
-  },
-  "pre[class*=language-] ::-moz-selection": {
-    "color": "inherit",
-    "background": "rgba(33,66,131,.85)"
-  },
-  "pre[class*=language-]::-moz-selection": {
-    "color": "inherit",
-    "background": "rgba(33,66,131,.85)"
-  },
-  "code[class*=language-] ::selection": {
-    "color": "inherit",
-    "background": "rgba(33,66,131,.85)"
-  },
-  "code[class*=language-]::selection": {
-    "color": "inherit",
-    "background": "rgba(33,66,131,.85)"
-  },
-  "pre[class*=language-] ::selection": {
-    "color": "inherit",
-    "background": "rgba(33,66,131,.85)"
-  },
-  "pre[class*=language-]::selection": {
-    "color": "inherit",
-    "background": "rgba(33,66,131,.85)"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "background": "#2b2b2b",
-    "padding": ".1em",
-    "borderRadius": ".3em"
-  },
-  "cdata": {
-    "color": "grey"
-  },
-  "comment": {
-    "color": "grey"
-  },
-  "prolog": {
-    "color": "grey"
-  },
-  "atrule": {
-    "color": "#cc7832"
-  },
-  "boolean": {
-    "color": "#cc7832"
-  },
-  "delimiter": {
-    "color": "#cc7832"
-  },
-  "important": {
-    "color": "#cc7832"
-  },
-  "keyword": {
-    "color": "#cc7832"
-  },
-  "selector": {
-    "color": "#cc7832"
-  },
-  "attr-name": {
-    "color": "#a9b7c6"
-  },
-  "operator": {
-    "color": "#a9b7c6"
-  },
-  "punctuation": {
-    "color": "#a9b7c6"
-  },
-  "builtin": {
-    "color": "#e8bf6a"
-  },
-  "doctype": {
-    "color": "#e8bf6a"
-  },
-  "tag": {
-    "color": "#e8bf6a"
-  },
-  "tag.punctuation": {
-    "color": "#e8bf6a"
-  },
-  "entity": {
-    "color": "#6897bb"
-  },
-  "number": {
-    "color": "#6897bb"
-  },
-  "symbol": {
-    "color": "#6897bb"
-  },
-  "constant": {
-    "color": "#9876aa"
-  },
-  "property": {
-    "color": "#9876aa"
-  },
-  "variable": {
-    "color": "#9876aa"
-  },
-  "char": {
-    "color": "#6a8759"
-  },
-  "string": {
-    "color": "#6a8759"
-  },
-  "attr-value": {
-    "color": "#a5c261"
-  },
-  "attr-value.punctuation": {
-    "color": "#a5c261"
-  },
-  "attr-value.punctuation:first-child": {
-    "color": "#a9b7c6"
-  },
-  "url": {
-    "color": "#287bde",
-    "textDecoration": "underline"
-  },
-  "function": {
-    "color": "#ffc66d"
-  },
-  "regex": {
-    "background": "#364135"
-  },
-  "bold": {
-    "fontWeight": "700"
-  },
-  "italic": {
-    "fontStyle": "italic"
-  },
-  "inserted": {
-    "background": "#294436"
-  },
-  "deleted": {
-    "background": "#484a4a"
-  },
-  "code.language-css .token.property": {
-    "color": "#a9b7c6"
-  },
-  "code.language-css .token.property+.token.punctuation": {
-    "color": "#a9b7c6"
-  },
-  "code.language-css .token.id": {
-    "color": "#ffc66d"
-  },
-  "code.language-css .token.selector>.token.attribute": {
-    "color": "#ffc66d"
-  },
-  "code.language-css .token.selector>.token.class": {
-    "color": "#ffc66d"
-  },
-  "code.language-css .token.selector>.token.pseudo-class": {
-    "color": "#ffc66d"
-  },
-  "code.language-css .token.selector>.token.pseudo-element": {
-    "color": "#ffc66d"
-  }
-});
-
-/***/ }),
-
 /***/ "./src/styles/prism/dark.js":
 /*!**********************************!*\
   !*** ./src/styles/prism/dark.js ***!
@@ -54954,172 +53147,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   "bold": {
     "fontWeight": "bold"
-  },
-  "italic": {
-    "fontStyle": "italic"
-  },
-  "deleted": {
-    "color": "red"
-  }
-});
-
-/***/ }),
-
-/***/ "./src/styles/prism/dark.min.js":
-/*!**************************************!*\
-  !*** ./src/styles/prism/dark.min.js ***!
-  \**************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "color": "#fff",
-    "background": "0 0",
-    "textShadow": "0 -.1em .2em #000",
-    "fontFamily": "Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace",
-    "fontSize": "1em",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none"
-  },
-  "pre[class*=language-]": {
-    "color": "#fff",
-    "background": "#4c3f33",
-    "textShadow": "0 -.1em .2em #000",
-    "fontFamily": "Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace",
-    "fontSize": "1em",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "padding": "1em",
-    "margin": ".5em 0",
-    "overflow": "auto",
-    "border": ".3em solid #7a6651",
-    "borderRadius": ".5em",
-    "boxShadow": "1px 1px .5em #000 inset"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "background": "#4c3f33",
-    "padding": ".15em .2em .05em",
-    "borderRadius": ".3em",
-    "border": ".13em solid #7a6651",
-    "boxShadow": "1px 1px .3em -.1em #000 inset",
-    "whiteSpace": "normal"
-  },
-  "cdata": {
-    "color": "#997f66"
-  },
-  "comment": {
-    "color": "#997f66"
-  },
-  "doctype": {
-    "color": "#997f66"
-  },
-  "prolog": {
-    "color": "#997f66"
-  },
-  "punctuation": {
-    "Opacity": ".7"
-  },
-  "namespace": {
-    "Opacity": ".7"
-  },
-  "boolean": {
-    "color": "#d1939e"
-  },
-  "constant": {
-    "color": "#d1939e"
-  },
-  "number": {
-    "color": "#d1939e"
-  },
-  "property": {
-    "color": "#d1939e"
-  },
-  "symbol": {
-    "color": "#d1939e"
-  },
-  "tag": {
-    "color": "#d1939e"
-  },
-  "attr-name": {
-    "color": "#bce051"
-  },
-  "builtin": {
-    "color": "#bce051"
-  },
-  "char": {
-    "color": "#bce051"
-  },
-  "inserted": {
-    "color": "#bce051"
-  },
-  "selector": {
-    "color": "#bce051"
-  },
-  "string": {
-    "color": "#bce051"
-  },
-  ".language-css .token.string": {
-    "color": "#f4b73d"
-  },
-  ".style .token.string": {
-    "color": "#f4b73d"
-  },
-  "entity": {
-    "color": "#f4b73d",
-    "cursor": "help"
-  },
-  "operator": {
-    "color": "#f4b73d"
-  },
-  "url": {
-    "color": "#f4b73d"
-  },
-  "variable": {
-    "color": "#f4b73d"
-  },
-  "atrule": {
-    "color": "#d1939e"
-  },
-  "attr-value": {
-    "color": "#d1939e"
-  },
-  "keyword": {
-    "color": "#d1939e"
-  },
-  "important": {
-    "color": "#e90",
-    "fontWeight": "700"
-  },
-  "regex": {
-    "color": "#e90"
-  },
-  "bold": {
-    "fontWeight": "700"
   },
   "italic": {
     "fontStyle": "italic"
@@ -55289,172 +53316,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   "bold": {
     "fontWeight": "bold"
-  },
-  "italic": {
-    "fontStyle": "italic"
-  }
-});
-
-/***/ }),
-
-/***/ "./src/styles/prism/dracula.min.js":
-/*!*****************************************!*\
-  !*** ./src/styles/prism/dracula.min.js ***!
-  \*****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "color": "#f8f8f2",
-    "background": "0 0",
-    "textShadow": "0 1px rgba(0,0,0,.3)",
-    "fontFamily": "Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none"
-  },
-  "pre[class*=language-]": {
-    "color": "#f8f8f2",
-    "background": "#282a36",
-    "textShadow": "0 1px rgba(0,0,0,.3)",
-    "fontFamily": "Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "padding": "1em",
-    "margin": ".5em 0",
-    "overflow": "auto",
-    "borderRadius": ".3em"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "background": "#282a36",
-    "padding": ".1em",
-    "borderRadius": ".3em",
-    "whiteSpace": "normal"
-  },
-  "cdata": {
-    "color": "#6272a4"
-  },
-  "comment": {
-    "color": "#6272a4"
-  },
-  "doctype": {
-    "color": "#6272a4"
-  },
-  "prolog": {
-    "color": "#6272a4"
-  },
-  "punctuation": {
-    "color": "#f8f8f2"
-  },
-  ".namespace": {
-    "Opacity": ".7"
-  },
-  "constant": {
-    "color": "#ff79c6"
-  },
-  "deleted": {
-    "color": "#ff79c6"
-  },
-  "property": {
-    "color": "#ff79c6"
-  },
-  "symbol": {
-    "color": "#ff79c6"
-  },
-  "tag": {
-    "color": "#ff79c6"
-  },
-  "boolean": {
-    "color": "#bd93f9"
-  },
-  "number": {
-    "color": "#bd93f9"
-  },
-  "attr-name": {
-    "color": "#50fa7b"
-  },
-  "builtin": {
-    "color": "#50fa7b"
-  },
-  "char": {
-    "color": "#50fa7b"
-  },
-  "inserted": {
-    "color": "#50fa7b"
-  },
-  "selector": {
-    "color": "#50fa7b"
-  },
-  "string": {
-    "color": "#50fa7b"
-  },
-  ".language-css .token.string": {
-    "color": "#f8f8f2"
-  },
-  ".style .token.string": {
-    "color": "#f8f8f2"
-  },
-  "entity": {
-    "color": "#f8f8f2",
-    "cursor": "help"
-  },
-  "operator": {
-    "color": "#f8f8f2"
-  },
-  "url": {
-    "color": "#f8f8f2"
-  },
-  "variable": {
-    "color": "#f8f8f2"
-  },
-  "atrule": {
-    "color": "#f1fa8c"
-  },
-  "attr-value": {
-    "color": "#f1fa8c"
-  },
-  "class-name": {
-    "color": "#f1fa8c"
-  },
-  "function": {
-    "color": "#f1fa8c"
-  },
-  "keyword": {
-    "color": "#8be9fd"
-  },
-  "important": {
-    "color": "#ffb86c",
-    "fontWeight": "700"
-  },
-  "regex": {
-    "color": "#ffb86c"
-  },
-  "bold": {
-    "fontWeight": "700"
   },
   "italic": {
     "fontStyle": "italic"
@@ -55693,236 +53554,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/styles/prism/duotone-dark.min.js":
-/*!**********************************************!*\
-  !*** ./src/styles/prism/duotone-dark.min.js ***!
-  \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "fontFamily": "Consolas,Menlo,Monaco,\"Andale Mono WT\",\"Andale Mono\",\"Lucida Console\",\"Lucida Sans Typewriter\",\"DejaVu Sans Mono\",\"Bitstream Vera Sans Mono\",\"Liberation Mono\",\"Nimbus Mono L\",\"Courier New\",Courier,monospace",
-    "fontSize": "14px",
-    "lineHeight": "1.375",
-    "direction": "ltr",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "background": "#2a2734",
-    "color": "#9a86fd"
-  },
-  "pre[class*=language-]": {
-    "fontFamily": "Consolas,Menlo,Monaco,\"Andale Mono WT\",\"Andale Mono\",\"Lucida Console\",\"Lucida Sans Typewriter\",\"DejaVu Sans Mono\",\"Bitstream Vera Sans Mono\",\"Liberation Mono\",\"Nimbus Mono L\",\"Courier New\",Courier,monospace",
-    "fontSize": "14px",
-    "lineHeight": "1.375",
-    "direction": "ltr",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "background": "#2a2734",
-    "color": "#9a86fd",
-    "padding": "1em",
-    "margin": ".5em 0",
-    "overflow": "auto"
-  },
-  "pre>code[class*=language-]": {
-    "fontSize": "1em"
-  },
-  "code[class*=language-] ::-moz-selection": {
-    "textShadow": "none",
-    "background": "#6a51e6"
-  },
-  "code[class*=language-]::-moz-selection": {
-    "textShadow": "none",
-    "background": "#6a51e6"
-  },
-  "pre[class*=language-] ::-moz-selection": {
-    "textShadow": "none",
-    "background": "#6a51e6"
-  },
-  "pre[class*=language-]::-moz-selection": {
-    "textShadow": "none",
-    "background": "#6a51e6"
-  },
-  "code[class*=language-] ::selection": {
-    "textShadow": "none",
-    "background": "#6a51e6"
-  },
-  "code[class*=language-]::selection": {
-    "textShadow": "none",
-    "background": "#6a51e6"
-  },
-  "pre[class*=language-] ::selection": {
-    "textShadow": "none",
-    "background": "#6a51e6"
-  },
-  "pre[class*=language-]::selection": {
-    "textShadow": "none",
-    "background": "#6a51e6"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "padding": ".1em",
-    "borderRadius": ".3em"
-  },
-  "cdata": {
-    "color": "#6c6783"
-  },
-  "comment": {
-    "color": "#6c6783"
-  },
-  "doctype": {
-    "color": "#6c6783"
-  },
-  "prolog": {
-    "color": "#6c6783"
-  },
-  "punctuation": {
-    "color": "#6c6783"
-  },
-  "namespace": {
-    "Opacity": ".7"
-  },
-  "number": {
-    "color": "#e09142"
-  },
-  "operator": {
-    "color": "#e09142"
-  },
-  "tag": {
-    "color": "#e09142"
-  },
-  "function": {
-    "color": "#9a86fd"
-  },
-  "property": {
-    "color": "#9a86fd"
-  },
-  "atrule-id": {
-    "color": "#eeebff"
-  },
-  "selector": {
-    "color": "#eeebff"
-  },
-  "tag-id": {
-    "color": "#eeebff"
-  },
-  "attr-name": {
-    "color": "#c4b9fe"
-  },
-  "code.language-javascript": {
-    "color": "#c4b9fe"
-  },
-  ".language-css .token.string": {
-    "color": "#fc9"
-  },
-  ".language-scss .token.string": {
-    "color": "#fc9"
-  },
-  ".style .token.string": {
-    "color": "#fc9"
-  },
-  "atrule": {
-    "color": "#fc9"
-  },
-  "attr-value": {
-    "color": "#fc9"
-  },
-  "boolean": {
-    "color": "#fc9"
-  },
-  "control": {
-    "color": "#fc9"
-  },
-  "directive": {
-    "color": "#fc9"
-  },
-  "entity": {
-    "color": "#fc9",
-    "cursor": "help"
-  },
-  "keyword": {
-    "color": "#fc9"
-  },
-  "regex": {
-    "color": "#fc9"
-  },
-  "statement": {
-    "color": "#fc9"
-  },
-  "string": {
-    "color": "#fc9"
-  },
-  "unit": {
-    "color": "#fc9"
-  },
-  "url": {
-    "color": "#fc9"
-  },
-  "code.language-css": {
-    "color": "#fc9"
-  },
-  "code.language-scss": {
-    "color": "#fc9"
-  },
-  "placeholder": {
-    "color": "#fc9"
-  },
-  "variable": {
-    "color": "#fc9"
-  },
-  "deleted": {
-    "textDecoration": "line-through"
-  },
-  "inserted": {
-    "borderBottom": "1px dotted #eeebff",
-    "textDecoration": "none"
-  },
-  "italic": {
-    "fontStyle": "italic"
-  },
-  "bold": {
-    "fontWeight": "700"
-  },
-  "important": {
-    "fontWeight": "700",
-    "color": "#c4b9fe"
-  },
-  "pre>code.highlight": {
-    "Outline": ".4em solid #8a75f5",
-    "OutlineOffset": ".4em"
-  },
-  ".line-numbers.line-numbers .line-numbers-rows": {
-    "borderRightColor": "#2c2937"
-  },
-  ".line-numbers .line-numbers-rows>span:before": {
-    "color": "#3c3949"
-  },
-  ".line-highlight.line-highlight": {
-    "background": "linear-gradient(to right,rgba(224,145,66,.2) 70%,rgba(224,145,66,0))"
-  }
-});
-
-/***/ }),
-
 /***/ "./src/styles/prism/duotone-earth.js":
 /*!*******************************************!*\
   !*** ./src/styles/prism/duotone-earth.js ***!
@@ -56148,236 +53779,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   ".line-highlight.line-highlight": {
     "background": "linear-gradient(to right, rgba(191, 160, 90, 0.2) 70%, rgba(191, 160, 90, 0))"
-  }
-});
-
-/***/ }),
-
-/***/ "./src/styles/prism/duotone-earth.min.js":
-/*!***********************************************!*\
-  !*** ./src/styles/prism/duotone-earth.min.js ***!
-  \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "fontFamily": "Consolas,Menlo,Monaco,\"Andale Mono WT\",\"Andale Mono\",\"Lucida Console\",\"Lucida Sans Typewriter\",\"DejaVu Sans Mono\",\"Bitstream Vera Sans Mono\",\"Liberation Mono\",\"Nimbus Mono L\",\"Courier New\",Courier,monospace",
-    "fontSize": "14px",
-    "lineHeight": "1.375",
-    "direction": "ltr",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "background": "#322d29",
-    "color": "#88786d"
-  },
-  "pre[class*=language-]": {
-    "fontFamily": "Consolas,Menlo,Monaco,\"Andale Mono WT\",\"Andale Mono\",\"Lucida Console\",\"Lucida Sans Typewriter\",\"DejaVu Sans Mono\",\"Bitstream Vera Sans Mono\",\"Liberation Mono\",\"Nimbus Mono L\",\"Courier New\",Courier,monospace",
-    "fontSize": "14px",
-    "lineHeight": "1.375",
-    "direction": "ltr",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "background": "#322d29",
-    "color": "#88786d",
-    "padding": "1em",
-    "margin": ".5em 0",
-    "overflow": "auto"
-  },
-  "pre>code[class*=language-]": {
-    "fontSize": "1em"
-  },
-  "code[class*=language-] ::-moz-selection": {
-    "textShadow": "none",
-    "background": "#6f5849"
-  },
-  "code[class*=language-]::-moz-selection": {
-    "textShadow": "none",
-    "background": "#6f5849"
-  },
-  "pre[class*=language-] ::-moz-selection": {
-    "textShadow": "none",
-    "background": "#6f5849"
-  },
-  "pre[class*=language-]::-moz-selection": {
-    "textShadow": "none",
-    "background": "#6f5849"
-  },
-  "code[class*=language-] ::selection": {
-    "textShadow": "none",
-    "background": "#6f5849"
-  },
-  "code[class*=language-]::selection": {
-    "textShadow": "none",
-    "background": "#6f5849"
-  },
-  "pre[class*=language-] ::selection": {
-    "textShadow": "none",
-    "background": "#6f5849"
-  },
-  "pre[class*=language-]::selection": {
-    "textShadow": "none",
-    "background": "#6f5849"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "padding": ".1em",
-    "borderRadius": ".3em"
-  },
-  "cdata": {
-    "color": "#6a5f58"
-  },
-  "comment": {
-    "color": "#6a5f58"
-  },
-  "doctype": {
-    "color": "#6a5f58"
-  },
-  "prolog": {
-    "color": "#6a5f58"
-  },
-  "punctuation": {
-    "color": "#6a5f58"
-  },
-  "namespace": {
-    "Opacity": ".7"
-  },
-  "number": {
-    "color": "#bfa05a"
-  },
-  "operator": {
-    "color": "#bfa05a"
-  },
-  "tag": {
-    "color": "#bfa05a"
-  },
-  "function": {
-    "color": "#88786d"
-  },
-  "property": {
-    "color": "#88786d"
-  },
-  "atrule-id": {
-    "color": "#fff3eb"
-  },
-  "selector": {
-    "color": "#fff3eb"
-  },
-  "tag-id": {
-    "color": "#fff3eb"
-  },
-  "attr-name": {
-    "color": "#a48774"
-  },
-  "code.language-javascript": {
-    "color": "#a48774"
-  },
-  ".language-css .token.string": {
-    "color": "#fcc440"
-  },
-  ".language-scss .token.string": {
-    "color": "#fcc440"
-  },
-  ".style .token.string": {
-    "color": "#fcc440"
-  },
-  "atrule": {
-    "color": "#fcc440"
-  },
-  "attr-value": {
-    "color": "#fcc440"
-  },
-  "boolean": {
-    "color": "#fcc440"
-  },
-  "control": {
-    "color": "#fcc440"
-  },
-  "directive": {
-    "color": "#fcc440"
-  },
-  "entity": {
-    "color": "#fcc440",
-    "cursor": "help"
-  },
-  "keyword": {
-    "color": "#fcc440"
-  },
-  "regex": {
-    "color": "#fcc440"
-  },
-  "statement": {
-    "color": "#fcc440"
-  },
-  "string": {
-    "color": "#fcc440"
-  },
-  "unit": {
-    "color": "#fcc440"
-  },
-  "url": {
-    "color": "#fcc440"
-  },
-  "code.language-css": {
-    "color": "#fcc440"
-  },
-  "code.language-scss": {
-    "color": "#fcc440"
-  },
-  "placeholder": {
-    "color": "#fcc440"
-  },
-  "variable": {
-    "color": "#fcc440"
-  },
-  "deleted": {
-    "textDecoration": "line-through"
-  },
-  "inserted": {
-    "borderBottom": "1px dotted #fff3eb",
-    "textDecoration": "none"
-  },
-  "italic": {
-    "fontStyle": "italic"
-  },
-  "bold": {
-    "fontWeight": "700"
-  },
-  "important": {
-    "fontWeight": "700",
-    "color": "#a48774"
-  },
-  "pre>code.highlight": {
-    "Outline": ".4em solid #816d5f",
-    "OutlineOffset": ".4em"
-  },
-  ".line-numbers.line-numbers .line-numbers-rows": {
-    "borderRightColor": "#35302b"
-  },
-  ".line-numbers .line-numbers-rows>span:before": {
-    "color": "#46403d"
-  },
-  ".line-highlight.line-highlight": {
-    "background": "linear-gradient(to right,rgba(191,160,90,.2) 70%,rgba(191,160,90,0))"
   }
 });
 
@@ -56613,236 +54014,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/styles/prism/duotone-forest.min.js":
-/*!************************************************!*\
-  !*** ./src/styles/prism/duotone-forest.min.js ***!
-  \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "fontFamily": "Consolas,Menlo,Monaco,\"Andale Mono WT\",\"Andale Mono\",\"Lucida Console\",\"Lucida Sans Typewriter\",\"DejaVu Sans Mono\",\"Bitstream Vera Sans Mono\",\"Liberation Mono\",\"Nimbus Mono L\",\"Courier New\",Courier,monospace",
-    "fontSize": "14px",
-    "lineHeight": "1.375",
-    "direction": "ltr",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "background": "#2a2d2a",
-    "color": "#687d68"
-  },
-  "pre[class*=language-]": {
-    "fontFamily": "Consolas,Menlo,Monaco,\"Andale Mono WT\",\"Andale Mono\",\"Lucida Console\",\"Lucida Sans Typewriter\",\"DejaVu Sans Mono\",\"Bitstream Vera Sans Mono\",\"Liberation Mono\",\"Nimbus Mono L\",\"Courier New\",Courier,monospace",
-    "fontSize": "14px",
-    "lineHeight": "1.375",
-    "direction": "ltr",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "background": "#2a2d2a",
-    "color": "#687d68",
-    "padding": "1em",
-    "margin": ".5em 0",
-    "overflow": "auto"
-  },
-  "pre>code[class*=language-]": {
-    "fontSize": "1em"
-  },
-  "code[class*=language-] ::-moz-selection": {
-    "textShadow": "none",
-    "background": "#435643"
-  },
-  "code[class*=language-]::-moz-selection": {
-    "textShadow": "none",
-    "background": "#435643"
-  },
-  "pre[class*=language-] ::-moz-selection": {
-    "textShadow": "none",
-    "background": "#435643"
-  },
-  "pre[class*=language-]::-moz-selection": {
-    "textShadow": "none",
-    "background": "#435643"
-  },
-  "code[class*=language-] ::selection": {
-    "textShadow": "none",
-    "background": "#435643"
-  },
-  "code[class*=language-]::selection": {
-    "textShadow": "none",
-    "background": "#435643"
-  },
-  "pre[class*=language-] ::selection": {
-    "textShadow": "none",
-    "background": "#435643"
-  },
-  "pre[class*=language-]::selection": {
-    "textShadow": "none",
-    "background": "#435643"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "padding": ".1em",
-    "borderRadius": ".3em"
-  },
-  "cdata": {
-    "color": "#535f53"
-  },
-  "comment": {
-    "color": "#535f53"
-  },
-  "doctype": {
-    "color": "#535f53"
-  },
-  "prolog": {
-    "color": "#535f53"
-  },
-  "punctuation": {
-    "color": "#535f53"
-  },
-  "namespace": {
-    "Opacity": ".7"
-  },
-  "number": {
-    "color": "#a2b34d"
-  },
-  "operator": {
-    "color": "#a2b34d"
-  },
-  "tag": {
-    "color": "#a2b34d"
-  },
-  "function": {
-    "color": "#687d68"
-  },
-  "property": {
-    "color": "#687d68"
-  },
-  "atrule-id": {
-    "color": "#f0fff0"
-  },
-  "selector": {
-    "color": "#f0fff0"
-  },
-  "tag-id": {
-    "color": "#f0fff0"
-  },
-  "attr-name": {
-    "color": "#b3d6b3"
-  },
-  "code.language-javascript": {
-    "color": "#b3d6b3"
-  },
-  ".language-css .token.string": {
-    "color": "#e5fb79"
-  },
-  ".language-scss .token.string": {
-    "color": "#e5fb79"
-  },
-  ".style .token.string": {
-    "color": "#e5fb79"
-  },
-  "atrule": {
-    "color": "#e5fb79"
-  },
-  "attr-value": {
-    "color": "#e5fb79"
-  },
-  "boolean": {
-    "color": "#e5fb79"
-  },
-  "control": {
-    "color": "#e5fb79"
-  },
-  "directive": {
-    "color": "#e5fb79"
-  },
-  "entity": {
-    "color": "#e5fb79",
-    "cursor": "help"
-  },
-  "keyword": {
-    "color": "#e5fb79"
-  },
-  "regex": {
-    "color": "#e5fb79"
-  },
-  "statement": {
-    "color": "#e5fb79"
-  },
-  "string": {
-    "color": "#e5fb79"
-  },
-  "unit": {
-    "color": "#e5fb79"
-  },
-  "url": {
-    "color": "#e5fb79"
-  },
-  "code.language-css": {
-    "color": "#e5fb79"
-  },
-  "code.language-scss": {
-    "color": "#e5fb79"
-  },
-  "placeholder": {
-    "color": "#e5fb79"
-  },
-  "variable": {
-    "color": "#e5fb79"
-  },
-  "deleted": {
-    "textDecoration": "line-through"
-  },
-  "inserted": {
-    "borderBottom": "1px dotted #f0fff0",
-    "textDecoration": "none"
-  },
-  "italic": {
-    "fontStyle": "italic"
-  },
-  "bold": {
-    "fontWeight": "700"
-  },
-  "important": {
-    "fontWeight": "700",
-    "color": "#b3d6b3"
-  },
-  "pre>code.highlight": {
-    "Outline": ".4em solid #5c705c",
-    "OutlineOffset": ".4em"
-  },
-  ".line-numbers.line-numbers .line-numbers-rows": {
-    "borderRightColor": "#2c302c"
-  },
-  ".line-numbers .line-numbers-rows>span:before": {
-    "color": "#3b423b"
-  },
-  ".line-highlight.line-highlight": {
-    "background": "linear-gradient(to right,rgba(162,179,77,.2) 70%,rgba(162,179,77,0))"
-  }
-});
-
-/***/ }),
-
 /***/ "./src/styles/prism/duotone-light.js":
 /*!*******************************************!*\
   !*** ./src/styles/prism/duotone-light.js ***!
@@ -57068,236 +54239,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   ".line-highlight.line-highlight": {
     "background": "linear-gradient(to right, rgba(45, 32, 6, 0.2) 70%, rgba(45, 32, 6, 0))"
-  }
-});
-
-/***/ }),
-
-/***/ "./src/styles/prism/duotone-light.min.js":
-/*!***********************************************!*\
-  !*** ./src/styles/prism/duotone-light.min.js ***!
-  \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "fontFamily": "Consolas,Menlo,Monaco,\"Andale Mono WT\",\"Andale Mono\",\"Lucida Console\",\"Lucida Sans Typewriter\",\"DejaVu Sans Mono\",\"Bitstream Vera Sans Mono\",\"Liberation Mono\",\"Nimbus Mono L\",\"Courier New\",Courier,monospace",
-    "fontSize": "14px",
-    "lineHeight": "1.375",
-    "direction": "ltr",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "background": "#faf8f5",
-    "color": "#728fcb"
-  },
-  "pre[class*=language-]": {
-    "fontFamily": "Consolas,Menlo,Monaco,\"Andale Mono WT\",\"Andale Mono\",\"Lucida Console\",\"Lucida Sans Typewriter\",\"DejaVu Sans Mono\",\"Bitstream Vera Sans Mono\",\"Liberation Mono\",\"Nimbus Mono L\",\"Courier New\",Courier,monospace",
-    "fontSize": "14px",
-    "lineHeight": "1.375",
-    "direction": "ltr",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "background": "#faf8f5",
-    "color": "#728fcb",
-    "padding": "1em",
-    "margin": ".5em 0",
-    "overflow": "auto"
-  },
-  "pre>code[class*=language-]": {
-    "fontSize": "1em"
-  },
-  "code[class*=language-] ::-moz-selection": {
-    "textShadow": "none",
-    "background": "#faf8f5"
-  },
-  "code[class*=language-]::-moz-selection": {
-    "textShadow": "none",
-    "background": "#faf8f5"
-  },
-  "pre[class*=language-] ::-moz-selection": {
-    "textShadow": "none",
-    "background": "#faf8f5"
-  },
-  "pre[class*=language-]::-moz-selection": {
-    "textShadow": "none",
-    "background": "#faf8f5"
-  },
-  "code[class*=language-] ::selection": {
-    "textShadow": "none",
-    "background": "#faf8f5"
-  },
-  "code[class*=language-]::selection": {
-    "textShadow": "none",
-    "background": "#faf8f5"
-  },
-  "pre[class*=language-] ::selection": {
-    "textShadow": "none",
-    "background": "#faf8f5"
-  },
-  "pre[class*=language-]::selection": {
-    "textShadow": "none",
-    "background": "#faf8f5"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "padding": ".1em",
-    "borderRadius": ".3em"
-  },
-  "cdata": {
-    "color": "#b6ad9a"
-  },
-  "comment": {
-    "color": "#b6ad9a"
-  },
-  "doctype": {
-    "color": "#b6ad9a"
-  },
-  "prolog": {
-    "color": "#b6ad9a"
-  },
-  "punctuation": {
-    "color": "#b6ad9a"
-  },
-  "namespace": {
-    "Opacity": ".7"
-  },
-  "number": {
-    "color": "#063289"
-  },
-  "operator": {
-    "color": "#063289"
-  },
-  "tag": {
-    "color": "#063289"
-  },
-  "function": {
-    "color": "#b29762"
-  },
-  "property": {
-    "color": "#b29762"
-  },
-  "atrule-id": {
-    "color": "#2d2006"
-  },
-  "selector": {
-    "color": "#2d2006"
-  },
-  "tag-id": {
-    "color": "#2d2006"
-  },
-  "attr-name": {
-    "color": "#896724"
-  },
-  "code.language-javascript": {
-    "color": "#896724"
-  },
-  ".language-css .token.string": {
-    "color": "#728fcb"
-  },
-  ".language-scss .token.string": {
-    "color": "#728fcb"
-  },
-  ".style .token.string": {
-    "color": "#728fcb"
-  },
-  "atrule": {
-    "color": "#728fcb"
-  },
-  "attr-value": {
-    "color": "#728fcb"
-  },
-  "boolean": {
-    "color": "#728fcb"
-  },
-  "control": {
-    "color": "#728fcb"
-  },
-  "directive": {
-    "color": "#728fcb"
-  },
-  "entity": {
-    "color": "#728fcb",
-    "cursor": "help"
-  },
-  "keyword": {
-    "color": "#728fcb"
-  },
-  "regex": {
-    "color": "#728fcb"
-  },
-  "statement": {
-    "color": "#728fcb"
-  },
-  "string": {
-    "color": "#728fcb"
-  },
-  "unit": {
-    "color": "#728fcb"
-  },
-  "url": {
-    "color": "#728fcb"
-  },
-  "code.language-css": {
-    "color": "#728fcb"
-  },
-  "code.language-scss": {
-    "color": "#728fcb"
-  },
-  "placeholder": {
-    "color": "#93abdc"
-  },
-  "variable": {
-    "color": "#93abdc"
-  },
-  "deleted": {
-    "textDecoration": "line-through"
-  },
-  "inserted": {
-    "borderBottom": "1px dotted #2d2006",
-    "textDecoration": "none"
-  },
-  "italic": {
-    "fontStyle": "italic"
-  },
-  "bold": {
-    "fontWeight": "700"
-  },
-  "important": {
-    "fontWeight": "700",
-    "color": "#896724"
-  },
-  "pre>code.highlight": {
-    "Outline": ".4em solid #896724",
-    "OutlineOffset": ".4em"
-  },
-  ".line-numbers.line-numbers .line-numbers-rows": {
-    "borderRightColor": "#ece8de"
-  },
-  ".line-numbers .line-numbers-rows>span:before": {
-    "color": "#cdc4b1"
-  },
-  ".line-highlight.line-highlight": {
-    "background": "linear-gradient(to right,rgba(45,32,6,.2) 70%,rgba(45,32,6,0))"
   }
 });
 
@@ -57533,236 +54474,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/styles/prism/duotone-sea.min.js":
-/*!*********************************************!*\
-  !*** ./src/styles/prism/duotone-sea.min.js ***!
-  \*********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "fontFamily": "Consolas,Menlo,Monaco,\"Andale Mono WT\",\"Andale Mono\",\"Lucida Console\",\"Lucida Sans Typewriter\",\"DejaVu Sans Mono\",\"Bitstream Vera Sans Mono\",\"Liberation Mono\",\"Nimbus Mono L\",\"Courier New\",Courier,monospace",
-    "fontSize": "14px",
-    "lineHeight": "1.375",
-    "direction": "ltr",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "background": "#1d262f",
-    "color": "#57718e"
-  },
-  "pre[class*=language-]": {
-    "fontFamily": "Consolas,Menlo,Monaco,\"Andale Mono WT\",\"Andale Mono\",\"Lucida Console\",\"Lucida Sans Typewriter\",\"DejaVu Sans Mono\",\"Bitstream Vera Sans Mono\",\"Liberation Mono\",\"Nimbus Mono L\",\"Courier New\",Courier,monospace",
-    "fontSize": "14px",
-    "lineHeight": "1.375",
-    "direction": "ltr",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "background": "#1d262f",
-    "color": "#57718e",
-    "padding": "1em",
-    "margin": ".5em 0",
-    "overflow": "auto"
-  },
-  "pre>code[class*=language-]": {
-    "fontSize": "1em"
-  },
-  "code[class*=language-] ::-moz-selection": {
-    "textShadow": "none",
-    "background": "#004a9e"
-  },
-  "code[class*=language-]::-moz-selection": {
-    "textShadow": "none",
-    "background": "#004a9e"
-  },
-  "pre[class*=language-] ::-moz-selection": {
-    "textShadow": "none",
-    "background": "#004a9e"
-  },
-  "pre[class*=language-]::-moz-selection": {
-    "textShadow": "none",
-    "background": "#004a9e"
-  },
-  "code[class*=language-] ::selection": {
-    "textShadow": "none",
-    "background": "#004a9e"
-  },
-  "code[class*=language-]::selection": {
-    "textShadow": "none",
-    "background": "#004a9e"
-  },
-  "pre[class*=language-] ::selection": {
-    "textShadow": "none",
-    "background": "#004a9e"
-  },
-  "pre[class*=language-]::selection": {
-    "textShadow": "none",
-    "background": "#004a9e"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "padding": ".1em",
-    "borderRadius": ".3em"
-  },
-  "cdata": {
-    "color": "#4a5f78"
-  },
-  "comment": {
-    "color": "#4a5f78"
-  },
-  "doctype": {
-    "color": "#4a5f78"
-  },
-  "prolog": {
-    "color": "#4a5f78"
-  },
-  "punctuation": {
-    "color": "#4a5f78"
-  },
-  "namespace": {
-    "Opacity": ".7"
-  },
-  "number": {
-    "color": "#0aa370"
-  },
-  "operator": {
-    "color": "#0aa370"
-  },
-  "tag": {
-    "color": "#0aa370"
-  },
-  "function": {
-    "color": "#57718e"
-  },
-  "property": {
-    "color": "#57718e"
-  },
-  "atrule-id": {
-    "color": "#ebf4ff"
-  },
-  "selector": {
-    "color": "#ebf4ff"
-  },
-  "tag-id": {
-    "color": "#ebf4ff"
-  },
-  "attr-name": {
-    "color": "#7eb6f6"
-  },
-  "code.language-javascript": {
-    "color": "#7eb6f6"
-  },
-  ".language-css .token.string": {
-    "color": "#47ebb4"
-  },
-  ".language-scss .token.string": {
-    "color": "#47ebb4"
-  },
-  ".style .token.string": {
-    "color": "#47ebb4"
-  },
-  "atrule": {
-    "color": "#47ebb4"
-  },
-  "attr-value": {
-    "color": "#47ebb4"
-  },
-  "boolean": {
-    "color": "#47ebb4"
-  },
-  "control": {
-    "color": "#47ebb4"
-  },
-  "directive": {
-    "color": "#47ebb4"
-  },
-  "entity": {
-    "color": "#47ebb4",
-    "cursor": "help"
-  },
-  "keyword": {
-    "color": "#47ebb4"
-  },
-  "regex": {
-    "color": "#47ebb4"
-  },
-  "statement": {
-    "color": "#47ebb4"
-  },
-  "string": {
-    "color": "#47ebb4"
-  },
-  "unit": {
-    "color": "#47ebb4"
-  },
-  "url": {
-    "color": "#47ebb4"
-  },
-  "code.language-css": {
-    "color": "#47ebb4"
-  },
-  "code.language-scss": {
-    "color": "#47ebb4"
-  },
-  "placeholder": {
-    "color": "#47ebb4"
-  },
-  "variable": {
-    "color": "#47ebb4"
-  },
-  "deleted": {
-    "textDecoration": "line-through"
-  },
-  "inserted": {
-    "borderBottom": "1px dotted #ebf4ff",
-    "textDecoration": "none"
-  },
-  "italic": {
-    "fontStyle": "italic"
-  },
-  "bold": {
-    "fontWeight": "700"
-  },
-  "important": {
-    "fontWeight": "700",
-    "color": "#7eb6f6"
-  },
-  "pre>code.highlight": {
-    "Outline": ".4em solid #34659d",
-    "OutlineOffset": ".4em"
-  },
-  ".line-numbers.line-numbers .line-numbers-rows": {
-    "borderRightColor": "#1f2932"
-  },
-  ".line-numbers .line-numbers-rows>span:before": {
-    "color": "#2c3847"
-  },
-  ".line-highlight.line-highlight": {
-    "background": "linear-gradient(to right,rgba(10,163,112,.2) 70%,rgba(10,163,112,0))"
-  }
-});
-
-/***/ }),
-
 /***/ "./src/styles/prism/duotone-space.js":
 /*!*******************************************!*\
   !*** ./src/styles/prism/duotone-space.js ***!
@@ -57993,236 +54704,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/styles/prism/duotone-space.min.js":
-/*!***********************************************!*\
-  !*** ./src/styles/prism/duotone-space.min.js ***!
-  \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "fontFamily": "Consolas,Menlo,Monaco,\"Andale Mono WT\",\"Andale Mono\",\"Lucida Console\",\"Lucida Sans Typewriter\",\"DejaVu Sans Mono\",\"Bitstream Vera Sans Mono\",\"Liberation Mono\",\"Nimbus Mono L\",\"Courier New\",Courier,monospace",
-    "fontSize": "14px",
-    "lineHeight": "1.375",
-    "direction": "ltr",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "background": "#24242e",
-    "color": "#767693"
-  },
-  "pre[class*=language-]": {
-    "fontFamily": "Consolas,Menlo,Monaco,\"Andale Mono WT\",\"Andale Mono\",\"Lucida Console\",\"Lucida Sans Typewriter\",\"DejaVu Sans Mono\",\"Bitstream Vera Sans Mono\",\"Liberation Mono\",\"Nimbus Mono L\",\"Courier New\",Courier,monospace",
-    "fontSize": "14px",
-    "lineHeight": "1.375",
-    "direction": "ltr",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "background": "#24242e",
-    "color": "#767693",
-    "padding": "1em",
-    "margin": ".5em 0",
-    "overflow": "auto"
-  },
-  "pre>code[class*=language-]": {
-    "fontSize": "1em"
-  },
-  "code[class*=language-] ::-moz-selection": {
-    "textShadow": "none",
-    "background": "#5151e6"
-  },
-  "code[class*=language-]::-moz-selection": {
-    "textShadow": "none",
-    "background": "#5151e6"
-  },
-  "pre[class*=language-] ::-moz-selection": {
-    "textShadow": "none",
-    "background": "#5151e6"
-  },
-  "pre[class*=language-]::-moz-selection": {
-    "textShadow": "none",
-    "background": "#5151e6"
-  },
-  "code[class*=language-] ::selection": {
-    "textShadow": "none",
-    "background": "#5151e6"
-  },
-  "code[class*=language-]::selection": {
-    "textShadow": "none",
-    "background": "#5151e6"
-  },
-  "pre[class*=language-] ::selection": {
-    "textShadow": "none",
-    "background": "#5151e6"
-  },
-  "pre[class*=language-]::selection": {
-    "textShadow": "none",
-    "background": "#5151e6"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "padding": ".1em",
-    "borderRadius": ".3em"
-  },
-  "cdata": {
-    "color": "#5b5b76"
-  },
-  "comment": {
-    "color": "#5b5b76"
-  },
-  "doctype": {
-    "color": "#5b5b76"
-  },
-  "prolog": {
-    "color": "#5b5b76"
-  },
-  "punctuation": {
-    "color": "#5b5b76"
-  },
-  "namespace": {
-    "Opacity": ".7"
-  },
-  "number": {
-    "color": "#dd672c"
-  },
-  "operator": {
-    "color": "#dd672c"
-  },
-  "tag": {
-    "color": "#dd672c"
-  },
-  "function": {
-    "color": "#767693"
-  },
-  "property": {
-    "color": "#767693"
-  },
-  "atrule-id": {
-    "color": "#ebebff"
-  },
-  "selector": {
-    "color": "#ebebff"
-  },
-  "tag-id": {
-    "color": "#ebebff"
-  },
-  "attr-name": {
-    "color": "#aaaaca"
-  },
-  "code.language-javascript": {
-    "color": "#aaaaca"
-  },
-  ".language-css .token.string": {
-    "color": "#fe8c52"
-  },
-  ".language-scss .token.string": {
-    "color": "#fe8c52"
-  },
-  ".style .token.string": {
-    "color": "#fe8c52"
-  },
-  "atrule": {
-    "color": "#fe8c52"
-  },
-  "attr-value": {
-    "color": "#fe8c52"
-  },
-  "boolean": {
-    "color": "#fe8c52"
-  },
-  "control": {
-    "color": "#fe8c52"
-  },
-  "directive": {
-    "color": "#fe8c52"
-  },
-  "entity": {
-    "color": "#fe8c52",
-    "cursor": "help"
-  },
-  "keyword": {
-    "color": "#fe8c52"
-  },
-  "regex": {
-    "color": "#fe8c52"
-  },
-  "statement": {
-    "color": "#fe8c52"
-  },
-  "string": {
-    "color": "#fe8c52"
-  },
-  "unit": {
-    "color": "#fe8c52"
-  },
-  "url": {
-    "color": "#fe8c52"
-  },
-  "code.language-css": {
-    "color": "#fe8c52"
-  },
-  "code.language-scss": {
-    "color": "#fe8c52"
-  },
-  "placeholder": {
-    "color": "#fe8c52"
-  },
-  "variable": {
-    "color": "#fe8c52"
-  },
-  "deleted": {
-    "textDecoration": "line-through"
-  },
-  "inserted": {
-    "borderBottom": "1px dotted #ebebff",
-    "textDecoration": "none"
-  },
-  "italic": {
-    "fontStyle": "italic"
-  },
-  "bold": {
-    "fontWeight": "700"
-  },
-  "important": {
-    "fontWeight": "700",
-    "color": "#aaaaca"
-  },
-  "pre>code.highlight": {
-    "Outline": ".4em solid #7676f4",
-    "OutlineOffset": ".4em"
-  },
-  ".line-numbers.line-numbers .line-numbers-rows": {
-    "borderRightColor": "#262631"
-  },
-  ".line-numbers .line-numbers-rows>span:before": {
-    "color": "#393949"
-  },
-  ".line-highlight.line-highlight": {
-    "background": "linear-gradient(to right,rgba(221,103,44,.2) 70%,rgba(221,103,44,0))"
-  }
-});
-
-/***/ }),
-
 /***/ "./src/styles/prism/funky.js":
 /*!***********************************!*\
   !*** ./src/styles/prism/funky.js ***!
@@ -58390,179 +54871,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   "pre > code.diff-highlight.diff-highlight .token.inserted:not(.prefix)": {
     "backgroundColor": "rgba(0, 255, 128, .3)",
-    "display": "inline"
-  }
-});
-
-/***/ }),
-
-/***/ "./src/styles/prism/funky.min.js":
-/*!***************************************!*\
-  !*** ./src/styles/prism/funky.min.js ***!
-  \***************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "fontFamily": "Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace",
-    "fontSize": "1em",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "background": "#000",
-    "color": "#fff",
-    "boxShadow": "-.3em 0 0 .3em #000,.3em 0 0 .3em #000"
-  },
-  "pre[class*=language-]": {
-    "fontFamily": "Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace",
-    "fontSize": "1em",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "padding": ".4em .8em",
-    "margin": ".5em 0",
-    "overflow": "auto",
-    "background": "url('data:image/svg+xml;charset=utf-8,<svg%20version%3D\"1.1\"%20xmlns%3D\"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg\"%20width%3D\"100\"%20height%3D\"100\"%20fill%3D\"rgba(0%2C0%2C0%2C.2)\">%0D%0A<polygon%20points%3D\"0%2C50%2050%2C0%200%2C0\"%20%2F>%0D%0A<polygon%20points%3D\"0%2C100%2050%2C100%20100%2C50%20100%2C0\"%20%2F>%0D%0A<%2Fsvg>')",
-    "backgroundSize": "1em 1em"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "padding": ".2em",
-    "borderRadius": ".3em",
-    "boxShadow": "none",
-    "whiteSpace": "normal"
-  },
-  "cdata": {
-    "color": "#aaa"
-  },
-  "comment": {
-    "color": "#aaa"
-  },
-  "doctype": {
-    "color": "#aaa"
-  },
-  "prolog": {
-    "color": "#aaa"
-  },
-  "punctuation": {
-    "color": "#999"
-  },
-  "namespace": {
-    "Opacity": ".7"
-  },
-  "boolean": {
-    "color": "#0cf"
-  },
-  "constant": {
-    "color": "#0cf"
-  },
-  "number": {
-    "color": "#0cf"
-  },
-  "property": {
-    "color": "#0cf"
-  },
-  "symbol": {
-    "color": "#0cf"
-  },
-  "tag": {
-    "color": "#0cf"
-  },
-  "attr-name": {
-    "color": "#ff0"
-  },
-  "builtin": {
-    "color": "#ff0"
-  },
-  "char": {
-    "color": "#ff0"
-  },
-  "selector": {
-    "color": "#ff0"
-  },
-  "string": {
-    "color": "#ff0"
-  },
-  ".language-css .token.string": {
-    "color": "#9acd32"
-  },
-  "entity": {
-    "color": "#9acd32",
-    "cursor": "help"
-  },
-  "inserted": {
-    "color": "#9acd32"
-  },
-  "operator": {
-    "color": "#9acd32"
-  },
-  "url": {
-    "color": "#9acd32"
-  },
-  "variable": {
-    "color": "#9acd32"
-  },
-  "atrule": {
-    "color": "#ff1493"
-  },
-  "attr-value": {
-    "color": "#ff1493"
-  },
-  "keyword": {
-    "color": "#ff1493"
-  },
-  "important": {
-    "color": "orange",
-    "fontWeight": "700"
-  },
-  "regex": {
-    "color": "orange"
-  },
-  "bold": {
-    "fontWeight": "700"
-  },
-  "italic": {
-    "fontStyle": "italic"
-  },
-  "deleted": {
-    "color": "red"
-  },
-  "pre.diff-highlight.diff-highlight>code .token.deleted:not(.prefix)": {
-    "backgroundColor": "rgba(255,0,0,.3)",
-    "display": "inline"
-  },
-  "pre>code.diff-highlight.diff-highlight .token.deleted:not(.prefix)": {
-    "backgroundColor": "rgba(255,0,0,.3)",
-    "display": "inline"
-  },
-  "pre.diff-highlight.diff-highlight>code .token.inserted:not(.prefix)": {
-    "backgroundColor": "rgba(0,255,128,.3)",
-    "display": "inline"
-  },
-  "pre>code.diff-highlight.diff-highlight .token.inserted:not(.prefix)": {
-    "backgroundColor": "rgba(0,255,128,.3)",
     "display": "inline"
   }
 });
@@ -58751,196 +55059,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   "bold": {
     "fontWeight": "bold"
-  },
-  "italic": {
-    "fontStyle": "italic"
-  }
-});
-
-/***/ }),
-
-/***/ "./src/styles/prism/ghcolors.min.js":
-/*!******************************************!*\
-  !*** ./src/styles/prism/ghcolors.min.js ***!
-  \******************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "color": "#393a34",
-    "fontFamily": "Consolas,\"Bitstream Vera Sans Mono\",\"Courier New\",Courier,monospace",
-    "direction": "ltr",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "fontSize": ".9em",
-    "lineHeight": "1.2em",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none"
-  },
-  "pre[class*=language-]": {
-    "color": "#393a34",
-    "fontFamily": "Consolas,\"Bitstream Vera Sans Mono\",\"Courier New\",Courier,monospace",
-    "direction": "ltr",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "fontSize": ".9em",
-    "lineHeight": "1.2em",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "padding": "1em",
-    "margin": ".5em 0",
-    "overflow": "auto",
-    "border": "1px solid #ddd",
-    "backgroundColor": "#fff"
-  },
-  "pre>code[class*=language-]": {
-    "fontSize": "1em"
-  },
-  "code[class*=language-] ::-moz-selection": {
-    "background": "#b3d4fc"
-  },
-  "code[class*=language-]::-moz-selection": {
-    "background": "#b3d4fc"
-  },
-  "pre[class*=language-] ::-moz-selection": {
-    "background": "#b3d4fc"
-  },
-  "pre[class*=language-]::-moz-selection": {
-    "background": "#b3d4fc"
-  },
-  "code[class*=language-] ::selection": {
-    "background": "#b3d4fc"
-  },
-  "code[class*=language-]::selection": {
-    "background": "#b3d4fc"
-  },
-  "pre[class*=language-] ::selection": {
-    "background": "#b3d4fc"
-  },
-  "pre[class*=language-]::selection": {
-    "background": "#b3d4fc"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "padding": ".2em",
-    "paddingTop": "1px",
-    "paddingBottom": "1px",
-    "background": "#f8f8f8",
-    "border": "1px solid #ddd"
-  },
-  "cdata": {
-    "color": "#998",
-    "fontStyle": "italic"
-  },
-  "comment": {
-    "color": "#998",
-    "fontStyle": "italic"
-  },
-  "doctype": {
-    "color": "#998",
-    "fontStyle": "italic"
-  },
-  "prolog": {
-    "color": "#998",
-    "fontStyle": "italic"
-  },
-  "namespace": {
-    "Opacity": ".7"
-  },
-  "attr-value": {
-    "color": "#e3116c"
-  },
-  "string": {
-    "color": "#e3116c"
-  },
-  "operator": {
-    "color": "#393a34"
-  },
-  "punctuation": {
-    "color": "#393a34"
-  },
-  "boolean": {
-    "color": "#36acaa"
-  },
-  "constant": {
-    "color": "#36acaa"
-  },
-  "entity": {
-    "color": "#36acaa"
-  },
-  "inserted": {
-    "color": "#36acaa"
-  },
-  "number": {
-    "color": "#36acaa"
-  },
-  "property": {
-    "color": "#36acaa"
-  },
-  "regex": {
-    "color": "#36acaa"
-  },
-  "symbol": {
-    "color": "#36acaa"
-  },
-  "url": {
-    "color": "#36acaa"
-  },
-  "variable": {
-    "color": "#36acaa"
-  },
-  ".language-autohotkey .token.selector": {
-    "color": "#00a4db"
-  },
-  "atrule": {
-    "color": "#00a4db"
-  },
-  "attr-name": {
-    "color": "#00a4db"
-  },
-  "keyword": {
-    "color": "#00a4db"
-  },
-  ".language-autohotkey .token.tag": {
-    "color": "#9a050f"
-  },
-  "deleted": {
-    "color": "#9a050f"
-  },
-  "function": {
-    "color": "#9a050f",
-    "fontWeight": "700"
-  },
-  ".language-autohotkey .token.keyword": {
-    "color": "#00009f"
-  },
-  "selector": {
-    "color": "#00009f"
-  },
-  "tag": {
-    "color": "#00009f"
-  },
-  "bold": {
-    "fontWeight": "700"
-  },
-  "important": {
-    "fontWeight": "700"
   },
   "italic": {
     "fontStyle": "italic"
@@ -59138,195 +55256,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/styles/prism/gruvbox-dark.min.js":
-/*!**********************************************!*\
-  !*** ./src/styles/prism/gruvbox-dark.min.js ***!
-  \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "color": "#ebdbb2",
-    "fontFamily": "Consolas,Monaco,\"Andale Mono\",monospace",
-    "direction": "ltr",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none"
-  },
-  "pre[class*=language-]": {
-    "color": "#ebdbb2",
-    "fontFamily": "Consolas,Monaco,\"Andale Mono\",monospace",
-    "direction": "ltr",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "padding": "1em",
-    "margin": ".5em 0",
-    "overflow": "auto",
-    "background": "#1d2021"
-  },
-  "code[class*=language-] ::-moz-selection": {
-    "color": "#fbf1c7",
-    "background": "#7c6f64"
-  },
-  "code[class*=language-]::-moz-selection": {
-    "color": "#fbf1c7",
-    "background": "#7c6f64"
-  },
-  "pre[class*=language-] ::-moz-selection": {
-    "color": "#fbf1c7",
-    "background": "#7c6f64"
-  },
-  "pre[class*=language-]::-moz-selection": {
-    "color": "#fbf1c7",
-    "background": "#7c6f64"
-  },
-  "code[class*=language-] ::selection": {
-    "color": "#fbf1c7",
-    "background": "#7c6f64"
-  },
-  "code[class*=language-]::selection": {
-    "color": "#fbf1c7",
-    "background": "#7c6f64"
-  },
-  "pre[class*=language-] ::selection": {
-    "color": "#fbf1c7",
-    "background": "#7c6f64"
-  },
-  "pre[class*=language-]::selection": {
-    "color": "#fbf1c7",
-    "background": "#7c6f64"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "background": "#1d2021",
-    "padding": ".1em",
-    "borderRadius": ".3em"
-  },
-  "cdata": {
-    "color": "#a89984"
-  },
-  "comment": {
-    "color": "#a89984"
-  },
-  "prolog": {
-    "color": "#a89984"
-  },
-  "atrule": {
-    "color": "#fb4934"
-  },
-  "boolean": {
-    "color": "#fb4934"
-  },
-  "delimiter": {
-    "color": "#fb4934"
-  },
-  "important": {
-    "color": "#fb4934"
-  },
-  "keyword": {
-    "color": "#fb4934"
-  },
-  "selector": {
-    "color": "#fb4934"
-  },
-  "attr-name": {
-    "color": "#a89984"
-  },
-  "operator": {
-    "color": "#a89984"
-  },
-  "punctuation": {
-    "color": "#a89984"
-  },
-  "builtin": {
-    "color": "#fabd2f"
-  },
-  "doctype": {
-    "color": "#fabd2f"
-  },
-  "tag": {
-    "color": "#fabd2f"
-  },
-  "tag.punctuation": {
-    "color": "#fabd2f"
-  },
-  "entity": {
-    "color": "#d3869b"
-  },
-  "number": {
-    "color": "#d3869b"
-  },
-  "symbol": {
-    "color": "#d3869b"
-  },
-  "constant": {
-    "color": "#fb4934"
-  },
-  "property": {
-    "color": "#fb4934"
-  },
-  "variable": {
-    "color": "#fb4934"
-  },
-  "char": {
-    "color": "#b8bb26"
-  },
-  "string": {
-    "color": "#b8bb26"
-  },
-  "attr-value": {
-    "color": "#a89984"
-  },
-  "attr-value.punctuation": {
-    "color": "#a89984"
-  },
-  "url": {
-    "color": "#b8bb26",
-    "textDecoration": "underline"
-  },
-  "function": {
-    "color": "#fabd2f"
-  },
-  "regex": {
-    "background": "#b8bb26"
-  },
-  "bold": {
-    "fontWeight": "700"
-  },
-  "italic": {
-    "fontStyle": "italic"
-  },
-  "inserted": {
-    "background": "#a89984"
-  },
-  "deleted": {
-    "background": "#fb4934"
-  }
-});
-
-/***/ }),
-
 /***/ "./src/styles/prism/gruvbox-light.js":
 /*!*******************************************!*\
   !*** ./src/styles/prism/gruvbox-light.js ***!
@@ -59502,195 +55431,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   "bold": {
     "fontWeight": "bold"
-  },
-  "italic": {
-    "fontStyle": "italic"
-  },
-  "inserted": {
-    "background": "#7c6f64"
-  },
-  "deleted": {
-    "background": "#9d0006"
-  }
-});
-
-/***/ }),
-
-/***/ "./src/styles/prism/gruvbox-light.min.js":
-/*!***********************************************!*\
-  !*** ./src/styles/prism/gruvbox-light.min.js ***!
-  \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "color": "#3c3836",
-    "fontFamily": "Consolas,Monaco,\"Andale Mono\",monospace",
-    "direction": "ltr",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none"
-  },
-  "pre[class*=language-]": {
-    "color": "#3c3836",
-    "fontFamily": "Consolas,Monaco,\"Andale Mono\",monospace",
-    "direction": "ltr",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "padding": "1em",
-    "margin": ".5em 0",
-    "overflow": "auto",
-    "background": "#f9f5d7"
-  },
-  "code[class*=language-] ::-moz-selection": {
-    "color": "#282828",
-    "background": "#a89984"
-  },
-  "code[class*=language-]::-moz-selection": {
-    "color": "#282828",
-    "background": "#a89984"
-  },
-  "pre[class*=language-] ::-moz-selection": {
-    "color": "#282828",
-    "background": "#a89984"
-  },
-  "pre[class*=language-]::-moz-selection": {
-    "color": "#282828",
-    "background": "#a89984"
-  },
-  "code[class*=language-] ::selection": {
-    "color": "#282828",
-    "background": "#a89984"
-  },
-  "code[class*=language-]::selection": {
-    "color": "#282828",
-    "background": "#a89984"
-  },
-  "pre[class*=language-] ::selection": {
-    "color": "#282828",
-    "background": "#a89984"
-  },
-  "pre[class*=language-]::selection": {
-    "color": "#282828",
-    "background": "#a89984"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "background": "#f9f5d7",
-    "padding": ".1em",
-    "borderRadius": ".3em"
-  },
-  "cdata": {
-    "color": "#7c6f64"
-  },
-  "comment": {
-    "color": "#7c6f64"
-  },
-  "prolog": {
-    "color": "#7c6f64"
-  },
-  "atrule": {
-    "color": "#9d0006"
-  },
-  "boolean": {
-    "color": "#9d0006"
-  },
-  "delimiter": {
-    "color": "#9d0006"
-  },
-  "important": {
-    "color": "#9d0006"
-  },
-  "keyword": {
-    "color": "#9d0006"
-  },
-  "selector": {
-    "color": "#9d0006"
-  },
-  "attr-name": {
-    "color": "#7c6f64"
-  },
-  "operator": {
-    "color": "#7c6f64"
-  },
-  "punctuation": {
-    "color": "#7c6f64"
-  },
-  "builtin": {
-    "color": "#b57614"
-  },
-  "doctype": {
-    "color": "#b57614"
-  },
-  "tag": {
-    "color": "#b57614"
-  },
-  "tag.punctuation": {
-    "color": "#b57614"
-  },
-  "entity": {
-    "color": "#8f3f71"
-  },
-  "number": {
-    "color": "#8f3f71"
-  },
-  "symbol": {
-    "color": "#8f3f71"
-  },
-  "constant": {
-    "color": "#9d0006"
-  },
-  "property": {
-    "color": "#9d0006"
-  },
-  "variable": {
-    "color": "#9d0006"
-  },
-  "char": {
-    "color": "#797403"
-  },
-  "string": {
-    "color": "#797403"
-  },
-  "attr-value": {
-    "color": "#7c6f64"
-  },
-  "attr-value.punctuation": {
-    "color": "#7c6f64"
-  },
-  "url": {
-    "color": "#797403",
-    "textDecoration": "underline"
-  },
-  "function": {
-    "color": "#b57614"
-  },
-  "regex": {
-    "background": "#797403"
-  },
-  "bold": {
-    "fontWeight": "700"
   },
   "italic": {
     "fontStyle": "italic"
@@ -59911,212 +55651,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/styles/prism/holi-theme.min.js":
-/*!********************************************!*\
-  !*** ./src/styles/prism/holi-theme.min.js ***!
-  \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "color": "#d6e7ff",
-    "background": "#030314",
-    "textShadow": "none",
-    "fontFamily": "Consolas,Monaco,\"Andale Mono\",\"Ubuntu Mono\",monospace",
-    "fontSize": "1em",
-    "lineHeight": "1.5",
-    "letterSpacing": ".2px",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "textAlign": "left",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none"
-  },
-  "pre[class*=language-]": {
-    "color": "#d6e7ff",
-    "background": "#030314",
-    "textShadow": "none",
-    "fontFamily": "Consolas,Monaco,\"Andale Mono\",\"Ubuntu Mono\",monospace",
-    "fontSize": "1em",
-    "lineHeight": "1.5",
-    "letterSpacing": ".2px",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "textAlign": "left",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "border": "1px solid #2a4555",
-    "borderRadius": "5px",
-    "padding": "1.5em 1em",
-    "margin": "1em 0",
-    "overflow": "auto"
-  },
-  "code[class*=language-] ::-moz-selection": {
-    "color": "inherit",
-    "background": "#1d3b54",
-    "textShadow": "none"
-  },
-  "code[class*=language-] ::selection": {
-    "color": "inherit",
-    "background": "#1d3b54",
-    "textShadow": "none"
-  },
-  "code[class*=language-]::-moz-selection": {
-    "color": "inherit",
-    "background": "#1d3b54",
-    "textShadow": "none"
-  },
-  "code[class*=language-]::selection": {
-    "color": "inherit",
-    "background": "#1d3b54",
-    "textShadow": "none"
-  },
-  "pre[class*=language-] ::-moz-selection": {
-    "color": "inherit",
-    "background": "#1d3b54",
-    "textShadow": "none"
-  },
-  "pre[class*=language-] ::selection": {
-    "color": "inherit",
-    "background": "#1d3b54",
-    "textShadow": "none"
-  },
-  "pre[class*=language-]::-moz-selection": {
-    "color": "inherit",
-    "background": "#1d3b54",
-    "textShadow": "none"
-  },
-  "pre[class*=language-]::selection": {
-    "color": "inherit",
-    "background": "#1d3b54",
-    "textShadow": "none"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "color": "#f0f6f6",
-    "background": "#2a4555",
-    "padding": ".2em .3em",
-    "borderRadius": ".2em",
-    "boxDecorationBreak": "clone"
-  },
-  "cdata": {
-    "color": "#446e69"
-  },
-  "comment": {
-    "color": "#446e69"
-  },
-  "doctype": {
-    "color": "#446e69"
-  },
-  "prolog": {
-    "color": "#446e69"
-  },
-  "punctuation": {
-    "color": "#d6b007"
-  },
-  "boolean": {
-    "color": "#d6e7ff"
-  },
-  "constant": {
-    "color": "#d6e7ff"
-  },
-  "deleted": {
-    "color": "#d6e7ff"
-  },
-  "number": {
-    "color": "#d6e7ff"
-  },
-  "property": {
-    "color": "#d6e7ff"
-  },
-  "symbol": {
-    "color": "#d6e7ff"
-  },
-  "tag": {
-    "color": "#d6e7ff"
-  },
-  "attr-name": {
-    "color": "#e60067"
-  },
-  "builtin": {
-    "color": "#e60067"
-  },
-  "inserted": {
-    "color": "#e60067"
-  },
-  "selector": {
-    "color": "#e60067"
-  },
-  "char": {
-    "color": "#49c6ec"
-  },
-  "string": {
-    "color": "#49c6ec"
-  },
-  ".language-css .token.string": {
-    "color": "#ec8e01",
-    "background": "0 0"
-  },
-  ".style .token.string": {
-    "color": "#ec8e01",
-    "background": "0 0"
-  },
-  "entity": {
-    "color": "#ec8e01",
-    "background": "0 0"
-  },
-  "operator": {
-    "color": "#ec8e01",
-    "background": "0 0"
-  },
-  "url": {
-    "color": "#ec8e01",
-    "background": "0 0"
-  },
-  "atrule": {
-    "color": "#0fe468"
-  },
-  "attr-value": {
-    "color": "#0fe468"
-  },
-  "keyword": {
-    "color": "#0fe468"
-  },
-  "class-name": {
-    "color": "#78f3e9"
-  },
-  "function": {
-    "color": "#78f3e9"
-  },
-  "important": {
-    "color": "#d6e7ff"
-  },
-  "regex": {
-    "color": "#d6e7ff"
-  },
-  "variable": {
-    "color": "#d6e7ff"
-  }
-});
-
-/***/ }),
-
 /***/ "./src/styles/prism/hopscotch.js":
 /*!***************************************!*\
   !*** ./src/styles/prism/hopscotch.js ***!
@@ -60270,166 +55804,6 @@ __webpack_require__.r(__webpack_exports__);
     "fontWeight": "bold"
   },
   "pre > code.highlight": {
-    "Outline": ".4em solid red",
-    "OutlineOffset": ".4em"
-  }
-});
-
-/***/ }),
-
-/***/ "./src/styles/prism/hopscotch.min.js":
-/*!*******************************************!*\
-  !*** ./src/styles/prism/hopscotch.min.js ***!
-  \*******************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "fontFamily": "\"Fira Mono\",Menlo,Monaco,\"Lucida Console\",\"Courier New\",Courier,monospace",
-    "fontSize": "16px",
-    "lineHeight": "1.375",
-    "direction": "ltr",
-    "textAlign": "left",
-    "wordSpacing": "normal",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "whiteSpace": "pre-wrap",
-    "wordBreak": "break-all",
-    "wordWrap": "break-word",
-    "background": "#322931",
-    "color": "#b9b5b8"
-  },
-  "pre[class*=language-]": {
-    "fontFamily": "\"Fira Mono\",Menlo,Monaco,\"Lucida Console\",\"Courier New\",Courier,monospace",
-    "fontSize": "16px",
-    "lineHeight": "1.375",
-    "direction": "ltr",
-    "textAlign": "left",
-    "wordSpacing": "normal",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "whiteSpace": "pre-wrap",
-    "wordBreak": "break-all",
-    "wordWrap": "break-word",
-    "background": "#322931",
-    "color": "#b9b5b8",
-    "padding": "1em",
-    "margin": ".5em 0",
-    "overflow": "auto"
-  },
-  "pre>code[class*=language-]": {
-    "fontSize": "1em"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "padding": ".1em",
-    "borderRadius": ".3em"
-  },
-  "cdata": {
-    "color": "#797379"
-  },
-  "comment": {
-    "color": "#797379"
-  },
-  "doctype": {
-    "color": "#797379"
-  },
-  "prolog": {
-    "color": "#797379"
-  },
-  "punctuation": {
-    "color": "#b9b5b8"
-  },
-  ".namespace": {
-    "Opacity": ".7"
-  },
-  "boolean": {
-    "color": "#fd8b19"
-  },
-  "null": {
-    "color": "#fd8b19"
-  },
-  "number": {
-    "color": "#fd8b19"
-  },
-  "operator": {
-    "color": "#fd8b19"
-  },
-  "property": {
-    "color": "#fdcc59"
-  },
-  "tag": {
-    "color": "#1290bf"
-  },
-  "string": {
-    "color": "#149b93"
-  },
-  "selector": {
-    "color": "#c85e7c"
-  },
-  "attr-name": {
-    "color": "#fd8b19"
-  },
-  ".language-css .token.string": {
-    "color": "#149b93"
-  },
-  ".style .token.string": {
-    "color": "#149b93"
-  },
-  "entity": {
-    "color": "#149b93",
-    "cursor": "help"
-  },
-  "url": {
-    "color": "#149b93"
-  },
-  "attr-value": {
-    "color": "#8fc13e"
-  },
-  "control": {
-    "color": "#8fc13e"
-  },
-  "directive": {
-    "color": "#8fc13e"
-  },
-  "keyword": {
-    "color": "#8fc13e"
-  },
-  "unit": {
-    "color": "#8fc13e"
-  },
-  "atrule": {
-    "color": "#149b93"
-  },
-  "regex": {
-    "color": "#149b93"
-  },
-  "statement": {
-    "color": "#149b93"
-  },
-  "placeholder": {
-    "color": "#1290bf"
-  },
-  "variable": {
-    "color": "#1290bf"
-  },
-  "important": {
-    "color": "#dd464c",
-    "fontWeight": "700"
-  },
-  "pre>code.highlight": {
     "Outline": ".4em solid red",
     "OutlineOffset": ".4em"
   }
@@ -60791,172 +56165,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/styles/prism/lucario.min.js":
-/*!*****************************************!*\
-  !*** ./src/styles/prism/lucario.min.js ***!
-  \*****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "color": "#f8f8f2",
-    "background": "0 0",
-    "textShadow": "0 1px rgba(0,0,0,.3)",
-    "fontFamily": "Monaco,Consolas,'Andale Mono','Ubuntu Mono',monospace",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none"
-  },
-  "pre[class*=language-]": {
-    "color": "#f8f8f2",
-    "background": "#263e52",
-    "textShadow": "0 1px rgba(0,0,0,.3)",
-    "fontFamily": "Monaco,Consolas,'Andale Mono','Ubuntu Mono',monospace",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "padding": "1em",
-    "margin": ".5em 0",
-    "overflow": "auto",
-    "borderRadius": ".3em"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "background": "#263e52",
-    "padding": ".1em",
-    "borderRadius": ".3em",
-    "whiteSpace": "normal"
-  },
-  "cdata": {
-    "color": "#5c98cd"
-  },
-  "comment": {
-    "color": "#5c98cd"
-  },
-  "doctype": {
-    "color": "#5c98cd"
-  },
-  "prolog": {
-    "color": "#5c98cd"
-  },
-  "punctuation": {
-    "color": "#f8f8f2"
-  },
-  ".namespace": {
-    "Opacity": ".7"
-  },
-  "constant": {
-    "color": "#f05e5d"
-  },
-  "deleted": {
-    "color": "#f05e5d"
-  },
-  "property": {
-    "color": "#f05e5d"
-  },
-  "symbol": {
-    "color": "#f05e5d"
-  },
-  "tag": {
-    "color": "#f05e5d"
-  },
-  "boolean": {
-    "color": "#bc94f9"
-  },
-  "number": {
-    "color": "#bc94f9"
-  },
-  "attr-name": {
-    "color": "#fcfcd6"
-  },
-  "builtin": {
-    "color": "#fcfcd6"
-  },
-  "char": {
-    "color": "#fcfcd6"
-  },
-  "inserted": {
-    "color": "#fcfcd6"
-  },
-  "selector": {
-    "color": "#fcfcd6"
-  },
-  "string": {
-    "color": "#fcfcd6"
-  },
-  ".language-css .token.string": {
-    "color": "#f8f8f2"
-  },
-  ".style .token.string": {
-    "color": "#f8f8f2"
-  },
-  "entity": {
-    "color": "#f8f8f2",
-    "cursor": "help"
-  },
-  "operator": {
-    "color": "#f8f8f2"
-  },
-  "url": {
-    "color": "#f8f8f2"
-  },
-  "variable": {
-    "color": "#f8f8f2"
-  },
-  "atrule": {
-    "color": "#66d8ef"
-  },
-  "attr-value": {
-    "color": "#66d8ef"
-  },
-  "class-name": {
-    "color": "#66d8ef"
-  },
-  "function": {
-    "color": "#66d8ef"
-  },
-  "keyword": {
-    "color": "#6eb26e"
-  },
-  "important": {
-    "color": "#f05e5d",
-    "fontWeight": "700"
-  },
-  "regex": {
-    "color": "#f05e5d"
-  },
-  "bold": {
-    "fontWeight": "700"
-  },
-  "italic": {
-    "fontStyle": "italic"
-  }
-});
-
-/***/ }),
-
 /***/ "./src/styles/prism/material-dark.js":
 /*!*******************************************!*\
   !*** ./src/styles/prism/material-dark.js ***!
@@ -61164,213 +56372,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/styles/prism/material-dark.min.js":
-/*!***********************************************!*\
-  !*** ./src/styles/prism/material-dark.min.js ***!
-  \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "color": "#eee",
-    "background": "#2f2f2f",
-    "fontFamily": "Roboto Mono,monospace",
-    "fontSize": "1em",
-    "lineHeight": "1.5em",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none"
-  },
-  "pre[class*=language-]": {
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "color": "#eee",
-    "background": "#2f2f2f",
-    "fontFamily": "Roboto Mono,monospace",
-    "fontSize": "1em",
-    "lineHeight": "1.5em",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "overflow": "auto",
-    "position": "relative",
-    "margin": ".5em 0",
-    "padding": "1.25em 1em"
-  },
-  "code[class*=language-] ::-moz-selection": {
-    "background": "#363636"
-  },
-  "code[class*=language-]::-moz-selection": {
-    "background": "#363636"
-  },
-  "pre[class*=language-] ::-moz-selection": {
-    "background": "#363636"
-  },
-  "pre[class*=language-]::-moz-selection": {
-    "background": "#363636"
-  },
-  "code[class*=language-] ::selection": {
-    "background": "#363636"
-  },
-  "code[class*=language-]::selection": {
-    "background": "#363636"
-  },
-  "pre[class*=language-] ::selection": {
-    "background": "#363636"
-  },
-  "pre[class*=language-]::selection": {
-    "background": "#363636"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "whiteSpace": "normal",
-    "borderRadius": ".2em",
-    "padding": ".1em"
-  },
-  ".language-css>code": {
-    "color": "#fd9170"
-  },
-  ".language-sass>code": {
-    "color": "#fd9170"
-  },
-  ".language-scss>code": {
-    "color": "#fd9170"
-  },
-  "[class*=language-] .namespace": {
-    "Opacity": ".7"
-  },
-  "atrule": {
-    "color": "#c792ea"
-  },
-  "attr-name": {
-    "color": "#ffcb6b"
-  },
-  "attr-value": {
-    "color": "#a5e844"
-  },
-  "attribute": {
-    "color": "#a5e844"
-  },
-  "boolean": {
-    "color": "#c792ea"
-  },
-  "builtin": {
-    "color": "#ffcb6b"
-  },
-  "cdata": {
-    "color": "#80cbc4"
-  },
-  "char": {
-    "color": "#80cbc4"
-  },
-  "class": {
-    "color": "#ffcb6b"
-  },
-  "class-name": {
-    "color": "#f2ff00"
-  },
-  "comment": {
-    "color": "#616161"
-  },
-  "constant": {
-    "color": "#c792ea"
-  },
-  "deleted": {
-    "color": "#f66"
-  },
-  "doctype": {
-    "color": "#616161"
-  },
-  "entity": {
-    "color": "#f66"
-  },
-  "function": {
-    "color": "#c792ea"
-  },
-  "hexcode": {
-    "color": "#f2ff00"
-  },
-  "id": {
-    "color": "#c792ea",
-    "fontWeight": "700"
-  },
-  "important": {
-    "color": "#c792ea",
-    "fontWeight": "700"
-  },
-  "inserted": {
-    "color": "#80cbc4"
-  },
-  "keyword": {
-    "color": "#c792ea"
-  },
-  "number": {
-    "color": "#fd9170"
-  },
-  "operator": {
-    "color": "#89ddff"
-  },
-  "prolog": {
-    "color": "#616161"
-  },
-  "property": {
-    "color": "#80cbc4"
-  },
-  "pseudo-class": {
-    "color": "#a5e844"
-  },
-  "pseudo-element": {
-    "color": "#a5e844"
-  },
-  "punctuation": {
-    "color": "#89ddff"
-  },
-  "regex": {
-    "color": "#f2ff00"
-  },
-  "selector": {
-    "color": "#f66"
-  },
-  "string": {
-    "color": "#a5e844"
-  },
-  "symbol": {
-    "color": "#c792ea"
-  },
-  "tag": {
-    "color": "#f66"
-  },
-  "unit": {
-    "color": "#fd9170"
-  },
-  "url": {
-    "color": "#f66"
-  },
-  "variable": {
-    "color": "#f66"
-  }
-});
-
-/***/ }),
-
 /***/ "./src/styles/prism/material-light.js":
 /*!********************************************!*\
   !*** ./src/styles/prism/material-light.js ***!
@@ -61530,221 +56531,6 @@ __webpack_require__.r(__webpack_exports__);
   "important": {
     "color": "#7c4dff",
     "fontWeight": "bold"
-  },
-  "inserted": {
-    "color": "#39adb5"
-  },
-  "keyword": {
-    "color": "#7c4dff"
-  },
-  "number": {
-    "color": "#f76d47"
-  },
-  "operator": {
-    "color": "#39adb5"
-  },
-  "prolog": {
-    "color": "#aabfc9"
-  },
-  "property": {
-    "color": "#39adb5"
-  },
-  "pseudo-class": {
-    "color": "#f6a434"
-  },
-  "pseudo-element": {
-    "color": "#f6a434"
-  },
-  "punctuation": {
-    "color": "#39adb5"
-  },
-  "regex": {
-    "color": "#6182b8"
-  },
-  "selector": {
-    "color": "#e53935"
-  },
-  "string": {
-    "color": "#f6a434"
-  },
-  "symbol": {
-    "color": "#7c4dff"
-  },
-  "tag": {
-    "color": "#e53935"
-  },
-  "unit": {
-    "color": "#f76d47"
-  },
-  "url": {
-    "color": "#e53935"
-  },
-  "variable": {
-    "color": "#e53935"
-  }
-});
-
-/***/ }),
-
-/***/ "./src/styles/prism/material-light.min.js":
-/*!************************************************!*\
-  !*** ./src/styles/prism/material-light.min.js ***!
-  \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "color": "#90a4ae",
-    "background": "#fafafa",
-    "fontFamily": "Roboto Mono,monospace",
-    "fontSize": "1em",
-    "lineHeight": "1.5em",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none"
-  },
-  "pre[class*=language-]": {
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "color": "#90a4ae",
-    "background": "#fafafa",
-    "fontFamily": "Roboto Mono,monospace",
-    "fontSize": "1em",
-    "lineHeight": "1.5em",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "overflow": "auto",
-    "position": "relative",
-    "margin": ".5em 0",
-    "padding": "1.25em 1em"
-  },
-  "code[class*=language-] ::-moz-selection": {
-    "background": "#cceae7",
-    "color": "#263238"
-  },
-  "code[class*=language-]::-moz-selection": {
-    "background": "#cceae7",
-    "color": "#263238"
-  },
-  "pre[class*=language-] ::-moz-selection": {
-    "background": "#cceae7",
-    "color": "#263238"
-  },
-  "pre[class*=language-]::-moz-selection": {
-    "background": "#cceae7",
-    "color": "#263238"
-  },
-  "code[class*=language-] ::selection": {
-    "background": "#cceae7",
-    "color": "#263238"
-  },
-  "code[class*=language-]::selection": {
-    "background": "#cceae7",
-    "color": "#263238"
-  },
-  "pre[class*=language-] ::selection": {
-    "background": "#cceae7",
-    "color": "#263238"
-  },
-  "pre[class*=language-]::selection": {
-    "background": "#cceae7",
-    "color": "#263238"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "whiteSpace": "normal",
-    "borderRadius": ".2em",
-    "padding": ".1em"
-  },
-  ".language-css>code": {
-    "color": "#f76d47"
-  },
-  ".language-sass>code": {
-    "color": "#f76d47"
-  },
-  ".language-scss>code": {
-    "color": "#f76d47"
-  },
-  "[class*=language-] .namespace": {
-    "Opacity": ".7"
-  },
-  "atrule": {
-    "color": "#7c4dff"
-  },
-  "attr-name": {
-    "color": "#39adb5"
-  },
-  "attr-value": {
-    "color": "#f6a434"
-  },
-  "attribute": {
-    "color": "#f6a434"
-  },
-  "boolean": {
-    "color": "#7c4dff"
-  },
-  "builtin": {
-    "color": "#39adb5"
-  },
-  "cdata": {
-    "color": "#39adb5"
-  },
-  "char": {
-    "color": "#39adb5"
-  },
-  "class": {
-    "color": "#39adb5"
-  },
-  "class-name": {
-    "color": "#6182b8"
-  },
-  "comment": {
-    "color": "#aabfc9"
-  },
-  "constant": {
-    "color": "#7c4dff"
-  },
-  "deleted": {
-    "color": "#e53935"
-  },
-  "doctype": {
-    "color": "#aabfc9"
-  },
-  "entity": {
-    "color": "#e53935"
-  },
-  "function": {
-    "color": "#7c4dff"
-  },
-  "hexcode": {
-    "color": "#f76d47"
-  },
-  "id": {
-    "color": "#7c4dff",
-    "fontWeight": "700"
-  },
-  "important": {
-    "color": "#7c4dff",
-    "fontWeight": "700"
   },
   "inserted": {
     "color": "#39adb5"
@@ -62012,217 +56798,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/styles/prism/material-oceanic.min.js":
-/*!**************************************************!*\
-  !*** ./src/styles/prism/material-oceanic.min.js ***!
-  \**************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "color": "#c3cee3",
-    "background": "#263238",
-    "fontFamily": "Roboto Mono,monospace",
-    "fontSize": "1em",
-    "lineHeight": "1.5em",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none"
-  },
-  "pre[class*=language-]": {
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "color": "#c3cee3",
-    "background": "#263238",
-    "fontFamily": "Roboto Mono,monospace",
-    "fontSize": "1em",
-    "lineHeight": "1.5em",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "overflow": "auto",
-    "position": "relative",
-    "margin": ".5em 0",
-    "padding": "1.25em 1em"
-  },
-  "code[class*=language-] ::-moz-selection": {
-    "background": "#363636"
-  },
-  "code[class*=language-]::-moz-selection": {
-    "background": "#363636"
-  },
-  "pre[class*=language-] ::-moz-selection": {
-    "background": "#363636"
-  },
-  "pre[class*=language-]::-moz-selection": {
-    "background": "#363636"
-  },
-  "code[class*=language-] ::selection": {
-    "background": "#363636"
-  },
-  "code[class*=language-]::selection": {
-    "background": "#363636"
-  },
-  "pre[class*=language-] ::selection": {
-    "background": "#363636"
-  },
-  "pre[class*=language-]::selection": {
-    "background": "#363636"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "whiteSpace": "normal",
-    "borderRadius": ".2em",
-    "padding": ".1em"
-  },
-  ".language-css>code": {
-    "color": "#fd9170"
-  },
-  ".language-sass>code": {
-    "color": "#fd9170"
-  },
-  ".language-scss>code": {
-    "color": "#fd9170"
-  },
-  "[class*=language-] .namespace": {
-    "Opacity": ".7"
-  },
-  "atrule": {
-    "color": "#c792ea"
-  },
-  "attr-name": {
-    "color": "#ffcb6b"
-  },
-  "attr-value": {
-    "color": "#c3e88d"
-  },
-  "attribute": {
-    "color": "#c3e88d"
-  },
-  "boolean": {
-    "color": "#c792ea"
-  },
-  "builtin": {
-    "color": "#ffcb6b"
-  },
-  "cdata": {
-    "color": "#80cbc4"
-  },
-  "char": {
-    "color": "#80cbc4"
-  },
-  "class": {
-    "color": "#ffcb6b"
-  },
-  "class-name": {
-    "color": "#f2ff00"
-  },
-  "color": {
-    "color": "#f2ff00"
-  },
-  "comment": {
-    "color": "#546e7a"
-  },
-  "constant": {
-    "color": "#c792ea"
-  },
-  "deleted": {
-    "color": "#f07178"
-  },
-  "doctype": {
-    "color": "#546e7a"
-  },
-  "entity": {
-    "color": "#f07178"
-  },
-  "function": {
-    "color": "#c792ea"
-  },
-  "hexcode": {
-    "color": "#f2ff00"
-  },
-  "id": {
-    "color": "#c792ea",
-    "fontWeight": "700"
-  },
-  "important": {
-    "color": "#c792ea",
-    "fontWeight": "700"
-  },
-  "inserted": {
-    "color": "#80cbc4"
-  },
-  "keyword": {
-    "color": "#c792ea",
-    "fontStyle": "italic"
-  },
-  "number": {
-    "color": "#fd9170"
-  },
-  "operator": {
-    "color": "#89ddff"
-  },
-  "prolog": {
-    "color": "#546e7a"
-  },
-  "property": {
-    "color": "#80cbc4"
-  },
-  "pseudo-class": {
-    "color": "#c3e88d"
-  },
-  "pseudo-element": {
-    "color": "#c3e88d"
-  },
-  "punctuation": {
-    "color": "#89ddff"
-  },
-  "regex": {
-    "color": "#f2ff00"
-  },
-  "selector": {
-    "color": "#f07178"
-  },
-  "string": {
-    "color": "#c3e88d"
-  },
-  "symbol": {
-    "color": "#c792ea"
-  },
-  "tag": {
-    "color": "#f07178"
-  },
-  "unit": {
-    "color": "#f07178"
-  },
-  "url": {
-    "color": "#fd9170"
-  },
-  "variable": {
-    "color": "#f07178"
-  }
-});
-
-/***/ }),
-
 /***/ "./src/styles/prism/night-owl.js":
 /*!***************************************!*\
   !*** ./src/styles/prism/night-owl.js ***!
@@ -62427,210 +57002,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/styles/prism/night-owl.min.js":
-/*!*******************************************!*\
-  !*** ./src/styles/prism/night-owl.min.js ***!
-  \*******************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "color": "#d6deeb",
-    "fontFamily": "Consolas,Monaco,\"Andale Mono\",\"Ubuntu Mono\",monospace",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "lineHeight": "1.5",
-    "fontSize": "1em",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none"
-  },
-  "pre[class*=language-]": {
-    "color": "#fff",
-    "fontFamily": "Consolas,Monaco,\"Andale Mono\",\"Ubuntu Mono\",monospace",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "lineHeight": "1.5",
-    "fontSize": "1em",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "padding": "1em",
-    "margin": ".5em 0",
-    "overflow": "auto",
-    "background": "#011627"
-  },
-  "code[class*=language-] ::-moz-selection": {
-    "textShadow": "none",
-    "background": "rgba(29,59,83,.99)"
-  },
-  "code[class*=language-]::-moz-selection": {
-    "textShadow": "none",
-    "background": "rgba(29,59,83,.99)"
-  },
-  "pre[class*=language-] ::-moz-selection": {
-    "textShadow": "none",
-    "background": "rgba(29,59,83,.99)"
-  },
-  "pre[class*=language-]::-moz-selection": {
-    "textShadow": "none",
-    "background": "rgba(29,59,83,.99)"
-  },
-  "code[class*=language-] ::selection": {
-    "textShadow": "none",
-    "background": "rgba(29,59,83,.99)"
-  },
-  "code[class*=language-]::selection": {
-    "textShadow": "none",
-    "background": "rgba(29,59,83,.99)"
-  },
-  "pre[class*=language-] ::selection": {
-    "textShadow": "none",
-    "background": "rgba(29,59,83,.99)"
-  },
-  "pre[class*=language-]::selection": {
-    "textShadow": "none",
-    "background": "rgba(29,59,83,.99)"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "color": "#fff",
-    "background": "#011627",
-    "padding": ".1em",
-    "borderRadius": ".3em",
-    "whiteSpace": "normal"
-  },
-  "cdata": {
-    "color": "#637777",
-    "fontStyle": "italic"
-  },
-  "comment": {
-    "color": "#637777",
-    "fontStyle": "italic"
-  },
-  "prolog": {
-    "color": "#637777",
-    "fontStyle": "italic"
-  },
-  "punctuation": {
-    "color": "#c792ea"
-  },
-  ".namespace": {
-    "color": "#b2ccd6"
-  },
-  "deleted": {
-    "color": "rgba(239,83,80,.56)",
-    "fontStyle": "italic"
-  },
-  "property": {
-    "color": "#80cbc4"
-  },
-  "symbol": {
-    "color": "#80cbc4"
-  },
-  "keyword": {
-    "color": "#7fdbca"
-  },
-  "operator": {
-    "color": "#7fdbca"
-  },
-  "tag": {
-    "color": "#7fdbca"
-  },
-  "boolean": {
-    "color": "#ff5874"
-  },
-  "number": {
-    "color": "#f78c6c"
-  },
-  "builtin": {
-    "color": "#82aaff"
-  },
-  "char": {
-    "color": "#82aaff"
-  },
-  "constant": {
-    "color": "#82aaff"
-  },
-  "function": {
-    "color": "#82aaff"
-  },
-  "doctype": {
-    "color": "#c792ea",
-    "fontStyle": "italic"
-  },
-  "selector": {
-    "color": "#c792ea",
-    "fontStyle": "italic"
-  },
-  "attr-name": {
-    "color": "#addb67",
-    "fontStyle": "italic"
-  },
-  "inserted": {
-    "color": "#addb67",
-    "fontStyle": "italic"
-  },
-  ".language-css .token.string": {
-    "color": "#addb67"
-  },
-  ".style .token.string": {
-    "color": "#addb67"
-  },
-  "entity": {
-    "color": "#addb67"
-  },
-  "string": {
-    "color": "#addb67"
-  },
-  "url": {
-    "color": "#addb67"
-  },
-  "atrule": {
-    "color": "#ffcb8b"
-  },
-  "attr-value": {
-    "color": "#ffcb8b"
-  },
-  "class-name": {
-    "color": "#ffcb8b"
-  },
-  "important": {
-    "color": "#d6deeb",
-    "fontWeight": "700"
-  },
-  "regex": {
-    "color": "#d6deeb"
-  },
-  "variable": {
-    "color": "#d6deeb"
-  },
-  "bold": {
-    "fontWeight": "700"
-  },
-  "italic": {
-    "fontStyle": "italic"
-  }
-});
-
-/***/ }),
-
 /***/ "./src/styles/prism/nord.js":
 /*!**********************************!*\
   !*** ./src/styles/prism/nord.js ***!
@@ -62787,170 +57158,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   "bold": {
     "fontWeight": "bold"
-  },
-  "italic": {
-    "fontStyle": "italic"
-  }
-});
-
-/***/ }),
-
-/***/ "./src/styles/prism/nord.min.js":
-/*!**************************************!*\
-  !*** ./src/styles/prism/nord.min.js ***!
-  \**************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "color": "#f8f8f2",
-    "background": "0 0",
-    "fontFamily": "\"Fira Code\",Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none"
-  },
-  "pre[class*=language-]": {
-    "color": "#f8f8f2",
-    "background": "#2e3440",
-    "fontFamily": "\"Fira Code\",Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "padding": "1em",
-    "margin": ".5em 0",
-    "overflow": "auto",
-    "borderRadius": ".3em"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "background": "#2e3440",
-    "padding": ".1em",
-    "borderRadius": ".3em",
-    "whiteSpace": "normal"
-  },
-  "cdata": {
-    "color": "#636f88"
-  },
-  "comment": {
-    "color": "#636f88"
-  },
-  "doctype": {
-    "color": "#636f88"
-  },
-  "prolog": {
-    "color": "#636f88"
-  },
-  "punctuation": {
-    "color": "#81a1c1"
-  },
-  ".namespace": {
-    "Opacity": ".7"
-  },
-  "constant": {
-    "color": "#81a1c1"
-  },
-  "deleted": {
-    "color": "#81a1c1"
-  },
-  "property": {
-    "color": "#81a1c1"
-  },
-  "symbol": {
-    "color": "#81a1c1"
-  },
-  "tag": {
-    "color": "#81a1c1"
-  },
-  "number": {
-    "color": "#b48ead"
-  },
-  "boolean": {
-    "color": "#81a1c1"
-  },
-  "attr-name": {
-    "color": "#a3be8c"
-  },
-  "builtin": {
-    "color": "#a3be8c"
-  },
-  "char": {
-    "color": "#a3be8c"
-  },
-  "inserted": {
-    "color": "#a3be8c"
-  },
-  "selector": {
-    "color": "#a3be8c"
-  },
-  "string": {
-    "color": "#a3be8c"
-  },
-  ".language-css .token.string": {
-    "color": "#81a1c1"
-  },
-  ".style .token.string": {
-    "color": "#81a1c1"
-  },
-  "entity": {
-    "color": "#81a1c1",
-    "cursor": "help"
-  },
-  "operator": {
-    "color": "#81a1c1"
-  },
-  "url": {
-    "color": "#81a1c1"
-  },
-  "variable": {
-    "color": "#81a1c1"
-  },
-  "atrule": {
-    "color": "#88c0d0"
-  },
-  "attr-value": {
-    "color": "#88c0d0"
-  },
-  "class-name": {
-    "color": "#88c0d0"
-  },
-  "function": {
-    "color": "#88c0d0"
-  },
-  "keyword": {
-    "color": "#81a1c1"
-  },
-  "important": {
-    "color": "#ebcb8b",
-    "fontWeight": "700"
-  },
-  "regex": {
-    "color": "#ebcb8b"
-  },
-  "bold": {
-    "fontWeight": "700"
   },
   "italic": {
     "fontStyle": "italic"
@@ -63119,174 +57326,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   "bold": {
     "fontWeight": "bold"
-  },
-  "italic": {
-    "fontStyle": "italic"
-  }
-});
-
-/***/ }),
-
-/***/ "./src/styles/prism/okaidia.min.js":
-/*!*****************************************!*\
-  !*** ./src/styles/prism/okaidia.min.js ***!
-  \*****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "color": "#f8f8f2",
-    "background": "0 0",
-    "textShadow": "0 1px rgba(0,0,0,.3)",
-    "fontFamily": "Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace",
-    "fontSize": "1em",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none"
-  },
-  "pre[class*=language-]": {
-    "color": "#f8f8f2",
-    "background": "#272822",
-    "textShadow": "0 1px rgba(0,0,0,.3)",
-    "fontFamily": "Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace",
-    "fontSize": "1em",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "padding": "1em",
-    "margin": ".5em 0",
-    "overflow": "auto",
-    "borderRadius": ".3em"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "background": "#272822",
-    "padding": ".1em",
-    "borderRadius": ".3em",
-    "whiteSpace": "normal"
-  },
-  "cdata": {
-    "color": "#8292a2"
-  },
-  "comment": {
-    "color": "#8292a2"
-  },
-  "doctype": {
-    "color": "#8292a2"
-  },
-  "prolog": {
-    "color": "#8292a2"
-  },
-  "punctuation": {
-    "color": "#f8f8f2"
-  },
-  "namespace": {
-    "Opacity": ".7"
-  },
-  "constant": {
-    "color": "#f92672"
-  },
-  "deleted": {
-    "color": "#f92672"
-  },
-  "property": {
-    "color": "#f92672"
-  },
-  "symbol": {
-    "color": "#f92672"
-  },
-  "tag": {
-    "color": "#f92672"
-  },
-  "boolean": {
-    "color": "#ae81ff"
-  },
-  "number": {
-    "color": "#ae81ff"
-  },
-  "attr-name": {
-    "color": "#a6e22e"
-  },
-  "builtin": {
-    "color": "#a6e22e"
-  },
-  "char": {
-    "color": "#a6e22e"
-  },
-  "inserted": {
-    "color": "#a6e22e"
-  },
-  "selector": {
-    "color": "#a6e22e"
-  },
-  "string": {
-    "color": "#a6e22e"
-  },
-  ".language-css .token.string": {
-    "color": "#f8f8f2"
-  },
-  ".style .token.string": {
-    "color": "#f8f8f2"
-  },
-  "entity": {
-    "color": "#f8f8f2",
-    "cursor": "help"
-  },
-  "operator": {
-    "color": "#f8f8f2"
-  },
-  "url": {
-    "color": "#f8f8f2"
-  },
-  "variable": {
-    "color": "#f8f8f2"
-  },
-  "atrule": {
-    "color": "#e6db74"
-  },
-  "attr-value": {
-    "color": "#e6db74"
-  },
-  "class-name": {
-    "color": "#e6db74"
-  },
-  "function": {
-    "color": "#e6db74"
-  },
-  "keyword": {
-    "color": "#66d9ef"
-  },
-  "important": {
-    "color": "#fd971f",
-    "fontWeight": "700"
-  },
-  "regex": {
-    "color": "#fd971f"
-  },
-  "bold": {
-    "fontWeight": "700"
   },
   "italic": {
     "fontStyle": "italic"
@@ -63808,519 +57847,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/styles/prism/one-dark.min.js":
-/*!******************************************!*\
-  !*** ./src/styles/prism/one-dark.min.js ***!
-  \******************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "background": "#272b33",
-    "color": "#aab1bf",
-    "textShadow": "0 1px rgba(0,0,0,.3)",
-    "fontFamily": "\"Fira Code\",\"Fira Mono\",Menlo,Consolas,\"DejaVu Sans Mono\",monospace",
-    "direction": "ltr",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "2",
-    "OTabSize": "2",
-    "tabSize": "2",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none"
-  },
-  "pre[class*=language-]": {
-    "background": "#272b33",
-    "color": "#aab1bf",
-    "textShadow": "0 1px rgba(0,0,0,.3)",
-    "fontFamily": "\"Fira Code\",\"Fira Mono\",Menlo,Consolas,\"DejaVu Sans Mono\",monospace",
-    "direction": "ltr",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "2",
-    "OTabSize": "2",
-    "tabSize": "2",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "padding": "1em",
-    "margin": ".5em 0",
-    "overflow": "auto",
-    "borderRadius": ".3em"
-  },
-  "code[class*=language-] ::-moz-selection": {
-    "background": "#3e4450",
-    "color": "inherit",
-    "textShadow": "none"
-  },
-  "code[class*=language-]::-moz-selection": {
-    "background": "#3e4450",
-    "color": "inherit",
-    "textShadow": "none"
-  },
-  "pre[class*=language-] ::-moz-selection": {
-    "background": "#3e4450",
-    "color": "inherit",
-    "textShadow": "none"
-  },
-  "code[class*=language-] ::selection": {
-    "background": "#3e4450",
-    "color": "inherit",
-    "textShadow": "none"
-  },
-  "code[class*=language-]::selection": {
-    "background": "#3e4450",
-    "color": "inherit",
-    "textShadow": "none"
-  },
-  "pre[class*=language-] ::selection": {
-    "background": "#3e4450",
-    "color": "inherit",
-    "textShadow": "none"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "padding": ".2em .3em",
-    "borderRadius": ".3em",
-    "whiteSpace": "normal"
-  },
-  "cdata": {
-    "color": "#5b6270"
-  },
-  "comment": {
-    "color": "#5b6270",
-    "fontStyle": "italic"
-  },
-  "prolog": {
-    "color": "#5b6270"
-  },
-  "doctype": {
-    "color": "#aab1bf"
-  },
-  "entity": {
-    "color": "#aab1bf",
-    "cursor": "help"
-  },
-  "punctuation": {
-    "color": "#aab1bf"
-  },
-  "atrule": {
-    "color": "#d19965"
-  },
-  "attr-name": {
-    "color": "#d19965"
-  },
-  "boolean": {
-    "color": "#d19965"
-  },
-  "class-name": {
-    "color": "#d19965"
-  },
-  "constant": {
-    "color": "#d19965"
-  },
-  "number": {
-    "color": "#d19965"
-  },
-  "keyword": {
-    "color": "#c578dd"
-  },
-  "deleted": {
-    "color": "#df6b75"
-  },
-  "important": {
-    "color": "#df6b75"
-  },
-  "property": {
-    "color": "#df6b75"
-  },
-  "symbol": {
-    "color": "#df6b75"
-  },
-  "tag": {
-    "color": "#df6b75"
-  },
-  "attr-value": {
-    "color": "#97c279"
-  },
-  "attr-value>.token.punctuation": {
-    "color": "#97c279"
-  },
-  "builtin": {
-    "color": "#97c279"
-  },
-  "char": {
-    "color": "#97c279"
-  },
-  "inserted": {
-    "color": "#97c279"
-  },
-  "regex": {
-    "color": "#97c279"
-  },
-  "selector": {
-    "color": "#97c279"
-  },
-  "string": {
-    "color": "#97c279"
-  },
-  "function": {
-    "color": "#61afef"
-  },
-  "operator": {
-    "color": "#61afef"
-  },
-  "variable": {
-    "color": "#61afef"
-  },
-  "url": {
-    "color": "#56b5c2"
-  },
-  "attr-value>.token.punctuation.attr-equals": {
-    "color": "#aab1bf"
-  },
-  "special-attr>.token.attr-value>.token.value.css": {
-    "color": "#aab1bf"
-  },
-  ".language-css .token.selector": {
-    "color": "#df6b75"
-  },
-  ".language-css .token.property": {
-    "color": "#aab1bf"
-  },
-  ".language-css .token.function": {
-    "color": "#56b5c2"
-  },
-  ".language-css .token.url>.token.function": {
-    "color": "#56b5c2"
-  },
-  ".language-css .token.url>.token.string.url": {
-    "color": "#97c279"
-  },
-  ".language-css .token.atrule .token.rule": {
-    "color": "#c578dd"
-  },
-  ".language-css .token.important": {
-    "color": "#c578dd"
-  },
-  ".language-javascript .token.operator": {
-    "color": "#c578dd"
-  },
-  ".language-javascript .token.template-string>.token.interpolation>.token.interpolation-punctuation.punctuation": {
-    "color": "#be5046"
-  },
-  ".language-json .token.operator": {
-    "color": "#aab1bf"
-  },
-  ".language-json .token.null.keyword": {
-    "color": "#d19965"
-  },
-  ".language-markdown .token.url": {
-    "color": "#aab1bf"
-  },
-  ".language-markdown .token.url-reference.url>.token.string": {
-    "color": "#aab1bf"
-  },
-  ".language-markdown .token.url>.token.operator": {
-    "color": "#aab1bf"
-  },
-  ".language-markdown .token.url>.token.content": {
-    "color": "#61afef"
-  },
-  ".language-markdown .token.url-reference.url": {
-    "color": "#56b5c2"
-  },
-  ".language-markdown .token.url>.token.url": {
-    "color": "#56b5c2"
-  },
-  ".language-markdown .token.blockquote.punctuation": {
-    "color": "#5b6270",
-    "fontStyle": "italic"
-  },
-  ".language-markdown .token.hr.punctuation": {
-    "color": "#5b6270",
-    "fontStyle": "italic"
-  },
-  ".language-markdown .token.code-snippet": {
-    "color": "#97c279"
-  },
-  ".language-markdown .token.bold .token.content": {
-    "color": "#d19965"
-  },
-  ".language-markdown .token.italic .token.content": {
-    "color": "#c578dd"
-  },
-  ".language-markdown .token.list.punctuation": {
-    "color": "#df6b75"
-  },
-  ".language-markdown .token.strike .token.content": {
-    "color": "#df6b75"
-  },
-  ".language-markdown .token.strike .token.punctuation": {
-    "color": "#df6b75"
-  },
-  ".language-markdown .token.title.important>.token.punctuation": {
-    "color": "#df6b75"
-  },
-  "bold": {
-    "fontWeight": "700"
-  },
-  "italic": {
-    "fontStyle": "italic"
-  },
-  "namespace": {
-    "Opacity": ".8"
-  },
-  "token.cr:before": {
-    "color": "hsla(220,14%,71%,.15)",
-    "textShadow": "none"
-  },
-  "token.lf:before": {
-    "color": "hsla(220,14%,71%,.15)",
-    "textShadow": "none"
-  },
-  "token.space:before": {
-    "color": "hsla(220,14%,71%,.15)",
-    "textShadow": "none"
-  },
-  "token.tab:not(:empty):before": {
-    "color": "hsla(220,14%,71%,.15)",
-    "textShadow": "none"
-  },
-  "div.code-toolbar>.toolbar.toolbar>.toolbar-item": {
-    "marginRight": ".4em"
-  },
-  "div.code-toolbar>.toolbar.toolbar>.toolbar-item>a": {
-    "background": "#393f4a",
-    "color": "#818896",
-    "padding": ".1em .4em",
-    "borderRadius": ".3em"
-  },
-  "div.code-toolbar>.toolbar.toolbar>.toolbar-item>button": {
-    "background": "#393f4a",
-    "color": "#818896",
-    "padding": ".1em .4em",
-    "borderRadius": ".3em"
-  },
-  "div.code-toolbar>.toolbar.toolbar>.toolbar-item>span": {
-    "background": "#393f4a",
-    "color": "#818896",
-    "padding": ".1em .4em",
-    "borderRadius": ".3em"
-  },
-  "div.code-toolbar>.toolbar.toolbar>.toolbar-item>a:focus": {
-    "background": "#3e4450",
-    "color": "#aab1bf"
-  },
-  "div.code-toolbar>.toolbar.toolbar>.toolbar-item>a:hover": {
-    "background": "#3e4450",
-    "color": "#aab1bf"
-  },
-  "div.code-toolbar>.toolbar.toolbar>.toolbar-item>button:focus": {
-    "background": "#3e4450",
-    "color": "#aab1bf"
-  },
-  "div.code-toolbar>.toolbar.toolbar>.toolbar-item>button:hover": {
-    "background": "#3e4450",
-    "color": "#aab1bf"
-  },
-  "div.code-toolbar>.toolbar.toolbar>.toolbar-item>span:focus": {
-    "background": "#3e4450",
-    "color": "#aab1bf"
-  },
-  "div.code-toolbar>.toolbar.toolbar>.toolbar-item>span:hover": {
-    "background": "#3e4450",
-    "color": "#aab1bf"
-  },
-  ".line-highlight.line-highlight": {
-    "background": "hsla(220,100%,80%,.04)"
-  },
-  ".line-highlight.line-highlight:before": {
-    "background": "#393f4a",
-    "color": "#aab1bf",
-    "padding": ".1em .6em",
-    "borderRadius": ".3em",
-    "boxShadow": "0 2px 0 0 rgba(0,0,0,.2)"
-  },
-  ".line-highlight.line-highlight[data-end]:after": {
-    "background": "#393f4a",
-    "color": "#aab1bf",
-    "padding": ".1em .6em",
-    "borderRadius": ".3em",
-    "boxShadow": "0 2px 0 0 rgba(0,0,0,.2)"
-  },
-  "pre[id].linkable-line-numbers.linkable-line-numbers span.line-numbers-rows>span:hover:before": {
-    "backgroundColor": "hsla(220,100%,80%,.04)"
-  },
-  ".command-line .command-line-prompt": {
-    "borderRightColor": "hsla(220,14%,71%,.15)"
-  },
-  ".line-numbers.line-numbers .line-numbers-rows": {
-    "borderRightColor": "hsla(220,14%,71%,.15)"
-  },
-  ".command-line .command-line-prompt>span:before": {
-    "color": "#626d82"
-  },
-  ".line-numbers .line-numbers-rows>span:before": {
-    "color": "#626d82"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-1": {
-    "color": "#df6b75"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-5": {
-    "color": "#df6b75"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-9": {
-    "color": "#df6b75"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-10": {
-    "color": "#97c279"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-2": {
-    "color": "#97c279"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-6": {
-    "color": "#97c279"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-11": {
-    "color": "#61afef"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-3": {
-    "color": "#61afef"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-7": {
-    "color": "#61afef"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-12": {
-    "color": "#c578dd"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-4": {
-    "color": "#c578dd"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-8": {
-    "color": "#c578dd"
-  },
-  "pre.diff-highlight>code .token.token.deleted:not(.prefix)": {
-    "backgroundColor": "hsla(353,100%,66%,.15)"
-  },
-  "pre>code.diff-highlight .token.token.deleted:not(.prefix)": {
-    "backgroundColor": "hsla(353,100%,66%,.15)"
-  },
-  "pre.diff-highlight>code .token.token.deleted:not(.prefix) ::-moz-selection": {
-    "backgroundColor": "hsla(353,95%,66%,.25)"
-  },
-  "pre.diff-highlight>code .token.token.deleted:not(.prefix)::-moz-selection": {
-    "backgroundColor": "hsla(353,95%,66%,.25)"
-  },
-  "pre>code.diff-highlight .token.token.deleted:not(.prefix) ::-moz-selection": {
-    "backgroundColor": "hsla(353,95%,66%,.25)"
-  },
-  "pre>code.diff-highlight .token.token.deleted:not(.prefix)::-moz-selection": {
-    "backgroundColor": "hsla(353,95%,66%,.25)"
-  },
-  "pre.diff-highlight>code .token.token.deleted:not(.prefix) ::selection": {
-    "backgroundColor": "hsla(353,95%,66%,.25)"
-  },
-  "pre.diff-highlight>code .token.token.deleted:not(.prefix)::selection": {
-    "backgroundColor": "hsla(353,95%,66%,.25)"
-  },
-  "pre>code.diff-highlight .token.token.deleted:not(.prefix) ::selection": {
-    "backgroundColor": "hsla(353,95%,66%,.25)"
-  },
-  "pre>code.diff-highlight .token.token.deleted:not(.prefix)::selection": {
-    "backgroundColor": "hsla(353,95%,66%,.25)"
-  },
-  "pre.diff-highlight>code .token.token.inserted:not(.prefix)": {
-    "backgroundColor": "hsla(137,100%,55%,.15)"
-  },
-  "pre>code.diff-highlight .token.token.inserted:not(.prefix)": {
-    "backgroundColor": "hsla(137,100%,55%,.15)"
-  },
-  "pre.diff-highlight>code .token.token.inserted:not(.prefix) ::-moz-selection": {
-    "backgroundColor": "hsla(135,73%,55%,.25)"
-  },
-  "pre.diff-highlight>code .token.token.inserted:not(.prefix)::-moz-selection": {
-    "backgroundColor": "hsla(135,73%,55%,.25)"
-  },
-  "pre>code.diff-highlight .token.token.inserted:not(.prefix) ::-moz-selection": {
-    "backgroundColor": "hsla(135,73%,55%,.25)"
-  },
-  "pre>code.diff-highlight .token.token.inserted:not(.prefix)::-moz-selection": {
-    "backgroundColor": "hsla(135,73%,55%,.25)"
-  },
-  "pre.diff-highlight>code .token.token.inserted:not(.prefix) ::selection": {
-    "backgroundColor": "hsla(135,73%,55%,.25)"
-  },
-  "pre.diff-highlight>code .token.token.inserted:not(.prefix)::selection": {
-    "backgroundColor": "hsla(135,73%,55%,.25)"
-  },
-  "pre>code.diff-highlight .token.token.inserted:not(.prefix) ::selection": {
-    "backgroundColor": "hsla(135,73%,55%,.25)"
-  },
-  "pre>code.diff-highlight .token.token.inserted:not(.prefix)::selection": {
-    "backgroundColor": "hsla(135,73%,55%,.25)"
-  },
-  ".prism-previewer-gradient.prism-previewer-gradient div": {
-    "borderColor": "#252830",
-    "borderRadius": ".3em"
-  },
-  ".prism-previewer.prism-previewer:before": {
-    "borderColor": "#252830"
-  },
-  ".prism-previewer-color.prism-previewer-color:before": {
-    "borderRadius": ".3em"
-  },
-  ".prism-previewer-easing.prism-previewer-easing:before": {
-    "borderRadius": ".3em"
-  },
-  ".prism-previewer.prism-previewer:after": {
-    "borderTopColor": "#252830"
-  },
-  ".prism-previewer-flipped.prism-previewer-flipped.after": {
-    "borderBottomColor": "#252830"
-  },
-  ".prism-previewer-angle.prism-previewer-angle:before": {
-    "background": "#30353f"
-  },
-  ".prism-previewer-easing.prism-previewer-easing": {
-    "background": "#30353f"
-  },
-  ".prism-previewer-time.prism-previewer-time:before": {
-    "background": "#30353f"
-  },
-  ".prism-previewer-angle.prism-previewer-angle circle": {
-    "stroke": "#aab1bf",
-    "strokeOpacity": "1"
-  },
-  ".prism-previewer-time.prism-previewer-time circle": {
-    "stroke": "#aab1bf",
-    "strokeOpacity": "1"
-  },
-  ".prism-previewer-easing.prism-previewer-easing circle": {
-    "stroke": "#aab1bf",
-    "fill": "transparent"
-  },
-  ".prism-previewer-easing.prism-previewer-easing line": {
-    "stroke": "#aab1bf"
-  },
-  ".prism-previewer-easing.prism-previewer-easing path": {
-    "stroke": "#aab1bf"
-  }
-});
-
-/***/ }),
-
 /***/ "./src/styles/prism/one-light.js":
 /*!***************************************!*\
   !*** ./src/styles/prism/one-light.js ***!
@@ -64822,507 +58348,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/styles/prism/one-light.min.js":
-/*!*******************************************!*\
-  !*** ./src/styles/prism/one-light.min.js ***!
-  \*******************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "background": "#f9f9f9",
-    "color": "#383942",
-    "fontFamily": "\"Fira Code\",\"Fira Mono\",Menlo,Consolas,\"DejaVu Sans Mono\",monospace",
-    "direction": "ltr",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "2",
-    "OTabSize": "2",
-    "tabSize": "2",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none"
-  },
-  "pre[class*=language-]": {
-    "background": "#f9f9f9",
-    "color": "#383942",
-    "fontFamily": "\"Fira Code\",\"Fira Mono\",Menlo,Consolas,\"DejaVu Sans Mono\",monospace",
-    "direction": "ltr",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "2",
-    "OTabSize": "2",
-    "tabSize": "2",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "padding": "1em",
-    "margin": ".5em 0",
-    "overflow": "auto",
-    "borderRadius": ".3em"
-  },
-  "code[class*=language-] ::-moz-selection": {
-    "background": "#e5e5e5",
-    "color": "inherit"
-  },
-  "code[class*=language-]::-moz-selection": {
-    "background": "#e5e5e5",
-    "color": "inherit"
-  },
-  "pre[class*=language-] ::-moz-selection": {
-    "background": "#e5e5e5",
-    "color": "inherit"
-  },
-  "code[class*=language-] ::selection": {
-    "background": "#e5e5e5",
-    "color": "inherit"
-  },
-  "code[class*=language-]::selection": {
-    "background": "#e5e5e5",
-    "color": "inherit"
-  },
-  "pre[class*=language-] ::selection": {
-    "background": "#e5e5e5",
-    "color": "inherit"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "padding": ".2em .3em",
-    "borderRadius": ".3em",
-    "whiteSpace": "normal"
-  },
-  "cdata": {
-    "color": "#9fa0a6"
-  },
-  "comment": {
-    "color": "#9fa0a6",
-    "fontStyle": "italic"
-  },
-  "prolog": {
-    "color": "#9fa0a6"
-  },
-  "doctype": {
-    "color": "#383942"
-  },
-  "entity": {
-    "color": "#383942",
-    "cursor": "help"
-  },
-  "punctuation": {
-    "color": "#383942"
-  },
-  "atrule": {
-    "color": "#b66a00"
-  },
-  "attr-name": {
-    "color": "#b66a00"
-  },
-  "boolean": {
-    "color": "#b66a00"
-  },
-  "class-name": {
-    "color": "#b66a00"
-  },
-  "constant": {
-    "color": "#b66a00"
-  },
-  "number": {
-    "color": "#b66a00"
-  },
-  "keyword": {
-    "color": "#a625a4"
-  },
-  "deleted": {
-    "color": "#e35549"
-  },
-  "important": {
-    "color": "#e35549"
-  },
-  "property": {
-    "color": "#e35549"
-  },
-  "symbol": {
-    "color": "#e35549"
-  },
-  "tag": {
-    "color": "#e35549"
-  },
-  "attr-value": {
-    "color": "#50a04f"
-  },
-  "attr-value>.token.punctuation": {
-    "color": "#50a04f"
-  },
-  "builtin": {
-    "color": "#50a04f"
-  },
-  "char": {
-    "color": "#50a04f"
-  },
-  "inserted": {
-    "color": "#50a04f"
-  },
-  "regex": {
-    "color": "#50a04f"
-  },
-  "selector": {
-    "color": "#50a04f"
-  },
-  "string": {
-    "color": "#50a04f"
-  },
-  "function": {
-    "color": "#4078f1"
-  },
-  "operator": {
-    "color": "#4078f1"
-  },
-  "variable": {
-    "color": "#4078f1"
-  },
-  "url": {
-    "color": "#0083bb"
-  },
-  "attr-value>.token.punctuation.attr-equals": {
-    "color": "#383942"
-  },
-  "special-attr>.token.attr-value>.token.value.css": {
-    "color": "#383942"
-  },
-  ".language-css .token.selector": {
-    "color": "#e35549"
-  },
-  ".language-css .token.property": {
-    "color": "#383942"
-  },
-  ".language-css .token.function": {
-    "color": "#0083bb"
-  },
-  ".language-css .token.url>.token.function": {
-    "color": "#0083bb"
-  },
-  ".language-css .token.url>.token.string.url": {
-    "color": "#50a04f"
-  },
-  ".language-css .token.atrule .token.rule": {
-    "color": "#a625a4"
-  },
-  ".language-css .token.important": {
-    "color": "#a625a4"
-  },
-  ".language-javascript .token.operator": {
-    "color": "#a625a4"
-  },
-  ".language-javascript .token.template-string>.token.interpolation>.token.interpolation-punctuation.punctuation": {
-    "color": "#c91142"
-  },
-  ".language-json .token.operator": {
-    "color": "#383942"
-  },
-  ".language-json .token.null.keyword": {
-    "color": "#b66a00"
-  },
-  ".language-markdown .token.url": {
-    "color": "#383942"
-  },
-  ".language-markdown .token.url-reference.url>.token.string": {
-    "color": "#383942"
-  },
-  ".language-markdown .token.url>.token.operator": {
-    "color": "#383942"
-  },
-  ".language-markdown .token.url>.token.content": {
-    "color": "#4078f1"
-  },
-  ".language-markdown .token.url-reference.url": {
-    "color": "#0083bb"
-  },
-  ".language-markdown .token.url>.token.url": {
-    "color": "#0083bb"
-  },
-  ".language-markdown .token.blockquote.punctuation": {
-    "color": "#9fa0a6",
-    "fontStyle": "italic"
-  },
-  ".language-markdown .token.hr.punctuation": {
-    "color": "#9fa0a6",
-    "fontStyle": "italic"
-  },
-  ".language-markdown .token.code-snippet": {
-    "color": "#50a04f"
-  },
-  ".language-markdown .token.bold .token.content": {
-    "color": "#b66a00"
-  },
-  ".language-markdown .token.italic .token.content": {
-    "color": "#a625a4"
-  },
-  ".language-markdown .token.list.punctuation": {
-    "color": "#e35549"
-  },
-  ".language-markdown .token.strike .token.content": {
-    "color": "#e35549"
-  },
-  ".language-markdown .token.strike .token.punctuation": {
-    "color": "#e35549"
-  },
-  ".language-markdown .token.title.important>.token.punctuation": {
-    "color": "#e35549"
-  },
-  "bold": {
-    "fontWeight": "700"
-  },
-  "italic": {
-    "fontStyle": "italic"
-  },
-  "namespace": {
-    "Opacity": ".8"
-  },
-  "token.cr:before": {
-    "color": "hsla(230,8%,24%,.2)"
-  },
-  "token.lf:before": {
-    "color": "hsla(230,8%,24%,.2)"
-  },
-  "token.space:before": {
-    "color": "hsla(230,8%,24%,.2)"
-  },
-  "token.tab:not(:empty):before": {
-    "color": "hsla(230,8%,24%,.2)"
-  },
-  "div.code-toolbar>.toolbar.toolbar>.toolbar-item": {
-    "marginRight": ".4em"
-  },
-  "div.code-toolbar>.toolbar.toolbar>.toolbar-item>a": {
-    "background": "#e5e5e5",
-    "color": "#696b76",
-    "padding": ".1em .4em",
-    "borderRadius": ".3em"
-  },
-  "div.code-toolbar>.toolbar.toolbar>.toolbar-item>button": {
-    "background": "#e5e5e5",
-    "color": "#696b76",
-    "padding": ".1em .4em",
-    "borderRadius": ".3em"
-  },
-  "div.code-toolbar>.toolbar.toolbar>.toolbar-item>span": {
-    "background": "#e5e5e5",
-    "color": "#696b76",
-    "padding": ".1em .4em",
-    "borderRadius": ".3em"
-  },
-  "div.code-toolbar>.toolbar.toolbar>.toolbar-item>a:focus": {
-    "background": "#c6c6c7",
-    "color": "#383942"
-  },
-  "div.code-toolbar>.toolbar.toolbar>.toolbar-item>a:hover": {
-    "background": "#c6c6c7",
-    "color": "#383942"
-  },
-  "div.code-toolbar>.toolbar.toolbar>.toolbar-item>button:focus": {
-    "background": "#c6c6c7",
-    "color": "#383942"
-  },
-  "div.code-toolbar>.toolbar.toolbar>.toolbar-item>button:hover": {
-    "background": "#c6c6c7",
-    "color": "#383942"
-  },
-  "div.code-toolbar>.toolbar.toolbar>.toolbar-item>span:focus": {
-    "background": "#c6c6c7",
-    "color": "#383942"
-  },
-  "div.code-toolbar>.toolbar.toolbar>.toolbar-item>span:hover": {
-    "background": "#c6c6c7",
-    "color": "#383942"
-  },
-  ".line-highlight.line-highlight": {
-    "background": "hsla(230,8%,24%,.05)"
-  },
-  ".line-highlight.line-highlight:before": {
-    "background": "#e5e5e5",
-    "color": "#383942",
-    "padding": ".1em .6em",
-    "borderRadius": ".3em",
-    "boxShadow": "0 2px 0 0 rgba(0,0,0,.2)"
-  },
-  ".line-highlight.line-highlight[data-end]:after": {
-    "background": "#e5e5e5",
-    "color": "#383942",
-    "padding": ".1em .6em",
-    "borderRadius": ".3em",
-    "boxShadow": "0 2px 0 0 rgba(0,0,0,.2)"
-  },
-  "pre[id].linkable-line-numbers.linkable-line-numbers span.line-numbers-rows>span:hover:before": {
-    "backgroundColor": "hsla(230,8%,24%,.05)"
-  },
-  ".command-line .command-line-prompt": {
-    "borderRightColor": "hsla(230,8%,24%,.2)"
-  },
-  ".line-numbers.line-numbers .line-numbers-rows": {
-    "borderRightColor": "hsla(230,8%,24%,.2)"
-  },
-  ".command-line .command-line-prompt>span:before": {
-    "color": "#9d9d9f"
-  },
-  ".line-numbers .line-numbers-rows>span:before": {
-    "color": "#9d9d9f"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-1": {
-    "color": "#e35549"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-5": {
-    "color": "#e35549"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-9": {
-    "color": "#e35549"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-10": {
-    "color": "#50a04f"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-2": {
-    "color": "#50a04f"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-6": {
-    "color": "#50a04f"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-11": {
-    "color": "#4078f1"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-3": {
-    "color": "#4078f1"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-7": {
-    "color": "#4078f1"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-12": {
-    "color": "#a625a4"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-4": {
-    "color": "#a625a4"
-  },
-  ".rainbow-braces .token.token.punctuation.brace-level-8": {
-    "color": "#a625a4"
-  },
-  "pre.diff-highlight>code .token.token.deleted:not(.prefix)": {
-    "backgroundColor": "hsla(353,100%,66%,.15)"
-  },
-  "pre>code.diff-highlight .token.token.deleted:not(.prefix)": {
-    "backgroundColor": "hsla(353,100%,66%,.15)"
-  },
-  "pre.diff-highlight>code .token.token.deleted:not(.prefix) ::-moz-selection": {
-    "backgroundColor": "hsla(353,95%,66%,.25)"
-  },
-  "pre.diff-highlight>code .token.token.deleted:not(.prefix)::-moz-selection": {
-    "backgroundColor": "hsla(353,95%,66%,.25)"
-  },
-  "pre>code.diff-highlight .token.token.deleted:not(.prefix) ::-moz-selection": {
-    "backgroundColor": "hsla(353,95%,66%,.25)"
-  },
-  "pre>code.diff-highlight .token.token.deleted:not(.prefix)::-moz-selection": {
-    "backgroundColor": "hsla(353,95%,66%,.25)"
-  },
-  "pre.diff-highlight>code .token.token.deleted:not(.prefix) ::selection": {
-    "backgroundColor": "hsla(353,95%,66%,.25)"
-  },
-  "pre.diff-highlight>code .token.token.deleted:not(.prefix)::selection": {
-    "backgroundColor": "hsla(353,95%,66%,.25)"
-  },
-  "pre>code.diff-highlight .token.token.deleted:not(.prefix) ::selection": {
-    "backgroundColor": "hsla(353,95%,66%,.25)"
-  },
-  "pre>code.diff-highlight .token.token.deleted:not(.prefix)::selection": {
-    "backgroundColor": "hsla(353,95%,66%,.25)"
-  },
-  "pre.diff-highlight>code .token.token.inserted:not(.prefix)": {
-    "backgroundColor": "hsla(137,100%,55%,.15)"
-  },
-  "pre>code.diff-highlight .token.token.inserted:not(.prefix)": {
-    "backgroundColor": "hsla(137,100%,55%,.15)"
-  },
-  "pre.diff-highlight>code .token.token.inserted:not(.prefix) ::-moz-selection": {
-    "backgroundColor": "hsla(135,73%,55%,.25)"
-  },
-  "pre.diff-highlight>code .token.token.inserted:not(.prefix)::-moz-selection": {
-    "backgroundColor": "hsla(135,73%,55%,.25)"
-  },
-  "pre>code.diff-highlight .token.token.inserted:not(.prefix) ::-moz-selection": {
-    "backgroundColor": "hsla(135,73%,55%,.25)"
-  },
-  "pre>code.diff-highlight .token.token.inserted:not(.prefix)::-moz-selection": {
-    "backgroundColor": "hsla(135,73%,55%,.25)"
-  },
-  "pre.diff-highlight>code .token.token.inserted:not(.prefix) ::selection": {
-    "backgroundColor": "hsla(135,73%,55%,.25)"
-  },
-  "pre.diff-highlight>code .token.token.inserted:not(.prefix)::selection": {
-    "backgroundColor": "hsla(135,73%,55%,.25)"
-  },
-  "pre>code.diff-highlight .token.token.inserted:not(.prefix) ::selection": {
-    "backgroundColor": "hsla(135,73%,55%,.25)"
-  },
-  "pre>code.diff-highlight .token.token.inserted:not(.prefix)::selection": {
-    "backgroundColor": "hsla(135,73%,55%,.25)"
-  },
-  ".prism-previewer-gradient.prism-previewer-gradient div": {
-    "borderColor": "#f2f2f2",
-    "borderRadius": ".3em"
-  },
-  ".prism-previewer.prism-previewer:before": {
-    "borderColor": "#f2f2f2"
-  },
-  ".prism-previewer-color.prism-previewer-color:before": {
-    "borderRadius": ".3em"
-  },
-  ".prism-previewer-easing.prism-previewer-easing:before": {
-    "borderRadius": ".3em"
-  },
-  ".prism-previewer.prism-previewer:after": {
-    "borderTopColor": "#f2f2f2"
-  },
-  ".prism-previewer-flipped.prism-previewer-flipped.after": {
-    "borderBottomColor": "#f2f2f2"
-  },
-  ".prism-previewer-angle.prism-previewer-angle:before": {
-    "background": "#fff"
-  },
-  ".prism-previewer-easing.prism-previewer-easing": {
-    "background": "#fff"
-  },
-  ".prism-previewer-time.prism-previewer-time:before": {
-    "background": "#fff"
-  },
-  ".prism-previewer-angle.prism-previewer-angle circle": {
-    "stroke": "#383942",
-    "strokeOpacity": "1"
-  },
-  ".prism-previewer-time.prism-previewer-time circle": {
-    "stroke": "#383942",
-    "strokeOpacity": "1"
-  },
-  ".prism-previewer-easing.prism-previewer-easing circle": {
-    "stroke": "#383942",
-    "fill": "transparent"
-  },
-  ".prism-previewer-easing.prism-previewer-easing line": {
-    "stroke": "#383942"
-  },
-  ".prism-previewer-easing.prism-previewer-easing path": {
-    "stroke": "#383942"
-  }
-});
-
-/***/ }),
-
 /***/ "./src/styles/prism/pojoaque.js":
 /*!**************************************!*\
   !*** ./src/styles/prism/pojoaque.js ***!
@@ -65488,179 +58513,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   "bold": {
     "fontWeight": "bold"
-  },
-  "italic": {
-    "fontStyle": "italic"
-  }
-});
-
-/***/ }),
-
-/***/ "./src/styles/prism/pojoaque.min.js":
-/*!******************************************!*\
-  !*** ./src/styles/prism/pojoaque.min.js ***!
-  \******************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "whiteSpace": "pre-wrap",
-    "wordBreak": "break-all",
-    "wordWrap": "break-word",
-    "fontFamily": "Menlo,Monaco,\"Courier New\",monospace",
-    "fontSize": "15px",
-    "lineHeight": "1.5",
-    "color": "#dccf8f",
-    "textShadow": "0"
-  },
-  "pre[class*=language-]": {
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "whiteSpace": "pre-wrap",
-    "wordBreak": "break-all",
-    "wordWrap": "break-word",
-    "fontFamily": "Menlo,Monaco,\"Courier New\",monospace",
-    "fontSize": "15px",
-    "lineHeight": "1.5",
-    "color": "#dccf8f",
-    "textShadow": "0",
-    "borderRadius": "5px",
-    "border": "1px solid #000",
-    "background": "#181914 url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAZABkAAD/7AARRHVja3kAAQAEAAAAMAAA/+4ADkFkb2JlAGTAAAAAAf/bAIQACQYGBgcGCQcHCQ0IBwgNDwsJCQsPEQ4ODw4OERENDg4ODg0RERQUFhQUERoaHBwaGiYmJiYmKysrKysrKysrKwEJCAgJCgkMCgoMDwwODA8TDg4ODhMVDg4PDg4VGhMRERERExoXGhYWFhoXHR0aGh0dJCQjJCQrKysrKysrKysr/8AAEQgAjACMAwEiAAIRAQMRAf/EAF4AAQEBAAAAAAAAAAAAAAAAAAABBwEBAQAAAAAAAAAAAAAAAAAAAAIQAAEDAwIHAQEAAAAAAAAAAADwAREhYaExkUFRcYGxwdHh8REBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AyGFEjHaBS2fDDs2zkhKmBKktb7km+ZwwCnXPkLVmCTMItj6AXFxRS465/BTnkAJvkLkJe+7AKKoi2AtRS2zuAWsCb5GOlBN8gKfmuGHZ8MFqIth3ALmFoFwbwKWyAlTAp17uKqBvgBD8sM4fTjhvAhkzhaRkBMKBrfs7jGPIpzy7gFrAqnC0C0gB0EWwBDW2cBVQwm+QtPpa3wBO3sVvszCnLAhkzgL5/RLf13cLQd8/AGlu0Cb5HTx9KuAEieGJEdcehS3eRTp2ATdt3CpIm+QtZwAhROXFeb7swp/ahaM3kBE/jSIUBc/AWrgBN8uNFAl+b7sAXFxFn2YLUU5Ns7gFX8C4ib+hN8gFWXwK3bZglxEJm+gKdciLPsFV/TClsgJUwKJ5FVA7tvIFrfZhVfGJDcsCKaYgAqv6YRbE+RWOWBtu7+AL3yRalXLyKqAIIfk+zARbDgFyEsncYwJvlgFRW+GEWntIi2P0BooyFxcNr8Ep3+ANLbMO+QyhvbiqdgC0kVvgUUiLYgBS2QtPbiVI1/sgOmG9uO+Y8DW+7jS2zAOnj6O2BndwuIAUtkdRN8gFoK3wwXMQyZwHVbClsuNLd4E3yAUR6FVDBR+BafQGt93LVMxJTv8ABts4CVLhcfYWsCb5kC9/BHdU8CLYFY5bMAd+eX9MGthhpbA1vu4B7+RKkaW2Yq4AQtVBBFsAJU/AuIXBhN8gGWnstefhiZyWvLAEnbYS1uzSFP6Jvn4Baxx70JKkQojLib5AVTey1jjgkKJGO0AKWyOm7N7cSpgSpAdPH0Tfd/gp1z5C1ZgKqN9J2wFxcUUuAFLZAm+QC0Fb4YUVRFsAOvj4KW2dwtYE3yAWk/wS/PLMKfmuGHZ8MAXF/Ja32Yi5haAKWz4Ydm2cSpgU693Atb7km+Zwwh+WGcPpxw3gAkzCLY+iYUDW/Z3Adc/gpzyFrAqnALkJe+7DoItgAtRS2zuKqGE3yAx0oJvkdvYrfZmALURbDuL5/RLf13cAuDeBS2RpbtAm+QFVA3wR+3fUtFHoBDJnC0jIXH0HWsgMY8inPLuOkd9chp4z20ALQLSA8cI9jYAIa2zjzjBd8gRafS1vgiUho/kAKcsCGTOGWvoOpkAtB3z8Hm8x2Ff5ADp4+lXAlIvcmwH/2Q==) repeat left top",
-    "padding": "12px",
-    "overflow": "auto"
-  },
-  "pre>code[class*=language-]": {
-    "fontSize": "1em"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "borderRadius": "5px",
-    "border": "1px solid #000",
-    "color": "#dccf8f",
-    "background": "#181914 url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAZABkAAD/7AARRHVja3kAAQAEAAAAMAAA/+4ADkFkb2JlAGTAAAAAAf/bAIQACQYGBgcGCQcHCQ0IBwgNDwsJCQsPEQ4ODw4OERENDg4ODg0RERQUFhQUERoaHBwaGiYmJiYmKysrKysrKysrKwEJCAgJCgkMCgoMDwwODA8TDg4ODhMVDg4PDg4VGhMRERERExoXGhYWFhoXHR0aGh0dJCQjJCQrKysrKysrKysr/8AAEQgAjACMAwEiAAIRAQMRAf/EAF4AAQEBAAAAAAAAAAAAAAAAAAABBwEBAQAAAAAAAAAAAAAAAAAAAAIQAAEDAwIHAQEAAAAAAAAAAADwAREhYaExkUFRcYGxwdHh8REBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AyGFEjHaBS2fDDs2zkhKmBKktb7km+ZwwCnXPkLVmCTMItj6AXFxRS465/BTnkAJvkLkJe+7AKKoi2AtRS2zuAWsCb5GOlBN8gKfmuGHZ8MFqIth3ALmFoFwbwKWyAlTAp17uKqBvgBD8sM4fTjhvAhkzhaRkBMKBrfs7jGPIpzy7gFrAqnC0C0gB0EWwBDW2cBVQwm+QtPpa3wBO3sVvszCnLAhkzgL5/RLf13cLQd8/AGlu0Cb5HTx9KuAEieGJEdcehS3eRTp2ATdt3CpIm+QtZwAhROXFeb7swp/ahaM3kBE/jSIUBc/AWrgBN8uNFAl+b7sAXFxFn2YLUU5Ns7gFX8C4ib+hN8gFWXwK3bZglxEJm+gKdciLPsFV/TClsgJUwKJ5FVA7tvIFrfZhVfGJDcsCKaYgAqv6YRbE+RWOWBtu7+AL3yRalXLyKqAIIfk+zARbDgFyEsncYwJvlgFRW+GEWntIi2P0BooyFxcNr8Ep3+ANLbMO+QyhvbiqdgC0kVvgUUiLYgBS2QtPbiVI1/sgOmG9uO+Y8DW+7jS2zAOnj6O2BndwuIAUtkdRN8gFoK3wwXMQyZwHVbClsuNLd4E3yAUR6FVDBR+BafQGt93LVMxJTv8ABts4CVLhcfYWsCb5kC9/BHdU8CLYFY5bMAd+eX9MGthhpbA1vu4B7+RKkaW2Yq4AQtVBBFsAJU/AuIXBhN8gGWnstefhiZyWvLAEnbYS1uzSFP6Jvn4Baxx70JKkQojLib5AVTey1jjgkKJGO0AKWyOm7N7cSpgSpAdPH0Tfd/gp1z5C1ZgKqN9J2wFxcUUuAFLZAm+QC0Fb4YUVRFsAOvj4KW2dwtYE3yAWk/wS/PLMKfmuGHZ8MAXF/Ja32Yi5haAKWz4Ydm2cSpgU693Atb7km+Zwwh+WGcPpxw3gAkzCLY+iYUDW/Z3Adc/gpzyFrAqnALkJe+7DoItgAtRS2zuKqGE3yAx0oJvkdvYrfZmALURbDuL5/RLf13cAuDeBS2RpbtAm+QFVA3wR+3fUtFHoBDJnC0jIXH0HWsgMY8inPLuOkd9chp4z20ALQLSA8cI9jYAIa2zjzjBd8gRafS1vgiUho/kAKcsCGTOGWvoOpkAtB3z8Hm8x2Ff5ADp4+lXAlIvcmwH/2Q==) repeat left top",
-    "padding": "2px 6px"
-  },
-  "namespace": {
-    "Opacity": ".7"
-  },
-  "cdata": {
-    "color": "#586e75",
-    "fontStyle": "italic"
-  },
-  "comment": {
-    "color": "#586e75",
-    "fontStyle": "italic"
-  },
-  "doctype": {
-    "color": "#586e75",
-    "fontStyle": "italic"
-  },
-  "prolog": {
-    "color": "#586e75",
-    "fontStyle": "italic"
-  },
-  "builtin": {
-    "color": "#468966"
-  },
-  "char": {
-    "color": "#468966"
-  },
-  "inserted": {
-    "color": "#468966"
-  },
-  "number": {
-    "color": "#b89859"
-  },
-  "string": {
-    "color": "#468966"
-  },
-  "attr-name": {
-    "color": "#b89859"
-  },
-  ".language-css .token.string": {
-    "color": "#dccf8f"
-  },
-  ".style .token.string": {
-    "color": "#dccf8f"
-  },
-  "entity": {
-    "color": "#dccf8f",
-    "cursor": "help"
-  },
-  "operator": {
-    "color": "#dccf8f"
-  },
-  "url": {
-    "color": "#dccf8f"
-  },
-  "regex": {
-    "color": "#859900"
-  },
-  "selector": {
-    "color": "#859900"
-  },
-  "atrule": {
-    "color": "#cb4b16"
-  },
-  "keyword": {
-    "color": "#cb4b16"
-  },
-  "attr-value": {
-    "color": "#468966"
-  },
-  "function": {
-    "color": "#b58900"
-  },
-  "placeholder": {
-    "color": "#b58900"
-  },
-  "variable": {
-    "color": "#b58900"
-  },
-  "boolean": {
-    "color": "#b89859"
-  },
-  "constant": {
-    "color": "#b89859"
-  },
-  "property": {
-    "color": "#b89859"
-  },
-  "symbol": {
-    "color": "#b89859"
-  },
-  "tag": {
-    "color": "#ffb03b"
-  },
-  "deleted": {
-    "color": "#dc322f"
-  },
-  "important": {
-    "color": "#dc322f"
-  },
-  "statement": {
-    "color": "#dc322f"
-  },
-  "punctuation": {
-    "color": "#dccf8f"
-  },
-  "bold": {
-    "fontWeight": "700"
   },
   "italic": {
     "fontStyle": "italic"
@@ -65865,210 +58717,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   "bold": {
     "fontWeight": "bold"
-  },
-  "italic": {
-    "fontStyle": "italic"
-  }
-});
-
-/***/ }),
-
-/***/ "./src/styles/prism/prism.min.js":
-/*!***************************************!*\
-  !*** ./src/styles/prism/prism.min.js ***!
-  \***************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "color": "#000",
-    "background": "0 0",
-    "textShadow": "0 1px #fff",
-    "fontFamily": "Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace",
-    "fontSize": "1em",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none"
-  },
-  "pre[class*=language-]": {
-    "color": "#000",
-    "background": "#f5f2f0",
-    "textShadow": "0 1px #fff",
-    "fontFamily": "Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace",
-    "fontSize": "1em",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "padding": "1em",
-    "margin": ".5em 0",
-    "overflow": "auto"
-  },
-  "code[class*=language-] ::-moz-selection": {
-    "textShadow": "none",
-    "background": "#b3d4fc"
-  },
-  "code[class*=language-]::-moz-selection": {
-    "textShadow": "none",
-    "background": "#b3d4fc"
-  },
-  "pre[class*=language-] ::-moz-selection": {
-    "textShadow": "none",
-    "background": "#b3d4fc"
-  },
-  "pre[class*=language-]::-moz-selection": {
-    "textShadow": "none",
-    "background": "#b3d4fc"
-  },
-  "code[class*=language-] ::selection": {
-    "textShadow": "none",
-    "background": "#b3d4fc"
-  },
-  "code[class*=language-]::selection": {
-    "textShadow": "none",
-    "background": "#b3d4fc"
-  },
-  "pre[class*=language-] ::selection": {
-    "textShadow": "none",
-    "background": "#b3d4fc"
-  },
-  "pre[class*=language-]::selection": {
-    "textShadow": "none",
-    "background": "#b3d4fc"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "background": "#f5f2f0",
-    "padding": ".1em",
-    "borderRadius": ".3em",
-    "whiteSpace": "normal"
-  },
-  "cdata": {
-    "color": "#708090"
-  },
-  "comment": {
-    "color": "#708090"
-  },
-  "doctype": {
-    "color": "#708090"
-  },
-  "prolog": {
-    "color": "#708090"
-  },
-  "punctuation": {
-    "color": "#999"
-  },
-  "namespace": {
-    "Opacity": ".7"
-  },
-  "boolean": {
-    "color": "#905"
-  },
-  "constant": {
-    "color": "#905"
-  },
-  "deleted": {
-    "color": "#905"
-  },
-  "number": {
-    "color": "#905"
-  },
-  "property": {
-    "color": "#905"
-  },
-  "symbol": {
-    "color": "#905"
-  },
-  "tag": {
-    "color": "#905"
-  },
-  "attr-name": {
-    "color": "#690"
-  },
-  "builtin": {
-    "color": "#690"
-  },
-  "char": {
-    "color": "#690"
-  },
-  "inserted": {
-    "color": "#690"
-  },
-  "selector": {
-    "color": "#690"
-  },
-  "string": {
-    "color": "#690"
-  },
-  ".language-css .token.string": {
-    "color": "#9a6e3a",
-    "background": "hsla(0,0%,100%,.5)"
-  },
-  ".style .token.string": {
-    "color": "#9a6e3a",
-    "background": "hsla(0,0%,100%,.5)"
-  },
-  "entity": {
-    "color": "#9a6e3a",
-    "background": "hsla(0,0%,100%,.5)",
-    "cursor": "help"
-  },
-  "operator": {
-    "color": "#9a6e3a",
-    "background": "hsla(0,0%,100%,.5)"
-  },
-  "url": {
-    "color": "#9a6e3a",
-    "background": "hsla(0,0%,100%,.5)"
-  },
-  "atrule": {
-    "color": "#07a"
-  },
-  "attr-value": {
-    "color": "#07a"
-  },
-  "keyword": {
-    "color": "#07a"
-  },
-  "class-name": {
-    "color": "#dd4a68"
-  },
-  "function": {
-    "color": "#dd4a68"
-  },
-  "important": {
-    "color": "#e90",
-    "fontWeight": "700"
-  },
-  "regex": {
-    "color": "#e90"
-  },
-  "variable": {
-    "color": "#e90"
-  },
-  "bold": {
-    "fontWeight": "700"
   },
   "italic": {
     "fontStyle": "italic"
@@ -66323,252 +58971,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/styles/prism/shades-of-purple.min.js":
-/*!**************************************************!*\
-  !*** ./src/styles/prism/shades-of-purple.min.js ***!
-  \**************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "color": "#9efeff",
-    "direction": "ltr",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "fontFamily": "'Operator Mono','Fira Code',Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace",
-    "fontWeight": "400",
-    "fontSize": "17px",
-    "lineHeight": "25px",
-    "letterSpacing": ".5px",
-    "textShadow": "0 1px #222245"
-  },
-  "pre[class*=language-]": {
-    "color": "#9efeff",
-    "direction": "ltr",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "fontFamily": "'Operator Mono','Fira Code',Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace",
-    "fontWeight": "400",
-    "fontSize": "17px",
-    "lineHeight": "25px",
-    "letterSpacing": ".5px",
-    "textShadow": "0 1px #222245",
-    "padding": "2em",
-    "margin": ".5em 0",
-    "overflow": "auto",
-    "background": "#1e1e3f"
-  },
-  "code[class*=language-] ::-moz-selection": {
-    "color": "inherit",
-    "background": "#a599e9"
-  },
-  "code[class*=language-] ::selection": {
-    "color": "inherit",
-    "background": "#a599e9"
-  },
-  "code[class*=language-]::-moz-selection": {
-    "color": "inherit",
-    "background": "#a599e9"
-  },
-  "code[class*=language-]::selection": {
-    "color": "inherit",
-    "background": "#a599e9"
-  },
-  "pre[class*=language-] ::-moz-selection": {
-    "color": "inherit",
-    "background": "#a599e9"
-  },
-  "pre[class*=language-] ::selection": {
-    "color": "inherit",
-    "background": "#a599e9"
-  },
-  "pre[class*=language-]::-moz-selection": {
-    "color": "inherit",
-    "background": "#a599e9"
-  },
-  "pre[class*=language-]::selection": {
-    "color": "inherit",
-    "background": "#a599e9"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "background": "#1e1e3f",
-    "padding": ".1em",
-    "borderRadius": ".3em"
-  },
-  "": {
-    "fontWeight": "400"
-  },
-  "cdata": {
-    "color": "#b362ff"
-  },
-  "comment": {
-    "color": "#b362ff"
-  },
-  "prolog": {
-    "color": "#b362ff"
-  },
-  "atrule": {
-    "color": "#ff9d00"
-  },
-  "delimiter": {
-    "color": "#ff9d00"
-  },
-  "important": {
-    "color": "#ff9d00"
-  },
-  "keyword": {
-    "color": "#ff9d00"
-  },
-  "selector": {
-    "color": "#ff9d00"
-  },
-  "attr-name": {
-    "color": "#ffb454"
-  },
-  "operator": {
-    "color": "#ffb454",
-    "background": "0 0"
-  },
-  "punctuation": {
-    "color": "#fff"
-  },
-  "boolean": {
-    "color": "#ff628c"
-  },
-  "builtin": {
-    "color": "#ff9d00"
-  },
-  "doctype": {
-    "color": "#ff9d00"
-  },
-  "tag": {
-    "color": "#ff9d00"
-  },
-  "tag.punctuation": {
-    "color": "#ff9d00"
-  },
-  "entity": {
-    "color": "#6897bb",
-    "background": "0 0"
-  },
-  "symbol": {
-    "color": "#6897bb"
-  },
-  "number": {
-    "color": "#ff628c"
-  },
-  "constant": {
-    "color": "#ff628c"
-  },
-  "property": {
-    "color": "#ff628c"
-  },
-  "variable": {
-    "color": "#ff628c"
-  },
-  "char": {
-    "color": "#a5ff90"
-  },
-  "string": {
-    "color": "#a5ff90"
-  },
-  "attr-value": {
-    "color": "#a5c261"
-  },
-  "attr-value.punctuation": {
-    "color": "#a5c261"
-  },
-  "attr-value.punctuation:first-child": {
-    "color": "#a9b7c6"
-  },
-  "url": {
-    "color": "#287bde",
-    "textDecoration": "underline",
-    "background": "0 0"
-  },
-  "function": {
-    "color": "#fad000"
-  },
-  "regex": {
-    "background": "#364135"
-  },
-  "bold": {
-    "fontWeight": "700"
-  },
-  "italic": {
-    "fontStyle": "italic"
-  },
-  "inserted": {
-    "background": "#0f0"
-  },
-  "deleted": {
-    "background": "#ff000d"
-  },
-  "code.language-css .token.property": {
-    "color": "#a9b7c6"
-  },
-  "code.language-css .token.property+.token.punctuation": {
-    "color": "#a9b7c6"
-  },
-  "code.language-css .token.id": {
-    "color": "#ffc66d"
-  },
-  "code.language-css .token.selector>.token.attribute": {
-    "color": "#ffc66d"
-  },
-  "code.language-css .token.selector>.token.class": {
-    "color": "#ffc66d"
-  },
-  "code.language-css .token.selector>.token.pseudo-class": {
-    "color": "#ffc66d"
-  },
-  "code.language-css .token.selector>.token.pseudo-element": {
-    "color": "#ffc66d"
-  },
-  "class-name": {
-    "color": "#fb94ff"
-  },
-  ".language-css .token.string": {
-    "background": "0 0"
-  },
-  ".style .token.string": {
-    "background": "0 0"
-  },
-  ".line-highlight.line-highlight": {
-    "marginTop": "36px",
-    "background": "linear-gradient(to right,rgba(179,98,255,.17),transparent)"
-  },
-  ".line-highlight.line-highlight:before": {
-    "content": "''"
-  },
-  ".line-highlight.line-highlight[data-end]:after": {
-    "content": "''"
-  }
-});
-
-/***/ }),
-
 /***/ "./src/styles/prism/solarized-dark-atom.js":
 /*!*************************************************!*\
   !*** ./src/styles/prism/solarized-dark-atom.js ***!
@@ -66729,171 +59131,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   "attr-value": {
     "color": "#F9EE98"
-  }
-});
-
-/***/ }),
-
-/***/ "./src/styles/prism/solarized-dark-atom.min.js":
-/*!*****************************************************!*\
-  !*** ./src/styles/prism/solarized-dark-atom.min.js ***!
-  \*****************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "color": "#839496",
-    "textShadow": "0 1px rgba(0,0,0,.3)",
-    "fontFamily": "Inconsolata,Monaco,Consolas,'Courier New',Courier,monospace",
-    "direction": "ltr",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none"
-  },
-  "pre[class*=language-]": {
-    "color": "#839496",
-    "textShadow": "0 1px rgba(0,0,0,.3)",
-    "fontFamily": "Inconsolata,Monaco,Consolas,'Courier New',Courier,monospace",
-    "direction": "ltr",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "padding": "1em",
-    "margin": ".5em 0",
-    "overflow": "auto",
-    "borderRadius": ".3em",
-    "background": "#002b36"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "background": "#002b36",
-    "padding": ".1em",
-    "borderRadius": ".3em"
-  },
-  "cdata": {
-    "color": "#586e75"
-  },
-  "comment": {
-    "color": "#586e75"
-  },
-  "doctype": {
-    "color": "#586e75"
-  },
-  "prolog": {
-    "color": "#586e75"
-  },
-  "punctuation": {
-    "color": "#93a1a1"
-  },
-  ".namespace": {
-    "Opacity": ".7"
-  },
-  "keyword": {
-    "color": "#268bd2"
-  },
-  "property": {
-    "color": "#268bd2"
-  },
-  "tag": {
-    "color": "#268bd2"
-  },
-  "class-name": {
-    "color": "#ffffb6",
-    "textDecoration": "underline"
-  },
-  "boolean": {
-    "color": "#b58900"
-  },
-  "constant": {
-    "color": "#b58900"
-  },
-  "deleted": {
-    "color": "#dc322f"
-  },
-  "symbol": {
-    "color": "#dc322f"
-  },
-  "number": {
-    "color": "#859900"
-  },
-  "attr-name": {
-    "color": "#859900"
-  },
-  "builtin": {
-    "color": "#859900"
-  },
-  "char": {
-    "color": "#859900"
-  },
-  "inserted": {
-    "color": "#859900"
-  },
-  "selector": {
-    "color": "#859900"
-  },
-  "string": {
-    "color": "#859900"
-  },
-  "variable": {
-    "color": "#268bd2"
-  },
-  "operator": {
-    "color": "#ededed"
-  },
-  "function": {
-    "color": "#268bd2"
-  },
-  "regex": {
-    "color": "#e9c062"
-  },
-  "important": {
-    "color": "#fd971f",
-    "fontWeight": "700"
-  },
-  "entity": {
-    "color": "#ffffb6",
-    "cursor": "help"
-  },
-  "url": {
-    "color": "#96cbfe"
-  },
-  ".language-css .token.string": {
-    "color": "#87c38a"
-  },
-  ".style .token.string": {
-    "color": "#87c38a"
-  },
-  "bold": {
-    "fontWeight": "700"
-  },
-  "italic": {
-    "fontStyle": "italic"
-  },
-  "atrule": {
-    "color": "#f9ee98"
-  },
-  "attr-value": {
-    "color": "#f9ee98"
   }
 });
 
@@ -67071,186 +59308,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   "bold": {
     "fontWeight": "bold"
-  },
-  "italic": {
-    "fontStyle": "italic"
-  }
-});
-
-/***/ }),
-
-/***/ "./src/styles/prism/solarizedlight.min.js":
-/*!************************************************!*\
-  !*** ./src/styles/prism/solarizedlight.min.js ***!
-  \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "color": "#657b83",
-    "fontFamily": "Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace",
-    "fontSize": "1em",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none"
-  },
-  "pre[class*=language-]": {
-    "color": "#657b83",
-    "fontFamily": "Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace",
-    "fontSize": "1em",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "padding": "1em",
-    "margin": ".5em 0",
-    "overflow": "auto",
-    "borderRadius": ".3em",
-    "backgroundColor": "#fdf6e3"
-  },
-  "code[class*=language-] ::-moz-selection": {
-    "background": "#073642"
-  },
-  "code[class*=language-]::-moz-selection": {
-    "background": "#073642"
-  },
-  "pre[class*=language-] ::-moz-selection": {
-    "background": "#073642"
-  },
-  "pre[class*=language-]::-moz-selection": {
-    "background": "#073642"
-  },
-  "code[class*=language-] ::selection": {
-    "background": "#073642"
-  },
-  "code[class*=language-]::selection": {
-    "background": "#073642"
-  },
-  "pre[class*=language-] ::selection": {
-    "background": "#073642"
-  },
-  "pre[class*=language-]::selection": {
-    "background": "#073642"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "backgroundColor": "#fdf6e3",
-    "padding": ".1em",
-    "borderRadius": ".3em"
-  },
-  "cdata": {
-    "color": "#93a1a1"
-  },
-  "comment": {
-    "color": "#93a1a1"
-  },
-  "doctype": {
-    "color": "#93a1a1"
-  },
-  "prolog": {
-    "color": "#93a1a1"
-  },
-  "punctuation": {
-    "color": "#586e75"
-  },
-  "namespace": {
-    "Opacity": ".7"
-  },
-  "boolean": {
-    "color": "#268bd2"
-  },
-  "constant": {
-    "color": "#268bd2"
-  },
-  "deleted": {
-    "color": "#268bd2"
-  },
-  "number": {
-    "color": "#268bd2"
-  },
-  "property": {
-    "color": "#268bd2"
-  },
-  "symbol": {
-    "color": "#268bd2"
-  },
-  "tag": {
-    "color": "#268bd2"
-  },
-  "attr-name": {
-    "color": "#2aa198"
-  },
-  "builtin": {
-    "color": "#2aa198"
-  },
-  "char": {
-    "color": "#2aa198"
-  },
-  "inserted": {
-    "color": "#2aa198"
-  },
-  "selector": {
-    "color": "#2aa198"
-  },
-  "string": {
-    "color": "#2aa198"
-  },
-  "url": {
-    "color": "#2aa198"
-  },
-  "entity": {
-    "color": "#657b83",
-    "background": "#eee8d5",
-    "cursor": "help"
-  },
-  "atrule": {
-    "color": "#859900"
-  },
-  "attr-value": {
-    "color": "#859900"
-  },
-  "keyword": {
-    "color": "#859900"
-  },
-  "class-name": {
-    "color": "#b58900"
-  },
-  "function": {
-    "color": "#b58900"
-  },
-  "important": {
-    "color": "#cb4b16",
-    "fontWeight": "700"
-  },
-  "regex": {
-    "color": "#cb4b16"
-  },
-  "variable": {
-    "color": "#cb4b16"
-  },
-  "bold": {
-    "fontWeight": "700"
   },
   "italic": {
     "fontStyle": "italic"
@@ -67454,201 +59511,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/styles/prism/synthwave84.min.js":
-/*!*********************************************!*\
-  !*** ./src/styles/prism/synthwave84.min.js ***!
-  \*********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "color": "#f92aad",
-    "textShadow": "0 0 2px #100c0f,0 0 5px #dc078e33,0 0 10px #fff3",
-    "background": "0 0",
-    "fontFamily": "Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace",
-    "fontSize": "1em",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none"
-  },
-  "pre[class*=language-]": {
-    "color": "#f92aad",
-    "textShadow": "0 0 2px #100c0f,0 0 5px #dc078e33,0 0 10px #fff3",
-    "background": "0 0",
-    "fontFamily": "Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace",
-    "fontSize": "1em",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "padding": "1em",
-    "margin": ".5em 0",
-    "overflow": "auto",
-    "backgroundColor": "transparent!important",
-    "backgroundImage": "linear-gradient(to bottom,#2a2139 75%,#34294f)"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "backgroundColor": "transparent!important",
-    "backgroundImage": "linear-gradient(to bottom,#2a2139 75%,#34294f)",
-    "padding": ".1em",
-    "borderRadius": ".3em",
-    "whiteSpace": "normal"
-  },
-  "block-comment": {
-    "color": "#8e8e8e"
-  },
-  "cdata": {
-    "color": "#8e8e8e"
-  },
-  "comment": {
-    "color": "#8e8e8e"
-  },
-  "doctype": {
-    "color": "#8e8e8e"
-  },
-  "prolog": {
-    "color": "#8e8e8e"
-  },
-  "punctuation": {
-    "color": "#ccc"
-  },
-  "attr-name": {
-    "color": "#e2777a"
-  },
-  "deleted": {
-    "color": "#e2777a"
-  },
-  "hexcode": {
-    "color": "#e2777a"
-  },
-  "namespace": {
-    "color": "#e2777a"
-  },
-  "number": {
-    "color": "#e2777a"
-  },
-  "tag": {
-    "color": "#e2777a"
-  },
-  "unit": {
-    "color": "#e2777a"
-  },
-  "property": {
-    "color": "#72f1b8",
-    "textShadow": "0 0 2px #100c0f,0 0 10px #257c5575,0 0 35px #21272475"
-  },
-  "selector": {
-    "color": "#72f1b8",
-    "textShadow": "0 0 2px #100c0f,0 0 10px #257c5575,0 0 35px #21272475"
-  },
-  "function-name": {
-    "color": "#6196cc"
-  },
-  "boolean": {
-    "color": "#fdfdfd",
-    "textShadow": "0 0 2px #001716,0 0 3px #03edf975,0 0 5px #03edf975,0 0 8px #03edf975"
-  },
-  "function": {
-    "color": "#fdfdfd",
-    "textShadow": "0 0 2px #001716,0 0 3px #03edf975,0 0 5px #03edf975,0 0 8px #03edf975"
-  },
-  "selector.id": {
-    "color": "#fdfdfd",
-    "textShadow": "0 0 2px #001716,0 0 3px #03edf975,0 0 5px #03edf975,0 0 8px #03edf975"
-  },
-  "class-name": {
-    "color": "#fff5f6",
-    "textShadow": "0 0 2px #000,0 0 10px #fc1f2c75,0 0 5px #fc1f2c75,0 0 25px #fc1f2c75"
-  },
-  "constant": {
-    "color": "#f92aad",
-    "textShadow": "0 0 2px #100c0f,0 0 5px #dc078e33,0 0 10px #fff3"
-  },
-  "symbol": {
-    "color": "#f92aad",
-    "textShadow": "0 0 2px #100c0f,0 0 5px #dc078e33,0 0 10px #fff3"
-  },
-  "atrule": {
-    "color": "#f4eee4",
-    "textShadow": "0 0 2px #393a33,0 0 8px #f39f0575,0 0 2px #f39f0575"
-  },
-  "builtin": {
-    "color": "#f4eee4",
-    "textShadow": "0 0 2px #393a33,0 0 8px #f39f0575,0 0 2px #f39f0575"
-  },
-  "important": {
-    "color": "#f4eee4",
-    "textShadow": "0 0 2px #393a33,0 0 8px #f39f0575,0 0 2px #f39f0575",
-    "fontWeight": "700"
-  },
-  "keyword": {
-    "color": "#f4eee4",
-    "textShadow": "0 0 2px #393a33,0 0 8px #f39f0575,0 0 2px #f39f0575"
-  },
-  "selector.class": {
-    "color": "#f4eee4",
-    "textShadow": "0 0 2px #393a33,0 0 8px #f39f0575,0 0 2px #f39f0575"
-  },
-  "attr-value": {
-    "color": "#f87c32"
-  },
-  "char": {
-    "color": "#f87c32"
-  },
-  "regex": {
-    "color": "#f87c32"
-  },
-  "string": {
-    "color": "#f87c32"
-  },
-  "variable": {
-    "color": "#f87c32"
-  },
-  "entity": {
-    "color": "#67cdcc",
-    "cursor": "help"
-  },
-  "operator": {
-    "color": "#67cdcc"
-  },
-  "url": {
-    "color": "#67cdcc"
-  },
-  "bold": {
-    "fontWeight": "700"
-  },
-  "italic": {
-    "fontStyle": "italic"
-  },
-  "inserted": {
-    "color": "green"
-  }
-});
-
-/***/ }),
-
 /***/ "./src/styles/prism/tomorrow.js":
 /*!**************************************!*\
   !*** ./src/styles/prism/tomorrow.js ***!
@@ -67803,171 +59665,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   "bold": {
     "fontWeight": "bold"
-  },
-  "italic": {
-    "fontStyle": "italic"
-  },
-  "inserted": {
-    "color": "green"
-  }
-});
-
-/***/ }),
-
-/***/ "./src/styles/prism/tomorrow.min.js":
-/*!******************************************!*\
-  !*** ./src/styles/prism/tomorrow.min.js ***!
-  \******************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "color": "#ccc",
-    "background": "0 0",
-    "fontFamily": "Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace",
-    "fontSize": "1em",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none"
-  },
-  "pre[class*=language-]": {
-    "color": "#ccc",
-    "background": "#2d2d2d",
-    "fontFamily": "Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace",
-    "fontSize": "1em",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "padding": "1em",
-    "margin": ".5em 0",
-    "overflow": "auto"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "background": "#2d2d2d",
-    "padding": ".1em",
-    "borderRadius": ".3em",
-    "whiteSpace": "normal"
-  },
-  "block-comment": {
-    "color": "#999"
-  },
-  "cdata": {
-    "color": "#999"
-  },
-  "comment": {
-    "color": "#999"
-  },
-  "doctype": {
-    "color": "#999"
-  },
-  "prolog": {
-    "color": "#999"
-  },
-  "punctuation": {
-    "color": "#ccc"
-  },
-  "attr-name": {
-    "color": "#e2777a"
-  },
-  "deleted": {
-    "color": "#e2777a"
-  },
-  "namespace": {
-    "color": "#e2777a"
-  },
-  "tag": {
-    "color": "#e2777a"
-  },
-  "function-name": {
-    "color": "#6196cc"
-  },
-  "boolean": {
-    "color": "#f08d49"
-  },
-  "function": {
-    "color": "#f08d49"
-  },
-  "number": {
-    "color": "#f08d49"
-  },
-  "class-name": {
-    "color": "#f8c555"
-  },
-  "constant": {
-    "color": "#f8c555"
-  },
-  "property": {
-    "color": "#f8c555"
-  },
-  "symbol": {
-    "color": "#f8c555"
-  },
-  "atrule": {
-    "color": "#cc99cd"
-  },
-  "builtin": {
-    "color": "#cc99cd"
-  },
-  "important": {
-    "color": "#cc99cd",
-    "fontWeight": "700"
-  },
-  "keyword": {
-    "color": "#cc99cd"
-  },
-  "selector": {
-    "color": "#cc99cd"
-  },
-  "attr-value": {
-    "color": "#7ec699"
-  },
-  "char": {
-    "color": "#7ec699"
-  },
-  "regex": {
-    "color": "#7ec699"
-  },
-  "string": {
-    "color": "#7ec699"
-  },
-  "variable": {
-    "color": "#7ec699"
-  },
-  "entity": {
-    "color": "#67cdcc",
-    "cursor": "help"
-  },
-  "operator": {
-    "color": "#67cdcc"
-  },
-  "url": {
-    "color": "#67cdcc"
-  },
-  "bold": {
-    "fontWeight": "700"
   },
   "italic": {
     "fontStyle": "italic"
@@ -68200,232 +59897,6 @@ __webpack_require__.r(__webpack_exports__);
   ".line-highlight.line-highlight[data-end]:after": {
     "backgroundColor": "hsl(215, 15%, 59%)",
     "color": "hsl(24, 20%, 95%)"
-  }
-});
-
-/***/ }),
-
-/***/ "./src/styles/prism/twilight.min.js":
-/*!******************************************!*\
-  !*** ./src/styles/prism/twilight.min.js ***!
-  \******************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "color": "#fff",
-    "background": "0 0",
-    "fontFamily": "Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace",
-    "fontSize": "1em",
-    "textAlign": "left",
-    "textShadow": "0 -.1em .2em #000",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none"
-  },
-  "pre[class*=language-]": {
-    "color": "#fff",
-    "background": "#141414",
-    "fontFamily": "Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace",
-    "fontSize": "1em",
-    "textAlign": "left",
-    "textShadow": "0 -.1em .2em #000",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "borderRadius": ".5em",
-    "border": ".3em solid #545454",
-    "boxShadow": "1px 1px .5em #000 inset",
-    "margin": ".5em 0",
-    "overflow": "auto",
-    "padding": "1em"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "background": "#141414",
-    "borderRadius": ".3em",
-    "border": ".13em solid #545454",
-    "boxShadow": "1px 1px .3em -.1em #000 inset",
-    "padding": ".15em .2em .05em",
-    "whiteSpace": "normal"
-  },
-  "pre[class*=language-]::-moz-selection": {
-    "background": "hsla(0,0%,93%,.15)",
-    "textShadow": "none"
-  },
-  "pre[class*=language-]::selection": {
-    "background": "hsla(0,0%,93%,.15)",
-    "textShadow": "none"
-  },
-  "code[class*=language-] ::-moz-selection": {
-    "textShadow": "none",
-    "background": "hsla(0,0%,93%,.15)"
-  },
-  "code[class*=language-]::-moz-selection": {
-    "textShadow": "none",
-    "background": "hsla(0,0%,93%,.15)"
-  },
-  "pre[class*=language-] ::-moz-selection": {
-    "textShadow": "none",
-    "background": "hsla(0,0%,93%,.15)"
-  },
-  "code[class*=language-] ::selection": {
-    "textShadow": "none",
-    "background": "hsla(0,0%,93%,.15)"
-  },
-  "code[class*=language-]::selection": {
-    "textShadow": "none",
-    "background": "hsla(0,0%,93%,.15)"
-  },
-  "pre[class*=language-] ::selection": {
-    "textShadow": "none",
-    "background": "hsla(0,0%,93%,.15)"
-  },
-  "cdata": {
-    "color": "#777"
-  },
-  "comment": {
-    "color": "#777"
-  },
-  "doctype": {
-    "color": "#777"
-  },
-  "prolog": {
-    "color": "#777"
-  },
-  "punctuation": {
-    "Opacity": ".7"
-  },
-  "namespace": {
-    "Opacity": ".7"
-  },
-  "boolean": {
-    "color": "#ce6849"
-  },
-  "deleted": {
-    "color": "#ce6849"
-  },
-  "number": {
-    "color": "#ce6849"
-  },
-  "tag": {
-    "color": "#ce6849"
-  },
-  "builtin": {
-    "color": "#f9ed99"
-  },
-  "constant": {
-    "color": "#f9ed99"
-  },
-  "keyword": {
-    "color": "#f9ed99"
-  },
-  "property": {
-    "color": "#f9ed99"
-  },
-  "selector": {
-    "color": "#f9ed99"
-  },
-  "symbol": {
-    "color": "#f9ed99"
-  },
-  ".language-css .token.string": {
-    "color": "#909e6a"
-  },
-  ".style .token.string": {
-    "color": "#909e6a"
-  },
-  "attr-name": {
-    "color": "#909e6a"
-  },
-  "attr-value": {
-    "color": "#909e6a"
-  },
-  "char": {
-    "color": "#909e6a"
-  },
-  "entity": {
-    "color": "#909e6a",
-    "cursor": "help"
-  },
-  "inserted": {
-    "color": "#909e6a"
-  },
-  "operator": {
-    "color": "#909e6a"
-  },
-  "string": {
-    "color": "#909e6a"
-  },
-  "url": {
-    "color": "#909e6a"
-  },
-  "variable": {
-    "color": "#909e6a"
-  },
-  "atrule": {
-    "color": "#7385a5"
-  },
-  "important": {
-    "color": "#e8c062",
-    "fontWeight": "700"
-  },
-  "regex": {
-    "color": "#e8c062"
-  },
-  "bold": {
-    "fontWeight": "700"
-  },
-  "italic": {
-    "fontStyle": "italic"
-  },
-  ".language-markup .token.attr-name": {
-    "color": "#ac885c"
-  },
-  ".language-markup .token.punctuation": {
-    "color": "#ac885c"
-  },
-  ".language-markup .token.tag": {
-    "color": "#ac885c"
-  },
-  "": {
-    "position": "relative",
-    "zIndex": "1"
-  },
-  ".line-highlight.line-highlight": {
-    "background": "linear-gradient(to right,hsla(0,0%,33%,.1) 70%,hsla(0,0%,33%,0))",
-    "borderBottom": "1px dashed #545454",
-    "borderTop": "1px dashed #545454",
-    "marginTop": ".75em",
-    "zIndex": "0"
-  },
-  ".line-highlight.line-highlight:before": {
-    "backgroundColor": "#8693a6",
-    "color": "#f4f1ef"
-  },
-  ".line-highlight.line-highlight[data-end]:after": {
-    "backgroundColor": "#8693a6",
-    "color": "#f4f1ef"
   }
 });
 
@@ -68816,224 +60287,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/styles/prism/vs.min.js":
-/*!************************************!*\
-  !*** ./src/styles/prism/vs.min.js ***!
-  \************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "color": "#393a34",
-    "fontFamily": "Consolas,\"Bitstream Vera Sans Mono\",\"Courier New\",Courier,monospace",
-    "direction": "ltr",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "fontSize": ".9em",
-    "lineHeight": "1.2em",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none"
-  },
-  "pre[class*=language-]": {
-    "color": "#393a34",
-    "fontFamily": "Consolas,\"Bitstream Vera Sans Mono\",\"Courier New\",Courier,monospace",
-    "direction": "ltr",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "fontSize": ".9em",
-    "lineHeight": "1.2em",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "padding": "1em",
-    "margin": ".5em 0",
-    "overflow": "auto",
-    "border": "1px solid #ddd",
-    "backgroundColor": "#fff"
-  },
-  "pre>code[class*=language-]": {
-    "fontSize": "1em"
-  },
-  "code[class*=language-] ::-moz-selection": {
-    "background": "#c1def1"
-  },
-  "code[class*=language-]::-moz-selection": {
-    "background": "#c1def1"
-  },
-  "pre[class*=language-] ::-moz-selection": {
-    "background": "#c1def1"
-  },
-  "pre[class*=language-]::-moz-selection": {
-    "background": "#c1def1"
-  },
-  "code[class*=language-] ::selection": {
-    "background": "#c1def1"
-  },
-  "code[class*=language-]::selection": {
-    "background": "#c1def1"
-  },
-  "pre[class*=language-] ::selection": {
-    "background": "#c1def1"
-  },
-  "pre[class*=language-]::selection": {
-    "background": "#c1def1"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "padding": ".2em",
-    "paddingTop": "1px",
-    "paddingBottom": "1px",
-    "background": "#f8f8f8",
-    "border": "1px solid #ddd"
-  },
-  "cdata": {
-    "color": "green",
-    "fontStyle": "italic"
-  },
-  "comment": {
-    "color": "green",
-    "fontStyle": "italic"
-  },
-  "doctype": {
-    "color": "green",
-    "fontStyle": "italic"
-  },
-  "prolog": {
-    "color": "green",
-    "fontStyle": "italic"
-  },
-  "namespace": {
-    "Opacity": ".7"
-  },
-  "string": {
-    "color": "#a31515"
-  },
-  "operator": {
-    "color": "#393a34"
-  },
-  "punctuation": {
-    "color": "#393a34"
-  },
-  "boolean": {
-    "color": "#36acaa"
-  },
-  "constant": {
-    "color": "#36acaa"
-  },
-  "inserted": {
-    "color": "#36acaa"
-  },
-  "number": {
-    "color": "#36acaa"
-  },
-  "symbol": {
-    "color": "#36acaa"
-  },
-  "url": {
-    "color": "#36acaa"
-  },
-  "variable": {
-    "color": "#36acaa"
-  },
-  ".language-autohotkey .token.selector": {
-    "color": "#00f"
-  },
-  ".language-json .token.boolean": {
-    "color": "#00f"
-  },
-  ".language-json .token.number": {
-    "color": "#00f"
-  },
-  "atrule": {
-    "color": "#00f"
-  },
-  "attr-value": {
-    "color": "#00f"
-  },
-  "keyword": {
-    "color": "#00f"
-  },
-  "code[class*=language-css]": {
-    "color": "#00f"
-  },
-  "function": {
-    "color": "#393a34"
-  },
-  ".language-autohotkey .token.tag": {
-    "color": "#9a050f"
-  },
-  "deleted": {
-    "color": "#9a050f"
-  },
-  ".language-autohotkey .token.keyword": {
-    "color": "#00009f"
-  },
-  "selector": {
-    "color": "maroon"
-  },
-  "important": {
-    "color": "#e90",
-    "fontWeight": "700"
-  },
-  "bold": {
-    "fontWeight": "700"
-  },
-  "italic": {
-    "fontStyle": "italic"
-  },
-  ".language-json .token.property": {
-    "color": "#2b91af"
-  },
-  "class-name": {
-    "color": "#2b91af"
-  },
-  "tag": {
-    "color": "maroon"
-  },
-  "attr-name": {
-    "color": "red"
-  },
-  "entity": {
-    "color": "red"
-  },
-  "property": {
-    "color": "red"
-  },
-  "regex": {
-    "color": "red"
-  },
-  "directive.tag.tag": {
-    "background": "#ff0",
-    "color": "#393a34"
-  },
-  ".line-numbers.line-numbers .line-numbers-rows": {
-    "borderRightColor": "#a5a5a5"
-  },
-  ".line-numbers .line-numbers-rows>span:before": {
-    "color": "#2b91af"
-  },
-  ".line-highlight.line-highlight": {
-    "background": "linear-gradient(to right,rgba(193,222,241,.2) 70%,rgba(221,222,241,0))"
-  }
-});
-
-/***/ }),
-
 /***/ "./src/styles/prism/vsc-dark-plus.js":
 /*!*******************************************!*\
   !*** ./src/styles/prism/vsc-dark-plus.js ***!
@@ -69328,300 +60581,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/styles/prism/vsc-dark-plus.min.js":
-/*!***********************************************!*\
-  !*** ./src/styles/prism/vsc-dark-plus.min.js ***!
-  \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "color": "#d4d4d4",
-    "fontSize": "13px",
-    "textShadow": "none",
-    "fontFamily": "Menlo,Monaco,Consolas,\"Andale Mono\",\"Ubuntu Mono\",\"Courier New\",monospace",
-    "direction": "ltr",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none"
-  },
-  "pre[class*=language-]": {
-    "color": "#d4d4d4",
-    "fontSize": "13px",
-    "textShadow": "none",
-    "fontFamily": "Menlo,Monaco,Consolas,\"Andale Mono\",\"Ubuntu Mono\",\"Courier New\",monospace",
-    "direction": "ltr",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "lineHeight": "1.5",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "padding": "1em",
-    "margin": ".5em 0",
-    "overflow": "auto",
-    "background": "#1e1e1e"
-  },
-  "code[class*=language-] ::selection": {
-    "textShadow": "none",
-    "background": "#264f78"
-  },
-  "code[class*=language-]::selection": {
-    "textShadow": "none",
-    "background": "#264f78"
-  },
-  "pre[class*=language-] ::selection": {
-    "textShadow": "none",
-    "background": "#264f78"
-  },
-  "pre[class*=language-]::selection": {
-    "textShadow": "none",
-    "background": "#264f78"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "padding": ".1em .3em",
-    "borderRadius": ".3em",
-    "color": "#db4c69",
-    "background": "#1e1e1e"
-  },
-  ".namespace": {
-    "Opacity": ".7"
-  },
-  "doctype.doctype-tag": {
-    "color": "#569cd6"
-  },
-  "doctype.name": {
-    "color": "#9cdcfe"
-  },
-  "comment": {
-    "color": "#6a9955"
-  },
-  "prolog": {
-    "color": "#6a9955"
-  },
-  ".language-html .language-css .token.punctuation": {
-    "color": "#d4d4d4"
-  },
-  ".language-html .language-javascript .token.punctuation": {
-    "color": "#d4d4d4"
-  },
-  "punctuation": {
-    "color": "#d4d4d4"
-  },
-  "boolean": {
-    "color": "#569cd6"
-  },
-  "constant": {
-    "color": "#9cdcfe"
-  },
-  "inserted": {
-    "color": "#b5cea8"
-  },
-  "number": {
-    "color": "#b5cea8"
-  },
-  "property": {
-    "color": "#9cdcfe"
-  },
-  "symbol": {
-    "color": "#b5cea8"
-  },
-  "tag": {
-    "color": "#569cd6"
-  },
-  "unit": {
-    "color": "#b5cea8"
-  },
-  "attr-name": {
-    "color": "#9cdcfe"
-  },
-  "builtin": {
-    "color": "#ce9178"
-  },
-  "char": {
-    "color": "#ce9178"
-  },
-  "deleted": {
-    "color": "#ce9178"
-  },
-  "selector": {
-    "color": "#d7ba7d"
-  },
-  "string": {
-    "color": "#ce9178"
-  },
-  ".language-css .token.string.url": {
-    "textDecoration": "underline"
-  },
-  "entity": {
-    "color": "#569cd6"
-  },
-  "operator": {
-    "color": "#d4d4d4"
-  },
-  "operator.arrow": {
-    "color": "#569cd6"
-  },
-  "atrule": {
-    "color": "#ce9178"
-  },
-  "atrule.rule": {
-    "color": "#c586c0"
-  },
-  "atrule.url": {
-    "color": "#9cdcfe"
-  },
-  "atrule.url.function": {
-    "color": "#dcdcaa"
-  },
-  "atrule.url.punctuation": {
-    "color": "#d4d4d4"
-  },
-  "keyword": {
-    "color": "#569cd6"
-  },
-  "keyword.control-flow": {
-    "color": "#c586c0"
-  },
-  "keyword.module": {
-    "color": "#c586c0"
-  },
-  "function": {
-    "color": "#dcdcaa"
-  },
-  "function.maybe-class-name": {
-    "color": "#dcdcaa"
-  },
-  "regex": {
-    "color": "#d16969"
-  },
-  "important": {
-    "color": "#569cd6"
-  },
-  "italic": {
-    "fontStyle": "italic"
-  },
-  "class-name": {
-    "color": "#4ec9b0"
-  },
-  "maybe-class-name": {
-    "color": "#4ec9b0"
-  },
-  "console": {
-    "color": "#9cdcfe"
-  },
-  "parameter": {
-    "color": "#9cdcfe"
-  },
-  "interpolation": {
-    "color": "#9cdcfe"
-  },
-  "punctuation.interpolation-punctuation": {
-    "color": "#569cd6"
-  },
-  "exports.maybe-class-name": {
-    "color": "#9cdcfe"
-  },
-  "imports.maybe-class-name": {
-    "color": "#9cdcfe"
-  },
-  "variable": {
-    "color": "#9cdcfe"
-  },
-  "escape": {
-    "color": "#d7ba7d"
-  },
-  "tag.punctuation": {
-    "color": "grey"
-  },
-  "cdata": {
-    "color": "grey"
-  },
-  "attr-value": {
-    "color": "#ce9178"
-  },
-  "attr-value.punctuation": {
-    "color": "#ce9178"
-  },
-  "attr-value.punctuation.attr-equals": {
-    "color": "#d4d4d4"
-  },
-  "namespace": {
-    "color": "#4ec9b0"
-  },
-  "code[class*=language-javascript]": {
-    "color": "#9cdcfe"
-  },
-  "code[class*=language-jsx]": {
-    "color": "#9cdcfe"
-  },
-  "code[class*=language-tsx]": {
-    "color": "#9cdcfe"
-  },
-  "code[class*=language-typescript]": {
-    "color": "#9cdcfe"
-  },
-  "pre[class*=language-javascript]": {
-    "color": "#9cdcfe"
-  },
-  "pre[class*=language-jsx]": {
-    "color": "#9cdcfe"
-  },
-  "pre[class*=language-tsx]": {
-    "color": "#9cdcfe"
-  },
-  "pre[class*=language-typescript]": {
-    "color": "#9cdcfe"
-  },
-  "code[class*=language-css]": {
-    "color": "#ce9178"
-  },
-  "pre[class*=language-css]": {
-    "color": "#ce9178"
-  },
-  "code[class*=language-html]": {
-    "color": "#d4d4d4"
-  },
-  "pre[class*=language-html]": {
-    "color": "#d4d4d4"
-  },
-  ".language-regex .token.anchor": {
-    "color": "#dcdcaa"
-  },
-  ".language-html .token.punctuation": {
-    "color": "grey"
-  },
-  "pre[class*=language-]>code[class*=language-]": {
-    "position": "relative",
-    "zIndex": "1"
-  },
-  ".line-highlight.line-highlight": {
-    "background": "#f7ebc6",
-    "boxShadow": "inset 5px 0 0 #f7d87c",
-    "zIndex": "0"
-  }
-});
-
-/***/ }),
-
 /***/ "./src/styles/prism/xonokai.js":
 /*!*************************************!*\
   !*** ./src/styles/prism/xonokai.js ***!
@@ -69809,198 +60768,6 @@ __webpack_require__.r(__webpack_exports__);
     "height": "1em",
     "lineHeight": "1em",
     "boxShadow": "0 1px 1px rgba(255, 255, 255, 0.7)"
-  }
-});
-
-/***/ }),
-
-/***/ "./src/styles/prism/xonokai.min.js":
-/*!*****************************************!*\
-  !*** ./src/styles/prism/xonokai.min.js ***!
-  \*****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "MozTabSize": "2",
-    "OTabSize": "2",
-    "tabSize": "2",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "whiteSpace": "pre-wrap",
-    "wordWrap": "normal",
-    "fontFamily": "Menlo,Monaco,\"Courier New\",monospace",
-    "fontSize": "14px",
-    "color": "#76d9e6",
-    "textShadow": "none"
-  },
-  "pre[class*=language-]": {
-    "MozTabSize": "2",
-    "OTabSize": "2",
-    "tabSize": "2",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "whiteSpace": "pre-wrap",
-    "wordWrap": "normal",
-    "fontFamily": "Menlo,Monaco,\"Courier New\",monospace",
-    "fontSize": "14px",
-    "color": "#76d9e6",
-    "textShadow": "none",
-    "background": "#2a2a2a",
-    "padding": "15px",
-    "borderRadius": "4px",
-    "border": "1px solid #e1e1e8",
-    "overflow": "auto",
-    "position": "relative"
-  },
-  "pre>code[class*=language-]": {
-    "fontSize": "1em"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "background": "#2a2a2a",
-    "padding": ".15em .2em .05em",
-    "borderRadius": ".3em",
-    "border": ".13em solid #7a6652",
-    "boxShadow": "1px 1px .3em -.1em #000 inset"
-  },
-  "pre[class*=language-] code": {
-    "whiteSpace": "pre",
-    "display": "block"
-  },
-  "namespace": {
-    "Opacity": ".7"
-  },
-  "cdata": {
-    "color": "#6f705e"
-  },
-  "comment": {
-    "color": "#6f705e"
-  },
-  "doctype": {
-    "color": "#6f705e"
-  },
-  "prolog": {
-    "color": "#6f705e"
-  },
-  "boolean": {
-    "color": "#a77afe"
-  },
-  "number": {
-    "color": "#a77afe"
-  },
-  "operator": {
-    "color": "#a77afe"
-  },
-  "attr-name": {
-    "color": "#e6d06c"
-  },
-  "string": {
-    "color": "#e6d06c"
-  },
-  ".language-css .token.string": {
-    "color": "#e6d06c"
-  },
-  ".style .token.string": {
-    "color": "#e6d06c"
-  },
-  "entity": {
-    "color": "#e6d06c",
-    "cursor": "help"
-  },
-  "url": {
-    "color": "#e6d06c"
-  },
-  "inserted": {
-    "color": "#a6e22d"
-  },
-  "selector": {
-    "color": "#a6e22d"
-  },
-  "atrule": {
-    "color": "#ef3b7d"
-  },
-  "attr-value": {
-    "color": "#ef3b7d"
-  },
-  "deleted": {
-    "color": "#ef3b7d"
-  },
-  "important": {
-    "color": "#ef3b7d",
-    "fontWeight": "700"
-  },
-  "keyword": {
-    "color": "#ef3b7d"
-  },
-  "regex": {
-    "color": "#76d9e6"
-  },
-  "statement": {
-    "color": "#76d9e6",
-    "fontWeight": "700"
-  },
-  "placeholder": {
-    "color": "#fff"
-  },
-  "variable": {
-    "color": "#fff"
-  },
-  "bold": {
-    "fontWeight": "700"
-  },
-  "punctuation": {
-    "color": "#bebec5"
-  },
-  "italic": {
-    "fontStyle": "italic"
-  },
-  "code.language-markup": {
-    "color": "#f9f9f9"
-  },
-  "code.language-markup .token.tag": {
-    "color": "#ef3b7d"
-  },
-  "code.language-markup .token.attr-name": {
-    "color": "#a6e22d"
-  },
-  "code.language-markup .token.attr-value": {
-    "color": "#e6d06c"
-  },
-  "code.language-markup .token.script": {
-    "color": "#76d9e6"
-  },
-  "code.language-markup .token.style": {
-    "color": "#76d9e6"
-  },
-  "code.language-markup .token.script .token.keyword": {
-    "color": "#76d9e6"
-  },
-  ".line-highlight.line-highlight": {
-    "padding": "0",
-    "background": "rgba(255,255,255,.08)"
-  },
-  ".line-highlight.line-highlight:before": {
-    "padding": ".2em .5em",
-    "backgroundColor": "rgba(255,255,255,.4)",
-    "color": "#000",
-    "height": "1em",
-    "lineHeight": "1em",
-    "boxShadow": "0 1px 1px rgba(255,255,255,.7)"
-  },
-  ".line-highlight.line-highlight[data-end]:after": {
-    "padding": ".2em .5em",
-    "backgroundColor": "rgba(255,255,255,.4)",
-    "color": "#000",
-    "height": "1em",
-    "lineHeight": "1em",
-    "boxShadow": "0 1px 1px rgba(255,255,255,.7)"
   }
 });
 
@@ -70206,214 +60973,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   "bold": {
     "fontWeight": "bold"
-  },
-  "italic": {
-    "fontStyle": "italic"
-  }
-});
-
-/***/ }),
-
-/***/ "./src/styles/prism/z-touch.min.js":
-/*!*****************************************!*\
-  !*** ./src/styles/prism/z-touch.min.js ***!
-  \*****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "code[class*=language-]": {
-    "color": "#22da17",
-    "fontFamily": "monospace",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "lineHeight": "25px",
-    "fontSize": "18px",
-    "margin": "5px 0"
-  },
-  "pre[class*=language-]": {
-    "color": "#fff",
-    "fontFamily": "monospace",
-    "textAlign": "left",
-    "whiteSpace": "pre",
-    "wordSpacing": "normal",
-    "wordBreak": "normal",
-    "wordWrap": "normal",
-    "MozTabSize": "4",
-    "OTabSize": "4",
-    "tabSize": "4",
-    "WebkitHyphens": "none",
-    "MozHyphens": "none",
-    "msHyphens": "none",
-    "hyphens": "none",
-    "lineHeight": "25px",
-    "fontSize": "18px",
-    "margin": ".5em 0",
-    "background": "#0a143c",
-    "padding": "1em",
-    "overflow": "auto"
-  },
-  "pre[class*=language-] *": {
-    "fontFamily": "monospace"
-  },
-  ":not(pre)>code[class*=language-]": {
-    "color": "#fff",
-    "background": "#0a143c",
-    "padding": ".1em",
-    "borderRadius": ".3em",
-    "whiteSpace": "normal"
-  },
-  "code[class*=language-] ::-moz-selection": {
-    "textShadow": "none",
-    "background": "rgba(29,59,83,.99)"
-  },
-  "code[class*=language-]::-moz-selection": {
-    "textShadow": "none",
-    "background": "rgba(29,59,83,.99)"
-  },
-  "pre[class*=language-] ::-moz-selection": {
-    "textShadow": "none",
-    "background": "rgba(29,59,83,.99)"
-  },
-  "pre[class*=language-]::-moz-selection": {
-    "textShadow": "none",
-    "background": "rgba(29,59,83,.99)"
-  },
-  "code[class*=language-] ::selection": {
-    "textShadow": "none",
-    "background": "rgba(29,59,83,.99)"
-  },
-  "code[class*=language-]::selection": {
-    "textShadow": "none",
-    "background": "rgba(29,59,83,.99)"
-  },
-  "pre[class*=language-] ::selection": {
-    "textShadow": "none",
-    "background": "rgba(29,59,83,.99)"
-  },
-  "pre[class*=language-]::selection": {
-    "textShadow": "none",
-    "background": "rgba(29,59,83,.99)"
-  },
-  "cdata": {
-    "color": "#637777",
-    "fontStyle": "italic"
-  },
-  "comment": {
-    "color": "#637777",
-    "fontStyle": "italic"
-  },
-  "prolog": {
-    "color": "#637777",
-    "fontStyle": "italic"
-  },
-  "punctuation": {
-    "color": "#c792ea"
-  },
-  ".namespace": {
-    "color": "#b2ccd6"
-  },
-  "deleted": {
-    "color": "rgba(239,83,80,.56)",
-    "fontStyle": "italic"
-  },
-  "property": {
-    "color": "#80cbc4"
-  },
-  "symbol": {
-    "color": "#80cbc4"
-  },
-  "keyword": {
-    "color": "#7fdbca"
-  },
-  "operator": {
-    "color": "#7fdbca"
-  },
-  "tag": {
-    "color": "#7fdbca"
-  },
-  "boolean": {
-    "color": "#ff5874"
-  },
-  "number": {
-    "color": "#f78c6c"
-  },
-  "builtin": {
-    "color": "rgb(34 183 199)"
-  },
-  "char": {
-    "color": "rgb(34 183 199)"
-  },
-  "constant": {
-    "color": "rgb(34 183 199)"
-  },
-  "function": {
-    "color": "rgb(34 183 199)"
-  },
-  "doctype": {
-    "color": "#c792ea",
-    "fontStyle": "italic"
-  },
-  "selector": {
-    "color": "#c792ea",
-    "fontStyle": "italic"
-  },
-  "attr-name": {
-    "color": "#addb67",
-    "fontStyle": "italic"
-  },
-  "inserted": {
-    "color": "#addb67",
-    "fontStyle": "italic"
-  },
-  ".language-css .token.string": {
-    "color": "#addb67"
-  },
-  ".style .token.string": {
-    "color": "#addb67"
-  },
-  "entity": {
-    "color": "#addb67"
-  },
-  "string": {
-    "color": "#addb67"
-  },
-  "url": {
-    "color": "#addb67"
-  },
-  "atrule": {
-    "color": "#ffcb8b"
-  },
-  "attr-value": {
-    "color": "#ffcb8b"
-  },
-  "class-name": {
-    "color": "#ffcb8b"
-  },
-  "important": {
-    "color": "#d6deeb",
-    "fontWeight": "700"
-  },
-  "regex": {
-    "color": "#d6deeb"
-  },
-  "variable": {
-    "color": "#d6deeb"
-  },
-  "bold": {
-    "fontWeight": "700"
   },
   "italic": {
     "fontStyle": "italic"

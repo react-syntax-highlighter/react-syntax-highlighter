@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import SyntaxHighlighter from '../src';
+import { PrismAsync as PrismSyntaxHighlighter } from '../src';
 
 const code = `const woah = fun => fun + 1;
 const dude = woah(2) + 3;
@@ -16,6 +17,22 @@ function itIs() {
 
 const javaCode =
   'package com.javatest;\n\npublic class BubbleSort {\n  /**\n   * Applies bubble sort to an array and returns whether the array was sorted correctly.\n   */\n  public boolean checkSort(int[] a) {\n    sort(a);\n\n    for (int i = 0; i < a.length - 1; i++) {\n      if (a[i] > a[i + 1]) {\n        return false;\n      }\n    }\n\n    return true;\n  }\n\n  /**\n   * Bubble sort an array, mutating the array (contains a bug).\n   */\n  public void sort(int [] a) {\n    int j;\n    boolean flag = true;\n    int temp;';
+
+const jsxCode = `
+import React from "react";
+
+const x = \`
+template string.
+\`
+
+const y = () => {
+  return (
+    <div>
+      jsx
+    </div>
+  )
+}
+`;
 
 test('SyntaxHighlighter component renders correctly', () => {
   const tree = renderer
@@ -80,6 +97,22 @@ test('SyntaxHighlighter renders java code correctly with wrapLines', () => {
     >
       {javaCode}
     </SyntaxHighlighter>
+  );
+  expect(tree).toMatchSnapshot();
+});
+
+test('Prism SyntaxHighlighter renders JSX code correctly with wrapLines', () => {
+  const tree = renderer.create(
+    <PrismSyntaxHighlighter
+      language="jsx"
+      wrapLines={true}
+      lineProps={{
+        style: { backgroundColor: 'red' },
+        className: 'test-line-class'
+      }}
+    >
+      {jsxCode}
+    </PrismSyntaxHighlighter>
   );
   expect(tree).toMatchSnapshot();
 });

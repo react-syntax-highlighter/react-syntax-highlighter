@@ -127,6 +127,21 @@ Access via the `supportedLanguages` static field.
 SyntaxHighlighter.supportedLanguages;
 ```
 
+### Add support for another language
+
+To add another language, use the [light build](#light-build) and `registerLanguage`. For example to add cURL with highlight.js:
+
+```js
+import { Light as LightSyntaxHighlighter } from 'react-syntax-highlighter';
+import curl from 'highlightjs-curl';
+```
+
+Then you can do:
+
+```js
+LightSyntaxHighlighter.registerLanguage('curl', curl);
+```
+
 ### Built with React Syntax Highlighter
 
 - [mdx-deck](https://github.com/jxnblk/mdx-deck) - MDX-based presentation decks
@@ -153,12 +168,22 @@ SyntaxHighlighter.supportedLanguages;
 - [codeprinter](https://github.com/jaredpetersen/codeprinter) - Print out code easily
 - [Neumorphism](https://www.neumorphism.io) - CSS code generator for Soft UI/Neumorphism shadows
 - [grape-ui](https://www.grapeui.com) - Component library using styled-system and other open source components.
-- [✅ Good Arduino Code](https://goodarduinocode.com) - A curated library of Arduino Coding examples
+- [Good Arduino Code](https://goodarduinocode.com) - A curated library of Arduino Coding examples
 - [marmota.app](https://marmota.app) - A desktop app to create simple markdown presentations
 - [boemly](https://boemly.tree.ly) - An open-source component library for React.
+- [Markdown Sticky Notes](https://github.com/qiweiii/markdown-sticky-notes) - A web extension to create Markdown sticky notes in web pages.
 
 If your project uses react-syntax-highlighter please send a pr to add!
 
 ### License
 
 MIT
+
+### Contributing
+
+You'll need Node 16.x installed & active on your system to build this package.
+
+```
+npm i
+npm run dev
+```

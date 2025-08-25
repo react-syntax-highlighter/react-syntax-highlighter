@@ -1,5 +1,17 @@
 # Changelog
 
+## 15.6.1
+
+- Fix: Allow override of `display:` styles when `wrapLongLines` is true
+
+## 15.6.0
+- Fix: #561 Fix bug with wrapLines that butchers highlighting
+- Docs: #559 Adding languages
+- Feat: #555 Add Vue language support
+- Feat: #534 Add a11yOneLight theme
+
+## [ gap in documentation ]
+
 ## 15.4.3 / 2020-12-07
 - Fixed `highlight` version regression
 
