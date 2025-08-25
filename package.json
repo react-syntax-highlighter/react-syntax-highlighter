@@ -1,6 +1,6 @@
 {
   "name": "react-syntax-highlighter",
-  "version": "15.6.3",
+  "version": "15.6.4",
   "description": "syntax highlighting component for react with prismjs or highlightjs ast using inline styles",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -57,6 +57,11 @@
   },
   "peerDependencies": {
     "react": ">= 0.14.0"
+  },
+  "overrides": {
+    "refractor": {
+      "prismjs": "^1.30.0"
+    }
   },
   "scripts": {
     "dev": "webpack-dev-server --hot --inline",
