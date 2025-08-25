@@ -181,7 +181,7 @@ MIT
 
 ### Contributing
 
-You'll need Node 16.x installed & active on your system to build this package.
+You'll need Node 22.x installed & active on your system to build this package.
 
 ```
 npm i

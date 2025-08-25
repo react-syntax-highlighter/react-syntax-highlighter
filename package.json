@@ -104,6 +104,9 @@
       "pre-commit": "lint-staged"
     }
   },
+  "engines": {
+    "node": "^22.14.0"
+  },
   "lint-staged": {
     "*.{js,json,css,md}": [
       "prettier --write",
