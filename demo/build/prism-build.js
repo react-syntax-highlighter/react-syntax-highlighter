@@ -6437,1281 +6437,6 @@ function disallowed(code) {
 
 /***/ }),
 
-/***/ "./node_modules/prismjs/components/prism-core.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/prismjs/components/prism-core.js ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(global) {/// <reference lib="WebWorker"/>
-
-var _self = (typeof window !== 'undefined')
-	? window   // if in browser
-	: (
-		(typeof WorkerGlobalScope !== 'undefined' && self instanceof WorkerGlobalScope)
-			? self // if in worker
-			: {}   // if in node js
-	);
-
-/**
- * Prism: Lightweight, robust, elegant syntax highlighting
- *
- * @license MIT <https://opensource.org/licenses/MIT>
- * @author Lea Verou <https://lea.verou.me>
- * @namespace
- * @public
- */
-var Prism = (function (_self) {
-
-	// Private helper vars
-	var lang = /(?:^|\s)lang(?:uage)?-([\w-]+)(?=\s|$)/i;
-	var uniqueId = 0;
-
-	// The grammar object for plaintext
-	var plainTextGrammar = {};
-
-
-	var _ = {
-		/**
-		 * By default, Prism will attempt to highlight all code elements (by calling {@link Prism.highlightAll}) on the
-		 * current page after the page finished loading. This might be a problem if e.g. you wanted to asynchronously load
-		 * additional languages or plugins yourself.
-		 *
-		 * By setting this value to `true`, Prism will not automatically highlight all code elements on the page.
-		 *
-		 * You obviously have to change this value before the automatic highlighting started. To do this, you can add an
-		 * empty Prism object into the global scope before loading the Prism script like this:
-		 *
-		 * ```js
-		 * window.Prism = window.Prism || {};
-		 * Prism.manual = true;
-		 * // add a new <script> to load Prism's script
-		 * ```
-		 *
-		 * @default false
-		 * @type {boolean}
-		 * @memberof Prism
-		 * @public
-		 */
-		manual: _self.Prism && _self.Prism.manual,
-		/**
-		 * By default, if Prism is in a web worker, it assumes that it is in a worker it created itself, so it uses
-		 * `addEventListener` to communicate with its parent instance. However, if you're using Prism manually in your
-		 * own worker, you don't want it to do this.
-		 *
-		 * By setting this value to `true`, Prism will not add its own listeners to the worker.
-		 *
-		 * You obviously have to change this value before Prism executes. To do this, you can add an
-		 * empty Prism object into the global scope before loading the Prism script like this:
-		 *
-		 * ```js
-		 * window.Prism = window.Prism || {};
-		 * Prism.disableWorkerMessageHandler = true;
-		 * // Load Prism's script
-		 * ```
-		 *
-		 * @default false
-		 * @type {boolean}
-		 * @memberof Prism
-		 * @public
-		 */
-		disableWorkerMessageHandler: _self.Prism && _self.Prism.disableWorkerMessageHandler,
-
-		/**
-		 * A namespace for utility methods.
-		 *
-		 * All function in this namespace that are not explicitly marked as _public_ are for __internal use only__ and may
-		 * change or disappear at any time.
-		 *
-		 * @namespace
-		 * @memberof Prism
-		 */
-		util: {
-			encode: function encode(tokens) {
-				if (tokens instanceof Token) {
-					return new Token(tokens.type, encode(tokens.content), tokens.alias);
-				} else if (Array.isArray(tokens)) {
-					return tokens.map(encode);
-				} else {
-					return tokens.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/\u00a0/g, ' ');
-				}
-			},
-
-			/**
-			 * Returns the name of the type of the given value.
-			 *
-			 * @param {any} o
-			 * @returns {string}
-			 * @example
-			 * type(null)      === 'Null'
-			 * type(undefined) === 'Undefined'
-			 * type(123)       === 'Number'
-			 * type('foo')     === 'String'
-			 * type(true)      === 'Boolean'
-			 * type([1, 2])    === 'Array'
-			 * type({})        === 'Object'
-			 * type(String)    === 'Function'
-			 * type(/abc+/)    === 'RegExp'
-			 */
-			type: function (o) {
-				return Object.prototype.toString.call(o).slice(8, -1);
-			},
-
-			/**
-			 * Returns a unique number for the given object. Later calls will still return the same number.
-			 *
-			 * @param {Object} obj
-			 * @returns {number}
-			 */
-			objId: function (obj) {
-				if (!obj['__id']) {
-					Object.defineProperty(obj, '__id', { value: ++uniqueId });
-				}
-				return obj['__id'];
-			},
-
-			/**
-			 * Creates a deep clone of the given object.
-			 *
-			 * The main intended use of this function is to clone language definitions.
-			 *
-			 * @param {T} o
-			 * @param {Record<number, any>} [visited]
-			 * @returns {T}
-			 * @template T
-			 */
-			clone: function deepClone(o, visited) {
-				visited = visited || {};
-
-				var clone; var id;
-				switch (_.util.type(o)) {
-					case 'Object':
-						id = _.util.objId(o);
-						if (visited[id]) {
-							return visited[id];
-						}
-						clone = /** @type {Record<string, any>} */ ({});
-						visited[id] = clone;
-
-						for (var key in o) {
-							if (o.hasOwnProperty(key)) {
-								clone[key] = deepClone(o[key], visited);
-							}
-						}
-
-						return /** @type {any} */ (clone);
-
-					case 'Array':
-						id = _.util.objId(o);
-						if (visited[id]) {
-							return visited[id];
-						}
-						clone = [];
-						visited[id] = clone;
-
-						(/** @type {Array} */(/** @type {any} */(o))).forEach(function (v, i) {
-							clone[i] = deepClone(v, visited);
-						});
-
-						return /** @type {any} */ (clone);
-
-					default:
-						return o;
-				}
-			},
-
-			/**
-			 * Returns the Prism language of the given element set by a `language-xxxx` or `lang-xxxx` class.
-			 *
-			 * If no language is set for the element or the element is `null` or `undefined`, `none` will be returned.
-			 *
-			 * @param {Element} element
-			 * @returns {string}
-			 */
-			getLanguage: function (element) {
-				while (element) {
-					var m = lang.exec(element.className);
-					if (m) {
-						return m[1].toLowerCase();
-					}
-					element = element.parentElement;
-				}
-				return 'none';
-			},
-
-			/**
-			 * Sets the Prism `language-xxxx` class of the given element.
-			 *
-			 * @param {Element} element
-			 * @param {string} language
-			 * @returns {void}
-			 */
-			setLanguage: function (element, language) {
-				// remove all `language-xxxx` classes
-				// (this might leave behind a leading space)
-				element.className = element.className.replace(RegExp(lang, 'gi'), '');
-
-				// add the new `language-xxxx` class
-				// (using `classList` will automatically clean up spaces for us)
-				element.classList.add('language-' + language);
-			},
-
-			/**
-			 * Returns the script element that is currently executing.
-			 *
-			 * This does __not__ work for line script element.
-			 *
-			 * @returns {HTMLScriptElement | null}
-			 */
-			currentScript: function () {
-				if (typeof document === 'undefined') {
-					return null;
-				}
-				if (document.currentScript && document.currentScript.tagName === 'SCRIPT' && 1 < 2 /* hack to trip TS' flow analysis */) {
-					return /** @type {any} */ (document.currentScript);
-				}
-
-				// IE11 workaround
-				// we'll get the src of the current script by parsing IE11's error stack trace
-				// this will not work for inline scripts
-
-				try {
-					throw new Error();
-				} catch (err) {
-					// Get file src url from stack. Specifically works with the format of stack traces in IE.
-					// A stack will look like this:
-					//
-					// Error
-					//    at _.util.currentScript (http://localhost/components/prism-core.js:119:5)
-					//    at Global code (http://localhost/components/prism-core.js:606:1)
-
-					var src = (/at [^(\r\n]*\((.*):[^:]+:[^:]+\)$/i.exec(err.stack) || [])[1];
-					if (src) {
-						var scripts = document.getElementsByTagName('script');
-						for (var i in scripts) {
-							if (scripts[i].src == src) {
-								return scripts[i];
-							}
-						}
-					}
-					return null;
-				}
-			},
-
-			/**
-			 * Returns whether a given class is active for `element`.
-			 *
-			 * The class can be activated if `element` or one of its ancestors has the given class and it can be deactivated
-			 * if `element` or one of its ancestors has the negated version of the given class. The _negated version_ of the
-			 * given class is just the given class with a `no-` prefix.
-			 *
-			 * Whether the class is active is determined by the closest ancestor of `element` (where `element` itself is
-			 * closest ancestor) that has the given class or the negated version of it. If neither `element` nor any of its
-			 * ancestors have the given class or the negated version of it, then the default activation will be returned.
-			 *
-			 * In the paradoxical situation where the closest ancestor contains __both__ the given class and the negated
-			 * version of it, the class is considered active.
-			 *
-			 * @param {Element} element
-			 * @param {string} className
-			 * @param {boolean} [defaultActivation=false]
-			 * @returns {boolean}
-			 */
-			isActive: function (element, className, defaultActivation) {
-				var no = 'no-' + className;
-
-				while (element) {
-					var classList = element.classList;
-					if (classList.contains(className)) {
-						return true;
-					}
-					if (classList.contains(no)) {
-						return false;
-					}
-					element = element.parentElement;
-				}
-				return !!defaultActivation;
-			}
-		},
-
-		/**
-		 * This namespace contains all currently loaded languages and the some helper functions to create and modify languages.
-		 *
-		 * @namespace
-		 * @memberof Prism
-		 * @public
-		 */
-		languages: {
-			/**
-			 * The grammar for plain, unformatted text.
-			 */
-			plain: plainTextGrammar,
-			plaintext: plainTextGrammar,
-			text: plainTextGrammar,
-			txt: plainTextGrammar,
-
-			/**
-			 * Creates a deep copy of the language with the given id and appends the given tokens.
-			 *
-			 * If a token in `redef` also appears in the copied language, then the existing token in the copied language
-			 * will be overwritten at its original position.
-			 *
-			 * ## Best practices
-			 *
-			 * Since the position of overwriting tokens (token in `redef` that overwrite tokens in the copied language)
-			 * doesn't matter, they can technically be in any order. However, this can be confusing to others that trying to
-			 * understand the language definition because, normally, the order of tokens matters in Prism grammars.
-			 *
-			 * Therefore, it is encouraged to order overwriting tokens according to the positions of the overwritten tokens.
-			 * Furthermore, all non-overwriting tokens should be placed after the overwriting ones.
-			 *
-			 * @param {string} id The id of the language to extend. This has to be a key in `Prism.languages`.
-			 * @param {Grammar} redef The new tokens to append.
-			 * @returns {Grammar} The new language created.
-			 * @public
-			 * @example
-			 * Prism.languages['css-with-colors'] = Prism.languages.extend('css', {
-			 *     // Prism.languages.css already has a 'comment' token, so this token will overwrite CSS' 'comment' token
-			 *     // at its original position
-			 *     'comment': { ... },
-			 *     // CSS doesn't have a 'color' token, so this token will be appended
-			 *     'color': /\b(?:red|green|blue)\b/
-			 * });
-			 */
-			extend: function (id, redef) {
-				var lang = _.util.clone(_.languages[id]);
-
-				for (var key in redef) {
-					lang[key] = redef[key];
-				}
-
-				return lang;
-			},
-
-			/**
-			 * Inserts tokens _before_ another token in a language definition or any other grammar.
-			 *
-			 * ## Usage
-			 *
-			 * This helper method makes it easy to modify existing languages. For example, the CSS language definition
-			 * not only defines CSS highlighting for CSS documents, but also needs to define highlighting for CSS embedded
-			 * in HTML through `<style>` elements. To do this, it needs to modify `Prism.languages.markup` and add the
-			 * appropriate tokens. However, `Prism.languages.markup` is a regular JavaScript object literal, so if you do
-			 * this:
-			 *
-			 * ```js
-			 * Prism.languages.markup.style = {
-			 *     // token
-			 * };
-			 * ```
-			 *
-			 * then the `style` token will be added (and processed) at the end. `insertBefore` allows you to insert tokens
-			 * before existing tokens. For the CSS example above, you would use it like this:
-			 *
-			 * ```js
-			 * Prism.languages.insertBefore('markup', 'cdata', {
-			 *     'style': {
-			 *         // token
-			 *     }
-			 * });
-			 * ```
-			 *
-			 * ## Special cases
-			 *
-			 * If the grammars of `inside` and `insert` have tokens with the same name, the tokens in `inside`'s grammar
-			 * will be ignored.
-			 *
-			 * This behavior can be used to insert tokens after `before`:
-			 *
-			 * ```js
-			 * Prism.languages.insertBefore('markup', 'comment', {
-			 *     'comment': Prism.languages.markup.comment,
-			 *     // tokens after 'comment'
-			 * });
-			 * ```
-			 *
-			 * ## Limitations
-			 *
-			 * The main problem `insertBefore` has to solve is iteration order. Since ES2015, the iteration order for object
-			 * properties is guaranteed to be the insertion order (except for integer keys) but some browsers behave
-			 * differently when keys are deleted and re-inserted. So `insertBefore` can't be implemented by temporarily
-			 * deleting properties which is necessary to insert at arbitrary positions.
-			 *
-			 * To solve this problem, `insertBefore` doesn't actually insert the given tokens into the target object.
-			 * Instead, it will create a new object and replace all references to the target object with the new one. This
-			 * can be done without temporarily deleting properties, so the iteration order is well-defined.
-			 *
-			 * However, only references that can be reached from `Prism.languages` or `insert` will be replaced. I.e. if
-			 * you hold the target object in a variable, then the value of the variable will not change.
-			 *
-			 * ```js
-			 * var oldMarkup = Prism.languages.markup;
-			 * var newMarkup = Prism.languages.insertBefore('markup', 'comment', { ... });
-			 *
-			 * assert(oldMarkup !== Prism.languages.markup);
-			 * assert(newMarkup === Prism.languages.markup);
-			 * ```
-			 *
-			 * @param {string} inside The property of `root` (e.g. a language id in `Prism.languages`) that contains the
-			 * object to be modified.
-			 * @param {string} before The key to insert before.
-			 * @param {Grammar} insert An object containing the key-value pairs to be inserted.
-			 * @param {Object<string, any>} [root] The object containing `inside`, i.e. the object that contains the
-			 * object to be modified.
-			 *
-			 * Defaults to `Prism.languages`.
-			 * @returns {Grammar} The new grammar object.
-			 * @public
-			 */
-			insertBefore: function (inside, before, insert, root) {
-				root = root || /** @type {any} */ (_.languages);
-				var grammar = root[inside];
-				/** @type {Grammar} */
-				var ret = {};
-
-				for (var token in grammar) {
-					if (grammar.hasOwnProperty(token)) {
-
-						if (token == before) {
-							for (var newToken in insert) {
-								if (insert.hasOwnProperty(newToken)) {
-									ret[newToken] = insert[newToken];
-								}
-							}
-						}
-
-						// Do not insert token which also occur in insert. See #1525
-						if (!insert.hasOwnProperty(token)) {
-							ret[token] = grammar[token];
-						}
-					}
-				}
-
-				var old = root[inside];
-				root[inside] = ret;
-
-				// Update references in other language definitions
-				_.languages.DFS(_.languages, function (key, value) {
-					if (value === old && key != inside) {
-						this[key] = ret;
-					}
-				});
-
-				return ret;
-			},
-
-			// Traverse a language definition with Depth First Search
-			DFS: function DFS(o, callback, type, visited) {
-				visited = visited || {};
-
-				var objId = _.util.objId;
-
-				for (var i in o) {
-					if (o.hasOwnProperty(i)) {
-						callback.call(o, i, o[i], type || i);
-
-						var property = o[i];
-						var propertyType = _.util.type(property);
-
-						if (propertyType === 'Object' && !visited[objId(property)]) {
-							visited[objId(property)] = true;
-							DFS(property, callback, null, visited);
-						} else if (propertyType === 'Array' && !visited[objId(property)]) {
-							visited[objId(property)] = true;
-							DFS(property, callback, i, visited);
-						}
-					}
-				}
-			}
-		},
-
-		plugins: {},
-
-		/**
-		 * This is the most high-level function in Prism’s API.
-		 * It fetches all the elements that have a `.language-xxxx` class and then calls {@link Prism.highlightElement} on
-		 * each one of them.
-		 *
-		 * This is equivalent to `Prism.highlightAllUnder(document, async, callback)`.
-		 *
-		 * @param {boolean} [async=false] Same as in {@link Prism.highlightAllUnder}.
-		 * @param {HighlightCallback} [callback] Same as in {@link Prism.highlightAllUnder}.
-		 * @memberof Prism
-		 * @public
-		 */
-		highlightAll: function (async, callback) {
-			_.highlightAllUnder(document, async, callback);
-		},
-
-		/**
-		 * Fetches all the descendants of `container` that have a `.language-xxxx` class and then calls
-		 * {@link Prism.highlightElement} on each one of them.
-		 *
-		 * The following hooks will be run:
-		 * 1. `before-highlightall`
-		 * 2. `before-all-elements-highlight`
-		 * 3. All hooks of {@link Prism.highlightElement} for each element.
-		 *
-		 * @param {ParentNode} container The root element, whose descendants that have a `.language-xxxx` class will be highlighted.
-		 * @param {boolean} [async=false] Whether each element is to be highlighted asynchronously using Web Workers.
-		 * @param {HighlightCallback} [callback] An optional callback to be invoked on each element after its highlighting is done.
-		 * @memberof Prism
-		 * @public
-		 */
-		highlightAllUnder: function (container, async, callback) {
-			var env = {
-				callback: callback,
-				container: container,
-				selector: 'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'
-			};
-
-			_.hooks.run('before-highlightall', env);
-
-			env.elements = Array.prototype.slice.apply(env.container.querySelectorAll(env.selector));
-
-			_.hooks.run('before-all-elements-highlight', env);
-
-			for (var i = 0, element; (element = env.elements[i++]);) {
-				_.highlightElement(element, async === true, env.callback);
-			}
-		},
-
-		/**
-		 * Highlights the code inside a single element.
-		 *
-		 * The following hooks will be run:
-		 * 1. `before-sanity-check`
-		 * 2. `before-highlight`
-		 * 3. All hooks of {@link Prism.highlight}. These hooks will be run by an asynchronous worker if `async` is `true`.
-		 * 4. `before-insert`
-		 * 5. `after-highlight`
-		 * 6. `complete`
-		 *
-		 * Some the above hooks will be skipped if the element doesn't contain any text or there is no grammar loaded for
-		 * the element's language.
-		 *
-		 * @param {Element} element The element containing the code.
-		 * It must have a class of `language-xxxx` to be processed, where `xxxx` is a valid language identifier.
-		 * @param {boolean} [async=false] Whether the element is to be highlighted asynchronously using Web Workers
-		 * to improve performance and avoid blocking the UI when highlighting very large chunks of code. This option is
-		 * [disabled by default](https://prismjs.com/faq.html#why-is-asynchronous-highlighting-disabled-by-default).
-		 *
-		 * Note: All language definitions required to highlight the code must be included in the main `prism.js` file for
-		 * asynchronous highlighting to work. You can build your own bundle on the
-		 * [Download page](https://prismjs.com/download.html).
-		 * @param {HighlightCallback} [callback] An optional callback to be invoked after the highlighting is done.
-		 * Mostly useful when `async` is `true`, since in that case, the highlighting is done asynchronously.
-		 * @memberof Prism
-		 * @public
-		 */
-		highlightElement: function (element, async, callback) {
-			// Find language
-			var language = _.util.getLanguage(element);
-			var grammar = _.languages[language];
-
-			// Set language on the element, if not present
-			_.util.setLanguage(element, language);
-
-			// Set language on the parent, for styling
-			var parent = element.parentElement;
-			if (parent && parent.nodeName.toLowerCase() === 'pre') {
-				_.util.setLanguage(parent, language);
-			}
-
-			var code = element.textContent;
-
-			var env = {
-				element: element,
-				language: language,
-				grammar: grammar,
-				code: code
-			};
-
-			function insertHighlightedCode(highlightedCode) {
-				env.highlightedCode = highlightedCode;
-
-				_.hooks.run('before-insert', env);
-
-				env.element.innerHTML = env.highlightedCode;
-
-				_.hooks.run('after-highlight', env);
-				_.hooks.run('complete', env);
-				callback && callback.call(env.element);
-			}
-
-			_.hooks.run('before-sanity-check', env);
-
-			// plugins may change/add the parent/element
-			parent = env.element.parentElement;
-			if (parent && parent.nodeName.toLowerCase() === 'pre' && !parent.hasAttribute('tabindex')) {
-				parent.setAttribute('tabindex', '0');
-			}
-
-			if (!env.code) {
-				_.hooks.run('complete', env);
-				callback && callback.call(env.element);
-				return;
-			}
-
-			_.hooks.run('before-highlight', env);
-
-			if (!env.grammar) {
-				insertHighlightedCode(_.util.encode(env.code));
-				return;
-			}
-
-			if (async && _self.Worker) {
-				var worker = new Worker(_.filename);
-
-				worker.onmessage = function (evt) {
-					insertHighlightedCode(evt.data);
-				};
-
-				worker.postMessage(JSON.stringify({
-					language: env.language,
-					code: env.code,
-					immediateClose: true
-				}));
-			} else {
-				insertHighlightedCode(_.highlight(env.code, env.grammar, env.language));
-			}
-		},
-
-		/**
-		 * Low-level function, only use if you know what you’re doing. It accepts a string of text as input
-		 * and the language definitions to use, and returns a string with the HTML produced.
-		 *
-		 * The following hooks will be run:
-		 * 1. `before-tokenize`
-		 * 2. `after-tokenize`
-		 * 3. `wrap`: On each {@link Token}.
-		 *
-		 * @param {string} text A string with the code to be highlighted.
-		 * @param {Grammar} grammar An object containing the tokens to use.
-		 *
-		 * Usually a language definition like `Prism.languages.markup`.
-		 * @param {string} language The name of the language definition passed to `grammar`.
-		 * @returns {string} The highlighted HTML.
-		 * @memberof Prism
-		 * @public
-		 * @example
-		 * Prism.highlight('var foo = true;', Prism.languages.javascript, 'javascript');
-		 */
-		highlight: function (text, grammar, language) {
-			var env = {
-				code: text,
-				grammar: grammar,
-				language: language
-			};
-			_.hooks.run('before-tokenize', env);
-			if (!env.grammar) {
-				throw new Error('The language "' + env.language + '" has no grammar.');
-			}
-			env.tokens = _.tokenize(env.code, env.grammar);
-			_.hooks.run('after-tokenize', env);
-			return Token.stringify(_.util.encode(env.tokens), env.language);
-		},
-
-		/**
-		 * This is the heart of Prism, and the most low-level function you can use. It accepts a string of text as input
-		 * and the language definitions to use, and returns an array with the tokenized code.
-		 *
-		 * When the language definition includes nested tokens, the function is called recursively on each of these tokens.
-		 *
-		 * This method could be useful in other contexts as well, as a very crude parser.
-		 *
-		 * @param {string} text A string with the code to be highlighted.
-		 * @param {Grammar} grammar An object containing the tokens to use.
-		 *
-		 * Usually a language definition like `Prism.languages.markup`.
-		 * @returns {TokenStream} An array of strings and tokens, a token stream.
-		 * @memberof Prism
-		 * @public
-		 * @example
-		 * let code = `var foo = 0;`;
-		 * let tokens = Prism.tokenize(code, Prism.languages.javascript);
-		 * tokens.forEach(token => {
-		 *     if (token instanceof Prism.Token && token.type === 'number') {
-		 *         console.log(`Found numeric literal: ${token.content}`);
-		 *     }
-		 * });
-		 */
-		tokenize: function (text, grammar) {
-			var rest = grammar.rest;
-			if (rest) {
-				for (var token in rest) {
-					grammar[token] = rest[token];
-				}
-
-				delete grammar.rest;
-			}
-
-			var tokenList = new LinkedList();
-			addAfter(tokenList, tokenList.head, text);
-
-			matchGrammar(text, tokenList, grammar, tokenList.head, 0);
-
-			return toArray(tokenList);
-		},
-
-		/**
-		 * @namespace
-		 * @memberof Prism
-		 * @public
-		 */
-		hooks: {
-			all: {},
-
-			/**
-			 * Adds the given callback to the list of callbacks for the given hook.
-			 *
-			 * The callback will be invoked when the hook it is registered for is run.
-			 * Hooks are usually directly run by a highlight function but you can also run hooks yourself.
-			 *
-			 * One callback function can be registered to multiple hooks and the same hook multiple times.
-			 *
-			 * @param {string} name The name of the hook.
-			 * @param {HookCallback} callback The callback function which is given environment variables.
-			 * @public
-			 */
-			add: function (name, callback) {
-				var hooks = _.hooks.all;
-
-				hooks[name] = hooks[name] || [];
-
-				hooks[name].push(callback);
-			},
-
-			/**
-			 * Runs a hook invoking all registered callbacks with the given environment variables.
-			 *
-			 * Callbacks will be invoked synchronously and in the order in which they were registered.
-			 *
-			 * @param {string} name The name of the hook.
-			 * @param {Object<string, any>} env The environment variables of the hook passed to all callbacks registered.
-			 * @public
-			 */
-			run: function (name, env) {
-				var callbacks = _.hooks.all[name];
-
-				if (!callbacks || !callbacks.length) {
-					return;
-				}
-
-				for (var i = 0, callback; (callback = callbacks[i++]);) {
-					callback(env);
-				}
-			}
-		},
-
-		Token: Token
-	};
-	_self.Prism = _;
-
-
-	// Typescript note:
-	// The following can be used to import the Token type in JSDoc:
-	//
-	//   @typedef {InstanceType<import("./prism-core")["Token"]>} Token
-
-	/**
-	 * Creates a new token.
-	 *
-	 * @param {string} type See {@link Token#type type}
-	 * @param {string | TokenStream} content See {@link Token#content content}
-	 * @param {string|string[]} [alias] The alias(es) of the token.
-	 * @param {string} [matchedStr=""] A copy of the full string this token was created from.
-	 * @class
-	 * @global
-	 * @public
-	 */
-	function Token(type, content, alias, matchedStr) {
-		/**
-		 * The type of the token.
-		 *
-		 * This is usually the key of a pattern in a {@link Grammar}.
-		 *
-		 * @type {string}
-		 * @see GrammarToken
-		 * @public
-		 */
-		this.type = type;
-		/**
-		 * The strings or tokens contained by this token.
-		 *
-		 * This will be a token stream if the pattern matched also defined an `inside` grammar.
-		 *
-		 * @type {string | TokenStream}
-		 * @public
-		 */
-		this.content = content;
-		/**
-		 * The alias(es) of the token.
-		 *
-		 * @type {string|string[]}
-		 * @see GrammarToken
-		 * @public
-		 */
-		this.alias = alias;
-		// Copy of the full string this token was created from
-		this.length = (matchedStr || '').length | 0;
-	}
-
-	/**
-	 * A token stream is an array of strings and {@link Token Token} objects.
-	 *
-	 * Token streams have to fulfill a few properties that are assumed by most functions (mostly internal ones) that process
-	 * them.
-	 *
-	 * 1. No adjacent strings.
-	 * 2. No empty strings.
-	 *
-	 *    The only exception here is the token stream that only contains the empty string and nothing else.
-	 *
-	 * @typedef {Array<string | Token>} TokenStream
-	 * @global
-	 * @public
-	 */
-
-	/**
-	 * Converts the given token or token stream to an HTML representation.
-	 *
-	 * The following hooks will be run:
-	 * 1. `wrap`: On each {@link Token}.
-	 *
-	 * @param {string | Token | TokenStream} o The token or token stream to be converted.
-	 * @param {string} language The name of current language.
-	 * @returns {string} The HTML representation of the token or token stream.
-	 * @memberof Token
-	 * @static
-	 */
-	Token.stringify = function stringify(o, language) {
-		if (typeof o == 'string') {
-			return o;
-		}
-		if (Array.isArray(o)) {
-			var s = '';
-			o.forEach(function (e) {
-				s += stringify(e, language);
-			});
-			return s;
-		}
-
-		var env = {
-			type: o.type,
-			content: stringify(o.content, language),
-			tag: 'span',
-			classes: ['token', o.type],
-			attributes: {},
-			language: language
-		};
-
-		var aliases = o.alias;
-		if (aliases) {
-			if (Array.isArray(aliases)) {
-				Array.prototype.push.apply(env.classes, aliases);
-			} else {
-				env.classes.push(aliases);
-			}
-		}
-
-		_.hooks.run('wrap', env);
-
-		var attributes = '';
-		for (var name in env.attributes) {
-			attributes += ' ' + name + '="' + (env.attributes[name] || '').replace(/"/g, '&quot;') + '"';
-		}
-
-		return '<' + env.tag + ' class="' + env.classes.join(' ') + '"' + attributes + '>' + env.content + '</' + env.tag + '>';
-	};
-
-	/**
-	 * @param {RegExp} pattern
-	 * @param {number} pos
-	 * @param {string} text
-	 * @param {boolean} lookbehind
-	 * @returns {RegExpExecArray | null}
-	 */
-	function matchPattern(pattern, pos, text, lookbehind) {
-		pattern.lastIndex = pos;
-		var match = pattern.exec(text);
-		if (match && lookbehind && match[1]) {
-			// change the match to remove the text matched by the Prism lookbehind group
-			var lookbehindLength = match[1].length;
-			match.index += lookbehindLength;
-			match[0] = match[0].slice(lookbehindLength);
-		}
-		return match;
-	}
-
-	/**
-	 * @param {string} text
-	 * @param {LinkedList<string | Token>} tokenList
-	 * @param {any} grammar
-	 * @param {LinkedListNode<string | Token>} startNode
-	 * @param {number} startPos
-	 * @param {RematchOptions} [rematch]
-	 * @returns {void}
-	 * @private
-	 *
-	 * @typedef RematchOptions
-	 * @property {string} cause
-	 * @property {number} reach
-	 */
-	function matchGrammar(text, tokenList, grammar, startNode, startPos, rematch) {
-		for (var token in grammar) {
-			if (!grammar.hasOwnProperty(token) || !grammar[token]) {
-				continue;
-			}
-
-			var patterns = grammar[token];
-			patterns = Array.isArray(patterns) ? patterns : [patterns];
-
-			for (var j = 0; j < patterns.length; ++j) {
-				if (rematch && rematch.cause == token + ',' + j) {
-					return;
-				}
-
-				var patternObj = patterns[j];
-				var inside = patternObj.inside;
-				var lookbehind = !!patternObj.lookbehind;
-				var greedy = !!patternObj.greedy;
-				var alias = patternObj.alias;
-
-				if (greedy && !patternObj.pattern.global) {
-					// Without the global flag, lastIndex won't work
-					var flags = patternObj.pattern.toString().match(/[imsuy]*$/)[0];
-					patternObj.pattern = RegExp(patternObj.pattern.source, flags + 'g');
-				}
-
-				/** @type {RegExp} */
-				var pattern = patternObj.pattern || patternObj;
-
-				for ( // iterate the token list and keep track of the current token/string position
-					var currentNode = startNode.next, pos = startPos;
-					currentNode !== tokenList.tail;
-					pos += currentNode.value.length, currentNode = currentNode.next
-				) {
-
-					if (rematch && pos >= rematch.reach) {
-						break;
-					}
-
-					var str = currentNode.value;
-
-					if (tokenList.length > text.length) {
-						// Something went terribly wrong, ABORT, ABORT!
-						return;
-					}
-
-					if (str instanceof Token) {
-						continue;
-					}
-
-					var removeCount = 1; // this is the to parameter of removeBetween
-					var match;
-
-					if (greedy) {
-						match = matchPattern(pattern, pos, text, lookbehind);
-						if (!match || match.index >= text.length) {
-							break;
-						}
-
-						var from = match.index;
-						var to = match.index + match[0].length;
-						var p = pos;
-
-						// find the node that contains the match
-						p += currentNode.value.length;
-						while (from >= p) {
-							currentNode = currentNode.next;
-							p += currentNode.value.length;
-						}
-						// adjust pos (and p)
-						p -= currentNode.value.length;
-						pos = p;
-
-						// the current node is a Token, then the match starts inside another Token, which is invalid
-						if (currentNode.value instanceof Token) {
-							continue;
-						}
-
-						// find the last node which is affected by this match
-						for (
-							var k = currentNode;
-							k !== tokenList.tail && (p < to || typeof k.value === 'string');
-							k = k.next
-						) {
-							removeCount++;
-							p += k.value.length;
-						}
-						removeCount--;
-
-						// replace with the new match
-						str = text.slice(pos, p);
-						match.index -= pos;
-					} else {
-						match = matchPattern(pattern, 0, str, lookbehind);
-						if (!match) {
-							continue;
-						}
-					}
-
-					// eslint-disable-next-line no-redeclare
-					var from = match.index;
-					var matchStr = match[0];
-					var before = str.slice(0, from);
-					var after = str.slice(from + matchStr.length);
-
-					var reach = pos + str.length;
-					if (rematch && reach > rematch.reach) {
-						rematch.reach = reach;
-					}
-
-					var removeFrom = currentNode.prev;
-
-					if (before) {
-						removeFrom = addAfter(tokenList, removeFrom, before);
-						pos += before.length;
-					}
-
-					removeRange(tokenList, removeFrom, removeCount);
-
-					var wrapped = new Token(token, inside ? _.tokenize(matchStr, inside) : matchStr, alias, matchStr);
-					currentNode = addAfter(tokenList, removeFrom, wrapped);
-
-					if (after) {
-						addAfter(tokenList, currentNode, after);
-					}
-
-					if (removeCount > 1) {
-						// at least one Token object was removed, so we have to do some rematching
-						// this can only happen if the current pattern is greedy
-
-						/** @type {RematchOptions} */
-						var nestedRematch = {
-							cause: token + ',' + j,
-							reach: reach
-						};
-						matchGrammar(text, tokenList, grammar, currentNode.prev, pos, nestedRematch);
-
-						// the reach might have been extended because of the rematching
-						if (rematch && nestedRematch.reach > rematch.reach) {
-							rematch.reach = nestedRematch.reach;
-						}
-					}
-				}
-			}
-		}
-	}
-
-	/**
-	 * @typedef LinkedListNode
-	 * @property {T} value
-	 * @property {LinkedListNode<T> | null} prev The previous node.
-	 * @property {LinkedListNode<T> | null} next The next node.
-	 * @template T
-	 * @private
-	 */
-
-	/**
-	 * @template T
-	 * @private
-	 */
-	function LinkedList() {
-		/** @type {LinkedListNode<T>} */
-		var head = { value: null, prev: null, next: null };
-		/** @type {LinkedListNode<T>} */
-		var tail = { value: null, prev: head, next: null };
-		head.next = tail;
-
-		/** @type {LinkedListNode<T>} */
-		this.head = head;
-		/** @type {LinkedListNode<T>} */
-		this.tail = tail;
-		this.length = 0;
-	}
-
-	/**
-	 * Adds a new node with the given value to the list.
-	 *
-	 * @param {LinkedList<T>} list
-	 * @param {LinkedListNode<T>} node
-	 * @param {T} value
-	 * @returns {LinkedListNode<T>} The added node.
-	 * @template T
-	 */
-	function addAfter(list, node, value) {
-		// assumes that node != list.tail && values.length >= 0
-		var next = node.next;
-
-		var newNode = { value: value, prev: node, next: next };
-		node.next = newNode;
-		next.prev = newNode;
-		list.length++;
-
-		return newNode;
-	}
-	/**
-	 * Removes `count` nodes after the given node. The given node will not be removed.
-	 *
-	 * @param {LinkedList<T>} list
-	 * @param {LinkedListNode<T>} node
-	 * @param {number} count
-	 * @template T
-	 */
-	function removeRange(list, node, count) {
-		var next = node.next;
-		for (var i = 0; i < count && next !== list.tail; i++) {
-			next = next.next;
-		}
-		node.next = next;
-		next.prev = node;
-		list.length -= i;
-	}
-	/**
-	 * @param {LinkedList<T>} list
-	 * @returns {T[]}
-	 * @template T
-	 */
-	function toArray(list) {
-		var array = [];
-		var node = list.head.next;
-		while (node !== list.tail) {
-			array.push(node.value);
-			node = node.next;
-		}
-		return array;
-	}
-
-
-	if (!_self.document) {
-		if (!_self.addEventListener) {
-			// in Node.js
-			return _;
-		}
-
-		if (!_.disableWorkerMessageHandler) {
-			// In worker
-			_self.addEventListener('message', function (evt) {
-				var message = JSON.parse(evt.data);
-				var lang = message.language;
-				var code = message.code;
-				var immediateClose = message.immediateClose;
-
-				_self.postMessage(_.highlight(code, _.languages[lang], lang));
-				if (immediateClose) {
-					_self.close();
-				}
-			}, false);
-		}
-
-		return _;
-	}
-
-	// Get current script and highlight
-	var script = _.util.currentScript();
-
-	if (script) {
-		_.filename = script.src;
-
-		if (script.hasAttribute('data-manual')) {
-			_.manual = true;
-		}
-	}
-
-	function highlightAutomaticallyCallback() {
-		if (!_.manual) {
-			_.highlightAll();
-		}
-	}
-
-	if (!_.manual) {
-		// If the document state is "loading", then we'll use DOMContentLoaded.
-		// If the document state is "interactive" and the prism.js script is deferred, then we'll also use the
-		// DOMContentLoaded event because there might be some plugins or languages which have also been deferred and they
-		// might take longer one animation frame to execute which can create a race condition where only some plugins have
-		// been loaded when Prism.highlightAll() is executed, depending on how fast resources are loaded.
-		// See https://github.com/PrismJS/prism/issues/2102
-		var readyState = document.readyState;
-		if (readyState === 'loading' || readyState === 'interactive' && script && script.defer) {
-			document.addEventListener('DOMContentLoaded', highlightAutomaticallyCallback);
-		} else {
-			if (window.requestAnimationFrame) {
-				window.requestAnimationFrame(highlightAutomaticallyCallback);
-			} else {
-				window.setTimeout(highlightAutomaticallyCallback, 16);
-			}
-		}
-	}
-
-	return _;
-
-}(_self));
-
-if ( true && module.exports) {
-	module.exports = Prism;
-}
-
-// hack for components to work correctly in node.js
-if (typeof global !== 'undefined') {
-	global.Prism = Prism;
-}
-
-// some additional documentation/types
-
-/**
- * The expansion of a simple `RegExp` literal to support additional properties.
- *
- * @typedef GrammarToken
- * @property {RegExp} pattern The regular expression of the token.
- * @property {boolean} [lookbehind=false] If `true`, then the first capturing group of `pattern` will (effectively)
- * behave as a lookbehind group meaning that the captured text will not be part of the matched text of the new token.
- * @property {boolean} [greedy=false] Whether the token is greedy.
- * @property {string|string[]} [alias] An optional alias or list of aliases.
- * @property {Grammar} [inside] The nested grammar of this token.
- *
- * The `inside` grammar will be used to tokenize the text value of each token of this kind.
- *
- * This can be used to make nested and even recursive language definitions.
- *
- * Note: This can cause infinite recursion. Be careful when you embed different languages or even the same language into
- * each another.
- * @global
- * @public
- */
-
-/**
- * @typedef Grammar
- * @type {Object<string, RegExp | GrammarToken | Array<RegExp | GrammarToken>>}
- * @property {Grammar} [rest] An optional grammar object that will be appended to this grammar.
- * @global
- * @public
- */
-
-/**
- * A function which will invoked after an element was successfully highlighted.
- *
- * @callback HighlightCallback
- * @param {Element} element The element successfully highlighted.
- * @returns {void}
- * @global
- * @public
- */
-
-/**
- * @callback HookCallback
- * @param {Object<string, any>} env The environment variables of the hook.
- * @returns {void}
- * @global
- * @public
- */
-
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
-
-/***/ }),
-
 /***/ "./node_modules/process/browser.js":
 /*!*****************************************!*\
   !*** ./node_modules/process/browser.js ***!
@@ -27360,552 +26085,6 @@ module.exports = traverseAllChildren;
 
 
 module.exports = __webpack_require__(/*! ./lib/React */ "./node_modules/react/lib/React.js");
-
-
-/***/ }),
-
-/***/ "./node_modules/refractor/core.js":
-/*!****************************************!*\
-  !*** ./node_modules/refractor/core.js ***!
-  \****************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(global) {
-
-/* global window, self */
-
-// istanbul ignore next - Don't allow Prism to run on page load in browser or
-// to start messaging from workers.
-var ctx =
-  typeof globalThis === 'object'
-    ? globalThis
-    : typeof self === 'object'
-    ? self
-    : typeof window === 'object'
-    ? window
-    : typeof global === 'object'
-    ? global
-    : {}
-
-var restore = capture()
-
-ctx.Prism = {manual: true, disableWorkerMessageHandler: true}
-
-// Load all stuff in `prism.js` itself, except for `prism-file-highlight.js`.
-// The wrapped non-leaky grammars are loaded instead of Prism’s originals.
-var h = __webpack_require__(/*! hastscript */ "./node_modules/hastscript/index.js")
-var decode = __webpack_require__(/*! parse-entities */ "./node_modules/parse-entities/index.js")
-var Prism = __webpack_require__(/*! prismjs/components/prism-core */ "./node_modules/prismjs/components/prism-core.js")
-var markup = __webpack_require__(/*! ./lang/markup */ "./node_modules/refractor/lang/markup.js")
-var css = __webpack_require__(/*! ./lang/css */ "./node_modules/refractor/lang/css.js")
-var clike = __webpack_require__(/*! ./lang/clike */ "./node_modules/refractor/lang/clike.js")
-var js = __webpack_require__(/*! ./lang/javascript */ "./node_modules/refractor/lang/javascript.js")
-
-restore()
-
-var own = {}.hasOwnProperty
-
-// Inherit.
-function Refractor() {}
-
-Refractor.prototype = Prism
-
-// Construct.
-var refract = new Refractor()
-
-// Expose.
-module.exports = refract
-
-// Create.
-refract.highlight = highlight
-refract.register = register
-refract.alias = alias
-refract.registered = registered
-refract.listLanguages = listLanguages
-
-// Register bundled grammars.
-register(markup)
-register(css)
-register(clike)
-register(js)
-
-refract.util.encode = encode
-refract.Token.stringify = stringify
-
-function register(grammar) {
-  if (typeof grammar !== 'function' || !grammar.displayName) {
-    throw new Error('Expected `function` for `grammar`, got `' + grammar + '`')
-  }
-
-  // Do not duplicate registrations.
-  if (refract.languages[grammar.displayName] === undefined) {
-    grammar(refract)
-  }
-}
-
-function alias(name, alias) {
-  var languages = refract.languages
-  var map = name
-  var key
-  var list
-  var length
-  var index
-
-  if (alias) {
-    map = {}
-    map[name] = alias
-  }
-
-  for (key in map) {
-    list = map[key]
-    list = typeof list === 'string' ? [list] : list
-    length = list.length
-    index = -1
-
-    while (++index < length) {
-      languages[list[index]] = languages[key]
-    }
-  }
-}
-
-function highlight(value, name) {
-  var sup = Prism.highlight
-  var grammar
-
-  if (typeof value !== 'string') {
-    throw new Error('Expected `string` for `value`, got `' + value + '`')
-  }
-
-  // `name` is a grammar object.
-  if (refract.util.type(name) === 'Object') {
-    grammar = name
-    name = null
-  } else {
-    if (typeof name !== 'string') {
-      throw new Error('Expected `string` for `name`, got `' + name + '`')
-    }
-
-    if (own.call(refract.languages, name)) {
-      grammar = refract.languages[name]
-    } else {
-      throw new Error('Unknown language: `' + name + '` is not registered')
-    }
-  }
-
-  return sup.call(this, value, grammar, name)
-}
-
-function registered(language) {
-  if (typeof language !== 'string') {
-    throw new Error('Expected `string` for `language`, got `' + language + '`')
-  }
-
-  return own.call(refract.languages, language)
-}
-
-function listLanguages() {
-  var languages = refract.languages
-  var list = []
-  var language
-
-  for (language in languages) {
-    if (
-      own.call(languages, language) &&
-      typeof languages[language] === 'object'
-    ) {
-      list.push(language)
-    }
-  }
-
-  return list
-}
-
-function stringify(value, language, parent) {
-  var env
-
-  if (typeof value === 'string') {
-    return {type: 'text', value: value}
-  }
-
-  if (refract.util.type(value) === 'Array') {
-    return stringifyAll(value, language)
-  }
-
-  env = {
-    type: value.type,
-    content: refract.Token.stringify(value.content, language, parent),
-    tag: 'span',
-    classes: ['token', value.type],
-    attributes: {},
-    language: language,
-    parent: parent
-  }
-
-  if (value.alias) {
-    env.classes = env.classes.concat(value.alias)
-  }
-
-  refract.hooks.run('wrap', env)
-
-  return h(
-    env.tag + '.' + env.classes.join('.'),
-    attributes(env.attributes),
-    env.content
-  )
-}
-
-function stringifyAll(values, language) {
-  var result = []
-  var length = values.length
-  var index = -1
-  var value
-
-  while (++index < length) {
-    value = values[index]
-
-    if (value !== '' && value !== null && value !== undefined) {
-      result.push(value)
-    }
-  }
-
-  index = -1
-  length = result.length
-
-  while (++index < length) {
-    value = result[index]
-    result[index] = refract.Token.stringify(value, language, result)
-  }
-
-  return result
-}
-
-function encode(tokens) {
-  return tokens
-}
-
-function attributes(attrs) {
-  var key
-
-  for (key in attrs) {
-    attrs[key] = decode(attrs[key])
-  }
-
-  return attrs
-}
-
-function capture() {
-  var defined = 'Prism' in ctx
-  /* istanbul ignore next */
-  var current = defined ? ctx.Prism : undefined
-
-  return restore
-
-  function restore() {
-    /* istanbul ignore else - Clean leaks after Prism. */
-    if (defined) {
-      ctx.Prism = current
-    } else {
-      delete ctx.Prism
-    }
-
-    defined = undefined
-    current = undefined
-  }
-}
-
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
-
-/***/ }),
-
-/***/ "./node_modules/refractor/index.js":
-/*!*****************************************!*\
-  !*** ./node_modules/refractor/index.js ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var refractor = __webpack_require__(/*! ./core.js */ "./node_modules/refractor/core.js")
-
-module.exports = refractor
-
-refractor.register(__webpack_require__(/*! ./lang/abap.js */ "./node_modules/refractor/lang/abap.js"))
-refractor.register(__webpack_require__(/*! ./lang/abnf.js */ "./node_modules/refractor/lang/abnf.js"))
-refractor.register(__webpack_require__(/*! ./lang/actionscript.js */ "./node_modules/refractor/lang/actionscript.js"))
-refractor.register(__webpack_require__(/*! ./lang/ada.js */ "./node_modules/refractor/lang/ada.js"))
-refractor.register(__webpack_require__(/*! ./lang/agda.js */ "./node_modules/refractor/lang/agda.js"))
-refractor.register(__webpack_require__(/*! ./lang/al.js */ "./node_modules/refractor/lang/al.js"))
-refractor.register(__webpack_require__(/*! ./lang/antlr4.js */ "./node_modules/refractor/lang/antlr4.js"))
-refractor.register(__webpack_require__(/*! ./lang/apacheconf.js */ "./node_modules/refractor/lang/apacheconf.js"))
-refractor.register(__webpack_require__(/*! ./lang/apex.js */ "./node_modules/refractor/lang/apex.js"))
-refractor.register(__webpack_require__(/*! ./lang/apl.js */ "./node_modules/refractor/lang/apl.js"))
-refractor.register(__webpack_require__(/*! ./lang/applescript.js */ "./node_modules/refractor/lang/applescript.js"))
-refractor.register(__webpack_require__(/*! ./lang/aql.js */ "./node_modules/refractor/lang/aql.js"))
-refractor.register(__webpack_require__(/*! ./lang/arduino.js */ "./node_modules/refractor/lang/arduino.js"))
-refractor.register(__webpack_require__(/*! ./lang/arff.js */ "./node_modules/refractor/lang/arff.js"))
-refractor.register(__webpack_require__(/*! ./lang/asciidoc.js */ "./node_modules/refractor/lang/asciidoc.js"))
-refractor.register(__webpack_require__(/*! ./lang/asm6502.js */ "./node_modules/refractor/lang/asm6502.js"))
-refractor.register(__webpack_require__(/*! ./lang/asmatmel.js */ "./node_modules/refractor/lang/asmatmel.js"))
-refractor.register(__webpack_require__(/*! ./lang/aspnet.js */ "./node_modules/refractor/lang/aspnet.js"))
-refractor.register(__webpack_require__(/*! ./lang/autohotkey.js */ "./node_modules/refractor/lang/autohotkey.js"))
-refractor.register(__webpack_require__(/*! ./lang/autoit.js */ "./node_modules/refractor/lang/autoit.js"))
-refractor.register(__webpack_require__(/*! ./lang/avisynth.js */ "./node_modules/refractor/lang/avisynth.js"))
-refractor.register(__webpack_require__(/*! ./lang/avro-idl.js */ "./node_modules/refractor/lang/avro-idl.js"))
-refractor.register(__webpack_require__(/*! ./lang/bash.js */ "./node_modules/refractor/lang/bash.js"))
-refractor.register(__webpack_require__(/*! ./lang/basic.js */ "./node_modules/refractor/lang/basic.js"))
-refractor.register(__webpack_require__(/*! ./lang/batch.js */ "./node_modules/refractor/lang/batch.js"))
-refractor.register(__webpack_require__(/*! ./lang/bbcode.js */ "./node_modules/refractor/lang/bbcode.js"))
-refractor.register(__webpack_require__(/*! ./lang/bicep.js */ "./node_modules/refractor/lang/bicep.js"))
-refractor.register(__webpack_require__(/*! ./lang/birb.js */ "./node_modules/refractor/lang/birb.js"))
-refractor.register(__webpack_require__(/*! ./lang/bison.js */ "./node_modules/refractor/lang/bison.js"))
-refractor.register(__webpack_require__(/*! ./lang/bnf.js */ "./node_modules/refractor/lang/bnf.js"))
-refractor.register(__webpack_require__(/*! ./lang/brainfuck.js */ "./node_modules/refractor/lang/brainfuck.js"))
-refractor.register(__webpack_require__(/*! ./lang/brightscript.js */ "./node_modules/refractor/lang/brightscript.js"))
-refractor.register(__webpack_require__(/*! ./lang/bro.js */ "./node_modules/refractor/lang/bro.js"))
-refractor.register(__webpack_require__(/*! ./lang/bsl.js */ "./node_modules/refractor/lang/bsl.js"))
-refractor.register(__webpack_require__(/*! ./lang/c.js */ "./node_modules/refractor/lang/c.js"))
-refractor.register(__webpack_require__(/*! ./lang/cfscript.js */ "./node_modules/refractor/lang/cfscript.js"))
-refractor.register(__webpack_require__(/*! ./lang/chaiscript.js */ "./node_modules/refractor/lang/chaiscript.js"))
-refractor.register(__webpack_require__(/*! ./lang/cil.js */ "./node_modules/refractor/lang/cil.js"))
-refractor.register(__webpack_require__(/*! ./lang/clojure.js */ "./node_modules/refractor/lang/clojure.js"))
-refractor.register(__webpack_require__(/*! ./lang/cmake.js */ "./node_modules/refractor/lang/cmake.js"))
-refractor.register(__webpack_require__(/*! ./lang/cobol.js */ "./node_modules/refractor/lang/cobol.js"))
-refractor.register(__webpack_require__(/*! ./lang/coffeescript.js */ "./node_modules/refractor/lang/coffeescript.js"))
-refractor.register(__webpack_require__(/*! ./lang/concurnas.js */ "./node_modules/refractor/lang/concurnas.js"))
-refractor.register(__webpack_require__(/*! ./lang/coq.js */ "./node_modules/refractor/lang/coq.js"))
-refractor.register(__webpack_require__(/*! ./lang/cpp.js */ "./node_modules/refractor/lang/cpp.js"))
-refractor.register(__webpack_require__(/*! ./lang/crystal.js */ "./node_modules/refractor/lang/crystal.js"))
-refractor.register(__webpack_require__(/*! ./lang/csharp.js */ "./node_modules/refractor/lang/csharp.js"))
-refractor.register(__webpack_require__(/*! ./lang/cshtml.js */ "./node_modules/refractor/lang/cshtml.js"))
-refractor.register(__webpack_require__(/*! ./lang/csp.js */ "./node_modules/refractor/lang/csp.js"))
-refractor.register(__webpack_require__(/*! ./lang/css-extras.js */ "./node_modules/refractor/lang/css-extras.js"))
-refractor.register(__webpack_require__(/*! ./lang/csv.js */ "./node_modules/refractor/lang/csv.js"))
-refractor.register(__webpack_require__(/*! ./lang/cypher.js */ "./node_modules/refractor/lang/cypher.js"))
-refractor.register(__webpack_require__(/*! ./lang/d.js */ "./node_modules/refractor/lang/d.js"))
-refractor.register(__webpack_require__(/*! ./lang/dart.js */ "./node_modules/refractor/lang/dart.js"))
-refractor.register(__webpack_require__(/*! ./lang/dataweave.js */ "./node_modules/refractor/lang/dataweave.js"))
-refractor.register(__webpack_require__(/*! ./lang/dax.js */ "./node_modules/refractor/lang/dax.js"))
-refractor.register(__webpack_require__(/*! ./lang/dhall.js */ "./node_modules/refractor/lang/dhall.js"))
-refractor.register(__webpack_require__(/*! ./lang/diff.js */ "./node_modules/refractor/lang/diff.js"))
-refractor.register(__webpack_require__(/*! ./lang/django.js */ "./node_modules/refractor/lang/django.js"))
-refractor.register(__webpack_require__(/*! ./lang/dns-zone-file.js */ "./node_modules/refractor/lang/dns-zone-file.js"))
-refractor.register(__webpack_require__(/*! ./lang/docker.js */ "./node_modules/refractor/lang/docker.js"))
-refractor.register(__webpack_require__(/*! ./lang/dot.js */ "./node_modules/refractor/lang/dot.js"))
-refractor.register(__webpack_require__(/*! ./lang/ebnf.js */ "./node_modules/refractor/lang/ebnf.js"))
-refractor.register(__webpack_require__(/*! ./lang/editorconfig.js */ "./node_modules/refractor/lang/editorconfig.js"))
-refractor.register(__webpack_require__(/*! ./lang/eiffel.js */ "./node_modules/refractor/lang/eiffel.js"))
-refractor.register(__webpack_require__(/*! ./lang/ejs.js */ "./node_modules/refractor/lang/ejs.js"))
-refractor.register(__webpack_require__(/*! ./lang/elixir.js */ "./node_modules/refractor/lang/elixir.js"))
-refractor.register(__webpack_require__(/*! ./lang/elm.js */ "./node_modules/refractor/lang/elm.js"))
-refractor.register(__webpack_require__(/*! ./lang/erb.js */ "./node_modules/refractor/lang/erb.js"))
-refractor.register(__webpack_require__(/*! ./lang/erlang.js */ "./node_modules/refractor/lang/erlang.js"))
-refractor.register(__webpack_require__(/*! ./lang/etlua.js */ "./node_modules/refractor/lang/etlua.js"))
-refractor.register(__webpack_require__(/*! ./lang/excel-formula.js */ "./node_modules/refractor/lang/excel-formula.js"))
-refractor.register(__webpack_require__(/*! ./lang/factor.js */ "./node_modules/refractor/lang/factor.js"))
-refractor.register(__webpack_require__(/*! ./lang/false.js */ "./node_modules/refractor/lang/false.js"))
-refractor.register(__webpack_require__(/*! ./lang/firestore-security-rules.js */ "./node_modules/refractor/lang/firestore-security-rules.js"))
-refractor.register(__webpack_require__(/*! ./lang/flow.js */ "./node_modules/refractor/lang/flow.js"))
-refractor.register(__webpack_require__(/*! ./lang/fortran.js */ "./node_modules/refractor/lang/fortran.js"))
-refractor.register(__webpack_require__(/*! ./lang/fsharp.js */ "./node_modules/refractor/lang/fsharp.js"))
-refractor.register(__webpack_require__(/*! ./lang/ftl.js */ "./node_modules/refractor/lang/ftl.js"))
-refractor.register(__webpack_require__(/*! ./lang/gap.js */ "./node_modules/refractor/lang/gap.js"))
-refractor.register(__webpack_require__(/*! ./lang/gcode.js */ "./node_modules/refractor/lang/gcode.js"))
-refractor.register(__webpack_require__(/*! ./lang/gdscript.js */ "./node_modules/refractor/lang/gdscript.js"))
-refractor.register(__webpack_require__(/*! ./lang/gedcom.js */ "./node_modules/refractor/lang/gedcom.js"))
-refractor.register(__webpack_require__(/*! ./lang/gherkin.js */ "./node_modules/refractor/lang/gherkin.js"))
-refractor.register(__webpack_require__(/*! ./lang/git.js */ "./node_modules/refractor/lang/git.js"))
-refractor.register(__webpack_require__(/*! ./lang/glsl.js */ "./node_modules/refractor/lang/glsl.js"))
-refractor.register(__webpack_require__(/*! ./lang/gml.js */ "./node_modules/refractor/lang/gml.js"))
-refractor.register(__webpack_require__(/*! ./lang/gn.js */ "./node_modules/refractor/lang/gn.js"))
-refractor.register(__webpack_require__(/*! ./lang/go-module.js */ "./node_modules/refractor/lang/go-module.js"))
-refractor.register(__webpack_require__(/*! ./lang/go.js */ "./node_modules/refractor/lang/go.js"))
-refractor.register(__webpack_require__(/*! ./lang/graphql.js */ "./node_modules/refractor/lang/graphql.js"))
-refractor.register(__webpack_require__(/*! ./lang/groovy.js */ "./node_modules/refractor/lang/groovy.js"))
-refractor.register(__webpack_require__(/*! ./lang/haml.js */ "./node_modules/refractor/lang/haml.js"))
-refractor.register(__webpack_require__(/*! ./lang/handlebars.js */ "./node_modules/refractor/lang/handlebars.js"))
-refractor.register(__webpack_require__(/*! ./lang/haskell.js */ "./node_modules/refractor/lang/haskell.js"))
-refractor.register(__webpack_require__(/*! ./lang/haxe.js */ "./node_modules/refractor/lang/haxe.js"))
-refractor.register(__webpack_require__(/*! ./lang/hcl.js */ "./node_modules/refractor/lang/hcl.js"))
-refractor.register(__webpack_require__(/*! ./lang/hlsl.js */ "./node_modules/refractor/lang/hlsl.js"))
-refractor.register(__webpack_require__(/*! ./lang/hoon.js */ "./node_modules/refractor/lang/hoon.js"))
-refractor.register(__webpack_require__(/*! ./lang/hpkp.js */ "./node_modules/refractor/lang/hpkp.js"))
-refractor.register(__webpack_require__(/*! ./lang/hsts.js */ "./node_modules/refractor/lang/hsts.js"))
-refractor.register(__webpack_require__(/*! ./lang/http.js */ "./node_modules/refractor/lang/http.js"))
-refractor.register(__webpack_require__(/*! ./lang/ichigojam.js */ "./node_modules/refractor/lang/ichigojam.js"))
-refractor.register(__webpack_require__(/*! ./lang/icon.js */ "./node_modules/refractor/lang/icon.js"))
-refractor.register(__webpack_require__(/*! ./lang/icu-message-format.js */ "./node_modules/refractor/lang/icu-message-format.js"))
-refractor.register(__webpack_require__(/*! ./lang/idris.js */ "./node_modules/refractor/lang/idris.js"))
-refractor.register(__webpack_require__(/*! ./lang/iecst.js */ "./node_modules/refractor/lang/iecst.js"))
-refractor.register(__webpack_require__(/*! ./lang/ignore.js */ "./node_modules/refractor/lang/ignore.js"))
-refractor.register(__webpack_require__(/*! ./lang/inform7.js */ "./node_modules/refractor/lang/inform7.js"))
-refractor.register(__webpack_require__(/*! ./lang/ini.js */ "./node_modules/refractor/lang/ini.js"))
-refractor.register(__webpack_require__(/*! ./lang/io.js */ "./node_modules/refractor/lang/io.js"))
-refractor.register(__webpack_require__(/*! ./lang/j.js */ "./node_modules/refractor/lang/j.js"))
-refractor.register(__webpack_require__(/*! ./lang/java.js */ "./node_modules/refractor/lang/java.js"))
-refractor.register(__webpack_require__(/*! ./lang/javadoc.js */ "./node_modules/refractor/lang/javadoc.js"))
-refractor.register(__webpack_require__(/*! ./lang/javadoclike.js */ "./node_modules/refractor/lang/javadoclike.js"))
-refractor.register(__webpack_require__(/*! ./lang/javastacktrace.js */ "./node_modules/refractor/lang/javastacktrace.js"))
-refractor.register(__webpack_require__(/*! ./lang/jexl.js */ "./node_modules/refractor/lang/jexl.js"))
-refractor.register(__webpack_require__(/*! ./lang/jolie.js */ "./node_modules/refractor/lang/jolie.js"))
-refractor.register(__webpack_require__(/*! ./lang/jq.js */ "./node_modules/refractor/lang/jq.js"))
-refractor.register(__webpack_require__(/*! ./lang/js-extras.js */ "./node_modules/refractor/lang/js-extras.js"))
-refractor.register(__webpack_require__(/*! ./lang/js-templates.js */ "./node_modules/refractor/lang/js-templates.js"))
-refractor.register(__webpack_require__(/*! ./lang/jsdoc.js */ "./node_modules/refractor/lang/jsdoc.js"))
-refractor.register(__webpack_require__(/*! ./lang/json.js */ "./node_modules/refractor/lang/json.js"))
-refractor.register(__webpack_require__(/*! ./lang/json5.js */ "./node_modules/refractor/lang/json5.js"))
-refractor.register(__webpack_require__(/*! ./lang/jsonp.js */ "./node_modules/refractor/lang/jsonp.js"))
-refractor.register(__webpack_require__(/*! ./lang/jsstacktrace.js */ "./node_modules/refractor/lang/jsstacktrace.js"))
-refractor.register(__webpack_require__(/*! ./lang/jsx.js */ "./node_modules/refractor/lang/jsx.js"))
-refractor.register(__webpack_require__(/*! ./lang/julia.js */ "./node_modules/refractor/lang/julia.js"))
-refractor.register(__webpack_require__(/*! ./lang/keepalived.js */ "./node_modules/refractor/lang/keepalived.js"))
-refractor.register(__webpack_require__(/*! ./lang/keyman.js */ "./node_modules/refractor/lang/keyman.js"))
-refractor.register(__webpack_require__(/*! ./lang/kotlin.js */ "./node_modules/refractor/lang/kotlin.js"))
-refractor.register(__webpack_require__(/*! ./lang/kumir.js */ "./node_modules/refractor/lang/kumir.js"))
-refractor.register(__webpack_require__(/*! ./lang/kusto.js */ "./node_modules/refractor/lang/kusto.js"))
-refractor.register(__webpack_require__(/*! ./lang/latex.js */ "./node_modules/refractor/lang/latex.js"))
-refractor.register(__webpack_require__(/*! ./lang/latte.js */ "./node_modules/refractor/lang/latte.js"))
-refractor.register(__webpack_require__(/*! ./lang/less.js */ "./node_modules/refractor/lang/less.js"))
-refractor.register(__webpack_require__(/*! ./lang/lilypond.js */ "./node_modules/refractor/lang/lilypond.js"))
-refractor.register(__webpack_require__(/*! ./lang/liquid.js */ "./node_modules/refractor/lang/liquid.js"))
-refractor.register(__webpack_require__(/*! ./lang/lisp.js */ "./node_modules/refractor/lang/lisp.js"))
-refractor.register(__webpack_require__(/*! ./lang/livescript.js */ "./node_modules/refractor/lang/livescript.js"))
-refractor.register(__webpack_require__(/*! ./lang/llvm.js */ "./node_modules/refractor/lang/llvm.js"))
-refractor.register(__webpack_require__(/*! ./lang/log.js */ "./node_modules/refractor/lang/log.js"))
-refractor.register(__webpack_require__(/*! ./lang/lolcode.js */ "./node_modules/refractor/lang/lolcode.js"))
-refractor.register(__webpack_require__(/*! ./lang/lua.js */ "./node_modules/refractor/lang/lua.js"))
-refractor.register(__webpack_require__(/*! ./lang/magma.js */ "./node_modules/refractor/lang/magma.js"))
-refractor.register(__webpack_require__(/*! ./lang/makefile.js */ "./node_modules/refractor/lang/makefile.js"))
-refractor.register(__webpack_require__(/*! ./lang/markdown.js */ "./node_modules/refractor/lang/markdown.js"))
-refractor.register(__webpack_require__(/*! ./lang/markup-templating.js */ "./node_modules/refractor/lang/markup-templating.js"))
-refractor.register(__webpack_require__(/*! ./lang/matlab.js */ "./node_modules/refractor/lang/matlab.js"))
-refractor.register(__webpack_require__(/*! ./lang/maxscript.js */ "./node_modules/refractor/lang/maxscript.js"))
-refractor.register(__webpack_require__(/*! ./lang/mel.js */ "./node_modules/refractor/lang/mel.js"))
-refractor.register(__webpack_require__(/*! ./lang/mermaid.js */ "./node_modules/refractor/lang/mermaid.js"))
-refractor.register(__webpack_require__(/*! ./lang/mizar.js */ "./node_modules/refractor/lang/mizar.js"))
-refractor.register(__webpack_require__(/*! ./lang/mongodb.js */ "./node_modules/refractor/lang/mongodb.js"))
-refractor.register(__webpack_require__(/*! ./lang/monkey.js */ "./node_modules/refractor/lang/monkey.js"))
-refractor.register(__webpack_require__(/*! ./lang/moonscript.js */ "./node_modules/refractor/lang/moonscript.js"))
-refractor.register(__webpack_require__(/*! ./lang/n1ql.js */ "./node_modules/refractor/lang/n1ql.js"))
-refractor.register(__webpack_require__(/*! ./lang/n4js.js */ "./node_modules/refractor/lang/n4js.js"))
-refractor.register(__webpack_require__(/*! ./lang/nand2tetris-hdl.js */ "./node_modules/refractor/lang/nand2tetris-hdl.js"))
-refractor.register(__webpack_require__(/*! ./lang/naniscript.js */ "./node_modules/refractor/lang/naniscript.js"))
-refractor.register(__webpack_require__(/*! ./lang/nasm.js */ "./node_modules/refractor/lang/nasm.js"))
-refractor.register(__webpack_require__(/*! ./lang/neon.js */ "./node_modules/refractor/lang/neon.js"))
-refractor.register(__webpack_require__(/*! ./lang/nevod.js */ "./node_modules/refractor/lang/nevod.js"))
-refractor.register(__webpack_require__(/*! ./lang/nginx.js */ "./node_modules/refractor/lang/nginx.js"))
-refractor.register(__webpack_require__(/*! ./lang/nim.js */ "./node_modules/refractor/lang/nim.js"))
-refractor.register(__webpack_require__(/*! ./lang/nix.js */ "./node_modules/refractor/lang/nix.js"))
-refractor.register(__webpack_require__(/*! ./lang/nsis.js */ "./node_modules/refractor/lang/nsis.js"))
-refractor.register(__webpack_require__(/*! ./lang/objectivec.js */ "./node_modules/refractor/lang/objectivec.js"))
-refractor.register(__webpack_require__(/*! ./lang/ocaml.js */ "./node_modules/refractor/lang/ocaml.js"))
-refractor.register(__webpack_require__(/*! ./lang/opencl.js */ "./node_modules/refractor/lang/opencl.js"))
-refractor.register(__webpack_require__(/*! ./lang/openqasm.js */ "./node_modules/refractor/lang/openqasm.js"))
-refractor.register(__webpack_require__(/*! ./lang/oz.js */ "./node_modules/refractor/lang/oz.js"))
-refractor.register(__webpack_require__(/*! ./lang/parigp.js */ "./node_modules/refractor/lang/parigp.js"))
-refractor.register(__webpack_require__(/*! ./lang/parser.js */ "./node_modules/refractor/lang/parser.js"))
-refractor.register(__webpack_require__(/*! ./lang/pascal.js */ "./node_modules/refractor/lang/pascal.js"))
-refractor.register(__webpack_require__(/*! ./lang/pascaligo.js */ "./node_modules/refractor/lang/pascaligo.js"))
-refractor.register(__webpack_require__(/*! ./lang/pcaxis.js */ "./node_modules/refractor/lang/pcaxis.js"))
-refractor.register(__webpack_require__(/*! ./lang/peoplecode.js */ "./node_modules/refractor/lang/peoplecode.js"))
-refractor.register(__webpack_require__(/*! ./lang/perl.js */ "./node_modules/refractor/lang/perl.js"))
-refractor.register(__webpack_require__(/*! ./lang/php-extras.js */ "./node_modules/refractor/lang/php-extras.js"))
-refractor.register(__webpack_require__(/*! ./lang/php.js */ "./node_modules/refractor/lang/php.js"))
-refractor.register(__webpack_require__(/*! ./lang/phpdoc.js */ "./node_modules/refractor/lang/phpdoc.js"))
-refractor.register(__webpack_require__(/*! ./lang/plsql.js */ "./node_modules/refractor/lang/plsql.js"))
-refractor.register(__webpack_require__(/*! ./lang/powerquery.js */ "./node_modules/refractor/lang/powerquery.js"))
-refractor.register(__webpack_require__(/*! ./lang/powershell.js */ "./node_modules/refractor/lang/powershell.js"))
-refractor.register(__webpack_require__(/*! ./lang/processing.js */ "./node_modules/refractor/lang/processing.js"))
-refractor.register(__webpack_require__(/*! ./lang/prolog.js */ "./node_modules/refractor/lang/prolog.js"))
-refractor.register(__webpack_require__(/*! ./lang/promql.js */ "./node_modules/refractor/lang/promql.js"))
-refractor.register(__webpack_require__(/*! ./lang/properties.js */ "./node_modules/refractor/lang/properties.js"))
-refractor.register(__webpack_require__(/*! ./lang/protobuf.js */ "./node_modules/refractor/lang/protobuf.js"))
-refractor.register(__webpack_require__(/*! ./lang/psl.js */ "./node_modules/refractor/lang/psl.js"))
-refractor.register(__webpack_require__(/*! ./lang/pug.js */ "./node_modules/refractor/lang/pug.js"))
-refractor.register(__webpack_require__(/*! ./lang/puppet.js */ "./node_modules/refractor/lang/puppet.js"))
-refractor.register(__webpack_require__(/*! ./lang/pure.js */ "./node_modules/refractor/lang/pure.js"))
-refractor.register(__webpack_require__(/*! ./lang/purebasic.js */ "./node_modules/refractor/lang/purebasic.js"))
-refractor.register(__webpack_require__(/*! ./lang/purescript.js */ "./node_modules/refractor/lang/purescript.js"))
-refractor.register(__webpack_require__(/*! ./lang/python.js */ "./node_modules/refractor/lang/python.js"))
-refractor.register(__webpack_require__(/*! ./lang/q.js */ "./node_modules/refractor/lang/q.js"))
-refractor.register(__webpack_require__(/*! ./lang/qml.js */ "./node_modules/refractor/lang/qml.js"))
-refractor.register(__webpack_require__(/*! ./lang/qore.js */ "./node_modules/refractor/lang/qore.js"))
-refractor.register(__webpack_require__(/*! ./lang/qsharp.js */ "./node_modules/refractor/lang/qsharp.js"))
-refractor.register(__webpack_require__(/*! ./lang/r.js */ "./node_modules/refractor/lang/r.js"))
-refractor.register(__webpack_require__(/*! ./lang/racket.js */ "./node_modules/refractor/lang/racket.js"))
-refractor.register(__webpack_require__(/*! ./lang/reason.js */ "./node_modules/refractor/lang/reason.js"))
-refractor.register(__webpack_require__(/*! ./lang/regex.js */ "./node_modules/refractor/lang/regex.js"))
-refractor.register(__webpack_require__(/*! ./lang/rego.js */ "./node_modules/refractor/lang/rego.js"))
-refractor.register(__webpack_require__(/*! ./lang/renpy.js */ "./node_modules/refractor/lang/renpy.js"))
-refractor.register(__webpack_require__(/*! ./lang/rest.js */ "./node_modules/refractor/lang/rest.js"))
-refractor.register(__webpack_require__(/*! ./lang/rip.js */ "./node_modules/refractor/lang/rip.js"))
-refractor.register(__webpack_require__(/*! ./lang/roboconf.js */ "./node_modules/refractor/lang/roboconf.js"))
-refractor.register(__webpack_require__(/*! ./lang/robotframework.js */ "./node_modules/refractor/lang/robotframework.js"))
-refractor.register(__webpack_require__(/*! ./lang/ruby.js */ "./node_modules/refractor/lang/ruby.js"))
-refractor.register(__webpack_require__(/*! ./lang/rust.js */ "./node_modules/refractor/lang/rust.js"))
-refractor.register(__webpack_require__(/*! ./lang/sas.js */ "./node_modules/refractor/lang/sas.js"))
-refractor.register(__webpack_require__(/*! ./lang/sass.js */ "./node_modules/refractor/lang/sass.js"))
-refractor.register(__webpack_require__(/*! ./lang/scala.js */ "./node_modules/refractor/lang/scala.js"))
-refractor.register(__webpack_require__(/*! ./lang/scheme.js */ "./node_modules/refractor/lang/scheme.js"))
-refractor.register(__webpack_require__(/*! ./lang/scss.js */ "./node_modules/refractor/lang/scss.js"))
-refractor.register(__webpack_require__(/*! ./lang/shell-session.js */ "./node_modules/refractor/lang/shell-session.js"))
-refractor.register(__webpack_require__(/*! ./lang/smali.js */ "./node_modules/refractor/lang/smali.js"))
-refractor.register(__webpack_require__(/*! ./lang/smalltalk.js */ "./node_modules/refractor/lang/smalltalk.js"))
-refractor.register(__webpack_require__(/*! ./lang/smarty.js */ "./node_modules/refractor/lang/smarty.js"))
-refractor.register(__webpack_require__(/*! ./lang/sml.js */ "./node_modules/refractor/lang/sml.js"))
-refractor.register(__webpack_require__(/*! ./lang/solidity.js */ "./node_modules/refractor/lang/solidity.js"))
-refractor.register(__webpack_require__(/*! ./lang/solution-file.js */ "./node_modules/refractor/lang/solution-file.js"))
-refractor.register(__webpack_require__(/*! ./lang/soy.js */ "./node_modules/refractor/lang/soy.js"))
-refractor.register(__webpack_require__(/*! ./lang/sparql.js */ "./node_modules/refractor/lang/sparql.js"))
-refractor.register(__webpack_require__(/*! ./lang/splunk-spl.js */ "./node_modules/refractor/lang/splunk-spl.js"))
-refractor.register(__webpack_require__(/*! ./lang/sqf.js */ "./node_modules/refractor/lang/sqf.js"))
-refractor.register(__webpack_require__(/*! ./lang/sql.js */ "./node_modules/refractor/lang/sql.js"))
-refractor.register(__webpack_require__(/*! ./lang/squirrel.js */ "./node_modules/refractor/lang/squirrel.js"))
-refractor.register(__webpack_require__(/*! ./lang/stan.js */ "./node_modules/refractor/lang/stan.js"))
-refractor.register(__webpack_require__(/*! ./lang/stylus.js */ "./node_modules/refractor/lang/stylus.js"))
-refractor.register(__webpack_require__(/*! ./lang/swift.js */ "./node_modules/refractor/lang/swift.js"))
-refractor.register(__webpack_require__(/*! ./lang/systemd.js */ "./node_modules/refractor/lang/systemd.js"))
-refractor.register(__webpack_require__(/*! ./lang/t4-cs.js */ "./node_modules/refractor/lang/t4-cs.js"))
-refractor.register(__webpack_require__(/*! ./lang/t4-templating.js */ "./node_modules/refractor/lang/t4-templating.js"))
-refractor.register(__webpack_require__(/*! ./lang/t4-vb.js */ "./node_modules/refractor/lang/t4-vb.js"))
-refractor.register(__webpack_require__(/*! ./lang/tap.js */ "./node_modules/refractor/lang/tap.js"))
-refractor.register(__webpack_require__(/*! ./lang/tcl.js */ "./node_modules/refractor/lang/tcl.js"))
-refractor.register(__webpack_require__(/*! ./lang/textile.js */ "./node_modules/refractor/lang/textile.js"))
-refractor.register(__webpack_require__(/*! ./lang/toml.js */ "./node_modules/refractor/lang/toml.js"))
-refractor.register(__webpack_require__(/*! ./lang/tremor.js */ "./node_modules/refractor/lang/tremor.js"))
-refractor.register(__webpack_require__(/*! ./lang/tsx.js */ "./node_modules/refractor/lang/tsx.js"))
-refractor.register(__webpack_require__(/*! ./lang/tt2.js */ "./node_modules/refractor/lang/tt2.js"))
-refractor.register(__webpack_require__(/*! ./lang/turtle.js */ "./node_modules/refractor/lang/turtle.js"))
-refractor.register(__webpack_require__(/*! ./lang/twig.js */ "./node_modules/refractor/lang/twig.js"))
-refractor.register(__webpack_require__(/*! ./lang/typescript.js */ "./node_modules/refractor/lang/typescript.js"))
-refractor.register(__webpack_require__(/*! ./lang/typoscript.js */ "./node_modules/refractor/lang/typoscript.js"))
-refractor.register(__webpack_require__(/*! ./lang/unrealscript.js */ "./node_modules/refractor/lang/unrealscript.js"))
-refractor.register(__webpack_require__(/*! ./lang/uorazor.js */ "./node_modules/refractor/lang/uorazor.js"))
-refractor.register(__webpack_require__(/*! ./lang/uri.js */ "./node_modules/refractor/lang/uri.js"))
-refractor.register(__webpack_require__(/*! ./lang/v.js */ "./node_modules/refractor/lang/v.js"))
-refractor.register(__webpack_require__(/*! ./lang/vala.js */ "./node_modules/refractor/lang/vala.js"))
-refractor.register(__webpack_require__(/*! ./lang/vbnet.js */ "./node_modules/refractor/lang/vbnet.js"))
-refractor.register(__webpack_require__(/*! ./lang/velocity.js */ "./node_modules/refractor/lang/velocity.js"))
-refractor.register(__webpack_require__(/*! ./lang/verilog.js */ "./node_modules/refractor/lang/verilog.js"))
-refractor.register(__webpack_require__(/*! ./lang/vhdl.js */ "./node_modules/refractor/lang/vhdl.js"))
-refractor.register(__webpack_require__(/*! ./lang/vim.js */ "./node_modules/refractor/lang/vim.js"))
-refractor.register(__webpack_require__(/*! ./lang/visual-basic.js */ "./node_modules/refractor/lang/visual-basic.js"))
-refractor.register(__webpack_require__(/*! ./lang/warpscript.js */ "./node_modules/refractor/lang/warpscript.js"))
-refractor.register(__webpack_require__(/*! ./lang/wasm.js */ "./node_modules/refractor/lang/wasm.js"))
-refractor.register(__webpack_require__(/*! ./lang/web-idl.js */ "./node_modules/refractor/lang/web-idl.js"))
-refractor.register(__webpack_require__(/*! ./lang/wiki.js */ "./node_modules/refractor/lang/wiki.js"))
-refractor.register(__webpack_require__(/*! ./lang/wolfram.js */ "./node_modules/refractor/lang/wolfram.js"))
-refractor.register(__webpack_require__(/*! ./lang/wren.js */ "./node_modules/refractor/lang/wren.js"))
-refractor.register(__webpack_require__(/*! ./lang/xeora.js */ "./node_modules/refractor/lang/xeora.js"))
-refractor.register(__webpack_require__(/*! ./lang/xml-doc.js */ "./node_modules/refractor/lang/xml-doc.js"))
-refractor.register(__webpack_require__(/*! ./lang/xojo.js */ "./node_modules/refractor/lang/xojo.js"))
-refractor.register(__webpack_require__(/*! ./lang/xquery.js */ "./node_modules/refractor/lang/xquery.js"))
-refractor.register(__webpack_require__(/*! ./lang/yaml.js */ "./node_modules/refractor/lang/yaml.js"))
-refractor.register(__webpack_require__(/*! ./lang/yang.js */ "./node_modules/refractor/lang/yang.js"))
-refractor.register(__webpack_require__(/*! ./lang/zig.js */ "./node_modules/refractor/lang/zig.js"))
 
 
 /***/ }),
@@ -56938,6 +55117,2036 @@ function zig(Prism) {
     })
   })(Prism)
 }
+
+
+/***/ }),
+
+/***/ "./node_modules/refractor/lib/all.js":
+/*!*******************************************!*\
+  !*** ./node_modules/refractor/lib/all.js ***!
+  \*******************************************/
+/*! exports provided: refractor */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _lang_markup_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../lang/markup.js */ "./node_modules/refractor/lang/markup.js");
+/* harmony import */ var _lang_css_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../lang/css.js */ "./node_modules/refractor/lang/css.js");
+/* harmony import */ var _lang_clike_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../lang/clike.js */ "./node_modules/refractor/lang/clike.js");
+/* harmony import */ var _lang_regex_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../lang/regex.js */ "./node_modules/refractor/lang/regex.js");
+/* harmony import */ var _lang_javascript_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../lang/javascript.js */ "./node_modules/refractor/lang/javascript.js");
+/* harmony import */ var _lang_abap_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../lang/abap.js */ "./node_modules/refractor/lang/abap.js");
+/* harmony import */ var _lang_abnf_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../lang/abnf.js */ "./node_modules/refractor/lang/abnf.js");
+/* harmony import */ var _lang_actionscript_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../lang/actionscript.js */ "./node_modules/refractor/lang/actionscript.js");
+/* harmony import */ var _lang_ada_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../lang/ada.js */ "./node_modules/refractor/lang/ada.js");
+/* harmony import */ var _lang_agda_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../lang/agda.js */ "./node_modules/refractor/lang/agda.js");
+/* harmony import */ var _lang_al_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../lang/al.js */ "./node_modules/refractor/lang/al.js");
+/* harmony import */ var _lang_antlr4_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../lang/antlr4.js */ "./node_modules/refractor/lang/antlr4.js");
+/* harmony import */ var _lang_apacheconf_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../lang/apacheconf.js */ "./node_modules/refractor/lang/apacheconf.js");
+/* harmony import */ var _lang_sql_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../lang/sql.js */ "./node_modules/refractor/lang/sql.js");
+/* harmony import */ var _lang_apex_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../lang/apex.js */ "./node_modules/refractor/lang/apex.js");
+/* harmony import */ var _lang_apl_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../lang/apl.js */ "./node_modules/refractor/lang/apl.js");
+/* harmony import */ var _lang_applescript_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../lang/applescript.js */ "./node_modules/refractor/lang/applescript.js");
+/* harmony import */ var _lang_aql_js__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../lang/aql.js */ "./node_modules/refractor/lang/aql.js");
+/* harmony import */ var _lang_c_js__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../lang/c.js */ "./node_modules/refractor/lang/c.js");
+/* harmony import */ var _lang_cpp_js__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../lang/cpp.js */ "./node_modules/refractor/lang/cpp.js");
+/* harmony import */ var _lang_arduino_js__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../lang/arduino.js */ "./node_modules/refractor/lang/arduino.js");
+/* harmony import */ var _lang_arff_js__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../lang/arff.js */ "./node_modules/refractor/lang/arff.js");
+/* harmony import */ var _lang_armasm_js__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../lang/armasm.js */ "./node_modules/refractor/lang/armasm.js");
+/* harmony import */ var _lang_bash_js__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../lang/bash.js */ "./node_modules/refractor/lang/bash.js");
+/* harmony import */ var _lang_yaml_js__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../lang/yaml.js */ "./node_modules/refractor/lang/yaml.js");
+/* harmony import */ var _lang_markdown_js__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../lang/markdown.js */ "./node_modules/refractor/lang/markdown.js");
+/* harmony import */ var _lang_arturo_js__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../lang/arturo.js */ "./node_modules/refractor/lang/arturo.js");
+/* harmony import */ var _lang_asciidoc_js__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../lang/asciidoc.js */ "./node_modules/refractor/lang/asciidoc.js");
+/* harmony import */ var _lang_csharp_js__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ../lang/csharp.js */ "./node_modules/refractor/lang/csharp.js");
+/* harmony import */ var _lang_aspnet_js__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ../lang/aspnet.js */ "./node_modules/refractor/lang/aspnet.js");
+/* harmony import */ var _lang_asm6502_js__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ../lang/asm6502.js */ "./node_modules/refractor/lang/asm6502.js");
+/* harmony import */ var _lang_asmatmel_js__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ../lang/asmatmel.js */ "./node_modules/refractor/lang/asmatmel.js");
+/* harmony import */ var _lang_autohotkey_js__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ../lang/autohotkey.js */ "./node_modules/refractor/lang/autohotkey.js");
+/* harmony import */ var _lang_autoit_js__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ../lang/autoit.js */ "./node_modules/refractor/lang/autoit.js");
+/* harmony import */ var _lang_avisynth_js__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ../lang/avisynth.js */ "./node_modules/refractor/lang/avisynth.js");
+/* harmony import */ var _lang_avro_idl_js__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ../lang/avro-idl.js */ "./node_modules/refractor/lang/avro-idl.js");
+/* harmony import */ var _lang_awk_js__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ../lang/awk.js */ "./node_modules/refractor/lang/awk.js");
+/* harmony import */ var _lang_basic_js__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ../lang/basic.js */ "./node_modules/refractor/lang/basic.js");
+/* harmony import */ var _lang_batch_js__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ../lang/batch.js */ "./node_modules/refractor/lang/batch.js");
+/* harmony import */ var _lang_bbcode_js__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ../lang/bbcode.js */ "./node_modules/refractor/lang/bbcode.js");
+/* harmony import */ var _lang_bbj_js__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ../lang/bbj.js */ "./node_modules/refractor/lang/bbj.js");
+/* harmony import */ var _lang_bicep_js__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ../lang/bicep.js */ "./node_modules/refractor/lang/bicep.js");
+/* harmony import */ var _lang_birb_js__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ../lang/birb.js */ "./node_modules/refractor/lang/birb.js");
+/* harmony import */ var _lang_bison_js__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ../lang/bison.js */ "./node_modules/refractor/lang/bison.js");
+/* harmony import */ var _lang_bnf_js__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ../lang/bnf.js */ "./node_modules/refractor/lang/bnf.js");
+/* harmony import */ var _lang_bqn_js__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ../lang/bqn.js */ "./node_modules/refractor/lang/bqn.js");
+/* harmony import */ var _lang_brainfuck_js__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ../lang/brainfuck.js */ "./node_modules/refractor/lang/brainfuck.js");
+/* harmony import */ var _lang_brightscript_js__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ../lang/brightscript.js */ "./node_modules/refractor/lang/brightscript.js");
+/* harmony import */ var _lang_bro_js__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ../lang/bro.js */ "./node_modules/refractor/lang/bro.js");
+/* harmony import */ var _lang_bsl_js__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ../lang/bsl.js */ "./node_modules/refractor/lang/bsl.js");
+/* harmony import */ var _lang_cfscript_js__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ../lang/cfscript.js */ "./node_modules/refractor/lang/cfscript.js");
+/* harmony import */ var _lang_chaiscript_js__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ../lang/chaiscript.js */ "./node_modules/refractor/lang/chaiscript.js");
+/* harmony import */ var _lang_cil_js__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! ../lang/cil.js */ "./node_modules/refractor/lang/cil.js");
+/* harmony import */ var _lang_cilkc_js__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! ../lang/cilkc.js */ "./node_modules/refractor/lang/cilkc.js");
+/* harmony import */ var _lang_cilkcpp_js__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! ../lang/cilkcpp.js */ "./node_modules/refractor/lang/cilkcpp.js");
+/* harmony import */ var _lang_clojure_js__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! ../lang/clojure.js */ "./node_modules/refractor/lang/clojure.js");
+/* harmony import */ var _lang_cmake_js__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(/*! ../lang/cmake.js */ "./node_modules/refractor/lang/cmake.js");
+/* harmony import */ var _lang_cobol_js__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(/*! ../lang/cobol.js */ "./node_modules/refractor/lang/cobol.js");
+/* harmony import */ var _lang_coffeescript_js__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(/*! ../lang/coffeescript.js */ "./node_modules/refractor/lang/coffeescript.js");
+/* harmony import */ var _lang_concurnas_js__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(/*! ../lang/concurnas.js */ "./node_modules/refractor/lang/concurnas.js");
+/* harmony import */ var _lang_csp_js__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(/*! ../lang/csp.js */ "./node_modules/refractor/lang/csp.js");
+/* harmony import */ var _lang_cooklang_js__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__(/*! ../lang/cooklang.js */ "./node_modules/refractor/lang/cooklang.js");
+/* harmony import */ var _lang_coq_js__WEBPACK_IMPORTED_MODULE_62__ = __webpack_require__(/*! ../lang/coq.js */ "./node_modules/refractor/lang/coq.js");
+/* harmony import */ var _lang_ruby_js__WEBPACK_IMPORTED_MODULE_63__ = __webpack_require__(/*! ../lang/ruby.js */ "./node_modules/refractor/lang/ruby.js");
+/* harmony import */ var _lang_crystal_js__WEBPACK_IMPORTED_MODULE_64__ = __webpack_require__(/*! ../lang/crystal.js */ "./node_modules/refractor/lang/crystal.js");
+/* harmony import */ var _lang_css_extras_js__WEBPACK_IMPORTED_MODULE_65__ = __webpack_require__(/*! ../lang/css-extras.js */ "./node_modules/refractor/lang/css-extras.js");
+/* harmony import */ var _lang_csv_js__WEBPACK_IMPORTED_MODULE_66__ = __webpack_require__(/*! ../lang/csv.js */ "./node_modules/refractor/lang/csv.js");
+/* harmony import */ var _lang_cue_js__WEBPACK_IMPORTED_MODULE_67__ = __webpack_require__(/*! ../lang/cue.js */ "./node_modules/refractor/lang/cue.js");
+/* harmony import */ var _lang_cypher_js__WEBPACK_IMPORTED_MODULE_68__ = __webpack_require__(/*! ../lang/cypher.js */ "./node_modules/refractor/lang/cypher.js");
+/* harmony import */ var _lang_d_js__WEBPACK_IMPORTED_MODULE_69__ = __webpack_require__(/*! ../lang/d.js */ "./node_modules/refractor/lang/d.js");
+/* harmony import */ var _lang_dart_js__WEBPACK_IMPORTED_MODULE_70__ = __webpack_require__(/*! ../lang/dart.js */ "./node_modules/refractor/lang/dart.js");
+/* harmony import */ var _lang_dataweave_js__WEBPACK_IMPORTED_MODULE_71__ = __webpack_require__(/*! ../lang/dataweave.js */ "./node_modules/refractor/lang/dataweave.js");
+/* harmony import */ var _lang_dax_js__WEBPACK_IMPORTED_MODULE_72__ = __webpack_require__(/*! ../lang/dax.js */ "./node_modules/refractor/lang/dax.js");
+/* harmony import */ var _lang_dhall_js__WEBPACK_IMPORTED_MODULE_73__ = __webpack_require__(/*! ../lang/dhall.js */ "./node_modules/refractor/lang/dhall.js");
+/* harmony import */ var _lang_diff_js__WEBPACK_IMPORTED_MODULE_74__ = __webpack_require__(/*! ../lang/diff.js */ "./node_modules/refractor/lang/diff.js");
+/* harmony import */ var _lang_markup_templating_js__WEBPACK_IMPORTED_MODULE_75__ = __webpack_require__(/*! ../lang/markup-templating.js */ "./node_modules/refractor/lang/markup-templating.js");
+/* harmony import */ var _lang_django_js__WEBPACK_IMPORTED_MODULE_76__ = __webpack_require__(/*! ../lang/django.js */ "./node_modules/refractor/lang/django.js");
+/* harmony import */ var _lang_dns_zone_file_js__WEBPACK_IMPORTED_MODULE_77__ = __webpack_require__(/*! ../lang/dns-zone-file.js */ "./node_modules/refractor/lang/dns-zone-file.js");
+/* harmony import */ var _lang_docker_js__WEBPACK_IMPORTED_MODULE_78__ = __webpack_require__(/*! ../lang/docker.js */ "./node_modules/refractor/lang/docker.js");
+/* harmony import */ var _lang_dot_js__WEBPACK_IMPORTED_MODULE_79__ = __webpack_require__(/*! ../lang/dot.js */ "./node_modules/refractor/lang/dot.js");
+/* harmony import */ var _lang_ebnf_js__WEBPACK_IMPORTED_MODULE_80__ = __webpack_require__(/*! ../lang/ebnf.js */ "./node_modules/refractor/lang/ebnf.js");
+/* harmony import */ var _lang_editorconfig_js__WEBPACK_IMPORTED_MODULE_81__ = __webpack_require__(/*! ../lang/editorconfig.js */ "./node_modules/refractor/lang/editorconfig.js");
+/* harmony import */ var _lang_eiffel_js__WEBPACK_IMPORTED_MODULE_82__ = __webpack_require__(/*! ../lang/eiffel.js */ "./node_modules/refractor/lang/eiffel.js");
+/* harmony import */ var _lang_ejs_js__WEBPACK_IMPORTED_MODULE_83__ = __webpack_require__(/*! ../lang/ejs.js */ "./node_modules/refractor/lang/ejs.js");
+/* harmony import */ var _lang_elixir_js__WEBPACK_IMPORTED_MODULE_84__ = __webpack_require__(/*! ../lang/elixir.js */ "./node_modules/refractor/lang/elixir.js");
+/* harmony import */ var _lang_elm_js__WEBPACK_IMPORTED_MODULE_85__ = __webpack_require__(/*! ../lang/elm.js */ "./node_modules/refractor/lang/elm.js");
+/* harmony import */ var _lang_lua_js__WEBPACK_IMPORTED_MODULE_86__ = __webpack_require__(/*! ../lang/lua.js */ "./node_modules/refractor/lang/lua.js");
+/* harmony import */ var _lang_etlua_js__WEBPACK_IMPORTED_MODULE_87__ = __webpack_require__(/*! ../lang/etlua.js */ "./node_modules/refractor/lang/etlua.js");
+/* harmony import */ var _lang_erb_js__WEBPACK_IMPORTED_MODULE_88__ = __webpack_require__(/*! ../lang/erb.js */ "./node_modules/refractor/lang/erb.js");
+/* harmony import */ var _lang_erlang_js__WEBPACK_IMPORTED_MODULE_89__ = __webpack_require__(/*! ../lang/erlang.js */ "./node_modules/refractor/lang/erlang.js");
+/* harmony import */ var _lang_excel_formula_js__WEBPACK_IMPORTED_MODULE_90__ = __webpack_require__(/*! ../lang/excel-formula.js */ "./node_modules/refractor/lang/excel-formula.js");
+/* harmony import */ var _lang_fsharp_js__WEBPACK_IMPORTED_MODULE_91__ = __webpack_require__(/*! ../lang/fsharp.js */ "./node_modules/refractor/lang/fsharp.js");
+/* harmony import */ var _lang_factor_js__WEBPACK_IMPORTED_MODULE_92__ = __webpack_require__(/*! ../lang/factor.js */ "./node_modules/refractor/lang/factor.js");
+/* harmony import */ var _lang_false_js__WEBPACK_IMPORTED_MODULE_93__ = __webpack_require__(/*! ../lang/false.js */ "./node_modules/refractor/lang/false.js");
+/* harmony import */ var _lang_firestore_security_rules_js__WEBPACK_IMPORTED_MODULE_94__ = __webpack_require__(/*! ../lang/firestore-security-rules.js */ "./node_modules/refractor/lang/firestore-security-rules.js");
+/* harmony import */ var _lang_flow_js__WEBPACK_IMPORTED_MODULE_95__ = __webpack_require__(/*! ../lang/flow.js */ "./node_modules/refractor/lang/flow.js");
+/* harmony import */ var _lang_fortran_js__WEBPACK_IMPORTED_MODULE_96__ = __webpack_require__(/*! ../lang/fortran.js */ "./node_modules/refractor/lang/fortran.js");
+/* harmony import */ var _lang_ftl_js__WEBPACK_IMPORTED_MODULE_97__ = __webpack_require__(/*! ../lang/ftl.js */ "./node_modules/refractor/lang/ftl.js");
+/* harmony import */ var _lang_gml_js__WEBPACK_IMPORTED_MODULE_98__ = __webpack_require__(/*! ../lang/gml.js */ "./node_modules/refractor/lang/gml.js");
+/* harmony import */ var _lang_gap_js__WEBPACK_IMPORTED_MODULE_99__ = __webpack_require__(/*! ../lang/gap.js */ "./node_modules/refractor/lang/gap.js");
+/* harmony import */ var _lang_gcode_js__WEBPACK_IMPORTED_MODULE_100__ = __webpack_require__(/*! ../lang/gcode.js */ "./node_modules/refractor/lang/gcode.js");
+/* harmony import */ var _lang_gdscript_js__WEBPACK_IMPORTED_MODULE_101__ = __webpack_require__(/*! ../lang/gdscript.js */ "./node_modules/refractor/lang/gdscript.js");
+/* harmony import */ var _lang_gedcom_js__WEBPACK_IMPORTED_MODULE_102__ = __webpack_require__(/*! ../lang/gedcom.js */ "./node_modules/refractor/lang/gedcom.js");
+/* harmony import */ var _lang_gettext_js__WEBPACK_IMPORTED_MODULE_103__ = __webpack_require__(/*! ../lang/gettext.js */ "./node_modules/refractor/lang/gettext.js");
+/* harmony import */ var _lang_gherkin_js__WEBPACK_IMPORTED_MODULE_104__ = __webpack_require__(/*! ../lang/gherkin.js */ "./node_modules/refractor/lang/gherkin.js");
+/* harmony import */ var _lang_git_js__WEBPACK_IMPORTED_MODULE_105__ = __webpack_require__(/*! ../lang/git.js */ "./node_modules/refractor/lang/git.js");
+/* harmony import */ var _lang_glsl_js__WEBPACK_IMPORTED_MODULE_106__ = __webpack_require__(/*! ../lang/glsl.js */ "./node_modules/refractor/lang/glsl.js");
+/* harmony import */ var _lang_gn_js__WEBPACK_IMPORTED_MODULE_107__ = __webpack_require__(/*! ../lang/gn.js */ "./node_modules/refractor/lang/gn.js");
+/* harmony import */ var _lang_linker_script_js__WEBPACK_IMPORTED_MODULE_108__ = __webpack_require__(/*! ../lang/linker-script.js */ "./node_modules/refractor/lang/linker-script.js");
+/* harmony import */ var _lang_go_js__WEBPACK_IMPORTED_MODULE_109__ = __webpack_require__(/*! ../lang/go.js */ "./node_modules/refractor/lang/go.js");
+/* harmony import */ var _lang_go_module_js__WEBPACK_IMPORTED_MODULE_110__ = __webpack_require__(/*! ../lang/go-module.js */ "./node_modules/refractor/lang/go-module.js");
+/* harmony import */ var _lang_gradle_js__WEBPACK_IMPORTED_MODULE_111__ = __webpack_require__(/*! ../lang/gradle.js */ "./node_modules/refractor/lang/gradle.js");
+/* harmony import */ var _lang_graphql_js__WEBPACK_IMPORTED_MODULE_112__ = __webpack_require__(/*! ../lang/graphql.js */ "./node_modules/refractor/lang/graphql.js");
+/* harmony import */ var _lang_groovy_js__WEBPACK_IMPORTED_MODULE_113__ = __webpack_require__(/*! ../lang/groovy.js */ "./node_modules/refractor/lang/groovy.js");
+/* harmony import */ var _lang_less_js__WEBPACK_IMPORTED_MODULE_114__ = __webpack_require__(/*! ../lang/less.js */ "./node_modules/refractor/lang/less.js");
+/* harmony import */ var _lang_scss_js__WEBPACK_IMPORTED_MODULE_115__ = __webpack_require__(/*! ../lang/scss.js */ "./node_modules/refractor/lang/scss.js");
+/* harmony import */ var _lang_textile_js__WEBPACK_IMPORTED_MODULE_116__ = __webpack_require__(/*! ../lang/textile.js */ "./node_modules/refractor/lang/textile.js");
+/* harmony import */ var _lang_haml_js__WEBPACK_IMPORTED_MODULE_117__ = __webpack_require__(/*! ../lang/haml.js */ "./node_modules/refractor/lang/haml.js");
+/* harmony import */ var _lang_handlebars_js__WEBPACK_IMPORTED_MODULE_118__ = __webpack_require__(/*! ../lang/handlebars.js */ "./node_modules/refractor/lang/handlebars.js");
+/* harmony import */ var _lang_haskell_js__WEBPACK_IMPORTED_MODULE_119__ = __webpack_require__(/*! ../lang/haskell.js */ "./node_modules/refractor/lang/haskell.js");
+/* harmony import */ var _lang_haxe_js__WEBPACK_IMPORTED_MODULE_120__ = __webpack_require__(/*! ../lang/haxe.js */ "./node_modules/refractor/lang/haxe.js");
+/* harmony import */ var _lang_hcl_js__WEBPACK_IMPORTED_MODULE_121__ = __webpack_require__(/*! ../lang/hcl.js */ "./node_modules/refractor/lang/hcl.js");
+/* harmony import */ var _lang_hlsl_js__WEBPACK_IMPORTED_MODULE_122__ = __webpack_require__(/*! ../lang/hlsl.js */ "./node_modules/refractor/lang/hlsl.js");
+/* harmony import */ var _lang_hoon_js__WEBPACK_IMPORTED_MODULE_123__ = __webpack_require__(/*! ../lang/hoon.js */ "./node_modules/refractor/lang/hoon.js");
+/* harmony import */ var _lang_hpkp_js__WEBPACK_IMPORTED_MODULE_124__ = __webpack_require__(/*! ../lang/hpkp.js */ "./node_modules/refractor/lang/hpkp.js");
+/* harmony import */ var _lang_hsts_js__WEBPACK_IMPORTED_MODULE_125__ = __webpack_require__(/*! ../lang/hsts.js */ "./node_modules/refractor/lang/hsts.js");
+/* harmony import */ var _lang_json_js__WEBPACK_IMPORTED_MODULE_126__ = __webpack_require__(/*! ../lang/json.js */ "./node_modules/refractor/lang/json.js");
+/* harmony import */ var _lang_uri_js__WEBPACK_IMPORTED_MODULE_127__ = __webpack_require__(/*! ../lang/uri.js */ "./node_modules/refractor/lang/uri.js");
+/* harmony import */ var _lang_http_js__WEBPACK_IMPORTED_MODULE_128__ = __webpack_require__(/*! ../lang/http.js */ "./node_modules/refractor/lang/http.js");
+/* harmony import */ var _lang_ichigojam_js__WEBPACK_IMPORTED_MODULE_129__ = __webpack_require__(/*! ../lang/ichigojam.js */ "./node_modules/refractor/lang/ichigojam.js");
+/* harmony import */ var _lang_icon_js__WEBPACK_IMPORTED_MODULE_130__ = __webpack_require__(/*! ../lang/icon.js */ "./node_modules/refractor/lang/icon.js");
+/* harmony import */ var _lang_icu_message_format_js__WEBPACK_IMPORTED_MODULE_131__ = __webpack_require__(/*! ../lang/icu-message-format.js */ "./node_modules/refractor/lang/icu-message-format.js");
+/* harmony import */ var _lang_idris_js__WEBPACK_IMPORTED_MODULE_132__ = __webpack_require__(/*! ../lang/idris.js */ "./node_modules/refractor/lang/idris.js");
+/* harmony import */ var _lang_ignore_js__WEBPACK_IMPORTED_MODULE_133__ = __webpack_require__(/*! ../lang/ignore.js */ "./node_modules/refractor/lang/ignore.js");
+/* harmony import */ var _lang_inform7_js__WEBPACK_IMPORTED_MODULE_134__ = __webpack_require__(/*! ../lang/inform7.js */ "./node_modules/refractor/lang/inform7.js");
+/* harmony import */ var _lang_ini_js__WEBPACK_IMPORTED_MODULE_135__ = __webpack_require__(/*! ../lang/ini.js */ "./node_modules/refractor/lang/ini.js");
+/* harmony import */ var _lang_io_js__WEBPACK_IMPORTED_MODULE_136__ = __webpack_require__(/*! ../lang/io.js */ "./node_modules/refractor/lang/io.js");
+/* harmony import */ var _lang_j_js__WEBPACK_IMPORTED_MODULE_137__ = __webpack_require__(/*! ../lang/j.js */ "./node_modules/refractor/lang/j.js");
+/* harmony import */ var _lang_java_js__WEBPACK_IMPORTED_MODULE_138__ = __webpack_require__(/*! ../lang/java.js */ "./node_modules/refractor/lang/java.js");
+/* harmony import */ var _lang_php_js__WEBPACK_IMPORTED_MODULE_139__ = __webpack_require__(/*! ../lang/php.js */ "./node_modules/refractor/lang/php.js");
+/* harmony import */ var _lang_javadoclike_js__WEBPACK_IMPORTED_MODULE_140__ = __webpack_require__(/*! ../lang/javadoclike.js */ "./node_modules/refractor/lang/javadoclike.js");
+/* harmony import */ var _lang_scala_js__WEBPACK_IMPORTED_MODULE_141__ = __webpack_require__(/*! ../lang/scala.js */ "./node_modules/refractor/lang/scala.js");
+/* harmony import */ var _lang_javadoc_js__WEBPACK_IMPORTED_MODULE_142__ = __webpack_require__(/*! ../lang/javadoc.js */ "./node_modules/refractor/lang/javadoc.js");
+/* harmony import */ var _lang_javastacktrace_js__WEBPACK_IMPORTED_MODULE_143__ = __webpack_require__(/*! ../lang/javastacktrace.js */ "./node_modules/refractor/lang/javastacktrace.js");
+/* harmony import */ var _lang_jexl_js__WEBPACK_IMPORTED_MODULE_144__ = __webpack_require__(/*! ../lang/jexl.js */ "./node_modules/refractor/lang/jexl.js");
+/* harmony import */ var _lang_jolie_js__WEBPACK_IMPORTED_MODULE_145__ = __webpack_require__(/*! ../lang/jolie.js */ "./node_modules/refractor/lang/jolie.js");
+/* harmony import */ var _lang_jq_js__WEBPACK_IMPORTED_MODULE_146__ = __webpack_require__(/*! ../lang/jq.js */ "./node_modules/refractor/lang/jq.js");
+/* harmony import */ var _lang_js_templates_js__WEBPACK_IMPORTED_MODULE_147__ = __webpack_require__(/*! ../lang/js-templates.js */ "./node_modules/refractor/lang/js-templates.js");
+/* harmony import */ var _lang_typescript_js__WEBPACK_IMPORTED_MODULE_148__ = __webpack_require__(/*! ../lang/typescript.js */ "./node_modules/refractor/lang/typescript.js");
+/* harmony import */ var _lang_jsdoc_js__WEBPACK_IMPORTED_MODULE_149__ = __webpack_require__(/*! ../lang/jsdoc.js */ "./node_modules/refractor/lang/jsdoc.js");
+/* harmony import */ var _lang_n4js_js__WEBPACK_IMPORTED_MODULE_150__ = __webpack_require__(/*! ../lang/n4js.js */ "./node_modules/refractor/lang/n4js.js");
+/* harmony import */ var _lang_js_extras_js__WEBPACK_IMPORTED_MODULE_151__ = __webpack_require__(/*! ../lang/js-extras.js */ "./node_modules/refractor/lang/js-extras.js");
+/* harmony import */ var _lang_json5_js__WEBPACK_IMPORTED_MODULE_152__ = __webpack_require__(/*! ../lang/json5.js */ "./node_modules/refractor/lang/json5.js");
+/* harmony import */ var _lang_jsonp_js__WEBPACK_IMPORTED_MODULE_153__ = __webpack_require__(/*! ../lang/jsonp.js */ "./node_modules/refractor/lang/jsonp.js");
+/* harmony import */ var _lang_jsstacktrace_js__WEBPACK_IMPORTED_MODULE_154__ = __webpack_require__(/*! ../lang/jsstacktrace.js */ "./node_modules/refractor/lang/jsstacktrace.js");
+/* harmony import */ var _lang_julia_js__WEBPACK_IMPORTED_MODULE_155__ = __webpack_require__(/*! ../lang/julia.js */ "./node_modules/refractor/lang/julia.js");
+/* harmony import */ var _lang_keepalived_js__WEBPACK_IMPORTED_MODULE_156__ = __webpack_require__(/*! ../lang/keepalived.js */ "./node_modules/refractor/lang/keepalived.js");
+/* harmony import */ var _lang_keyman_js__WEBPACK_IMPORTED_MODULE_157__ = __webpack_require__(/*! ../lang/keyman.js */ "./node_modules/refractor/lang/keyman.js");
+/* harmony import */ var _lang_kotlin_js__WEBPACK_IMPORTED_MODULE_158__ = __webpack_require__(/*! ../lang/kotlin.js */ "./node_modules/refractor/lang/kotlin.js");
+/* harmony import */ var _lang_kumir_js__WEBPACK_IMPORTED_MODULE_159__ = __webpack_require__(/*! ../lang/kumir.js */ "./node_modules/refractor/lang/kumir.js");
+/* harmony import */ var _lang_kusto_js__WEBPACK_IMPORTED_MODULE_160__ = __webpack_require__(/*! ../lang/kusto.js */ "./node_modules/refractor/lang/kusto.js");
+/* harmony import */ var _lang_latex_js__WEBPACK_IMPORTED_MODULE_161__ = __webpack_require__(/*! ../lang/latex.js */ "./node_modules/refractor/lang/latex.js");
+/* harmony import */ var _lang_latte_js__WEBPACK_IMPORTED_MODULE_162__ = __webpack_require__(/*! ../lang/latte.js */ "./node_modules/refractor/lang/latte.js");
+/* harmony import */ var _lang_scheme_js__WEBPACK_IMPORTED_MODULE_163__ = __webpack_require__(/*! ../lang/scheme.js */ "./node_modules/refractor/lang/scheme.js");
+/* harmony import */ var _lang_lilypond_js__WEBPACK_IMPORTED_MODULE_164__ = __webpack_require__(/*! ../lang/lilypond.js */ "./node_modules/refractor/lang/lilypond.js");
+/* harmony import */ var _lang_liquid_js__WEBPACK_IMPORTED_MODULE_165__ = __webpack_require__(/*! ../lang/liquid.js */ "./node_modules/refractor/lang/liquid.js");
+/* harmony import */ var _lang_lisp_js__WEBPACK_IMPORTED_MODULE_166__ = __webpack_require__(/*! ../lang/lisp.js */ "./node_modules/refractor/lang/lisp.js");
+/* harmony import */ var _lang_livescript_js__WEBPACK_IMPORTED_MODULE_167__ = __webpack_require__(/*! ../lang/livescript.js */ "./node_modules/refractor/lang/livescript.js");
+/* harmony import */ var _lang_llvm_js__WEBPACK_IMPORTED_MODULE_168__ = __webpack_require__(/*! ../lang/llvm.js */ "./node_modules/refractor/lang/llvm.js");
+/* harmony import */ var _lang_log_js__WEBPACK_IMPORTED_MODULE_169__ = __webpack_require__(/*! ../lang/log.js */ "./node_modules/refractor/lang/log.js");
+/* harmony import */ var _lang_lolcode_js__WEBPACK_IMPORTED_MODULE_170__ = __webpack_require__(/*! ../lang/lolcode.js */ "./node_modules/refractor/lang/lolcode.js");
+/* harmony import */ var _lang_magma_js__WEBPACK_IMPORTED_MODULE_171__ = __webpack_require__(/*! ../lang/magma.js */ "./node_modules/refractor/lang/magma.js");
+/* harmony import */ var _lang_makefile_js__WEBPACK_IMPORTED_MODULE_172__ = __webpack_require__(/*! ../lang/makefile.js */ "./node_modules/refractor/lang/makefile.js");
+/* harmony import */ var _lang_mata_js__WEBPACK_IMPORTED_MODULE_173__ = __webpack_require__(/*! ../lang/mata.js */ "./node_modules/refractor/lang/mata.js");
+/* harmony import */ var _lang_matlab_js__WEBPACK_IMPORTED_MODULE_174__ = __webpack_require__(/*! ../lang/matlab.js */ "./node_modules/refractor/lang/matlab.js");
+/* harmony import */ var _lang_maxscript_js__WEBPACK_IMPORTED_MODULE_175__ = __webpack_require__(/*! ../lang/maxscript.js */ "./node_modules/refractor/lang/maxscript.js");
+/* harmony import */ var _lang_mel_js__WEBPACK_IMPORTED_MODULE_176__ = __webpack_require__(/*! ../lang/mel.js */ "./node_modules/refractor/lang/mel.js");
+/* harmony import */ var _lang_mermaid_js__WEBPACK_IMPORTED_MODULE_177__ = __webpack_require__(/*! ../lang/mermaid.js */ "./node_modules/refractor/lang/mermaid.js");
+/* harmony import */ var _lang_metafont_js__WEBPACK_IMPORTED_MODULE_178__ = __webpack_require__(/*! ../lang/metafont.js */ "./node_modules/refractor/lang/metafont.js");
+/* harmony import */ var _lang_mizar_js__WEBPACK_IMPORTED_MODULE_179__ = __webpack_require__(/*! ../lang/mizar.js */ "./node_modules/refractor/lang/mizar.js");
+/* harmony import */ var _lang_mongodb_js__WEBPACK_IMPORTED_MODULE_180__ = __webpack_require__(/*! ../lang/mongodb.js */ "./node_modules/refractor/lang/mongodb.js");
+/* harmony import */ var _lang_monkey_js__WEBPACK_IMPORTED_MODULE_181__ = __webpack_require__(/*! ../lang/monkey.js */ "./node_modules/refractor/lang/monkey.js");
+/* harmony import */ var _lang_moonscript_js__WEBPACK_IMPORTED_MODULE_182__ = __webpack_require__(/*! ../lang/moonscript.js */ "./node_modules/refractor/lang/moonscript.js");
+/* harmony import */ var _lang_n1ql_js__WEBPACK_IMPORTED_MODULE_183__ = __webpack_require__(/*! ../lang/n1ql.js */ "./node_modules/refractor/lang/n1ql.js");
+/* harmony import */ var _lang_nand2tetris_hdl_js__WEBPACK_IMPORTED_MODULE_184__ = __webpack_require__(/*! ../lang/nand2tetris-hdl.js */ "./node_modules/refractor/lang/nand2tetris-hdl.js");
+/* harmony import */ var _lang_naniscript_js__WEBPACK_IMPORTED_MODULE_185__ = __webpack_require__(/*! ../lang/naniscript.js */ "./node_modules/refractor/lang/naniscript.js");
+/* harmony import */ var _lang_nasm_js__WEBPACK_IMPORTED_MODULE_186__ = __webpack_require__(/*! ../lang/nasm.js */ "./node_modules/refractor/lang/nasm.js");
+/* harmony import */ var _lang_neon_js__WEBPACK_IMPORTED_MODULE_187__ = __webpack_require__(/*! ../lang/neon.js */ "./node_modules/refractor/lang/neon.js");
+/* harmony import */ var _lang_nevod_js__WEBPACK_IMPORTED_MODULE_188__ = __webpack_require__(/*! ../lang/nevod.js */ "./node_modules/refractor/lang/nevod.js");
+/* harmony import */ var _lang_nginx_js__WEBPACK_IMPORTED_MODULE_189__ = __webpack_require__(/*! ../lang/nginx.js */ "./node_modules/refractor/lang/nginx.js");
+/* harmony import */ var _lang_nim_js__WEBPACK_IMPORTED_MODULE_190__ = __webpack_require__(/*! ../lang/nim.js */ "./node_modules/refractor/lang/nim.js");
+/* harmony import */ var _lang_nix_js__WEBPACK_IMPORTED_MODULE_191__ = __webpack_require__(/*! ../lang/nix.js */ "./node_modules/refractor/lang/nix.js");
+/* harmony import */ var _lang_nsis_js__WEBPACK_IMPORTED_MODULE_192__ = __webpack_require__(/*! ../lang/nsis.js */ "./node_modules/refractor/lang/nsis.js");
+/* harmony import */ var _lang_objectivec_js__WEBPACK_IMPORTED_MODULE_193__ = __webpack_require__(/*! ../lang/objectivec.js */ "./node_modules/refractor/lang/objectivec.js");
+/* harmony import */ var _lang_ocaml_js__WEBPACK_IMPORTED_MODULE_194__ = __webpack_require__(/*! ../lang/ocaml.js */ "./node_modules/refractor/lang/ocaml.js");
+/* harmony import */ var _lang_odin_js__WEBPACK_IMPORTED_MODULE_195__ = __webpack_require__(/*! ../lang/odin.js */ "./node_modules/refractor/lang/odin.js");
+/* harmony import */ var _lang_opencl_js__WEBPACK_IMPORTED_MODULE_196__ = __webpack_require__(/*! ../lang/opencl.js */ "./node_modules/refractor/lang/opencl.js");
+/* harmony import */ var _lang_openqasm_js__WEBPACK_IMPORTED_MODULE_197__ = __webpack_require__(/*! ../lang/openqasm.js */ "./node_modules/refractor/lang/openqasm.js");
+/* harmony import */ var _lang_oz_js__WEBPACK_IMPORTED_MODULE_198__ = __webpack_require__(/*! ../lang/oz.js */ "./node_modules/refractor/lang/oz.js");
+/* harmony import */ var _lang_parigp_js__WEBPACK_IMPORTED_MODULE_199__ = __webpack_require__(/*! ../lang/parigp.js */ "./node_modules/refractor/lang/parigp.js");
+/* harmony import */ var _lang_parser_js__WEBPACK_IMPORTED_MODULE_200__ = __webpack_require__(/*! ../lang/parser.js */ "./node_modules/refractor/lang/parser.js");
+/* harmony import */ var _lang_pascal_js__WEBPACK_IMPORTED_MODULE_201__ = __webpack_require__(/*! ../lang/pascal.js */ "./node_modules/refractor/lang/pascal.js");
+/* harmony import */ var _lang_pascaligo_js__WEBPACK_IMPORTED_MODULE_202__ = __webpack_require__(/*! ../lang/pascaligo.js */ "./node_modules/refractor/lang/pascaligo.js");
+/* harmony import */ var _lang_psl_js__WEBPACK_IMPORTED_MODULE_203__ = __webpack_require__(/*! ../lang/psl.js */ "./node_modules/refractor/lang/psl.js");
+/* harmony import */ var _lang_pcaxis_js__WEBPACK_IMPORTED_MODULE_204__ = __webpack_require__(/*! ../lang/pcaxis.js */ "./node_modules/refractor/lang/pcaxis.js");
+/* harmony import */ var _lang_peoplecode_js__WEBPACK_IMPORTED_MODULE_205__ = __webpack_require__(/*! ../lang/peoplecode.js */ "./node_modules/refractor/lang/peoplecode.js");
+/* harmony import */ var _lang_perl_js__WEBPACK_IMPORTED_MODULE_206__ = __webpack_require__(/*! ../lang/perl.js */ "./node_modules/refractor/lang/perl.js");
+/* harmony import */ var _lang_phpdoc_js__WEBPACK_IMPORTED_MODULE_207__ = __webpack_require__(/*! ../lang/phpdoc.js */ "./node_modules/refractor/lang/phpdoc.js");
+/* harmony import */ var _lang_php_extras_js__WEBPACK_IMPORTED_MODULE_208__ = __webpack_require__(/*! ../lang/php-extras.js */ "./node_modules/refractor/lang/php-extras.js");
+/* harmony import */ var _lang_plant_uml_js__WEBPACK_IMPORTED_MODULE_209__ = __webpack_require__(/*! ../lang/plant-uml.js */ "./node_modules/refractor/lang/plant-uml.js");
+/* harmony import */ var _lang_plsql_js__WEBPACK_IMPORTED_MODULE_210__ = __webpack_require__(/*! ../lang/plsql.js */ "./node_modules/refractor/lang/plsql.js");
+/* harmony import */ var _lang_powerquery_js__WEBPACK_IMPORTED_MODULE_211__ = __webpack_require__(/*! ../lang/powerquery.js */ "./node_modules/refractor/lang/powerquery.js");
+/* harmony import */ var _lang_powershell_js__WEBPACK_IMPORTED_MODULE_212__ = __webpack_require__(/*! ../lang/powershell.js */ "./node_modules/refractor/lang/powershell.js");
+/* harmony import */ var _lang_processing_js__WEBPACK_IMPORTED_MODULE_213__ = __webpack_require__(/*! ../lang/processing.js */ "./node_modules/refractor/lang/processing.js");
+/* harmony import */ var _lang_prolog_js__WEBPACK_IMPORTED_MODULE_214__ = __webpack_require__(/*! ../lang/prolog.js */ "./node_modules/refractor/lang/prolog.js");
+/* harmony import */ var _lang_promql_js__WEBPACK_IMPORTED_MODULE_215__ = __webpack_require__(/*! ../lang/promql.js */ "./node_modules/refractor/lang/promql.js");
+/* harmony import */ var _lang_properties_js__WEBPACK_IMPORTED_MODULE_216__ = __webpack_require__(/*! ../lang/properties.js */ "./node_modules/refractor/lang/properties.js");
+/* harmony import */ var _lang_protobuf_js__WEBPACK_IMPORTED_MODULE_217__ = __webpack_require__(/*! ../lang/protobuf.js */ "./node_modules/refractor/lang/protobuf.js");
+/* harmony import */ var _lang_stylus_js__WEBPACK_IMPORTED_MODULE_218__ = __webpack_require__(/*! ../lang/stylus.js */ "./node_modules/refractor/lang/stylus.js");
+/* harmony import */ var _lang_twig_js__WEBPACK_IMPORTED_MODULE_219__ = __webpack_require__(/*! ../lang/twig.js */ "./node_modules/refractor/lang/twig.js");
+/* harmony import */ var _lang_pug_js__WEBPACK_IMPORTED_MODULE_220__ = __webpack_require__(/*! ../lang/pug.js */ "./node_modules/refractor/lang/pug.js");
+/* harmony import */ var _lang_puppet_js__WEBPACK_IMPORTED_MODULE_221__ = __webpack_require__(/*! ../lang/puppet.js */ "./node_modules/refractor/lang/puppet.js");
+/* harmony import */ var _lang_pure_js__WEBPACK_IMPORTED_MODULE_222__ = __webpack_require__(/*! ../lang/pure.js */ "./node_modules/refractor/lang/pure.js");
+/* harmony import */ var _lang_purebasic_js__WEBPACK_IMPORTED_MODULE_223__ = __webpack_require__(/*! ../lang/purebasic.js */ "./node_modules/refractor/lang/purebasic.js");
+/* harmony import */ var _lang_purescript_js__WEBPACK_IMPORTED_MODULE_224__ = __webpack_require__(/*! ../lang/purescript.js */ "./node_modules/refractor/lang/purescript.js");
+/* harmony import */ var _lang_python_js__WEBPACK_IMPORTED_MODULE_225__ = __webpack_require__(/*! ../lang/python.js */ "./node_modules/refractor/lang/python.js");
+/* harmony import */ var _lang_qsharp_js__WEBPACK_IMPORTED_MODULE_226__ = __webpack_require__(/*! ../lang/qsharp.js */ "./node_modules/refractor/lang/qsharp.js");
+/* harmony import */ var _lang_q_js__WEBPACK_IMPORTED_MODULE_227__ = __webpack_require__(/*! ../lang/q.js */ "./node_modules/refractor/lang/q.js");
+/* harmony import */ var _lang_qml_js__WEBPACK_IMPORTED_MODULE_228__ = __webpack_require__(/*! ../lang/qml.js */ "./node_modules/refractor/lang/qml.js");
+/* harmony import */ var _lang_qore_js__WEBPACK_IMPORTED_MODULE_229__ = __webpack_require__(/*! ../lang/qore.js */ "./node_modules/refractor/lang/qore.js");
+/* harmony import */ var _lang_r_js__WEBPACK_IMPORTED_MODULE_230__ = __webpack_require__(/*! ../lang/r.js */ "./node_modules/refractor/lang/r.js");
+/* harmony import */ var _lang_racket_js__WEBPACK_IMPORTED_MODULE_231__ = __webpack_require__(/*! ../lang/racket.js */ "./node_modules/refractor/lang/racket.js");
+/* harmony import */ var _lang_cshtml_js__WEBPACK_IMPORTED_MODULE_232__ = __webpack_require__(/*! ../lang/cshtml.js */ "./node_modules/refractor/lang/cshtml.js");
+/* harmony import */ var _lang_jsx_js__WEBPACK_IMPORTED_MODULE_233__ = __webpack_require__(/*! ../lang/jsx.js */ "./node_modules/refractor/lang/jsx.js");
+/* harmony import */ var _lang_tsx_js__WEBPACK_IMPORTED_MODULE_234__ = __webpack_require__(/*! ../lang/tsx.js */ "./node_modules/refractor/lang/tsx.js");
+/* harmony import */ var _lang_reason_js__WEBPACK_IMPORTED_MODULE_235__ = __webpack_require__(/*! ../lang/reason.js */ "./node_modules/refractor/lang/reason.js");
+/* harmony import */ var _lang_rego_js__WEBPACK_IMPORTED_MODULE_236__ = __webpack_require__(/*! ../lang/rego.js */ "./node_modules/refractor/lang/rego.js");
+/* harmony import */ var _lang_renpy_js__WEBPACK_IMPORTED_MODULE_237__ = __webpack_require__(/*! ../lang/renpy.js */ "./node_modules/refractor/lang/renpy.js");
+/* harmony import */ var _lang_rescript_js__WEBPACK_IMPORTED_MODULE_238__ = __webpack_require__(/*! ../lang/rescript.js */ "./node_modules/refractor/lang/rescript.js");
+/* harmony import */ var _lang_rest_js__WEBPACK_IMPORTED_MODULE_239__ = __webpack_require__(/*! ../lang/rest.js */ "./node_modules/refractor/lang/rest.js");
+/* harmony import */ var _lang_rip_js__WEBPACK_IMPORTED_MODULE_240__ = __webpack_require__(/*! ../lang/rip.js */ "./node_modules/refractor/lang/rip.js");
+/* harmony import */ var _lang_roboconf_js__WEBPACK_IMPORTED_MODULE_241__ = __webpack_require__(/*! ../lang/roboconf.js */ "./node_modules/refractor/lang/roboconf.js");
+/* harmony import */ var _lang_robotframework_js__WEBPACK_IMPORTED_MODULE_242__ = __webpack_require__(/*! ../lang/robotframework.js */ "./node_modules/refractor/lang/robotframework.js");
+/* harmony import */ var _lang_rust_js__WEBPACK_IMPORTED_MODULE_243__ = __webpack_require__(/*! ../lang/rust.js */ "./node_modules/refractor/lang/rust.js");
+/* harmony import */ var _lang_sas_js__WEBPACK_IMPORTED_MODULE_244__ = __webpack_require__(/*! ../lang/sas.js */ "./node_modules/refractor/lang/sas.js");
+/* harmony import */ var _lang_sass_js__WEBPACK_IMPORTED_MODULE_245__ = __webpack_require__(/*! ../lang/sass.js */ "./node_modules/refractor/lang/sass.js");
+/* harmony import */ var _lang_shell_session_js__WEBPACK_IMPORTED_MODULE_246__ = __webpack_require__(/*! ../lang/shell-session.js */ "./node_modules/refractor/lang/shell-session.js");
+/* harmony import */ var _lang_smali_js__WEBPACK_IMPORTED_MODULE_247__ = __webpack_require__(/*! ../lang/smali.js */ "./node_modules/refractor/lang/smali.js");
+/* harmony import */ var _lang_smalltalk_js__WEBPACK_IMPORTED_MODULE_248__ = __webpack_require__(/*! ../lang/smalltalk.js */ "./node_modules/refractor/lang/smalltalk.js");
+/* harmony import */ var _lang_smarty_js__WEBPACK_IMPORTED_MODULE_249__ = __webpack_require__(/*! ../lang/smarty.js */ "./node_modules/refractor/lang/smarty.js");
+/* harmony import */ var _lang_sml_js__WEBPACK_IMPORTED_MODULE_250__ = __webpack_require__(/*! ../lang/sml.js */ "./node_modules/refractor/lang/sml.js");
+/* harmony import */ var _lang_solidity_js__WEBPACK_IMPORTED_MODULE_251__ = __webpack_require__(/*! ../lang/solidity.js */ "./node_modules/refractor/lang/solidity.js");
+/* harmony import */ var _lang_solution_file_js__WEBPACK_IMPORTED_MODULE_252__ = __webpack_require__(/*! ../lang/solution-file.js */ "./node_modules/refractor/lang/solution-file.js");
+/* harmony import */ var _lang_soy_js__WEBPACK_IMPORTED_MODULE_253__ = __webpack_require__(/*! ../lang/soy.js */ "./node_modules/refractor/lang/soy.js");
+/* harmony import */ var _lang_turtle_js__WEBPACK_IMPORTED_MODULE_254__ = __webpack_require__(/*! ../lang/turtle.js */ "./node_modules/refractor/lang/turtle.js");
+/* harmony import */ var _lang_sparql_js__WEBPACK_IMPORTED_MODULE_255__ = __webpack_require__(/*! ../lang/sparql.js */ "./node_modules/refractor/lang/sparql.js");
+/* harmony import */ var _lang_splunk_spl_js__WEBPACK_IMPORTED_MODULE_256__ = __webpack_require__(/*! ../lang/splunk-spl.js */ "./node_modules/refractor/lang/splunk-spl.js");
+/* harmony import */ var _lang_sqf_js__WEBPACK_IMPORTED_MODULE_257__ = __webpack_require__(/*! ../lang/sqf.js */ "./node_modules/refractor/lang/sqf.js");
+/* harmony import */ var _lang_squirrel_js__WEBPACK_IMPORTED_MODULE_258__ = __webpack_require__(/*! ../lang/squirrel.js */ "./node_modules/refractor/lang/squirrel.js");
+/* harmony import */ var _lang_stan_js__WEBPACK_IMPORTED_MODULE_259__ = __webpack_require__(/*! ../lang/stan.js */ "./node_modules/refractor/lang/stan.js");
+/* harmony import */ var _lang_stata_js__WEBPACK_IMPORTED_MODULE_260__ = __webpack_require__(/*! ../lang/stata.js */ "./node_modules/refractor/lang/stata.js");
+/* harmony import */ var _lang_iecst_js__WEBPACK_IMPORTED_MODULE_261__ = __webpack_require__(/*! ../lang/iecst.js */ "./node_modules/refractor/lang/iecst.js");
+/* harmony import */ var _lang_supercollider_js__WEBPACK_IMPORTED_MODULE_262__ = __webpack_require__(/*! ../lang/supercollider.js */ "./node_modules/refractor/lang/supercollider.js");
+/* harmony import */ var _lang_swift_js__WEBPACK_IMPORTED_MODULE_263__ = __webpack_require__(/*! ../lang/swift.js */ "./node_modules/refractor/lang/swift.js");
+/* harmony import */ var _lang_systemd_js__WEBPACK_IMPORTED_MODULE_264__ = __webpack_require__(/*! ../lang/systemd.js */ "./node_modules/refractor/lang/systemd.js");
+/* harmony import */ var _lang_t4_templating_js__WEBPACK_IMPORTED_MODULE_265__ = __webpack_require__(/*! ../lang/t4-templating.js */ "./node_modules/refractor/lang/t4-templating.js");
+/* harmony import */ var _lang_t4_cs_js__WEBPACK_IMPORTED_MODULE_266__ = __webpack_require__(/*! ../lang/t4-cs.js */ "./node_modules/refractor/lang/t4-cs.js");
+/* harmony import */ var _lang_vbnet_js__WEBPACK_IMPORTED_MODULE_267__ = __webpack_require__(/*! ../lang/vbnet.js */ "./node_modules/refractor/lang/vbnet.js");
+/* harmony import */ var _lang_t4_vb_js__WEBPACK_IMPORTED_MODULE_268__ = __webpack_require__(/*! ../lang/t4-vb.js */ "./node_modules/refractor/lang/t4-vb.js");
+/* harmony import */ var _lang_tap_js__WEBPACK_IMPORTED_MODULE_269__ = __webpack_require__(/*! ../lang/tap.js */ "./node_modules/refractor/lang/tap.js");
+/* harmony import */ var _lang_tcl_js__WEBPACK_IMPORTED_MODULE_270__ = __webpack_require__(/*! ../lang/tcl.js */ "./node_modules/refractor/lang/tcl.js");
+/* harmony import */ var _lang_tt2_js__WEBPACK_IMPORTED_MODULE_271__ = __webpack_require__(/*! ../lang/tt2.js */ "./node_modules/refractor/lang/tt2.js");
+/* harmony import */ var _lang_toml_js__WEBPACK_IMPORTED_MODULE_272__ = __webpack_require__(/*! ../lang/toml.js */ "./node_modules/refractor/lang/toml.js");
+/* harmony import */ var _lang_tremor_js__WEBPACK_IMPORTED_MODULE_273__ = __webpack_require__(/*! ../lang/tremor.js */ "./node_modules/refractor/lang/tremor.js");
+/* harmony import */ var _lang_typoscript_js__WEBPACK_IMPORTED_MODULE_274__ = __webpack_require__(/*! ../lang/typoscript.js */ "./node_modules/refractor/lang/typoscript.js");
+/* harmony import */ var _lang_unrealscript_js__WEBPACK_IMPORTED_MODULE_275__ = __webpack_require__(/*! ../lang/unrealscript.js */ "./node_modules/refractor/lang/unrealscript.js");
+/* harmony import */ var _lang_uorazor_js__WEBPACK_IMPORTED_MODULE_276__ = __webpack_require__(/*! ../lang/uorazor.js */ "./node_modules/refractor/lang/uorazor.js");
+/* harmony import */ var _lang_v_js__WEBPACK_IMPORTED_MODULE_277__ = __webpack_require__(/*! ../lang/v.js */ "./node_modules/refractor/lang/v.js");
+/* harmony import */ var _lang_vala_js__WEBPACK_IMPORTED_MODULE_278__ = __webpack_require__(/*! ../lang/vala.js */ "./node_modules/refractor/lang/vala.js");
+/* harmony import */ var _lang_velocity_js__WEBPACK_IMPORTED_MODULE_279__ = __webpack_require__(/*! ../lang/velocity.js */ "./node_modules/refractor/lang/velocity.js");
+/* harmony import */ var _lang_verilog_js__WEBPACK_IMPORTED_MODULE_280__ = __webpack_require__(/*! ../lang/verilog.js */ "./node_modules/refractor/lang/verilog.js");
+/* harmony import */ var _lang_vhdl_js__WEBPACK_IMPORTED_MODULE_281__ = __webpack_require__(/*! ../lang/vhdl.js */ "./node_modules/refractor/lang/vhdl.js");
+/* harmony import */ var _lang_vim_js__WEBPACK_IMPORTED_MODULE_282__ = __webpack_require__(/*! ../lang/vim.js */ "./node_modules/refractor/lang/vim.js");
+/* harmony import */ var _lang_visual_basic_js__WEBPACK_IMPORTED_MODULE_283__ = __webpack_require__(/*! ../lang/visual-basic.js */ "./node_modules/refractor/lang/visual-basic.js");
+/* harmony import */ var _lang_warpscript_js__WEBPACK_IMPORTED_MODULE_284__ = __webpack_require__(/*! ../lang/warpscript.js */ "./node_modules/refractor/lang/warpscript.js");
+/* harmony import */ var _lang_wasm_js__WEBPACK_IMPORTED_MODULE_285__ = __webpack_require__(/*! ../lang/wasm.js */ "./node_modules/refractor/lang/wasm.js");
+/* harmony import */ var _lang_web_idl_js__WEBPACK_IMPORTED_MODULE_286__ = __webpack_require__(/*! ../lang/web-idl.js */ "./node_modules/refractor/lang/web-idl.js");
+/* harmony import */ var _lang_wgsl_js__WEBPACK_IMPORTED_MODULE_287__ = __webpack_require__(/*! ../lang/wgsl.js */ "./node_modules/refractor/lang/wgsl.js");
+/* harmony import */ var _lang_wiki_js__WEBPACK_IMPORTED_MODULE_288__ = __webpack_require__(/*! ../lang/wiki.js */ "./node_modules/refractor/lang/wiki.js");
+/* harmony import */ var _lang_wolfram_js__WEBPACK_IMPORTED_MODULE_289__ = __webpack_require__(/*! ../lang/wolfram.js */ "./node_modules/refractor/lang/wolfram.js");
+/* harmony import */ var _lang_wren_js__WEBPACK_IMPORTED_MODULE_290__ = __webpack_require__(/*! ../lang/wren.js */ "./node_modules/refractor/lang/wren.js");
+/* harmony import */ var _lang_xeora_js__WEBPACK_IMPORTED_MODULE_291__ = __webpack_require__(/*! ../lang/xeora.js */ "./node_modules/refractor/lang/xeora.js");
+/* harmony import */ var _lang_xml_doc_js__WEBPACK_IMPORTED_MODULE_292__ = __webpack_require__(/*! ../lang/xml-doc.js */ "./node_modules/refractor/lang/xml-doc.js");
+/* harmony import */ var _lang_xojo_js__WEBPACK_IMPORTED_MODULE_293__ = __webpack_require__(/*! ../lang/xojo.js */ "./node_modules/refractor/lang/xojo.js");
+/* harmony import */ var _lang_xquery_js__WEBPACK_IMPORTED_MODULE_294__ = __webpack_require__(/*! ../lang/xquery.js */ "./node_modules/refractor/lang/xquery.js");
+/* harmony import */ var _lang_yang_js__WEBPACK_IMPORTED_MODULE_295__ = __webpack_require__(/*! ../lang/yang.js */ "./node_modules/refractor/lang/yang.js");
+/* harmony import */ var _lang_zig_js__WEBPACK_IMPORTED_MODULE_296__ = __webpack_require__(/*! ../lang/zig.js */ "./node_modules/refractor/lang/zig.js");
+/* harmony import */ var _core_js__WEBPACK_IMPORTED_MODULE_297__ = __webpack_require__(/*! ./core.js */ "./node_modules/refractor/lib/core.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "refractor", function() { return _core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"]; });
+
+/**
+ * @typedef {import('./core.js').Syntax} Syntax
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_markup_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_css_js__WEBPACK_IMPORTED_MODULE_1__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_clike_js__WEBPACK_IMPORTED_MODULE_2__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_regex_js__WEBPACK_IMPORTED_MODULE_3__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_javascript_js__WEBPACK_IMPORTED_MODULE_4__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_abap_js__WEBPACK_IMPORTED_MODULE_5__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_abnf_js__WEBPACK_IMPORTED_MODULE_6__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_actionscript_js__WEBPACK_IMPORTED_MODULE_7__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_ada_js__WEBPACK_IMPORTED_MODULE_8__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_agda_js__WEBPACK_IMPORTED_MODULE_9__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_al_js__WEBPACK_IMPORTED_MODULE_10__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_antlr4_js__WEBPACK_IMPORTED_MODULE_11__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_apacheconf_js__WEBPACK_IMPORTED_MODULE_12__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_sql_js__WEBPACK_IMPORTED_MODULE_13__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_apex_js__WEBPACK_IMPORTED_MODULE_14__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_apl_js__WEBPACK_IMPORTED_MODULE_15__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_applescript_js__WEBPACK_IMPORTED_MODULE_16__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_aql_js__WEBPACK_IMPORTED_MODULE_17__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_c_js__WEBPACK_IMPORTED_MODULE_18__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_cpp_js__WEBPACK_IMPORTED_MODULE_19__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_arduino_js__WEBPACK_IMPORTED_MODULE_20__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_arff_js__WEBPACK_IMPORTED_MODULE_21__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_armasm_js__WEBPACK_IMPORTED_MODULE_22__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_bash_js__WEBPACK_IMPORTED_MODULE_23__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_yaml_js__WEBPACK_IMPORTED_MODULE_24__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_markdown_js__WEBPACK_IMPORTED_MODULE_25__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_arturo_js__WEBPACK_IMPORTED_MODULE_26__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_asciidoc_js__WEBPACK_IMPORTED_MODULE_27__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_csharp_js__WEBPACK_IMPORTED_MODULE_28__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_aspnet_js__WEBPACK_IMPORTED_MODULE_29__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_asm6502_js__WEBPACK_IMPORTED_MODULE_30__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_asmatmel_js__WEBPACK_IMPORTED_MODULE_31__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_autohotkey_js__WEBPACK_IMPORTED_MODULE_32__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_autoit_js__WEBPACK_IMPORTED_MODULE_33__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_avisynth_js__WEBPACK_IMPORTED_MODULE_34__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_avro_idl_js__WEBPACK_IMPORTED_MODULE_35__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_awk_js__WEBPACK_IMPORTED_MODULE_36__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_basic_js__WEBPACK_IMPORTED_MODULE_37__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_batch_js__WEBPACK_IMPORTED_MODULE_38__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_bbcode_js__WEBPACK_IMPORTED_MODULE_39__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_bbj_js__WEBPACK_IMPORTED_MODULE_40__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_bicep_js__WEBPACK_IMPORTED_MODULE_41__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_birb_js__WEBPACK_IMPORTED_MODULE_42__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_bison_js__WEBPACK_IMPORTED_MODULE_43__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_bnf_js__WEBPACK_IMPORTED_MODULE_44__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_bqn_js__WEBPACK_IMPORTED_MODULE_45__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_brainfuck_js__WEBPACK_IMPORTED_MODULE_46__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_brightscript_js__WEBPACK_IMPORTED_MODULE_47__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_bro_js__WEBPACK_IMPORTED_MODULE_48__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_bsl_js__WEBPACK_IMPORTED_MODULE_49__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_cfscript_js__WEBPACK_IMPORTED_MODULE_50__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_chaiscript_js__WEBPACK_IMPORTED_MODULE_51__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_cil_js__WEBPACK_IMPORTED_MODULE_52__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_cilkc_js__WEBPACK_IMPORTED_MODULE_53__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_cilkcpp_js__WEBPACK_IMPORTED_MODULE_54__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_clojure_js__WEBPACK_IMPORTED_MODULE_55__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_cmake_js__WEBPACK_IMPORTED_MODULE_56__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_cobol_js__WEBPACK_IMPORTED_MODULE_57__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_coffeescript_js__WEBPACK_IMPORTED_MODULE_58__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_concurnas_js__WEBPACK_IMPORTED_MODULE_59__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_csp_js__WEBPACK_IMPORTED_MODULE_60__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_cooklang_js__WEBPACK_IMPORTED_MODULE_61__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_coq_js__WEBPACK_IMPORTED_MODULE_62__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_ruby_js__WEBPACK_IMPORTED_MODULE_63__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_crystal_js__WEBPACK_IMPORTED_MODULE_64__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_css_extras_js__WEBPACK_IMPORTED_MODULE_65__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_csv_js__WEBPACK_IMPORTED_MODULE_66__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_cue_js__WEBPACK_IMPORTED_MODULE_67__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_cypher_js__WEBPACK_IMPORTED_MODULE_68__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_d_js__WEBPACK_IMPORTED_MODULE_69__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_dart_js__WEBPACK_IMPORTED_MODULE_70__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_dataweave_js__WEBPACK_IMPORTED_MODULE_71__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_dax_js__WEBPACK_IMPORTED_MODULE_72__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_dhall_js__WEBPACK_IMPORTED_MODULE_73__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_diff_js__WEBPACK_IMPORTED_MODULE_74__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_markup_templating_js__WEBPACK_IMPORTED_MODULE_75__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_django_js__WEBPACK_IMPORTED_MODULE_76__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_dns_zone_file_js__WEBPACK_IMPORTED_MODULE_77__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_docker_js__WEBPACK_IMPORTED_MODULE_78__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_dot_js__WEBPACK_IMPORTED_MODULE_79__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_ebnf_js__WEBPACK_IMPORTED_MODULE_80__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_editorconfig_js__WEBPACK_IMPORTED_MODULE_81__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_eiffel_js__WEBPACK_IMPORTED_MODULE_82__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_ejs_js__WEBPACK_IMPORTED_MODULE_83__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_elixir_js__WEBPACK_IMPORTED_MODULE_84__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_elm_js__WEBPACK_IMPORTED_MODULE_85__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_lua_js__WEBPACK_IMPORTED_MODULE_86__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_etlua_js__WEBPACK_IMPORTED_MODULE_87__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_erb_js__WEBPACK_IMPORTED_MODULE_88__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_erlang_js__WEBPACK_IMPORTED_MODULE_89__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_excel_formula_js__WEBPACK_IMPORTED_MODULE_90__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_fsharp_js__WEBPACK_IMPORTED_MODULE_91__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_factor_js__WEBPACK_IMPORTED_MODULE_92__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_false_js__WEBPACK_IMPORTED_MODULE_93__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_firestore_security_rules_js__WEBPACK_IMPORTED_MODULE_94__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_flow_js__WEBPACK_IMPORTED_MODULE_95__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_fortran_js__WEBPACK_IMPORTED_MODULE_96__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_ftl_js__WEBPACK_IMPORTED_MODULE_97__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_gml_js__WEBPACK_IMPORTED_MODULE_98__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_gap_js__WEBPACK_IMPORTED_MODULE_99__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_gcode_js__WEBPACK_IMPORTED_MODULE_100__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_gdscript_js__WEBPACK_IMPORTED_MODULE_101__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_gedcom_js__WEBPACK_IMPORTED_MODULE_102__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_gettext_js__WEBPACK_IMPORTED_MODULE_103__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_gherkin_js__WEBPACK_IMPORTED_MODULE_104__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_git_js__WEBPACK_IMPORTED_MODULE_105__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_glsl_js__WEBPACK_IMPORTED_MODULE_106__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_gn_js__WEBPACK_IMPORTED_MODULE_107__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_linker_script_js__WEBPACK_IMPORTED_MODULE_108__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_go_js__WEBPACK_IMPORTED_MODULE_109__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_go_module_js__WEBPACK_IMPORTED_MODULE_110__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_gradle_js__WEBPACK_IMPORTED_MODULE_111__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_graphql_js__WEBPACK_IMPORTED_MODULE_112__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_groovy_js__WEBPACK_IMPORTED_MODULE_113__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_less_js__WEBPACK_IMPORTED_MODULE_114__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_scss_js__WEBPACK_IMPORTED_MODULE_115__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_textile_js__WEBPACK_IMPORTED_MODULE_116__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_haml_js__WEBPACK_IMPORTED_MODULE_117__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_handlebars_js__WEBPACK_IMPORTED_MODULE_118__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_haskell_js__WEBPACK_IMPORTED_MODULE_119__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_haxe_js__WEBPACK_IMPORTED_MODULE_120__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_hcl_js__WEBPACK_IMPORTED_MODULE_121__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_hlsl_js__WEBPACK_IMPORTED_MODULE_122__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_hoon_js__WEBPACK_IMPORTED_MODULE_123__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_hpkp_js__WEBPACK_IMPORTED_MODULE_124__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_hsts_js__WEBPACK_IMPORTED_MODULE_125__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_json_js__WEBPACK_IMPORTED_MODULE_126__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_uri_js__WEBPACK_IMPORTED_MODULE_127__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_http_js__WEBPACK_IMPORTED_MODULE_128__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_ichigojam_js__WEBPACK_IMPORTED_MODULE_129__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_icon_js__WEBPACK_IMPORTED_MODULE_130__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_icu_message_format_js__WEBPACK_IMPORTED_MODULE_131__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_idris_js__WEBPACK_IMPORTED_MODULE_132__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_ignore_js__WEBPACK_IMPORTED_MODULE_133__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_inform7_js__WEBPACK_IMPORTED_MODULE_134__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_ini_js__WEBPACK_IMPORTED_MODULE_135__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_io_js__WEBPACK_IMPORTED_MODULE_136__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_j_js__WEBPACK_IMPORTED_MODULE_137__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_java_js__WEBPACK_IMPORTED_MODULE_138__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_php_js__WEBPACK_IMPORTED_MODULE_139__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_javadoclike_js__WEBPACK_IMPORTED_MODULE_140__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_scala_js__WEBPACK_IMPORTED_MODULE_141__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_javadoc_js__WEBPACK_IMPORTED_MODULE_142__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_javastacktrace_js__WEBPACK_IMPORTED_MODULE_143__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_jexl_js__WEBPACK_IMPORTED_MODULE_144__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_jolie_js__WEBPACK_IMPORTED_MODULE_145__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_jq_js__WEBPACK_IMPORTED_MODULE_146__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_js_templates_js__WEBPACK_IMPORTED_MODULE_147__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_typescript_js__WEBPACK_IMPORTED_MODULE_148__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_jsdoc_js__WEBPACK_IMPORTED_MODULE_149__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_n4js_js__WEBPACK_IMPORTED_MODULE_150__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_js_extras_js__WEBPACK_IMPORTED_MODULE_151__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_json5_js__WEBPACK_IMPORTED_MODULE_152__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_jsonp_js__WEBPACK_IMPORTED_MODULE_153__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_jsstacktrace_js__WEBPACK_IMPORTED_MODULE_154__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_julia_js__WEBPACK_IMPORTED_MODULE_155__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_keepalived_js__WEBPACK_IMPORTED_MODULE_156__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_keyman_js__WEBPACK_IMPORTED_MODULE_157__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_kotlin_js__WEBPACK_IMPORTED_MODULE_158__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_kumir_js__WEBPACK_IMPORTED_MODULE_159__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_kusto_js__WEBPACK_IMPORTED_MODULE_160__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_latex_js__WEBPACK_IMPORTED_MODULE_161__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_latte_js__WEBPACK_IMPORTED_MODULE_162__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_scheme_js__WEBPACK_IMPORTED_MODULE_163__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_lilypond_js__WEBPACK_IMPORTED_MODULE_164__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_liquid_js__WEBPACK_IMPORTED_MODULE_165__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_lisp_js__WEBPACK_IMPORTED_MODULE_166__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_livescript_js__WEBPACK_IMPORTED_MODULE_167__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_llvm_js__WEBPACK_IMPORTED_MODULE_168__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_log_js__WEBPACK_IMPORTED_MODULE_169__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_lolcode_js__WEBPACK_IMPORTED_MODULE_170__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_magma_js__WEBPACK_IMPORTED_MODULE_171__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_makefile_js__WEBPACK_IMPORTED_MODULE_172__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_mata_js__WEBPACK_IMPORTED_MODULE_173__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_matlab_js__WEBPACK_IMPORTED_MODULE_174__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_maxscript_js__WEBPACK_IMPORTED_MODULE_175__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_mel_js__WEBPACK_IMPORTED_MODULE_176__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_mermaid_js__WEBPACK_IMPORTED_MODULE_177__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_metafont_js__WEBPACK_IMPORTED_MODULE_178__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_mizar_js__WEBPACK_IMPORTED_MODULE_179__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_mongodb_js__WEBPACK_IMPORTED_MODULE_180__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_monkey_js__WEBPACK_IMPORTED_MODULE_181__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_moonscript_js__WEBPACK_IMPORTED_MODULE_182__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_n1ql_js__WEBPACK_IMPORTED_MODULE_183__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_nand2tetris_hdl_js__WEBPACK_IMPORTED_MODULE_184__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_naniscript_js__WEBPACK_IMPORTED_MODULE_185__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_nasm_js__WEBPACK_IMPORTED_MODULE_186__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_neon_js__WEBPACK_IMPORTED_MODULE_187__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_nevod_js__WEBPACK_IMPORTED_MODULE_188__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_nginx_js__WEBPACK_IMPORTED_MODULE_189__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_nim_js__WEBPACK_IMPORTED_MODULE_190__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_nix_js__WEBPACK_IMPORTED_MODULE_191__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_nsis_js__WEBPACK_IMPORTED_MODULE_192__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_objectivec_js__WEBPACK_IMPORTED_MODULE_193__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_ocaml_js__WEBPACK_IMPORTED_MODULE_194__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_odin_js__WEBPACK_IMPORTED_MODULE_195__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_opencl_js__WEBPACK_IMPORTED_MODULE_196__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_openqasm_js__WEBPACK_IMPORTED_MODULE_197__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_oz_js__WEBPACK_IMPORTED_MODULE_198__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_parigp_js__WEBPACK_IMPORTED_MODULE_199__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_parser_js__WEBPACK_IMPORTED_MODULE_200__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_pascal_js__WEBPACK_IMPORTED_MODULE_201__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_pascaligo_js__WEBPACK_IMPORTED_MODULE_202__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_psl_js__WEBPACK_IMPORTED_MODULE_203__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_pcaxis_js__WEBPACK_IMPORTED_MODULE_204__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_peoplecode_js__WEBPACK_IMPORTED_MODULE_205__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_perl_js__WEBPACK_IMPORTED_MODULE_206__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_phpdoc_js__WEBPACK_IMPORTED_MODULE_207__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_php_extras_js__WEBPACK_IMPORTED_MODULE_208__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_plant_uml_js__WEBPACK_IMPORTED_MODULE_209__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_plsql_js__WEBPACK_IMPORTED_MODULE_210__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_powerquery_js__WEBPACK_IMPORTED_MODULE_211__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_powershell_js__WEBPACK_IMPORTED_MODULE_212__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_processing_js__WEBPACK_IMPORTED_MODULE_213__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_prolog_js__WEBPACK_IMPORTED_MODULE_214__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_promql_js__WEBPACK_IMPORTED_MODULE_215__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_properties_js__WEBPACK_IMPORTED_MODULE_216__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_protobuf_js__WEBPACK_IMPORTED_MODULE_217__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_stylus_js__WEBPACK_IMPORTED_MODULE_218__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_twig_js__WEBPACK_IMPORTED_MODULE_219__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_pug_js__WEBPACK_IMPORTED_MODULE_220__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_puppet_js__WEBPACK_IMPORTED_MODULE_221__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_pure_js__WEBPACK_IMPORTED_MODULE_222__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_purebasic_js__WEBPACK_IMPORTED_MODULE_223__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_purescript_js__WEBPACK_IMPORTED_MODULE_224__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_python_js__WEBPACK_IMPORTED_MODULE_225__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_qsharp_js__WEBPACK_IMPORTED_MODULE_226__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_q_js__WEBPACK_IMPORTED_MODULE_227__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_qml_js__WEBPACK_IMPORTED_MODULE_228__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_qore_js__WEBPACK_IMPORTED_MODULE_229__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_r_js__WEBPACK_IMPORTED_MODULE_230__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_racket_js__WEBPACK_IMPORTED_MODULE_231__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_cshtml_js__WEBPACK_IMPORTED_MODULE_232__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_jsx_js__WEBPACK_IMPORTED_MODULE_233__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_tsx_js__WEBPACK_IMPORTED_MODULE_234__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_reason_js__WEBPACK_IMPORTED_MODULE_235__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_rego_js__WEBPACK_IMPORTED_MODULE_236__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_renpy_js__WEBPACK_IMPORTED_MODULE_237__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_rescript_js__WEBPACK_IMPORTED_MODULE_238__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_rest_js__WEBPACK_IMPORTED_MODULE_239__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_rip_js__WEBPACK_IMPORTED_MODULE_240__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_roboconf_js__WEBPACK_IMPORTED_MODULE_241__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_robotframework_js__WEBPACK_IMPORTED_MODULE_242__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_rust_js__WEBPACK_IMPORTED_MODULE_243__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_sas_js__WEBPACK_IMPORTED_MODULE_244__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_sass_js__WEBPACK_IMPORTED_MODULE_245__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_shell_session_js__WEBPACK_IMPORTED_MODULE_246__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_smali_js__WEBPACK_IMPORTED_MODULE_247__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_smalltalk_js__WEBPACK_IMPORTED_MODULE_248__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_smarty_js__WEBPACK_IMPORTED_MODULE_249__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_sml_js__WEBPACK_IMPORTED_MODULE_250__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_solidity_js__WEBPACK_IMPORTED_MODULE_251__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_solution_file_js__WEBPACK_IMPORTED_MODULE_252__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_soy_js__WEBPACK_IMPORTED_MODULE_253__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_turtle_js__WEBPACK_IMPORTED_MODULE_254__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_sparql_js__WEBPACK_IMPORTED_MODULE_255__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_splunk_spl_js__WEBPACK_IMPORTED_MODULE_256__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_sqf_js__WEBPACK_IMPORTED_MODULE_257__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_squirrel_js__WEBPACK_IMPORTED_MODULE_258__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_stan_js__WEBPACK_IMPORTED_MODULE_259__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_stata_js__WEBPACK_IMPORTED_MODULE_260__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_iecst_js__WEBPACK_IMPORTED_MODULE_261__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_supercollider_js__WEBPACK_IMPORTED_MODULE_262__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_swift_js__WEBPACK_IMPORTED_MODULE_263__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_systemd_js__WEBPACK_IMPORTED_MODULE_264__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_t4_templating_js__WEBPACK_IMPORTED_MODULE_265__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_t4_cs_js__WEBPACK_IMPORTED_MODULE_266__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_vbnet_js__WEBPACK_IMPORTED_MODULE_267__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_t4_vb_js__WEBPACK_IMPORTED_MODULE_268__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_tap_js__WEBPACK_IMPORTED_MODULE_269__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_tcl_js__WEBPACK_IMPORTED_MODULE_270__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_tt2_js__WEBPACK_IMPORTED_MODULE_271__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_toml_js__WEBPACK_IMPORTED_MODULE_272__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_tremor_js__WEBPACK_IMPORTED_MODULE_273__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_typoscript_js__WEBPACK_IMPORTED_MODULE_274__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_unrealscript_js__WEBPACK_IMPORTED_MODULE_275__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_uorazor_js__WEBPACK_IMPORTED_MODULE_276__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_v_js__WEBPACK_IMPORTED_MODULE_277__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_vala_js__WEBPACK_IMPORTED_MODULE_278__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_velocity_js__WEBPACK_IMPORTED_MODULE_279__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_verilog_js__WEBPACK_IMPORTED_MODULE_280__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_vhdl_js__WEBPACK_IMPORTED_MODULE_281__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_vim_js__WEBPACK_IMPORTED_MODULE_282__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_visual_basic_js__WEBPACK_IMPORTED_MODULE_283__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_warpscript_js__WEBPACK_IMPORTED_MODULE_284__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_wasm_js__WEBPACK_IMPORTED_MODULE_285__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_web_idl_js__WEBPACK_IMPORTED_MODULE_286__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_wgsl_js__WEBPACK_IMPORTED_MODULE_287__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_wiki_js__WEBPACK_IMPORTED_MODULE_288__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_wolfram_js__WEBPACK_IMPORTED_MODULE_289__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_wren_js__WEBPACK_IMPORTED_MODULE_290__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_xeora_js__WEBPACK_IMPORTED_MODULE_291__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_xml_doc_js__WEBPACK_IMPORTED_MODULE_292__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_xojo_js__WEBPACK_IMPORTED_MODULE_293__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_xquery_js__WEBPACK_IMPORTED_MODULE_294__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_yang_js__WEBPACK_IMPORTED_MODULE_295__["default"])
+_core_js__WEBPACK_IMPORTED_MODULE_297__["refractor"].register(_lang_zig_js__WEBPACK_IMPORTED_MODULE_296__["default"])
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/refractor/lib/core.js":
+/*!********************************************!*\
+  !*** ./node_modules/refractor/lib/core.js ***!
+  \********************************************/
+/*! exports provided: refractor */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "refractor", function() { return refractor; });
+/* harmony import */ var hastscript__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! hastscript */ "./node_modules/hastscript/index.js");
+/* harmony import */ var parse_entities__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! parse-entities */ "./node_modules/parse-entities/index.js");
+/* harmony import */ var _prism_core_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./prism-core.js */ "./node_modules/refractor/lib/prism-core.js");
+/**
+ * @import {Element, Root, Text} from 'hast'
+ * @import {Grammar, Languages} from 'prismjs'
+ */
+
+/**
+ * @typedef _Token
+ *   Hidden Prism token.
+ * @property {string} alias
+ *   Alias.
+ * @property {string} content
+ *   Content.
+ * @property {number} length
+ *   Length.
+ * @property {string} type
+ *   Type.
+ */
+
+/**
+ * @typedef _Env
+ *   Hidden Prism environment.
+ * @property {Record<string, string>} attributes
+ *   Attributes.
+ * @property {Array<string>} classes
+ *   Classes.
+ * @property {Array<Element | Text> | Element | Text} content
+ *   Content.
+ * @property {string} language
+ *   Language.
+ * @property {string} tag
+ *   Tag.
+ * @property {string} type
+ *   Type.
+ */
+
+/**
+ * @typedef {((prism: Refractor) => undefined | void) & {aliases?: Array<string> | undefined, displayName: string}} Syntax
+ *   Refractor syntax function.
+ */
+
+/**
+ * @typedef Refractor
+ *   Virtual syntax highlighting
+ * @property {typeof alias} alias
+ * @property {Languages} languages
+ * @property {typeof listLanguages} listLanguages
+ * @property {typeof highlight} highlight
+ * @property {typeof registered} registered
+ * @property {typeof register} register
+ */
+
+// Load all stuff in `prism.js` itself, except for `prism-file-highlight.js`.
+// The wrapped non-leaky grammars are loaded instead of Prism’s originals.
+
+
+
+
+// Inherit.
+function Refractor() {}
+
+Refractor.prototype = _prism_core_js__WEBPACK_IMPORTED_MODULE_2__["Prism"]
+
+/** @type {Refractor} */
+// @ts-expect-error: TS is wrong.
+const refractor = new Refractor()
+
+// Create.
+refractor.highlight = highlight
+refractor.register = register
+refractor.alias = alias
+refractor.registered = registered
+refractor.listLanguages = listLanguages
+
+// @ts-expect-error Overwrite Prism.
+refractor.util.encode = encode
+// @ts-expect-error Overwrite Prism.
+refractor.Token.stringify = stringify
+
+/**
+ * Highlight `value` (code) as `language` (programming language).
+ *
+ * @param {string} value
+ *   Code to highlight.
+ * @param {Grammar | string} language
+ *   Programming language name, alias, or grammar.
+ * @returns {Root}
+ *   Node representing highlighted code.
+ */
+function highlight(value, language) {
+  if (typeof value !== 'string') {
+    throw new TypeError('Expected `string` for `value`, got `' + value + '`')
+  }
+
+  /** @type {Grammar} */
+  let grammar
+  /** @type {string | undefined} */
+  let name
+
+  // `name` is a grammar object.
+  // This was called internally by Prism.js before 1.28.0.
+  /* c8 ignore next 2 */
+  if (language && typeof language === 'object') {
+    grammar = language
+  } else {
+    name = language
+
+    if (typeof name !== 'string') {
+      throw new TypeError('Expected `string` for `name`, got `' + name + '`')
+    }
+
+    if (Object.hasOwn(refractor.languages, name)) {
+      grammar = refractor.languages[name]
+    } else {
+      throw new Error('Unknown language: `' + name + '` is not registered')
+    }
+  }
+
+  return {
+    type: 'root',
+    // @ts-expect-error: we hacked Prism to accept and return the things we want.
+    children: _prism_core_js__WEBPACK_IMPORTED_MODULE_2__["Prism"].highlight.call(refractor, value, grammar, name)
+  }
+}
+
+/**
+ * Register a syntax.
+ *
+ * @param {Syntax} syntax
+ *   Language function made for refractor, as in, the files in
+ *   `refractor/lang/*.js`.
+ * @returns {undefined}
+ *   Nothing.
+ */
+function register(syntax) {
+  if (typeof syntax !== 'function' || !syntax.displayName) {
+    throw new Error('Expected `function` for `syntax`, got `' + syntax + '`')
+  }
+
+  // Do not duplicate registrations.
+  if (!Object.hasOwn(refractor.languages, syntax.displayName)) {
+    syntax(refractor)
+  }
+}
+
+/**
+ * Register aliases for already registered languages.
+ *
+ * @param {Record<string, ReadonlyArray<string> | string> | string} language
+ *   Language to alias.
+ * @param {ReadonlyArray<string> | string | null | undefined} [alias]
+ *   Aliases.
+ * @returns {undefined}
+ *   Nothing.
+ */
+function alias(language, alias) {
+  const languages = refractor.languages
+  /** @type {Record<string, ReadonlyArray<string> | string>} */
+  let map = {}
+
+  if (typeof language === 'string') {
+    if (alias) {
+      map[language] = alias
+    }
+  } else {
+    map = language
+  }
+
+  /** @type {string} */
+  let key
+
+  for (key in map) {
+    if (Object.hasOwn(map, key)) {
+      const value = map[key]
+      const list = typeof value === 'string' ? [value] : value
+      let index = -1
+
+      while (++index < list.length) {
+        languages[list[index]] = languages[key]
+      }
+    }
+  }
+}
+
+/**
+ * Check whether an `alias` or `language` is registered.
+ *
+ * @param {string} aliasOrLanguage
+ *   Language or alias to check.
+ * @returns {boolean}
+ *   Whether the language is registered.
+ */
+function registered(aliasOrLanguage) {
+  if (typeof aliasOrLanguage !== 'string') {
+    throw new TypeError(
+      'Expected `string` for `aliasOrLanguage`, got `' + aliasOrLanguage + '`'
+    )
+  }
+
+  return Object.hasOwn(refractor.languages, aliasOrLanguage)
+}
+
+/**
+ * List all registered languages (names and aliases).
+ *
+ * @returns {Array<string>}
+ *   List of language names.
+ */
+function listLanguages() {
+  const languages = refractor.languages
+  /** @type {Array<string>} */
+  const list = []
+  /** @type {string} */
+  let language
+
+  for (language in languages) {
+    if (
+      Object.hasOwn(languages, language) &&
+      typeof languages[language] === 'object'
+    ) {
+      list.push(language)
+    }
+  }
+
+  return list
+}
+
+/**
+ * @param {Array<_Token | string> | _Token | string} value
+ *   Token to stringify.
+ * @param {string} language
+ *   Language of the token.
+ * @returns {Array<Element | Text> | Element | Text}
+ *   Node representing the token.
+ */
+function stringify(value, language) {
+  if (typeof value === 'string') {
+    return {type: 'text', value}
+  }
+
+  if (Array.isArray(value)) {
+    /** @type {Array<Element | Text>} */
+    const result = []
+    let index = -1
+
+    while (++index < value.length) {
+      if (
+        value[index] !== null &&
+        value[index] !== undefined &&
+        value[index] !== ''
+      ) {
+        // Cast because we assume no sub-arrays.
+        result.push(
+          /** @type {Element | Text} */ (stringify(value[index], language))
+        )
+      }
+    }
+
+    return result
+  }
+
+  /** @type {_Env} */
+  const env = {
+    attributes: {},
+    classes: ['token', value.type],
+    content: stringify(value.content, language),
+    language,
+    tag: 'span',
+    type: value.type
+  }
+
+  if (value.alias) {
+    env.classes.push(
+      ...(typeof value.alias === 'string' ? [value.alias] : value.alias)
+    )
+  }
+
+  // @ts-expect-error Prism.
+  refractor.hooks.run('wrap', env)
+
+  return Object(hastscript__WEBPACK_IMPORTED_MODULE_0__["h"])(
+    env.tag + '.' + env.classes.join('.'),
+    attributes(env.attributes),
+    env.content
+  )
+}
+
+/**
+ * @template {unknown} T
+ *   Tokens.
+ * @param {T} tokens
+ *   Input.
+ * @returns {T}
+ *   Output, same as input.
+ */
+function encode(tokens) {
+  return tokens
+}
+
+/**
+ * @param {Record<string, string>} record
+ *   Attributes.
+ * @returns {Record<string, string>}
+ *   Attributes.
+ */
+function attributes(record) {
+  /** @type {string} */
+  let key
+
+  for (key in record) {
+    if (Object.hasOwn(record, key)) {
+      record[key] = Object(parse_entities__WEBPACK_IMPORTED_MODULE_1__["parseEntities"])(record[key])
+    }
+  }
+
+  return record
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/refractor/lib/prism-core.js":
+/*!**************************************************!*\
+  !*** ./node_modules/refractor/lib/prism-core.js ***!
+  \**************************************************/
+/*! exports provided: Prism */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Prism", function() { return Prism; });
+// @ts-nocheck
+
+// This is a slimmed down version of `prism-core.js`, to remove globals,
+// document, workers, `util.encode`, `Token.stringify`
+
+// Private helper vars
+var lang = /(?:^|\s)lang(?:uage)?-([\w-]+)(?=\s|$)/i
+var uniqueId = 0
+
+// The grammar object for plaintext
+var plainTextGrammar = {}
+
+var _ = {
+  /**
+   * A namespace for utility methods.
+   *
+   * All function in this namespace that are not explicitly marked as _public_ are for __internal use only__ and may
+   * change or disappear at any time.
+   *
+   * @namespace
+   * @memberof Prism
+   */
+  util: {
+    /**
+     * Returns the name of the type of the given value.
+     *
+     * @param {any} o
+     * @returns {string}
+     * @example
+     * type(null)      === 'Null'
+     * type(undefined) === 'Undefined'
+     * type(123)       === 'Number'
+     * type('foo')     === 'String'
+     * type(true)      === 'Boolean'
+     * type([1, 2])    === 'Array'
+     * type({})        === 'Object'
+     * type(String)    === 'Function'
+     * type(/abc+/)    === 'RegExp'
+     */
+    type: function (o) {
+      return Object.prototype.toString.call(o).slice(8, -1)
+    },
+
+    /**
+     * Returns a unique number for the given object. Later calls will still return the same number.
+     *
+     * @param {Object} obj
+     * @returns {number}
+     */
+    objId: function (obj) {
+      if (!obj['__id']) {
+        Object.defineProperty(obj, '__id', {value: ++uniqueId})
+      }
+      return obj['__id']
+    },
+
+    /**
+     * Creates a deep clone of the given object.
+     *
+     * The main intended use of this function is to clone language definitions.
+     *
+     * @param {T} o
+     * @param {Record<number, any>} [visited]
+     * @returns {T}
+     * @template T
+     */
+    clone: function deepClone(o, visited) {
+      visited = visited || {}
+
+      var clone
+      var id
+      switch (_.util.type(o)) {
+        case 'Object':
+          id = _.util.objId(o)
+          if (visited[id]) {
+            return visited[id]
+          }
+          clone = /** @type {Record<string, any>} */ ({})
+          visited[id] = clone
+
+          for (var key in o) {
+            if (o.hasOwnProperty(key)) {
+              clone[key] = deepClone(o[key], visited)
+            }
+          }
+
+          return /** @type {any} */ (clone)
+
+        case 'Array':
+          id = _.util.objId(o)
+          if (visited[id]) {
+            return visited[id]
+          }
+          clone = []
+          visited[id] = clone
+
+          ;/** @type {Array} */ (/** @type {any} */ (o)).forEach(
+            function (v, i) {
+              clone[i] = deepClone(v, visited)
+            }
+          )
+
+          return /** @type {any} */ (clone)
+
+        default:
+          return o
+      }
+    }
+  },
+
+  /**
+   * This namespace contains all currently loaded languages and the some helper functions to create and modify languages.
+   *
+   * @namespace
+   * @memberof Prism
+   * @public
+   */
+  languages: {
+    /**
+     * The grammar for plain, unformatted text.
+     */
+    plain: plainTextGrammar,
+    plaintext: plainTextGrammar,
+    text: plainTextGrammar,
+    txt: plainTextGrammar,
+
+    /**
+     * Creates a deep copy of the language with the given id and appends the given tokens.
+     *
+     * If a token in `redef` also appears in the copied language, then the existing token in the copied language
+     * will be overwritten at its original position.
+     *
+     * ## Best practices
+     *
+     * Since the position of overwriting tokens (token in `redef` that overwrite tokens in the copied language)
+     * doesn't matter, they can technically be in any order. However, this can be confusing to others that trying to
+     * understand the language definition because, normally, the order of tokens matters in Prism grammars.
+     *
+     * Therefore, it is encouraged to order overwriting tokens according to the positions of the overwritten tokens.
+     * Furthermore, all non-overwriting tokens should be placed after the overwriting ones.
+     *
+     * @param {string} id The id of the language to extend. This has to be a key in `Prism.languages`.
+     * @param {Grammar} redef The new tokens to append.
+     * @returns {Grammar} The new language created.
+     * @public
+     * @example
+     * Prism.languages['css-with-colors'] = Prism.languages.extend('css', {
+     *     // Prism.languages.css already has a 'comment' token, so this token will overwrite CSS' 'comment' token
+     *     // at its original position
+     *     'comment': { ... },
+     *     // CSS doesn't have a 'color' token, so this token will be appended
+     *     'color': /\b(?:red|green|blue)\b/
+     * });
+     */
+    extend: function (id, redef) {
+      var lang = _.util.clone(_.languages[id])
+
+      for (var key in redef) {
+        lang[key] = redef[key]
+      }
+
+      return lang
+    },
+
+    /**
+     * Inserts tokens _before_ another token in a language definition or any other grammar.
+     *
+     * ## Usage
+     *
+     * This helper method makes it easy to modify existing languages. For example, the CSS language definition
+     * not only defines CSS highlighting for CSS documents, but also needs to define highlighting for CSS embedded
+     * in HTML through `<style>` elements. To do this, it needs to modify `Prism.languages.markup` and add the
+     * appropriate tokens. However, `Prism.languages.markup` is a regular JavaScript object literal, so if you do
+     * this:
+     *
+     * ```js
+     * Prism.languages.markup.style = {
+     *     // token
+     * };
+     * ```
+     *
+     * then the `style` token will be added (and processed) at the end. `insertBefore` allows you to insert tokens
+     * before existing tokens. For the CSS example above, you would use it like this:
+     *
+     * ```js
+     * Prism.languages.insertBefore('markup', 'cdata', {
+     *     'style': {
+     *         // token
+     *     }
+     * });
+     * ```
+     *
+     * ## Special cases
+     *
+     * If the grammars of `inside` and `insert` have tokens with the same name, the tokens in `inside`'s grammar
+     * will be ignored.
+     *
+     * This behavior can be used to insert tokens after `before`:
+     *
+     * ```js
+     * Prism.languages.insertBefore('markup', 'comment', {
+     *     'comment': Prism.languages.markup.comment,
+     *     // tokens after 'comment'
+     * });
+     * ```
+     *
+     * ## Limitations
+     *
+     * The main problem `insertBefore` has to solve is iteration order. Since ES2015, the iteration order for object
+     * properties is guaranteed to be the insertion order (except for integer keys) but some browsers behave
+     * differently when keys are deleted and re-inserted. So `insertBefore` can't be implemented by temporarily
+     * deleting properties which is necessary to insert at arbitrary positions.
+     *
+     * To solve this problem, `insertBefore` doesn't actually insert the given tokens into the target object.
+     * Instead, it will create a new object and replace all references to the target object with the new one. This
+     * can be done without temporarily deleting properties, so the iteration order is well-defined.
+     *
+     * However, only references that can be reached from `Prism.languages` or `insert` will be replaced. I.e. if
+     * you hold the target object in a variable, then the value of the variable will not change.
+     *
+     * ```js
+     * var oldMarkup = Prism.languages.markup;
+     * var newMarkup = Prism.languages.insertBefore('markup', 'comment', { ... });
+     *
+     * assert(oldMarkup !== Prism.languages.markup);
+     * assert(newMarkup === Prism.languages.markup);
+     * ```
+     *
+     * @param {string} inside The property of `root` (e.g. a language id in `Prism.languages`) that contains the
+     * object to be modified.
+     * @param {string} before The key to insert before.
+     * @param {Grammar} insert An object containing the key-value pairs to be inserted.
+     * @param {Object<string, any>} [root] The object containing `inside`, i.e. the object that contains the
+     * object to be modified.
+     *
+     * Defaults to `Prism.languages`.
+     * @returns {Grammar} The new grammar object.
+     * @public
+     */
+    insertBefore: function (inside, before, insert, root) {
+      root = root || /** @type {any} */ (_.languages)
+      var grammar = root[inside]
+      /** @type {Grammar} */
+      var ret = {}
+
+      for (var token in grammar) {
+        if (grammar.hasOwnProperty(token)) {
+          if (token == before) {
+            for (var newToken in insert) {
+              if (insert.hasOwnProperty(newToken)) {
+                ret[newToken] = insert[newToken]
+              }
+            }
+          }
+
+          // Do not insert token which also occur in insert. See #1525
+          if (!insert.hasOwnProperty(token)) {
+            ret[token] = grammar[token]
+          }
+        }
+      }
+
+      var old = root[inside]
+      root[inside] = ret
+
+      // Update references in other language definitions
+      _.languages.DFS(_.languages, function (key, value) {
+        if (value === old && key != inside) {
+          this[key] = ret
+        }
+      })
+
+      return ret
+    },
+
+    // Traverse a language definition with Depth First Search
+    DFS: function DFS(o, callback, type, visited) {
+      visited = visited || {}
+
+      var objId = _.util.objId
+
+      for (var i in o) {
+        if (o.hasOwnProperty(i)) {
+          callback.call(o, i, o[i], type || i)
+
+          var property = o[i]
+          var propertyType = _.util.type(property)
+
+          if (propertyType === 'Object' && !visited[objId(property)]) {
+            visited[objId(property)] = true
+            DFS(property, callback, null, visited)
+          } else if (propertyType === 'Array' && !visited[objId(property)]) {
+            visited[objId(property)] = true
+            DFS(property, callback, i, visited)
+          }
+        }
+      }
+    }
+  },
+
+  plugins: {},
+
+  /**
+   * Low-level function, only use if you know what you’re doing. It accepts a string of text as input
+   * and the language definitions to use, and returns a string with the HTML produced.
+   *
+   * The following hooks will be run:
+   * 1. `before-tokenize`
+   * 2. `after-tokenize`
+   * 3. `wrap`: On each {@link Token}.
+   *
+   * @param {string} text A string with the code to be highlighted.
+   * @param {Grammar} grammar An object containing the tokens to use.
+   *
+   * Usually a language definition like `Prism.languages.markup`.
+   * @param {string} language The name of the language definition passed to `grammar`.
+   * @returns {string} The highlighted HTML.
+   * @memberof Prism
+   * @public
+   * @example
+   * Prism.highlight('var foo = true;', Prism.languages.javascript, 'javascript');
+   */
+  highlight: function (text, grammar, language) {
+    var env = {
+      code: text,
+      grammar: grammar,
+      language: language
+    }
+    _.hooks.run('before-tokenize', env)
+    if (!env.grammar) {
+      throw new Error('The language "' + env.language + '" has no grammar.')
+    }
+    env.tokens = _.tokenize(env.code, env.grammar)
+    _.hooks.run('after-tokenize', env)
+    return Token.stringify(_.util.encode(env.tokens), env.language)
+  },
+
+  /**
+   * This is the heart of Prism, and the most low-level function you can use. It accepts a string of text as input
+   * and the language definitions to use, and returns an array with the tokenized code.
+   *
+   * When the language definition includes nested tokens, the function is called recursively on each of these tokens.
+   *
+   * This method could be useful in other contexts as well, as a very crude parser.
+   *
+   * @param {string} text A string with the code to be highlighted.
+   * @param {Grammar} grammar An object containing the tokens to use.
+   *
+   * Usually a language definition like `Prism.languages.markup`.
+   * @returns {TokenStream} An array of strings and tokens, a token stream.
+   * @memberof Prism
+   * @public
+   * @example
+   * let code = `var foo = 0;`;
+   * let tokens = Prism.tokenize(code, Prism.languages.javascript);
+   * tokens.forEach(token => {
+   *     if (token instanceof Prism.Token && token.type === 'number') {
+   *         console.log(`Found numeric literal: ${token.content}`);
+   *     }
+   * });
+   */
+  tokenize: function (text, grammar) {
+    var rest = grammar.rest
+    if (rest) {
+      for (var token in rest) {
+        grammar[token] = rest[token]
+      }
+
+      delete grammar.rest
+    }
+
+    var tokenList = new LinkedList()
+    addAfter(tokenList, tokenList.head, text)
+
+    matchGrammar(text, tokenList, grammar, tokenList.head, 0)
+
+    return toArray(tokenList)
+  },
+
+  /**
+   * @namespace
+   * @memberof Prism
+   * @public
+   */
+  hooks: {
+    all: {},
+
+    /**
+     * Adds the given callback to the list of callbacks for the given hook.
+     *
+     * The callback will be invoked when the hook it is registered for is run.
+     * Hooks are usually directly run by a highlight function but you can also run hooks yourself.
+     *
+     * One callback function can be registered to multiple hooks and the same hook multiple times.
+     *
+     * @param {string} name The name of the hook.
+     * @param {HookCallback} callback The callback function which is given environment variables.
+     * @public
+     */
+    add: function (name, callback) {
+      var hooks = _.hooks.all
+
+      hooks[name] = hooks[name] || []
+
+      hooks[name].push(callback)
+    },
+
+    /**
+     * Runs a hook invoking all registered callbacks with the given environment variables.
+     *
+     * Callbacks will be invoked synchronously and in the order in which they were registered.
+     *
+     * @param {string} name The name of the hook.
+     * @param {Object<string, any>} env The environment variables of the hook passed to all callbacks registered.
+     * @public
+     */
+    run: function (name, env) {
+      var callbacks = _.hooks.all[name]
+
+      if (!callbacks || !callbacks.length) {
+        return
+      }
+
+      for (var i = 0, callback; (callback = callbacks[i++]); ) {
+        callback(env)
+      }
+    }
+  },
+
+  Token: Token
+}
+
+// Typescript note:
+// The following can be used to import the Token type in JSDoc:
+//
+//   @typedef {InstanceType<import("./prism-core")["Token"]>} Token
+
+/**
+ * Creates a new token.
+ *
+ * @param {string} type See {@link Token#type type}
+ * @param {string | TokenStream} content See {@link Token#content content}
+ * @param {string|string[]} [alias] The alias(es) of the token.
+ * @param {string} [matchedStr=""] A copy of the full string this token was created from.
+ * @class
+ * @global
+ * @public
+ */
+function Token(type, content, alias, matchedStr) {
+  /**
+   * The type of the token.
+   *
+   * This is usually the key of a pattern in a {@link Grammar}.
+   *
+   * @type {string}
+   * @see GrammarToken
+   * @public
+   */
+  this.type = type
+  /**
+   * The strings or tokens contained by this token.
+   *
+   * This will be a token stream if the pattern matched also defined an `inside` grammar.
+   *
+   * @type {string | TokenStream}
+   * @public
+   */
+  this.content = content
+  /**
+   * The alias(es) of the token.
+   *
+   * @type {string|string[]}
+   * @see GrammarToken
+   * @public
+   */
+  this.alias = alias
+  // Copy of the full string this token was created from
+  this.length = (matchedStr || '').length | 0
+}
+
+/**
+ * A token stream is an array of strings and {@link Token Token} objects.
+ *
+ * Token streams have to fulfill a few properties that are assumed by most functions (mostly internal ones) that process
+ * them.
+ *
+ * 1. No adjacent strings.
+ * 2. No empty strings.
+ *
+ *    The only exception here is the token stream that only contains the empty string and nothing else.
+ *
+ * @typedef {Array<string | Token>} TokenStream
+ * @global
+ * @public
+ */
+
+/**
+ * @param {RegExp} pattern
+ * @param {number} pos
+ * @param {string} text
+ * @param {boolean} lookbehind
+ * @returns {RegExpExecArray | null}
+ */
+function matchPattern(pattern, pos, text, lookbehind) {
+  pattern.lastIndex = pos
+  var match = pattern.exec(text)
+  if (match && lookbehind && match[1]) {
+    // change the match to remove the text matched by the Prism lookbehind group
+    var lookbehindLength = match[1].length
+    match.index += lookbehindLength
+    match[0] = match[0].slice(lookbehindLength)
+  }
+  return match
+}
+
+/**
+ * @param {string} text
+ * @param {LinkedList<string | Token>} tokenList
+ * @param {any} grammar
+ * @param {LinkedListNode<string | Token>} startNode
+ * @param {number} startPos
+ * @param {RematchOptions} [rematch]
+ * @returns {void}
+ * @private
+ *
+ * @typedef RematchOptions
+ * @property {string} cause
+ * @property {number} reach
+ */
+function matchGrammar(text, tokenList, grammar, startNode, startPos, rematch) {
+  for (var token in grammar) {
+    if (!grammar.hasOwnProperty(token) || !grammar[token]) {
+      continue
+    }
+
+    var patterns = grammar[token]
+    patterns = Array.isArray(patterns) ? patterns : [patterns]
+
+    for (var j = 0; j < patterns.length; ++j) {
+      if (rematch && rematch.cause == token + ',' + j) {
+        return
+      }
+
+      var patternObj = patterns[j]
+      var inside = patternObj.inside
+      var lookbehind = !!patternObj.lookbehind
+      var greedy = !!patternObj.greedy
+      var alias = patternObj.alias
+
+      if (greedy && !patternObj.pattern.global) {
+        // Without the global flag, lastIndex won't work
+        var flags = patternObj.pattern.toString().match(/[imsuy]*$/)[0]
+        patternObj.pattern = RegExp(patternObj.pattern.source, flags + 'g')
+      }
+
+      /** @type {RegExp} */
+      var pattern = patternObj.pattern || patternObj
+
+      for (
+        // iterate the token list and keep track of the current token/string position
+        var currentNode = startNode.next, pos = startPos;
+        currentNode !== tokenList.tail;
+        pos += currentNode.value.length, currentNode = currentNode.next
+      ) {
+        if (rematch && pos >= rematch.reach) {
+          break
+        }
+
+        var str = currentNode.value
+
+        if (tokenList.length > text.length) {
+          // Something went terribly wrong, ABORT, ABORT!
+          return
+        }
+
+        if (str instanceof Token) {
+          continue
+        }
+
+        var removeCount = 1 // this is the to parameter of removeBetween
+        var match
+
+        if (greedy) {
+          match = matchPattern(pattern, pos, text, lookbehind)
+          if (!match || match.index >= text.length) {
+            break
+          }
+
+          var from = match.index
+          var to = match.index + match[0].length
+          var p = pos
+
+          // find the node that contains the match
+          p += currentNode.value.length
+          while (from >= p) {
+            currentNode = currentNode.next
+            p += currentNode.value.length
+          }
+          // adjust pos (and p)
+          p -= currentNode.value.length
+          pos = p
+
+          // the current node is a Token, then the match starts inside another Token, which is invalid
+          if (currentNode.value instanceof Token) {
+            continue
+          }
+
+          // find the last node which is affected by this match
+          for (
+            var k = currentNode;
+            k !== tokenList.tail && (p < to || typeof k.value === 'string');
+            k = k.next
+          ) {
+            removeCount++
+            p += k.value.length
+          }
+          removeCount--
+
+          // replace with the new match
+          str = text.slice(pos, p)
+          match.index -= pos
+        } else {
+          match = matchPattern(pattern, 0, str, lookbehind)
+          if (!match) {
+            continue
+          }
+        }
+
+        // eslint-disable-next-line no-redeclare
+        var from = match.index
+        var matchStr = match[0]
+        var before = str.slice(0, from)
+        var after = str.slice(from + matchStr.length)
+
+        var reach = pos + str.length
+        if (rematch && reach > rematch.reach) {
+          rematch.reach = reach
+        }
+
+        var removeFrom = currentNode.prev
+
+        if (before) {
+          removeFrom = addAfter(tokenList, removeFrom, before)
+          pos += before.length
+        }
+
+        removeRange(tokenList, removeFrom, removeCount)
+
+        var wrapped = new Token(
+          token,
+          inside ? _.tokenize(matchStr, inside) : matchStr,
+          alias,
+          matchStr
+        )
+        currentNode = addAfter(tokenList, removeFrom, wrapped)
+
+        if (after) {
+          addAfter(tokenList, currentNode, after)
+        }
+
+        if (removeCount > 1) {
+          // at least one Token object was removed, so we have to do some rematching
+          // this can only happen if the current pattern is greedy
+
+          /** @type {RematchOptions} */
+          var nestedRematch = {
+            cause: token + ',' + j,
+            reach: reach
+          }
+          matchGrammar(
+            text,
+            tokenList,
+            grammar,
+            currentNode.prev,
+            pos,
+            nestedRematch
+          )
+
+          // the reach might have been extended because of the rematching
+          if (rematch && nestedRematch.reach > rematch.reach) {
+            rematch.reach = nestedRematch.reach
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * @typedef LinkedListNode
+ * @property {T} value
+ * @property {LinkedListNode<T> | null} prev The previous node.
+ * @property {LinkedListNode<T> | null} next The next node.
+ * @template T
+ * @private
+ */
+
+/**
+ * @template T
+ * @private
+ */
+function LinkedList() {
+  /** @type {LinkedListNode<T>} */
+  var head = {value: null, prev: null, next: null}
+  /** @type {LinkedListNode<T>} */
+  var tail = {value: null, prev: head, next: null}
+  head.next = tail
+
+  /** @type {LinkedListNode<T>} */
+  this.head = head
+  /** @type {LinkedListNode<T>} */
+  this.tail = tail
+  this.length = 0
+}
+
+/**
+ * Adds a new node with the given value to the list.
+ *
+ * @param {LinkedList<T>} list
+ * @param {LinkedListNode<T>} node
+ * @param {T} value
+ * @returns {LinkedListNode<T>} The added node.
+ * @template T
+ */
+function addAfter(list, node, value) {
+  // assumes that node != list.tail && values.length >= 0
+  var next = node.next
+
+  var newNode = {value: value, prev: node, next: next}
+  node.next = newNode
+  next.prev = newNode
+  list.length++
+
+  return newNode
+}
+/**
+ * Removes `count` nodes after the given node. The given node will not be removed.
+ *
+ * @param {LinkedList<T>} list
+ * @param {LinkedListNode<T>} node
+ * @param {number} count
+ * @template T
+ */
+function removeRange(list, node, count) {
+  var next = node.next
+  for (var i = 0; i < count && next !== list.tail; i++) {
+    next = next.next
+  }
+  node.next = next
+  next.prev = node
+  list.length -= i
+}
+/**
+ * @param {LinkedList<T>} list
+ * @returns {T[]}
+ * @template T
+ */
+function toArray(list) {
+  var array = []
+  var node = list.head.next
+  while (node !== list.tail) {
+    array.push(node.value)
+    node = node.next
+  }
+  return array
+}
+
+const Prism = _
 
 
 /***/ }),

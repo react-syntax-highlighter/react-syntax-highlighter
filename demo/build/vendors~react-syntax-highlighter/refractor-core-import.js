@@ -3639,1221 +3639,2458 @@ function disallowed(code) {
 
 /***/ }),
 
-/***/ "./node_modules/prismjs/components/prism-core.js":
+/***/ "./node_modules/property-information/index.js":
+/*!****************************************************!*\
+  !*** ./node_modules/property-information/index.js ***!
+  \****************************************************/
+/*! exports provided: hastToReact, html, find, normalize, svg */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "html", function() { return html; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "svg", function() { return svg; });
+/* harmony import */ var _lib_util_merge_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lib/util/merge.js */ "./node_modules/property-information/lib/util/merge.js");
+/* harmony import */ var _lib_aria_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./lib/aria.js */ "./node_modules/property-information/lib/aria.js");
+/* harmony import */ var _lib_html_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./lib/html.js */ "./node_modules/property-information/lib/html.js");
+/* harmony import */ var _lib_svg_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./lib/svg.js */ "./node_modules/property-information/lib/svg.js");
+/* harmony import */ var _lib_xlink_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./lib/xlink.js */ "./node_modules/property-information/lib/xlink.js");
+/* harmony import */ var _lib_xmlns_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./lib/xmlns.js */ "./node_modules/property-information/lib/xmlns.js");
+/* harmony import */ var _lib_xml_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./lib/xml.js */ "./node_modules/property-information/lib/xml.js");
+/* harmony import */ var _lib_hast_to_react_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./lib/hast-to-react.js */ "./node_modules/property-information/lib/hast-to-react.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "hastToReact", function() { return _lib_hast_to_react_js__WEBPACK_IMPORTED_MODULE_7__["hastToReact"]; });
+
+/* harmony import */ var _lib_find_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./lib/find.js */ "./node_modules/property-information/lib/find.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "find", function() { return _lib_find_js__WEBPACK_IMPORTED_MODULE_8__["find"]; });
+
+/* harmony import */ var _lib_normalize_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./lib/normalize.js */ "./node_modules/property-information/lib/normalize.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "normalize", function() { return _lib_normalize_js__WEBPACK_IMPORTED_MODULE_9__["normalize"]; });
+
+// Note: types exposed from `index.d.ts`.
+
+
+
+
+
+
+
+
+
+
+const html = Object(_lib_util_merge_js__WEBPACK_IMPORTED_MODULE_0__["merge"])([_lib_aria_js__WEBPACK_IMPORTED_MODULE_1__["aria"], _lib_html_js__WEBPACK_IMPORTED_MODULE_2__["html"], _lib_xlink_js__WEBPACK_IMPORTED_MODULE_4__["xlink"], _lib_xmlns_js__WEBPACK_IMPORTED_MODULE_5__["xmlns"], _lib_xml_js__WEBPACK_IMPORTED_MODULE_6__["xml"]], 'html')
+
+
+
+
+const svg = Object(_lib_util_merge_js__WEBPACK_IMPORTED_MODULE_0__["merge"])([_lib_aria_js__WEBPACK_IMPORTED_MODULE_1__["aria"], _lib_svg_js__WEBPACK_IMPORTED_MODULE_3__["svg"], _lib_xlink_js__WEBPACK_IMPORTED_MODULE_4__["xlink"], _lib_xmlns_js__WEBPACK_IMPORTED_MODULE_5__["xmlns"], _lib_xml_js__WEBPACK_IMPORTED_MODULE_6__["xml"]], 'svg')
+
+
+/***/ }),
+
+/***/ "./node_modules/property-information/lib/aria.js":
 /*!*******************************************************!*\
-  !*** ./node_modules/prismjs/components/prism-core.js ***!
+  !*** ./node_modules/property-information/lib/aria.js ***!
   \*******************************************************/
 /*! exports provided: aria */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(global) {/// <reference lib="WebWorker"/>
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "aria", function() { return aria; });
+/* harmony import */ var _util_create_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./util/create.js */ "./node_modules/property-information/lib/util/create.js");
+/* harmony import */ var _util_types_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./util/types.js */ "./node_modules/property-information/lib/util/types.js");
 
-var _self = (typeof window !== 'undefined')
-	? window   // if in browser
-	: (
-		(typeof WorkerGlobalScope !== 'undefined' && self instanceof WorkerGlobalScope)
-			? self // if in worker
-			: {}   // if in node js
-	);
+
+
+const aria = Object(_util_create_js__WEBPACK_IMPORTED_MODULE_0__["create"])({
+  properties: {
+    ariaActiveDescendant: null,
+    ariaAtomic: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["booleanish"],
+    ariaAutoComplete: null,
+    ariaBusy: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["booleanish"],
+    ariaChecked: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["booleanish"],
+    ariaColCount: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["number"],
+    ariaColIndex: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["number"],
+    ariaColSpan: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["number"],
+    ariaControls: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["spaceSeparated"],
+    ariaCurrent: null,
+    ariaDescribedBy: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["spaceSeparated"],
+    ariaDetails: null,
+    ariaDisabled: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["booleanish"],
+    ariaDropEffect: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["spaceSeparated"],
+    ariaErrorMessage: null,
+    ariaExpanded: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["booleanish"],
+    ariaFlowTo: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["spaceSeparated"],
+    ariaGrabbed: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["booleanish"],
+    ariaHasPopup: null,
+    ariaHidden: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["booleanish"],
+    ariaInvalid: null,
+    ariaKeyShortcuts: null,
+    ariaLabel: null,
+    ariaLabelledBy: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["spaceSeparated"],
+    ariaLevel: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["number"],
+    ariaLive: null,
+    ariaModal: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["booleanish"],
+    ariaMultiLine: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["booleanish"],
+    ariaMultiSelectable: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["booleanish"],
+    ariaOrientation: null,
+    ariaOwns: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["spaceSeparated"],
+    ariaPlaceholder: null,
+    ariaPosInSet: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["number"],
+    ariaPressed: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["booleanish"],
+    ariaReadOnly: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["booleanish"],
+    ariaRelevant: null,
+    ariaRequired: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["booleanish"],
+    ariaRoleDescription: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["spaceSeparated"],
+    ariaRowCount: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["number"],
+    ariaRowIndex: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["number"],
+    ariaRowSpan: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["number"],
+    ariaSelected: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["booleanish"],
+    ariaSetSize: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["number"],
+    ariaSort: null,
+    ariaValueMax: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["number"],
+    ariaValueMin: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["number"],
+    ariaValueNow: _util_types_js__WEBPACK_IMPORTED_MODULE_1__["number"],
+    ariaValueText: null,
+    role: null
+  },
+  transform(_, property) {
+    return property === 'role'
+      ? property
+      : 'aria-' + property.slice(4).toLowerCase()
+  }
+})
+
+
+/***/ }),
+
+/***/ "./node_modules/property-information/lib/find.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/property-information/lib/find.js ***!
+  \*******************************************************/
+/*! exports provided: find */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "find", function() { return find; });
+/* harmony import */ var _util_defined_info_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./util/defined-info.js */ "./node_modules/property-information/lib/util/defined-info.js");
+/* harmony import */ var _util_info_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./util/info.js */ "./node_modules/property-information/lib/util/info.js");
+/* harmony import */ var _normalize_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./normalize.js */ "./node_modules/property-information/lib/normalize.js");
+/**
+ * @import {Schema} from 'property-information'
+ */
+
+
+
+
+
+const cap = /[A-Z]/g
+const dash = /-[a-z]/g
+const valid = /^data[-\w.:]+$/i
 
 /**
- * Prism: Lightweight, robust, elegant syntax highlighting
+ * Look up info on a property.
  *
- * @license MIT <https://opensource.org/licenses/MIT>
- * @author Lea Verou <https://lea.verou.me>
- * @namespace
- * @public
+ * In most cases the given `schema` contains info on the property.
+ * All standard,
+ * most legacy,
+ * and some non-standard properties are supported.
+ * For these cases,
+ * the returned `Info` has hints about the value of the property.
+ *
+ * `name` can also be a valid data attribute or property,
+ * in which case an `Info` object with the correctly cased `attribute` and
+ * `property` is returned.
+ *
+ * `name` can be an unknown attribute,
+ * in which case an `Info` object with `attribute` and `property` set to the
+ * given name is returned.
+ * It is not recommended to provide unsupported legacy or recently specced
+ * properties.
+ *
+ *
+ * @param {Schema} schema
+ *   Schema;
+ *   either the `html` or `svg` export.
+ * @param {string} value
+ *   An attribute-like or property-like name;
+ *   it will be passed through `normalize` to hopefully find the correct info.
+ * @returns {Info}
+ *   Info.
  */
-var Prism = (function (_self) {
-
-	// Private helper vars
-	var lang = /(?:^|\s)lang(?:uage)?-([\w-]+)(?=\s|$)/i;
-	var uniqueId = 0;
-
-	// The grammar object for plaintext
-	var plainTextGrammar = {};
-
-
-	var _ = {
-		/**
-		 * By default, Prism will attempt to highlight all code elements (by calling {@link Prism.highlightAll}) on the
-		 * current page after the page finished loading. This might be a problem if e.g. you wanted to asynchronously load
-		 * additional languages or plugins yourself.
-		 *
-		 * By setting this value to `true`, Prism will not automatically highlight all code elements on the page.
-		 *
-		 * You obviously have to change this value before the automatic highlighting started. To do this, you can add an
-		 * empty Prism object into the global scope before loading the Prism script like this:
-		 *
-		 * ```js
-		 * window.Prism = window.Prism || {};
-		 * Prism.manual = true;
-		 * // add a new <script> to load Prism's script
-		 * ```
-		 *
-		 * @default false
-		 * @type {boolean}
-		 * @memberof Prism
-		 * @public
-		 */
-		manual: _self.Prism && _self.Prism.manual,
-		/**
-		 * By default, if Prism is in a web worker, it assumes that it is in a worker it created itself, so it uses
-		 * `addEventListener` to communicate with its parent instance. However, if you're using Prism manually in your
-		 * own worker, you don't want it to do this.
-		 *
-		 * By setting this value to `true`, Prism will not add its own listeners to the worker.
-		 *
-		 * You obviously have to change this value before Prism executes. To do this, you can add an
-		 * empty Prism object into the global scope before loading the Prism script like this:
-		 *
-		 * ```js
-		 * window.Prism = window.Prism || {};
-		 * Prism.disableWorkerMessageHandler = true;
-		 * // Load Prism's script
-		 * ```
-		 *
-		 * @default false
-		 * @type {boolean}
-		 * @memberof Prism
-		 * @public
-		 */
-		disableWorkerMessageHandler: _self.Prism && _self.Prism.disableWorkerMessageHandler,
-
-		/**
-		 * A namespace for utility methods.
-		 *
-		 * All function in this namespace that are not explicitly marked as _public_ are for __internal use only__ and may
-		 * change or disappear at any time.
-		 *
-		 * @namespace
-		 * @memberof Prism
-		 */
-		util: {
-			encode: function encode(tokens) {
-				if (tokens instanceof Token) {
-					return new Token(tokens.type, encode(tokens.content), tokens.alias);
-				} else if (Array.isArray(tokens)) {
-					return tokens.map(encode);
-				} else {
-					return tokens.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/\u00a0/g, ' ');
-				}
-			},
-
-			/**
-			 * Returns the name of the type of the given value.
-			 *
-			 * @param {any} o
-			 * @returns {string}
-			 * @example
-			 * type(null)      === 'Null'
-			 * type(undefined) === 'Undefined'
-			 * type(123)       === 'Number'
-			 * type('foo')     === 'String'
-			 * type(true)      === 'Boolean'
-			 * type([1, 2])    === 'Array'
-			 * type({})        === 'Object'
-			 * type(String)    === 'Function'
-			 * type(/abc+/)    === 'RegExp'
-			 */
-			type: function (o) {
-				return Object.prototype.toString.call(o).slice(8, -1);
-			},
-
-			/**
-			 * Returns a unique number for the given object. Later calls will still return the same number.
-			 *
-			 * @param {Object} obj
-			 * @returns {number}
-			 */
-			objId: function (obj) {
-				if (!obj['__id']) {
-					Object.defineProperty(obj, '__id', { value: ++uniqueId });
-				}
-				return obj['__id'];
-			},
-
-			/**
-			 * Creates a deep clone of the given object.
-			 *
-			 * The main intended use of this function is to clone language definitions.
-			 *
-			 * @param {T} o
-			 * @param {Record<number, any>} [visited]
-			 * @returns {T}
-			 * @template T
-			 */
-			clone: function deepClone(o, visited) {
-				visited = visited || {};
-
-				var clone; var id;
-				switch (_.util.type(o)) {
-					case 'Object':
-						id = _.util.objId(o);
-						if (visited[id]) {
-							return visited[id];
-						}
-						clone = /** @type {Record<string, any>} */ ({});
-						visited[id] = clone;
-
-						for (var key in o) {
-							if (o.hasOwnProperty(key)) {
-								clone[key] = deepClone(o[key], visited);
-							}
-						}
-
-						return /** @type {any} */ (clone);
-
-					case 'Array':
-						id = _.util.objId(o);
-						if (visited[id]) {
-							return visited[id];
-						}
-						clone = [];
-						visited[id] = clone;
-
-						(/** @type {Array} */(/** @type {any} */(o))).forEach(function (v, i) {
-							clone[i] = deepClone(v, visited);
-						});
-
-						return /** @type {any} */ (clone);
-
-					default:
-						return o;
-				}
-			},
-
-			/**
-			 * Returns the Prism language of the given element set by a `language-xxxx` or `lang-xxxx` class.
-			 *
-			 * If no language is set for the element or the element is `null` or `undefined`, `none` will be returned.
-			 *
-			 * @param {Element} element
-			 * @returns {string}
-			 */
-			getLanguage: function (element) {
-				while (element) {
-					var m = lang.exec(element.className);
-					if (m) {
-						return m[1].toLowerCase();
-					}
-					element = element.parentElement;
-				}
-				return 'none';
-			},
-
-			/**
-			 * Sets the Prism `language-xxxx` class of the given element.
-			 *
-			 * @param {Element} element
-			 * @param {string} language
-			 * @returns {void}
-			 */
-			setLanguage: function (element, language) {
-				// remove all `language-xxxx` classes
-				// (this might leave behind a leading space)
-				element.className = element.className.replace(RegExp(lang, 'gi'), '');
-
-				// add the new `language-xxxx` class
-				// (using `classList` will automatically clean up spaces for us)
-				element.classList.add('language-' + language);
-			},
-
-			/**
-			 * Returns the script element that is currently executing.
-			 *
-			 * This does __not__ work for line script element.
-			 *
-			 * @returns {HTMLScriptElement | null}
-			 */
-			currentScript: function () {
-				if (typeof document === 'undefined') {
-					return null;
-				}
-				if (document.currentScript && document.currentScript.tagName === 'SCRIPT' && 1 < 2 /* hack to trip TS' flow analysis */) {
-					return /** @type {any} */ (document.currentScript);
-				}
-
-				// IE11 workaround
-				// we'll get the src of the current script by parsing IE11's error stack trace
-				// this will not work for inline scripts
-
-				try {
-					throw new Error();
-				} catch (err) {
-					// Get file src url from stack. Specifically works with the format of stack traces in IE.
-					// A stack will look like this:
-					//
-					// Error
-					//    at _.util.currentScript (http://localhost/components/prism-core.js:119:5)
-					//    at Global code (http://localhost/components/prism-core.js:606:1)
-
-					var src = (/at [^(\r\n]*\((.*):[^:]+:[^:]+\)$/i.exec(err.stack) || [])[1];
-					if (src) {
-						var scripts = document.getElementsByTagName('script');
-						for (var i in scripts) {
-							if (scripts[i].src == src) {
-								return scripts[i];
-							}
-						}
-					}
-					return null;
-				}
-			},
-
-			/**
-			 * Returns whether a given class is active for `element`.
-			 *
-			 * The class can be activated if `element` or one of its ancestors has the given class and it can be deactivated
-			 * if `element` or one of its ancestors has the negated version of the given class. The _negated version_ of the
-			 * given class is just the given class with a `no-` prefix.
-			 *
-			 * Whether the class is active is determined by the closest ancestor of `element` (where `element` itself is
-			 * closest ancestor) that has the given class or the negated version of it. If neither `element` nor any of its
-			 * ancestors have the given class or the negated version of it, then the default activation will be returned.
-			 *
-			 * In the paradoxical situation where the closest ancestor contains __both__ the given class and the negated
-			 * version of it, the class is considered active.
-			 *
-			 * @param {Element} element
-			 * @param {string} className
-			 * @param {boolean} [defaultActivation=false]
-			 * @returns {boolean}
-			 */
-			isActive: function (element, className, defaultActivation) {
-				var no = 'no-' + className;
-
-				while (element) {
-					var classList = element.classList;
-					if (classList.contains(className)) {
-						return true;
-					}
-					if (classList.contains(no)) {
-						return false;
-					}
-					element = element.parentElement;
-				}
-				return !!defaultActivation;
-			}
-		},
-
-		/**
-		 * This namespace contains all currently loaded languages and the some helper functions to create and modify languages.
-		 *
-		 * @namespace
-		 * @memberof Prism
-		 * @public
-		 */
-		languages: {
-			/**
-			 * The grammar for plain, unformatted text.
-			 */
-			plain: plainTextGrammar,
-			plaintext: plainTextGrammar,
-			text: plainTextGrammar,
-			txt: plainTextGrammar,
-
-			/**
-			 * Creates a deep copy of the language with the given id and appends the given tokens.
-			 *
-			 * If a token in `redef` also appears in the copied language, then the existing token in the copied language
-			 * will be overwritten at its original position.
-			 *
-			 * ## Best practices
-			 *
-			 * Since the position of overwriting tokens (token in `redef` that overwrite tokens in the copied language)
-			 * doesn't matter, they can technically be in any order. However, this can be confusing to others that trying to
-			 * understand the language definition because, normally, the order of tokens matters in Prism grammars.
-			 *
-			 * Therefore, it is encouraged to order overwriting tokens according to the positions of the overwritten tokens.
-			 * Furthermore, all non-overwriting tokens should be placed after the overwriting ones.
-			 *
-			 * @param {string} id The id of the language to extend. This has to be a key in `Prism.languages`.
-			 * @param {Grammar} redef The new tokens to append.
-			 * @returns {Grammar} The new language created.
-			 * @public
-			 * @example
-			 * Prism.languages['css-with-colors'] = Prism.languages.extend('css', {
-			 *     // Prism.languages.css already has a 'comment' token, so this token will overwrite CSS' 'comment' token
-			 *     // at its original position
-			 *     'comment': { ... },
-			 *     // CSS doesn't have a 'color' token, so this token will be appended
-			 *     'color': /\b(?:red|green|blue)\b/
-			 * });
-			 */
-			extend: function (id, redef) {
-				var lang = _.util.clone(_.languages[id]);
-
-				for (var key in redef) {
-					lang[key] = redef[key];
-				}
-
-				return lang;
-			},
-
-			/**
-			 * Inserts tokens _before_ another token in a language definition or any other grammar.
-			 *
-			 * ## Usage
-			 *
-			 * This helper method makes it easy to modify existing languages. For example, the CSS language definition
-			 * not only defines CSS highlighting for CSS documents, but also needs to define highlighting for CSS embedded
-			 * in HTML through `<style>` elements. To do this, it needs to modify `Prism.languages.markup` and add the
-			 * appropriate tokens. However, `Prism.languages.markup` is a regular JavaScript object literal, so if you do
-			 * this:
-			 *
-			 * ```js
-			 * Prism.languages.markup.style = {
-			 *     // token
-			 * };
-			 * ```
-			 *
-			 * then the `style` token will be added (and processed) at the end. `insertBefore` allows you to insert tokens
-			 * before existing tokens. For the CSS example above, you would use it like this:
-			 *
-			 * ```js
-			 * Prism.languages.insertBefore('markup', 'cdata', {
-			 *     'style': {
-			 *         // token
-			 *     }
-			 * });
-			 * ```
-			 *
-			 * ## Special cases
-			 *
-			 * If the grammars of `inside` and `insert` have tokens with the same name, the tokens in `inside`'s grammar
-			 * will be ignored.
-			 *
-			 * This behavior can be used to insert tokens after `before`:
-			 *
-			 * ```js
-			 * Prism.languages.insertBefore('markup', 'comment', {
-			 *     'comment': Prism.languages.markup.comment,
-			 *     // tokens after 'comment'
-			 * });
-			 * ```
-			 *
-			 * ## Limitations
-			 *
-			 * The main problem `insertBefore` has to solve is iteration order. Since ES2015, the iteration order for object
-			 * properties is guaranteed to be the insertion order (except for integer keys) but some browsers behave
-			 * differently when keys are deleted and re-inserted. So `insertBefore` can't be implemented by temporarily
-			 * deleting properties which is necessary to insert at arbitrary positions.
-			 *
-			 * To solve this problem, `insertBefore` doesn't actually insert the given tokens into the target object.
-			 * Instead, it will create a new object and replace all references to the target object with the new one. This
-			 * can be done without temporarily deleting properties, so the iteration order is well-defined.
-			 *
-			 * However, only references that can be reached from `Prism.languages` or `insert` will be replaced. I.e. if
-			 * you hold the target object in a variable, then the value of the variable will not change.
-			 *
-			 * ```js
-			 * var oldMarkup = Prism.languages.markup;
-			 * var newMarkup = Prism.languages.insertBefore('markup', 'comment', { ... });
-			 *
-			 * assert(oldMarkup !== Prism.languages.markup);
-			 * assert(newMarkup === Prism.languages.markup);
-			 * ```
-			 *
-			 * @param {string} inside The property of `root` (e.g. a language id in `Prism.languages`) that contains the
-			 * object to be modified.
-			 * @param {string} before The key to insert before.
-			 * @param {Grammar} insert An object containing the key-value pairs to be inserted.
-			 * @param {Object<string, any>} [root] The object containing `inside`, i.e. the object that contains the
-			 * object to be modified.
-			 *
-			 * Defaults to `Prism.languages`.
-			 * @returns {Grammar} The new grammar object.
-			 * @public
-			 */
-			insertBefore: function (inside, before, insert, root) {
-				root = root || /** @type {any} */ (_.languages);
-				var grammar = root[inside];
-				/** @type {Grammar} */
-				var ret = {};
-
-				for (var token in grammar) {
-					if (grammar.hasOwnProperty(token)) {
-
-						if (token == before) {
-							for (var newToken in insert) {
-								if (insert.hasOwnProperty(newToken)) {
-									ret[newToken] = insert[newToken];
-								}
-							}
-						}
-
-						// Do not insert token which also occur in insert. See #1525
-						if (!insert.hasOwnProperty(token)) {
-							ret[token] = grammar[token];
-						}
-					}
-				}
-
-				var old = root[inside];
-				root[inside] = ret;
-
-				// Update references in other language definitions
-				_.languages.DFS(_.languages, function (key, value) {
-					if (value === old && key != inside) {
-						this[key] = ret;
-					}
-				});
-
-				return ret;
-			},
-
-			// Traverse a language definition with Depth First Search
-			DFS: function DFS(o, callback, type, visited) {
-				visited = visited || {};
-
-				var objId = _.util.objId;
-
-				for (var i in o) {
-					if (o.hasOwnProperty(i)) {
-						callback.call(o, i, o[i], type || i);
-
-						var property = o[i];
-						var propertyType = _.util.type(property);
-
-						if (propertyType === 'Object' && !visited[objId(property)]) {
-							visited[objId(property)] = true;
-							DFS(property, callback, null, visited);
-						} else if (propertyType === 'Array' && !visited[objId(property)]) {
-							visited[objId(property)] = true;
-							DFS(property, callback, i, visited);
-						}
-					}
-				}
-			}
-		},
-
-		plugins: {},
-
-		/**
-		 * This is the most high-level function in Prism’s API.
-		 * It fetches all the elements that have a `.language-xxxx` class and then calls {@link Prism.highlightElement} on
-		 * each one of them.
-		 *
-		 * This is equivalent to `Prism.highlightAllUnder(document, async, callback)`.
-		 *
-		 * @param {boolean} [async=false] Same as in {@link Prism.highlightAllUnder}.
-		 * @param {HighlightCallback} [callback] Same as in {@link Prism.highlightAllUnder}.
-		 * @memberof Prism
-		 * @public
-		 */
-		highlightAll: function (async, callback) {
-			_.highlightAllUnder(document, async, callback);
-		},
-
-		/**
-		 * Fetches all the descendants of `container` that have a `.language-xxxx` class and then calls
-		 * {@link Prism.highlightElement} on each one of them.
-		 *
-		 * The following hooks will be run:
-		 * 1. `before-highlightall`
-		 * 2. `before-all-elements-highlight`
-		 * 3. All hooks of {@link Prism.highlightElement} for each element.
-		 *
-		 * @param {ParentNode} container The root element, whose descendants that have a `.language-xxxx` class will be highlighted.
-		 * @param {boolean} [async=false] Whether each element is to be highlighted asynchronously using Web Workers.
-		 * @param {HighlightCallback} [callback] An optional callback to be invoked on each element after its highlighting is done.
-		 * @memberof Prism
-		 * @public
-		 */
-		highlightAllUnder: function (container, async, callback) {
-			var env = {
-				callback: callback,
-				container: container,
-				selector: 'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'
-			};
-
-			_.hooks.run('before-highlightall', env);
-
-			env.elements = Array.prototype.slice.apply(env.container.querySelectorAll(env.selector));
-
-			_.hooks.run('before-all-elements-highlight', env);
-
-			for (var i = 0, element; (element = env.elements[i++]);) {
-				_.highlightElement(element, async === true, env.callback);
-			}
-		},
-
-		/**
-		 * Highlights the code inside a single element.
-		 *
-		 * The following hooks will be run:
-		 * 1. `before-sanity-check`
-		 * 2. `before-highlight`
-		 * 3. All hooks of {@link Prism.highlight}. These hooks will be run by an asynchronous worker if `async` is `true`.
-		 * 4. `before-insert`
-		 * 5. `after-highlight`
-		 * 6. `complete`
-		 *
-		 * Some the above hooks will be skipped if the element doesn't contain any text or there is no grammar loaded for
-		 * the element's language.
-		 *
-		 * @param {Element} element The element containing the code.
-		 * It must have a class of `language-xxxx` to be processed, where `xxxx` is a valid language identifier.
-		 * @param {boolean} [async=false] Whether the element is to be highlighted asynchronously using Web Workers
-		 * to improve performance and avoid blocking the UI when highlighting very large chunks of code. This option is
-		 * [disabled by default](https://prismjs.com/faq.html#why-is-asynchronous-highlighting-disabled-by-default).
-		 *
-		 * Note: All language definitions required to highlight the code must be included in the main `prism.js` file for
-		 * asynchronous highlighting to work. You can build your own bundle on the
-		 * [Download page](https://prismjs.com/download.html).
-		 * @param {HighlightCallback} [callback] An optional callback to be invoked after the highlighting is done.
-		 * Mostly useful when `async` is `true`, since in that case, the highlighting is done asynchronously.
-		 * @memberof Prism
-		 * @public
-		 */
-		highlightElement: function (element, async, callback) {
-			// Find language
-			var language = _.util.getLanguage(element);
-			var grammar = _.languages[language];
-
-			// Set language on the element, if not present
-			_.util.setLanguage(element, language);
-
-			// Set language on the parent, for styling
-			var parent = element.parentElement;
-			if (parent && parent.nodeName.toLowerCase() === 'pre') {
-				_.util.setLanguage(parent, language);
-			}
-
-			var code = element.textContent;
-
-			var env = {
-				element: element,
-				language: language,
-				grammar: grammar,
-				code: code
-			};
-
-			function insertHighlightedCode(highlightedCode) {
-				env.highlightedCode = highlightedCode;
-
-				_.hooks.run('before-insert', env);
-
-				env.element.innerHTML = env.highlightedCode;
-
-				_.hooks.run('after-highlight', env);
-				_.hooks.run('complete', env);
-				callback && callback.call(env.element);
-			}
-
-			_.hooks.run('before-sanity-check', env);
-
-			// plugins may change/add the parent/element
-			parent = env.element.parentElement;
-			if (parent && parent.nodeName.toLowerCase() === 'pre' && !parent.hasAttribute('tabindex')) {
-				parent.setAttribute('tabindex', '0');
-			}
-
-			if (!env.code) {
-				_.hooks.run('complete', env);
-				callback && callback.call(env.element);
-				return;
-			}
-
-			_.hooks.run('before-highlight', env);
-
-			if (!env.grammar) {
-				insertHighlightedCode(_.util.encode(env.code));
-				return;
-			}
-
-			if (async && _self.Worker) {
-				var worker = new Worker(_.filename);
-
-				worker.onmessage = function (evt) {
-					insertHighlightedCode(evt.data);
-				};
-
-				worker.postMessage(JSON.stringify({
-					language: env.language,
-					code: env.code,
-					immediateClose: true
-				}));
-			} else {
-				insertHighlightedCode(_.highlight(env.code, env.grammar, env.language));
-			}
-		},
-
-		/**
-		 * Low-level function, only use if you know what you’re doing. It accepts a string of text as input
-		 * and the language definitions to use, and returns a string with the HTML produced.
-		 *
-		 * The following hooks will be run:
-		 * 1. `before-tokenize`
-		 * 2. `after-tokenize`
-		 * 3. `wrap`: On each {@link Token}.
-		 *
-		 * @param {string} text A string with the code to be highlighted.
-		 * @param {Grammar} grammar An object containing the tokens to use.
-		 *
-		 * Usually a language definition like `Prism.languages.markup`.
-		 * @param {string} language The name of the language definition passed to `grammar`.
-		 * @returns {string} The highlighted HTML.
-		 * @memberof Prism
-		 * @public
-		 * @example
-		 * Prism.highlight('var foo = true;', Prism.languages.javascript, 'javascript');
-		 */
-		highlight: function (text, grammar, language) {
-			var env = {
-				code: text,
-				grammar: grammar,
-				language: language
-			};
-			_.hooks.run('before-tokenize', env);
-			if (!env.grammar) {
-				throw new Error('The language "' + env.language + '" has no grammar.');
-			}
-			env.tokens = _.tokenize(env.code, env.grammar);
-			_.hooks.run('after-tokenize', env);
-			return Token.stringify(_.util.encode(env.tokens), env.language);
-		},
-
-		/**
-		 * This is the heart of Prism, and the most low-level function you can use. It accepts a string of text as input
-		 * and the language definitions to use, and returns an array with the tokenized code.
-		 *
-		 * When the language definition includes nested tokens, the function is called recursively on each of these tokens.
-		 *
-		 * This method could be useful in other contexts as well, as a very crude parser.
-		 *
-		 * @param {string} text A string with the code to be highlighted.
-		 * @param {Grammar} grammar An object containing the tokens to use.
-		 *
-		 * Usually a language definition like `Prism.languages.markup`.
-		 * @returns {TokenStream} An array of strings and tokens, a token stream.
-		 * @memberof Prism
-		 * @public
-		 * @example
-		 * let code = `var foo = 0;`;
-		 * let tokens = Prism.tokenize(code, Prism.languages.javascript);
-		 * tokens.forEach(token => {
-		 *     if (token instanceof Prism.Token && token.type === 'number') {
-		 *         console.log(`Found numeric literal: ${token.content}`);
-		 *     }
-		 * });
-		 */
-		tokenize: function (text, grammar) {
-			var rest = grammar.rest;
-			if (rest) {
-				for (var token in rest) {
-					grammar[token] = rest[token];
-				}
-
-				delete grammar.rest;
-			}
-
-			var tokenList = new LinkedList();
-			addAfter(tokenList, tokenList.head, text);
-
-			matchGrammar(text, tokenList, grammar, tokenList.head, 0);
-
-			return toArray(tokenList);
-		},
-
-		/**
-		 * @namespace
-		 * @memberof Prism
-		 * @public
-		 */
-		hooks: {
-			all: {},
-
-			/**
-			 * Adds the given callback to the list of callbacks for the given hook.
-			 *
-			 * The callback will be invoked when the hook it is registered for is run.
-			 * Hooks are usually directly run by a highlight function but you can also run hooks yourself.
-			 *
-			 * One callback function can be registered to multiple hooks and the same hook multiple times.
-			 *
-			 * @param {string} name The name of the hook.
-			 * @param {HookCallback} callback The callback function which is given environment variables.
-			 * @public
-			 */
-			add: function (name, callback) {
-				var hooks = _.hooks.all;
-
-				hooks[name] = hooks[name] || [];
-
-				hooks[name].push(callback);
-			},
-
-			/**
-			 * Runs a hook invoking all registered callbacks with the given environment variables.
-			 *
-			 * Callbacks will be invoked synchronously and in the order in which they were registered.
-			 *
-			 * @param {string} name The name of the hook.
-			 * @param {Object<string, any>} env The environment variables of the hook passed to all callbacks registered.
-			 * @public
-			 */
-			run: function (name, env) {
-				var callbacks = _.hooks.all[name];
-
-				if (!callbacks || !callbacks.length) {
-					return;
-				}
-
-				for (var i = 0, callback; (callback = callbacks[i++]);) {
-					callback(env);
-				}
-			}
-		},
-
-		Token: Token
-	};
-	_self.Prism = _;
-
-
-	// Typescript note:
-	// The following can be used to import the Token type in JSDoc:
-	//
-	//   @typedef {InstanceType<import("./prism-core")["Token"]>} Token
-
-	/**
-	 * Creates a new token.
-	 *
-	 * @param {string} type See {@link Token#type type}
-	 * @param {string | TokenStream} content See {@link Token#content content}
-	 * @param {string|string[]} [alias] The alias(es) of the token.
-	 * @param {string} [matchedStr=""] A copy of the full string this token was created from.
-	 * @class
-	 * @global
-	 * @public
-	 */
-	function Token(type, content, alias, matchedStr) {
-		/**
-		 * The type of the token.
-		 *
-		 * This is usually the key of a pattern in a {@link Grammar}.
-		 *
-		 * @type {string}
-		 * @see GrammarToken
-		 * @public
-		 */
-		this.type = type;
-		/**
-		 * The strings or tokens contained by this token.
-		 *
-		 * This will be a token stream if the pattern matched also defined an `inside` grammar.
-		 *
-		 * @type {string | TokenStream}
-		 * @public
-		 */
-		this.content = content;
-		/**
-		 * The alias(es) of the token.
-		 *
-		 * @type {string|string[]}
-		 * @see GrammarToken
-		 * @public
-		 */
-		this.alias = alias;
-		// Copy of the full string this token was created from
-		this.length = (matchedStr || '').length | 0;
-	}
-
-	/**
-	 * A token stream is an array of strings and {@link Token Token} objects.
-	 *
-	 * Token streams have to fulfill a few properties that are assumed by most functions (mostly internal ones) that process
-	 * them.
-	 *
-	 * 1. No adjacent strings.
-	 * 2. No empty strings.
-	 *
-	 *    The only exception here is the token stream that only contains the empty string and nothing else.
-	 *
-	 * @typedef {Array<string | Token>} TokenStream
-	 * @global
-	 * @public
-	 */
-
-	/**
-	 * Converts the given token or token stream to an HTML representation.
-	 *
-	 * The following hooks will be run:
-	 * 1. `wrap`: On each {@link Token}.
-	 *
-	 * @param {string | Token | TokenStream} o The token or token stream to be converted.
-	 * @param {string} language The name of current language.
-	 * @returns {string} The HTML representation of the token or token stream.
-	 * @memberof Token
-	 * @static
-	 */
-	Token.stringify = function stringify(o, language) {
-		if (typeof o == 'string') {
-			return o;
-		}
-		if (Array.isArray(o)) {
-			var s = '';
-			o.forEach(function (e) {
-				s += stringify(e, language);
-			});
-			return s;
-		}
-
-		var env = {
-			type: o.type,
-			content: stringify(o.content, language),
-			tag: 'span',
-			classes: ['token', o.type],
-			attributes: {},
-			language: language
-		};
-
-		var aliases = o.alias;
-		if (aliases) {
-			if (Array.isArray(aliases)) {
-				Array.prototype.push.apply(env.classes, aliases);
-			} else {
-				env.classes.push(aliases);
-			}
-		}
-
-		_.hooks.run('wrap', env);
-
-		var attributes = '';
-		for (var name in env.attributes) {
-			attributes += ' ' + name + '="' + (env.attributes[name] || '').replace(/"/g, '&quot;') + '"';
-		}
-
-		return '<' + env.tag + ' class="' + env.classes.join(' ') + '"' + attributes + '>' + env.content + '</' + env.tag + '>';
-	};
-
-	/**
-	 * @param {RegExp} pattern
-	 * @param {number} pos
-	 * @param {string} text
-	 * @param {boolean} lookbehind
-	 * @returns {RegExpExecArray | null}
-	 */
-	function matchPattern(pattern, pos, text, lookbehind) {
-		pattern.lastIndex = pos;
-		var match = pattern.exec(text);
-		if (match && lookbehind && match[1]) {
-			// change the match to remove the text matched by the Prism lookbehind group
-			var lookbehindLength = match[1].length;
-			match.index += lookbehindLength;
-			match[0] = match[0].slice(lookbehindLength);
-		}
-		return match;
-	}
-
-	/**
-	 * @param {string} text
-	 * @param {LinkedList<string | Token>} tokenList
-	 * @param {any} grammar
-	 * @param {LinkedListNode<string | Token>} startNode
-	 * @param {number} startPos
-	 * @param {RematchOptions} [rematch]
-	 * @returns {void}
-	 * @private
-	 *
-	 * @typedef RematchOptions
-	 * @property {string} cause
-	 * @property {number} reach
-	 */
-	function matchGrammar(text, tokenList, grammar, startNode, startPos, rematch) {
-		for (var token in grammar) {
-			if (!grammar.hasOwnProperty(token) || !grammar[token]) {
-				continue;
-			}
-
-			var patterns = grammar[token];
-			patterns = Array.isArray(patterns) ? patterns : [patterns];
-
-			for (var j = 0; j < patterns.length; ++j) {
-				if (rematch && rematch.cause == token + ',' + j) {
-					return;
-				}
-
-				var patternObj = patterns[j];
-				var inside = patternObj.inside;
-				var lookbehind = !!patternObj.lookbehind;
-				var greedy = !!patternObj.greedy;
-				var alias = patternObj.alias;
-
-				if (greedy && !patternObj.pattern.global) {
-					// Without the global flag, lastIndex won't work
-					var flags = patternObj.pattern.toString().match(/[imsuy]*$/)[0];
-					patternObj.pattern = RegExp(patternObj.pattern.source, flags + 'g');
-				}
-
-				/** @type {RegExp} */
-				var pattern = patternObj.pattern || patternObj;
-
-				for ( // iterate the token list and keep track of the current token/string position
-					var currentNode = startNode.next, pos = startPos;
-					currentNode !== tokenList.tail;
-					pos += currentNode.value.length, currentNode = currentNode.next
-				) {
-
-					if (rematch && pos >= rematch.reach) {
-						break;
-					}
-
-					var str = currentNode.value;
-
-					if (tokenList.length > text.length) {
-						// Something went terribly wrong, ABORT, ABORT!
-						return;
-					}
-
-					if (str instanceof Token) {
-						continue;
-					}
-
-					var removeCount = 1; // this is the to parameter of removeBetween
-					var match;
-
-					if (greedy) {
-						match = matchPattern(pattern, pos, text, lookbehind);
-						if (!match || match.index >= text.length) {
-							break;
-						}
-
-						var from = match.index;
-						var to = match.index + match[0].length;
-						var p = pos;
-
-						// find the node that contains the match
-						p += currentNode.value.length;
-						while (from >= p) {
-							currentNode = currentNode.next;
-							p += currentNode.value.length;
-						}
-						// adjust pos (and p)
-						p -= currentNode.value.length;
-						pos = p;
-
-						// the current node is a Token, then the match starts inside another Token, which is invalid
-						if (currentNode.value instanceof Token) {
-							continue;
-						}
-
-						// find the last node which is affected by this match
-						for (
-							var k = currentNode;
-							k !== tokenList.tail && (p < to || typeof k.value === 'string');
-							k = k.next
-						) {
-							removeCount++;
-							p += k.value.length;
-						}
-						removeCount--;
-
-						// replace with the new match
-						str = text.slice(pos, p);
-						match.index -= pos;
-					} else {
-						match = matchPattern(pattern, 0, str, lookbehind);
-						if (!match) {
-							continue;
-						}
-					}
-
-					// eslint-disable-next-line no-redeclare
-					var from = match.index;
-					var matchStr = match[0];
-					var before = str.slice(0, from);
-					var after = str.slice(from + matchStr.length);
-
-					var reach = pos + str.length;
-					if (rematch && reach > rematch.reach) {
-						rematch.reach = reach;
-					}
-
-					var removeFrom = currentNode.prev;
-
-					if (before) {
-						removeFrom = addAfter(tokenList, removeFrom, before);
-						pos += before.length;
-					}
-
-					removeRange(tokenList, removeFrom, removeCount);
-
-					var wrapped = new Token(token, inside ? _.tokenize(matchStr, inside) : matchStr, alias, matchStr);
-					currentNode = addAfter(tokenList, removeFrom, wrapped);
-
-					if (after) {
-						addAfter(tokenList, currentNode, after);
-					}
-
-					if (removeCount > 1) {
-						// at least one Token object was removed, so we have to do some rematching
-						// this can only happen if the current pattern is greedy
-
-						/** @type {RematchOptions} */
-						var nestedRematch = {
-							cause: token + ',' + j,
-							reach: reach
-						};
-						matchGrammar(text, tokenList, grammar, currentNode.prev, pos, nestedRematch);
-
-						// the reach might have been extended because of the rematching
-						if (rematch && nestedRematch.reach > rematch.reach) {
-							rematch.reach = nestedRematch.reach;
-						}
-					}
-				}
-			}
-		}
-	}
-
-	/**
-	 * @typedef LinkedListNode
-	 * @property {T} value
-	 * @property {LinkedListNode<T> | null} prev The previous node.
-	 * @property {LinkedListNode<T> | null} next The next node.
-	 * @template T
-	 * @private
-	 */
-
-	/**
-	 * @template T
-	 * @private
-	 */
-	function LinkedList() {
-		/** @type {LinkedListNode<T>} */
-		var head = { value: null, prev: null, next: null };
-		/** @type {LinkedListNode<T>} */
-		var tail = { value: null, prev: head, next: null };
-		head.next = tail;
-
-		/** @type {LinkedListNode<T>} */
-		this.head = head;
-		/** @type {LinkedListNode<T>} */
-		this.tail = tail;
-		this.length = 0;
-	}
-
-	/**
-	 * Adds a new node with the given value to the list.
-	 *
-	 * @param {LinkedList<T>} list
-	 * @param {LinkedListNode<T>} node
-	 * @param {T} value
-	 * @returns {LinkedListNode<T>} The added node.
-	 * @template T
-	 */
-	function addAfter(list, node, value) {
-		// assumes that node != list.tail && values.length >= 0
-		var next = node.next;
-
-		var newNode = { value: value, prev: node, next: next };
-		node.next = newNode;
-		next.prev = newNode;
-		list.length++;
-
-		return newNode;
-	}
-	/**
-	 * Removes `count` nodes after the given node. The given node will not be removed.
-	 *
-	 * @param {LinkedList<T>} list
-	 * @param {LinkedListNode<T>} node
-	 * @param {number} count
-	 * @template T
-	 */
-	function removeRange(list, node, count) {
-		var next = node.next;
-		for (var i = 0; i < count && next !== list.tail; i++) {
-			next = next.next;
-		}
-		node.next = next;
-		next.prev = node;
-		list.length -= i;
-	}
-	/**
-	 * @param {LinkedList<T>} list
-	 * @returns {T[]}
-	 * @template T
-	 */
-	function toArray(list) {
-		var array = [];
-		var node = list.head.next;
-		while (node !== list.tail) {
-			array.push(node.value);
-			node = node.next;
-		}
-		return array;
-	}
-
-
-	if (!_self.document) {
-		if (!_self.addEventListener) {
-			// in Node.js
-			return _;
-		}
-
-		if (!_.disableWorkerMessageHandler) {
-			// In worker
-			_self.addEventListener('message', function (evt) {
-				var message = JSON.parse(evt.data);
-				var lang = message.language;
-				var code = message.code;
-				var immediateClose = message.immediateClose;
-
-				_self.postMessage(_.highlight(code, _.languages[lang], lang));
-				if (immediateClose) {
-					_self.close();
-				}
-			}, false);
-		}
-
-		return _;
-	}
-
-	// Get current script and highlight
-	var script = _.util.currentScript();
-
-	if (script) {
-		_.filename = script.src;
-
-		if (script.hasAttribute('data-manual')) {
-			_.manual = true;
-		}
-	}
-
-	function highlightAutomaticallyCallback() {
-		if (!_.manual) {
-			_.highlightAll();
-		}
-	}
-
-	if (!_.manual) {
-		// If the document state is "loading", then we'll use DOMContentLoaded.
-		// If the document state is "interactive" and the prism.js script is deferred, then we'll also use the
-		// DOMContentLoaded event because there might be some plugins or languages which have also been deferred and they
-		// might take longer one animation frame to execute which can create a race condition where only some plugins have
-		// been loaded when Prism.highlightAll() is executed, depending on how fast resources are loaded.
-		// See https://github.com/PrismJS/prism/issues/2102
-		var readyState = document.readyState;
-		if (readyState === 'loading' || readyState === 'interactive' && script && script.defer) {
-			document.addEventListener('DOMContentLoaded', highlightAutomaticallyCallback);
-		} else {
-			if (window.requestAnimationFrame) {
-				window.requestAnimationFrame(highlightAutomaticallyCallback);
-			} else {
-				window.setTimeout(highlightAutomaticallyCallback, 16);
-			}
-		}
-	}
-
-	return _;
-
-}(_self));
-
-if ( true && module.exports) {
-	module.exports = Prism;
+function find(schema, value) {
+  const normal = Object(_normalize_js__WEBPACK_IMPORTED_MODULE_2__["normalize"])(value)
+  let property = value
+  let Type = _util_info_js__WEBPACK_IMPORTED_MODULE_1__["Info"]
+
+  if (normal in schema.normal) {
+    return schema.property[schema.normal[normal]]
+  }
+
+  if (normal.length > 4 && normal.slice(0, 4) === 'data' && valid.test(value)) {
+    // Attribute or property.
+    if (value.charAt(4) === '-') {
+      // Turn it into a property.
+      const rest = value.slice(5).replace(dash, camelcase)
+      property = 'data' + rest.charAt(0).toUpperCase() + rest.slice(1)
+    } else {
+      // Turn it into an attribute.
+      const rest = value.slice(4)
+
+      if (!dash.test(rest)) {
+        let dashes = rest.replace(cap, kebab)
+
+        if (dashes.charAt(0) !== '-') {
+          dashes = '-' + dashes
+        }
+
+        value = 'data' + dashes
+      }
+    }
+
+    Type = _util_defined_info_js__WEBPACK_IMPORTED_MODULE_0__["DefinedInfo"]
+  }
+
+  return new Type(property, value)
+}
+
+/**
+ * @param {string} $0
+ *   Value.
+ * @returns {string}
+ *   Kebab.
+ */
+function kebab($0) {
+  return '-' + $0.toLowerCase()
+}
+
+/**
+ * @param {string} $0
+ *   Value.
+ * @returns {string}
+ *   Camel.
+ */
+function camelcase($0) {
+  return $0.charAt(1).toUpperCase()
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/property-information/lib/hast-to-react.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/property-information/lib/hast-to-react.js ***!
+  \****************************************************************/
+/*! exports provided: hastToReact */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hastToReact", function() { return hastToReact; });
+/**
+ * Special cases for React (`Record<string, string>`).
+ *
+ * `hast` is close to `React` but differs in a couple of cases.
+ * To get a React property from a hast property,
+ * check if it is in `hastToReact`.
+ * If it is, use the corresponding value;
+ * otherwise, use the hast property.
+ *
+ * @type {Record<string, string>}
+ */
+const hastToReact = {
+  classId: 'classID',
+  dataType: 'datatype',
+  itemId: 'itemID',
+  strokeDashArray: 'strokeDasharray',
+  strokeDashOffset: 'strokeDashoffset',
+  strokeLineCap: 'strokeLinecap',
+  strokeLineJoin: 'strokeLinejoin',
+  strokeMiterLimit: 'strokeMiterlimit',
+  typeOf: 'typeof',
+  xLinkActuate: 'xlinkActuate',
+  xLinkArcRole: 'xlinkArcrole',
+  xLinkHref: 'xlinkHref',
+  xLinkRole: 'xlinkRole',
+  xLinkShow: 'xlinkShow',
+  xLinkTitle: 'xlinkTitle',
+  xLinkType: 'xlinkType',
+  xmlnsXLink: 'xmlnsXlink'
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/property-information/lib/html.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/property-information/lib/html.js ***!
+  \*******************************************************/
+/*! exports provided: html */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "html", function() { return html; });
+/* harmony import */ var _util_case_insensitive_transform_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./util/case-insensitive-transform.js */ "./node_modules/property-information/lib/util/case-insensitive-transform.js");
+/* harmony import */ var _util_create_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./util/create.js */ "./node_modules/property-information/lib/util/create.js");
+/* harmony import */ var _util_types_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./util/types.js */ "./node_modules/property-information/lib/util/types.js");
+
+
+
+
+const html = Object(_util_create_js__WEBPACK_IMPORTED_MODULE_1__["create"])({
+  attributes: {
+    acceptcharset: 'accept-charset',
+    classname: 'class',
+    htmlfor: 'for',
+    httpequiv: 'http-equiv'
+  },
+  mustUseProperty: ['checked', 'multiple', 'muted', 'selected'],
+  properties: {
+    // Standard Properties.
+    abbr: null,
+    accept: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["commaSeparated"],
+    acceptCharset: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["spaceSeparated"],
+    accessKey: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["spaceSeparated"],
+    action: null,
+    allow: null,
+    allowFullScreen: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    allowPaymentRequest: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    allowUserMedia: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    alt: null,
+    as: null,
+    async: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    autoCapitalize: null,
+    autoComplete: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["spaceSeparated"],
+    autoFocus: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    autoPlay: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    blocking: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["spaceSeparated"],
+    capture: null,
+    charSet: null,
+    checked: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    cite: null,
+    className: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["spaceSeparated"],
+    cols: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    colSpan: null,
+    content: null,
+    contentEditable: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["booleanish"],
+    controls: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    controlsList: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["spaceSeparated"],
+    coords: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"] | _util_types_js__WEBPACK_IMPORTED_MODULE_2__["commaSeparated"],
+    crossOrigin: null,
+    data: null,
+    dateTime: null,
+    decoding: null,
+    default: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    defer: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    dir: null,
+    dirName: null,
+    disabled: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    download: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["overloadedBoolean"],
+    draggable: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["booleanish"],
+    encType: null,
+    enterKeyHint: null,
+    fetchPriority: null,
+    form: null,
+    formAction: null,
+    formEncType: null,
+    formMethod: null,
+    formNoValidate: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    formTarget: null,
+    headers: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["spaceSeparated"],
+    height: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    hidden: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["overloadedBoolean"],
+    high: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    href: null,
+    hrefLang: null,
+    htmlFor: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["spaceSeparated"],
+    httpEquiv: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["spaceSeparated"],
+    id: null,
+    imageSizes: null,
+    imageSrcSet: null,
+    inert: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    inputMode: null,
+    integrity: null,
+    is: null,
+    isMap: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    itemId: null,
+    itemProp: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["spaceSeparated"],
+    itemRef: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["spaceSeparated"],
+    itemScope: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    itemType: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["spaceSeparated"],
+    kind: null,
+    label: null,
+    lang: null,
+    language: null,
+    list: null,
+    loading: null,
+    loop: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    low: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    manifest: null,
+    max: null,
+    maxLength: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    media: null,
+    method: null,
+    min: null,
+    minLength: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    multiple: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    muted: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    name: null,
+    nonce: null,
+    noModule: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    noValidate: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    onAbort: null,
+    onAfterPrint: null,
+    onAuxClick: null,
+    onBeforeMatch: null,
+    onBeforePrint: null,
+    onBeforeToggle: null,
+    onBeforeUnload: null,
+    onBlur: null,
+    onCancel: null,
+    onCanPlay: null,
+    onCanPlayThrough: null,
+    onChange: null,
+    onClick: null,
+    onClose: null,
+    onContextLost: null,
+    onContextMenu: null,
+    onContextRestored: null,
+    onCopy: null,
+    onCueChange: null,
+    onCut: null,
+    onDblClick: null,
+    onDrag: null,
+    onDragEnd: null,
+    onDragEnter: null,
+    onDragExit: null,
+    onDragLeave: null,
+    onDragOver: null,
+    onDragStart: null,
+    onDrop: null,
+    onDurationChange: null,
+    onEmptied: null,
+    onEnded: null,
+    onError: null,
+    onFocus: null,
+    onFormData: null,
+    onHashChange: null,
+    onInput: null,
+    onInvalid: null,
+    onKeyDown: null,
+    onKeyPress: null,
+    onKeyUp: null,
+    onLanguageChange: null,
+    onLoad: null,
+    onLoadedData: null,
+    onLoadedMetadata: null,
+    onLoadEnd: null,
+    onLoadStart: null,
+    onMessage: null,
+    onMessageError: null,
+    onMouseDown: null,
+    onMouseEnter: null,
+    onMouseLeave: null,
+    onMouseMove: null,
+    onMouseOut: null,
+    onMouseOver: null,
+    onMouseUp: null,
+    onOffline: null,
+    onOnline: null,
+    onPageHide: null,
+    onPageShow: null,
+    onPaste: null,
+    onPause: null,
+    onPlay: null,
+    onPlaying: null,
+    onPopState: null,
+    onProgress: null,
+    onRateChange: null,
+    onRejectionHandled: null,
+    onReset: null,
+    onResize: null,
+    onScroll: null,
+    onScrollEnd: null,
+    onSecurityPolicyViolation: null,
+    onSeeked: null,
+    onSeeking: null,
+    onSelect: null,
+    onSlotChange: null,
+    onStalled: null,
+    onStorage: null,
+    onSubmit: null,
+    onSuspend: null,
+    onTimeUpdate: null,
+    onToggle: null,
+    onUnhandledRejection: null,
+    onUnload: null,
+    onVolumeChange: null,
+    onWaiting: null,
+    onWheel: null,
+    open: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    optimum: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    pattern: null,
+    ping: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["spaceSeparated"],
+    placeholder: null,
+    playsInline: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    popover: null,
+    popoverTarget: null,
+    popoverTargetAction: null,
+    poster: null,
+    preload: null,
+    readOnly: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    referrerPolicy: null,
+    rel: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["spaceSeparated"],
+    required: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    reversed: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    rows: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    rowSpan: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    sandbox: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["spaceSeparated"],
+    scope: null,
+    scoped: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    seamless: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    selected: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    shadowRootClonable: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    shadowRootDelegatesFocus: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    shadowRootMode: null,
+    shape: null,
+    size: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    sizes: null,
+    slot: null,
+    span: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    spellCheck: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["booleanish"],
+    src: null,
+    srcDoc: null,
+    srcLang: null,
+    srcSet: null,
+    start: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    step: null,
+    style: null,
+    tabIndex: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    target: null,
+    title: null,
+    translate: null,
+    type: null,
+    typeMustMatch: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    useMap: null,
+    value: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["booleanish"],
+    width: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    wrap: null,
+    writingSuggestions: null,
+
+    // Legacy.
+    // See: https://html.spec.whatwg.org/#other-elements,-attributes-and-apis
+    align: null, // Several. Use CSS `text-align` instead,
+    aLink: null, // `<body>`. Use CSS `a:active {color}` instead
+    archive: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["spaceSeparated"], // `<object>`. List of URIs to archives
+    axis: null, // `<td>` and `<th>`. Use `scope` on `<th>`
+    background: null, // `<body>`. Use CSS `background-image` instead
+    bgColor: null, // `<body>` and table elements. Use CSS `background-color` instead
+    border: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"], // `<table>`. Use CSS `border-width` instead,
+    borderColor: null, // `<table>`. Use CSS `border-color` instead,
+    bottomMargin: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"], // `<body>`
+    cellPadding: null, // `<table>`
+    cellSpacing: null, // `<table>`
+    char: null, // Several table elements. When `align=char`, sets the character to align on
+    charOff: null, // Several table elements. When `char`, offsets the alignment
+    classId: null, // `<object>`
+    clear: null, // `<br>`. Use CSS `clear` instead
+    code: null, // `<object>`
+    codeBase: null, // `<object>`
+    codeType: null, // `<object>`
+    color: null, // `<font>` and `<hr>`. Use CSS instead
+    compact: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"], // Lists. Use CSS to reduce space between items instead
+    declare: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"], // `<object>`
+    event: null, // `<script>`
+    face: null, // `<font>`. Use CSS instead
+    frame: null, // `<table>`
+    frameBorder: null, // `<iframe>`. Use CSS `border` instead
+    hSpace: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"], // `<img>` and `<object>`
+    leftMargin: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"], // `<body>`
+    link: null, // `<body>`. Use CSS `a:link {color: *}` instead
+    longDesc: null, // `<frame>`, `<iframe>`, and `<img>`. Use an `<a>`
+    lowSrc: null, // `<img>`. Use a `<picture>`
+    marginHeight: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"], // `<body>`
+    marginWidth: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"], // `<body>`
+    noResize: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"], // `<frame>`
+    noHref: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"], // `<area>`. Use no href instead of an explicit `nohref`
+    noShade: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"], // `<hr>`. Use background-color and height instead of borders
+    noWrap: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"], // `<td>` and `<th>`
+    object: null, // `<applet>`
+    profile: null, // `<head>`
+    prompt: null, // `<isindex>`
+    rev: null, // `<link>`
+    rightMargin: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"], // `<body>`
+    rules: null, // `<table>`
+    scheme: null, // `<meta>`
+    scrolling: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["booleanish"], // `<frame>`. Use overflow in the child context
+    standby: null, // `<object>`
+    summary: null, // `<table>`
+    text: null, // `<body>`. Use CSS `color` instead
+    topMargin: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"], // `<body>`
+    valueType: null, // `<param>`
+    version: null, // `<html>`. Use a doctype.
+    vAlign: null, // Several. Use CSS `vertical-align` instead
+    vLink: null, // `<body>`. Use CSS `a:visited {color}` instead
+    vSpace: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"], // `<img>` and `<object>`
+
+    // Non-standard Properties.
+    allowTransparency: null,
+    autoCorrect: null,
+    autoSave: null,
+    disablePictureInPicture: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    disableRemotePlayback: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    prefix: null,
+    property: null,
+    results: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    security: null,
+    unselectable: null
+  },
+  space: 'html',
+  transform: _util_case_insensitive_transform_js__WEBPACK_IMPORTED_MODULE_0__["caseInsensitiveTransform"]
+})
+
+
+/***/ }),
+
+/***/ "./node_modules/property-information/lib/normalize.js":
+/*!************************************************************!*\
+  !*** ./node_modules/property-information/lib/normalize.js ***!
+  \************************************************************/
+/*! exports provided: normalize */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "normalize", function() { return normalize; });
+/**
+ * Get the cleaned case insensitive form of an attribute or property.
+ *
+ * @param {string} value
+ *   An attribute-like or property-like name.
+ * @returns {string}
+ *   Value that can be used to look up the properly cased property on a
+ *   `Schema`.
+ */
+function normalize(value) {
+  return value.toLowerCase()
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/property-information/lib/svg.js":
+/*!******************************************************!*\
+  !*** ./node_modules/property-information/lib/svg.js ***!
+  \******************************************************/
+/*! exports provided: svg */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "svg", function() { return svg; });
+/* harmony import */ var _util_case_sensitive_transform_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./util/case-sensitive-transform.js */ "./node_modules/property-information/lib/util/case-sensitive-transform.js");
+/* harmony import */ var _util_create_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./util/create.js */ "./node_modules/property-information/lib/util/create.js");
+/* harmony import */ var _util_types_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./util/types.js */ "./node_modules/property-information/lib/util/types.js");
+
+
+
+
+const svg = Object(_util_create_js__WEBPACK_IMPORTED_MODULE_1__["create"])({
+  attributes: {
+    accentHeight: 'accent-height',
+    alignmentBaseline: 'alignment-baseline',
+    arabicForm: 'arabic-form',
+    baselineShift: 'baseline-shift',
+    capHeight: 'cap-height',
+    className: 'class',
+    clipPath: 'clip-path',
+    clipRule: 'clip-rule',
+    colorInterpolation: 'color-interpolation',
+    colorInterpolationFilters: 'color-interpolation-filters',
+    colorProfile: 'color-profile',
+    colorRendering: 'color-rendering',
+    crossOrigin: 'crossorigin',
+    dataType: 'datatype',
+    dominantBaseline: 'dominant-baseline',
+    enableBackground: 'enable-background',
+    fillOpacity: 'fill-opacity',
+    fillRule: 'fill-rule',
+    floodColor: 'flood-color',
+    floodOpacity: 'flood-opacity',
+    fontFamily: 'font-family',
+    fontSize: 'font-size',
+    fontSizeAdjust: 'font-size-adjust',
+    fontStretch: 'font-stretch',
+    fontStyle: 'font-style',
+    fontVariant: 'font-variant',
+    fontWeight: 'font-weight',
+    glyphName: 'glyph-name',
+    glyphOrientationHorizontal: 'glyph-orientation-horizontal',
+    glyphOrientationVertical: 'glyph-orientation-vertical',
+    hrefLang: 'hreflang',
+    horizAdvX: 'horiz-adv-x',
+    horizOriginX: 'horiz-origin-x',
+    horizOriginY: 'horiz-origin-y',
+    imageRendering: 'image-rendering',
+    letterSpacing: 'letter-spacing',
+    lightingColor: 'lighting-color',
+    markerEnd: 'marker-end',
+    markerMid: 'marker-mid',
+    markerStart: 'marker-start',
+    navDown: 'nav-down',
+    navDownLeft: 'nav-down-left',
+    navDownRight: 'nav-down-right',
+    navLeft: 'nav-left',
+    navNext: 'nav-next',
+    navPrev: 'nav-prev',
+    navRight: 'nav-right',
+    navUp: 'nav-up',
+    navUpLeft: 'nav-up-left',
+    navUpRight: 'nav-up-right',
+    onAbort: 'onabort',
+    onActivate: 'onactivate',
+    onAfterPrint: 'onafterprint',
+    onBeforePrint: 'onbeforeprint',
+    onBegin: 'onbegin',
+    onCancel: 'oncancel',
+    onCanPlay: 'oncanplay',
+    onCanPlayThrough: 'oncanplaythrough',
+    onChange: 'onchange',
+    onClick: 'onclick',
+    onClose: 'onclose',
+    onCopy: 'oncopy',
+    onCueChange: 'oncuechange',
+    onCut: 'oncut',
+    onDblClick: 'ondblclick',
+    onDrag: 'ondrag',
+    onDragEnd: 'ondragend',
+    onDragEnter: 'ondragenter',
+    onDragExit: 'ondragexit',
+    onDragLeave: 'ondragleave',
+    onDragOver: 'ondragover',
+    onDragStart: 'ondragstart',
+    onDrop: 'ondrop',
+    onDurationChange: 'ondurationchange',
+    onEmptied: 'onemptied',
+    onEnd: 'onend',
+    onEnded: 'onended',
+    onError: 'onerror',
+    onFocus: 'onfocus',
+    onFocusIn: 'onfocusin',
+    onFocusOut: 'onfocusout',
+    onHashChange: 'onhashchange',
+    onInput: 'oninput',
+    onInvalid: 'oninvalid',
+    onKeyDown: 'onkeydown',
+    onKeyPress: 'onkeypress',
+    onKeyUp: 'onkeyup',
+    onLoad: 'onload',
+    onLoadedData: 'onloadeddata',
+    onLoadedMetadata: 'onloadedmetadata',
+    onLoadStart: 'onloadstart',
+    onMessage: 'onmessage',
+    onMouseDown: 'onmousedown',
+    onMouseEnter: 'onmouseenter',
+    onMouseLeave: 'onmouseleave',
+    onMouseMove: 'onmousemove',
+    onMouseOut: 'onmouseout',
+    onMouseOver: 'onmouseover',
+    onMouseUp: 'onmouseup',
+    onMouseWheel: 'onmousewheel',
+    onOffline: 'onoffline',
+    onOnline: 'ononline',
+    onPageHide: 'onpagehide',
+    onPageShow: 'onpageshow',
+    onPaste: 'onpaste',
+    onPause: 'onpause',
+    onPlay: 'onplay',
+    onPlaying: 'onplaying',
+    onPopState: 'onpopstate',
+    onProgress: 'onprogress',
+    onRateChange: 'onratechange',
+    onRepeat: 'onrepeat',
+    onReset: 'onreset',
+    onResize: 'onresize',
+    onScroll: 'onscroll',
+    onSeeked: 'onseeked',
+    onSeeking: 'onseeking',
+    onSelect: 'onselect',
+    onShow: 'onshow',
+    onStalled: 'onstalled',
+    onStorage: 'onstorage',
+    onSubmit: 'onsubmit',
+    onSuspend: 'onsuspend',
+    onTimeUpdate: 'ontimeupdate',
+    onToggle: 'ontoggle',
+    onUnload: 'onunload',
+    onVolumeChange: 'onvolumechange',
+    onWaiting: 'onwaiting',
+    onZoom: 'onzoom',
+    overlinePosition: 'overline-position',
+    overlineThickness: 'overline-thickness',
+    paintOrder: 'paint-order',
+    panose1: 'panose-1',
+    pointerEvents: 'pointer-events',
+    referrerPolicy: 'referrerpolicy',
+    renderingIntent: 'rendering-intent',
+    shapeRendering: 'shape-rendering',
+    stopColor: 'stop-color',
+    stopOpacity: 'stop-opacity',
+    strikethroughPosition: 'strikethrough-position',
+    strikethroughThickness: 'strikethrough-thickness',
+    strokeDashArray: 'stroke-dasharray',
+    strokeDashOffset: 'stroke-dashoffset',
+    strokeLineCap: 'stroke-linecap',
+    strokeLineJoin: 'stroke-linejoin',
+    strokeMiterLimit: 'stroke-miterlimit',
+    strokeOpacity: 'stroke-opacity',
+    strokeWidth: 'stroke-width',
+    tabIndex: 'tabindex',
+    textAnchor: 'text-anchor',
+    textDecoration: 'text-decoration',
+    textRendering: 'text-rendering',
+    transformOrigin: 'transform-origin',
+    typeOf: 'typeof',
+    underlinePosition: 'underline-position',
+    underlineThickness: 'underline-thickness',
+    unicodeBidi: 'unicode-bidi',
+    unicodeRange: 'unicode-range',
+    unitsPerEm: 'units-per-em',
+    vAlphabetic: 'v-alphabetic',
+    vHanging: 'v-hanging',
+    vIdeographic: 'v-ideographic',
+    vMathematical: 'v-mathematical',
+    vectorEffect: 'vector-effect',
+    vertAdvY: 'vert-adv-y',
+    vertOriginX: 'vert-origin-x',
+    vertOriginY: 'vert-origin-y',
+    wordSpacing: 'word-spacing',
+    writingMode: 'writing-mode',
+    xHeight: 'x-height',
+    // These were camelcased in Tiny. Now lowercased in SVG 2
+    playbackOrder: 'playbackorder',
+    timelineBegin: 'timelinebegin'
+  },
+  properties: {
+    about: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["commaOrSpaceSeparated"],
+    accentHeight: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    accumulate: null,
+    additive: null,
+    alignmentBaseline: null,
+    alphabetic: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    amplitude: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    arabicForm: null,
+    ascent: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    attributeName: null,
+    attributeType: null,
+    azimuth: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    bandwidth: null,
+    baselineShift: null,
+    baseFrequency: null,
+    baseProfile: null,
+    bbox: null,
+    begin: null,
+    bias: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    by: null,
+    calcMode: null,
+    capHeight: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    className: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["spaceSeparated"],
+    clip: null,
+    clipPath: null,
+    clipPathUnits: null,
+    clipRule: null,
+    color: null,
+    colorInterpolation: null,
+    colorInterpolationFilters: null,
+    colorProfile: null,
+    colorRendering: null,
+    content: null,
+    contentScriptType: null,
+    contentStyleType: null,
+    crossOrigin: null,
+    cursor: null,
+    cx: null,
+    cy: null,
+    d: null,
+    dataType: null,
+    defaultAction: null,
+    descent: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    diffuseConstant: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    direction: null,
+    display: null,
+    dur: null,
+    divisor: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    dominantBaseline: null,
+    download: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["boolean"],
+    dx: null,
+    dy: null,
+    edgeMode: null,
+    editable: null,
+    elevation: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    enableBackground: null,
+    end: null,
+    event: null,
+    exponent: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    externalResourcesRequired: null,
+    fill: null,
+    fillOpacity: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    fillRule: null,
+    filter: null,
+    filterRes: null,
+    filterUnits: null,
+    floodColor: null,
+    floodOpacity: null,
+    focusable: null,
+    focusHighlight: null,
+    fontFamily: null,
+    fontSize: null,
+    fontSizeAdjust: null,
+    fontStretch: null,
+    fontStyle: null,
+    fontVariant: null,
+    fontWeight: null,
+    format: null,
+    fr: null,
+    from: null,
+    fx: null,
+    fy: null,
+    g1: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["commaSeparated"],
+    g2: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["commaSeparated"],
+    glyphName: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["commaSeparated"],
+    glyphOrientationHorizontal: null,
+    glyphOrientationVertical: null,
+    glyphRef: null,
+    gradientTransform: null,
+    gradientUnits: null,
+    handler: null,
+    hanging: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    hatchContentUnits: null,
+    hatchUnits: null,
+    height: null,
+    href: null,
+    hrefLang: null,
+    horizAdvX: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    horizOriginX: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    horizOriginY: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    id: null,
+    ideographic: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    imageRendering: null,
+    initialVisibility: null,
+    in: null,
+    in2: null,
+    intercept: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    k: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    k1: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    k2: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    k3: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    k4: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    kernelMatrix: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["commaOrSpaceSeparated"],
+    kernelUnitLength: null,
+    keyPoints: null, // SEMI_COLON_SEPARATED
+    keySplines: null, // SEMI_COLON_SEPARATED
+    keyTimes: null, // SEMI_COLON_SEPARATED
+    kerning: null,
+    lang: null,
+    lengthAdjust: null,
+    letterSpacing: null,
+    lightingColor: null,
+    limitingConeAngle: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    local: null,
+    markerEnd: null,
+    markerMid: null,
+    markerStart: null,
+    markerHeight: null,
+    markerUnits: null,
+    markerWidth: null,
+    mask: null,
+    maskContentUnits: null,
+    maskUnits: null,
+    mathematical: null,
+    max: null,
+    media: null,
+    mediaCharacterEncoding: null,
+    mediaContentEncodings: null,
+    mediaSize: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    mediaTime: null,
+    method: null,
+    min: null,
+    mode: null,
+    name: null,
+    navDown: null,
+    navDownLeft: null,
+    navDownRight: null,
+    navLeft: null,
+    navNext: null,
+    navPrev: null,
+    navRight: null,
+    navUp: null,
+    navUpLeft: null,
+    navUpRight: null,
+    numOctaves: null,
+    observer: null,
+    offset: null,
+    onAbort: null,
+    onActivate: null,
+    onAfterPrint: null,
+    onBeforePrint: null,
+    onBegin: null,
+    onCancel: null,
+    onCanPlay: null,
+    onCanPlayThrough: null,
+    onChange: null,
+    onClick: null,
+    onClose: null,
+    onCopy: null,
+    onCueChange: null,
+    onCut: null,
+    onDblClick: null,
+    onDrag: null,
+    onDragEnd: null,
+    onDragEnter: null,
+    onDragExit: null,
+    onDragLeave: null,
+    onDragOver: null,
+    onDragStart: null,
+    onDrop: null,
+    onDurationChange: null,
+    onEmptied: null,
+    onEnd: null,
+    onEnded: null,
+    onError: null,
+    onFocus: null,
+    onFocusIn: null,
+    onFocusOut: null,
+    onHashChange: null,
+    onInput: null,
+    onInvalid: null,
+    onKeyDown: null,
+    onKeyPress: null,
+    onKeyUp: null,
+    onLoad: null,
+    onLoadedData: null,
+    onLoadedMetadata: null,
+    onLoadStart: null,
+    onMessage: null,
+    onMouseDown: null,
+    onMouseEnter: null,
+    onMouseLeave: null,
+    onMouseMove: null,
+    onMouseOut: null,
+    onMouseOver: null,
+    onMouseUp: null,
+    onMouseWheel: null,
+    onOffline: null,
+    onOnline: null,
+    onPageHide: null,
+    onPageShow: null,
+    onPaste: null,
+    onPause: null,
+    onPlay: null,
+    onPlaying: null,
+    onPopState: null,
+    onProgress: null,
+    onRateChange: null,
+    onRepeat: null,
+    onReset: null,
+    onResize: null,
+    onScroll: null,
+    onSeeked: null,
+    onSeeking: null,
+    onSelect: null,
+    onShow: null,
+    onStalled: null,
+    onStorage: null,
+    onSubmit: null,
+    onSuspend: null,
+    onTimeUpdate: null,
+    onToggle: null,
+    onUnload: null,
+    onVolumeChange: null,
+    onWaiting: null,
+    onZoom: null,
+    opacity: null,
+    operator: null,
+    order: null,
+    orient: null,
+    orientation: null,
+    origin: null,
+    overflow: null,
+    overlay: null,
+    overlinePosition: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    overlineThickness: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    paintOrder: null,
+    panose1: null,
+    path: null,
+    pathLength: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    patternContentUnits: null,
+    patternTransform: null,
+    patternUnits: null,
+    phase: null,
+    ping: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["spaceSeparated"],
+    pitch: null,
+    playbackOrder: null,
+    pointerEvents: null,
+    points: null,
+    pointsAtX: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    pointsAtY: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    pointsAtZ: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    preserveAlpha: null,
+    preserveAspectRatio: null,
+    primitiveUnits: null,
+    propagate: null,
+    property: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["commaOrSpaceSeparated"],
+    r: null,
+    radius: null,
+    referrerPolicy: null,
+    refX: null,
+    refY: null,
+    rel: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["commaOrSpaceSeparated"],
+    rev: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["commaOrSpaceSeparated"],
+    renderingIntent: null,
+    repeatCount: null,
+    repeatDur: null,
+    requiredExtensions: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["commaOrSpaceSeparated"],
+    requiredFeatures: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["commaOrSpaceSeparated"],
+    requiredFonts: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["commaOrSpaceSeparated"],
+    requiredFormats: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["commaOrSpaceSeparated"],
+    resource: null,
+    restart: null,
+    result: null,
+    rotate: null,
+    rx: null,
+    ry: null,
+    scale: null,
+    seed: null,
+    shapeRendering: null,
+    side: null,
+    slope: null,
+    snapshotTime: null,
+    specularConstant: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    specularExponent: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    spreadMethod: null,
+    spacing: null,
+    startOffset: null,
+    stdDeviation: null,
+    stemh: null,
+    stemv: null,
+    stitchTiles: null,
+    stopColor: null,
+    stopOpacity: null,
+    strikethroughPosition: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    strikethroughThickness: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    string: null,
+    stroke: null,
+    strokeDashArray: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["commaOrSpaceSeparated"],
+    strokeDashOffset: null,
+    strokeLineCap: null,
+    strokeLineJoin: null,
+    strokeMiterLimit: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    strokeOpacity: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    strokeWidth: null,
+    style: null,
+    surfaceScale: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    syncBehavior: null,
+    syncBehaviorDefault: null,
+    syncMaster: null,
+    syncTolerance: null,
+    syncToleranceDefault: null,
+    systemLanguage: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["commaOrSpaceSeparated"],
+    tabIndex: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    tableValues: null,
+    target: null,
+    targetX: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    targetY: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    textAnchor: null,
+    textDecoration: null,
+    textRendering: null,
+    textLength: null,
+    timelineBegin: null,
+    title: null,
+    transformBehavior: null,
+    type: null,
+    typeOf: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["commaOrSpaceSeparated"],
+    to: null,
+    transform: null,
+    transformOrigin: null,
+    u1: null,
+    u2: null,
+    underlinePosition: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    underlineThickness: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    unicode: null,
+    unicodeBidi: null,
+    unicodeRange: null,
+    unitsPerEm: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    values: null,
+    vAlphabetic: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    vMathematical: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    vectorEffect: null,
+    vHanging: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    vIdeographic: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    version: null,
+    vertAdvY: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    vertOriginX: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    vertOriginY: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    viewBox: null,
+    viewTarget: null,
+    visibility: null,
+    width: null,
+    widths: null,
+    wordSpacing: null,
+    writingMode: null,
+    x: null,
+    x1: null,
+    x2: null,
+    xChannelSelector: null,
+    xHeight: _util_types_js__WEBPACK_IMPORTED_MODULE_2__["number"],
+    y: null,
+    y1: null,
+    y2: null,
+    yChannelSelector: null,
+    z: null,
+    zoomAndPan: null
+  },
+  space: 'svg',
+  transform: _util_case_sensitive_transform_js__WEBPACK_IMPORTED_MODULE_0__["caseSensitiveTransform"]
+})
+
+
+/***/ }),
+
+/***/ "./node_modules/property-information/lib/util/case-insensitive-transform.js":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/property-information/lib/util/case-insensitive-transform.js ***!
+  \**********************************************************************************/
+/*! exports provided: caseInsensitiveTransform */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "caseInsensitiveTransform", function() { return caseInsensitiveTransform; });
+/* harmony import */ var _case_sensitive_transform_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./case-sensitive-transform.js */ "./node_modules/property-information/lib/util/case-sensitive-transform.js");
+
+
+/**
+ * @param {Record<string, string>} attributes
+ *   Attributes.
+ * @param {string} property
+ *   Property.
+ * @returns {string}
+ *   Transformed property.
+ */
+function caseInsensitiveTransform(attributes, property) {
+  return Object(_case_sensitive_transform_js__WEBPACK_IMPORTED_MODULE_0__["caseSensitiveTransform"])(attributes, property.toLowerCase())
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/property-information/lib/util/case-sensitive-transform.js":
+/*!********************************************************************************!*\
+  !*** ./node_modules/property-information/lib/util/case-sensitive-transform.js ***!
+  \********************************************************************************/
+/*! exports provided: caseSensitiveTransform */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "caseSensitiveTransform", function() { return caseSensitiveTransform; });
+/**
+ * @param {Record<string, string>} attributes
+ *   Attributes.
+ * @param {string} attribute
+ *   Attribute.
+ * @returns {string}
+ *   Transformed attribute.
+ */
+function caseSensitiveTransform(attributes, attribute) {
+  return attribute in attributes ? attributes[attribute] : attribute
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/property-information/lib/util/create.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/property-information/lib/util/create.js ***!
+  \**************************************************************/
+/*! exports provided: create */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "create", function() { return create; });
+/* harmony import */ var _normalize_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../normalize.js */ "./node_modules/property-information/lib/normalize.js");
+/* harmony import */ var _defined_info_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./defined-info.js */ "./node_modules/property-information/lib/util/defined-info.js");
+/* harmony import */ var _schema_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./schema.js */ "./node_modules/property-information/lib/util/schema.js");
+/**
+ * @import {Info, Space} from 'property-information'
+ */
+
+/**
+ * @typedef Definition
+ *   Definition of a schema.
+ * @property {Record<string, string> | undefined} [attributes]
+ *   Normalzed names to special attribute case.
+ * @property {ReadonlyArray<string> | undefined} [mustUseProperty]
+ *   Normalized names that must be set as properties.
+ * @property {Record<string, number | null>} properties
+ *   Property names to their types.
+ * @property {Space | undefined} [space]
+ *   Space.
+ * @property {Transform} transform
+ *   Transform a property name.
+ */
+
+/**
+ * @callback Transform
+ *   Transform.
+ * @param {Record<string, string>} attributes
+ *   Attributes.
+ * @param {string} property
+ *   Property.
+ * @returns {string}
+ *   Attribute.
+ */
+
+
+
+
+
+/**
+ * @param {Definition} definition
+ *   Definition.
+ * @returns {Schema}
+ *   Schema.
+ */
+function create(definition) {
+  /** @type {Record<string, Info>} */
+  const properties = {}
+  /** @type {Record<string, string>} */
+  const normals = {}
+
+  for (const [property, value] of Object.entries(definition.properties)) {
+    const info = new _defined_info_js__WEBPACK_IMPORTED_MODULE_1__["DefinedInfo"](
+      property,
+      definition.transform(definition.attributes || {}, property),
+      value,
+      definition.space
+    )
+
+    if (
+      definition.mustUseProperty &&
+      definition.mustUseProperty.includes(property)
+    ) {
+      info.mustUseProperty = true
+    }
+
+    properties[property] = info
+
+    normals[Object(_normalize_js__WEBPACK_IMPORTED_MODULE_0__["normalize"])(property)] = property
+    normals[Object(_normalize_js__WEBPACK_IMPORTED_MODULE_0__["normalize"])(info.attribute)] = property
+  }
+
+  return new _schema_js__WEBPACK_IMPORTED_MODULE_2__["Schema"](properties, normals, definition.space)
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/property-information/lib/util/defined-info.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/property-information/lib/util/defined-info.js ***!
+  \********************************************************************/
+/*! exports provided: DefinedInfo */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DefinedInfo", function() { return DefinedInfo; });
+/* harmony import */ var _info_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./info.js */ "./node_modules/property-information/lib/util/info.js");
+/* harmony import */ var _types_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./types.js */ "./node_modules/property-information/lib/util/types.js");
+/**
+ * @import {Space} from 'property-information'
+ */
+
+
+
+
+const checks = /** @type {ReadonlyArray<keyof typeof types>} */ (
+  Object.keys(_types_js__WEBPACK_IMPORTED_MODULE_1__)
+)
+
+class DefinedInfo extends _info_js__WEBPACK_IMPORTED_MODULE_0__["Info"] {
+  /**
+   * @constructor
+   * @param {string} property
+   *   Property.
+   * @param {string} attribute
+   *   Attribute.
+   * @param {number | null | undefined} [mask]
+   *   Mask.
+   * @param {Space | undefined} [space]
+   *   Space.
+   * @returns
+   *   Info.
+   */
+  constructor(property, attribute, mask, space) {
+    let index = -1
+
+    super(property, attribute)
+
+    mark(this, 'space', space)
+
+    if (typeof mask === 'number') {
+      while (++index < checks.length) {
+        const check = checks[index]
+        mark(this, checks[index], (mask & _types_js__WEBPACK_IMPORTED_MODULE_1__[check]) === _types_js__WEBPACK_IMPORTED_MODULE_1__[check])
+      }
+    }
+  }
+}
+
+DefinedInfo.prototype.defined = true
+
+/**
+ * @template {keyof DefinedInfo} Key
+ *   Key type.
+ * @param {DefinedInfo} values
+ *   Info.
+ * @param {Key} key
+ *   Key.
+ * @param {DefinedInfo[Key]} value
+ *   Value.
+ * @returns {undefined}
+ *   Nothing.
+ */
+function mark(values, key, value) {
+  if (value) {
+    values[key] = value
+  }
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/property-information/lib/util/info.js":
+/*!************************************************************!*\
+  !*** ./node_modules/property-information/lib/util/info.js ***!
+  \************************************************************/
+/*! exports provided: Info */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Info", function() { return Info; });
+/**
+ * @import {Info as InfoType} from 'property-information'
+ */
+
+/** @type {InfoType} */
+class Info {
+  /**
+   * @param {string} property
+   *   Property.
+   * @param {string} attribute
+   *   Attribute.
+   * @returns
+   *   Info.
+   */
+  constructor(property, attribute) {
+    this.attribute = attribute
+    this.property = property
+  }
+}
+
+Info.prototype.attribute = ''
+Info.prototype.booleanish = false
+Info.prototype.boolean = false
+Info.prototype.commaOrSpaceSeparated = false
+Info.prototype.commaSeparated = false
+Info.prototype.defined = false
+Info.prototype.mustUseProperty = false
+Info.prototype.number = false
+Info.prototype.overloadedBoolean = false
+Info.prototype.property = ''
+Info.prototype.spaceSeparated = false
+Info.prototype.space = undefined
+
+
+/***/ }),
+
+/***/ "./node_modules/property-information/lib/util/merge.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/property-information/lib/util/merge.js ***!
+  \*************************************************************/
+/*! exports provided: merge */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "merge", function() { return merge; });
+/* harmony import */ var _schema_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./schema.js */ "./node_modules/property-information/lib/util/schema.js");
+/**
+ * @import {Info, Space} from 'property-information'
+ */
+
+
+
+/**
+ * @param {ReadonlyArray<Schema>} definitions
+ *   Definitions.
+ * @param {Space | undefined} [space]
+ *   Space.
+ * @returns {Schema}
+ *   Schema.
+ */
+function merge(definitions, space) {
+  /** @type {Record<string, Info>} */
+  const property = {}
+  /** @type {Record<string, string>} */
+  const normal = {}
+
+  for (const definition of definitions) {
+    Object.assign(property, definition.property)
+    Object.assign(normal, definition.normal)
+  }
+
+  return new _schema_js__WEBPACK_IMPORTED_MODULE_0__["Schema"](property, normal, space)
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/property-information/lib/util/schema.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/property-information/lib/util/schema.js ***!
+  \**************************************************************/
+/*! exports provided: Schema */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Schema", function() { return Schema; });
+/**
+ * @import {Schema as SchemaType, Space} from 'property-information'
+ */
+
+/** @type {SchemaType} */
+class Schema {
+  /**
+   * @param {SchemaType['property']} property
+   *   Property.
+   * @param {SchemaType['normal']} normal
+   *   Normal.
+   * @param {Space | undefined} [space]
+   *   Space.
+   * @returns
+   *   Schema.
+   */
+  constructor(property, normal, space) {
+    this.normal = normal
+    this.property = property
+
+    if (space) {
+      this.space = space
+    }
+  }
+}
+
+Schema.prototype.normal = {}
+Schema.prototype.property = {}
+Schema.prototype.space = undefined
+
+
+/***/ }),
+
+/***/ "./node_modules/property-information/lib/util/types.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/property-information/lib/util/types.js ***!
+  \*************************************************************/
+/*! exports provided: boolean, booleanish, overloadedBoolean, number, spaceSeparated, commaSeparated, commaOrSpaceSeparated */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "boolean", function() { return boolean; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "booleanish", function() { return booleanish; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "overloadedBoolean", function() { return overloadedBoolean; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "number", function() { return number; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "spaceSeparated", function() { return spaceSeparated; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "commaSeparated", function() { return commaSeparated; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "commaOrSpaceSeparated", function() { return commaOrSpaceSeparated; });
+let powers = 0
+
+const boolean = increment()
+const booleanish = increment()
+const overloadedBoolean = increment()
+const number = increment()
+const spaceSeparated = increment()
+const commaSeparated = increment()
+const commaOrSpaceSeparated = increment()
+
+function increment() {
+  return 2 ** ++powers
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/property-information/lib/xlink.js":
+/*!********************************************************!*\
+  !*** ./node_modules/property-information/lib/xlink.js ***!
+  \********************************************************/
+/*! exports provided: xlink */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "xlink", function() { return xlink; });
+/* harmony import */ var _util_create_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./util/create.js */ "./node_modules/property-information/lib/util/create.js");
+
+
+const xlink = Object(_util_create_js__WEBPACK_IMPORTED_MODULE_0__["create"])({
+  properties: {
+    xLinkActuate: null,
+    xLinkArcRole: null,
+    xLinkHref: null,
+    xLinkRole: null,
+    xLinkShow: null,
+    xLinkTitle: null,
+    xLinkType: null
+  },
+  space: 'xlink',
+  transform(_, property) {
+    return 'xlink:' + property.slice(5).toLowerCase()
+  }
+})
+
+
+/***/ }),
+
+/***/ "./node_modules/property-information/lib/xml.js":
+/*!******************************************************!*\
+  !*** ./node_modules/property-information/lib/xml.js ***!
+  \******************************************************/
+/*! exports provided: xml */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "xml", function() { return xml; });
+/* harmony import */ var _util_create_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./util/create.js */ "./node_modules/property-information/lib/util/create.js");
+
+
+const xml = Object(_util_create_js__WEBPACK_IMPORTED_MODULE_0__["create"])({
+  properties: {xmlBase: null, xmlLang: null, xmlSpace: null},
+  space: 'xml',
+  transform(_, property) {
+    return 'xml:' + property.slice(3).toLowerCase()
+  }
+})
+
+
+/***/ }),
+
+/***/ "./node_modules/property-information/lib/xmlns.js":
+/*!********************************************************!*\
+  !*** ./node_modules/property-information/lib/xmlns.js ***!
+  \********************************************************/
+/*! exports provided: xmlns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "xmlns", function() { return xmlns; });
+/* harmony import */ var _util_create_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./util/create.js */ "./node_modules/property-information/lib/util/create.js");
+/* harmony import */ var _util_case_insensitive_transform_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./util/case-insensitive-transform.js */ "./node_modules/property-information/lib/util/case-insensitive-transform.js");
+
+
+
+const xmlns = Object(_util_create_js__WEBPACK_IMPORTED_MODULE_0__["create"])({
+  attributes: {xmlnsxlink: 'xmlns:xlink'},
+  properties: {xmlnsXLink: null, xmlns: null},
+  space: 'xmlns',
+  transform: _util_case_insensitive_transform_js__WEBPACK_IMPORTED_MODULE_1__["caseInsensitiveTransform"]
+})
+
+
+/***/ }),
+
+/***/ "./node_modules/refractor/lib/core.js":
+/*!********************************************!*\
+  !*** ./node_modules/refractor/lib/core.js ***!
+  \********************************************/
+/*! exports provided: refractor */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "refractor", function() { return refractor; });
+/* harmony import */ var hastscript__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! hastscript */ "./node_modules/hastscript/index.js");
+/* harmony import */ var parse_entities__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! parse-entities */ "./node_modules/parse-entities/index.js");
+/* harmony import */ var _prism_core_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./prism-core.js */ "./node_modules/refractor/lib/prism-core.js");
+/**
+ * @import {Element, Root, Text} from 'hast'
+ * @import {Grammar, Languages} from 'prismjs'
+ */
+
+/**
+ * @typedef _Token
+ *   Hidden Prism token.
+ * @property {string} alias
+ *   Alias.
+ * @property {string} content
+ *   Content.
+ * @property {number} length
+ *   Length.
+ * @property {string} type
+ *   Type.
+ */
+
+/**
+ * @typedef _Env
+ *   Hidden Prism environment.
+ * @property {Record<string, string>} attributes
+ *   Attributes.
+ * @property {Array<string>} classes
+ *   Classes.
+ * @property {Array<Element | Text> | Element | Text} content
+ *   Content.
+ * @property {string} language
+ *   Language.
+ * @property {string} tag
+ *   Tag.
+ * @property {string} type
+ *   Type.
+ */
+
+/**
+ * @typedef {((prism: Refractor) => undefined | void) & {aliases?: Array<string> | undefined, displayName: string}} Syntax
+ *   Refractor syntax function.
+ */
+
+/**
+ * @typedef Refractor
+ *   Virtual syntax highlighting
+ * @property {typeof alias} alias
+ * @property {Languages} languages
+ * @property {typeof listLanguages} listLanguages
+ * @property {typeof highlight} highlight
+ * @property {typeof registered} registered
+ * @property {typeof register} register
+ */
+
+// Load all stuff in `prism.js` itself, except for `prism-file-highlight.js`.
+// The wrapped non-leaky grammars are loaded instead of Prism’s originals.
+
+
+
+
+// Inherit.
+function Refractor() {}
+
+Refractor.prototype = _prism_core_js__WEBPACK_IMPORTED_MODULE_2__["Prism"]
+
+/** @type {Refractor} */
+// @ts-expect-error: TS is wrong.
+const refractor = new Refractor()
+
+// Create.
+refractor.highlight = highlight
+refractor.register = register
+refractor.alias = alias
+refractor.registered = registered
+refractor.listLanguages = listLanguages
+
+// @ts-expect-error Overwrite Prism.
+refractor.util.encode = encode
+// @ts-expect-error Overwrite Prism.
+refractor.Token.stringify = stringify
+
+/**
+ * Highlight `value` (code) as `language` (programming language).
+ *
+ * @param {string} value
+ *   Code to highlight.
+ * @param {Grammar | string} language
+ *   Programming language name, alias, or grammar.
+ * @returns {Root}
+ *   Node representing highlighted code.
+ */
+function highlight(value, language) {
+  if (typeof value !== 'string') {
+    throw new TypeError('Expected `string` for `value`, got `' + value + '`')
+  }
+
+  /** @type {Grammar} */
+  let grammar
+  /** @type {string | undefined} */
+  let name
+
+  // `name` is a grammar object.
+  // This was called internally by Prism.js before 1.28.0.
+  /* c8 ignore next 2 */
+  if (language && typeof language === 'object') {
+    grammar = language
+  } else {
+    name = language
+
+    if (typeof name !== 'string') {
+      throw new TypeError('Expected `string` for `name`, got `' + name + '`')
+    }
+
+    if (Object.hasOwn(refractor.languages, name)) {
+      grammar = refractor.languages[name]
+    } else {
+      throw new Error('Unknown language: `' + name + '` is not registered')
+    }
+  }
+
+  return {
+    type: 'root',
+    // @ts-expect-error: we hacked Prism to accept and return the things we want.
+    children: _prism_core_js__WEBPACK_IMPORTED_MODULE_2__["Prism"].highlight.call(refractor, value, grammar, name)
+  }
+}
+
+/**
+ * Register a syntax.
+ *
+ * @param {Syntax} syntax
+ *   Language function made for refractor, as in, the files in
+ *   `refractor/lang/*.js`.
+ * @returns {undefined}
+ *   Nothing.
+ */
+function register(syntax) {
+  if (typeof syntax !== 'function' || !syntax.displayName) {
+    throw new Error('Expected `function` for `syntax`, got `' + syntax + '`')
+  }
+
+  // Do not duplicate registrations.
+  if (!Object.hasOwn(refractor.languages, syntax.displayName)) {
+    syntax(refractor)
+  }
+}
+
+/**
+ * Register aliases for already registered languages.
+ *
+ * @param {Record<string, ReadonlyArray<string> | string> | string} language
+ *   Language to alias.
+ * @param {ReadonlyArray<string> | string | null | undefined} [alias]
+ *   Aliases.
+ * @returns {undefined}
+ *   Nothing.
+ */
+function alias(language, alias) {
+  const languages = refractor.languages
+  /** @type {Record<string, ReadonlyArray<string> | string>} */
+  let map = {}
+
+  if (typeof language === 'string') {
+    if (alias) {
+      map[language] = alias
+    }
+  } else {
+    map = language
+  }
+
+  /** @type {string} */
+  let key
+
+  for (key in map) {
+    if (Object.hasOwn(map, key)) {
+      const value = map[key]
+      const list = typeof value === 'string' ? [value] : value
+      let index = -1
+
+      while (++index < list.length) {
+        languages[list[index]] = languages[key]
+      }
+    }
+  }
+}
+
+/**
+ * Check whether an `alias` or `language` is registered.
+ *
+ * @param {string} aliasOrLanguage
+ *   Language or alias to check.
+ * @returns {boolean}
+ *   Whether the language is registered.
+ */
+function registered(aliasOrLanguage) {
+  if (typeof aliasOrLanguage !== 'string') {
+    throw new TypeError(
+      'Expected `string` for `aliasOrLanguage`, got `' + aliasOrLanguage + '`'
+    )
+  }
+
+  return Object.hasOwn(refractor.languages, aliasOrLanguage)
+}
+
+/**
+ * List all registered languages (names and aliases).
+ *
+ * @returns {Array<string>}
+ *   List of language names.
+ */
+function listLanguages() {
+  const languages = refractor.languages
+  /** @type {Array<string>} */
+  const list = []
+  /** @type {string} */
+  let language
+
+  for (language in languages) {
+    if (
+      Object.hasOwn(languages, language) &&
+      typeof languages[language] === 'object'
+    ) {
+      list.push(language)
+    }
+  }
+
+  return list
+}
+
+/**
+ * @param {Array<_Token | string> | _Token | string} value
+ *   Token to stringify.
+ * @param {string} language
+ *   Language of the token.
+ * @returns {Array<Element | Text> | Element | Text}
+ *   Node representing the token.
+ */
+function stringify(value, language) {
+  if (typeof value === 'string') {
+    return {type: 'text', value}
+  }
+
+  if (Array.isArray(value)) {
+    /** @type {Array<Element | Text>} */
+    const result = []
+    let index = -1
+
+    while (++index < value.length) {
+      if (
+        value[index] !== null &&
+        value[index] !== undefined &&
+        value[index] !== ''
+      ) {
+        // Cast because we assume no sub-arrays.
+        result.push(
+          /** @type {Element | Text} */ (stringify(value[index], language))
+        )
+      }
+    }
+
+    return result
+  }
+
+  /** @type {_Env} */
+  const env = {
+    attributes: {},
+    classes: ['token', value.type],
+    content: stringify(value.content, language),
+    language,
+    tag: 'span',
+    type: value.type
+  }
+
+  if (value.alias) {
+    env.classes.push(
+      ...(typeof value.alias === 'string' ? [value.alias] : value.alias)
+    )
+  }
+
+  // @ts-expect-error Prism.
+  refractor.hooks.run('wrap', env)
+
+  return Object(hastscript__WEBPACK_IMPORTED_MODULE_0__["h"])(
+    env.tag + '.' + env.classes.join('.'),
+    attributes(env.attributes),
+    env.content
+  )
+}
+
+/**
+ * @template {unknown} T
+ *   Tokens.
+ * @param {T} tokens
+ *   Input.
+ * @returns {T}
+ *   Output, same as input.
+ */
+function encode(tokens) {
+  return tokens
+}
+
+/**
+ * @param {Record<string, string>} record
+ *   Attributes.
+ * @returns {Record<string, string>}
+ *   Attributes.
+ */
+function attributes(record) {
+  /** @type {string} */
+  let key
+
+  for (key in record) {
+    if (Object.hasOwn(record, key)) {
+      record[key] = Object(parse_entities__WEBPACK_IMPORTED_MODULE_1__["parseEntities"])(record[key])
+    }
+  }
+
+  return record
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/refractor/lib/prism-core.js":
+/*!**************************************************!*\
+  !*** ./node_modules/refractor/lib/prism-core.js ***!
+  \**************************************************/
+/*! exports provided: Prism */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Prism", function() { return Prism; });
+// @ts-nocheck
+
+// This is a slimmed down version of `prism-core.js`, to remove globals,
+// document, workers, `util.encode`, `Token.stringify`
+
+// Private helper vars
+var lang = /(?:^|\s)lang(?:uage)?-([\w-]+)(?=\s|$)/i
+var uniqueId = 0
+
+// The grammar object for plaintext
+var plainTextGrammar = {}
+
+var _ = {
+  /**
+   * A namespace for utility methods.
+   *
+   * All function in this namespace that are not explicitly marked as _public_ are for __internal use only__ and may
+   * change or disappear at any time.
+   *
+   * @namespace
+   * @memberof Prism
+   */
+  util: {
+    /**
+     * Returns the name of the type of the given value.
+     *
+     * @param {any} o
+     * @returns {string}
+     * @example
+     * type(null)      === 'Null'
+     * type(undefined) === 'Undefined'
+     * type(123)       === 'Number'
+     * type('foo')     === 'String'
+     * type(true)      === 'Boolean'
+     * type([1, 2])    === 'Array'
+     * type({})        === 'Object'
+     * type(String)    === 'Function'
+     * type(/abc+/)    === 'RegExp'
+     */
+    type: function (o) {
+      return Object.prototype.toString.call(o).slice(8, -1)
+    },
+
+    /**
+     * Returns a unique number for the given object. Later calls will still return the same number.
+     *
+     * @param {Object} obj
+     * @returns {number}
+     */
+    objId: function (obj) {
+      if (!obj['__id']) {
+        Object.defineProperty(obj, '__id', {value: ++uniqueId})
+      }
+      return obj['__id']
+    },
+
+    /**
+     * Creates a deep clone of the given object.
+     *
+     * The main intended use of this function is to clone language definitions.
+     *
+     * @param {T} o
+     * @param {Record<number, any>} [visited]
+     * @returns {T}
+     * @template T
+     */
+    clone: function deepClone(o, visited) {
+      visited = visited || {}
+
+      var clone
+      var id
+      switch (_.util.type(o)) {
+        case 'Object':
+          id = _.util.objId(o)
+          if (visited[id]) {
+            return visited[id]
+          }
+          clone = /** @type {Record<string, any>} */ ({})
+          visited[id] = clone
+
+          for (var key in o) {
+            if (o.hasOwnProperty(key)) {
+              clone[key] = deepClone(o[key], visited)
+            }
+          }
+
+          return /** @type {any} */ (clone)
+
+        case 'Array':
+          id = _.util.objId(o)
+          if (visited[id]) {
+            return visited[id]
+          }
+          clone = []
+          visited[id] = clone
+
+          ;/** @type {Array} */ (/** @type {any} */ (o)).forEach(
+            function (v, i) {
+              clone[i] = deepClone(v, visited)
+            }
+          )
+
+          return /** @type {any} */ (clone)
+
+        default:
+          return o
+      }
+    }
+  },
+
+  /**
+   * This namespace contains all currently loaded languages and the some helper functions to create and modify languages.
+   *
+   * @namespace
+   * @memberof Prism
+   * @public
+   */
+  languages: {
+    /**
+     * The grammar for plain, unformatted text.
+     */
+    plain: plainTextGrammar,
+    plaintext: plainTextGrammar,
+    text: plainTextGrammar,
+    txt: plainTextGrammar,
+
+    /**
+     * Creates a deep copy of the language with the given id and appends the given tokens.
+     *
+     * If a token in `redef` also appears in the copied language, then the existing token in the copied language
+     * will be overwritten at its original position.
+     *
+     * ## Best practices
+     *
+     * Since the position of overwriting tokens (token in `redef` that overwrite tokens in the copied language)
+     * doesn't matter, they can technically be in any order. However, this can be confusing to others that trying to
+     * understand the language definition because, normally, the order of tokens matters in Prism grammars.
+     *
+     * Therefore, it is encouraged to order overwriting tokens according to the positions of the overwritten tokens.
+     * Furthermore, all non-overwriting tokens should be placed after the overwriting ones.
+     *
+     * @param {string} id The id of the language to extend. This has to be a key in `Prism.languages`.
+     * @param {Grammar} redef The new tokens to append.
+     * @returns {Grammar} The new language created.
+     * @public
+     * @example
+     * Prism.languages['css-with-colors'] = Prism.languages.extend('css', {
+     *     // Prism.languages.css already has a 'comment' token, so this token will overwrite CSS' 'comment' token
+     *     // at its original position
+     *     'comment': { ... },
+     *     // CSS doesn't have a 'color' token, so this token will be appended
+     *     'color': /\b(?:red|green|blue)\b/
+     * });
+     */
+    extend: function (id, redef) {
+      var lang = _.util.clone(_.languages[id])
+
+      for (var key in redef) {
+        lang[key] = redef[key]
+      }
+
+      return lang
+    },
+
+    /**
+     * Inserts tokens _before_ another token in a language definition or any other grammar.
+     *
+     * ## Usage
+     *
+     * This helper method makes it easy to modify existing languages. For example, the CSS language definition
+     * not only defines CSS highlighting for CSS documents, but also needs to define highlighting for CSS embedded
+     * in HTML through `<style>` elements. To do this, it needs to modify `Prism.languages.markup` and add the
+     * appropriate tokens. However, `Prism.languages.markup` is a regular JavaScript object literal, so if you do
+     * this:
+     *
+     * ```js
+     * Prism.languages.markup.style = {
+     *     // token
+     * };
+     * ```
+     *
+     * then the `style` token will be added (and processed) at the end. `insertBefore` allows you to insert tokens
+     * before existing tokens. For the CSS example above, you would use it like this:
+     *
+     * ```js
+     * Prism.languages.insertBefore('markup', 'cdata', {
+     *     'style': {
+     *         // token
+     *     }
+     * });
+     * ```
+     *
+     * ## Special cases
+     *
+     * If the grammars of `inside` and `insert` have tokens with the same name, the tokens in `inside`'s grammar
+     * will be ignored.
+     *
+     * This behavior can be used to insert tokens after `before`:
+     *
+     * ```js
+     * Prism.languages.insertBefore('markup', 'comment', {
+     *     'comment': Prism.languages.markup.comment,
+     *     // tokens after 'comment'
+     * });
+     * ```
+     *
+     * ## Limitations
+     *
+     * The main problem `insertBefore` has to solve is iteration order. Since ES2015, the iteration order for object
+     * properties is guaranteed to be the insertion order (except for integer keys) but some browsers behave
+     * differently when keys are deleted and re-inserted. So `insertBefore` can't be implemented by temporarily
+     * deleting properties which is necessary to insert at arbitrary positions.
+     *
+     * To solve this problem, `insertBefore` doesn't actually insert the given tokens into the target object.
+     * Instead, it will create a new object and replace all references to the target object with the new one. This
+     * can be done without temporarily deleting properties, so the iteration order is well-defined.
+     *
+     * However, only references that can be reached from `Prism.languages` or `insert` will be replaced. I.e. if
+     * you hold the target object in a variable, then the value of the variable will not change.
+     *
+     * ```js
+     * var oldMarkup = Prism.languages.markup;
+     * var newMarkup = Prism.languages.insertBefore('markup', 'comment', { ... });
+     *
+     * assert(oldMarkup !== Prism.languages.markup);
+     * assert(newMarkup === Prism.languages.markup);
+     * ```
+     *
+     * @param {string} inside The property of `root` (e.g. a language id in `Prism.languages`) that contains the
+     * object to be modified.
+     * @param {string} before The key to insert before.
+     * @param {Grammar} insert An object containing the key-value pairs to be inserted.
+     * @param {Object<string, any>} [root] The object containing `inside`, i.e. the object that contains the
+     * object to be modified.
+     *
+     * Defaults to `Prism.languages`.
+     * @returns {Grammar} The new grammar object.
+     * @public
+     */
+    insertBefore: function (inside, before, insert, root) {
+      root = root || /** @type {any} */ (_.languages)
+      var grammar = root[inside]
+      /** @type {Grammar} */
+      var ret = {}
+
+      for (var token in grammar) {
+        if (grammar.hasOwnProperty(token)) {
+          if (token == before) {
+            for (var newToken in insert) {
+              if (insert.hasOwnProperty(newToken)) {
+                ret[newToken] = insert[newToken]
+              }
+            }
+          }
+
+          // Do not insert token which also occur in insert. See #1525
+          if (!insert.hasOwnProperty(token)) {
+            ret[token] = grammar[token]
+          }
+        }
+      }
+
+      var old = root[inside]
+      root[inside] = ret
+
+      // Update references in other language definitions
+      _.languages.DFS(_.languages, function (key, value) {
+        if (value === old && key != inside) {
+          this[key] = ret
+        }
+      })
+
+      return ret
+    },
+
+    // Traverse a language definition with Depth First Search
+    DFS: function DFS(o, callback, type, visited) {
+      visited = visited || {}
+
+      var objId = _.util.objId
+
+      for (var i in o) {
+        if (o.hasOwnProperty(i)) {
+          callback.call(o, i, o[i], type || i)
+
+          var property = o[i]
+          var propertyType = _.util.type(property)
+
+          if (propertyType === 'Object' && !visited[objId(property)]) {
+            visited[objId(property)] = true
+            DFS(property, callback, null, visited)
+          } else if (propertyType === 'Array' && !visited[objId(property)]) {
+            visited[objId(property)] = true
+            DFS(property, callback, i, visited)
+          }
+        }
+      }
+    }
+  },
+
+  plugins: {},
+
+  /**
+   * Low-level function, only use if you know what you’re doing. It accepts a string of text as input
+   * and the language definitions to use, and returns a string with the HTML produced.
+   *
+   * The following hooks will be run:
+   * 1. `before-tokenize`
+   * 2. `after-tokenize`
+   * 3. `wrap`: On each {@link Token}.
+   *
+   * @param {string} text A string with the code to be highlighted.
+   * @param {Grammar} grammar An object containing the tokens to use.
+   *
+   * Usually a language definition like `Prism.languages.markup`.
+   * @param {string} language The name of the language definition passed to `grammar`.
+   * @returns {string} The highlighted HTML.
+   * @memberof Prism
+   * @public
+   * @example
+   * Prism.highlight('var foo = true;', Prism.languages.javascript, 'javascript');
+   */
+  highlight: function (text, grammar, language) {
+    var env = {
+      code: text,
+      grammar: grammar,
+      language: language
+    }
+    _.hooks.run('before-tokenize', env)
+    if (!env.grammar) {
+      throw new Error('The language "' + env.language + '" has no grammar.')
+    }
+    env.tokens = _.tokenize(env.code, env.grammar)
+    _.hooks.run('after-tokenize', env)
+    return Token.stringify(_.util.encode(env.tokens), env.language)
+  },
+
+  /**
+   * This is the heart of Prism, and the most low-level function you can use. It accepts a string of text as input
+   * and the language definitions to use, and returns an array with the tokenized code.
+   *
+   * When the language definition includes nested tokens, the function is called recursively on each of these tokens.
+   *
+   * This method could be useful in other contexts as well, as a very crude parser.
+   *
+   * @param {string} text A string with the code to be highlighted.
+   * @param {Grammar} grammar An object containing the tokens to use.
+   *
+   * Usually a language definition like `Prism.languages.markup`.
+   * @returns {TokenStream} An array of strings and tokens, a token stream.
+   * @memberof Prism
+   * @public
+   * @example
+   * let code = `var foo = 0;`;
+   * let tokens = Prism.tokenize(code, Prism.languages.javascript);
+   * tokens.forEach(token => {
+   *     if (token instanceof Prism.Token && token.type === 'number') {
+   *         console.log(`Found numeric literal: ${token.content}`);
+   *     }
+   * });
+   */
+  tokenize: function (text, grammar) {
+    var rest = grammar.rest
+    if (rest) {
+      for (var token in rest) {
+        grammar[token] = rest[token]
+      }
+
+      delete grammar.rest
+    }
+
+    var tokenList = new LinkedList()
+    addAfter(tokenList, tokenList.head, text)
+
+    matchGrammar(text, tokenList, grammar, tokenList.head, 0)
+
+    return toArray(tokenList)
+  },
+
+  /**
+   * @namespace
+   * @memberof Prism
+   * @public
+   */
+  hooks: {
+    all: {},
+
+    /**
+     * Adds the given callback to the list of callbacks for the given hook.
+     *
+     * The callback will be invoked when the hook it is registered for is run.
+     * Hooks are usually directly run by a highlight function but you can also run hooks yourself.
+     *
+     * One callback function can be registered to multiple hooks and the same hook multiple times.
+     *
+     * @param {string} name The name of the hook.
+     * @param {HookCallback} callback The callback function which is given environment variables.
+     * @public
+     */
+    add: function (name, callback) {
+      var hooks = _.hooks.all
+
+      hooks[name] = hooks[name] || []
+
+      hooks[name].push(callback)
+    },
+
+    /**
+     * Runs a hook invoking all registered callbacks with the given environment variables.
+     *
+     * Callbacks will be invoked synchronously and in the order in which they were registered.
+     *
+     * @param {string} name The name of the hook.
+     * @param {Object<string, any>} env The environment variables of the hook passed to all callbacks registered.
+     * @public
+     */
+    run: function (name, env) {
+      var callbacks = _.hooks.all[name]
+
+      if (!callbacks || !callbacks.length) {
+        return
+      }
+
+      for (var i = 0, callback; (callback = callbacks[i++]); ) {
+        callback(env)
+      }
+    }
+  },
+
+  Token: Token
 }
 
 // Typescript note:
@@ -5193,1145 +6430,6 @@ function toArray(list) {
 
 const Prism = _
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
-
-/***/ }),
-
-/***/ "./node_modules/property-information/find.js":
-/*!***************************************************!*\
-  !*** ./node_modules/property-information/find.js ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var normalize = __webpack_require__(/*! ./normalize */ "./node_modules/property-information/normalize.js")
-var DefinedInfo = __webpack_require__(/*! ./lib/util/defined-info */ "./node_modules/property-information/lib/util/defined-info.js")
-var Info = __webpack_require__(/*! ./lib/util/info */ "./node_modules/property-information/lib/util/info.js")
-
-var data = 'data'
-
-module.exports = find
-
-var valid = /^data[-\w.:]+$/i
-var dash = /-[a-z]/g
-var cap = /[A-Z]/g
-
-function find(schema, value) {
-  var normal = normalize(value)
-  var prop = value
-  var Type = Info
-
-  if (normal in schema.normal) {
-    return schema.property[schema.normal[normal]]
-  }
-
-  if (normal.length > 4 && normal.slice(0, 4) === data && valid.test(value)) {
-    // Attribute or property.
-    if (value.charAt(4) === '-') {
-      prop = datasetToProperty(value)
-    } else {
-      value = datasetToAttribute(value)
-    }
-
-    Type = DefinedInfo
-  }
-
-  return new Type(prop, value)
-}
-
-function datasetToProperty(attribute) {
-  var value = attribute.slice(5).replace(dash, camelcase)
-  return data + value.charAt(0).toUpperCase() + value.slice(1)
-}
-
-function datasetToAttribute(property) {
-  var value = property.slice(4)
-
-  if (dash.test(value)) {
-    return property
-  }
-
-  value = value.replace(cap, kebab)
-
-  if (value.charAt(0) !== '-') {
-    value = '-' + value
-  }
-
-  return data + value
-}
-
-function kebab($0) {
-  return '-' + $0.toLowerCase()
-}
-
-function camelcase($0) {
-  return $0.charAt(1).toUpperCase()
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/property-information/html.js":
-/*!***************************************************!*\
-  !*** ./node_modules/property-information/html.js ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var merge = __webpack_require__(/*! ./lib/util/merge */ "./node_modules/property-information/lib/util/merge.js")
-var xlink = __webpack_require__(/*! ./lib/xlink */ "./node_modules/property-information/lib/xlink.js")
-var xml = __webpack_require__(/*! ./lib/xml */ "./node_modules/property-information/lib/xml.js")
-var xmlns = __webpack_require__(/*! ./lib/xmlns */ "./node_modules/property-information/lib/xmlns.js")
-var aria = __webpack_require__(/*! ./lib/aria */ "./node_modules/property-information/lib/aria.js")
-var html = __webpack_require__(/*! ./lib/html */ "./node_modules/property-information/lib/html.js")
-
-module.exports = merge([xml, xlink, xmlns, aria, html])
-
-
-/***/ }),
-
-/***/ "./node_modules/property-information/lib/aria.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/property-information/lib/aria.js ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var types = __webpack_require__(/*! ./util/types */ "./node_modules/property-information/lib/util/types.js")
-var create = __webpack_require__(/*! ./util/create */ "./node_modules/property-information/lib/util/create.js")
-
-var booleanish = types.booleanish
-var number = types.number
-var spaceSeparated = types.spaceSeparated
-
-module.exports = create({
-  transform: ariaTransform,
-  properties: {
-    ariaActiveDescendant: null,
-    ariaAtomic: booleanish,
-    ariaAutoComplete: null,
-    ariaBusy: booleanish,
-    ariaChecked: booleanish,
-    ariaColCount: number,
-    ariaColIndex: number,
-    ariaColSpan: number,
-    ariaControls: spaceSeparated,
-    ariaCurrent: null,
-    ariaDescribedBy: spaceSeparated,
-    ariaDetails: null,
-    ariaDisabled: booleanish,
-    ariaDropEffect: spaceSeparated,
-    ariaErrorMessage: null,
-    ariaExpanded: booleanish,
-    ariaFlowTo: spaceSeparated,
-    ariaGrabbed: booleanish,
-    ariaHasPopup: null,
-    ariaHidden: booleanish,
-    ariaInvalid: null,
-    ariaKeyShortcuts: null,
-    ariaLabel: null,
-    ariaLabelledBy: spaceSeparated,
-    ariaLevel: number,
-    ariaLive: null,
-    ariaModal: booleanish,
-    ariaMultiLine: booleanish,
-    ariaMultiSelectable: booleanish,
-    ariaOrientation: null,
-    ariaOwns: spaceSeparated,
-    ariaPlaceholder: null,
-    ariaPosInSet: number,
-    ariaPressed: booleanish,
-    ariaReadOnly: booleanish,
-    ariaRelevant: null,
-    ariaRequired: booleanish,
-    ariaRoleDescription: spaceSeparated,
-    ariaRowCount: number,
-    ariaRowIndex: number,
-    ariaRowSpan: number,
-    ariaSelected: booleanish,
-    ariaSetSize: number,
-    ariaSort: null,
-    ariaValueMax: number,
-    ariaValueMin: number,
-    ariaValueNow: number,
-    ariaValueText: null,
-    role: null
-  }
-})
-
-function ariaTransform(_, prop) {
-  return prop === 'role' ? prop : 'aria-' + prop.slice(4).toLowerCase()
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/property-information/lib/html.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/property-information/lib/html.js ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var types = __webpack_require__(/*! ./util/types */ "./node_modules/property-information/lib/util/types.js")
-var create = __webpack_require__(/*! ./util/create */ "./node_modules/property-information/lib/util/create.js")
-var caseInsensitiveTransform = __webpack_require__(/*! ./util/case-insensitive-transform */ "./node_modules/property-information/lib/util/case-insensitive-transform.js")
-
-var boolean = types.boolean
-var overloadedBoolean = types.overloadedBoolean
-var booleanish = types.booleanish
-var number = types.number
-var spaceSeparated = types.spaceSeparated
-var commaSeparated = types.commaSeparated
-
-module.exports = create({
-  space: 'html',
-  attributes: {
-    acceptcharset: 'accept-charset',
-    classname: 'class',
-    htmlfor: 'for',
-    httpequiv: 'http-equiv'
-  },
-  transform: caseInsensitiveTransform,
-  mustUseProperty: ['checked', 'multiple', 'muted', 'selected'],
-  properties: {
-    // Standard Properties.
-    abbr: null,
-    accept: commaSeparated,
-    acceptCharset: spaceSeparated,
-    accessKey: spaceSeparated,
-    action: null,
-    allow: null,
-    allowFullScreen: boolean,
-    allowPaymentRequest: boolean,
-    allowUserMedia: boolean,
-    alt: null,
-    as: null,
-    async: boolean,
-    autoCapitalize: null,
-    autoComplete: spaceSeparated,
-    autoFocus: boolean,
-    autoPlay: boolean,
-    capture: boolean,
-    charSet: null,
-    checked: boolean,
-    cite: null,
-    className: spaceSeparated,
-    cols: number,
-    colSpan: null,
-    content: null,
-    contentEditable: booleanish,
-    controls: boolean,
-    controlsList: spaceSeparated,
-    coords: number | commaSeparated,
-    crossOrigin: null,
-    data: null,
-    dateTime: null,
-    decoding: null,
-    default: boolean,
-    defer: boolean,
-    dir: null,
-    dirName: null,
-    disabled: boolean,
-    download: overloadedBoolean,
-    draggable: booleanish,
-    encType: null,
-    enterKeyHint: null,
-    form: null,
-    formAction: null,
-    formEncType: null,
-    formMethod: null,
-    formNoValidate: boolean,
-    formTarget: null,
-    headers: spaceSeparated,
-    height: number,
-    hidden: boolean,
-    high: number,
-    href: null,
-    hrefLang: null,
-    htmlFor: spaceSeparated,
-    httpEquiv: spaceSeparated,
-    id: null,
-    imageSizes: null,
-    imageSrcSet: commaSeparated,
-    inputMode: null,
-    integrity: null,
-    is: null,
-    isMap: boolean,
-    itemId: null,
-    itemProp: spaceSeparated,
-    itemRef: spaceSeparated,
-    itemScope: boolean,
-    itemType: spaceSeparated,
-    kind: null,
-    label: null,
-    lang: null,
-    language: null,
-    list: null,
-    loading: null,
-    loop: boolean,
-    low: number,
-    manifest: null,
-    max: null,
-    maxLength: number,
-    media: null,
-    method: null,
-    min: null,
-    minLength: number,
-    multiple: boolean,
-    muted: boolean,
-    name: null,
-    nonce: null,
-    noModule: boolean,
-    noValidate: boolean,
-    onAbort: null,
-    onAfterPrint: null,
-    onAuxClick: null,
-    onBeforePrint: null,
-    onBeforeUnload: null,
-    onBlur: null,
-    onCancel: null,
-    onCanPlay: null,
-    onCanPlayThrough: null,
-    onChange: null,
-    onClick: null,
-    onClose: null,
-    onContextMenu: null,
-    onCopy: null,
-    onCueChange: null,
-    onCut: null,
-    onDblClick: null,
-    onDrag: null,
-    onDragEnd: null,
-    onDragEnter: null,
-    onDragExit: null,
-    onDragLeave: null,
-    onDragOver: null,
-    onDragStart: null,
-    onDrop: null,
-    onDurationChange: null,
-    onEmptied: null,
-    onEnded: null,
-    onError: null,
-    onFocus: null,
-    onFormData: null,
-    onHashChange: null,
-    onInput: null,
-    onInvalid: null,
-    onKeyDown: null,
-    onKeyPress: null,
-    onKeyUp: null,
-    onLanguageChange: null,
-    onLoad: null,
-    onLoadedData: null,
-    onLoadedMetadata: null,
-    onLoadEnd: null,
-    onLoadStart: null,
-    onMessage: null,
-    onMessageError: null,
-    onMouseDown: null,
-    onMouseEnter: null,
-    onMouseLeave: null,
-    onMouseMove: null,
-    onMouseOut: null,
-    onMouseOver: null,
-    onMouseUp: null,
-    onOffline: null,
-    onOnline: null,
-    onPageHide: null,
-    onPageShow: null,
-    onPaste: null,
-    onPause: null,
-    onPlay: null,
-    onPlaying: null,
-    onPopState: null,
-    onProgress: null,
-    onRateChange: null,
-    onRejectionHandled: null,
-    onReset: null,
-    onResize: null,
-    onScroll: null,
-    onSecurityPolicyViolation: null,
-    onSeeked: null,
-    onSeeking: null,
-    onSelect: null,
-    onSlotChange: null,
-    onStalled: null,
-    onStorage: null,
-    onSubmit: null,
-    onSuspend: null,
-    onTimeUpdate: null,
-    onToggle: null,
-    onUnhandledRejection: null,
-    onUnload: null,
-    onVolumeChange: null,
-    onWaiting: null,
-    onWheel: null,
-    open: boolean,
-    optimum: number,
-    pattern: null,
-    ping: spaceSeparated,
-    placeholder: null,
-    playsInline: boolean,
-    poster: null,
-    preload: null,
-    readOnly: boolean,
-    referrerPolicy: null,
-    rel: spaceSeparated,
-    required: boolean,
-    reversed: boolean,
-    rows: number,
-    rowSpan: number,
-    sandbox: spaceSeparated,
-    scope: null,
-    scoped: boolean,
-    seamless: boolean,
-    selected: boolean,
-    shape: null,
-    size: number,
-    sizes: null,
-    slot: null,
-    span: number,
-    spellCheck: booleanish,
-    src: null,
-    srcDoc: null,
-    srcLang: null,
-    srcSet: commaSeparated,
-    start: number,
-    step: null,
-    style: null,
-    tabIndex: number,
-    target: null,
-    title: null,
-    translate: null,
-    type: null,
-    typeMustMatch: boolean,
-    useMap: null,
-    value: booleanish,
-    width: number,
-    wrap: null,
-
-    // Legacy.
-    // See: https://html.spec.whatwg.org/#other-elements,-attributes-and-apis
-    align: null, // Several. Use CSS `text-align` instead,
-    aLink: null, // `<body>`. Use CSS `a:active {color}` instead
-    archive: spaceSeparated, // `<object>`. List of URIs to archives
-    axis: null, // `<td>` and `<th>`. Use `scope` on `<th>`
-    background: null, // `<body>`. Use CSS `background-image` instead
-    bgColor: null, // `<body>` and table elements. Use CSS `background-color` instead
-    border: number, // `<table>`. Use CSS `border-width` instead,
-    borderColor: null, // `<table>`. Use CSS `border-color` instead,
-    bottomMargin: number, // `<body>`
-    cellPadding: null, // `<table>`
-    cellSpacing: null, // `<table>`
-    char: null, // Several table elements. When `align=char`, sets the character to align on
-    charOff: null, // Several table elements. When `char`, offsets the alignment
-    classId: null, // `<object>`
-    clear: null, // `<br>`. Use CSS `clear` instead
-    code: null, // `<object>`
-    codeBase: null, // `<object>`
-    codeType: null, // `<object>`
-    color: null, // `<font>` and `<hr>`. Use CSS instead
-    compact: boolean, // Lists. Use CSS to reduce space between items instead
-    declare: boolean, // `<object>`
-    event: null, // `<script>`
-    face: null, // `<font>`. Use CSS instead
-    frame: null, // `<table>`
-    frameBorder: null, // `<iframe>`. Use CSS `border` instead
-    hSpace: number, // `<img>` and `<object>`
-    leftMargin: number, // `<body>`
-    link: null, // `<body>`. Use CSS `a:link {color: *}` instead
-    longDesc: null, // `<frame>`, `<iframe>`, and `<img>`. Use an `<a>`
-    lowSrc: null, // `<img>`. Use a `<picture>`
-    marginHeight: number, // `<body>`
-    marginWidth: number, // `<body>`
-    noResize: boolean, // `<frame>`
-    noHref: boolean, // `<area>`. Use no href instead of an explicit `nohref`
-    noShade: boolean, // `<hr>`. Use background-color and height instead of borders
-    noWrap: boolean, // `<td>` and `<th>`
-    object: null, // `<applet>`
-    profile: null, // `<head>`
-    prompt: null, // `<isindex>`
-    rev: null, // `<link>`
-    rightMargin: number, // `<body>`
-    rules: null, // `<table>`
-    scheme: null, // `<meta>`
-    scrolling: booleanish, // `<frame>`. Use overflow in the child context
-    standby: null, // `<object>`
-    summary: null, // `<table>`
-    text: null, // `<body>`. Use CSS `color` instead
-    topMargin: number, // `<body>`
-    valueType: null, // `<param>`
-    version: null, // `<html>`. Use a doctype.
-    vAlign: null, // Several. Use CSS `vertical-align` instead
-    vLink: null, // `<body>`. Use CSS `a:visited {color}` instead
-    vSpace: number, // `<img>` and `<object>`
-
-    // Non-standard Properties.
-    allowTransparency: null,
-    autoCorrect: null,
-    autoSave: null,
-    disablePictureInPicture: boolean,
-    disableRemotePlayback: boolean,
-    prefix: null,
-    property: null,
-    results: number,
-    security: null,
-    unselectable: null
-  }
-})
-
-
-/***/ }),
-
-/***/ "./node_modules/property-information/lib/util/case-insensitive-transform.js":
-/*!**********************************************************************************!*\
-  !*** ./node_modules/property-information/lib/util/case-insensitive-transform.js ***!
-  \**********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var caseSensitiveTransform = __webpack_require__(/*! ./case-sensitive-transform */ "./node_modules/property-information/lib/util/case-sensitive-transform.js")
-
-module.exports = caseInsensitiveTransform
-
-function caseInsensitiveTransform(attributes, property) {
-  return caseSensitiveTransform(attributes, property.toLowerCase())
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/property-information/lib/util/case-sensitive-transform.js":
-/*!********************************************************************************!*\
-  !*** ./node_modules/property-information/lib/util/case-sensitive-transform.js ***!
-  \********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = caseSensitiveTransform
-
-function caseSensitiveTransform(attributes, attribute) {
-  return attribute in attributes ? attributes[attribute] : attribute
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/property-information/lib/util/create.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/property-information/lib/util/create.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var normalize = __webpack_require__(/*! ../../normalize */ "./node_modules/property-information/normalize.js")
-var Schema = __webpack_require__(/*! ./schema */ "./node_modules/property-information/lib/util/schema.js")
-var DefinedInfo = __webpack_require__(/*! ./defined-info */ "./node_modules/property-information/lib/util/defined-info.js")
-
-module.exports = create
-
-function create(definition) {
-  var space = definition.space
-  var mustUseProperty = definition.mustUseProperty || []
-  var attributes = definition.attributes || {}
-  var props = definition.properties
-  var transform = definition.transform
-  var property = {}
-  var normal = {}
-  var prop
-  var info
-
-  for (prop in props) {
-    info = new DefinedInfo(
-      prop,
-      transform(attributes, prop),
-      props[prop],
-      space
-    )
-
-    if (mustUseProperty.indexOf(prop) !== -1) {
-      info.mustUseProperty = true
-    }
-
-    property[prop] = info
-
-    normal[normalize(prop)] = prop
-    normal[normalize(info.attribute)] = prop
-  }
-
-  return new Schema(property, normal, space)
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/property-information/lib/util/defined-info.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/property-information/lib/util/defined-info.js ***!
-  \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var Info = __webpack_require__(/*! ./info */ "./node_modules/property-information/lib/util/info.js")
-var types = __webpack_require__(/*! ./types */ "./node_modules/property-information/lib/util/types.js")
-
-module.exports = DefinedInfo
-
-DefinedInfo.prototype = new Info()
-DefinedInfo.prototype.defined = true
-
-var checks = [
-  'boolean',
-  'booleanish',
-  'overloadedBoolean',
-  'number',
-  'commaSeparated',
-  'spaceSeparated',
-  'commaOrSpaceSeparated'
-]
-var checksLength = checks.length
-
-function DefinedInfo(property, attribute, mask, space) {
-  var index = -1
-  var check
-
-  mark(this, 'space', space)
-
-  Info.call(this, property, attribute)
-
-  while (++index < checksLength) {
-    check = checks[index]
-    mark(this, check, (mask & types[check]) === types[check])
-  }
-}
-
-function mark(values, key, value) {
-  if (value) {
-    values[key] = value
-  }
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/property-information/lib/util/info.js":
-/*!************************************************************!*\
-  !*** ./node_modules/property-information/lib/util/info.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = Info
-
-var proto = Info.prototype
-
-proto.space = null
-proto.attribute = null
-proto.property = null
-proto.boolean = false
-proto.booleanish = false
-proto.overloadedBoolean = false
-proto.number = false
-proto.commaSeparated = false
-proto.spaceSeparated = false
-proto.commaOrSpaceSeparated = false
-proto.mustUseProperty = false
-proto.defined = false
-
-function Info(property, attribute) {
-  this.property = property
-  this.attribute = attribute
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/property-information/lib/util/merge.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/property-information/lib/util/merge.js ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var xtend = __webpack_require__(/*! xtend */ "./node_modules/xtend/immutable.js")
-var Schema = __webpack_require__(/*! ./schema */ "./node_modules/property-information/lib/util/schema.js")
-
-module.exports = merge
-
-function merge(definitions) {
-  var length = definitions.length
-  var property = []
-  var normal = []
-  var index = -1
-  var info
-  var space
-
-  while (++index < length) {
-    info = definitions[index]
-    property.push(info.property)
-    normal.push(info.normal)
-    space = info.space
-  }
-
-  return new Schema(
-    xtend.apply(null, property),
-    xtend.apply(null, normal),
-    space
-  )
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/property-information/lib/util/schema.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/property-information/lib/util/schema.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = Schema
-
-var proto = Schema.prototype
-
-proto.space = null
-proto.normal = {}
-proto.property = {}
-
-function Schema(property, normal, space) {
-  this.property = property
-  this.normal = normal
-
-  if (space) {
-    this.space = space
-  }
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/property-information/lib/util/types.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/property-information/lib/util/types.js ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var powers = 0
-
-exports.boolean = increment()
-exports.booleanish = increment()
-exports.overloadedBoolean = increment()
-exports.number = increment()
-exports.spaceSeparated = increment()
-exports.commaSeparated = increment()
-exports.commaOrSpaceSeparated = increment()
-
-function increment() {
-  return Math.pow(2, ++powers)
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/property-information/lib/xlink.js":
-/*!********************************************************!*\
-  !*** ./node_modules/property-information/lib/xlink.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var create = __webpack_require__(/*! ./util/create */ "./node_modules/property-information/lib/util/create.js")
-
-module.exports = create({
-  space: 'xlink',
-  transform: xlinkTransform,
-  properties: {
-    xLinkActuate: null,
-    xLinkArcRole: null,
-    xLinkHref: null,
-    xLinkRole: null,
-    xLinkShow: null,
-    xLinkTitle: null,
-    xLinkType: null
-  }
-})
-
-function xlinkTransform(_, prop) {
-  return 'xlink:' + prop.slice(5).toLowerCase()
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/property-information/lib/xml.js":
-/*!******************************************************!*\
-  !*** ./node_modules/property-information/lib/xml.js ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var create = __webpack_require__(/*! ./util/create */ "./node_modules/property-information/lib/util/create.js")
-
-module.exports = create({
-  space: 'xml',
-  transform: xmlTransform,
-  properties: {
-    xmlLang: null,
-    xmlBase: null,
-    xmlSpace: null
-  }
-})
-
-function xmlTransform(_, prop) {
-  return 'xml:' + prop.slice(3).toLowerCase()
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/property-information/lib/xmlns.js":
-/*!********************************************************!*\
-  !*** ./node_modules/property-information/lib/xmlns.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var create = __webpack_require__(/*! ./util/create */ "./node_modules/property-information/lib/util/create.js")
-var caseInsensitiveTransform = __webpack_require__(/*! ./util/case-insensitive-transform */ "./node_modules/property-information/lib/util/case-insensitive-transform.js")
-
-module.exports = create({
-  space: 'xmlns',
-  attributes: {
-    xmlnsxlink: 'xmlns:xlink'
-  },
-  transform: caseInsensitiveTransform,
-  properties: {
-    xmlns: null,
-    xmlnsXLink: null
-  }
-})
-
-
-/***/ }),
-
-/***/ "./node_modules/property-information/normalize.js":
-/*!********************************************************!*\
-  !*** ./node_modules/property-information/normalize.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = normalize
-
-function normalize(value) {
-  return value.toLowerCase()
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/refractor/core.js":
-/*!****************************************!*\
-  !*** ./node_modules/refractor/core.js ***!
-  \****************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(global) {
-
-/* global window, self */
-
-// istanbul ignore next - Don't allow Prism to run on page load in browser or
-// to start messaging from workers.
-var ctx =
-  typeof globalThis === 'object'
-    ? globalThis
-    : typeof self === 'object'
-    ? self
-    : typeof window === 'object'
-    ? window
-    : typeof global === 'object'
-    ? global
-    : {}
-
-var restore = capture()
-
-ctx.Prism = {manual: true, disableWorkerMessageHandler: true}
-
-// Load all stuff in `prism.js` itself, except for `prism-file-highlight.js`.
-// The wrapped non-leaky grammars are loaded instead of Prism’s originals.
-var h = __webpack_require__(/*! hastscript */ "./node_modules/hastscript/index.js")
-var decode = __webpack_require__(/*! parse-entities */ "./node_modules/parse-entities/index.js")
-var Prism = __webpack_require__(/*! prismjs/components/prism-core */ "./node_modules/prismjs/components/prism-core.js")
-var markup = __webpack_require__(/*! ./lang/markup */ "./node_modules/refractor/lang/markup.js")
-var css = __webpack_require__(/*! ./lang/css */ "./node_modules/refractor/lang/css.js")
-var clike = __webpack_require__(/*! ./lang/clike */ "./node_modules/refractor/lang/clike.js")
-var js = __webpack_require__(/*! ./lang/javascript */ "./node_modules/refractor/lang/javascript.js")
-
-restore()
-
-var own = {}.hasOwnProperty
-
-// Inherit.
-function Refractor() {}
-
-Refractor.prototype = Prism
-
-// Construct.
-var refract = new Refractor()
-
-// Expose.
-module.exports = refract
-
-// Create.
-refract.highlight = highlight
-refract.register = register
-refract.alias = alias
-refract.registered = registered
-refract.listLanguages = listLanguages
-
-// Register bundled grammars.
-register(markup)
-register(css)
-register(clike)
-register(js)
-
-refract.util.encode = encode
-refract.Token.stringify = stringify
-
-function register(grammar) {
-  if (typeof grammar !== 'function' || !grammar.displayName) {
-    throw new Error('Expected `function` for `grammar`, got `' + grammar + '`')
-  }
-
-  // Do not duplicate registrations.
-  if (refract.languages[grammar.displayName] === undefined) {
-    grammar(refract)
-  }
-}
-
-function alias(name, alias) {
-  var languages = refract.languages
-  var map = name
-  var key
-  var list
-  var length
-  var index
-
-  if (alias) {
-    map = {}
-    map[name] = alias
-  }
-
-  for (key in map) {
-    list = map[key]
-    list = typeof list === 'string' ? [list] : list
-    length = list.length
-    index = -1
-
-    while (++index < length) {
-      languages[list[index]] = languages[key]
-    }
-  }
-}
-
-function highlight(value, name) {
-  var sup = Prism.highlight
-  var grammar
-
-  if (typeof value !== 'string') {
-    throw new Error('Expected `string` for `value`, got `' + value + '`')
-  }
-
-  // `name` is a grammar object.
-  if (refract.util.type(name) === 'Object') {
-    grammar = name
-    name = null
-  } else {
-    if (typeof name !== 'string') {
-      throw new Error('Expected `string` for `name`, got `' + name + '`')
-    }
-
-    if (own.call(refract.languages, name)) {
-      grammar = refract.languages[name]
-    } else {
-      throw new Error('Unknown language: `' + name + '` is not registered')
-    }
-  }
-
-  return sup.call(this, value, grammar, name)
-}
-
-function registered(language) {
-  if (typeof language !== 'string') {
-    throw new Error('Expected `string` for `language`, got `' + language + '`')
-  }
-
-  return own.call(refract.languages, language)
-}
-
-function listLanguages() {
-  var languages = refract.languages
-  var list = []
-  var language
-
-  for (language in languages) {
-    if (
-      own.call(languages, language) &&
-      typeof languages[language] === 'object'
-    ) {
-      list.push(language)
-    }
-  }
-
-  return list
-}
-
-function stringify(value, language, parent) {
-  var env
-
-  if (typeof value === 'string') {
-    return {type: 'text', value: value}
-  }
-
-  if (refract.util.type(value) === 'Array') {
-    return stringifyAll(value, language)
-  }
-
-  env = {
-    type: value.type,
-    content: refract.Token.stringify(value.content, language, parent),
-    tag: 'span',
-    classes: ['token', value.type],
-    attributes: {},
-    language: language,
-    parent: parent
-  }
-
-  if (value.alias) {
-    env.classes = env.classes.concat(value.alias)
-  }
-
-  refract.hooks.run('wrap', env)
-
-  return h(
-    env.tag + '.' + env.classes.join('.'),
-    attributes(env.attributes),
-    env.content
-  )
-}
-
-function stringifyAll(values, language) {
-  var result = []
-  var length = values.length
-  var index = -1
-  var value
-
-  while (++index < length) {
-    value = values[index]
-
-    if (value !== '' && value !== null && value !== undefined) {
-      result.push(value)
-    }
-  }
-
-  index = -1
-  length = result.length
-
-  while (++index < length) {
-    value = result[index]
-    result[index] = refract.Token.stringify(value, language, result)
-  }
-
-  return result
-}
-
-function encode(tokens) {
-  return tokens
-}
-
-function attributes(attrs) {
-  var key
-
-  for (key in attrs) {
-    attrs[key] = decode(attrs[key])
-  }
-
-  return attrs
-}
-
-function capture() {
-  var defined = 'Prism' in ctx
-  /* istanbul ignore next */
-  var current = defined ? ctx.Prism : undefined
-
-  return restore
-
-  function restore() {
-    /* istanbul ignore else - Clean leaks after Prism. */
-    if (defined) {
-      ctx.Prism = current
-    } else {
-      delete ctx.Prism
-    }
-
-    defined = undefined
-    current = undefined
-  }
-}
-
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
 
 /***/ }),
 
