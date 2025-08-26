@@ -107373,6 +107373,9 @@ function createLineElement(_ref3) {
 function flattenCodeTree(tree) {
   var className = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
   var newTree = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : [];
+  if (tree.length === undefined) {
+    tree = [tree];
+  }
   for (var i = 0; i < tree.length; i++) {
     var node = tree[i];
     if (node.type === 'text') {
@@ -107381,7 +107384,8 @@ function flattenCodeTree(tree) {
         className: _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1___default()(new Set(className))
       }));
     } else if (node.children) {
-      var classNames = className.concat(node.properties.className);
+      var _node$properties;
+      var classNames = className.concat(((_node$properties = node.properties) === null || _node$properties === void 0 ? void 0 : _node$properties.className) || []);
       flattenCodeTree(node.children, classNames).forEach(function (i) {
         return newTree.push(i);
       });
@@ -107791,8 +107795,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (Object(_async_syntax_highlighter__WEBPACK_IMPORTED_MODULE_0__["default"])({
   loader: function loader() {
     return __webpack_require__.e(/*! import() | react-syntax-highlighter/refractor-core-import */ "vendors~react-syntax-highlighter/refractor-core-import").then(__webpack_require__.bind(null, /*! refractor/lib/core */ "./node_modules/refractor/lib/core.js")).then(function (module) {
-      // Webpack 3 returns module.exports as default as module, but webpack 4 returns module.exports as module.default
-      return module["default"] || module;
+      return module.refractor;
     });
   },
   isLanguageRegistered: function isLanguageRegistered(instance, language) {

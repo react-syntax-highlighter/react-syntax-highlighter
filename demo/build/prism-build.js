@@ -57258,6 +57258,9 @@ function createLineElement(_ref3) {
 function flattenCodeTree(tree) {
   var className = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
   var newTree = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : [];
+  if (tree.length === undefined) {
+    tree = [tree];
+  }
   for (var i = 0; i < tree.length; i++) {
     var node = tree[i];
     if (node.type === 'text') {
@@ -57266,7 +57269,8 @@ function flattenCodeTree(tree) {
         className: _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1___default()(new Set(className))
       }));
     } else if (node.children) {
-      var classNames = className.concat(node.properties.className);
+      var _node$properties;
+      var classNames = className.concat(((_node$properties = node.properties) === null || _node$properties === void 0 ? void 0 : _node$properties.className) || []);
       flattenCodeTree(node.children, classNames).forEach(function (i) {
         return newTree.push(i);
       });
