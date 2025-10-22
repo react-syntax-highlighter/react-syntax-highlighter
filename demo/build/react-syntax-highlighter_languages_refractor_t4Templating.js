@@ -4,20 +4,15 @@
 /*!******************************************************!*\
   !*** ./node_modules/refractor/lang/t4-templating.js ***!
   \******************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return t4Templating; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
-t4Templating.displayName = 't4-templating'
-t4Templating.aliases = []
 
-/** @param {Refractor} Prism */
+
+module.exports = t4Templating
+t4Templating.displayName = 't4Templating'
+t4Templating.aliases = []
 function t4Templating(Prism) {
   ;(function (Prism) {
     function createBlock(prefix, inside, contentAlias) {

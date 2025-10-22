@@ -4,20 +4,15 @@
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/elm.js ***!
   \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return elm; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = elm
 elm.displayName = 'elm'
 elm.aliases = []
-
-/** @param {Refractor} Prism */
 function elm(Prism) {
   Prism.languages.elm = {
     comment: /--.*|\{-[\s\S]*?-\}/,

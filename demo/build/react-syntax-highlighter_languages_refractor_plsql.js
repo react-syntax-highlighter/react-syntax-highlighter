@@ -4,24 +4,17 @@
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/plsql.js ***!
   \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return plsql; });
-/* harmony import */ var _sql_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sql.js */ "./node_modules/refractor/lang/sql.js");
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
 
+var refractorSql = __webpack_require__(/*! ./sql.js */ "./node_modules/refractor/lang/sql.js")
+module.exports = plsql
 plsql.displayName = 'plsql'
 plsql.aliases = []
-
-/** @param {Refractor} Prism */
 function plsql(Prism) {
-  Prism.register(_sql_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+  Prism.register(refractorSql)
   Prism.languages.plsql = Prism.languages.extend('sql', {
     comment: {
       pattern: /\/\*[\s\S]*?\*\/|--.*/,
@@ -48,20 +41,15 @@ function plsql(Prism) {
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/sql.js ***!
   \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return sql; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = sql
 sql.displayName = 'sql'
 sql.aliases = []
-
-/** @param {Refractor} Prism */
 function sql(Prism) {
   Prism.languages.sql = {
     comment: {

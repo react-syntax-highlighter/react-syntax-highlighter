@@ -4,20 +4,15 @@
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/nevod.js ***!
   \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return nevod; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = nevod
 nevod.displayName = 'nevod'
 nevod.aliases = []
-
-/** @param {Refractor} Prism */
 function nevod(Prism) {
   Prism.languages.nevod = {
     comment: /\/\/.*|(?:\/\*[\s\S]*?(?:\*\/|$))/,

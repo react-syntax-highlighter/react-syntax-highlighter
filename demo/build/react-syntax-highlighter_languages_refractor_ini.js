@@ -4,20 +4,15 @@
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/ini.js ***!
   \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ini; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = ini
 ini.displayName = 'ini'
 ini.aliases = []
-
-/** @param {Refractor} Prism */
 function ini(Prism) {
   Prism.languages.ini = {
     /**
@@ -25,7 +20,6 @@ function ini(Prism) {
      *
      * @see {@link https://github.com/PrismJS/prism/issues/2775#issuecomment-787477723}
      */
-
     comment: {
       pattern: /(^[ \f\t\v]*)[#;][^\n\r]*/m,
       lookbehind: true

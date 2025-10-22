@@ -4,20 +4,15 @@
 /*!******************************************************!*\
   !*** ./node_modules/refractor/lang/excel-formula.js ***!
   \******************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return excelFormula; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
-excelFormula.displayName = 'excel-formula'
-excelFormula.aliases = ['xls', 'xlsx']
 
-/** @param {Refractor} Prism */
+
+module.exports = excelFormula
+excelFormula.displayName = 'excelFormula'
+excelFormula.aliases = []
 function excelFormula(Prism) {
   Prism.languages['excel-formula'] = {
     comment: {
@@ -31,14 +26,12 @@ function excelFormula(Prism) {
     },
     reference: {
       // https://www.ablebits.com/office-addins-blog/2015/12/08/excel-reference-another-sheet-workbook/
-
       // Sales!B2
       // 'Winter sales'!B2
       // [Sales.xlsx]Jan!B2:B5
       // D:\Reports\[Sales.xlsx]Jan!B2:B5
       // '[Sales.xlsx]Jan sales'!B2:B5
       // 'D:\Reports\[Sales.xlsx]Jan sales'!B2:B5
-
       pattern:
         /(?:'[^']*'|(?:[^\s()[\]{}<>*?"';,$&]*\[[^^\s()[\]{}<>*?"']+\])?\w+)!/,
       greedy: true,
@@ -61,12 +54,12 @@ function excelFormula(Prism) {
     },
     'function-name': {
       pattern: /\b[A-Z]\w*(?=\()/i,
-      alias: 'builtin'
+      alias: 'keyword'
     },
     range: {
       pattern:
         /\$?\b(?:[A-Z]+\$?\d+:\$?[A-Z]+\$?\d+|[A-Z]+:\$?[A-Z]+|\d+:\$?\d+)\b/i,
-      alias: 'selector',
+      alias: 'property',
       inside: {
         operator: /:/,
         cell: /\$?[A-Z]+\$?\d+/i,
@@ -78,7 +71,7 @@ function excelFormula(Prism) {
       // Excel is case insensitive, so the string "foo1" could be either a variable or a cell.
       // To combat this, we match cells case insensitive, if the contain at least one "$", and case sensitive otherwise.
       pattern: /\b[A-Z]+\d+\b|\$[A-Za-z]+\$?\d+\b|\b[A-Za-z]+\$\d+\b/,
-      alias: 'selector'
+      alias: 'property'
     },
     number: /(?:\b\d+(?:\.\d+)?|\B\.\d+)(?:e[+-]?\d+)?\b/i,
     boolean: /\b(?:FALSE|TRUE)\b/i,

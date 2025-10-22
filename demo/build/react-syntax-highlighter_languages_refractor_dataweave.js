@@ -4,20 +4,15 @@
 /*!**************************************************!*\
   !*** ./node_modules/refractor/lang/dataweave.js ***!
   \**************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return dataweave; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = dataweave
 dataweave.displayName = 'dataweave'
 dataweave.aliases = []
-
-/** @param {Refractor} Prism */
 function dataweave(Prism) {
   ;(function (Prism) {
     Prism.languages.dataweave = {

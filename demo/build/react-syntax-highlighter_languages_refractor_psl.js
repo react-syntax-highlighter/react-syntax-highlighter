@@ -4,20 +4,15 @@
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/psl.js ***!
   \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return psl; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = psl
 psl.displayName = 'psl'
 psl.aliases = []
-
-/** @param {Refractor} Prism */
 function psl(Prism) {
   Prism.languages.psl = {
     comment: {

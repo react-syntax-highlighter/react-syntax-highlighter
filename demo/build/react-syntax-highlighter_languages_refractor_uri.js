@@ -4,23 +4,17 @@
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/uri.js ***!
   \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return uri; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = uri
 uri.displayName = 'uri'
 uri.aliases = ['url']
-
-/** @param {Refractor} Prism */
 function uri(Prism) {
   // https://tools.ietf.org/html/rfc3986#appendix-A
-
   Prism.languages.uri = {
     scheme: {
       pattern: /^[a-z][a-z0-9+.-]*:/im,
@@ -57,19 +51,14 @@ function uri(Prism) {
     },
     authority: {
       pattern: RegExp(
-        /^\/\//.source +
-          // [ userinfo "@" ]
-          /(?:[\w\-.~!$&'()*+,;=%:]*@)?/.source +
-          // host
-          ('(?:' +
-            // IP-literal
+        /^\/\//.source + // [ userinfo "@" ]
+          /(?:[\w\-.~!$&'()*+,;=%:]*@)?/.source + // host
+          ('(?:' + // IP-literal
             /\[(?:[0-9a-fA-F:.]{2,48}|v[0-9a-fA-F]+\.[\w\-.~!$&'()*+,;=]+)\]/
               .source +
-            '|' +
-            // IPv4address or registered name
+            '|' + // IPv4address or registered name
             /[\w\-.~!$&'()*+,;=%]*/.source +
-            ')') +
-          // [ ":" port ]
+            ')') + // [ ":" port ]
           /(?::\d*)?/.source,
         'm'
       ),

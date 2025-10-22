@@ -4,20 +4,15 @@
 /*!***************************************************!*\
   !*** ./node_modules/refractor/lang/naniscript.js ***!
   \***************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return naniscript; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
-naniscript.displayName = 'naniscript'
-naniscript.aliases = ['nani']
 
-/** @param {Refractor} Prism */
+
+module.exports = naniscript
+naniscript.displayName = 'naniscript'
+naniscript.aliases = []
 function naniscript(Prism) {
   ;(function (Prism) {
     var expressionDef = /\{[^\r\n\[\]{}]*\}/
@@ -129,9 +124,7 @@ function naniscript(Prism) {
       }
     }
     Prism.languages.nani = Prism.languages['naniscript']
-
     /** @typedef {InstanceType<import("./prism-core")["Token"]>} Token */
-
     /**
      * This hook is used to validate generic-text tokens for balanced brackets.
      * Mark token as bad-line when contains not balanced brackets: {},[]
@@ -149,7 +142,6 @@ function naniscript(Prism) {
         }
       })
     })
-
     /**
      * @param {string} input
      * @returns {boolean}
@@ -170,7 +162,6 @@ function naniscript(Prism) {
       }
       return stack.length === 0
     }
-
     /**
      * @param {string | Token | (string | Token)[]} token
      * @returns {string}

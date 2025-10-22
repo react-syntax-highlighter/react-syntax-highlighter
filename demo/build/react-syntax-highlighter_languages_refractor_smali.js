@@ -4,24 +4,18 @@
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/smali.js ***!
   \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return smali; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = smali
 smali.displayName = 'smali'
 smali.aliases = []
-
-/** @param {Refractor} Prism */
 function smali(Prism) {
   // Test files for the parser itself:
   // https://github.com/JesusFreke/smali/tree/master/smali/src/test/resources/LexerTest
-
   Prism.languages.smali = {
     comment: /#.*/,
     string: {

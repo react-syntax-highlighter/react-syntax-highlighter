@@ -4,20 +4,15 @@
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/scheme.js ***!
   \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return scheme; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = scheme
 scheme.displayName = 'scheme'
 scheme.aliases = []
-
-/** @param {Refractor} Prism */
 function scheme(Prism) {
   ;(function (Prism) {
     Prism.languages.scheme = {
@@ -135,7 +130,6 @@ function scheme(Prism) {
       },
       punctuation: /[()\[\]']/
     }
-
     /**
      * Given a topologically sorted BNF grammar, this will return the RegExp source of last rule of the grammar.
      *
@@ -147,8 +141,7 @@ function scheme(Prism) {
         grammar[key] = grammar[key].replace(/<[\w\s]+>/g, function (key) {
           return '(?:' + grammar[key].trim() + ')'
         })
-      }
-      // return the last item
+      } // return the last item
       return grammar[key]
     }
   })(Prism)

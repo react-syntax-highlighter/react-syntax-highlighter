@@ -4,20 +4,15 @@
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/renpy.js ***!
   \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return renpy; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = renpy
 renpy.displayName = 'renpy'
 renpy.aliases = ['rpy']
-
-/** @param {Refractor} Prism */
 function renpy(Prism) {
   Prism.languages.renpy = {
     comment: {

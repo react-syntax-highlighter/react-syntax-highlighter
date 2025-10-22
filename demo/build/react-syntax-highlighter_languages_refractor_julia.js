@@ -4,20 +4,15 @@
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/julia.js ***!
   \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return julia; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = julia
 julia.displayName = 'julia'
 julia.aliases = []
-
-/** @param {Refractor} Prism */
 function julia(Prism) {
   Prism.languages.julia = {
     comment: {

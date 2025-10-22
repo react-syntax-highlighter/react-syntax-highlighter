@@ -4,20 +4,15 @@
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/pcaxis.js ***!
   \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return pcaxis; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = pcaxis
 pcaxis.displayName = 'pcaxis'
 pcaxis.aliases = ['px']
-
-/** @param {Refractor} Prism */
 function pcaxis(Prism) {
   Prism.languages.pcaxis = {
     string: /"[^"]*"/,

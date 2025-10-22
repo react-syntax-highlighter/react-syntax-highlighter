@@ -4,35 +4,25 @@
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/diff.js ***!
   \*********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return diff; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = diff
 diff.displayName = 'diff'
 diff.aliases = []
-
-/** @param {Refractor} Prism */
 function diff(Prism) {
   ;(function (Prism) {
     Prism.languages.diff = {
       coord: [
         // Match all kinds of coord lines (prefixed by "+++", "---" or "***").
-        /^(?:\*{3}|-{3}|\+{3}).*$/m,
-        // Match "@@ ... @@" coord lines in unified diff.
-        /^@@.*@@$/m,
-        // Match coord lines in normal diff (starts with a number).
+        /^(?:\*{3}|-{3}|\+{3}).*$/m, // Match "@@ ... @@" coord lines in unified diff.
+        /^@@.*@@$/m, // Match coord lines in normal diff (starts with a number).
         /^\d.*$/m
-      ]
-
-      // deleted, inserted, unchanged, diff
+      ] // deleted, inserted, unchanged, diff
     }
-
     /**
      * A map from the name of a block to its line prefix.
      *
@@ -45,9 +35,7 @@ function diff(Prism) {
       'inserted-arrow': '>',
       unchanged: ' ',
       diff: '!'
-    }
-
-    // add a token for each prefix
+    } // add a token for each prefix
     Object.keys(PREFIXES).forEach(function (name) {
       var prefix = PREFIXES[name]
       var alias = []
@@ -75,9 +63,7 @@ function diff(Prism) {
           }
         }
       }
-    })
-
-    // make prefixes available to Diff plugin
+    }) // make prefixes available to Diff plugin
     Object.defineProperty(Prism.languages.diff, 'PREFIXES', {
       value: PREFIXES
     })

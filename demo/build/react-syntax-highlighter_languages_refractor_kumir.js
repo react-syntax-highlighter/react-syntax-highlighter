@@ -4,20 +4,15 @@
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/kumir.js ***!
   \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return kumir; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = kumir
 kumir.displayName = 'kumir'
 kumir.aliases = ['kum']
-
-/** @param {Refractor} Prism */
 function kumir(Prism) {
   /* eslint-disable regexp/no-dupe-characters-character-class */
   ;(function (Prism) {
@@ -27,7 +22,6 @@ function kumir(Prism) {
      * @type {string}
      */
     var nonId = /\s\x00-\x1f\x22-\x2f\x3a-\x3f\x5b-\x5e\x60\x7b-\x7e/.source
-
     /**
      * Surround a regular expression for IDs with patterns for non-ID sequences.
      *

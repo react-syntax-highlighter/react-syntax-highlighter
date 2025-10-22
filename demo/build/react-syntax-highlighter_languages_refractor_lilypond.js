@@ -4,29 +4,21 @@
 /*!*************************************************!*\
   !*** ./node_modules/refractor/lang/lilypond.js ***!
   \*************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return lilypond; });
-/* harmony import */ var _scheme_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scheme.js */ "./node_modules/refractor/lang/scheme.js");
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
 
+var refractorScheme = __webpack_require__(/*! ./scheme.js */ "./node_modules/refractor/lang/scheme.js")
+module.exports = lilypond
 lilypond.displayName = 'lilypond'
-lilypond.aliases = ['ly']
-
-/** @param {Refractor} Prism */
+lilypond.aliases = []
 function lilypond(Prism) {
-  Prism.register(_scheme_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+  Prism.register(refractorScheme)
   ;(function (Prism) {
     var schemeExpression =
       /\((?:[^();"#\\]|\\[\s\S]|;.*(?!.)|"(?:[^"\\]|\\.)*"|#(?:\{(?:(?!#\})[\s\S])*#\}|[^{])|<expr>)*\)/
-        .source
-    // allow for up to pow(2, recursivenessLog2) many levels of recursive brace expressions
+        .source // allow for up to pow(2, recursivenessLog2) many levels of recursive brace expressions
     // For some reason, this can't be 4
     var recursivenessLog2 = 5
     for (var i = 0; i < recursivenessLog2; i++) {
@@ -109,20 +101,15 @@ function lilypond(Prism) {
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/scheme.js ***!
   \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return scheme; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = scheme
 scheme.displayName = 'scheme'
 scheme.aliases = []
-
-/** @param {Refractor} Prism */
 function scheme(Prism) {
   ;(function (Prism) {
     Prism.languages.scheme = {
@@ -240,7 +227,6 @@ function scheme(Prism) {
       },
       punctuation: /[()\[\]']/
     }
-
     /**
      * Given a topologically sorted BNF grammar, this will return the RegExp source of last rule of the grammar.
      *
@@ -252,8 +238,7 @@ function scheme(Prism) {
         grammar[key] = grammar[key].replace(/<[\w\s]+>/g, function (key) {
           return '(?:' + grammar[key].trim() + ')'
         })
-      }
-      // return the last item
+      } // return the last item
       return grammar[key]
     }
   })(Prism)

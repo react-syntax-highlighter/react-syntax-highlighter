@@ -4,20 +4,15 @@
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/zig.js ***!
   \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return zig; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = zig
 zig.displayName = 'zig'
 zig.aliases = []
-
-/** @param {Refractor} Prism */
 function zig(Prism) {
   ;(function (Prism) {
     function literal(str) {
@@ -41,7 +36,6 @@ function zig(Prism) {
       )
     var TYPE =
       '(?!\\s)(?:!?\\s*(?:' + PREFIX_TYPE_OP + '\\s*)*' + SUFFIX_EXPR + ')+'
-
     /*
      * A simplified grammar for Zig compile time type literals:
      *
@@ -58,7 +52,6 @@ function zig(Prism) {
      * IDENTIFIER = \b (?! KEYWORD ) [a-zA-Z_] \w* \b
      *
      */
-
     Prism.languages.zig = {
       comment: [
         {

@@ -4,24 +4,17 @@
 /*!***************************************************!*\
   !*** ./node_modules/refractor/lang/php-extras.js ***!
   \***************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return phpExtras; });
-/* harmony import */ var _php_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./php.js */ "./node_modules/refractor/lang/php.js");
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
 
-phpExtras.displayName = 'php-extras'
+var refractorPhp = __webpack_require__(/*! ./php.js */ "./node_modules/refractor/lang/php.js")
+module.exports = phpExtras
+phpExtras.displayName = 'phpExtras'
 phpExtras.aliases = []
-
-/** @param {Refractor} Prism */
 function phpExtras(Prism) {
-  Prism.register(_php_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+  Prism.register(refractorPhp)
   Prism.languages.insertBefore('php', 'variable', {
     this: {
       pattern: /\$this\b/,

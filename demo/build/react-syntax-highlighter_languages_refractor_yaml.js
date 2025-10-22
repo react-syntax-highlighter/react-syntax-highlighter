@@ -4,29 +4,22 @@
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/yaml.js ***!
   \*********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return yaml; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = yaml
 yaml.displayName = 'yaml'
 yaml.aliases = ['yml']
-
-/** @param {Refractor} Prism */
 function yaml(Prism) {
   ;(function (Prism) {
     // https://yaml.org/spec/1.2/spec.html#c-ns-anchor-property
     // https://yaml.org/spec/1.2/spec.html#c-ns-alias-node
-    var anchorOrAlias = /[*&][^\s[\]{},]+/
-    // https://yaml.org/spec/1.2/spec.html#c-ns-tag-property
+    var anchorOrAlias = /[*&][^\s[\]{},]+/ // https://yaml.org/spec/1.2/spec.html#c-ns-tag-property
     var tag =
-      /!(?:<[\w\-%#;/?:@&=+$,.!~*'()[\]]+>|(?:[a-zA-Z\d-]*!)?[\w\-%#;/?:@&=+$.~*'()]+)?/
-    // https://yaml.org/spec/1.2/spec.html#c-ns-properties(n,c)
+      /!(?:<[\w\-%#;/?:@&=+$,.!~*'()[\]]+>|(?:[a-zA-Z\d-]*!)?[\w\-%#;/?:@&=+$.~*'()]+)?/ // https://yaml.org/spec/1.2/spec.html#c-ns-properties(n,c)
     var properties =
       '(?:' +
       tag.source +
@@ -36,8 +29,7 @@ function yaml(Prism) {
       anchorOrAlias.source +
       '(?:[ \t]+' +
       tag.source +
-      ')?)'
-    // https://yaml.org/spec/1.2/spec.html#ns-plain(n,c)
+      ')?)' // https://yaml.org/spec/1.2/spec.html#ns-plain(n,c)
     // This is a simplified version that doesn't support "#" and multiline keys
     // All these long scarry character classes are simplified versions of YAML's characters
     var plainKey =
@@ -49,7 +41,6 @@ function yaml(Prism) {
         }
       )
     var string = /"(?:[^"\\\r\n]|\\.)*"|'(?:[^'\\\r\n]|\\.)*'/.source
-
     /**
      *
      * @param {string} value

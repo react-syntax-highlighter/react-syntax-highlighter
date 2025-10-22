@@ -4,24 +4,18 @@
 /*!*******************************************************!*\
   !*** ./node_modules/refractor/lang/javastacktrace.js ***!
   \*******************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return javastacktrace; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = javastacktrace
 javastacktrace.displayName = 'javastacktrace'
 javastacktrace.aliases = []
-
-/** @param {Refractor} Prism */
 function javastacktrace(Prism) {
   // Specification:
   // https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/lang/Throwable.html#printStackTrace()
-
   Prism.languages.javastacktrace = {
     // java.sql.SQLException: Violation of unique constraint MY_ENTITY_UK_1: duplicate value(s) for column(s) MY_COLUMN in statement [...]
     // Caused by: java.sql.SQLException: Violation of unique constraint MY_ENTITY_UK_1: duplicate value(s) for column(s) MY_COLUMN in statement [...]
@@ -103,8 +97,7 @@ function javastacktrace(Prism) {
                 alias: 'number'
               }
             }
-          },
-          // (Unknown Source)
+          }, // (Unknown Source)
           // (Native Method)
           // (...something...)
           {

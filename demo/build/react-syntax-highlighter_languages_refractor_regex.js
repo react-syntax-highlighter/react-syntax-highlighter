@@ -4,20 +4,15 @@
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/regex.js ***!
   \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return regex; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = regex
 regex.displayName = 'regex'
 regex.aliases = []
-
-/** @param {Refractor} Prism */
 function regex(Prism) {
   ;(function (Prism) {
     var specialEscape = {
@@ -35,9 +30,7 @@ function regex(Prism) {
       alias: 'class-name'
     }
     var rangeChar = '(?:[^\\\\-]|' + escape.source + ')'
-    var range = RegExp(rangeChar + '-' + rangeChar)
-
-    // the name of a capturing group
+    var range = RegExp(rangeChar + '-' + rangeChar) // the name of a capturing group
     var groupName = {
       pattern: /(<|')[^<>']+(?=[>']$)/,
       lookbehind: true,
@@ -97,7 +90,6 @@ function regex(Prism) {
         {
           // https://docs.oracle.com/javase/10/docs/api/java/util/regex/Pattern.html
           // https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference?view=netframework-4.7.2#grouping-constructs
-
           // (), (?<name>), (?'name'), (?>), (?:), (?=), (?!), (?<=), (?<!), (?is-m), (?i-m:)
           pattern:
             /\((?:\?(?:<[^<>']+>|'[^<>']+'|[>:]|<?[=!]|[idmnsuxU]+(?:-[idmnsuxU]+)?:?))?/,

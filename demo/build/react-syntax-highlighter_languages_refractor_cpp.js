@@ -4,24 +4,16 @@
 /*!******************************************!*\
   !*** ./node_modules/refractor/lang/c.js ***!
   \******************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return c; });
-/* harmony import */ var _clike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clike.js */ "./node_modules/refractor/lang/clike.js");
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
 
+
+module.exports = c
 c.displayName = 'c'
 c.aliases = []
-
-/** @param {Refractor} Prism */
 function c(Prism) {
-  Prism.register(_clike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   Prism.languages.c = Prism.languages.extend('clike', {
     comment: {
       pattern:
@@ -109,85 +101,21 @@ function c(Prism) {
 
 /***/ }),
 
-/***/ "./node_modules/refractor/lang/clike.js":
-/*!**********************************************!*\
-  !*** ./node_modules/refractor/lang/clike.js ***!
-  \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return clike; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
-clike.displayName = 'clike'
-clike.aliases = []
-
-/** @param {Refractor} Prism */
-function clike(Prism) {
-  Prism.languages.clike = {
-    comment: [
-      {
-        pattern: /(^|[^\\])\/\*[\s\S]*?(?:\*\/|$)/,
-        lookbehind: true,
-        greedy: true
-      },
-      {
-        pattern: /(^|[^\\:])\/\/.*/,
-        lookbehind: true,
-        greedy: true
-      }
-    ],
-    string: {
-      pattern: /(["'])(?:\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/,
-      greedy: true
-    },
-    'class-name': {
-      pattern:
-        /(\b(?:class|extends|implements|instanceof|interface|new|trait)\s+|\bcatch\s+\()[\w.\\]+/i,
-      lookbehind: true,
-      inside: {
-        punctuation: /[.\\]/
-      }
-    },
-    keyword:
-      /\b(?:break|catch|continue|do|else|finally|for|function|if|in|instanceof|new|null|return|throw|try|while)\b/,
-    boolean: /\b(?:false|true)\b/,
-    function: /\b\w+(?=\()/,
-    number: /\b0x[\da-f]+\b|(?:\b\d+(?:\.\d*)?|\B\.\d+)(?:e[+-]?\d+)?/i,
-    operator: /[<>]=?|[!=]=?=?|--?|\+\+?|&&?|\|\|?|[?*/~^%]/,
-    punctuation: /[{}[\];(),.:]/
-  }
-}
-
-
-/***/ }),
-
 /***/ "./node_modules/refractor/lang/cpp.js":
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/cpp.js ***!
   \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return cpp; });
-/* harmony import */ var _c_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./c.js */ "./node_modules/refractor/lang/c.js");
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
 
+var refractorC = __webpack_require__(/*! ./c.js */ "./node_modules/refractor/lang/c.js")
+module.exports = cpp
 cpp.displayName = 'cpp'
 cpp.aliases = []
-
-/** @param {Refractor} Prism */
 function cpp(Prism) {
-  Prism.register(_c_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+  Prism.register(refractorC)
   ;(function (Prism) {
     var keyword =
       /\b(?:alignas|alignof|asm|auto|bool|break|case|catch|char|char16_t|char32_t|char8_t|class|co_await|co_return|co_yield|compl|concept|const|const_cast|consteval|constexpr|constinit|continue|decltype|default|delete|do|double|dynamic_cast|else|enum|explicit|export|extern|final|float|for|friend|goto|if|import|inline|int|int16_t|int32_t|int64_t|int8_t|long|module|mutable|namespace|new|noexcept|nullptr|operator|override|private|protected|public|register|reinterpret_cast|requires|return|short|signed|sizeof|static|static_assert|static_cast|struct|switch|template|this|thread_local|throw|try|typedef|typeid|typename|uint16_t|uint32_t|uint64_t|uint8_t|union|unsigned|using|virtual|void|volatile|wchar_t|while)\b/
@@ -209,16 +137,13 @@ function cpp(Prism) {
             )
           ),
           lookbehind: true
-        },
-        // This is intended to capture the class name of method implementations like:
+        }, // This is intended to capture the class name of method implementations like:
         //   void foo::bar() const {}
         // However! The `foo` in the above example could also be a namespace, so we only capture the class name if
         // it starts with an uppercase letter. This approximation should give decent results.
-        /\b[A-Z]\w*(?=\s*::\s*\w+\s*\()/,
-        // This will capture the class name before destructors like:
+        /\b[A-Z]\w*(?=\s*::\s*\w+\s*\()/, // This will capture the class name before destructors like:
         //   Foo::~Foo() {}
-        /\b[A-Z_]\w*(?=\s*::\s*~\w+\s*\()/i,
-        // This also intends to capture the class name of method implementations but here the class has template
+        /\b[A-Z_]\w*(?=\s*::\s*~\w+\s*\()/i, // This also intends to capture the class name of method implementations but here the class has template
         // parameters, so it can't be a namespace (until C++ adds generic namespaces).
         /\b\w+(?=\s*<(?:[^<>]|<(?:[^<>]|<[^<>]*>)*>)*>\s*::\s*\w+\s*\()/
       ],
@@ -237,11 +162,9 @@ function cpp(Prism) {
         // https://en.cppreference.com/w/cpp/language/modules
         pattern: RegExp(
           /(\b(?:import|module)\s+)/.source +
-            '(?:' +
-            // header-name
+            '(?:' + // header-name
             /"(?:\\(?:\r\n|[\s\S])|[^"\\\r\n])*"|<[^<>\r\n]*>/.source +
-            '|' +
-            // module name or partition or both
+            '|' + // module name or partition or both
             /<mod-name>(?:\s*:\s*<mod-name>)?|:\s*<mod-name>/.source.replace(
               /<mod-name>/g,
               function () {

@@ -4,20 +4,15 @@
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/turtle.js ***!
   \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return turtle; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
-turtle.displayName = 'turtle'
-turtle.aliases = ['trig']
 
-/** @param {Refractor} Prism */
+
+module.exports = turtle
+turtle.displayName = 'turtle'
+turtle.aliases = []
 function turtle(Prism) {
   Prism.languages.turtle = {
     comment: {

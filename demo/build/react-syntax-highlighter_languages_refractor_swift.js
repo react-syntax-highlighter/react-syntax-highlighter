@@ -4,20 +4,15 @@
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/swift.js ***!
   \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return swift; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = swift
 swift.displayName = 'swift'
 swift.aliases = []
-
-/** @param {Refractor} Prism */
 function swift(Prism) {
   Prism.languages.swift = {
     comment: {
@@ -32,12 +27,10 @@ function swift(Prism) {
       {
         pattern: RegExp(
           /(^|[^"#])/.source +
-            '(?:' +
-            // single-line string
+            '(?:' + // single-line string
             /"(?:\\(?:\((?:[^()]|\([^()]*\))*\)|\r\n|[^(])|[^\\\r\n"])*"/
               .source +
-            '|' +
-            // multi-line string
+            '|' + // multi-line string
             /"""(?:\\(?:\((?:[^()]|\([^()]*\))*\)|[^(])|[^\\"]|"(?!""))*"""/
               .source +
             ')' +
@@ -62,12 +55,10 @@ function swift(Prism) {
       {
         pattern: RegExp(
           /(^|[^"#])(#+)/.source +
-            '(?:' +
-            // single-line string
+            '(?:' + // single-line string
             /"(?:\\(?:#+\((?:[^()]|\([^()]*\))*\)|\r\n|[^#])|[^\\\r\n])*?"/
               .source +
-            '|' +
-            // multi-line string
+            '|' + // multi-line string
             /"""(?:\\(?:#+\((?:[^()]|\([^()]*\))*\)|[^#])|[^\\])*?"""/.source +
             ')' +
             '\\2'
@@ -94,8 +85,7 @@ function swift(Prism) {
         /#/.source +
           '(?:' +
           (/(?:elseif|if)\b/.source +
-            '(?:[ \t]*' +
-            // This regex is a little complex. It's equivalent to this:
+            '(?:[ \t]*' + // This regex is a little complex. It's equivalent to this:
             //   (?:![ \t]*)?(?:\b\w+\b(?:[ \t]*<round>)?|<round>)(?:[ \t]*(?:&&|\|\|))?
             // where <round> is a general parentheses expression.
             /(?:![ \t]*)?(?:\b\w+\b(?:[ \t]*\((?:[^()]|\([^()]*\))*\))?|\((?:[^()]|\([^()]*\))*\))(?:[ \t]*(?:&&|\|\|))?/

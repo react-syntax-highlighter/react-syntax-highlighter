@@ -4,31 +4,23 @@
 /*!***************************************************!*\
   !*** ./node_modules/refractor/lang/peoplecode.js ***!
   \***************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return peoplecode; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = peoplecode
 peoplecode.displayName = 'peoplecode'
 peoplecode.aliases = ['pcode']
-
-/** @param {Refractor} Prism */
 function peoplecode(Prism) {
   Prism.languages.peoplecode = {
     comment: RegExp(
       [
         // C-style multiline comments
-        /\/\*[\s\S]*?\*\//.source,
-        // REM comments
-        /\bREM[^;]*;/.source,
-        // Nested <* *> comments
-        /<\*(?:[^<*]|\*(?!>)|<(?!\*)|<\*(?:(?!\*>)[\s\S])*\*>)*\*>/.source,
-        // /+ +/ comments
+        /\/\*[\s\S]*?\*\//.source, // REM comments
+        /\bREM[^;]*;/.source, // Nested <* *> comments
+        /<\*(?:[^<*]|\*(?!>)|<(?!\*)|<\*(?:(?!\*>)[\s\S])*\*>)*\*>/.source, // /+ +/ comments
         /\/\+[\s\S]*?\+\//.source
       ].join('|')
     ),

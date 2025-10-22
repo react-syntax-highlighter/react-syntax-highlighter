@@ -4,20 +4,15 @@
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/nim.js ***!
   \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return nim; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = nim
 nim.displayName = 'nim'
 nim.aliases = []
-
-/** @param {Refractor} Prism */
 function nim(Prism) {
   Prism.languages.nim = {
     comment: {

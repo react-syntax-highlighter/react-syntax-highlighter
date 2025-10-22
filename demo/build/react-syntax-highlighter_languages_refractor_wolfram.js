@@ -4,25 +4,19 @@
 /*!************************************************!*\
   !*** ./node_modules/refractor/lang/wolfram.js ***!
   \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return wolfram; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
-wolfram.displayName = 'wolfram'
-wolfram.aliases = ['mathematica', 'nb', 'wl']
 
-/** @param {Refractor} Prism */
+
+module.exports = wolfram
+wolfram.displayName = 'wolfram'
+wolfram.aliases = ['mathematica', 'wl', 'nb']
 function wolfram(Prism) {
   Prism.languages.wolfram = {
-    comment:
-      // Allow one level of nesting - note: regex taken from applescipt
-      /\(\*(?:\(\*(?:[^*]|\*(?!\)))*\*\)|(?!\(\*)[\s\S])*?\*\)/,
+    // Allow one level of nesting - note: regex taken from applescipt
+    comment: /\(\*(?:\(\*(?:[^*]|\*(?!\)))*\*\)|(?!\(\*)[\s\S])*?\*\)/,
     string: {
       pattern: /"(?:\\.|[^"\\\r\n])*"/,
       greedy: true
@@ -45,7 +39,7 @@ function wolfram(Prism) {
     number:
       /(?:\b(?=\d)|\B(?=\.))(?:0[bo])?(?:(?:\d|0x[\da-f])[\da-f]*(?:\.\d*)?|\.\d+)(?:e[+-]?\d+)?j?\b/i,
     operator:
-      /\/\.|;|=\.|\^=|\^:=|:=|<<|>>|<\||\|>|:>|\|->|->|<-|@@@|@@|@|\/@|=!=|===|==|=|\+|-|\[\/-+%=\]=?|!=|\*\*?=?|\/\/?=?|<[<=>]?|>[=>]?|[&|^~]/,
+      /\/\.|;|=\.|\^=|\^:=|:=|<<|>>|<\||\|>|:>|\|->|->|<-|@@@|@@|@|\/@|=!=|===|==|=|\+|-|\^|\[\/-+%=\]=?|!=|\*\*?=?|\/\/?=?|<[<=>]?|>[=>]?|[&|^~]/,
     punctuation: /[{}[\];(),.:]/
   }
   Prism.languages.mathematica = Prism.languages.wolfram

@@ -4,20 +4,15 @@
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/yang.js ***!
   \*********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return yang; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = yang
 yang.displayName = 'yang'
 yang.aliases = []
-
-/** @param {Refractor} Prism */
 function yang(Prism) {
   Prism.languages.yang = {
     // https://tools.ietf.org/html/rfc6020#page-34

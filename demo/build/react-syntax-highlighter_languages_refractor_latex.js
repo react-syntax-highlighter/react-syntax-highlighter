@@ -4,20 +4,15 @@
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/latex.js ***!
   \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return latex; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
-latex.displayName = 'latex'
-latex.aliases = ['context', 'tex']
 
-/** @param {Refractor} Prism */
+
+module.exports = latex
+latex.displayName = 'latex'
+latex.aliases = ['tex', 'context']
 function latex(Prism) {
   ;(function (Prism) {
     var funcPattern = /\\(?:[^a-z()[\]]|[a-z*]+)/i

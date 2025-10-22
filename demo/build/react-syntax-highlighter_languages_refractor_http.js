@@ -4,20 +4,15 @@
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/http.js ***!
   \*********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return http; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = http
 http.displayName = 'http'
 http.aliases = []
-
-/** @param {Refractor} Prism */
 function http(Prism) {
   ;(function (Prism) {
     /**
@@ -108,9 +103,7 @@ function http(Prism) {
           punctuation: /^:/
         }
       }
-    }
-
-    // Create a mapping of Content-Type headers to language definitions
+    } // Create a mapping of Content-Type headers to language definitions
     var langs = Prism.languages
     var httpLanguages = {
       'application/javascript': langs.javascript,
@@ -120,14 +113,11 @@ function http(Prism) {
       'text/html': langs.html,
       'text/css': langs.css,
       'text/plain': langs.plain
-    }
-
-    // Declare which types can also be suffixes
+    } // Declare which types can also be suffixes
     var suffixTypes = {
       'application/json': true,
       'application/xml': true
     }
-
     /**
      * Returns a pattern for the given content type which matches it and any type which has it as a suffix.
      *
@@ -138,9 +128,7 @@ function http(Prism) {
       var suffix = contentType.replace(/^[a-z]+\//, '')
       var suffixPattern = '\\w+/(?:[\\w.-]+\\+)+' + suffix + '(?![+\\w.-])'
       return '(?:' + contentType + '|' + suffixPattern + ')'
-    }
-
-    // Insert each content type parser that has its associated language
+    } // Insert each content type parser that has its associated language
     // currently loaded.
     var options
     for (var contentType in httpLanguages) {
@@ -155,8 +143,7 @@ function http(Prism) {
               /content-type:\s*/.source +
               pattern +
               /(?:(?:\r\n?|\n)[\w-].*)*(?:\r(?:\n|(?!\n))|\n)/.source +
-              ')' +
-              // This is a little interesting:
+              ')' + // This is a little interesting:
               // The HTTP format spec required 1 empty line before the body to make everything unambiguous.
               // However, when writing code by hand (e.g. to display on a website) people can forget about this,
               // so we want to be liberal here. We will allow the empty line to be omitted if the first line of

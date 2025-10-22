@@ -4,20 +4,15 @@
 /*!*****************************************************!*\
   !*** ./node_modules/refractor/lang/visual-basic.js ***!
   \*****************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return visualBasic; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
-visualBasic.displayName = 'visual-basic'
-visualBasic.aliases = ['vb', 'vba']
 
-/** @param {Refractor} Prism */
+
+module.exports = visualBasic
+visualBasic.displayName = 'visualBasic'
+visualBasic.aliases = []
 function visualBasic(Prism) {
   Prism.languages['visual-basic'] = {
     comment: {

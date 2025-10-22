@@ -1,95 +1,29 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["vendors~react-syntax-highlighter_languages_refractor_haml"],{
 
-/***/ "./node_modules/refractor/lang/clike.js":
-/*!**********************************************!*\
-  !*** ./node_modules/refractor/lang/clike.js ***!
-  \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return clike; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
-clike.displayName = 'clike'
-clike.aliases = []
-
-/** @param {Refractor} Prism */
-function clike(Prism) {
-  Prism.languages.clike = {
-    comment: [
-      {
-        pattern: /(^|[^\\])\/\*[\s\S]*?(?:\*\/|$)/,
-        lookbehind: true,
-        greedy: true
-      },
-      {
-        pattern: /(^|[^\\:])\/\/.*/,
-        lookbehind: true,
-        greedy: true
-      }
-    ],
-    string: {
-      pattern: /(["'])(?:\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/,
-      greedy: true
-    },
-    'class-name': {
-      pattern:
-        /(\b(?:class|extends|implements|instanceof|interface|new|trait)\s+|\bcatch\s+\()[\w.\\]+/i,
-      lookbehind: true,
-      inside: {
-        punctuation: /[.\\]/
-      }
-    },
-    keyword:
-      /\b(?:break|catch|continue|do|else|finally|for|function|if|in|instanceof|new|null|return|throw|try|while)\b/,
-    boolean: /\b(?:false|true)\b/,
-    function: /\b\w+(?=\()/,
-    number: /\b0x[\da-f]+\b|(?:\b\d+(?:\.\d*)?|\B\.\d+)(?:e[+-]?\d+)?/i,
-    operator: /[<>]=?|[!=]=?=?|--?|\+\+?|&&?|\|\|?|[?*/~^%]/,
-    punctuation: /[{}[\];(),.:]/
-  }
-}
-
-
-/***/ }),
-
 /***/ "./node_modules/refractor/lang/haml.js":
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/haml.js ***!
   \*********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return haml; });
-/* harmony import */ var _ruby_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ruby.js */ "./node_modules/refractor/lang/ruby.js");
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
 
+var refractorRuby = __webpack_require__(/*! ./ruby.js */ "./node_modules/refractor/lang/ruby.js")
+module.exports = haml
 haml.displayName = 'haml'
 haml.aliases = []
-
-/** @param {Refractor} Prism */
 function haml(Prism) {
-  Prism.register(_ruby_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+  Prism.register(refractorRuby)
   /* TODO
 Handle multiline code after tag
 %foo= some |
 multiline |
 code |
 */
-
   ;(function (Prism) {
     Prism.languages.haml = {
       // Multiline stuff should appear before the rest
-
       'multiline-comment': {
         pattern:
           /((?:^|\r?\n|\r)([\t ]*))(?:\/|-#).*(?:(?:\r?\n|\r)\2[\t ].+)*/,
@@ -189,9 +123,7 @@ code |
       }
     }
     var filter_pattern =
-      '((?:^|\\r?\\n|\\r)([\\t ]*)):{{filter_name}}(?:(?:\\r?\\n|\\r)(?:\\2[\\t ].+|\\s*?(?=\\r?\\n|\\r)))+'
-
-    // Non exhaustive list of available filters and associated languages
+      '((?:^|\\r?\\n|\\r)([\\t ]*)):{{filter_name}}(?:(?:\\r?\\n|\\r)(?:\\2[\\t ].+|\\s*?(?=\\r?\\n|\\r)))+' // Non exhaustive list of available filters and associated languages
     var filters = [
       'css',
       {
@@ -249,24 +181,16 @@ code |
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/ruby.js ***!
   \*********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ruby; });
-/* harmony import */ var _clike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clike.js */ "./node_modules/refractor/lang/clike.js");
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
 
+
+module.exports = ruby
 ruby.displayName = 'ruby'
 ruby.aliases = ['rb']
-
-/** @param {Refractor} Prism */
 function ruby(Prism) {
-  Prism.register(_clike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   /**
    * Original by Samuel Flores
    *

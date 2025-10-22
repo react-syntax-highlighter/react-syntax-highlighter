@@ -4,20 +4,15 @@
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/css.js ***!
   \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return css; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = css
 css.displayName = 'css'
 css.aliases = []
-
-/** @param {Refractor} Prism */
 function css(Prism) {
   ;(function (Prism) {
     var string =
@@ -25,14 +20,7 @@ function css(Prism) {
     Prism.languages.css = {
       comment: /\/\*[\s\S]*?\*\//,
       atrule: {
-        pattern: RegExp(
-          '@[\\w-](?:' +
-            /[^;{\s"']|\s+(?!\s)/.source +
-            '|' +
-            string.source +
-            ')*?' +
-            /(?:;|(?=\s*\{))/.source
-        ),
+        pattern: /@[\w-](?:[^;{\s]|\s+(?![\s{]))*(?:;|(?=\s*\{))/,
         inside: {
           rule: /^@[\w-]+/,
           'selector-function-argument': {
@@ -44,8 +32,7 @@ function css(Prism) {
           keyword: {
             pattern: /(^|[^\w-])(?:and|not|only|or)(?![\w-])/,
             lookbehind: true
-          }
-          // See rest below
+          } // See rest below
         }
       },
       url: {

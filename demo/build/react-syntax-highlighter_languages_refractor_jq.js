@@ -4,20 +4,15 @@
 /*!*******************************************!*\
   !*** ./node_modules/refractor/lang/jq.js ***!
   \*******************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return jq; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = jq
 jq.displayName = 'jq'
 jq.aliases = []
-
-/** @param {Refractor} Prism */
 function jq(Prism) {
   ;(function (Prism) {
     var interpolation = /\\\((?:[^()]|\([^()]*\))*\)/.source

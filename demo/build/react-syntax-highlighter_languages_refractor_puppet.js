@@ -4,20 +4,15 @@
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/puppet.js ***!
   \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return puppet; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = puppet
 puppet.displayName = 'puppet'
 puppet.aliases = []
-
-/** @param {Refractor} Prism */
 function puppet(Prism) {
   ;(function (Prism) {
     Prism.languages.puppet = {
@@ -30,11 +25,9 @@ function puppet(Prism) {
           alias: 'string',
           inside: {
             // Matches the end tag
-            punctuation: /(?=\S).*\S(?= *$)/
-            // See interpolation below
+            punctuation: /(?=\S).*\S(?= *$)/ // See interpolation below
           }
-        },
-        // Matches the content of an unquoted heredoc string (no interpolation)
+        }, // Matches the content of an unquoted heredoc string (no interpolation)
         {
           pattern:
             /(@\(([^"\r\n\/):]+)(?:\/[nrts$uL]*)?\).*(?:\r?\n|\r))(?:.*(?:\r?\n|\r(?!\n)))*?[ \t]*(?:\|[ \t]*)?(?:-[ \t]*)?\2/,
@@ -45,8 +38,7 @@ function puppet(Prism) {
             // Matches the end tag
             punctuation: /(?=\S).*\S(?= *$)/
           }
-        },
-        // Matches the start tag of heredoc strings
+        }, // Matches the start tag of heredoc strings
         {
           pattern: /@\("?(?:[^"\r\n\/):]+)"?(?:\/[nrts$uL]*)?\)/,
           alias: 'string',

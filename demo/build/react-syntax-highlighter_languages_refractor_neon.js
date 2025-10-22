@@ -4,20 +4,15 @@
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/neon.js ***!
   \*********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return neon; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = neon
 neon.displayName = 'neon'
 neon.aliases = []
-
-/** @param {Refractor} Prism */
 function neon(Prism) {
   Prism.languages.neon = {
     comment: {
@@ -33,7 +28,7 @@ function neon(Prism) {
     key: {
       pattern: /(^|[[{(,\s])[^,:=[\]{}()'"\s]+(?=\s*:(?:$|[\]}),\s])|\s*=)/,
       lookbehind: true,
-      alias: 'property'
+      alias: 'atrule'
     },
     number: {
       pattern:

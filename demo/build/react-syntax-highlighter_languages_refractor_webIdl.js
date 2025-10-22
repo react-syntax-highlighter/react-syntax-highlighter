@@ -4,20 +4,15 @@
 /*!************************************************!*\
   !*** ./node_modules/refractor/lang/web-idl.js ***!
   \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return webIdl; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
-webIdl.displayName = 'web-idl'
-webIdl.aliases = ['webidl']
 
-/** @param {Refractor} Prism */
+
+module.exports = webIdl
+webIdl.displayName = 'webIdl'
+webIdl.aliases = []
 function webIdl(Prism) {
   ;(function (Prism) {
     var id = /(?:\B-|\b_|\b)[A-Za-z][\w-]*(?![\w-])/.source
@@ -86,8 +81,7 @@ function webIdl(Prism) {
           // inheritance
           pattern: RegExp(/(:\s*)/.source + id),
           lookbehind: true
-        },
-        // includes and implements
+        }, // includes and implements
         RegExp(id + /(?=\s+(?:implements|includes)\b)/.source),
         {
           pattern: RegExp(/(\b(?:implements|includes)\s+)/.source + id),
@@ -109,8 +103,7 @@ function webIdl(Prism) {
       builtin:
         /\b(?:ArrayBuffer|BigInt64Array|BigUint64Array|ByteString|DOMString|DataView|Float32Array|Float64Array|FrozenArray|Int16Array|Int32Array|Int8Array|ObservableArray|Promise|USVString|Uint16Array|Uint32Array|Uint8Array|Uint8ClampedArray)\b/,
       keyword: [
-        /\b(?:async|attribute|callback|const|constructor|deleter|dictionary|enum|getter|implements|includes|inherit|interface|mixin|namespace|null|optional|or|partial|readonly|required|setter|static|stringifier|typedef|unrestricted)\b/,
-        // type keywords
+        /\b(?:async|attribute|callback|const|constructor|deleter|dictionary|enum|getter|implements|includes|inherit|interface|mixin|namespace|null|optional|or|partial|readonly|required|setter|static|stringifier|typedef|unrestricted)\b/, // type keywords
         /\b(?:any|bigint|boolean|byte|double|float|iterable|long|maplike|object|octet|record|sequence|setlike|short|symbol|undefined|unsigned|void)\b/
       ],
       boolean: /\b(?:false|true)\b/,

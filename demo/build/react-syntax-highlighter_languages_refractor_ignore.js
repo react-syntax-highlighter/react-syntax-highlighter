@@ -4,20 +4,15 @@
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/ignore.js ***!
   \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ignore; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = ignore
 ignore.displayName = 'ignore'
 ignore.aliases = ['gitignore', 'hgignore', 'npmignore']
-
-/** @param {Refractor} Prism */
 function ignore(Prism) {
   ;(function (Prism) {
     Prism.languages.ignore = {

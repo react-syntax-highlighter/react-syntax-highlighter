@@ -4,20 +4,15 @@
 /*!**************************************************!*\
   !*** ./node_modules/refractor/lang/maxscript.js ***!
   \**************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return maxscript; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = maxscript
 maxscript.displayName = 'maxscript'
 maxscript.aliases = []
-
-/** @param {Refractor} Prism */
 function maxscript(Prism) {
   ;(function (Prism) {
     var keywords =
@@ -39,14 +34,11 @@ function maxscript(Prism) {
       },
       'function-call': {
         pattern: RegExp(
-          '((?:' +
-            // start of line
+          '((?:' + // start of line
             (/^/.source +
-              '|' +
-              // operators and other language constructs
+              '|' + // operators and other language constructs
               /[;=<>+\-*/^({\[]/.source +
-              '|' +
-              // keywords as part of statements
+              '|' + // keywords as part of statements
               /\b(?:and|by|case|catch|collect|do|else|if|in|not|or|return|then|to|try|where|while|with)\b/
                 .source) +
             ')[ \t]*)' +
@@ -54,17 +46,14 @@ function maxscript(Prism) {
             keywords.source +
             ')' +
             /[a-z_]\w*\b/.source +
-            '(?=[ \t]*(?:' +
-            // variable
+            '(?=[ \t]*(?:' + // variable
             ('(?!' +
               keywords.source +
               ')' +
               /[a-z_]/.source +
-              '|' +
-              // number
+              '|' + // number
               /\d|-\.?\d/.source +
-              '|' +
-              // other expressions or literals
+              '|' + // other expressions or literals
               /[({'"$@#?]/.source) +
             '))',
           'im'

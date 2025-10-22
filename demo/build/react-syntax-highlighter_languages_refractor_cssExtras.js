@@ -4,24 +4,16 @@
 /*!***************************************************!*\
   !*** ./node_modules/refractor/lang/css-extras.js ***!
   \***************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return cssExtras; });
-/* harmony import */ var _css_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css.js */ "./node_modules/refractor/lang/css.js");
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
 
-cssExtras.displayName = 'css-extras'
+
+module.exports = cssExtras
+cssExtras.displayName = 'cssExtras'
 cssExtras.aliases = []
-
-/** @param {Refractor} Prism */
 function cssExtras(Prism) {
-  Prism.register(_css_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   ;(function (Prism) {
     var string = /("|')(?:\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/
     var selectorInside
@@ -83,7 +75,6 @@ function cssExtras(Prism) {
         // the `tag` token has been existed and removed.
         // because we can't find a perfect tokenize to match it.
         // if you want to add it, please read https://github.com/PrismJS/prism/pull/2373 first.
-
         punctuation: /[(),]/
       })
     }
@@ -99,8 +90,7 @@ function cssExtras(Prism) {
     var unit = {
       pattern: /(\b\d+)(?:%|[a-z]+(?![\w-]))/,
       lookbehind: true
-    }
-    // 123 -123 .123 -.123 12.3 -12.3
+    } // 123 -123 .123 -.123 12.3 -12.3
     var number = {
       pattern: /(^|[^\w.-])-?(?:\d+(?:\.\d+)?|\.\d+)/,
       lookbehind: true
@@ -119,7 +109,7 @@ function cssExtras(Prism) {
       color: [
         {
           pattern:
-            /(^|[^\w-])(?:AliceBlue|AntiqueWhite|Aqua|Aquamarine|Azure|Beige|Bisque|Black|BlanchedAlmond|Blue|BlueViolet|Brown|BurlyWood|CadetBlue|Chartreuse|Chocolate|Coral|CornflowerBlue|Cornsilk|Crimson|Cyan|DarkBlue|DarkCyan|DarkGoldenRod|DarkGr[ae]y|DarkGreen|DarkKhaki|DarkMagenta|DarkOliveGreen|DarkOrange|DarkOrchid|DarkRed|DarkSalmon|DarkSeaGreen|DarkSlateBlue|DarkSlateGr[ae]y|DarkTurquoise|DarkViolet|DeepPink|DeepSkyBlue|DimGr[ae]y|DodgerBlue|FireBrick|FloralWhite|ForestGreen|Fuchsia|Gainsboro|GhostWhite|Gold|GoldenRod|Gr[ae]y|Green|GreenYellow|HoneyDew|HotPink|IndianRed|Indigo|Ivory|Khaki|Lavender|LavenderBlush|LawnGreen|LemonChiffon|LightBlue|LightCoral|LightCyan|LightGoldenRodYellow|LightGr[ae]y|LightGreen|LightPink|LightSalmon|LightSeaGreen|LightSkyBlue|LightSlateGr[ae]y|LightSteelBlue|LightYellow|Lime|LimeGreen|Linen|Magenta|Maroon|MediumAquaMarine|MediumBlue|MediumOrchid|MediumPurple|MediumSeaGreen|MediumSlateBlue|MediumSpringGreen|MediumTurquoise|MediumVioletRed|MidnightBlue|MintCream|MistyRose|Moccasin|NavajoWhite|Navy|OldLace|Olive|OliveDrab|Orange|OrangeRed|Orchid|PaleGoldenRod|PaleGreen|PaleTurquoise|PaleVioletRed|PapayaWhip|PeachPuff|Peru|Pink|Plum|PowderBlue|Purple|RebeccaPurple|Red|RosyBrown|RoyalBlue|SaddleBrown|Salmon|SandyBrown|SeaGreen|SeaShell|Sienna|Silver|SkyBlue|SlateBlue|SlateGr[ae]y|Snow|SpringGreen|SteelBlue|Tan|Teal|Thistle|Tomato|Transparent|Turquoise|Violet|Wheat|White|WhiteSmoke|Yellow|YellowGreen)(?![\w-])/i,
+            /(^|[^\w-])(?:AliceBlue|AntiqueWhite|Aqua|Aquamarine|Azure|Beige|Bisque|Black|BlanchedAlmond|Blue|BlueViolet|Brown|BurlyWood|CadetBlue|Chartreuse|Chocolate|Coral|CornflowerBlue|Cornsilk|Crimson|Cyan|DarkBlue|DarkCyan|DarkGoldenRod|DarkGr[ae]y|DarkGreen|DarkKhaki|DarkMagenta|DarkOliveGreen|DarkOrange|DarkOrchid|DarkRed|DarkSalmon|DarkSeaGreen|DarkSlateBlue|DarkSlateGr[ae]y|DarkTurquoise|DarkViolet|DeepPink|DeepSkyBlue|DimGr[ae]y|DodgerBlue|FireBrick|FloralWhite|ForestGreen|Fuchsia|Gainsboro|GhostWhite|Gold|GoldenRod|Gr[ae]y|Green|GreenYellow|HoneyDew|HotPink|IndianRed|Indigo|Ivory|Khaki|Lavender|LavenderBlush|LawnGreen|LemonChiffon|LightBlue|LightCoral|LightCyan|LightGoldenRodYellow|LightGr[ae]y|LightGreen|LightPink|LightSalmon|LightSeaGreen|LightSkyBlue|LightSlateGr[ae]y|LightSteelBlue|LightYellow|Lime|LimeGreen|Linen|Magenta|Maroon|MediumAquaMarine|MediumBlue|MediumOrchid|MediumPurple|MediumSeaGreen|MediumSlateBlue|MediumSpringGreen|MediumTurquoise|MediumVioletRed|MidnightBlue|MintCream|MistyRose|Moccasin|NavajoWhite|Navy|OldLace|Olive|OliveDrab|Orange|OrangeRed|Orchid|PaleGoldenRod|PaleGreen|PaleTurquoise|PaleVioletRed|PapayaWhip|PeachPuff|Peru|Pink|Plum|PowderBlue|Purple|Red|RosyBrown|RoyalBlue|SaddleBrown|Salmon|SandyBrown|SeaGreen|SeaShell|Sienna|Silver|SkyBlue|SlateBlue|SlateGr[ae]y|Snow|SpringGreen|SteelBlue|Tan|Teal|Thistle|Tomato|Transparent|Turquoise|Violet|Wheat|White|WhiteSmoke|Yellow|YellowGreen)(?![\w-])/i,
           lookbehind: true
         },
         {
@@ -138,110 +128,6 @@ function cssExtras(Prism) {
       unit: unit,
       number: number
     })
-  })(Prism)
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/refractor/lang/css.js":
-/*!********************************************!*\
-  !*** ./node_modules/refractor/lang/css.js ***!
-  \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return css; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
-css.displayName = 'css'
-css.aliases = []
-
-/** @param {Refractor} Prism */
-function css(Prism) {
-  ;(function (Prism) {
-    var string =
-      /(?:"(?:\\(?:\r\n|[\s\S])|[^"\\\r\n])*"|'(?:\\(?:\r\n|[\s\S])|[^'\\\r\n])*')/
-    Prism.languages.css = {
-      comment: /\/\*[\s\S]*?\*\//,
-      atrule: {
-        pattern: RegExp(
-          '@[\\w-](?:' +
-            /[^;{\s"']|\s+(?!\s)/.source +
-            '|' +
-            string.source +
-            ')*?' +
-            /(?:;|(?=\s*\{))/.source
-        ),
-        inside: {
-          rule: /^@[\w-]+/,
-          'selector-function-argument': {
-            pattern:
-              /(\bselector\s*\(\s*(?![\s)]))(?:[^()\s]|\s+(?![\s)])|\((?:[^()]|\([^()]*\))*\))+(?=\s*\))/,
-            lookbehind: true,
-            alias: 'selector'
-          },
-          keyword: {
-            pattern: /(^|[^\w-])(?:and|not|only|or)(?![\w-])/,
-            lookbehind: true
-          }
-          // See rest below
-        }
-      },
-      url: {
-        // https://drafts.csswg.org/css-values-3/#urls
-        pattern: RegExp(
-          '\\burl\\((?:' +
-            string.source +
-            '|' +
-            /(?:[^\\\r\n()"']|\\[\s\S])*/.source +
-            ')\\)',
-          'i'
-        ),
-        greedy: true,
-        inside: {
-          function: /^url/i,
-          punctuation: /^\(|\)$/,
-          string: {
-            pattern: RegExp('^' + string.source + '$'),
-            alias: 'url'
-          }
-        }
-      },
-      selector: {
-        pattern: RegExp(
-          '(^|[{}\\s])[^{}\\s](?:[^{};"\'\\s]|\\s+(?![\\s{])|' +
-            string.source +
-            ')*(?=\\s*\\{)'
-        ),
-        lookbehind: true
-      },
-      string: {
-        pattern: string,
-        greedy: true
-      },
-      property: {
-        pattern:
-          /(^|[^-\w\xA0-\uFFFF])(?!\s)[-_a-z\xA0-\uFFFF](?:(?!\s)[-\w\xA0-\uFFFF])*(?=\s*:)/i,
-        lookbehind: true
-      },
-      important: /!important\b/i,
-      function: {
-        pattern: /(^|[^-a-z0-9])[-a-z0-9]+(?=\()/i,
-        lookbehind: true
-      },
-      punctuation: /[(){};:,]/
-    }
-    Prism.languages.css['atrule'].inside.rest = Prism.languages.css
-    var markup = Prism.languages.markup
-    if (markup) {
-      markup.tag.addInlined('style', 'css')
-      markup.tag.addAttribute('style', 'css')
-    }
   })(Prism)
 }
 

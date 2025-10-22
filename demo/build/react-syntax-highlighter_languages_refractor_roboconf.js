@@ -4,20 +4,15 @@
 /*!*************************************************!*\
   !*** ./node_modules/refractor/lang/roboconf.js ***!
   \*************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return roboconf; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = roboconf
 roboconf.displayName = 'roboconf'
 roboconf.aliases = []
-
-/** @param {Refractor} Prism */
 function roboconf(Prism) {
   Prism.languages.roboconf = {
     comment: /#.*/,

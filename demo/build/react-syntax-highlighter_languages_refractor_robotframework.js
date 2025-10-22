@@ -4,20 +4,15 @@
 /*!*******************************************************!*\
   !*** ./node_modules/refractor/lang/robotframework.js ***!
   \*******************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return robotframework; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
-robotframework.displayName = 'robotframework'
-robotframework.aliases = ['robot']
 
-/** @param {Refractor} Prism */
+
+module.exports = robotframework
+robotframework.displayName = 'robotframework'
+robotframework.aliases = []
 function robotframework(Prism) {
   ;(function (Prism) {
     var comment = {
@@ -37,9 +32,7 @@ function robotframework(Prism) {
       extendecInside['section-header'] = {
         pattern: /^ ?\*{3}.+?\*{3}/,
         alias: 'keyword'
-      }
-
-      // copy inside tokens
+      } // copy inside tokens
       for (var token in inside) {
         extendecInside[token] = inside[token]
       }

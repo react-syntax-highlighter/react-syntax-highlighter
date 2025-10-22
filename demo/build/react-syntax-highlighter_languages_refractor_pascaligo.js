@@ -4,24 +4,18 @@
 /*!**************************************************!*\
   !*** ./node_modules/refractor/lang/pascaligo.js ***!
   \**************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return pascaligo; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = pascaligo
 pascaligo.displayName = 'pascaligo'
 pascaligo.aliases = []
-
-/** @param {Refractor} Prism */
 function pascaligo(Prism) {
   ;(function (Prism) {
     // Pascaligo is a layer 2 smart contract language for the tezos blockchain
-
     var braces = /\((?:[^()]|\((?:[^()]|\([^()]*\))*\))*\)/.source
     var type = /(?:\b\w+(?:<braces>)?|<braces>)/.source.replace(
       /<braces>/g,
@@ -84,8 +78,7 @@ function pascaligo(Prism) {
       function: /\b\w+(?=\s*\()/,
       number: [
         // Hexadecimal, octal and binary
-        /%[01]+|&[0-7]+|\$[a-f\d]+/i,
-        // Decimal
+        /%[01]+|&[0-7]+|\$[a-f\d]+/i, // Decimal
         /\b\d+(?:\.\d+)?(?:e[+-]?\d+)?(?:mtz|n)?/i
       ],
       operator:

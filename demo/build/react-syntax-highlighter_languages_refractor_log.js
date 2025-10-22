@@ -4,26 +4,20 @@
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/log.js ***!
   \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return log; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = log
 log.displayName = 'log'
 log.aliases = []
-
-/** @param {Refractor} Prism */
 function log(Prism) {
   // This is a language definition for generic log files.
   // Since there is no one log format, this language definition has to support all formats to some degree.
   //
   // Based on https://github.com/MTDL9/vim-log-highlighting
-
   Prism.languages.log = {
     string: {
       // Single-quoted strings must not be confused with plain text. E.g. Can't isn't Susan's Chris' toy

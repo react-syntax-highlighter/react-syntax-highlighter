@@ -4,24 +4,16 @@
 /*!******************************************!*\
   !*** ./node_modules/refractor/lang/c.js ***!
   \******************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return c; });
-/* harmony import */ var _clike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clike.js */ "./node_modules/refractor/lang/clike.js");
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
 
+
+module.exports = c
 c.displayName = 'c'
 c.aliases = []
-
-/** @param {Refractor} Prism */
 function c(Prism) {
-  Prism.register(_clike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   Prism.languages.c = Prism.languages.extend('clike', {
     comment: {
       pattern:
@@ -109,85 +101,21 @@ function c(Prism) {
 
 /***/ }),
 
-/***/ "./node_modules/refractor/lang/clike.js":
-/*!**********************************************!*\
-  !*** ./node_modules/refractor/lang/clike.js ***!
-  \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return clike; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
-clike.displayName = 'clike'
-clike.aliases = []
-
-/** @param {Refractor} Prism */
-function clike(Prism) {
-  Prism.languages.clike = {
-    comment: [
-      {
-        pattern: /(^|[^\\])\/\*[\s\S]*?(?:\*\/|$)/,
-        lookbehind: true,
-        greedy: true
-      },
-      {
-        pattern: /(^|[^\\:])\/\/.*/,
-        lookbehind: true,
-        greedy: true
-      }
-    ],
-    string: {
-      pattern: /(["'])(?:\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/,
-      greedy: true
-    },
-    'class-name': {
-      pattern:
-        /(\b(?:class|extends|implements|instanceof|interface|new|trait)\s+|\bcatch\s+\()[\w.\\]+/i,
-      lookbehind: true,
-      inside: {
-        punctuation: /[.\\]/
-      }
-    },
-    keyword:
-      /\b(?:break|catch|continue|do|else|finally|for|function|if|in|instanceof|new|null|return|throw|try|while)\b/,
-    boolean: /\b(?:false|true)\b/,
-    function: /\b\w+(?=\()/,
-    number: /\b0x[\da-f]+\b|(?:\b\d+(?:\.\d*)?|\B\.\d+)(?:e[+-]?\d+)?/i,
-    operator: /[<>]=?|[!=]=?=?|--?|\+\+?|&&?|\|\|?|[?*/~^%]/,
-    punctuation: /[{}[\];(),.:]/
-  }
-}
-
-
-/***/ }),
-
 /***/ "./node_modules/refractor/lang/hlsl.js":
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/hlsl.js ***!
   \*********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return hlsl; });
-/* harmony import */ var _c_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./c.js */ "./node_modules/refractor/lang/c.js");
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
 
+var refractorC = __webpack_require__(/*! ./c.js */ "./node_modules/refractor/lang/c.js")
+module.exports = hlsl
 hlsl.displayName = 'hlsl'
 hlsl.aliases = []
-
-/** @param {Refractor} Prism */
 function hlsl(Prism) {
-  Prism.register(_c_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+  Prism.register(refractorC)
   Prism.languages.hlsl = Prism.languages.extend('c', {
     // Regarding keywords and class names:
     // The list of all keywords was split into 'keyword' and 'class-name' tokens based on whether they are capitalized.
@@ -199,8 +127,7 @@ function hlsl(Prism) {
     ],
     keyword: [
       // HLSL keyword
-      /\b(?:asm|asm_fragment|auto|break|case|catch|cbuffer|centroid|char|class|column_major|compile|compile_fragment|const|const_cast|continue|default|delete|discard|do|dynamic_cast|else|enum|explicit|export|extern|for|friend|fxgroup|goto|groupshared|if|in|inline|inout|interface|line|lineadj|linear|long|matrix|mutable|namespace|new|nointerpolation|noperspective|operator|out|packoffset|pass|pixelfragment|point|precise|private|protected|public|register|reinterpret_cast|return|row_major|sample|sampler|shared|short|signed|sizeof|snorm|stateblock|stateblock_state|static|static_cast|string|struct|switch|tbuffer|technique|technique10|technique11|template|texture|this|throw|triangle|triangleadj|try|typedef|typename|uniform|union|unorm|unsigned|using|vector|vertexfragment|virtual|void|volatile|while)\b/,
-      // scalar, vector, and matrix types
+      /\b(?:asm|asm_fragment|auto|break|case|catch|cbuffer|centroid|char|class|column_major|compile|compile_fragment|const|const_cast|continue|default|delete|discard|do|dynamic_cast|else|enum|explicit|export|extern|for|friend|fxgroup|goto|groupshared|if|in|inline|inout|interface|line|lineadj|linear|long|matrix|mutable|namespace|new|nointerpolation|noperspective|operator|out|packoffset|pass|pixelfragment|point|precise|private|protected|public|register|reinterpret_cast|return|row_major|sample|sampler|shared|short|signed|sizeof|snorm|stateblock|stateblock_state|static|static_cast|string|struct|switch|tbuffer|technique|technique10|technique11|template|texture|this|throw|triangle|triangleadj|try|typedef|typename|uniform|union|unorm|unsigned|using|vector|vertexfragment|virtual|void|volatile|while)\b/, // scalar, vector, and matrix types
       /\b(?:bool|double|dword|float|half|int|min(?:10float|12int|16(?:float|int|uint))|uint)(?:[1-4](?:x[1-4])?)?\b/
     ],
     // https://docs.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl-appendix-grammar#floating-point-numbers

@@ -4,20 +4,15 @@
 /*!*************************************************!*\
   !*** ./node_modules/refractor/lang/avisynth.js ***!
   \*************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return avisynth; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = avisynth
 avisynth.displayName = 'avisynth'
 avisynth.aliases = ['avs']
-
-/** @param {Refractor} Prism */
 function avisynth(Prism) {
   // http://avisynth.nl/index.php/The_full_AviSynth_grammar
   ;(function (Prism) {
@@ -33,84 +28,57 @@ function avisynth(Prism) {
     var internals = [
       // bools
       /is(?:bool|clip|float|int|string)|defined|(?:(?:internal)?function|var)?exists?/
-        .source,
-      // control
-      /apply|assert|default|eval|import|nop|select|undefined/.source,
-      // global
+        .source, // control
+      /apply|assert|default|eval|import|nop|select|undefined/.source, // global
       /opt_(?:allowfloataudio|avipadscanlines|dwchannelmask|enable_(?:b64a|planartopackedrgb|v210|y3_10_10|y3_10_16)|usewaveextensible|vdubplanarhack)|set(?:cachemode|maxcpu|memorymax|planarlegacyalignment|workingdir)/
-        .source,
-      // conv
-      /hex(?:value)?|value/.source,
-      // numeric
+        .source, // conv
+      /hex(?:value)?|value/.source, // numeric
       /abs|ceil|continued(?:denominator|numerator)?|exp|floor|fmod|frac|log(?:10)?|max|min|muldiv|pi|pow|rand|round|sign|spline|sqrt/
-        .source,
-      // trig
-      /a?sinh?|a?cosh?|a?tan[2h]?/.source,
-      // bit
+        .source, // trig
+      /a?sinh?|a?cosh?|a?tan[2h]?/.source, // bit
       /(?:bit(?:and|not|x?or|[lr]?shift[aslu]?|sh[lr]|sa[lr]|[lr]rotatel?|ro[rl]|te?st|set(?:count)?|cl(?:ea)?r|ch(?:an)?ge?))/
-        .source,
-      // runtime
+        .source, // runtime
       /average(?:[bgr]|chroma[uv]|luma)|(?:[rgb]|chroma[uv]|luma|rgb|[yuv](?=difference(?:fromprevious|tonext)))difference(?:fromprevious|tonext)?|[yuvrgb]plane(?:median|min|max|minmaxdifference)/
-        .source,
-      // script
+        .source, // script
       /getprocessinfo|logmsg|script(?:dir(?:utf8)?|file(?:utf8)?|name(?:utf8)?)|setlogparams/
-        .source,
-      // string
+        .source, // string
       /chr|(?:fill|find|left|mid|replace|rev|right)str|format|[lu]case|ord|str(?:cmpi?|fromutf8|len|toutf8)|time|trim(?:all|left|right)/
-        .source,
-      // version
-      /isversionorgreater|version(?:number|string)/.source,
-      // helper
-      /buildpixeltype|colorspacenametopixeltype/.source,
-      // avsplus
+        .source, // version
+      /isversionorgreater|version(?:number|string)/.source, // helper
+      /buildpixeltype|colorspacenametopixeltype/.source, // avsplus
       /addautoloaddir|on(?:cpu|cuda)|prefetch|setfiltermtmode/.source
     ].join('|')
     var properties = [
       // content
-      /has(?:audio|video)/.source,
-      // resolution
-      /height|width/.source,
-      // framerate
-      /frame(?:count|rate)|framerate(?:denominator|numerator)/.source,
-      // interlacing
-      /getparity|is(?:field|frame)based/.source,
-      // color format
+      /has(?:audio|video)/.source, // resolution
+      /height|width/.source, // framerate
+      /frame(?:count|rate)|framerate(?:denominator|numerator)/.source, // interlacing
+      /getparity|is(?:field|frame)based/.source, // color format
       /bitspercomponent|componentsize|hasalpha|is(?:planar(?:rgba?)?|interleaved|rgb(?:24|32|48|64)?|y(?:8|u(?:va?|y2))?|yv(?:12|16|24|411)|420|422|444|packedrgb)|numcomponents|pixeltype/
-        .source,
-      // audio
+        .source, // audio
       /audio(?:bits|channels|duration|length(?:[fs]|hi|lo)?|rate)|isaudio(?:float|int)/
         .source
     ].join('|')
     var filters = [
       // source
       /avi(?:file)?source|directshowsource|image(?:reader|source|sourceanim)|opendmlsource|segmented(?:avisource|directshowsource)|wavsource/
-        .source,
-      // color
+        .source, // color
       /coloryuv|convertbacktoyuy2|convertto(?:RGB(?:24|32|48|64)|(?:planar)?RGBA?|Y8?|YV(?:12|16|24|411)|YUVA?(?:411|420|422|444)|YUY2)|fixluminance|gr[ae]yscale|invert|levels|limiter|mergea?rgb|merge(?:chroma|luma)|rgbadjust|show(?:alpha|blue|green|red)|swapuv|tweak|[uv]toy8?|ytouv/
-        .source,
-      // overlay
-      /(?:colorkey|reset)mask|layer|mask(?:hs)?|merge|overlay|subtract/.source,
-      // geometry
+        .source, // overlay
+      /(?:colorkey|reset)mask|layer|mask(?:hs)?|merge|overlay|subtract/.source, // geometry
       /addborders|(?:bicubic|bilinear|blackman|gauss|lanczos4|lanczos|point|sinc|spline(?:16|36|64))resize|crop(?:bottom)?|flip(?:horizontal|vertical)|(?:horizontal|vertical)?reduceby2|letterbox|skewrows|turn(?:180|left|right)/
-        .source,
-      // pixel
+        .source, // pixel
       /blur|fixbrokenchromaupsampling|generalconvolution|(?:spatial|temporal)soften|sharpen/
-        .source,
-      // timeline
+        .source, // timeline
       /trim|(?:un)?alignedsplice|(?:assume|assumescaled|change|convert)FPS|(?:delete|duplicate)frame|dissolve|fade(?:in|io|out)[02]?|freezeframe|interleave|loop|reverse|select(?:even|odd|(?:range)?every)/
-        .source,
-      // interlace
+        .source, // interlace
       /assume[bt]ff|assume(?:field|frame)based|bob|complementparity|doubleweave|peculiarblend|pulldown|separate(?:columns|fields|rows)|swapfields|weave(?:columns|rows)?/
-        .source,
-      // audio
+        .source, // audio
       /amplify(?:db)?|assumesamplerate|audiodub(?:ex)?|audiotrim|convertaudioto(?:(?:8|16|24|32)bit|float)|converttomono|delayaudio|ensurevbrmp3sync|get(?:left|right)?channel|kill(?:audio|video)|mergechannels|mixaudio|monotostereo|normalize|resampleaudio|ssrc|supereq|timestretch/
-        .source,
-      // conditional
+        .source, // conditional
       /animate|applyrange|conditional(?:filter|reader|select)|frameevaluate|scriptclip|tcp(?:server|source)|writefile(?:end|if|start)?/
-        .source,
-      // export
-      /imagewriter/.source,
-      // debug
+        .source, // export
+      /imagewriter/.source, // debug
       /blackness|blankclip|colorbars(?:hd)?|compare|dumpfiltergraph|echo|histogram|info|messageclip|preroll|setgraphanalysis|show(?:framenumber|smpte|time)|showfiveversions|stack(?:horizontal|vertical)|subtitle|tone|version/
         .source
     ].join('|')

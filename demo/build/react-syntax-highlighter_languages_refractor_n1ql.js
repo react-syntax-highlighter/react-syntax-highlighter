@@ -4,23 +4,17 @@
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/n1ql.js ***!
   \*********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return n1ql; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = n1ql
 n1ql.displayName = 'n1ql'
 n1ql.aliases = []
-
-/** @param {Refractor} Prism */
 function n1ql(Prism) {
   // https://docs.couchbase.com/server/current/n1ql/n1ql-language-reference/index.html
-
   Prism.languages.n1ql = {
     comment: {
       pattern: /\/\*[\s\S]*?(?:$|\*\/)|--.*/,

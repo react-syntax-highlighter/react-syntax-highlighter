@@ -4,20 +4,15 @@
 /*!*******************************************!*\
   !*** ./node_modules/refractor/lang/io.js ***!
   \*******************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return io; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = io
 io.displayName = 'io'
 io.aliases = []
-
-/** @param {Refractor} Prism */
 function io(Prism) {
   Prism.languages.io = {
     comment: {

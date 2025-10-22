@@ -4,34 +4,25 @@
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/dot.js ***!
   \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return dot; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = dot
 dot.displayName = 'dot'
 dot.aliases = ['gv']
-
-/** @param {Refractor} Prism */
 function dot(Prism) {
   // https://www.graphviz.org/doc/info/lang.html
-
   ;(function (Prism) {
     var ID =
       '(?:' +
       [
         // an identifier
-        /[a-zA-Z_\x80-\uFFFF][\w\x80-\uFFFF]*/.source,
-        // a number
-        /-?(?:\.\d+|\d+(?:\.\d*)?)/.source,
-        // a double-quoted string
-        /"[^"\\]*(?:\\[\s\S][^"\\]*)*"/.source,
-        // HTML-like string
+        /[a-zA-Z_\x80-\uFFFF][\w\x80-\uFFFF]*/.source, // a number
+        /-?(?:\.\d+|\d+(?:\.\d*)?)/.source, // a double-quoted string
+        /"[^"\\]*(?:\\[\s\S][^"\\]*)*"/.source, // HTML-like string
         /<(?:[^<>]|(?!<!--)<(?:[^<>"']|"[^"]*"|'[^']*')+>|<!--(?:[^-]|-(?!->))*-->)*>/
           .source
       ].join('|') +
@@ -44,7 +35,6 @@ function dot(Prism) {
         inside: Prism.languages.markup
       }
     }
-
     /**
      * @param {string} source
      * @param {string} flags

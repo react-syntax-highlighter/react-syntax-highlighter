@@ -4,33 +4,24 @@
 /*!***************************************************!*\
   !*** ./node_modules/refractor/lang/properties.js ***!
   \***************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return properties; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = properties
 properties.displayName = 'properties'
 properties.aliases = []
-
-/** @param {Refractor} Prism */
 function properties(Prism) {
   Prism.languages.properties = {
     comment: /^[ \t]*[#!].*$/m,
-    value: {
+    'attr-value': {
       pattern:
         /(^[ \t]*(?:\\(?:\r\n|[\s\S])|[^\\\s:=])+(?: *[=:] *(?! )| ))(?:\\(?:\r\n|[\s\S])|[^\\\r\n])+/m,
-      lookbehind: true,
-      alias: 'attr-value'
+      lookbehind: true
     },
-    key: {
-      pattern: /^[ \t]*(?:\\(?:\r\n|[\s\S])|[^\\\s:=])+(?= *[=:]| )/m,
-      alias: 'attr-name'
-    },
+    'attr-name': /^[ \t]*(?:\\(?:\r\n|[\s\S])|[^\\\s:=])+(?= *[=:]| )/m,
     punctuation: /[=:]/
   }
 }

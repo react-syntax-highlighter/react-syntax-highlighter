@@ -4,20 +4,15 @@
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/rest.js ***!
   \*********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return rest; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = rest
 rest.displayName = 'rest'
 rest.aliases = []
-
-/** @param {Refractor} Prism */
 function rest(Prism) {
   Prism.languages.rest = {
     table: [
@@ -39,7 +34,6 @@ function rest(Prism) {
       }
     ],
     // Directive-like patterns
-
     'substitution-def': {
       pattern: /(^[\t ]*\.\. )\|(?:[^|\s](?:[^|]*[^|\s])?)\| [^:]+::/m,
       lookbehind: true,
@@ -103,8 +97,7 @@ function rest(Prism) {
             /^[!"#$%&'()*+,\-.\/:;<=>?@\[\\\]^_`{|}~]+|[!"#$%&'()*+,\-.\/:;<=>?@\[\\\]^_`{|}~]+$/,
           important: /.+/
         }
-      },
-      // Underlined only
+      }, // Underlined only
       {
         pattern:
           /(^|(?:\r?\n|\r){2}).+(?:\r?\n|\r)([!"#$%&'()*+,\-.\/:;<=>?@\[\\\]^_`{|}~])\2+(?=\r?\n|\r|$)/,

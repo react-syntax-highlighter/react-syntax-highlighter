@@ -1,84 +1,20 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_refractor_crystal"],{
 
-/***/ "./node_modules/refractor/lang/clike.js":
-/*!**********************************************!*\
-  !*** ./node_modules/refractor/lang/clike.js ***!
-  \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return clike; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
-clike.displayName = 'clike'
-clike.aliases = []
-
-/** @param {Refractor} Prism */
-function clike(Prism) {
-  Prism.languages.clike = {
-    comment: [
-      {
-        pattern: /(^|[^\\])\/\*[\s\S]*?(?:\*\/|$)/,
-        lookbehind: true,
-        greedy: true
-      },
-      {
-        pattern: /(^|[^\\:])\/\/.*/,
-        lookbehind: true,
-        greedy: true
-      }
-    ],
-    string: {
-      pattern: /(["'])(?:\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/,
-      greedy: true
-    },
-    'class-name': {
-      pattern:
-        /(\b(?:class|extends|implements|instanceof|interface|new|trait)\s+|\bcatch\s+\()[\w.\\]+/i,
-      lookbehind: true,
-      inside: {
-        punctuation: /[.\\]/
-      }
-    },
-    keyword:
-      /\b(?:break|catch|continue|do|else|finally|for|function|if|in|instanceof|new|null|return|throw|try|while)\b/,
-    boolean: /\b(?:false|true)\b/,
-    function: /\b\w+(?=\()/,
-    number: /\b0x[\da-f]+\b|(?:\b\d+(?:\.\d*)?|\B\.\d+)(?:e[+-]?\d+)?/i,
-    operator: /[<>]=?|[!=]=?=?|--?|\+\+?|&&?|\|\|?|[?*/~^%]/,
-    punctuation: /[{}[\];(),.:]/
-  }
-}
-
-
-/***/ }),
-
 /***/ "./node_modules/refractor/lang/crystal.js":
 /*!************************************************!*\
   !*** ./node_modules/refractor/lang/crystal.js ***!
   \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return crystal; });
-/* harmony import */ var _ruby_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ruby.js */ "./node_modules/refractor/lang/ruby.js");
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
 
+var refractorRuby = __webpack_require__(/*! ./ruby.js */ "./node_modules/refractor/lang/ruby.js")
+module.exports = crystal
 crystal.displayName = 'crystal'
 crystal.aliases = []
-
-/** @param {Refractor} Prism */
 function crystal(Prism) {
-  Prism.register(_ruby_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+  Prism.register(refractorRuby)
   ;(function (Prism) {
     Prism.languages.crystal = Prism.languages.extend('ruby', {
       keyword: [
@@ -142,24 +78,16 @@ function crystal(Prism) {
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/ruby.js ***!
   \*********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ruby; });
-/* harmony import */ var _clike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clike.js */ "./node_modules/refractor/lang/clike.js");
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
 
+
+module.exports = ruby
 ruby.displayName = 'ruby'
 ruby.aliases = ['rb']
-
-/** @param {Refractor} Prism */
 function ruby(Prism) {
-  Prism.register(_clike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   /**
    * Original by Samuel Flores
    *

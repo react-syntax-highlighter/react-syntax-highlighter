@@ -4,27 +4,19 @@
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/t4-cs.js ***!
   \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return t4Cs; });
-/* harmony import */ var _csharp_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./csharp.js */ "./node_modules/refractor/lang/csharp.js");
-/* harmony import */ var _t4_templating_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./t4-templating.js */ "./node_modules/refractor/lang/t4-templating.js");
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
 
-
-t4Cs.displayName = 't4-cs'
-t4Cs.aliases = ['t4']
-
-/** @param {Refractor} Prism */
+var refractorT4Templating = __webpack_require__(/*! ./t4-templating.js */ "./node_modules/refractor/lang/t4-templating.js")
+var refractorCsharp = __webpack_require__(/*! ./csharp.js */ "./node_modules/refractor/lang/csharp.js")
+module.exports = t4Cs
+t4Cs.displayName = 't4Cs'
+t4Cs.aliases = []
 function t4Cs(Prism) {
-  Prism.register(_csharp_js__WEBPACK_IMPORTED_MODULE_0__["default"])
-  Prism.register(_t4_templating_js__WEBPACK_IMPORTED_MODULE_1__["default"])
+  Prism.register(refractorT4Templating)
+  Prism.register(refractorCsharp)
   Prism.languages.t4 = Prism.languages['t4-cs'] =
     Prism.languages['t4-templating'].createT4('csharp')
 }
@@ -36,20 +28,15 @@ function t4Cs(Prism) {
 /*!******************************************************!*\
   !*** ./node_modules/refractor/lang/t4-templating.js ***!
   \******************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return t4Templating; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
-t4Templating.displayName = 't4-templating'
-t4Templating.aliases = []
 
-/** @param {Refractor} Prism */
+
+module.exports = t4Templating
+t4Templating.displayName = 't4Templating'
+t4Templating.aliases = []
 function t4Templating(Prism) {
   ;(function (Prism) {
     function createBlock(prefix, inside, contentAlias) {

@@ -4,34 +4,25 @@
 /*!******************************************************!*\
   !*** ./node_modules/refractor/lang/shell-session.js ***!
   \******************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return shellSession; });
-/* harmony import */ var _bash_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bash.js */ "./node_modules/refractor/lang/bash.js");
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
 
-shellSession.displayName = 'shell-session'
-shellSession.aliases = ['sh-session', 'shellsession']
-
-/** @param {Refractor} Prism */
+var refractorBash = __webpack_require__(/*! ./bash.js */ "./node_modules/refractor/lang/bash.js")
+module.exports = shellSession
+shellSession.displayName = 'shellSession'
+shellSession.aliases = []
 function shellSession(Prism) {
-  Prism.register(_bash_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+  Prism.register(refractorBash)
   ;(function (Prism) {
     // CAREFUL!
     // The following patterns are concatenated, so the group referenced by a back reference is non-obvious!
-
     var strings = [
       // normal string
       /"(?:\\[\s\S]|\$\([^)]+\)|\$(?!\()|`[^`]+`|[^"\\`$])*"/.source,
       /'[^']*'/.source,
-      /\$'(?:[^'\\]|\\[\s\S])*'/.source,
-      // here doc
+      /\$'(?:[^'\\]|\\[\s\S])*'/.source, // here doc
       // 2 capturing groups
       /<<-?\s*(["']?)(\w+)\1\s[\s\S]*?[\r\n]\2/.source
     ].join('|')
@@ -40,19 +31,15 @@ function shellSession(Prism) {
         pattern: RegExp(
           // user info
           /^/.source +
-            '(?:' +
-            // <user> ":" ( <path> )?
+            '(?:' + // <user> ":" ( <path> )?
             (/[^\s@:$#%*!/\\]+@[^\r\n@:$#%*!/\\]+(?::[^\0-\x1F$#%*?"<>:;|]+)?/
               .source +
-              '|' +
-              // <path>
+              '|' + // <path>
               // Since the path pattern is quite general, we will require it to start with a special character to
               // prevent false positives.
               /[/~.][^\0-\x1F$#%*?"<>@:;|]*/.source) +
-            ')?' +
-            // shell symbol
-            /[$#%](?=\s)/.source +
-            // bash command
+            ')?' + // shell symbol
+            /[$#%](?=\s)/.source + // bash command
             /(?:[^\\\r\n \t'"<$]|[ \t](?:(?!#)|#.*$)|\\(?:[^\r]|\r\n?)|\$(?!')|<(?!<)|<<str>>)+/.source.replace(
               /<<str>>/g,
               function () {

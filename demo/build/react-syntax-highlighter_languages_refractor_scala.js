@@ -1,98 +1,26 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_refractor_scala"],{
 
-/***/ "./node_modules/refractor/lang/clike.js":
-/*!**********************************************!*\
-  !*** ./node_modules/refractor/lang/clike.js ***!
-  \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return clike; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
-clike.displayName = 'clike'
-clike.aliases = []
-
-/** @param {Refractor} Prism */
-function clike(Prism) {
-  Prism.languages.clike = {
-    comment: [
-      {
-        pattern: /(^|[^\\])\/\*[\s\S]*?(?:\*\/|$)/,
-        lookbehind: true,
-        greedy: true
-      },
-      {
-        pattern: /(^|[^\\:])\/\/.*/,
-        lookbehind: true,
-        greedy: true
-      }
-    ],
-    string: {
-      pattern: /(["'])(?:\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/,
-      greedy: true
-    },
-    'class-name': {
-      pattern:
-        /(\b(?:class|extends|implements|instanceof|interface|new|trait)\s+|\bcatch\s+\()[\w.\\]+/i,
-      lookbehind: true,
-      inside: {
-        punctuation: /[.\\]/
-      }
-    },
-    keyword:
-      /\b(?:break|catch|continue|do|else|finally|for|function|if|in|instanceof|new|null|return|throw|try|while)\b/,
-    boolean: /\b(?:false|true)\b/,
-    function: /\b\w+(?=\()/,
-    number: /\b0x[\da-f]+\b|(?:\b\d+(?:\.\d*)?|\B\.\d+)(?:e[+-]?\d+)?/i,
-    operator: /[<>]=?|[!=]=?=?|--?|\+\+?|&&?|\|\|?|[?*/~^%]/,
-    punctuation: /[{}[\];(),.:]/
-  }
-}
-
-
-/***/ }),
-
 /***/ "./node_modules/refractor/lang/java.js":
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/java.js ***!
   \*********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return java; });
-/* harmony import */ var _clike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clike.js */ "./node_modules/refractor/lang/clike.js");
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
 
+
+module.exports = java
 java.displayName = 'java'
 java.aliases = []
-
-/** @param {Refractor} Prism */
 function java(Prism) {
-  Prism.register(_clike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   ;(function (Prism) {
     var keywords =
-      /\b(?:abstract|assert|boolean|break|byte|case|catch|char|class|const|continue|default|do|double|else|enum|exports|extends|final|finally|float|for|goto|if|implements|import|instanceof|int|interface|long|module|native|new|non-sealed|null|open|opens|package|permits|private|protected|provides|public|record(?!\s*[(){}[\]<>=%~.:,;?+\-*/&|^])|requires|return|sealed|short|static|strictfp|super|switch|synchronized|this|throw|throws|to|transient|transitive|try|uses|var|void|volatile|while|with|yield)\b/
-
-    // full package (optional) + parent classes (optional)
-    var classNamePrefix = /(?:[a-z]\w*\s*\.\s*)*(?:[A-Z]\w*\s*\.\s*)*/.source
-
-    // based on the java naming conventions
+      /\b(?:abstract|assert|boolean|break|byte|case|catch|char|class|const|continue|default|do|double|else|enum|exports|extends|final|finally|float|for|goto|if|implements|import|instanceof|int|interface|long|module|native|new|non-sealed|null|open|opens|package|permits|private|protected|provides|public|record|requires|return|sealed|short|static|strictfp|super|switch|synchronized|this|throw|throws|to|transient|transitive|try|uses|var|void|volatile|while|with|yield)\b/ // full package (optional) + parent classes (optional)
+    var classNamePrefix = /(^|[^\w.])(?:[a-z]\w*\s*\.\s*)*(?:[A-Z]\w*\s*\.\s*)*/
+      .source // based on the java naming conventions
     var className = {
-      pattern: RegExp(
-        /(^|[^\w.])/.source +
-          classNamePrefix +
-          /[A-Z](?:[\d_A-Z]*[a-z]\w*)?\b/.source
-      ),
+      pattern: RegExp(classNamePrefix + /[A-Z](?:[\d_A-Z]*[a-z]\w*)?\b/.source),
       lookbehind: true,
       inside: {
         namespace: {
@@ -113,25 +41,10 @@ function java(Prism) {
       'class-name': [
         className,
         {
-          // variables, parameters, and constructor references
+          // variables and parameters
           // this to support class names (or generic parameters) which do not contain a lower case letter (also works for methods)
           pattern: RegExp(
-            /(^|[^\w.])/.source +
-              classNamePrefix +
-              /[A-Z]\w*(?=\s+\w+\s*[;,=()]|\s*(?:\[[\s,]*\]\s*)?::\s*new\b)/
-                .source
-          ),
-          lookbehind: true,
-          inside: className.inside
-        },
-        {
-          // class names based on keyword
-          // this to support class names (or generic parameters) which do not contain a lower case letter (also works for methods)
-          pattern: RegExp(
-            /(\b(?:class|enum|extends|implements|instanceof|interface|new|record|throws)\s+)/
-              .source +
-              classNamePrefix +
-              /[A-Z]\w*\b/.source
+            classNamePrefix + /[A-Z]\w*(?=\s+\w+\s*[;,=()])/.source
           ),
           lookbehind: true,
           inside: className.inside
@@ -151,8 +64,7 @@ function java(Prism) {
         pattern:
           /(^|[^.])(?:<<=?|>>>?=?|->|--|\+\+|&&|\|\||::|[?:~]|[-+*/%&|^!=<>]=?)/m,
         lookbehind: true
-      },
-      constant: /\b[A-Z][A-Z_\d]+\b/
+      }
     })
     Prism.languages.insertBefore('java', 'string', {
       'triple-quoted-string': {
@@ -182,38 +94,6 @@ function java(Prism) {
           operator: /[?&|]/
         }
       },
-      import: [
-        {
-          pattern: RegExp(
-            /(\bimport\s+)/.source +
-              classNamePrefix +
-              /(?:[A-Z]\w*|\*)(?=\s*;)/.source
-          ),
-          lookbehind: true,
-          inside: {
-            namespace: className.inside.namespace,
-            punctuation: /\./,
-            operator: /\*/,
-            'class-name': /\w+/
-          }
-        },
-        {
-          pattern: RegExp(
-            /(\bimport\s+static\s+)/.source +
-              classNamePrefix +
-              /(?:\w+|\*)(?=\s*;)/.source
-          ),
-          lookbehind: true,
-          alias: 'static',
-          inside: {
-            namespace: className.inside.namespace,
-            static: /\b\w+$/,
-            punctuation: /\./,
-            operator: /\*/,
-            'class-name': /\w+/
-          }
-        }
-      ],
       namespace: {
         pattern: RegExp(
           /(\b(?:exports|import(?:\s+static)?|module|open|opens|package|provides|requires|to|transitive|uses|with)\s+)(?!<keyword>)[a-z]\w*(?:\.[a-z]\w*)*\.?/.source.replace(
@@ -239,24 +119,17 @@ function java(Prism) {
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/scala.js ***!
   \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return scala; });
-/* harmony import */ var _java_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./java.js */ "./node_modules/refractor/lang/java.js");
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
 
+var refractorJava = __webpack_require__(/*! ./java.js */ "./node_modules/refractor/lang/java.js")
+module.exports = scala
 scala.displayName = 'scala'
 scala.aliases = []
-
-/** @param {Refractor} Prism */
 function scala(Prism) {
-  Prism.register(_java_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+  Prism.register(refractorJava)
   Prism.languages.scala = Prism.languages.extend('java', {
     'triple-quoted-string': {
       pattern: /"""[\s\S]*?"""/,
@@ -268,7 +141,7 @@ function scala(Prism) {
       greedy: true
     },
     keyword:
-      /<-|=>|\b(?:abstract|case|catch|class|def|derives|do|else|enum|extends|extension|final|finally|for|forSome|given|if|implicit|import|infix|inline|lazy|match|new|null|object|opaque|open|override|package|private|protected|return|sealed|self|super|this|throw|trait|transparent|try|type|using|val|var|while|with|yield)\b/,
+      /<-|=>|\b(?:abstract|case|catch|class|def|do|else|extends|final|finally|for|forSome|if|implicit|import|lazy|match|new|null|object|override|package|private|protected|return|sealed|self|super|this|throw|trait|try|type|val|var|while|with|yield)\b/,
     number:
       /\b0x(?:[\da-f]*\.)?[\da-f]+|(?:\b\d+(?:\.\d*)?|\B\.\d+)(?:e\d+)?[dfl]?/i,
     builtin:
@@ -308,7 +181,6 @@ function scala(Prism) {
   })
   delete Prism.languages.scala['class-name']
   delete Prism.languages.scala['function']
-  delete Prism.languages.scala['constant']
 }
 
 

@@ -4,20 +4,15 @@
 /*!************************************************!*\
   !*** ./node_modules/refractor/lang/clojure.js ***!
   \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return clojure; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = clojure
 clojure.displayName = 'clojure'
 clojure.aliases = []
-
-/** @param {Refractor} Prism */
 function clojure(Prism) {
   // Copied from https://github.com/jeluard/prism-clojure
   Prism.languages.clojure = {

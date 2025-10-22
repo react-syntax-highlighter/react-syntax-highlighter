@@ -4,20 +4,15 @@
 /*!***************************************************!*\
   !*** ./node_modules/refractor/lang/livescript.js ***!
   \***************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return livescript; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = livescript
 livescript.displayName = 'livescript'
 livescript.aliases = []
-
-/** @param {Refractor} Prism */
 function livescript(Prism) {
   Prism.languages.livescript = {
     comment: [
@@ -48,8 +43,7 @@ function livescript(Prism) {
             'interpolation-punctuation': {
               pattern: /^#\{|\}$/,
               alias: 'variable'
-            }
-            // See rest below
+            } // See rest below
           }
         },
         string: /[\s\S]+/
@@ -110,8 +104,7 @@ function livescript(Prism) {
       {
         pattern: /( )\.(?= )/,
         lookbehind: true
-      },
-      // Full list, in order:
+      }, // Full list, in order:
       // .= .~ .. ...
       // .&. .^. .<<. .>>. .>>>.
       // := :: ::=

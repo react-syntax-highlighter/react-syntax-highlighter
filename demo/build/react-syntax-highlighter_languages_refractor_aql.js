@@ -4,20 +4,15 @@
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/aql.js ***!
   \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return aql; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = aql
 aql.displayName = 'aql'
 aql.aliases = []
-
-/** @param {Refractor} Prism */
 function aql(Prism) {
   Prism.languages.aql = {
     comment: /\/\/.*|\/\*[\s\S]*?\*\//,
@@ -41,8 +36,7 @@ function aql(Prism) {
         pattern: /(\bWITH\s+)COUNT(?=\s+INTO\b)/i,
         lookbehind: true
       },
-      /\b(?:AGGREGATE|ALL|AND|ANY|ASC|COLLECT|DESC|DISTINCT|FILTER|FOR|GRAPH|IN|INBOUND|INSERT|INTO|K_PATHS|K_SHORTEST_PATHS|LET|LIKE|LIMIT|NONE|NOT|NULL|OR|OUTBOUND|REMOVE|REPLACE|RETURN|SHORTEST_PATH|SORT|UPDATE|UPSERT|WINDOW|WITH)\b/i,
-      // pseudo keywords get a lookbehind to avoid false positives
+      /\b(?:AGGREGATE|ALL|AND|ANY|ASC|COLLECT|DESC|DISTINCT|FILTER|FOR|GRAPH|IN|INBOUND|INSERT|INTO|K_PATHS|K_SHORTEST_PATHS|LET|LIKE|LIMIT|NONE|NOT|NULL|OR|OUTBOUND|REMOVE|REPLACE|RETURN|SHORTEST_PATH|SORT|UPDATE|UPSERT|WINDOW|WITH)\b/i, // pseudo keywords get a lookbehind to avoid false positives
       {
         pattern: /(^|[^\w.[])(?:KEEP|PRUNE|SEARCH|TO)\b/i,
         lookbehind: true

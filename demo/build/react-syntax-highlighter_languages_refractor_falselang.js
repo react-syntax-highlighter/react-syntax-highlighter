@@ -4,20 +4,15 @@
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/false.js ***!
   \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return $false; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
-$false.displayName = 'false'
-$false.aliases = []
 
-/** @param {Refractor} Prism */
+
+module.exports = $false
+$false.displayName = '$false'
+$false.aliases = []
 function $false(Prism) {
   ;(function (Prism) {
     /**

@@ -4,20 +4,15 @@
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/factor.js ***!
   \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return factor; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = factor
 factor.displayName = 'factor'
 factor.aliases = []
-
-/** @param {Refractor} Prism */
 function factor(Prism) {
   ;(function (Prism) {
     var comment_inside = {
@@ -34,7 +29,8 @@ function factor(Prism) {
           pattern: /(^|\s)(?:! .*|!$)/,
           lookbehind: true,
           inside: comment_inside
-        } /* from basis/multiline: */,
+        },
+        /* from basis/multiline: */
         {
           // /* comment */, /* comment*/
           pattern: /(^|\s)\/\*\s[\s\S]*?\*\/(?=\s|$)/,
@@ -189,7 +185,6 @@ https://docs.factorcode.org/content/article-effects.html
 these are pretty complicated to highlight properly without a real parser, and therefore out of scope
 the old pattern, which may be later useful, was: (^|\s)(?:call|execute|eval)?\((?:\s+[^"\r\n\t ]\S*)*?\s+--(?:\s+[^"\n\t ]\S*)*?\s+\)(?=\s|$)
 */
-
       // current solution is not great
       'stack-effect-delimiter': [
         {
@@ -449,8 +444,7 @@ this is fine for a regex-only implementation.
         '>>>>>>>',
         'call-next-method',
         '<<',
-        'foldable',
-        // literals
+        'foldable', // literals
         '$',
         '$[',
         '${'
@@ -714,8 +708,7 @@ this is fine for a regex-only implementation.
         'real?',
         'rational?',
         'numerator'
-      ]
-      // that's all for now
+      ] // that's all for now
     }
     Object.keys(builtins).forEach(function (k) {
       factor[k].pattern = arrToWordsRegExp(builtins[k])
@@ -778,8 +771,7 @@ this is fine for a regex-only implementation.
       'while*',
       'dip',
       'composed',
-      'bi-curry@',
-      // sequences
+      'bi-curry@', // sequences
       'find-last-from',
       'trim-head-slice',
       'map-as',
@@ -860,8 +852,7 @@ this is fine for a regex-only implementation.
       'trim',
       'trim-head',
       'cartesian-find',
-      'map-index',
-      // math
+      'map-index', // math
       'if-zero',
       'each-integer',
       'unless-zero',
@@ -872,15 +863,13 @@ this is fine for a regex-only implementation.
       'times',
       '(each-integer)',
       'find-integer',
-      'all-integers?',
-      // math.combinators
+      'all-integers?', // math.combinators
       'unless-negative',
       'if-positive',
       'when-positive',
       'when-negative',
       'unless-positive',
-      'if-negative',
-      // combinators
+      'if-negative', // combinators
       'case',
       '2cleave',
       'cond>quot',
@@ -894,8 +883,7 @@ this is fine for a regex-only implementation.
       'call-effect',
       'recursive-hashcode',
       'spread',
-      'deep-spread>quot',
-      // combinators.short-circuit
+      'deep-spread>quot', // combinators.short-circuit
       '2||',
       '0||',
       'n||',
@@ -905,8 +893,7 @@ this is fine for a regex-only implementation.
       '1||',
       '1&&',
       'n&&',
-      '3&&',
-      // combinators.smart
+      '3&&', // combinators.smart
       'smart-unless*',
       'keep-inputs',
       'reduce-outputs',
@@ -940,8 +927,7 @@ this is fine for a regex-only implementation.
       'smart-if*',
       'sum-outputs',
       'input<sequence-unsafe',
-      'output>sequence'
-      // tafn
+      'output>sequence' // tafn
     ]
     factor.combinators.pattern = arrToWordsRegExp(combinators)
     Prism.languages.factor = factor

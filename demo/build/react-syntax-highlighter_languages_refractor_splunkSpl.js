@@ -4,20 +4,15 @@
 /*!***************************************************!*\
   !*** ./node_modules/refractor/lang/splunk-spl.js ***!
   \***************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return splunkSpl; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
-splunkSpl.displayName = 'splunk-spl'
-splunkSpl.aliases = []
 
-/** @param {Refractor} Prism */
+
+module.exports = splunkSpl
+splunkSpl.displayName = 'splunkSpl'
+splunkSpl.aliases = []
 function splunkSpl(Prism) {
   Prism.languages['splunk-spl'] = {
     comment: /`comment\("(?:\\.|[^\\"])*"\)`/,

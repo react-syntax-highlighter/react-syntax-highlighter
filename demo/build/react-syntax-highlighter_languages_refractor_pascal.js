@@ -4,27 +4,20 @@
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/pascal.js ***!
   \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return pascal; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = pascal
 pascal.displayName = 'pascal'
 pascal.aliases = ['objectpascal']
-
-/** @param {Refractor} Prism */
 function pascal(Prism) {
   // Based on Free Pascal
-
   /* TODO
 Support inline asm ?
 */
-
   Prism.languages.pascal = {
     directive: {
       pattern: /\{\$[\s\S]*?\}/,
@@ -72,8 +65,7 @@ Support inline asm ?
     ],
     number: [
       // Hexadecimal, octal and binary
-      /(?:[&%]\d+|\$[a-f\d]+)/i,
-      // Decimal
+      /(?:[&%]\d+|\$[a-f\d]+)/i, // Decimal
       /\b\d+(?:\.\d+)?(?:e[+-]?\d+)?/i
     ],
     operator: [

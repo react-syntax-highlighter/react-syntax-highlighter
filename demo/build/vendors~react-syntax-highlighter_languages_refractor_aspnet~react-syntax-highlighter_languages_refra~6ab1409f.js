@@ -1,84 +1,19 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["vendors~react-syntax-highlighter_languages_refractor_aspnet~react-syntax-highlighter_languages_refra~6ab1409f"],{
 
-/***/ "./node_modules/refractor/lang/clike.js":
-/*!**********************************************!*\
-  !*** ./node_modules/refractor/lang/clike.js ***!
-  \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return clike; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
-clike.displayName = 'clike'
-clike.aliases = []
-
-/** @param {Refractor} Prism */
-function clike(Prism) {
-  Prism.languages.clike = {
-    comment: [
-      {
-        pattern: /(^|[^\\])\/\*[\s\S]*?(?:\*\/|$)/,
-        lookbehind: true,
-        greedy: true
-      },
-      {
-        pattern: /(^|[^\\:])\/\/.*/,
-        lookbehind: true,
-        greedy: true
-      }
-    ],
-    string: {
-      pattern: /(["'])(?:\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/,
-      greedy: true
-    },
-    'class-name': {
-      pattern:
-        /(\b(?:class|extends|implements|instanceof|interface|new|trait)\s+|\bcatch\s+\()[\w.\\]+/i,
-      lookbehind: true,
-      inside: {
-        punctuation: /[.\\]/
-      }
-    },
-    keyword:
-      /\b(?:break|catch|continue|do|else|finally|for|function|if|in|instanceof|new|null|return|throw|try|while)\b/,
-    boolean: /\b(?:false|true)\b/,
-    function: /\b\w+(?=\()/,
-    number: /\b0x[\da-f]+\b|(?:\b\d+(?:\.\d*)?|\B\.\d+)(?:e[+-]?\d+)?/i,
-    operator: /[<>]=?|[!=]=?=?|--?|\+\+?|&&?|\|\|?|[?*/~^%]/,
-    punctuation: /[{}[\];(),.:]/
-  }
-}
-
-
-/***/ }),
-
 /***/ "./node_modules/refractor/lang/csharp.js":
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/csharp.js ***!
   \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return csharp; });
-/* harmony import */ var _clike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clike.js */ "./node_modules/refractor/lang/clike.js");
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
 
+
+module.exports = csharp
 csharp.displayName = 'csharp'
-csharp.aliases = ['cs', 'dotnet']
-
-/** @param {Refractor} Prism */
+csharp.aliases = ['dotnet', 'cs']
 function csharp(Prism) {
-  Prism.register(_clike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   ;(function (Prism) {
     /**
      * Replaces all placeholders "<<n>>" of given pattern with the n-th replacement (zero based).
@@ -104,7 +39,6 @@ function csharp(Prism) {
     function re(pattern, replacements, flags) {
       return RegExp(replace(pattern, replacements), flags || '')
     }
-
     /**
      * Creates a nested pattern where all occurrences of the string `<<self>>` are replaced with the pattern itself.
      *
@@ -119,9 +53,7 @@ function csharp(Prism) {
         })
       }
       return pattern.replace(/<<self>>/g, '[^\\s\\S]')
-    }
-
-    // https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/
+    } // https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/
     var keywordKinds = {
       // keywords which represent a return or variable type
       type: 'bool byte char decimal double dynamic float int long object sbyte short string uint ulong ushort var void',
@@ -134,9 +66,7 @@ function csharp(Prism) {
       // all other keywords
       other:
         'abstract as base break case catch checked const continue default delegate do else event explicit extern finally fixed for foreach goto if implicit in internal is lock namespace new null operator out override params private protected public readonly ref return sealed sizeof stackalloc static switch this throw try typeof unchecked unsafe using virtual volatile while yield'
-    }
-
-    // keywords
+    } // keywords
     function keywordsToPattern(words) {
       return '\\b(?:' + words.trim().replace(/ /g, '|') + ')\\b'
     }
@@ -167,9 +97,7 @@ function csharp(Prism) {
         keywordKinds.typeDeclaration +
         ' ' +
         keywordKinds.other
-    )
-
-    // types
+    ) // types
     var generic = nested(/<(?:[^<>;=+\-*/%&|^]|<<self>>)*>/.source, 2) // the idea behind the other forbidden characters is to prevent false positives. Same for tupleElement.
     var nestedRound = nested(/\((?:[^()]|<<self>>)*\)/.source, 2)
     var name = /@?\b[A-Za-z_]\w*\b/.source
@@ -195,9 +123,7 @@ function csharp(Prism) {
     var typeInside = {
       keyword: keywords,
       punctuation: /[<>()?,.:[\]]/
-    }
-
-    // strings & characters
+    } // strings & characters
     // https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/lexical-structure#character-literals
     // https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/lexical-structure#string-literals
     var character = /'(?:[^\r\n'\\]|\\.|\\[Uux][\da-fA-F]{1,8})'/.source // simplified pattern
@@ -419,9 +345,7 @@ alias: 'class-name'
           }
         }
       }
-    })
-
-    // attributes
+    }) // attributes
     var regularStringOrCharacter = regularString + '|' + character
     var regularStringCharacterOrComment = replace(
       /\/(?![*/])|\/\/[^\r\n]*[\r\n]|\/\*(?:[^*]|\*(?!\/))*\*\/|<<0>>/.source,
@@ -432,9 +356,7 @@ alias: 'class-name'
         regularStringCharacterOrComment
       ]),
       2
-    )
-
-    // https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/attributes/#attribute-targets
+    ) // https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/attributes/#attribute-targets
     var attrTarget =
       /\b(?:assembly|event|field|method|module|param|property|return|type)\b/
         .source
@@ -471,11 +393,8 @@ alias: 'class-name'
           punctuation: /[:,]/
         }
       }
-    })
-
-    // string interpolation
-    var formatString = /:[^}\r\n]+/.source
-    // multi line
+    }) // string interpolation
+    var formatString = /:[^}\r\n]+/.source // multi line
     var mInterpolationRound = nested(
       replace(/[^"'/()]|<<0>>|\(<<self>>*\)/.source, [
         regularStringCharacterOrComment
@@ -485,8 +404,7 @@ alias: 'class-name'
     var mInterpolation = replace(/\{(?!\{)(?:(?![}:])<<0>>)*<<1>>?\}/.source, [
       mInterpolationRound,
       formatString
-    ])
-    // single line
+    ]) // single line
     var sInterpolationRound = nested(
       replace(
         /[^"'/()]|\/(?!\*)|\/\*(?:[^*]|\*(?!\/))*\*\/|<<0>>|\(<<self>>*\)/

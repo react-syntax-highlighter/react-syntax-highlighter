@@ -4,24 +4,18 @@
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/gap.js ***!
   \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return gap; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = gap
 gap.displayName = 'gap'
 gap.aliases = []
-
-/** @param {Refractor} Prism */
 function gap(Prism) {
   // https://www.gap-system.org/Manuals/doc/ref/chap4.html
   // https://www.gap-system.org/Manuals/doc/ref/chap27.html
-
   Prism.languages.gap = {
     shell: {
       pattern: /^gap>[\s\S]*?(?=^gap>|$(?![\s\S]))/m,

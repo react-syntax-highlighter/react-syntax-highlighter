@@ -4,23 +4,17 @@
 /*!*************************************************!*\
   !*** ./node_modules/refractor/lang/openqasm.js ***!
   \*************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return openqasm; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = openqasm
 openqasm.displayName = 'openqasm'
 openqasm.aliases = ['qasm']
-
-/** @param {Refractor} Prism */
 function openqasm(Prism) {
   // https://qiskit.github.io/openqasm/grammar/index.html
-
   Prism.languages.openqasm = {
     comment: /\/\*[\s\S]*?\*\/|\/\/.*/,
     string: {

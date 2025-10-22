@@ -4,20 +4,15 @@
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/gedcom.js ***!
   \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return gedcom; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = gedcom
 gedcom.displayName = 'gedcom'
 gedcom.aliases = []
-
-/** @param {Refractor} Prism */
 function gedcom(Prism) {
   Prism.languages.gedcom = {
     'line-value': {
@@ -32,12 +27,12 @@ function gedcom(Prism) {
         }
       }
     },
-    record: {
+    tag: {
       // Preceded by level and optional pointer
       pattern:
         /(^[\t ]*\d+ +(?:@\w[\w!"$%&'()*+,\-./:;<=>?[\\\]^`{|}~\x80-\xfe #]*@ +)?)\w+/m,
       lookbehind: true,
-      alias: 'tag'
+      alias: 'string'
     },
     level: {
       pattern: /(^[\t ]*)\d+/m,

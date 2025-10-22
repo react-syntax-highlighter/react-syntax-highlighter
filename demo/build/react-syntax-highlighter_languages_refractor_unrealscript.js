@@ -4,20 +4,15 @@
 /*!*****************************************************!*\
   !*** ./node_modules/refractor/lang/unrealscript.js ***!
   \*****************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return unrealscript; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = unrealscript
 unrealscript.displayName = 'unrealscript'
 unrealscript.aliases = ['uc', 'uscript']
-
-/** @param {Refractor} Prism */
 function unrealscript(Prism) {
   Prism.languages.unrealscript = {
     comment: /\/\/.*|\/\*[\s\S]*?\*\//,

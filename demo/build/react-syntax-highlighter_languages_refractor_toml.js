@@ -4,24 +4,18 @@
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/toml.js ***!
   \*********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return toml; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = toml
 toml.displayName = 'toml'
 toml.aliases = []
-
-/** @param {Refractor} Prism */
 function toml(Prism) {
   ;(function (Prism) {
     var key = /(?:[\w-]+|'[^'\n\r]*'|"(?:\\.|[^\\"\r\n])*")/.source
-
     /**
      * @param {string} pattern
      */

@@ -4,20 +4,15 @@
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/markup.js ***!
   \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return markup; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
-markup.displayName = 'markup'
-markup.aliases = ['atom', 'html', 'mathml', 'rss', 'ssml', 'svg', 'xml']
 
-/** @param {Refractor} Prism */
+
+module.exports = markup
+markup.displayName = 'markup'
+markup.aliases = ['html', 'mathml', 'svg', 'xml', 'ssml', 'atom', 'rss']
 function markup(Prism) {
   Prism.languages.markup = {
     comment: {
@@ -74,10 +69,7 @@ function markup(Prism) {
                 pattern: /^=/,
                 alias: 'attr-equals'
               },
-              {
-                pattern: /^(\s*)["']|["']$/,
-                lookbehind: true
-              }
+              /"|'/
             ]
           }
         },
@@ -101,9 +93,7 @@ function markup(Prism) {
   Prism.languages.markup['tag'].inside['attr-value'].inside['entity'] =
     Prism.languages.markup['entity']
   Prism.languages.markup['doctype'].inside['internal-subset'].inside =
-    Prism.languages.markup
-
-  // Plugin to make entity title show the real entity, idea by Roman Komarov
+    Prism.languages.markup // Plugin to make entity title show the real entity, idea by Roman Komarov
   Prism.hooks.add('wrap', function (env) {
     if (env.type === 'entity') {
       env.attributes['title'] = env.content.value.replace(/&amp;/, '&')

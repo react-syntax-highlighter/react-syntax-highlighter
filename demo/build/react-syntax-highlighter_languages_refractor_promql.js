@@ -4,24 +4,18 @@
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/promql.js ***!
   \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return promql; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = promql
 promql.displayName = 'promql'
 promql.aliases = []
-
-/** @param {Refractor} Prism */
 function promql(Prism) {
   // Thanks to: https://github.com/prometheus-community/monaco-promql/blob/master/src/promql/promql.ts
   // As well as: https://kausal.co/blog/slate-prism-add-new-syntax-promql/
-
   ;(function (Prism) {
     // PromQL Aggregation Operators
     // (https://prometheus.io/docs/prometheus/latest/querying/operators/#aggregation-operators)
@@ -38,9 +32,7 @@ function promql(Prism) {
       'bottomk',
       'topk',
       'quantile'
-    ]
-
-    // PromQL vector matching + the by and without clauses
+    ] // PromQL vector matching + the by and without clauses
     // (https://prometheus.io/docs/prometheus/latest/querying/operators/#vector-matching)
     var vectorMatching = [
       'on',
@@ -49,9 +41,7 @@ function promql(Prism) {
       'group_left',
       'by',
       'without'
-    ]
-
-    // PromQL offset modifier
+    ] // PromQL offset modifier
     // (https://prometheus.io/docs/prometheus/latest/querying/basics/#offset-modifier)
     var offsetModifier = ['offset']
     var keywords = aggregations.concat(vectorMatching, offsetModifier)

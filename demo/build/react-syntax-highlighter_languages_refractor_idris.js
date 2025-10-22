@@ -4,20 +4,15 @@
 /*!************************************************!*\
   !*** ./node_modules/refractor/lang/haskell.js ***!
   \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return haskell; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = haskell
 haskell.displayName = 'haskell'
 haskell.aliases = ['hs']
-
-/** @param {Refractor} Prism */
 function haskell(Prism) {
   Prism.languages.haskell = {
     comment: {
@@ -63,8 +58,7 @@ function haskell(Prism) {
         // function composition
         pattern: /(\s)\.(?=\s)/,
         lookbehind: true
-      },
-      // Most of this is needed because of the meaning of a single '.'.
+      }, // Most of this is needed because of the meaning of a single '.'.
       // If it stands alone freely, it is the function composition.
       // It may also be a separator between a module name and an identifier => no
       // operator. If it comes together with other special characters it is an
@@ -98,24 +92,17 @@ function haskell(Prism) {
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/idris.js ***!
   \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return idris; });
-/* harmony import */ var _haskell_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./haskell.js */ "./node_modules/refractor/lang/haskell.js");
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
 
+var refractorHaskell = __webpack_require__(/*! ./haskell.js */ "./node_modules/refractor/lang/haskell.js")
+module.exports = idris
 idris.displayName = 'idris'
 idris.aliases = ['idr']
-
-/** @param {Refractor} Prism */
 function idris(Prism) {
-  Prism.register(_haskell_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+  Prism.register(refractorHaskell)
   Prism.languages.idris = Prism.languages.extend('haskell', {
     comment: {
       pattern: /(?:(?:--|\|\|\|).*$|\{-[\s\S]*?-\})/m

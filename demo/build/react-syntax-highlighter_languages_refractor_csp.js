@@ -4,20 +4,15 @@
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/csp.js ***!
   \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return csp; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = csp
 csp.displayName = 'csp'
 csp.aliases = []
-
-/** @param {Refractor} Prism */
 function csp(Prism) {
   /**
    * Original by Scott Helme.
@@ -29,7 +24,6 @@ function csp(Prism) {
    *  - https://www.w3.org/TR/CSP2/
    *  - https://www.w3.org/TR/CSP3/
    */
-
   ;(function (Prism) {
     /**
      * @param {string} source

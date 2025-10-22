@@ -4,23 +4,17 @@
 /*!***************************************************!*\
   !*** ./node_modules/refractor/lang/powerquery.js ***!
   \***************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return powerquery; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
-powerquery.displayName = 'powerquery'
-powerquery.aliases = ['mscript', 'pq']
 
-/** @param {Refractor} Prism */
+
+module.exports = powerquery
+powerquery.displayName = 'powerquery'
+powerquery.aliases = []
 function powerquery(Prism) {
   // https://docs.microsoft.com/en-us/powerquery-m/power-query-m-language-specification
-
   Prism.languages.powerquery = {
     comment: {
       pattern: /(^|[^\\])(?:\/\*[\s\S]*?\*\/|\/\/.*)/,

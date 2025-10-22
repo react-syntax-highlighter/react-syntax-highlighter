@@ -4,24 +4,18 @@
 /*!*************************************************!*\
   !*** ./node_modules/refractor/lang/avro-idl.js ***!
   \*************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return avroIdl; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
-avroIdl.displayName = 'avro-idl'
-avroIdl.aliases = ['avdl']
 
-/** @param {Refractor} Prism */
+
+module.exports = avroIdl
+avroIdl.displayName = 'avroIdl'
+avroIdl.aliases = []
 function avroIdl(Prism) {
   // GitHub: https://github.com/apache/avro
   // Docs: https://avro.apache.org/docs/current/idl.html
-
   Prism.languages['avro-idl'] = {
     comment: {
       pattern: /\/\/.*|\/\*[\s\S]*?\*\//,

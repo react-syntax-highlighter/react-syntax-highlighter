@@ -4,20 +4,15 @@
 /*!*************************************************!*\
   !*** ./node_modules/refractor/lang/asmatmel.js ***!
   \*************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return asmatmel; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = asmatmel
 asmatmel.displayName = 'asmatmel'
 asmatmel.aliases = []
-
-/** @param {Refractor} Prism */
 function asmatmel(Prism) {
   Prism.languages.asmatmel = {
     comment: {
@@ -58,7 +53,7 @@ function asmatmel(Prism) {
       pattern: /\b[acznvshtixy]\b/i,
       alias: 'variable'
     },
-    operator: />>=?|<<=?|&[&=]?|\|[\|=]?|[-+*/%^!=<>?]=?/,
+    operator: />>=?|<<=?|&&?|\|\|?|[-+*/%&|^!=<>?]=?/,
     punctuation: /[(),:]/
   }
 }

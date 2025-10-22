@@ -4,24 +4,17 @@
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/racket.js ***!
   \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return racket; });
-/* harmony import */ var _scheme_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scheme.js */ "./node_modules/refractor/lang/scheme.js");
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
 
+var refractorScheme = __webpack_require__(/*! ./scheme.js */ "./node_modules/refractor/lang/scheme.js")
+module.exports = racket
 racket.displayName = 'racket'
 racket.aliases = ['rkt']
-
-/** @param {Refractor} Prism */
 function racket(Prism) {
-  Prism.register(_scheme_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+  Prism.register(refractorScheme)
   Prism.languages.racket = Prism.languages.extend('scheme', {
     'lambda-parameter': {
       // the racket lambda syntax is a lot more complex, so we won't even attempt to capture it.
@@ -47,20 +40,15 @@ function racket(Prism) {
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/scheme.js ***!
   \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return scheme; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = scheme
 scheme.displayName = 'scheme'
 scheme.aliases = []
-
-/** @param {Refractor} Prism */
 function scheme(Prism) {
   ;(function (Prism) {
     Prism.languages.scheme = {
@@ -178,7 +166,6 @@ function scheme(Prism) {
       },
       punctuation: /[()\[\]']/
     }
-
     /**
      * Given a topologically sorted BNF grammar, this will return the RegExp source of last rule of the grammar.
      *
@@ -190,8 +177,7 @@ function scheme(Prism) {
         grammar[key] = grammar[key].replace(/<[\w\s]+>/g, function (key) {
           return '(?:' + grammar[key].trim() + ')'
         })
-      }
-      // return the last item
+      } // return the last item
       return grammar[key]
     }
   })(Prism)

@@ -4,20 +4,15 @@
 /*!********************************************************!*\
   !*** ./node_modules/refractor/lang/nand2tetris-hdl.js ***!
   \********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return nand2tetrisHdl; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
-nand2tetrisHdl.displayName = 'nand2tetris-hdl'
-nand2tetrisHdl.aliases = []
 
-/** @param {Refractor} Prism */
+
+module.exports = nand2tetrisHdl
+nand2tetrisHdl.displayName = 'nand2tetrisHdl'
+nand2tetrisHdl.aliases = []
 function nand2tetrisHdl(Prism) {
   Prism.languages['nand2tetris-hdl'] = {
     comment: /\/\/.*|\/\*[\s\S]*?(?:\*\/|$)/,

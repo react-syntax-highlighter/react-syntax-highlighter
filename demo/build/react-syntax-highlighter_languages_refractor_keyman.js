@@ -4,20 +4,15 @@
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/keyman.js ***!
   \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return keyman; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = keyman
 keyman.displayName = 'keyman'
 keyman.aliases = []
-
-/** @param {Refractor} Prism */
 function keyman(Prism) {
   Prism.languages.keyman = {
     comment: {
@@ -50,8 +45,7 @@ function keyman(Prism) {
       alias: 'keyword'
     },
     'structural-keyword': {
-      pattern:
-        /\b(?:ansi|begin|group|match|newcontext|nomatch|postkeystroke|readonly|unicode|using keys)\b/i,
+      pattern: /\b(?:ansi|begin|group|match|nomatch|unicode|using keys)\b/i,
       alias: 'keyword'
     },
     'compile-target': {

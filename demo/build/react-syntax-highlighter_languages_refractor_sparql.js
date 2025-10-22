@@ -4,24 +4,17 @@
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/sparql.js ***!
   \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return sparql; });
-/* harmony import */ var _turtle_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./turtle.js */ "./node_modules/refractor/lang/turtle.js");
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
 
+var refractorTurtle = __webpack_require__(/*! ./turtle.js */ "./node_modules/refractor/lang/turtle.js")
+module.exports = sparql
 sparql.displayName = 'sparql'
 sparql.aliases = ['rq']
-
-/** @param {Refractor} Prism */
 function sparql(Prism) {
-  Prism.register(_turtle_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+  Prism.register(refractorTurtle)
   Prism.languages.sparql = Prism.languages.extend('turtle', {
     boolean: /\b(?:false|true)\b/i,
     variable: {
@@ -46,20 +39,15 @@ function sparql(Prism) {
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/turtle.js ***!
   \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return turtle; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
-turtle.displayName = 'turtle'
-turtle.aliases = ['trig']
 
-/** @param {Refractor} Prism */
+
+module.exports = turtle
+turtle.displayName = 'turtle'
+turtle.aliases = []
 function turtle(Prism) {
   Prism.languages.turtle = {
     comment: {

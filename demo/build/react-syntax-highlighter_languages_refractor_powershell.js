@@ -4,20 +4,15 @@
 /*!***************************************************!*\
   !*** ./node_modules/refractor/lang/powershell.js ***!
   \***************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return powershell; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = powershell
 powershell.displayName = 'powershell'
 powershell.aliases = []
-
-/** @param {Refractor} Prism */
 function powershell(Prism) {
   ;(function (Prism) {
     var powershell = (Prism.languages.powershell = {
@@ -63,9 +58,7 @@ function powershell(Prism) {
         lookbehind: true
       },
       punctuation: /[|{}[\];(),.]/
-    })
-
-    // Variable interpolation inside strings, and nested expressions
+    }) // Variable interpolation inside strings, and nested expressions
     powershell.string[0].inside = {
       function: {
         // Allow for one level of nesting

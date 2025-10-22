@@ -4,20 +4,15 @@
 /*!**************************************************!*\
   !*** ./node_modules/refractor/lang/ichigojam.js ***!
   \**************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ichigojam; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = ichigojam
 ichigojam.displayName = 'ichigojam'
 ichigojam.aliases = []
-
-/** @param {Refractor} Prism */
 function ichigojam(Prism) {
   // according to the offical reference (EN)
   // https://ichigojam.net/IchigoJam-en.html

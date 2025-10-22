@@ -4,20 +4,15 @@
 /*!**************************************************!*\
   !*** ./node_modules/refractor/lang/concurnas.js ***!
   \**************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return concurnas; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = concurnas
 concurnas.displayName = 'concurnas'
 concurnas.aliases = ['conc']
-
-/** @param {Refractor} Prism */
 function concurnas(Prism) {
   Prism.languages.concurnas = {
     comment: {

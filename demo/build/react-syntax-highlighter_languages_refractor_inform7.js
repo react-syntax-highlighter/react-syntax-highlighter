@@ -4,20 +4,15 @@
 /*!************************************************!*\
   !*** ./node_modules/refractor/lang/inform7.js ***!
   \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return inform7; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = inform7
 inform7.displayName = 'inform7'
 inform7.aliases = []
-
-/** @param {Refractor} Prism */
 function inform7(Prism) {
   Prism.languages.inform7 = {
     string: {
@@ -29,8 +24,7 @@ function inform7(Prism) {
             delimiter: {
               pattern: /\[|\]/,
               alias: 'punctuation'
-            }
-            // See rest below
+            } // See rest below
           }
         }
       }
@@ -80,8 +74,7 @@ function inform7(Prism) {
     punctuation: /[.,:;(){}]/
   }
   Prism.languages.inform7['string'].inside['substitution'].inside.rest =
-    Prism.languages.inform7
-  // We don't want the remaining text in the substitution to be highlighted as the string.
+    Prism.languages.inform7 // We don't want the remaining text in the substitution to be highlighted as the string.
   Prism.languages.inform7['string'].inside['substitution'].inside.rest.text = {
     pattern: /\S(?:\s*\S)*/,
     alias: 'comment'

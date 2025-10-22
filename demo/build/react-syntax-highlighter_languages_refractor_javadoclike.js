@@ -4,20 +4,15 @@
 /*!****************************************************!*\
   !*** ./node_modules/refractor/lang/javadoclike.js ***!
   \****************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return javadoclike; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = javadoclike
 javadoclike.displayName = 'javadoclike'
 javadoclike.aliases = []
-
-/** @param {Refractor} Prism */
 function javadoclike(Prism) {
   ;(function (Prism) {
     var javaDocLike = (Prism.languages.javadoclike = {
@@ -34,7 +29,6 @@ function javadoclike(Prism) {
       },
       punctuation: /[{}]/
     })
-
     /**
      * Adds doc comment support to the given language and calls a given callback on each doc comment pattern.
      *
@@ -78,7 +72,6 @@ function javadoclike(Prism) {
         callback(token)
       }
     }
-
     /**
      * Adds doc-comment support to the given languages for the given documentation language.
      *

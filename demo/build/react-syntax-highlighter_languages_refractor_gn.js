@@ -4,23 +4,17 @@
 /*!*******************************************!*\
   !*** ./node_modules/refractor/lang/gn.js ***!
   \*******************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return gn; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = gn
 gn.displayName = 'gn'
 gn.aliases = ['gni']
-
-/** @param {Refractor} Prism */
 function gn(Prism) {
   // https://gn.googlesource.com/gn/+/refs/heads/main/docs/reference.md#grammar
-
   Prism.languages.gn = {
     comment: {
       pattern: /#.*/,

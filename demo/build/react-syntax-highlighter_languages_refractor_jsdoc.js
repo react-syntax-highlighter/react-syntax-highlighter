@@ -4,20 +4,15 @@
 /*!****************************************************!*\
   !*** ./node_modules/refractor/lang/javadoclike.js ***!
   \****************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return javadoclike; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = javadoclike
 javadoclike.displayName = 'javadoclike'
 javadoclike.aliases = []
-
-/** @param {Refractor} Prism */
 function javadoclike(Prism) {
   ;(function (Prism) {
     var javaDocLike = (Prism.languages.javadoclike = {
@@ -34,7 +29,6 @@ function javadoclike(Prism) {
       },
       punctuation: /[{}]/
     })
-
     /**
      * Adds doc comment support to the given language and calls a given callback on each doc comment pattern.
      *
@@ -78,7 +72,6 @@ function javadoclike(Prism) {
         callback(token)
       }
     }
-
     /**
      * Adds doc-comment support to the given languages for the given documentation language.
      *
@@ -112,30 +105,19 @@ function javadoclike(Prism) {
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/jsdoc.js ***!
   \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return jsdoc; });
-/* harmony import */ var _javadoclike_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./javadoclike.js */ "./node_modules/refractor/lang/javadoclike.js");
-/* harmony import */ var _javascript_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./javascript.js */ "./node_modules/refractor/lang/javascript.js");
-/* harmony import */ var _typescript_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./typescript.js */ "./node_modules/refractor/lang/typescript.js");
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
 
-
-
+var refractorJavadoclike = __webpack_require__(/*! ./javadoclike.js */ "./node_modules/refractor/lang/javadoclike.js")
+var refractorTypescript = __webpack_require__(/*! ./typescript.js */ "./node_modules/refractor/lang/typescript.js")
+module.exports = jsdoc
 jsdoc.displayName = 'jsdoc'
 jsdoc.aliases = []
-
-/** @param {Refractor} Prism */
 function jsdoc(Prism) {
-  Prism.register(_javadoclike_js__WEBPACK_IMPORTED_MODULE_0__["default"])
-  Prism.register(_javascript_js__WEBPACK_IMPORTED_MODULE_1__["default"])
-  Prism.register(_typescript_js__WEBPACK_IMPORTED_MODULE_2__["default"])
+  Prism.register(refractorJavadoclike)
+  Prism.register(refractorTypescript)
   ;(function (Prism) {
     var javascript = Prism.languages.javascript
     var type = /\{(?:[^{}]|\{(?:[^{}]|\{[^{}]*\})*\})+\}/.source
@@ -221,6 +203,76 @@ function jsdoc(Prism) {
       }
     })
     Prism.languages.javadoclike.addSupport('javascript', Prism.languages.jsdoc)
+  })(Prism)
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/refractor/lang/typescript.js":
+/*!***************************************************!*\
+  !*** ./node_modules/refractor/lang/typescript.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = typescript
+typescript.displayName = 'typescript'
+typescript.aliases = ['ts']
+function typescript(Prism) {
+  ;(function (Prism) {
+    Prism.languages.typescript = Prism.languages.extend('javascript', {
+      'class-name': {
+        pattern:
+          /(\b(?:class|extends|implements|instanceof|interface|new|type)\s+)(?!keyof\b)(?!\s)[_$a-zA-Z\xA0-\uFFFF](?:(?!\s)[$\w\xA0-\uFFFF])*(?:\s*<(?:[^<>]|<(?:[^<>]|<[^<>]*>)*>)*>)?/,
+        lookbehind: true,
+        greedy: true,
+        inside: null // see below
+      },
+      builtin:
+        /\b(?:Array|Function|Promise|any|boolean|console|never|number|string|symbol|unknown)\b/
+    }) // The keywords TypeScript adds to JavaScript
+    Prism.languages.typescript.keyword.push(
+      /\b(?:abstract|declare|is|keyof|readonly|require)\b/, // keywords that have to be followed by an identifier
+      /\b(?:asserts|infer|interface|module|namespace|type)\b(?=\s*(?:[{_$a-zA-Z\xA0-\uFFFF]|$))/, // This is for `import type *, {}`
+      /\btype\b(?=\s*(?:[\{*]|$))/
+    ) // doesn't work with TS because TS is too complex
+    delete Prism.languages.typescript['parameter']
+    delete Prism.languages.typescript['literal-property'] // a version of typescript specifically for highlighting types
+    var typeInside = Prism.languages.extend('typescript', {})
+    delete typeInside['class-name']
+    Prism.languages.typescript['class-name'].inside = typeInside
+    Prism.languages.insertBefore('typescript', 'function', {
+      decorator: {
+        pattern: /@[$\w\xA0-\uFFFF]+/,
+        inside: {
+          at: {
+            pattern: /^@/,
+            alias: 'operator'
+          },
+          function: /^[\s\S]+/
+        }
+      },
+      'generic-function': {
+        // e.g. foo<T extends "bar" | "baz">( ...
+        pattern:
+          /#?(?!\s)[_$a-zA-Z\xA0-\uFFFF](?:(?!\s)[$\w\xA0-\uFFFF])*\s*<(?:[^<>]|<(?:[^<>]|<[^<>]*>)*>)*>(?=\s*\()/,
+        greedy: true,
+        inside: {
+          function: /^#?(?!\s)[_$a-zA-Z\xA0-\uFFFF](?:(?!\s)[$\w\xA0-\uFFFF])*/,
+          generic: {
+            pattern: /<[\s\S]+/,
+            // everything after the first <
+            alias: 'class-name',
+            inside: typeInside
+          }
+        }
+      }
+    })
+    Prism.languages.ts = Prism.languages.typescript
   })(Prism)
 }
 

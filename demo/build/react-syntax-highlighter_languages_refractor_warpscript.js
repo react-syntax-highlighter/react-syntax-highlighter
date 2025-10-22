@@ -4,20 +4,15 @@
 /*!***************************************************!*\
   !*** ./node_modules/refractor/lang/warpscript.js ***!
   \***************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return warpscript; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = warpscript
 warpscript.displayName = 'warpscript'
 warpscript.aliases = []
-
-/** @param {Refractor} Prism */
 function warpscript(Prism) {
   Prism.languages.warpscript = {
     comment: /#.*|\/\/.*|\/\*[\s\S]*?\*\//,

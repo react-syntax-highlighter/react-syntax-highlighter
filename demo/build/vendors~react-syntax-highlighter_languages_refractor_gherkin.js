@@ -4,20 +4,15 @@
 /*!************************************************!*\
   !*** ./node_modules/refractor/lang/gherkin.js ***!
   \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return gherkin; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = gherkin
 gherkin.displayName = 'gherkin'
 gherkin.aliases = []
-
-/** @param {Refractor} Prism */
 function gherkin(Prism) {
   ;(function (Prism) {
     var tableRow = /(?:\r?\n|\r)[ \t]*\|.+\|(?:(?!\|).)*/.source

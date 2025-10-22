@@ -4,20 +4,15 @@
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/nginx.js ***!
   \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return nginx; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = nginx
 nginx.displayName = 'nginx'
 nginx.aliases = []
-
-/** @param {Refractor} Prism */
 function nginx(Prism) {
   ;(function (Prism) {
     var variable =
@@ -57,7 +52,6 @@ function nginx(Prism) {
             greedy: true
           },
           // other patterns
-
           boolean: {
             pattern: /(\s)(?:off|on)(?!\S)/,
             lookbehind: true

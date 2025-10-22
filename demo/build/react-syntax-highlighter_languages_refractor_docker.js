@@ -4,28 +4,21 @@
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/docker.js ***!
   \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return docker; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = docker
 docker.displayName = 'docker'
 docker.aliases = ['dockerfile']
-
-/** @param {Refractor} Prism */
 function docker(Prism) {
   ;(function (Prism) {
     // Many of the following regexes will contain negated lookaheads like `[ \t]+(?![ \t])`. This is a trick to ensure
     // that quantifiers behave *atomically*. Atomic quantifiers are necessary to prevent exponential backtracking.
-
     var spaceAfterBackSlash =
-      /\\[\r\n](?:\s|\\[\r\n]|#.*(?!.))*(?![\s#]|\\[\r\n])/.source
-    // At least one space, comment, or line break
+      /\\[\r\n](?:\s|\\[\r\n]|#.*(?!.))*(?![\s#]|\\[\r\n])/.source // At least one space, comment, or line break
     var space = /(?:[ \t]+(?![ \t])(?:<SP_BS>)?|<SP_BS>)/.source.replace(
       /<SP_BS>/g,
       function () {
@@ -50,7 +43,6 @@ function docker(Prism) {
       lookbehind: true,
       greedy: true
     }
-
     /**
      * @param {string} source
      * @param {string} flags

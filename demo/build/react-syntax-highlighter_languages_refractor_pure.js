@@ -4,24 +4,18 @@
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/pure.js ***!
   \*********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return pure; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = pure
 pure.displayName = 'pure'
 pure.aliases = []
-
-/** @param {Refractor} Prism */
 function pure(Prism) {
   ;(function (Prism) {
     // https://agraef.github.io/pure-docs/pure.html#lexical-matters
-
     Prism.languages.pure = {
       comment: [
         {
@@ -106,9 +100,7 @@ function pure(Prism) {
         )
         Prism.languages.insertBefore('pure', 'inline-lang', o)
       }
-    })
-
-    // C is the default inline language
+    }) // C is the default inline language
     if (Prism.languages.c) {
       Prism.languages.pure['inline-lang'].inside.rest = Prism.util.clone(
         Prism.languages.c

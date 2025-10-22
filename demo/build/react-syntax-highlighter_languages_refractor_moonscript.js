@@ -4,20 +4,15 @@
 /*!***************************************************!*\
   !*** ./node_modules/refractor/lang/moonscript.js ***!
   \***************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return moonscript; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = moonscript
 moonscript.displayName = 'moonscript'
 moonscript.aliases = ['moon']
-
-/** @param {Refractor} Prism */
 function moonscript(Prism) {
   Prism.languages.moonscript = {
     comment: /--.*/,
@@ -51,8 +46,7 @@ function moonscript(Prism) {
       {
         pattern: /(\b(?:class|extends)[ \t]+)\w+/,
         lookbehind: true
-      },
-      // class-like names start with a capital letter
+      }, // class-like names start with a capital letter
       /\b[A-Z]\w*/
     ],
     keyword:

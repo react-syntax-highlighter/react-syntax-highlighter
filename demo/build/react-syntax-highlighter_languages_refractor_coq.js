@@ -4,24 +4,18 @@
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/coq.js ***!
   \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return coq; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = coq
 coq.displayName = 'coq'
 coq.aliases = []
-
-/** @param {Refractor} Prism */
 function coq(Prism) {
   ;(function (Prism) {
     // https://github.com/coq/coq
-
     var commentSource = /\(\*(?:[^(*]|\((?!\*)|\*(?!\))|<self>)*\*\)/.source
     for (var i = 0; i < 2; i++) {
       commentSource = commentSource.replace(/<self>/g, function () {

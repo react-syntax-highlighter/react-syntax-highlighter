@@ -4,20 +4,15 @@
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/basic.js ***!
   \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return basic; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = basic
 basic.displayName = 'basic'
 basic.aliases = []
-
-/** @param {Refractor} Prism */
 function basic(Prism) {
   Prism.languages.basic = {
     comment: {
@@ -47,20 +42,15 @@ function basic(Prism) {
 /*!******************************************************!*\
   !*** ./node_modules/refractor/lang/t4-templating.js ***!
   \******************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return t4Templating; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
-t4Templating.displayName = 't4-templating'
-t4Templating.aliases = []
 
-/** @param {Refractor} Prism */
+
+module.exports = t4Templating
+t4Templating.displayName = 't4Templating'
+t4Templating.aliases = []
 function t4Templating(Prism) {
   ;(function (Prism) {
     function createBlock(prefix, inside, contentAlias) {
@@ -117,27 +107,19 @@ function t4Templating(Prism) {
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/t4-vb.js ***!
   \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return t4Vb; });
-/* harmony import */ var _t4_templating_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./t4-templating.js */ "./node_modules/refractor/lang/t4-templating.js");
-/* harmony import */ var _vbnet_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./vbnet.js */ "./node_modules/refractor/lang/vbnet.js");
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
 
-
-t4Vb.displayName = 't4-vb'
+var refractorT4Templating = __webpack_require__(/*! ./t4-templating.js */ "./node_modules/refractor/lang/t4-templating.js")
+var refractorVbnet = __webpack_require__(/*! ./vbnet.js */ "./node_modules/refractor/lang/vbnet.js")
+module.exports = t4Vb
+t4Vb.displayName = 't4Vb'
 t4Vb.aliases = []
-
-/** @param {Refractor} Prism */
 function t4Vb(Prism) {
-  Prism.register(_t4_templating_js__WEBPACK_IMPORTED_MODULE_0__["default"])
-  Prism.register(_vbnet_js__WEBPACK_IMPORTED_MODULE_1__["default"])
+  Prism.register(refractorT4Templating)
+  Prism.register(refractorVbnet)
   Prism.languages['t4-vb'] = Prism.languages['t4-templating'].createT4('vbnet')
 }
 
@@ -148,24 +130,17 @@ function t4Vb(Prism) {
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/vbnet.js ***!
   \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return vbnet; });
-/* harmony import */ var _basic_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./basic.js */ "./node_modules/refractor/lang/basic.js");
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
 
+var refractorBasic = __webpack_require__(/*! ./basic.js */ "./node_modules/refractor/lang/basic.js")
+module.exports = vbnet
 vbnet.displayName = 'vbnet'
 vbnet.aliases = []
-
-/** @param {Refractor} Prism */
 function vbnet(Prism) {
-  Prism.register(_basic_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+  Prism.register(refractorBasic)
   Prism.languages.vbnet = Prism.languages.extend('basic', {
     comment: [
       {

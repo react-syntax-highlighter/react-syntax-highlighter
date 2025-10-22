@@ -4,20 +4,15 @@
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/eiffel.js ***!
   \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return eiffel; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = eiffel
 eiffel.displayName = 'eiffel'
 eiffel.aliases = []
-
-/** @param {Refractor} Prism */
 function eiffel(Prism) {
   Prism.languages.eiffel = {
     comment: /--.*/,
@@ -26,13 +21,11 @@ function eiffel(Prism) {
       {
         pattern: /"([^[]*)\[[\s\S]*?\]\1"/,
         greedy: true
-      },
-      // Non-aligned-verbatim-strings
+      }, // Non-aligned-verbatim-strings
       {
         pattern: /"([^{]*)\{[\s\S]*?\}\1"/,
         greedy: true
-      },
-      // Single-line string
+      }, // Single-line string
       {
         pattern: /"(?:%(?:(?!\n)\s)*\n\s*%|%\S|[^%"\r\n])*"/,
         greedy: true
@@ -47,8 +40,7 @@ function eiffel(Prism) {
     'class-name': /\b[A-Z][\dA-Z_]*\b/,
     number: [
       // hexa | octal | bin
-      /\b0[xcb][\da-f](?:_*[\da-f])*\b/i,
-      // Decimal
+      /\b0[xcb][\da-f](?:_*[\da-f])*\b/i, // Decimal
       /(?:\b\d(?:_*\d)*)?\.(?:(?:\d(?:_*\d)*)?e[+-]?)?\d(?:_*\d)*\b|\b\d(?:_*\d)*\b\.?/i
     ],
     punctuation: /:=|<<|>>|\(\||\|\)|->|\.(?=\w)|[{}[\];(),:?]/,

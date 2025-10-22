@@ -1,131 +1,19 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["react-syntax-highlighter_languages_refractor_scss"],{
 
-/***/ "./node_modules/refractor/lang/css.js":
-/*!********************************************!*\
-  !*** ./node_modules/refractor/lang/css.js ***!
-  \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return css; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
-css.displayName = 'css'
-css.aliases = []
-
-/** @param {Refractor} Prism */
-function css(Prism) {
-  ;(function (Prism) {
-    var string =
-      /(?:"(?:\\(?:\r\n|[\s\S])|[^"\\\r\n])*"|'(?:\\(?:\r\n|[\s\S])|[^'\\\r\n])*')/
-    Prism.languages.css = {
-      comment: /\/\*[\s\S]*?\*\//,
-      atrule: {
-        pattern: RegExp(
-          '@[\\w-](?:' +
-            /[^;{\s"']|\s+(?!\s)/.source +
-            '|' +
-            string.source +
-            ')*?' +
-            /(?:;|(?=\s*\{))/.source
-        ),
-        inside: {
-          rule: /^@[\w-]+/,
-          'selector-function-argument': {
-            pattern:
-              /(\bselector\s*\(\s*(?![\s)]))(?:[^()\s]|\s+(?![\s)])|\((?:[^()]|\([^()]*\))*\))+(?=\s*\))/,
-            lookbehind: true,
-            alias: 'selector'
-          },
-          keyword: {
-            pattern: /(^|[^\w-])(?:and|not|only|or)(?![\w-])/,
-            lookbehind: true
-          }
-          // See rest below
-        }
-      },
-      url: {
-        // https://drafts.csswg.org/css-values-3/#urls
-        pattern: RegExp(
-          '\\burl\\((?:' +
-            string.source +
-            '|' +
-            /(?:[^\\\r\n()"']|\\[\s\S])*/.source +
-            ')\\)',
-          'i'
-        ),
-        greedy: true,
-        inside: {
-          function: /^url/i,
-          punctuation: /^\(|\)$/,
-          string: {
-            pattern: RegExp('^' + string.source + '$'),
-            alias: 'url'
-          }
-        }
-      },
-      selector: {
-        pattern: RegExp(
-          '(^|[{}\\s])[^{}\\s](?:[^{};"\'\\s]|\\s+(?![\\s{])|' +
-            string.source +
-            ')*(?=\\s*\\{)'
-        ),
-        lookbehind: true
-      },
-      string: {
-        pattern: string,
-        greedy: true
-      },
-      property: {
-        pattern:
-          /(^|[^-\w\xA0-\uFFFF])(?!\s)[-_a-z\xA0-\uFFFF](?:(?!\s)[-\w\xA0-\uFFFF])*(?=\s*:)/i,
-        lookbehind: true
-      },
-      important: /!important\b/i,
-      function: {
-        pattern: /(^|[^-a-z0-9])[-a-z0-9]+(?=\()/i,
-        lookbehind: true
-      },
-      punctuation: /[(){};:,]/
-    }
-    Prism.languages.css['atrule'].inside.rest = Prism.languages.css
-    var markup = Prism.languages.markup
-    if (markup) {
-      markup.tag.addInlined('style', 'css')
-      markup.tag.addAttribute('style', 'css')
-    }
-  })(Prism)
-}
-
-
-/***/ }),
-
 /***/ "./node_modules/refractor/lang/scss.js":
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/scss.js ***!
   \*********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return scss; });
-/* harmony import */ var _css_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css.js */ "./node_modules/refractor/lang/css.js");
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
 
+
+module.exports = scss
 scss.displayName = 'scss'
 scss.aliases = []
-
-/** @param {Refractor} Prism */
 function scss(Prism) {
-  Prism.register(_css_js__WEBPACK_IMPORTED_MODULE_0__["default"])
   Prism.languages.scss = Prism.languages.extend('css', {
     comment: {
       pattern: /(^|[^\\])(?:\/\*[\s\S]*?\*\/|\/\/.*)/,
@@ -134,8 +22,7 @@ function scss(Prism) {
     atrule: {
       pattern: /@[\w-](?:\([^()]+\)|[^()\s]|\s+(?!\s))*?(?=\s+[{;])/,
       inside: {
-        rule: /@[\w-]+/
-        // See rest below
+        rule: /@[\w-]+/ // See rest below
       }
     },
     // url, compassified

@@ -4,27 +4,21 @@
 /*!***********************************************!*\
   !*** ./node_modules/refractor/lang/stylus.js ***!
   \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return stylus; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = stylus
 stylus.displayName = 'stylus'
 stylus.aliases = []
-
-/** @param {Refractor} Prism */
 function stylus(Prism) {
   ;(function (Prism) {
     var unit = {
       pattern: /(\b\d+)(?:%|[a-z]+)/,
       lookbehind: true
-    }
-    // 123 -123 .123 -.123 12.3 -12.3
+    } // 123 -123 .123 -.123 12.3 -12.3
     var number = {
       pattern: /(^|[^\w.-])-?(?:\d+(?:\.\d+)?|\.\d+)/,
       lookbehind: true

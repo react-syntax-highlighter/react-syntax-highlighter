@@ -4,24 +4,18 @@
 /*!***********************************************************!*\
   !*** ./node_modules/refractor/lang/icu-message-format.js ***!
   \***********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return icuMessageFormat; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
-icuMessageFormat.displayName = 'icu-message-format'
-icuMessageFormat.aliases = []
 
-/** @param {Refractor} Prism */
+
+module.exports = icuMessageFormat
+icuMessageFormat.displayName = 'icuMessageFormat'
+icuMessageFormat.aliases = []
 function icuMessageFormat(Prism) {
   // https://unicode-org.github.io/icu/userguide/format_parse/messages/
   // https://unicode-org.github.io/icu-docs/apidoc/released/icu4j/com/ibm/icu/text/MessageFormat.html
-
   ;(function (Prism) {
     /**
      * @param {string} source

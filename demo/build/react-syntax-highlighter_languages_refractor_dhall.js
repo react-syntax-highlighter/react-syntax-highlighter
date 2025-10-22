@@ -4,24 +4,18 @@
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/dhall.js ***!
   \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return dhall; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = dhall
 dhall.displayName = 'dhall'
 dhall.aliases = []
-
-/** @param {Refractor} Prism */
 function dhall(Prism) {
   // ABNF grammar:
   // https://github.com/dhall-lang/dhall-lang/blob/master/standard/dhall.abnf
-
   Prism.languages.dhall = {
     // Multi-line comments can be nested. E.g. {- foo {- bar -} -}
     // The multi-line pattern is essentially this:

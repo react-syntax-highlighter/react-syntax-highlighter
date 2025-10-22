@@ -4,20 +4,15 @@
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/json.js ***!
   \*********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return json; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = json
 json.displayName = 'json'
 json.aliases = ['webmanifest']
-
-/** @param {Refractor} Prism */
 function json(Prism) {
   // https://www.json.org/json-en.html
   Prism.languages.json = {
@@ -54,24 +49,17 @@ function json(Prism) {
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/json5.js ***!
   \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return json5; });
-/* harmony import */ var _json_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./json.js */ "./node_modules/refractor/lang/json.js");
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
 
+var refractorJson = __webpack_require__(/*! ./json.js */ "./node_modules/refractor/lang/json.js")
+module.exports = json5
 json5.displayName = 'json5'
 json5.aliases = []
-
-/** @param {Refractor} Prism */
 function json5(Prism) {
-  Prism.register(_json_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+  Prism.register(refractorJson)
   ;(function (Prism) {
     var string = /("|')(?:\\(?:\r\n?|\n|.)|(?!\1)[^\\\r\n])*\1/
     Prism.languages.json5 = Prism.languages.extend('json', {

@@ -4,20 +4,15 @@
 /*!*********************************************!*\
   !*** ./node_modules/refractor/lang/json.js ***!
   \*********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return json; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = json
 json.displayName = 'json'
 json.aliases = ['webmanifest']
-
-/** @param {Refractor} Prism */
 function json(Prism) {
   // https://www.json.org/json-en.html
   Prism.languages.json = {
@@ -54,24 +49,17 @@ function json(Prism) {
 /*!**********************************************!*\
   !*** ./node_modules/refractor/lang/jsonp.js ***!
   \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return jsonp; });
-/* harmony import */ var _json_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./json.js */ "./node_modules/refractor/lang/json.js");
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
 
+var refractorJson = __webpack_require__(/*! ./json.js */ "./node_modules/refractor/lang/json.js")
+module.exports = jsonp
 jsonp.displayName = 'jsonp'
 jsonp.aliases = []
-
-/** @param {Refractor} Prism */
 function jsonp(Prism) {
-  Prism.register(_json_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+  Prism.register(refractorJson)
   Prism.languages.jsonp = Prism.languages.extend('json', {
     punctuation: /[{}[\]();,.]/
   })

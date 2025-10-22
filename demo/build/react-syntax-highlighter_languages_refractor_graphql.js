@@ -4,20 +4,15 @@
 /*!************************************************!*\
   !*** ./node_modules/refractor/lang/graphql.js ***!
   \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return graphql; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
+
+
+module.exports = graphql
 graphql.displayName = 'graphql'
 graphql.aliases = []
-
-/** @param {Refractor} Prism */
 function graphql(Prism) {
   Prism.languages.graphql = {
     comment: /#.*/,
@@ -87,7 +82,6 @@ function graphql(Prism) {
     if (env.language !== 'graphql') {
       return
     }
-
     /**
      * get the graphql token stream that we want to customize
      *
@@ -102,7 +96,6 @@ function graphql(Prism) {
       )
     })
     var currentIndex = 0
-
     /**
      * Returns whether the token relative to the current index has the given type.
      *
@@ -112,7 +105,6 @@ function graphql(Prism) {
     function getToken(offset) {
       return validTokens[currentIndex + offset]
     }
-
     /**
      * Returns whether the token relative to the current index has the given type.
      *
@@ -130,7 +122,6 @@ function graphql(Prism) {
       }
       return true
     }
-
     /**
      * Returns the index of the closing bracket to an opening bracket.
      *
@@ -160,7 +151,6 @@ function graphql(Prism) {
       }
       return -1
     }
-
     /**
      * Adds an alias to the given token.
      *
@@ -178,9 +168,7 @@ function graphql(Prism) {
       aliases.push(alias)
     }
     for (; currentIndex < validTokens.length; ) {
-      var startToken = validTokens[currentIndex++]
-
-      // add special aliases for mutation tokens
+      var startToken = validTokens[currentIndex++] // add special aliases for mutation tokens
       if (startToken.type === 'keyword' && startToken.content === 'mutation') {
         // any array of the names of all input variables (if any)
         var inputVariables = []
@@ -189,15 +177,11 @@ function graphql(Prism) {
           getToken(1).content === '('
         ) {
           // definition
-
           currentIndex += 2 // skip 'definition-mutation' and 'punctuation'
-
           var definitionEnd = findClosingBracket(/^\($/, /^\)$/)
           if (definitionEnd === -1) {
             continue
-          }
-
-          // find all input variables
+          } // find all input variables
           for (; currentIndex < definitionEnd; currentIndex++) {
             var t = getToken(0)
             if (t.type === 'variable') {
@@ -212,15 +196,12 @@ function graphql(Prism) {
           getToken(0).content === '{'
         ) {
           currentIndex++ // skip opening bracket
-
           addAlias(getToken(0), 'property-mutation')
           if (inputVariables.length > 0) {
             var mutationEnd = findClosingBracket(/^\{$/, /^\}$/)
             if (mutationEnd === -1) {
               continue
-            }
-
-            // give references to input variables a special alias
+            } // give references to input variables a special alias
             for (var i = currentIndex; i < mutationEnd; i++) {
               var varToken = validTokens[i]
               if (

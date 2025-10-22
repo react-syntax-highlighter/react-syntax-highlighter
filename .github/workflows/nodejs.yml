@@ -9,7 +9,7 @@ jobs:
       token: d37b4f28-c0ae-4546-81c9-0487a264db20
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [16.20.2]
 
     steps:
     - uses: actions/checkout@v1

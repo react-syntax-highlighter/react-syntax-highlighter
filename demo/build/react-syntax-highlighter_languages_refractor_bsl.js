@@ -4,23 +4,17 @@
 /*!********************************************!*\
   !*** ./node_modules/refractor/lang/bsl.js ***!
   \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return bsl; });
-// @ts-nocheck
-/**
- * @import {Refractor} from '../lib/core.js'
- */
-bsl.displayName = 'bsl'
-bsl.aliases = ['oscript']
 
-/** @param {Refractor} Prism */
+
+module.exports = bsl
+bsl.displayName = 'bsl'
+bsl.aliases = []
 function bsl(Prism) {
   /* eslint-disable no-misleading-character-class */
-
   // 1C:Enterprise
   // https://github.com/Diversus23/
   //
@@ -32,8 +26,7 @@ function bsl(Prism) {
       {
         pattern: /"(?:[^"]|"")*"(?!")/,
         greedy: true
-      },
-      // Дата и время
+      }, // Дата и время
       // Date & time
       {
         pattern: /'(?:[^'\r\n\\]|\\.)*'/
@@ -58,14 +51,12 @@ function bsl(Prism) {
       lookbehind: true
     },
     operator: [
-      /[<>+\-*/]=?|[%=]/,
-      // RU
+      /[<>+\-*/]=?|[%=]/, // RU
       {
         pattern:
           /(^|[^\w\u0400-\u0484\u0487-\u052f\u1d2b\u1d78\u2de0-\u2dff\ua640-\ua69f\ufe2e\ufe2f])(?:и|или|не)(?![\w\u0400-\u0484\u0487-\u052f\u1d2b\u1d78\u2de0-\u2dff\ua640-\ua69f\ufe2e\ufe2f])/i,
         lookbehind: true
-      },
-      // EN
+      }, // EN
       {
         pattern: /\b(?:and|not|or)\b/i
       }
@@ -79,8 +70,7 @@ function bsl(Prism) {
         lookbehind: true,
         greedy: true,
         alias: 'important'
-      },
-      // Инструкции препроцессора вида:
+      }, // Инструкции препроцессора вида:
       // #Если Сервер Тогда
       // ...
       // #КонецЕсли
