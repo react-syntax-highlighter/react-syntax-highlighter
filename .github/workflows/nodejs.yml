@@ -23,4 +23,3 @@ jobs:
         npm run build --if-present
         npm run lint
         npm test
-        npm run publish-coverage
