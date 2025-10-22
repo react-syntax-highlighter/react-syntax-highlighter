@@ -32,7 +32,6 @@
     "babel-loader": "^8.0.4",
     "babel-plugin-transform-dynamic-import": "^2.1.0",
     "chokidar": "^3.6.0",
-    "codecov": "^3.2.0",
     "css": "^2.2.1",
     "css-loader": "^3.6.0",
     "eslint": "^7.7.0",
@@ -71,8 +70,7 @@
     "build-languages-prism": "node ./scripts/build-languages-refractor.js",
     "prepare": "npm run build-styles-hljs && npm run build-languages-hljs && npm run build-styles-prism && npm run build-languages-prism && npm run build",
     "test": "jest",
-    "test-ci": "jest && codecov",
-    "publish-coverage": "codecov",
+    "test-ci": "jest",
     "format": "npm run prettier",
     "prettier": "prettier --write --no-editorconfig \"{src,scripts,__tests__}/**/*.js\"",
     "lint": "eslint --ext .js,.jsx ./src ./scripts ./__tests__"
