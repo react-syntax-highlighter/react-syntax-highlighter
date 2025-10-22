@@ -1,2 +1,2 @@
-import reason from "refractor/lang/reason.js";;
+import reason from "refractor/reason";
 export default reason;

@@ -1,2 +1,2 @@
-import falselang from "refractor/lang/false.js";;
+import falselang from "refractor/false";
 export default falselang;

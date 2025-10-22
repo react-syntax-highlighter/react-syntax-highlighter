@@ -1,2 +1,2 @@
-import clike from "refractor/lang/clike.js";;
+import clike from "refractor/clike";
 export default clike;

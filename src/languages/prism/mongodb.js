@@ -1,2 +1,2 @@
-import mongodb from "refractor/lang/mongodb.js";;
+import mongodb from "refractor/mongodb";
 export default mongodb;

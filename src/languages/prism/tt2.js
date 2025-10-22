@@ -1,2 +1,2 @@
-import tt2 from "refractor/lang/tt2.js";;
+import tt2 from "refractor/tt2";
 export default tt2;

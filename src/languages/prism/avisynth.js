@@ -1,2 +1,2 @@
-import avisynth from "refractor/lang/avisynth.js";;
+import avisynth from "refractor/avisynth";
 export default avisynth;

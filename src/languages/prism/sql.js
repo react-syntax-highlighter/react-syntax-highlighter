@@ -1,2 +1,2 @@
-import sql from "refractor/lang/sql.js";;
+import sql from "refractor/sql";
 export default sql;

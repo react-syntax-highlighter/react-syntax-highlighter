@@ -1,2 +1,2 @@
-import uorazor from "refractor/lang/uorazor.js";;
+import uorazor from "refractor/uorazor";
 export default uorazor;

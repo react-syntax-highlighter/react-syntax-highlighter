@@ -1,2 +1,2 @@
-import latte from "refractor/lang/latte.js";;
+import latte from "refractor/latte";
 export default latte;

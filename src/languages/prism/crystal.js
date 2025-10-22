@@ -1,2 +1,2 @@
-import crystal from "refractor/lang/crystal.js";;
+import crystal from "refractor/crystal";
 export default crystal;

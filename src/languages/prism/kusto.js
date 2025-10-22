@@ -1,2 +1,2 @@
-import kusto from "refractor/lang/kusto.js";;
+import kusto from "refractor/kusto";
 export default kusto;

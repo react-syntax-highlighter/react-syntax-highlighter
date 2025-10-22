@@ -1,2 +1,2 @@
-import properties from "refractor/lang/properties.js";;
+import properties from "refractor/properties";
 export default properties;

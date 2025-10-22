@@ -1,2 +1,2 @@
-import cmake from "refractor/lang/cmake.js";;
+import cmake from "refractor/cmake";
 export default cmake;

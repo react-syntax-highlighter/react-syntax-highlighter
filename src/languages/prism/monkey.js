@@ -1,2 +1,2 @@
-import monkey from "refractor/lang/monkey.js";;
+import monkey from "refractor/monkey";
 export default monkey;

@@ -1,2 +1,2 @@
-import rip from "refractor/lang/rip.js";;
+import rip from "refractor/rip";
 export default rip;

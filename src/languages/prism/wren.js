@@ -1,2 +1,2 @@
-import wren from "refractor/lang/wren.js";;
+import wren from "refractor/wren";
 export default wren;

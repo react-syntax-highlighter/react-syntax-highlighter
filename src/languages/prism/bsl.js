@@ -1,2 +1,2 @@
-import bsl from "refractor/lang/bsl.js";;
+import bsl from "refractor/bsl";
 export default bsl;

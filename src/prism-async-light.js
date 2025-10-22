@@ -5,7 +5,7 @@ export default createAsyncLoadingHighlighter({
   loader: () =>
     import(
       /* webpackChunkName:"react-syntax-highlighter/refractor-core-import" */
-      'refractor/lib/core'
+      'refractor/core'
     ).then(module => {
       return module.refractor;
     }),

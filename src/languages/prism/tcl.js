@@ -1,2 +1,2 @@
-import tcl from "refractor/lang/tcl.js";;
+import tcl from "refractor/tcl";
 export default tcl;

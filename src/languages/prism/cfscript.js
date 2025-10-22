@@ -1,2 +1,2 @@
-import cfscript from "refractor/lang/cfscript.js";;
+import cfscript from "refractor/cfscript";
 export default cfscript;

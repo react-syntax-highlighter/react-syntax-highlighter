@@ -1,2 +1,2 @@
-import agda from "refractor/lang/agda.js";;
+import agda from "refractor/agda";
 export default agda;

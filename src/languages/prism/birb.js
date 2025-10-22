@@ -1,2 +1,2 @@
-import birb from "refractor/lang/birb.js";;
+import birb from "refractor/birb";
 export default birb;

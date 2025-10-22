@@ -1,2 +1,2 @@
-import sparql from "refractor/lang/sparql.js";;
+import sparql from "refractor/sparql";
 export default sparql;

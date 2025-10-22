@@ -6,21 +6,13 @@ module.exports = {
   devtool: 'source-map',
   mode: 'development',
   devServer: {
-    publicPath: '/demo/build/',
+    static: {
+      directory: path.join(__dirname, 'demo'),
+    },
     port: '9001',
     host: '0.0.0.0',
     compress: true,
-    disableHostCheck: true,
-    stats: {
-      assets: false,
-      colors: true,
-      version: false,
-      hash: false,
-      timings: true,
-      chunks: false,
-      chunkModules: false,
-      entrypoints: false
-    },
+    allowedHosts: 'all',
     headers: {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
@@ -48,12 +40,25 @@ module.exports = {
         loader: 'babel-loader',
         exclude: [/node_modules/]
       },
-      { test: /\.css$/, loader: 'style!css' }
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      }
     ]
   },
   plugins: [
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production')
     })
-  ]
+  ],
+  stats: {
+    assets: false,
+    colors: true,
+    version: false,
+    hash: false,
+    timings: true,
+    chunks: false,
+    chunkModules: false,
+    entrypoints: false
+  },
 };

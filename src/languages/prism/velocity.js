@@ -1,2 +1,2 @@
-import velocity from "refractor/lang/velocity.js";;
+import velocity from "refractor/velocity";
 export default velocity;

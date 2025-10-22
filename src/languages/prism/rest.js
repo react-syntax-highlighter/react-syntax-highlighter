@@ -1,2 +1,2 @@
-import rest from "refractor/lang/rest.js";;
+import rest from "refractor/rest";
 export default rest;

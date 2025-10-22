@@ -1,2 +1,2 @@
-import objectivec from "refractor/lang/objectivec.js";;
+import objectivec from "refractor/objectivec";
 export default objectivec;

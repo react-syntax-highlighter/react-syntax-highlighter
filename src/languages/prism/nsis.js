@@ -1,2 +1,2 @@
-import nsis from "refractor/lang/nsis.js";;
+import nsis from "refractor/nsis";
 export default nsis;

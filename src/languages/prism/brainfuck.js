@@ -1,2 +1,2 @@
-import brainfuck from "refractor/lang/brainfuck.js";;
+import brainfuck from "refractor/brainfuck";
 export default brainfuck;

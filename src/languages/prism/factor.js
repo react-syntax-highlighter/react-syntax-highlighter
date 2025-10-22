@@ -1,2 +1,2 @@
-import factor from "refractor/lang/factor.js";;
+import factor from "refractor/factor";
 export default factor;

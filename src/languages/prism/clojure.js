@@ -1,2 +1,2 @@
-import clojure from "refractor/lang/clojure.js";;
+import clojure from "refractor/clojure";
 export default clojure;

@@ -1,2 +1,2 @@
-import markup from "refractor/lang/markup.js";;
+import markup from "refractor/markup";
 export default markup;

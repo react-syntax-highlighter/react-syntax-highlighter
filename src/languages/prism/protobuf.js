@@ -1,2 +1,2 @@
-import protobuf from "refractor/lang/protobuf.js";;
+import protobuf from "refractor/protobuf";
 export default protobuf;

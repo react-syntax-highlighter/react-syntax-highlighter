@@ -1,2 +1,2 @@
-import css from "refractor/lang/css.js";;
+import css from "refractor/css";
 export default css;

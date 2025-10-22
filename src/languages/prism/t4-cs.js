@@ -1,2 +1,2 @@
-import t4Cs from "refractor/lang/t4-cs.js";;
+import t4Cs from "refractor/t4-cs";
 export default t4Cs;

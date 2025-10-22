@@ -1,2 +1,2 @@
-import erb from "refractor/lang/erb.js";;
+import erb from "refractor/erb";
 export default erb;

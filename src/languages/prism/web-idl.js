@@ -1,2 +1,2 @@
-import webIdl from "refractor/lang/web-idl.js";;
+import webIdl from "refractor/web-idl";
 export default webIdl;

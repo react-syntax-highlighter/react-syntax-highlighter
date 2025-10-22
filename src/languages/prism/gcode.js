@@ -1,2 +1,2 @@
-import gcode from "refractor/lang/gcode.js";;
+import gcode from "refractor/gcode";
 export default gcode;

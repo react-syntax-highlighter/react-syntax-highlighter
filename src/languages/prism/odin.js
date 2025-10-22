@@ -1,2 +1,2 @@
-import odin from "refractor/lang/odin.js";;
+import odin from "refractor/odin";
 export default odin;

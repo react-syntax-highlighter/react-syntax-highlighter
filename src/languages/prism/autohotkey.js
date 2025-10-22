@@ -1,2 +1,2 @@
-import autohotkey from "refractor/lang/autohotkey.js";;
+import autohotkey from "refractor/autohotkey";
 export default autohotkey;

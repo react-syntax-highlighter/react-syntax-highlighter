@@ -1,2 +1,2 @@
-import less from "refractor/lang/less.js";;
+import less from "refractor/less";
 export default less;

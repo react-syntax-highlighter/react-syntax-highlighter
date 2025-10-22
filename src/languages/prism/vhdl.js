@@ -1,2 +1,2 @@
-import vhdl from "refractor/lang/vhdl.js";;
+import vhdl from "refractor/vhdl";
 export default vhdl;

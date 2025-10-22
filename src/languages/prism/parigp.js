@@ -1,2 +1,2 @@
-import parigp from "refractor/lang/parigp.js";;
+import parigp from "refractor/parigp";
 export default parigp;

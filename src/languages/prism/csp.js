@@ -1,2 +1,2 @@
-import csp from "refractor/lang/csp.js";;
+import csp from "refractor/csp";
 export default csp;

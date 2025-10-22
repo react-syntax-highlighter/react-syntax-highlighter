@@ -1,2 +1,2 @@
-import visualBasic from "refractor/lang/visual-basic.js";;
+import visualBasic from "refractor/visual-basic";
 export default visualBasic;

@@ -1,2 +1,2 @@
-import mizar from "refractor/lang/mizar.js";;
+import mizar from "refractor/mizar";
 export default mizar;

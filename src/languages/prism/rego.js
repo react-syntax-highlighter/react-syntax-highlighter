@@ -1,2 +1,2 @@
-import rego from "refractor/lang/rego.js";;
+import rego from "refractor/rego";
 export default rego;

@@ -1,2 +1,2 @@
-import tap from "refractor/lang/tap.js";;
+import tap from "refractor/tap";
 export default tap;

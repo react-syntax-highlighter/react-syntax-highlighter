@@ -1,2 +1,2 @@
-import docker from "refractor/lang/docker.js";;
+import docker from "refractor/docker";
 export default docker;

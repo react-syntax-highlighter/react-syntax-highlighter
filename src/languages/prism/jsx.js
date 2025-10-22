@@ -1,2 +1,2 @@
-import jsx from "refractor/lang/jsx.js";;
+import jsx from "refractor/jsx";
 export default jsx;

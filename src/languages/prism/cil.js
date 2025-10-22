@@ -1,2 +1,2 @@
-import cil from "refractor/lang/cil.js";;
+import cil from "refractor/cil";
 export default cil;

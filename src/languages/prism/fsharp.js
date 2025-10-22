@@ -1,2 +1,2 @@
-import fsharp from "refractor/lang/fsharp.js";;
+import fsharp from "refractor/fsharp";
 export default fsharp;

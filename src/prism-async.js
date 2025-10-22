@@ -5,7 +5,7 @@ export default createAsyncLoadingHighlighter({
   loader: () =>
     import(
       /* webpackChunkName:"react-syntax-highlighter/refractor-import" */
-      'refractor/lib/all' // Import all languages from refractor
+      'refractor/all' // Import all languages from refractor
     ).then(module => {
       return module.refractor;
     }),

@@ -1,2 +1,2 @@
-import cue from "refractor/lang/cue.js";;
+import cue from "refractor/cue";
 export default cue;

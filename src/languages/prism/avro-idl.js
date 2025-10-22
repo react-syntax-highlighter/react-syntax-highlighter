@@ -1,2 +1,2 @@
-import avroIdl from "refractor/lang/avro-idl.js";;
+import avroIdl from "refractor/avro-idl";
 export default avroIdl;

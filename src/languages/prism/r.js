@@ -1,2 +1,2 @@
-import r from "refractor/lang/r.js";;
+import r from "refractor/r";
 export default r;

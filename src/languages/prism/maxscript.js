@@ -1,2 +1,2 @@
-import maxscript from "refractor/lang/maxscript.js";;
+import maxscript from "refractor/maxscript";
 export default maxscript;

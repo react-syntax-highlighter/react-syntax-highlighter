@@ -1,2 +1,2 @@
-import nix from "refractor/lang/nix.js";;
+import nix from "refractor/nix";
 export default nix;

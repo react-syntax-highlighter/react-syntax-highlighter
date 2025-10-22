@@ -1,2 +1,2 @@
-import scheme from "refractor/lang/scheme.js";;
+import scheme from "refractor/scheme";
 export default scheme;

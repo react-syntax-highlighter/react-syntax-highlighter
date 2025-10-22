@@ -1,2 +1,2 @@
-import go from "refractor/lang/go.js";;
+import go from "refractor/go";
 export default go;

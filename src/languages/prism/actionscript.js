@@ -1,2 +1,2 @@
-import actionscript from "refractor/lang/actionscript.js";;
+import actionscript from "refractor/actionscript";
 export default actionscript;

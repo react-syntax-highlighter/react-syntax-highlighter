@@ -1,2 +1,2 @@
-import ichigojam from "refractor/lang/ichigojam.js";;
+import ichigojam from "refractor/ichigojam";
 export default ichigojam;

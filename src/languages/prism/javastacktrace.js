@@ -1,2 +1,2 @@
-import javastacktrace from "refractor/lang/javastacktrace.js";;
+import javastacktrace from "refractor/javastacktrace";
 export default javastacktrace;

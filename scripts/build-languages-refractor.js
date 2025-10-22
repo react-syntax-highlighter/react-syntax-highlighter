@@ -19,9 +19,10 @@ function makeImportName(name) {
 }
 
 function createLanguagePassthroughModule(file) {
-  const importName = makeImportName(file.split('.js')[0]);
+  const fileWithoutJS = file.split('.js')[0];
+  const importName = makeImportName(fileWithoutJS);
   const lines = [
-    `import ${importName} from "refractor/lang/${file}";`,
+    `import ${importName} from "refractor/${fileWithoutJS}"`,
     `export default ${importName}`,
     ''
   ];
@@ -41,7 +42,7 @@ function createAsyncLanguageLoaderLine(file) {
   const fileWithoutJS = file.split('.js')[0];
   const importName = makeImportName(fileWithoutJS);
 
-  return `  ${importName}: createLanguageAsyncLoader("${importName}", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_${importName}" */ "refractor/lang/${file}")),`;
+  return `  ${importName}: createLanguageAsyncLoader("${importName}", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_refractor_${importName}" */ "refractor/${fileWithoutJS}")),`;
 }
 
 function createSupportedLanguagesArray(files) {

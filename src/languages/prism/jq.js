@@ -1,2 +1,2 @@
-import jq from "refractor/lang/jq.js";;
+import jq from "refractor/jq";
 export default jq;

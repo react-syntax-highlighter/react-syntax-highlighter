@@ -1,2 +1,2 @@
-import shellSession from "refractor/lang/shell-session.js";;
+import shellSession from "refractor/shell-session";
 export default shellSession;

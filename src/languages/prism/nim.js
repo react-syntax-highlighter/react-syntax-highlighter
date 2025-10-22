@@ -1,2 +1,2 @@
-import nim from "refractor/lang/nim.js";;
+import nim from "refractor/nim";
 export default nim;

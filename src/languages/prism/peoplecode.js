@@ -1,2 +1,2 @@
-import peoplecode from "refractor/lang/peoplecode.js";;
+import peoplecode from "refractor/peoplecode";
 export default peoplecode;

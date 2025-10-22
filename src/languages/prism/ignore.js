@@ -1,2 +1,2 @@
-import ignore from "refractor/lang/ignore.js";;
+import ignore from "refractor/ignore";
 export default ignore;

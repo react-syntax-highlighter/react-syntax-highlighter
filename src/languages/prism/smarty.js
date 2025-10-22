@@ -1,2 +1,2 @@
-import smarty from "refractor/lang/smarty.js";;
+import smarty from "refractor/smarty";
 export default smarty;

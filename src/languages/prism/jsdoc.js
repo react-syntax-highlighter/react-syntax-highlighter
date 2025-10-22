@@ -1,2 +1,2 @@
-import jsdoc from "refractor/lang/jsdoc.js";;
+import jsdoc from "refractor/jsdoc";
 export default jsdoc;

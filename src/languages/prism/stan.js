@@ -1,2 +1,2 @@
-import stan from "refractor/lang/stan.js";;
+import stan from "refractor/stan";
 export default stan;

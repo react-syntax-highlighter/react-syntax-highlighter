@@ -1,2 +1,2 @@
-import wgsl from "refractor/lang/wgsl.js";;
+import wgsl from "refractor/wgsl";
 export default wgsl;

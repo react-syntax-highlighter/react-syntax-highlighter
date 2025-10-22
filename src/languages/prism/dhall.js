@@ -1,2 +1,2 @@
-import dhall from "refractor/lang/dhall.js";;
+import dhall from "refractor/dhall";
 export default dhall;

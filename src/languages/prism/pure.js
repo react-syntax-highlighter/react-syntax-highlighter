@@ -1,2 +1,2 @@
-import pure from "refractor/lang/pure.js";;
+import pure from "refractor/pure";
 export default pure;

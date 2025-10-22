@@ -1,2 +1,2 @@
-import lisp from "refractor/lang/lisp.js";;
+import lisp from "refractor/lisp";
 export default lisp;

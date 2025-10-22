@@ -1,2 +1,2 @@
-import toml from "refractor/lang/toml.js";;
+import toml from "refractor/toml";
 export default toml;

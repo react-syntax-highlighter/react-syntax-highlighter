@@ -1,2 +1,2 @@
-import turtle from "refractor/lang/turtle.js";;
+import turtle from "refractor/turtle";
 export default turtle;

@@ -1,2 +1,2 @@
-import markdown from "refractor/lang/markdown.js";;
+import markdown from "refractor/markdown";
 export default markdown;

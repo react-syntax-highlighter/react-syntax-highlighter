@@ -1,2 +1,2 @@
-import puppet from "refractor/lang/puppet.js";;
+import puppet from "refractor/puppet";
 export default puppet;

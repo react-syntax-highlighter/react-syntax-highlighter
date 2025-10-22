@@ -1,2 +1,2 @@
-import cobol from "refractor/lang/cobol.js";;
+import cobol from "refractor/cobol";
 export default cobol;

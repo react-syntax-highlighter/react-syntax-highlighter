@@ -1,2 +1,2 @@
-import javadoclike from "refractor/lang/javadoclike.js";;
+import javadoclike from "refractor/javadoclike";
 export default javadoclike;

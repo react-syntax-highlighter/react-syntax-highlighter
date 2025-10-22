@@ -1,2 +1,2 @@
-import basic from "refractor/lang/basic.js";;
+import basic from "refractor/basic";
 export default basic;

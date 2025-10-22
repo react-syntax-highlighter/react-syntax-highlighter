@@ -1,2 +1,2 @@
-import mata from "refractor/lang/mata.js";;
+import mata from "refractor/mata";
 export default mata;

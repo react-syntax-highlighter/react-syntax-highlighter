@@ -1,2 +1,2 @@
-import hpkp from "refractor/lang/hpkp.js";;
+import hpkp from "refractor/hpkp";
 export default hpkp;

@@ -1,2 +1,2 @@
-import elm from "refractor/lang/elm.js";;
+import elm from "refractor/elm";
 export default elm;

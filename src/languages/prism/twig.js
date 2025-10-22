@@ -1,2 +1,2 @@
-import twig from "refractor/lang/twig.js";;
+import twig from "refractor/twig";
 export default twig;

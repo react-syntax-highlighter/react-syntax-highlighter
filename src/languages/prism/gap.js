@@ -1,2 +1,2 @@
-import gap from "refractor/lang/gap.js";;
+import gap from "refractor/gap";
 export default gap;

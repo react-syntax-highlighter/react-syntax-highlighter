@@ -1,2 +1,2 @@
-import keepalived from "refractor/lang/keepalived.js";;
+import keepalived from "refractor/keepalived";
 export default keepalived;

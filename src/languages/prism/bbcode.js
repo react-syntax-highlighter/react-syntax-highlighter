@@ -1,2 +1,2 @@
-import bbcode from "refractor/lang/bbcode.js";;
+import bbcode from "refractor/bbcode";
 export default bbcode;

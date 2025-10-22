@@ -1,2 +1,2 @@
-import batch from "refractor/lang/batch.js";;
+import batch from "refractor/batch";
 export default batch;

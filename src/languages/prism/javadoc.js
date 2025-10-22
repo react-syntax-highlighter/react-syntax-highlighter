@@ -1,2 +1,2 @@
-import javadoc from "refractor/lang/javadoc.js";;
+import javadoc from "refractor/javadoc";
 export default javadoc;

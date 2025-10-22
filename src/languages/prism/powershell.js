@@ -1,2 +1,2 @@
-import powershell from "refractor/lang/powershell.js";;
+import powershell from "refractor/powershell";
 export default powershell;

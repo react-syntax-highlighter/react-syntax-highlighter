@@ -1,2 +1,2 @@
-import pcaxis from "refractor/lang/pcaxis.js";;
+import pcaxis from "refractor/pcaxis";
 export default pcaxis;

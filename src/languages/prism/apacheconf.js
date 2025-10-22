@@ -1,2 +1,2 @@
-import apacheconf from "refractor/lang/apacheconf.js";;
+import apacheconf from "refractor/apacheconf";
 export default apacheconf;

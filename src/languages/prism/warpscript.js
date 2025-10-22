@@ -1,2 +1,2 @@
-import warpscript from "refractor/lang/warpscript.js";;
+import warpscript from "refractor/warpscript";
 export default warpscript;

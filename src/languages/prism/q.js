@@ -1,2 +1,2 @@
-import q from "refractor/lang/q.js";;
+import q from "refractor/q";
 export default q;

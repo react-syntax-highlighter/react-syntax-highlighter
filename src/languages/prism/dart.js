@@ -1,2 +1,2 @@
-import dart from "refractor/lang/dart.js";;
+import dart from "refractor/dart";
 export default dart;

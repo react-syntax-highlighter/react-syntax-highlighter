@@ -1,2 +1,2 @@
-import javascript from "refractor/lang/javascript.js";;
+import javascript from "refractor/javascript";
 export default javascript;

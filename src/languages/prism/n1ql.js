@@ -1,2 +1,2 @@
-import n1ql from "refractor/lang/n1ql.js";;
+import n1ql from "refractor/n1ql";
 export default n1ql;

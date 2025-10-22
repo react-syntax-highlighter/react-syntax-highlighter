@@ -1,2 +1,2 @@
-import asmatmel from "refractor/lang/asmatmel.js";;
+import asmatmel from "refractor/asmatmel";
 export default asmatmel;

@@ -1,2 +1,2 @@
-import bbj from "refractor/lang/bbj.js";;
+import bbj from "refractor/bbj";
 export default bbj;

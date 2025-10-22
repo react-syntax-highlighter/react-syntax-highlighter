@@ -1,2 +1,2 @@
-import typoscript from "refractor/lang/typoscript.js";;
+import typoscript from "refractor/typoscript";
 export default typoscript;

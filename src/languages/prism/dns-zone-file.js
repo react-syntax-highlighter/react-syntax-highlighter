@@ -1,2 +1,2 @@
-import dnsZoneFile from "refractor/lang/dns-zone-file.js";;
+import dnsZoneFile from "refractor/dns-zone-file";
 export default dnsZoneFile;

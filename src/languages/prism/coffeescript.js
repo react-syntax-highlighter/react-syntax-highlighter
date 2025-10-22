@@ -1,2 +1,2 @@
-import coffeescript from "refractor/lang/coffeescript.js";;
+import coffeescript from "refractor/coffeescript";
 export default coffeescript;

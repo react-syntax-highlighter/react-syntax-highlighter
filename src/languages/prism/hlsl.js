@@ -1,2 +1,2 @@
-import hlsl from "refractor/lang/hlsl.js";;
+import hlsl from "refractor/hlsl";
 export default hlsl;

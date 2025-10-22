@@ -1,2 +1,2 @@
-import cpp from "refractor/lang/cpp.js";;
+import cpp from "refractor/cpp";
 export default cpp;

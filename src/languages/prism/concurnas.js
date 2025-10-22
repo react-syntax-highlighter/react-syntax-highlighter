@@ -1,2 +1,2 @@
-import concurnas from "refractor/lang/concurnas.js";;
+import concurnas from "refractor/concurnas";
 export default concurnas;

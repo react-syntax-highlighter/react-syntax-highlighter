@@ -1,2 +1,2 @@
-import glsl from "refractor/lang/glsl.js";;
+import glsl from "refractor/glsl";
 export default glsl;

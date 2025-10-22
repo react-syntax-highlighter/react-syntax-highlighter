@@ -1,2 +1,2 @@
-import opencl from "refractor/lang/opencl.js";;
+import opencl from "refractor/opencl";
 export default opencl;

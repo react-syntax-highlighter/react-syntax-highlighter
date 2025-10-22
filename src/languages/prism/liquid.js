@@ -1,2 +1,2 @@
-import liquid from "refractor/lang/liquid.js";;
+import liquid from "refractor/liquid";
 export default liquid;

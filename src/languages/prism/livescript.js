@@ -1,2 +1,2 @@
-import livescript from "refractor/lang/livescript.js";;
+import livescript from "refractor/livescript";
 export default livescript;

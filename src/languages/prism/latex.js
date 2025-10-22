@@ -1,2 +1,2 @@
-import latex from "refractor/lang/latex.js";;
+import latex from "refractor/latex";
 export default latex;

@@ -1,2 +1,2 @@
-import ftl from "refractor/lang/ftl.js";;
+import ftl from "refractor/ftl";
 export default ftl;

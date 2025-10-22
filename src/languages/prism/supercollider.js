@@ -1,2 +1,2 @@
-import supercollider from "refractor/lang/supercollider.js";;
+import supercollider from "refractor/supercollider";
 export default supercollider;

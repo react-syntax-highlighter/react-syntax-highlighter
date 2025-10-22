@@ -1,2 +1,2 @@
-import bicep from "refractor/lang/bicep.js";;
+import bicep from "refractor/bicep";
 export default bicep;

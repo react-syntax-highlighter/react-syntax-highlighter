@@ -1,2 +1,2 @@
-import elixir from "refractor/lang/elixir.js";;
+import elixir from "refractor/elixir";
 export default elixir;

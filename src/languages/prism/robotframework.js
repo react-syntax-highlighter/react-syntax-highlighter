@@ -1,2 +1,2 @@
-import robotframework from "refractor/lang/robotframework.js";;
+import robotframework from "refractor/robotframework";
 export default robotframework;

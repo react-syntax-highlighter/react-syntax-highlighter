@@ -1,2 +1,2 @@
-import lilypond from "refractor/lang/lilypond.js";;
+import lilypond from "refractor/lilypond";
 export default lilypond;

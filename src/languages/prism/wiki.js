@@ -1,2 +1,2 @@
-import wiki from "refractor/lang/wiki.js";;
+import wiki from "refractor/wiki";
 export default wiki;

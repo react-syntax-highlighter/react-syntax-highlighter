@@ -1,2 +1,2 @@
-import vim from "refractor/lang/vim.js";;
+import vim from "refractor/vim";
 export default vim;

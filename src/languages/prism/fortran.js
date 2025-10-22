@@ -1,2 +1,2 @@
-import fortran from "refractor/lang/fortran.js";;
+import fortran from "refractor/fortran";
 export default fortran;

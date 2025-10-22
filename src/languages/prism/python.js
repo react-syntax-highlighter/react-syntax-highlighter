@@ -1,2 +1,2 @@
-import python from "refractor/lang/python.js";;
+import python from "refractor/python";
 export default python;

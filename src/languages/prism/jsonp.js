@@ -1,2 +1,2 @@
-import jsonp from "refractor/lang/jsonp.js";;
+import jsonp from "refractor/jsonp";
 export default jsonp;

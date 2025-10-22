@@ -1,2 +1,2 @@
-import xmlDoc from "refractor/lang/xml-doc.js";;
+import xmlDoc from "refractor/xml-doc";
 export default xmlDoc;

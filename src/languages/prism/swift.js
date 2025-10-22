@@ -1,2 +1,2 @@
-import swift from "refractor/lang/swift.js";;
+import swift from "refractor/swift";
 export default swift;

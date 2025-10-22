@@ -1,2 +1,2 @@
-import abnf from "refractor/lang/abnf.js";;
+import abnf from "refractor/abnf";
 export default abnf;

@@ -1,2 +1,2 @@
-import unrealscript from "refractor/lang/unrealscript.js";;
+import unrealscript from "refractor/unrealscript";
 export default unrealscript;

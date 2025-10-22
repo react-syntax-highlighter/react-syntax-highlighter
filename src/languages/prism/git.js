@@ -1,2 +1,2 @@
-import git from "refractor/lang/git.js";;
+import git from "refractor/git";
 export default git;

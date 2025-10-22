@@ -1,2 +1,2 @@
-import csv from "refractor/lang/csv.js";;
+import csv from "refractor/csv";
 export default csv;

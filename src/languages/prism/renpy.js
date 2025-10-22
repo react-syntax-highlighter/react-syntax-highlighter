@@ -1,2 +1,2 @@
-import renpy from "refractor/lang/renpy.js";;
+import renpy from "refractor/renpy";
 export default renpy;

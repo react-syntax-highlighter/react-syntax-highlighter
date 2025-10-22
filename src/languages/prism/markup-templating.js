@@ -1,2 +1,2 @@
-import markupTemplating from "refractor/lang/markup-templating.js";;
+import markupTemplating from "refractor/markup-templating";
 export default markupTemplating;
