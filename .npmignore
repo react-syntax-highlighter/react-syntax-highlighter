@@ -6,6 +6,7 @@ __tests__
 npm-debug.log
 webpack.config.js
 babel.config.js
+jest.config.js
 
 .DS_Store
 .circleci
