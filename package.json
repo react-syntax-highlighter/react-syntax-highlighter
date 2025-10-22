@@ -41,7 +41,7 @@
     "eslint-plugin-react": "^7.20.6",
     "husky": "^1.1.4",
     "jest": "^26.1.0",
-    "lint-staged": "^8.0.5",
+    "lint-staged": "^16.2.5",
     "prettier": "^1.15.2",
     "prism-themes": "1.9.0",
     "react": "^15.2.0",
