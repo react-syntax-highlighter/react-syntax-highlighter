@@ -28,7 +28,7 @@
     "@babel/preset-react": "^7.0.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.1.0",
-    "babel-jest": "^26.1.0",
+    "babel-jest": "^30.2.0",
     "babel-loader": "^8.0.4",
     "babel-plugin-transform-dynamic-import": "^2.1.0",
     "chokidar": "^3.6.0",
@@ -41,8 +41,8 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.6",
     "husky": "^1.1.4",
-    "jest": "^26.1.0",
-    "lint-staged": "^8.0.5",
+    "jest": "^30.2.0",
+    "lint-staged": "^16.2.5",
     "prettier": "^1.15.2",
     "prism-themes": "1.9.0",
     "react": "^15.2.0",
@@ -52,9 +52,9 @@
     "request": "^2.88.0",
     "style-loader": "^0.13.0",
     "to-camel-case": "^1.0.0",
-    "webpack": "^4.22.0",
+    "webpack": "^5.102.1",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.14"
+    "webpack-dev-server": "^5.2.2"
   },
   "peerDependencies": {
     "react": ">= 0.14.0"
