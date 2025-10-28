@@ -1,2 +1,2 @@
-import dataweave from "refractor/lang/dataweave.js";;
+import dataweave from "refractor/dataweave";
 export default dataweave;

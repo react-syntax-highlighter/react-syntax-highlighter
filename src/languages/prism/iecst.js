@@ -1,2 +1,2 @@
-import iecst from "refractor/lang/iecst.js";;
+import iecst from "refractor/iecst";
 export default iecst;

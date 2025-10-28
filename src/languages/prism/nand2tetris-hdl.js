@@ -1,2 +1,2 @@
-import nand2tetrisHdl from "refractor/lang/nand2tetris-hdl.js";;
+import nand2tetrisHdl from "refractor/nand2tetris-hdl";
 export default nand2tetrisHdl;

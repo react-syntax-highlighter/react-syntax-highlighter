@@ -1,2 +1,2 @@
-import aspnet from "refractor/lang/aspnet.js";;
+import aspnet from "refractor/aspnet";
 export default aspnet;

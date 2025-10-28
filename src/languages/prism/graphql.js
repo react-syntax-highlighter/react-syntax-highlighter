@@ -1,2 +1,2 @@
-import graphql from "refractor/lang/graphql.js";;
+import graphql from "refractor/graphql";
 export default graphql;

@@ -1,2 +1,2 @@
-import sml from "refractor/lang/sml.js";;
+import sml from "refractor/sml";
 export default sml;

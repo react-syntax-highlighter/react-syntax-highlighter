@@ -1,2 +1,2 @@
-import textile from "refractor/lang/textile.js";;
+import textile from "refractor/textile";
 export default textile;

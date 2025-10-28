@@ -1,2 +1,2 @@
-import smali from "refractor/lang/smali.js";;
+import smali from "refractor/smali";
 export default smali;

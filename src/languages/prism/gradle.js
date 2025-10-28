@@ -1,2 +1,2 @@
-import gradle from "refractor/lang/gradle.js";;
+import gradle from "refractor/gradle";
 export default gradle;

@@ -1,2 +1,2 @@
-import haxe from "refractor/lang/haxe.js";;
+import haxe from "refractor/haxe";
 export default haxe;

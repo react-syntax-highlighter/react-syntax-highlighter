@@ -1,2 +1,2 @@
-import bnf from "refractor/lang/bnf.js";;
+import bnf from "refractor/bnf";
 export default bnf;

@@ -1,2 +1,2 @@
-import yaml from "refractor/lang/yaml.js";;
+import yaml from "refractor/yaml";
 export default yaml;

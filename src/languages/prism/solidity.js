@@ -1,2 +1,2 @@
-import solidity from "refractor/lang/solidity.js";;
+import solidity from "refractor/solidity";
 export default solidity;

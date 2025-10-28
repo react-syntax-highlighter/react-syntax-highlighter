@@ -1,2 +1,2 @@
-import dax from "refractor/lang/dax.js";;
+import dax from "refractor/dax";
 export default dax;

@@ -1,2 +1,2 @@
-import php from "refractor/lang/php.js";;
+import php from "refractor/php";
 export default php;

@@ -1,2 +1,2 @@
-import moonscript from "refractor/lang/moonscript.js";;
+import moonscript from "refractor/moonscript";
 export default moonscript;

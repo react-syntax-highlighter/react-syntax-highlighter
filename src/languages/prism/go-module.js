@@ -1,2 +1,2 @@
-import goModule from "refractor/lang/go-module.js";;
+import goModule from "refractor/go-module";
 export default goModule;

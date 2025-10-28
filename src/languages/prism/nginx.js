@@ -1,2 +1,2 @@
-import nginx from "refractor/lang/nginx.js";;
+import nginx from "refractor/nginx";
 export default nginx;

@@ -1,2 +1,2 @@
-import soy from "refractor/lang/soy.js";;
+import soy from "refractor/soy";
 export default soy;

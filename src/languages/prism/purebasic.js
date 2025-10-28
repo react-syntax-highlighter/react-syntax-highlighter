@@ -1,2 +1,2 @@
-import purebasic from "refractor/lang/purebasic.js";;
+import purebasic from "refractor/purebasic";
 export default purebasic;

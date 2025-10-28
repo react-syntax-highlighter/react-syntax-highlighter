@@ -1,2 +1,2 @@
-import handlebars from "refractor/lang/handlebars.js";;
+import handlebars from "refractor/handlebars";
 export default handlebars;

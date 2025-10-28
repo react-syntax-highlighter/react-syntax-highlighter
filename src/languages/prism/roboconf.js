@@ -1,2 +1,2 @@
-import roboconf from "refractor/lang/roboconf.js";;
+import roboconf from "refractor/roboconf";
 export default roboconf;

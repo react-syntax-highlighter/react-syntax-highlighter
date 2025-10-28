@@ -1,2 +1,2 @@
-import awk from "refractor/lang/awk.js";;
+import awk from "refractor/awk";
 export default awk;

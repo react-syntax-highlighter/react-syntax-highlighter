@@ -1,2 +1,2 @@
-import keyman from "refractor/lang/keyman.js";;
+import keyman from "refractor/keyman";
 export default keyman;

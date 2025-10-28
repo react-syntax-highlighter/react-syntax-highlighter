@@ -1,2 +1,2 @@
-import tsx from "refractor/lang/tsx.js";;
+import tsx from "refractor/tsx";
 export default tsx;

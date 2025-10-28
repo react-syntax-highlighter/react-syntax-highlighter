@@ -1,2 +1,2 @@
-import wasm from "refractor/lang/wasm.js";;
+import wasm from "refractor/wasm";
 export default wasm;

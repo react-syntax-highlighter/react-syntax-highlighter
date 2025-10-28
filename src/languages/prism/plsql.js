@@ -1,2 +1,2 @@
-import plsql from "refractor/lang/plsql.js";;
+import plsql from "refractor/plsql";
 export default plsql;

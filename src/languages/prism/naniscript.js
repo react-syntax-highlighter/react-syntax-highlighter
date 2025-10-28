@@ -1,2 +1,2 @@
-import naniscript from "refractor/lang/naniscript.js";;
+import naniscript from "refractor/naniscript";
 export default naniscript;

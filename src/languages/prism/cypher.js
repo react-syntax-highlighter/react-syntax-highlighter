@@ -1,2 +1,2 @@
-import cypher from "refractor/lang/cypher.js";;
+import cypher from "refractor/cypher";
 export default cypher;

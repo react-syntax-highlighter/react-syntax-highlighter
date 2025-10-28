@@ -1,2 +1,2 @@
-import systemd from "refractor/lang/systemd.js";;
+import systemd from "refractor/systemd";
 export default systemd;

@@ -1,2 +1,2 @@
-import armasm from "refractor/lang/armasm.js";;
+import armasm from "refractor/armasm";
 export default armasm;

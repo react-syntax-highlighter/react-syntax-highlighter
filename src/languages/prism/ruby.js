@@ -1,2 +1,2 @@
-import ruby from "refractor/lang/ruby.js";;
+import ruby from "refractor/ruby";
 export default ruby;

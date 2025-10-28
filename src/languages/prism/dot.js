@@ -1,2 +1,2 @@
-import dot from "refractor/lang/dot.js";;
+import dot from "refractor/dot";
 export default dot;

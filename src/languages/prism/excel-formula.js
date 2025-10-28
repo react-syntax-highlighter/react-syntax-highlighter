@@ -1,2 +1,2 @@
-import excelFormula from "refractor/lang/excel-formula.js";;
+import excelFormula from "refractor/excel-formula";
 export default excelFormula;

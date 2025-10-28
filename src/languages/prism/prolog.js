@@ -1,2 +1,2 @@
-import prolog from "refractor/lang/prolog.js";;
+import prolog from "refractor/prolog";
 export default prolog;

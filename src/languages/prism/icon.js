@@ -1,2 +1,2 @@
-import icon from "refractor/lang/icon.js";;
+import icon from "refractor/icon";
 export default icon;

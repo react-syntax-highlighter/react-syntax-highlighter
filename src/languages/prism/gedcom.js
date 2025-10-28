@@ -1,2 +1,2 @@
-import gedcom from "refractor/lang/gedcom.js";;
+import gedcom from "refractor/gedcom";
 export default gedcom;

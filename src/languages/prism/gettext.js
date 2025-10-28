@@ -1,2 +1,2 @@
-import gettext from "refractor/lang/gettext.js";;
+import gettext from "refractor/gettext";
 export default gettext;

@@ -1,2 +1,2 @@
-import vbnet from "refractor/lang/vbnet.js";;
+import vbnet from "refractor/vbnet";
 export default vbnet;

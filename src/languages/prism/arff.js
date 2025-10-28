@@ -1,2 +1,2 @@
-import arff from "refractor/lang/arff.js";;
+import arff from "refractor/arff";
 export default arff;

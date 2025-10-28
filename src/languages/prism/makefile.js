@@ -1,2 +1,2 @@
-import makefile from "refractor/lang/makefile.js";;
+import makefile from "refractor/makefile";
 export default makefile;

@@ -1,2 +1,2 @@
-import hsts from "refractor/lang/hsts.js";;
+import hsts from "refractor/hsts";
 export default hsts;

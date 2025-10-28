@@ -1,2 +1,2 @@
-import arturo from "refractor/lang/arturo.js";;
+import arturo from "refractor/arturo";
 export default arturo;

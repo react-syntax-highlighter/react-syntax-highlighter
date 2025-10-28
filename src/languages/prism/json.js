@@ -1,2 +1,2 @@
-import json from "refractor/lang/json.js";;
+import json from "refractor/json";
 export default json;

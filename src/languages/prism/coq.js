@@ -1,2 +1,2 @@
-import coq from "refractor/lang/coq.js";;
+import coq from "refractor/coq";
 export default coq;

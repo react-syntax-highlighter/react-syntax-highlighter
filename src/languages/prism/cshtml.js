@@ -1,2 +1,2 @@
-import cshtml from "refractor/lang/cshtml.js";;
+import cshtml from "refractor/cshtml";
 export default cshtml;

@@ -1,2 +1,2 @@
-import llvm from "refractor/lang/llvm.js";;
+import llvm from "refractor/llvm";
 export default llvm;

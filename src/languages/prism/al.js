@@ -1,2 +1,2 @@
-import al from "refractor/lang/al.js";;
+import al from "refractor/al";
 export default al;

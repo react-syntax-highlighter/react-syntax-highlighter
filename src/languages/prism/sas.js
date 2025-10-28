@@ -1,2 +1,2 @@
-import sas from "refractor/lang/sas.js";;
+import sas from "refractor/sas";
 export default sas;

@@ -1,2 +1,2 @@
-import hoon from "refractor/lang/hoon.js";;
+import hoon from "refractor/hoon";
 export default hoon;

@@ -1,2 +1,2 @@
-import aql from "refractor/lang/aql.js";;
+import aql from "refractor/aql";
 export default aql;

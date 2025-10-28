@@ -1,2 +1,2 @@
-import julia from "refractor/lang/julia.js";;
+import julia from "refractor/julia";
 export default julia;

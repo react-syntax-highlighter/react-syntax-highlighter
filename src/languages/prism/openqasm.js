@@ -1,2 +1,2 @@
-import openqasm from "refractor/lang/openqasm.js";;
+import openqasm from "refractor/openqasm";
 export default openqasm;

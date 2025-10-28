@@ -1,2 +1,2 @@
-import kotlin from "refractor/lang/kotlin.js";;
+import kotlin from "refractor/kotlin";
 export default kotlin;

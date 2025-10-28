@@ -1,2 +1,2 @@
-import cilkcpp from "refractor/lang/cilkcpp.js";;
+import cilkcpp from "refractor/cilkcpp";
 export default cilkcpp;

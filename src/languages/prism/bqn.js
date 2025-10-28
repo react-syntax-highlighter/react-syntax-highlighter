@@ -1,2 +1,2 @@
-import bqn from "refractor/lang/bqn.js";;
+import bqn from "refractor/bqn";
 export default bqn;

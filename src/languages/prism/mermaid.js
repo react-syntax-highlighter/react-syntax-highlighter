@@ -1,2 +1,2 @@
-import mermaid from "refractor/lang/mermaid.js";;
+import mermaid from "refractor/mermaid";
 export default mermaid;

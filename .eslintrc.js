@@ -9,7 +9,7 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:jest/recommended'
   ],
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true
@@ -18,6 +18,11 @@ module.exports = {
     sourceType: 'module'
   },
   plugins: ['react', 'jest'],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
   rules: {
     'react/prop-types': 0
   },

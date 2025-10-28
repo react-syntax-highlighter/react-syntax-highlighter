@@ -1,2 +1,2 @@
-import solutionFile from "refractor/lang/solution-file.js";;
+import solutionFile from "refractor/solution-file";
 export default solutionFile;

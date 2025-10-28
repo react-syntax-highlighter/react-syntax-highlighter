@@ -1,2 +1,2 @@
-import linkerScript from "refractor/lang/linker-script.js";;
+import linkerScript from "refractor/linker-script";
 export default linkerScript;

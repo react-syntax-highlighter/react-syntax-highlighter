@@ -1,2 +1,2 @@
-import scala from "refractor/lang/scala.js";;
+import scala from "refractor/scala";
 export default scala;

@@ -1,2 +1,2 @@
-import bro from "refractor/lang/bro.js";;
+import bro from "refractor/bro";
 export default bro;

@@ -1,2 +1,2 @@
-import gdscript from "refractor/lang/gdscript.js";;
+import gdscript from "refractor/gdscript";
 export default gdscript;

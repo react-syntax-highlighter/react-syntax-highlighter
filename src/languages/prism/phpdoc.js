@@ -1,2 +1,2 @@
-import phpdoc from "refractor/lang/phpdoc.js";;
+import phpdoc from "refractor/phpdoc";
 export default phpdoc;

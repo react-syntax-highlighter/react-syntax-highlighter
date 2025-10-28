@@ -1,2 +1,2 @@
-import rust from "refractor/lang/rust.js";;
+import rust from "refractor/rust";
 export default rust;

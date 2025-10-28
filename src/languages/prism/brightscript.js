@@ -1,2 +1,2 @@
-import brightscript from "refractor/lang/brightscript.js";;
+import brightscript from "refractor/brightscript";
 export default brightscript;

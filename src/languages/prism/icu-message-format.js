@@ -1,2 +1,2 @@
-import icuMessageFormat from "refractor/lang/icu-message-format.js";;
+import icuMessageFormat from "refractor/icu-message-format";
 export default icuMessageFormat;

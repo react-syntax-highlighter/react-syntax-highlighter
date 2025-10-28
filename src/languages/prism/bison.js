@@ -1,2 +1,2 @@
-import bison from "refractor/lang/bison.js";;
+import bison from "refractor/bison";
 export default bison;

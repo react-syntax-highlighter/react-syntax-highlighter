@@ -1,2 +1,2 @@
-import splunkSpl from "refractor/lang/splunk-spl.js";;
+import splunkSpl from "refractor/splunk-spl";
 export default splunkSpl;

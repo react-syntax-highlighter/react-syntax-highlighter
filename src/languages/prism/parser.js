@@ -1,2 +1,2 @@
-import parser from "refractor/lang/parser.js";;
+import parser from "refractor/parser";
 export default parser;

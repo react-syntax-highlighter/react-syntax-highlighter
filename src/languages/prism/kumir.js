@@ -1,2 +1,2 @@
-import kumir from "refractor/lang/kumir.js";;
+import kumir from "refractor/kumir";
 export default kumir;

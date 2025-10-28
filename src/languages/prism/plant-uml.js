@@ -1,2 +1,2 @@
-import plantUml from "refractor/lang/plant-uml.js";;
+import plantUml from "refractor/plant-uml";
 export default plantUml;

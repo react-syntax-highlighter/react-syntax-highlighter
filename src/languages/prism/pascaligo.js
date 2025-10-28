@@ -1,2 +1,2 @@
-import pascaligo from "refractor/lang/pascaligo.js";;
+import pascaligo from "refractor/pascaligo";
 export default pascaligo;

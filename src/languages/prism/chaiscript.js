@@ -1,2 +1,2 @@
-import chaiscript from "refractor/lang/chaiscript.js";;
+import chaiscript from "refractor/chaiscript";
 export default chaiscript;

@@ -1,2 +1,2 @@
-import pug from "refractor/lang/pug.js";;
+import pug from "refractor/pug";
 export default pug;

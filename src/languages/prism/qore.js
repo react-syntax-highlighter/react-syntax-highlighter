@@ -1,2 +1,2 @@
-import qore from "refractor/lang/qore.js";;
+import qore from "refractor/qore";
 export default qore;

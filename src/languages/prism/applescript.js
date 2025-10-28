@@ -1,2 +1,2 @@
-import applescript from "refractor/lang/applescript.js";;
+import applescript from "refractor/applescript";
 export default applescript;

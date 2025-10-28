@@ -1,2 +1,2 @@
-import ejs from "refractor/lang/ejs.js";;
+import ejs from "refractor/ejs";
 export default ejs;

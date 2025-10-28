@@ -1,2 +1,2 @@
-import scss from "refractor/lang/scss.js";;
+import scss from "refractor/scss";
 export default scss;

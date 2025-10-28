@@ -1,2 +1,2 @@
-import hcl from "refractor/lang/hcl.js";;
+import hcl from "refractor/hcl";
 export default hcl;

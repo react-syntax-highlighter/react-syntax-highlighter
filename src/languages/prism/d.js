@@ -1,2 +1,2 @@
-import d from "refractor/lang/d.js";;
+import d from "refractor/d";
 export default d;

@@ -1,2 +1,2 @@
-import purescript from "refractor/lang/purescript.js";;
+import purescript from "refractor/purescript";
 export default purescript;

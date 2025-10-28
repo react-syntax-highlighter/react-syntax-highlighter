@@ -1,2 +1,2 @@
-import metafont from "refractor/lang/metafont.js";;
+import metafont from "refractor/metafont";
 export default metafont;

@@ -1,2 +1,2 @@
-import json5 from "refractor/lang/json5.js";;
+import json5 from "refractor/json5";
 export default json5;

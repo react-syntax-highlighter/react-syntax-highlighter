@@ -1,2 +1,2 @@
-import erlang from "refractor/lang/erlang.js";;
+import erlang from "refractor/erlang";
 export default erlang;

@@ -1,2 +1,2 @@
-import promql from "refractor/lang/promql.js";;
+import promql from "refractor/promql";
 export default promql;

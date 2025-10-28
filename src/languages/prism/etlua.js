@@ -1,2 +1,2 @@
-import etlua from "refractor/lang/etlua.js";;
+import etlua from "refractor/etlua";
 export default etlua;

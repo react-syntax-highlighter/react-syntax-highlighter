@@ -1,2 +1,2 @@
-import apex from "refractor/lang/apex.js";;
+import apex from "refractor/apex";
 export default apex;

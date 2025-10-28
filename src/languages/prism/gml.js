@@ -1,2 +1,2 @@
-import gml from "refractor/lang/gml.js";;
+import gml from "refractor/gml";
 export default gml;

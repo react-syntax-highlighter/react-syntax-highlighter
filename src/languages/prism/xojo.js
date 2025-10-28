@@ -1,2 +1,2 @@
-import xojo from "refractor/lang/xojo.js";;
+import xojo from "refractor/xojo";
 export default xojo;

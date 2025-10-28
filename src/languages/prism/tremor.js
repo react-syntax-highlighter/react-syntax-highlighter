@@ -1,2 +1,2 @@
-import tremor from "refractor/lang/tremor.js";;
+import tremor from "refractor/tremor";
 export default tremor;

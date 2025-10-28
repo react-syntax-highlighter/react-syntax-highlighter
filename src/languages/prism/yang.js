@@ -1,2 +1,2 @@
-import yang from "refractor/lang/yang.js";;
+import yang from "refractor/yang";
 export default yang;

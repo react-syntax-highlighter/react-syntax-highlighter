@@ -1,2 +1,2 @@
-import mel from "refractor/lang/mel.js";;
+import mel from "refractor/mel";
 export default mel;

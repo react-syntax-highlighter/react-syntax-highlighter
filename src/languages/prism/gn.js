@@ -1,2 +1,2 @@
-import gn from "refractor/lang/gn.js";;
+import gn from "refractor/gn";
 export default gn;

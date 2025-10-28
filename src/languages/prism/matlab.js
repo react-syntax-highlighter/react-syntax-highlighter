@@ -1,2 +1,2 @@
-import matlab from "refractor/lang/matlab.js";;
+import matlab from "refractor/matlab";
 export default matlab;

@@ -1,2 +1,2 @@
-import ada from "refractor/lang/ada.js";;
+import ada from "refractor/ada";
 export default ada;

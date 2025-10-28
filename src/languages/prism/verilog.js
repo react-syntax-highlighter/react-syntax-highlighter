@@ -1,2 +1,2 @@
-import verilog from "refractor/lang/verilog.js";;
+import verilog from "refractor/verilog";
 export default verilog;

@@ -1,2 +1,2 @@
-import pascal from "refractor/lang/pascal.js";;
+import pascal from "refractor/pascal";
 export default pascal;

@@ -1,2 +1,2 @@
-import smalltalk from "refractor/lang/smalltalk.js";;
+import smalltalk from "refractor/smalltalk";
 export default smalltalk;

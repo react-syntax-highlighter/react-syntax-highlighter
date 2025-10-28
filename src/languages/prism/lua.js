@@ -1,2 +1,2 @@
-import lua from "refractor/lang/lua.js";;
+import lua from "refractor/lua";
 export default lua;

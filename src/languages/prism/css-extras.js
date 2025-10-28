@@ -1,2 +1,2 @@
-import cssExtras from "refractor/lang/css-extras.js";;
+import cssExtras from "refractor/css-extras";
 export default cssExtras;

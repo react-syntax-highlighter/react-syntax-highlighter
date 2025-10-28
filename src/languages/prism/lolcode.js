@@ -1,2 +1,2 @@
-import lolcode from "refractor/lang/lolcode.js";;
+import lolcode from "refractor/lolcode";
 export default lolcode;

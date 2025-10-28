@@ -1,2 +1,2 @@
-import jolie from "refractor/lang/jolie.js";;
+import jolie from "refractor/jolie";
 export default jolie;

@@ -1,2 +1,2 @@
-import ebnf from "refractor/lang/ebnf.js";;
+import ebnf from "refractor/ebnf";
 export default ebnf;

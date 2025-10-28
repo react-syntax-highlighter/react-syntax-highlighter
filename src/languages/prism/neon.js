@@ -1,2 +1,2 @@
-import neon from "refractor/lang/neon.js";;
+import neon from "refractor/neon";
 export default neon;

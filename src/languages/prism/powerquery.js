@@ -1,2 +1,2 @@
-import powerquery from "refractor/lang/powerquery.js";;
+import powerquery from "refractor/powerquery";
 export default powerquery;

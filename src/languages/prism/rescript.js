@@ -1,2 +1,2 @@
-import rescript from "refractor/lang/rescript.js";;
+import rescript from "refractor/rescript";
 export default rescript;

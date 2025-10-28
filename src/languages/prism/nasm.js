@@ -1,2 +1,2 @@
-import nasm from "refractor/lang/nasm.js";;
+import nasm from "refractor/nasm";
 export default nasm;

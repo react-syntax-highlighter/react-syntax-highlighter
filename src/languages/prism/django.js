@@ -1,2 +1,2 @@
-import django from "refractor/lang/django.js";;
+import django from "refractor/django";
 export default django;

@@ -1,2 +1,2 @@
-import xeora from "refractor/lang/xeora.js";;
+import xeora from "refractor/xeora";
 export default xeora;
