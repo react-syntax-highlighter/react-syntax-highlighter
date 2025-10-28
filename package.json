@@ -73,7 +73,7 @@
     "to-camel-case": "^1.0.0",
     "webpack": "^5.102.1",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.15.2"
+    "webpack-dev-server": "^5.2.1"
   },
   "peerDependencies": {
     "react": ">= 0.14.0"
