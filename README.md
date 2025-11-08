@@ -17,7 +17,7 @@ For React Native you can use <a href='https://github.com/conorhastings/react-nat
 
 ### Why This One?
 
-There are other syntax highlighters for `React` out there so why use this one? The biggest reason is that all the others rely on triggering calls in `componentDidMount` and `componentDidUpdate` to highlight the code block and then insert it in the render function using `dangerouslySetInnerHTML` or just manually altering the DOM with native javascript. This utilizes a syntax tree to dynamically build the virtual dom which allows for updating only the changing DOM instead of completely overwriting it on any change, and because of this it is also using more idiomatic `React` and allows the use of pure function components brought into `React` as of `0.14`.
+There are other syntax highlighters for `React` out there so why use this one? The biggest reason is that all the others rely on triggering calls in `componentDidMount` and `componentDidUpdate` to highlight the code block and then insert it in the render function using `dangerouslySetInnerHTML` or just manually altering the DOM with native javascript. This utilizes a syntax tree to dynamically build the virtual dom which allows for updating only the changing DOM instead of completely overwriting it on any change, and because of this it also uses more idiomatic `React` and allows the use of pure function components brought into `React` as of `0.14`.
 
 ### Javascript Styles!
 
@@ -30,7 +30,7 @@ I do realize that javascript styles are not for everyone, so you can optionally 
 #### props
 
 - `language` - the language to highlight code in. Available options [here for hljs](./AVAILABLE_LANGUAGES_HLJS.MD) and [here for prism](./AVAILABLE_LANGUAGES_PRISM.MD). (pass text to just render plain monospaced text)
-- `style` - style object required from styles/hljs or styles/prism directory depending on whether or not you are importing from `react-syntax-highlighter` or `react-syntax-highlighter/prism` directory [here for hljs](./AVAILABLE_STYLES_HLJS.MD). and [here for prism](./AVAILABLE_STYLES_PRISM.MD). `import { style } from 'react-syntax-highlighter/dist/esm/styles/{hljs|prism}'` . Will use default if style is not included.
+- `style` - style object required from styles/hljs or styles/prism directory depending on whether or not you are importing from `react-syntax-highlighter` or `react-syntax-highlighter/prism` directory [here for hljs](./AVAILABLE_STYLES_HLJS.MD). and [here for prism](./AVAILABLE_STYLES_PRISM.MD). `import { style } from 'react-syntax-highlighter/dist/esm/styles/{hljs|prism}'` . Will use the default if the style is not included.
 - `children` - the code to highlight.
 - `customStyle` - prop that will be combined with the top level style on the pre tag, styles here will overwrite earlier styles.
 - `codeTagProps` - props that will be spread into the `<code>` tag that is the direct parent of the highlighted code elements. Useful for styling/assigning classNames.
@@ -38,14 +38,14 @@ I do realize that javascript styles are not for everyone, so you can optionally 
 - `showLineNumbers` - if this is enabled line numbers will be shown next to the code block.
 - `showInlineLineNumbers` - if this is enabled in conjunction with `showLineNumbers`, line numbers will be rendered into each line, which allows line numbers to display properly when using renderers such as <a href="https://github.com/conorhastings/react-syntax-highlighter-virtualized-renderer">react-syntax-highlighter-virtualized-renderer</a>. (This prop will have no effect if `showLineNumbers` is `false`.)
 - `startingLineNumber` - if `showLineNumbers` is enabled the line numbering will start from here.
-- `lineNumberContainerStyle` - the line numbers container default to appearing to the left with 10px of right padding. You can use this to override those styles.
-- `lineNumberStyle` - inline style to be passed to the span wrapping each number. Can be either an object or a function that receives current line number as argument and returns style object.
+- `lineNumberContainerStyle` - the line numbers container defaults to appearing to the left with 10px of right padding. You can use this to override those styles.
+- `lineNumberStyle` - inline style to be passed to the span wrapping each number. Can be either an object or a function that receives the current line number as an argument and returns a style object.
 - `wrapLines` - a boolean value that determines whether or not each line of code should be wrapped in a parent element. defaults to false, when false one can not take action on an element on the line level. You can see an example of what this enables <a href="https://react-syntax-highlighter.github.io/react-syntax-highlighter/demo/diff.html">here</a>
 - `wrapLongLines` - boolean to specify whether to style the `<code>` block with `white-space: pre-wrap` or `white-space: pre`. [Demo](https://react-syntax-highlighter.github.io/react-syntax-highlighter/demo/)
-- `lineProps` - props to be passed to the span wrapping each line if wrapLines is true. Can be either an object or a function that receives current line number as argument and returns props object.
+- `lineProps` - props to be passed to the span wrapping each line if wrapLines is true. Can be either an object or a function that receives the current line number as an argument and returns a props object.
 - `renderer` - an optional custom renderer for rendering lines of code. See <a href="https://github.com/conorhastings/react-syntax-highlighter-virtualized-renderer">here</a> for an example.
-- `PreTag` - the element or custom react component to use in place of the default pre tag, the outermost tag of the component (useful for custom renderer not targeting DOM).
-- `CodeTag` - the element or custom react component to use in place of the default code tag, the second tag of the component tree (useful for custom renderer not targeting DOM).
+- `PreTag` - the element or custom react component to use in place of the default pre tag, the outermost tag of the component (useful for a custom renderer not targeting the DOM).
+- `CodeTag` - the element or custom react component to use in place of the default code tag, the second tag of the component tree (useful for a custom renderer not targeting the DOM).
 - `spread props` pass arbitrary props to pre tag wrapping code.
 
 ```js
@@ -63,7 +63,7 @@ const Component = () => {
 
 ### Prism
 
-Using <a href="https://github.com/wooorm/refractor">refractor</a> we can use an ast built on languages from Prism.js instead of highlight.js. This is beneficial especially when highlighting jsx, a problem long unsolved by this module. The semantics of use are basically the same although a light mode is not yet supported (though is coming in the future). You can see a demo(with jsx) using Prism(refractor) <a href="https://react-syntax-highlighter.github.io/react-syntax-highlighter/demo/prism.html">here</a>.
+Using <a href="https://github.com/wooorm/refractor">refractor</a> we can use an ast built on languages from Prism.js instead of highlight.js. This is beneficial especially when highlighting jsx, a problem long unsolved by this module. The semantics of use are basically the same although a light mode is not yet supported (though it is coming in the future). You can see a demo(with jsx) using Prism(refractor) <a href="https://react-syntax-highlighter.github.io/react-syntax-highlighter/demo/prism.html">here</a>.
 
 ```js
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
@@ -80,7 +80,7 @@ const Component = () => {
 
 ### Light Build
 
-React Syntax Highlighter used in the way described above can have a fairly large footprint. For those that desire more control over what exactly they need, there is an option to import a light build. If you choose to use this you will need to specifically import desired languages and register them using the registerLanguage export from the light build. There is also no default style provided.
+React Syntax Highlighter used in the way described above can have a fairly large footprint. For those who desire more control over what exactly they need, there is an option to import a light build. If you choose to use this you will need to specifically import desired languages and register them using the registerLanguage export from the light build. There is also no default style provided.
 
 ```js
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
@@ -102,9 +102,9 @@ SyntaxHighlighter.registerLanguage('jsx', jsx);
 
 ### Async Build
 
-For optimal bundle size for rendering ASAP, there's a async version of prism light & light.
-This versions requires you to use a bundler that supports the dynamic import syntax, like webpack.
-This will defer loading of refractor (17kb gzipped) & the languages, while code splits are loaded the code will show with line numbers
+For optimal bundle size for rendering ASAP, there's an async version of prism light & light.
+This version requires you to use a bundler that supports the dynamic import syntax, like webpack.
+This will defer loading of the refractor (17kb gzipped) & the languages, while code splits are loaded the code will show with line numbers
 but without highlighting.
 
 Prism version:
@@ -145,12 +145,12 @@ LightSyntaxHighlighter.registerLanguage('curl', curl);
 ### Built with React Syntax Highlighter
 
 - [mdx-deck](https://github.com/jxnblk/mdx-deck) - MDX-based presentation decks
-- [codecrumbs](https://github.com/Bogdan-Lyashenko/codecrumbs) - Learn, design or document codebase by putting breadcrumbs in source code. Live updates, multi-language support, and easy sharing.
+- [codecrumbs](https://github.com/Bogdan-Lyashenko/codecrumbs) - Learn, design or document a codebase by putting breadcrumbs in source code. Live updates, multi-language support, and easy sharing.
 - [Spectacle Editor](https://github.com/FormidableLabs/spectacle-editor) - An Electron based app for creating, editing, saving, and publishing Spectacle presentations. With integrated Plotly support.
 - [Superset](https://github.com/airbnb/superset) - Superset is a data exploration platform designed to be visual, intuitive, and interactive.
 - [Daydream](https://github.com/segmentio/daydream) - A chrome extension to record your actions into a [nightmare](https://github.com/segmentio/nightmare) script
-- [CodeDoc](https://github.com/B1naryStudio/CodeDoc) - Electron based application build with React for creating project documentations
-- [React Component Demo](https://github.com/conorhastings/react-component-demo) - A React Component To make live editable demos of other React Components.
+- [CodeDoc](https://github.com/B1naryStudio/CodeDoc) - Electron based application built with React for creating project documentation
+- [React Component Demo](https://github.com/conorhastings/react-component-demo) - A React Component to make live editable demos of other React Components.
 - [Redux Test Recorder](https://github.com/conorhastings/redux-test-recorder) - a redux middleware to automatically generate tests for reducers through ui interaction. Syntax highlighter used by react plugin.
 - [GitPoint](https://github.com/gitpoint/git-point) - GitHub for iOS. Built with React Native. (built using react-native-syntax-highlighter)
 - [Yoga Layout Playground](https://yogalayout.com/playground) - generate code for yoga layout in multiple languages
