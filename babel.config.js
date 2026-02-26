@@ -12,7 +12,10 @@ module.exports = {
       presets: [['@babel/env']]
     },
     esm: {
-      plugins: ['@babel/transform-runtime'],
+      plugins: [
+        '@babel/transform-runtime',
+        ['babel-plugin-add-import-extension', { extension: 'js' }]
+      ],
       presets: [
         [
           '@babel/env',
