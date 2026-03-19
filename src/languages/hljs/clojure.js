@@ -1,2 +1,2 @@
-import clojure from "highlight.js/lib/languages/clojure";
+import clojure from "highlight.js/lib/languages/clojure.js";
 export default clojure;

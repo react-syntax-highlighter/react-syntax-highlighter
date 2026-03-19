@@ -1,2 +1,2 @@
-import pf from "highlight.js/lib/languages/pf";
+import pf from "highlight.js/lib/languages/pf.js";
 export default pf;

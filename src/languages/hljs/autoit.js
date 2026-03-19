@@ -1,2 +1,2 @@
-import autoit from "highlight.js/lib/languages/autoit";
+import autoit from "highlight.js/lib/languages/autoit.js";
 export default autoit;

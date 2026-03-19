@@ -1,2 +1,2 @@
-import cmake from "highlight.js/lib/languages/cmake";
+import cmake from "highlight.js/lib/languages/cmake.js";
 export default cmake;

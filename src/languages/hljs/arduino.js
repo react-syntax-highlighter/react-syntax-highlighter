@@ -1,2 +1,2 @@
-import arduino from "highlight.js/lib/languages/arduino";
+import arduino from "highlight.js/lib/languages/arduino.js";
 export default arduino;

@@ -1,2 +1,2 @@
-import armasm from "highlight.js/lib/languages/armasm";
+import armasm from "highlight.js/lib/languages/armasm.js";
 export default armasm;
