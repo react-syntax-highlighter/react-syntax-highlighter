@@ -1,2 +1,2 @@
-import tcl from "highlight.js/lib/languages/tcl";
+import tcl from "highlight.js/lib/languages/tcl.js";
 export default tcl;

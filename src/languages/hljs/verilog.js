@@ -1,2 +1,2 @@
-import verilog from "highlight.js/lib/languages/verilog";
+import verilog from "highlight.js/lib/languages/verilog.js";
 export default verilog;

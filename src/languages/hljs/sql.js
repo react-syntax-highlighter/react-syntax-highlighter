@@ -1,2 +1,2 @@
-import sql from "highlight.js/lib/languages/sql";
+import sql from "highlight.js/lib/languages/sql.js";
 export default sql;

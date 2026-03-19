@@ -1,2 +1,2 @@
-import matlab from "highlight.js/lib/languages/matlab";
+import matlab from "highlight.js/lib/languages/matlab.js";
 export default matlab;

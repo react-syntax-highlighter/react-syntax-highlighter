@@ -1,2 +1,2 @@
-import markdown from "highlight.js/lib/languages/markdown";
+import markdown from "highlight.js/lib/languages/markdown.js";
 export default markdown;

@@ -1,2 +1,2 @@
-import mercury from "highlight.js/lib/languages/mercury";
+import mercury from "highlight.js/lib/languages/mercury.js";
 export default mercury;

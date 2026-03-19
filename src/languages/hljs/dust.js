@@ -1,2 +1,2 @@
-import dust from "highlight.js/lib/languages/dust";
+import dust from "highlight.js/lib/languages/dust.js";
 export default dust;

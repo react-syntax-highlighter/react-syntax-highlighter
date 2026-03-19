@@ -1,2 +1,2 @@
-import c from "highlight.js/lib/languages/c";
+import c from "highlight.js/lib/languages/c.js";
 export default c;
