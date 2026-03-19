@@ -1,2 +1,2 @@
-import lisp from "highlight.js/lib/languages/lisp";
+import lisp from "highlight.js/lib/languages/lisp.js";
 export default lisp;

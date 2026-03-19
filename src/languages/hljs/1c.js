@@ -1,2 +1,2 @@
-import oneC from "highlight.js/lib/languages/1c";
+import oneC from "highlight.js/lib/languages/1c.js";
 export default oneC;

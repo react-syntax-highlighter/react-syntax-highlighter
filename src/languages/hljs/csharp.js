@@ -1,2 +1,2 @@
-import csharp from "highlight.js/lib/languages/csharp";
+import csharp from "highlight.js/lib/languages/csharp.js";
 export default csharp;

@@ -1,2 +1,2 @@
-import reasonml from "highlight.js/lib/languages/reasonml";
+import reasonml from "highlight.js/lib/languages/reasonml.js";
 export default reasonml;

@@ -1,2 +1,2 @@
-import tp from "highlight.js/lib/languages/tp";
+import tp from "highlight.js/lib/languages/tp.js";
 export default tp;

@@ -19,7 +19,7 @@ function createAsyncLanguageLoaderLine(file) {
   const fileWithoutJS = file.split('.js')[0];
   const importName = makeImportName(fileWithoutJS);
 
-  return `  ${importName}: createLanguageAsyncLoader("${importName}", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_${importName}" */ "highlight.js/lib/languages/${fileWithoutJS}")),`;
+  return `  ${importName}: createLanguageAsyncLoader("${importName}", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_${importName}" */ "highlight.js/lib/languages/${file}")),`;
 }
 
 function createAsyncLanguageLoadersIndex(files) {
@@ -62,7 +62,7 @@ function createLanguagePassthroughModule(file) {
   const fileWithoutJS = file.split('.js')[0];
   const importName = makeImportName(fileWithoutJS);
   const lines = [
-    `import ${importName} from "highlight.js/lib/languages/${fileWithoutJS}"`,
+    `import ${importName} from "highlight.js/lib/languages/${file}"`,
     `export default ${importName}`,
     ''
   ];

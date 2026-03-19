@@ -1,2 +1,2 @@
-import llvm from "highlight.js/lib/languages/llvm";
+import llvm from "highlight.js/lib/languages/llvm.js";
 export default llvm;
