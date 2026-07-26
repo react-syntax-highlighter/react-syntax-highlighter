@@ -191,6 +191,7 @@ LightSyntaxHighlighter.registerLanguage('curl', curl);
 - [marmota.app](https://marmota.app) - A desktop app to create simple markdown presentations
 - [boemly](https://boemly.tree.ly) - An open-source component library for React.
 - [Markdown Sticky Notes](https://github.com/qiweiii/markdown-sticky-notes) - A web extension to create Markdown sticky notes in web pages.
+- [LynxHub](https://github.com/KindaBrazy/LynxHub) - Cross-platform, extensible terminal and browser for AI management.
 
 If your project uses react-syntax-highlighter please send a pr to add!
 
