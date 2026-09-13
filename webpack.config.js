@@ -7,7 +7,7 @@ module.exports = {
   mode: 'development',
   devServer: {
     static: {
-      directory: path.join(__dirname, 'demo'),
+      directory: path.join(__dirname, 'demo')
     },
     port: '9001',
     host: '0.0.0.0',
@@ -60,5 +60,5 @@ module.exports = {
     chunks: false,
     chunkModules: false,
     entrypoints: false
-  },
+  }
 };

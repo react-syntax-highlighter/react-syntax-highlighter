@@ -14,25 +14,32 @@ For React Native you can use <a href='https://github.com/conorhastings/react-nat
 ### Installation Methods
 
 ### For npm:
+
 First install `react-syntax-highlighter` package
+
 ```bash []
 npm install react-syntax-highlighter --save
 ```
+
 then install type modules to prevent TypeScript or ESLint Errors (Recommended for TypeScript):
+
 ```bash []
 npm install --save-dev @types/react-syntax-highlighter
 ```
 
 ### For pnpm:
+
 First add `react-syntax-highlighter` package
+
 ```bash []
 pnpm add -D react-syntax-highlighter
 ```
+
 then install type modules to prevent TypeScript or ESLint related errors (Recommended for TypeScript):
+
 ```bash []
 pnpm add -D @types/react-syntax-highlighter
 ```
-
 
 ### Why This One?
 

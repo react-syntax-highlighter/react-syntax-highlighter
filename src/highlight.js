@@ -85,11 +85,10 @@ function assembleLineNumberStyles(
       ? lineNumberStyle(lineNumber)
       : lineNumberStyle;
   // combine
-  const assembledStyle = {
+  return {
     ...defaultLineNumberStyle,
     ...customLineNumberStyle
   };
-  return assembledStyle;
 }
 
 function createLineElement({
@@ -104,17 +103,15 @@ function createLineElement({
   wrapLongLines,
   wrapLines = false
 }) {
-  const properties = wrapLines
-    ? {
-        ...(typeof lineProps === 'function' ? lineProps(lineNumber) : lineProps)
-      }
-    : {};
+  const properties = {
+    ...(typeof lineProps === 'function' ? lineProps(lineNumber) : lineProps)
+  };
 
   properties['className'] = properties['className']
     ? [...properties['className'].trim().split(/\s+/), ...className]
     : className;
 
-  if (lineNumber && showInlineLineNumbers) {
+  if (lineNumber && showLineNumbers && showInlineLineNumbers) {
     const inlineLineNumberStyle = assembleLineNumberStyles(
       lineNumberStyle,
       lineNumber,
@@ -123,7 +120,7 @@ function createLineElement({
     children.unshift(getInlineLineNumber(lineNumber, inlineLineNumberStyle));
   }
 
-  if (wrapLongLines & showLineNumbers) {
+  if (wrapLongLines && showLineNumbers) {
     properties.style = { display: 'flex', ...properties.style };
   }
 
@@ -213,8 +210,7 @@ function processLines(
     if (newLines) {
       const splitValue = value.split('\n');
       splitValue.forEach((text, i) => {
-        const lineNumber =
-          showLineNumbers && newTree.length + startingLineNumber;
+        const lineNumber = newTree.length + startingLineNumber;
         const newChild = { type: 'text', value: `${text}\n` };
 
         // if it's the first line
@@ -222,7 +218,9 @@ function processLines(
           const children = tree.slice(lastLineBreakIndex + 1, index).concat(
             createLineElement({
               children: [newChild],
-              className: node.properties.className
+              className: node.properties.className,
+              lineNumber,
+              showLineNumbers
             })
           );
 
@@ -239,7 +237,9 @@ function processLines(
           if (stringChild) {
             const newElem = createLineElement({
               children: [lastLineInPreviousSpan],
-              className: node.properties.className
+              className: node.properties.className,
+              lineNumber,
+              showLineNumbers
             });
             tree.splice(index + 1, 0, newElem);
           } else {
@@ -271,7 +271,7 @@ function processLines(
   if (lastLineBreakIndex !== tree.length - 1) {
     const children = tree.slice(lastLineBreakIndex + 1, tree.length);
     if (children && children.length) {
-      const lineNumber = showLineNumbers && newTree.length + startingLineNumber;
+      const lineNumber = newTree.length + startingLineNumber;
       const line = createLine(children, lineNumber);
       newTree.push(line);
     }
