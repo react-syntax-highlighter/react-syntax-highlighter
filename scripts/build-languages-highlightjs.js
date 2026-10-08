@@ -15,11 +15,16 @@ function makeImportName(name) {
   return camel(name);
 }
 
-function createAsyncLanguageLoaderLine(file) {
-  const fileWithoutJS = file.split('.js')[0];
-  const importName = makeImportName(fileWithoutJS);
+function languageName(file) {
+  return path.basename(file, '.js');
+}
 
-  return `  ${importName}: createLanguageAsyncLoader("${importName}", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_${importName}" */ "highlight.js/lib/languages/${file}")),`;
+function createAsyncLanguageLoaderLine(file) {
+  const importName = makeImportName(languageName(file));
+
+  return `  ${importName}: createLanguageAsyncLoader("${importName}", () => import(/* webpackChunkName: "react-syntax-highlighter_languages_highlight_${importName}" */ "highlight.js/lib/languages/${languageName(
+    file
+  )}.js")),`;
 }
 
 function createAsyncLanguageLoadersIndex(files) {
@@ -44,7 +49,7 @@ function createAsyncLanguageLoadersIndex(files) {
 
 function createSupportedLanguagesArray(files) {
   let lines = [autogenMessage, `export default [`];
-  lines = lines.concat(files.map(file => `\n  '${file.split('.js')[0]}',`));
+  lines = lines.concat(files.map(file => `\n  '${languageName(file)}',`));
   lines.push(`\n];\n`);
 
   fs.writeFile(
@@ -59,16 +64,16 @@ function createSupportedLanguagesArray(files) {
 }
 
 function createLanguagePassthroughModule(file) {
-  const fileWithoutJS = file.split('.js')[0];
-  const importName = makeImportName(fileWithoutJS);
+  const name = languageName(file);
+  const importName = makeImportName(name);
   const lines = [
-    `import ${importName} from "highlight.js/lib/languages/${file}"`,
+    `import ${importName} from "highlight.js/lib/languages/${name}.js"`,
     `export default ${importName}`,
     ''
   ];
 
   fs.writeFile(
-    path.join(__dirname, `../src/languages/hljs/${file}`),
+    path.join(__dirname, `../src/languages/hljs/${name}.js`),
     lines.join(';\n'),
     err => {
       if (err) {
@@ -80,17 +85,20 @@ function createLanguagePassthroughModule(file) {
 
 fs.readdir(
   path.join(__dirname, '../node_modules/highlight.js/lib/languages'),
-  (err, files) => {
+  (err, entries) => {
     if (err) {
       throw err;
     }
+
+    // Only language modules; skip type definitions, source maps, etc.
+    const files = entries.filter(file => path.extname(file) === '.js');
 
     files.forEach(createLanguagePassthroughModule);
 
     createAsyncLanguageLoadersIndex(files);
     createSupportedLanguagesArray(files);
 
-    const availableLanguageNames = files.map(file => file.split('.js')[0]);
+    const availableLanguageNames = files.map(languageName);
     const languagesLi = availableLanguageNames.map(
       name =>
         `\n* ${makeImportName(name)}${
