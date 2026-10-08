@@ -1,2 +1,2 @@
-import ebnf from "highlight.js/lib/languages/ebnf";
+import ebnf from "highlight.js/lib/languages/ebnf.js";
 export default ebnf;

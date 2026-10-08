@@ -1,2 +1,2 @@
-import clean from "highlight.js/lib/languages/clean";
+import clean from "highlight.js/lib/languages/clean.js";
 export default clean;

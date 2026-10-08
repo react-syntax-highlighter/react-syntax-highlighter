@@ -1,2 +1,2 @@
-import erb from "highlight.js/lib/languages/erb";
+import erb from "highlight.js/lib/languages/erb.js";
 export default erb;

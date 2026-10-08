@@ -1,2 +1,2 @@
-import rsl from "highlight.js/lib/languages/rsl";
+import rsl from "highlight.js/lib/languages/rsl.js";
 export default rsl;

@@ -1,2 +1,2 @@
-import nix from "highlight.js/lib/languages/nix";
+import nix from "highlight.js/lib/languages/nix.js";
 export default nix;
