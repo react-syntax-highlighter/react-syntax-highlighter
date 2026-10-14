@@ -11,6 +11,9 @@ export default options => {
   } = options;
 
   class ReactAsyncHighlighter extends React.PureComponent {
+    static defaultProps = {
+      language: 'text'
+    };
     static astGenerator = null;
     static highlightInstance = highlight(null, {});
     static astGeneratorPromise = null;

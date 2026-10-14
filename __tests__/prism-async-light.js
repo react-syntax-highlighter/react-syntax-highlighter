@@ -97,3 +97,32 @@ while ans:
 
   expect(tree.toJSON()).toMatchSnapshot();
 });
+
+test('PrismAsyncLight renders omitted language after preloading', async () => {
+  await SyntaxHighlighter.preload();
+  const tree = renderer.create(
+    <SyntaxHighlighter style={prism}>{'plain <text>'}</SyntaxHighlighter>
+  );
+  expect(JSON.stringify(tree.toJSON())).toContain('plain <text>');
+  tree.update(
+    <SyntaxHighlighter style={prism}>
+      {'updated plain <text>'}
+    </SyntaxHighlighter>
+  );
+  expect(JSON.stringify(tree.toJSON())).toContain('updated plain <text>');
+  tree.unmount();
+});
+
+test('PrismAsyncLight can switch from a language to omitted language', async () => {
+  await SyntaxHighlighter.preload();
+  const tree = renderer.create(
+    <SyntaxHighlighter language="jsx" style={prism}>
+      {'const value = 1;'}
+    </SyntaxHighlighter>
+  );
+  tree.update(
+    <SyntaxHighlighter style={prism}>{'plain <text>'}</SyntaxHighlighter>
+  );
+  expect(JSON.stringify(tree.toJSON())).toContain('plain <text>');
+  tree.unmount();
+});
