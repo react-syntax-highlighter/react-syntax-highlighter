@@ -114,7 +114,7 @@ function createLineElement({
     ? [...properties['className'].trim().split(/\s+/), ...className]
     : className;
 
-  if (lineNumber && showInlineLineNumbers) {
+  if (typeof lineNumber === 'number' && showInlineLineNumbers) {
     const inlineLineNumberStyle = assembleLineNumberStyles(
       lineNumberStyle,
       lineNumber,
@@ -188,7 +188,11 @@ function processLines(
   }
 
   function createUnwrappedLine(children, lineNumber) {
-    if (showLineNumbers && lineNumber && showInlineLineNumbers) {
+    if (
+      showLineNumbers &&
+      typeof lineNumber === 'number' &&
+      showInlineLineNumbers
+    ) {
       const inlineLineNumberStyle = assembleLineNumberStyles(
         lineNumberStyle,
         lineNumber,

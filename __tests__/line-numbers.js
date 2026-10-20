@@ -14,6 +14,35 @@ function itIs() {
 }
 `;
 
+test.each([true, false])('includes line zero with wrapLines=%s', wrapLines => {
+  const tree = renderer
+    .create(
+      <SyntaxHighlighter
+        language="text"
+        showLineNumbers
+        startingLineNumber={0}
+        wrapLines={wrapLines}
+      >
+        {'first\nsecond'}
+      </SyntaxHighlighter>
+    )
+    .toJSON();
+  const numbers = [];
+  function collect(node) {
+    if (!node || typeof node !== 'object') return;
+    if (
+      (node.props.className || '').includes(
+        'react-syntax-highlighter-line-number'
+      )
+    ) {
+      numbers.push(node.children.join(''));
+    }
+    (node.children || []).forEach(collect);
+  }
+  collect(tree);
+  expect(numbers).toEqual(['0', '1']);
+});
+
 test('SyntaxHighlighter component renders line numbers if showLineNumbers === true', () => {
   const tree = renderer
     .create(
