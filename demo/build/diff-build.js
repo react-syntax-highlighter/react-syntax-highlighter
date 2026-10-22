@@ -68079,8 +68079,7 @@ function assembleLineNumberStyles(lineNumberStyle, lineNumber, largestLineNumber
   // prep custom styling
   var customLineNumberStyle = typeof lineNumberStyle === 'function' ? lineNumberStyle(lineNumber) : lineNumberStyle;
   // combine
-  var assembledStyle = _objectSpread(_objectSpread({}, defaultLineNumberStyle), customLineNumberStyle);
-  return assembledStyle;
+  return _objectSpread(_objectSpread({}, defaultLineNumberStyle), customLineNumberStyle);
 }
 function createLineElement(_ref3) {
   var children = _ref3.children,
@@ -68096,13 +68095,13 @@ function createLineElement(_ref3) {
     wrapLongLines = _ref3.wrapLongLines,
     _ref3$wrapLines = _ref3.wrapLines,
     wrapLines = _ref3$wrapLines === void 0 ? false : _ref3$wrapLines;
-  var properties = wrapLines ? _objectSpread({}, typeof lineProps === 'function' ? lineProps(lineNumber) : lineProps) : {};
+  var properties = _objectSpread({}, typeof lineProps === 'function' ? lineProps(lineNumber) : lineProps);
   properties['className'] = properties['className'] ? [].concat((0,_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__["default"])(properties['className'].trim().split(/\s+/)), (0,_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__["default"])(className)) : className;
-  if (lineNumber && showInlineLineNumbers) {
+  if (lineNumber && showLineNumbers && showInlineLineNumbers) {
     var inlineLineNumberStyle = assembleLineNumberStyles(lineNumberStyle, lineNumber, largestLineNumber);
     children.unshift(getInlineLineNumber(lineNumber, inlineLineNumberStyle));
   }
-  if (wrapLongLines & showLineNumbers) {
+  if (wrapLongLines && showLineNumbers) {
     properties.style = _objectSpread({
       display: 'flex'
     }, properties.style);
@@ -68176,7 +68175,7 @@ function processLines(codeTree, wrapLines, lineProps, showLineNumbers, showInlin
     if (newLines) {
       var splitValue = value.split('\n');
       splitValue.forEach(function (text, i) {
-        var lineNumber = showLineNumbers && newTree.length + startingLineNumber;
+        var lineNumber = newTree.length + startingLineNumber;
         var newChild = {
           type: 'text',
           value: "".concat(text, "\n")
@@ -68186,7 +68185,9 @@ function processLines(codeTree, wrapLines, lineProps, showLineNumbers, showInlin
         if (i === 0) {
           var _children = tree.slice(lastLineBreakIndex + 1, index).concat(createLineElement({
             children: [newChild],
-            className: node.properties.className
+            className: node.properties.className,
+            lineNumber: lineNumber,
+            showLineNumbers: showLineNumbers
           }));
           var _line = createLine(_children, lineNumber);
           newTree.push(_line);
@@ -68201,7 +68202,9 @@ function processLines(codeTree, wrapLines, lineProps, showLineNumbers, showInlin
           if (stringChild) {
             var newElem = createLineElement({
               children: [lastLineInPreviousSpan],
-              className: node.properties.className
+              className: node.properties.className,
+              lineNumber: lineNumber,
+              showLineNumbers: showLineNumbers
             });
             tree.splice(index + 1, 0, newElem);
           } else {
@@ -68227,7 +68230,7 @@ function processLines(codeTree, wrapLines, lineProps, showLineNumbers, showInlin
   if (lastLineBreakIndex !== tree.length - 1) {
     var children = tree.slice(lastLineBreakIndex + 1, tree.length);
     if (children && children.length) {
-      var lineNumber = showLineNumbers && newTree.length + startingLineNumber;
+      var lineNumber = newTree.length + startingLineNumber;
       var line = createLine(children, lineNumber);
       newTree.push(line);
     }
